@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="tjreports" method="upgrade">
+	<name>TJReports - Shika - Datewise Time Spent per Tag  Report</name>
+	<author>Techjoomla</author>
+	<creationDate>3rd June 2019</creationDate>
+	<copyright>(C)techjoomla.com</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>contact@techjoomla.com</authorEmail>
+	<authorUrl>www.techjoomla.com</authorUrl>
+	<version>1.0.1</version>
+	<description>Report that shows tag wise time spent</description>
+	<files>
+		<filename plugin="tagstime">tagstime.php</filename>
+		<folder>sql</folder>
+	</files>
+	<install>
+		<sql>
+			<file charset="utf8" driver="mysql">sql/install.sql</file>
+		</sql>
+	</install>
+</extension>

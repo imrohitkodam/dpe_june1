@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules name="rs_w1q6k8dc" title="Graph Demo-Line Graph with X-Axis Fit Values" style="rs_w1q6k8dc.css">
+	<meta  version="1.0" compatibility="4" generator="Online Creation Wizard" author_name="Alterora" author_email="info@alterora.gr" author_url="www.tabulizer.com"/>
+	<ruleset name="rs_w1q6k8dc" title="Line Graph with X-Axis Fit Values" description="A sample ruleset with vertical Y-Axis label and no margin in the X-Axis labels." suffix="rs_w1q6k8dc"  >
+	<sample_data  sep="sc" enc="none">60;13;18;60;77;76;7;72;7;44
+2014-08-23;2014-09-23;2014-10-23;2014-11-23;2014-12-23;2015-01-23;2015-02-23;2015-03-23;2015-04-23;2015-05-23
+85;53;89;19;58;81;19;72;98;69
+44;43;56;35;96;27;87;87;36;22
+98;64;1;79;71;1;33;65;77;15
+75;90;97;28;52;90;81;17;51;21
+64;77;58;53;63;28;35;73;95;96
+63;83;28;30;20;61;94;32;11;30
+41;59;0;4;66;94;67;56;86;53
+98;10;64;60;10;75;74;54;30;8
+</sample_data>
+
+			<rule element="table" range="ALL" graph="rs_w1q6k8dc.xml" ></rule>
+
+	</ruleset>
+</rules>

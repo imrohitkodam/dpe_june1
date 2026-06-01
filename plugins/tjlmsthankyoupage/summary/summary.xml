@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="tjlmsthankyoupage" method="upgrade">
+	<name>PLG_TJLMSTHANKYOUPAGE_SUMMARY</name>
+	<author>Techjoomla</author>
+	<creationDate>1st Aug 2020</creationDate>
+	<copyright>Copyright (C) 2014 - 2023 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<version>1.3.34</version>
+	<description>PLG_TJLMSTHANKYOUPAGE_SUMMARY_DESCRIPTION</description>
+	<files>
+		<file plugin="summary">summary.php</file>
+		<file>index.html</file>
+	</files>
+	<languages folder="language">
+			<language tag="en-GB">en-GB/en-GB.plg_tjlmsthankyoupage_summary.ini</language>
+			<language tag="en-GB">en-GB/en-GB.plg_tjlmsthankyoupage_summary.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="summary_base" type="radio"
+					label="PLG_TJLMSTHANKYOUPAGE_SUMMARY_LBL_SUMMARY_BASE"
+					description="PLG_TJLMSTHANKYOUPAGE_SUMMARY_DESC_SUMMARY_BASE"
+					size="1" default="section">
+					<option value="section">PLG_TJLMSTHANKYOUPAGE_SUMMARY_SECTION</option>
+					<option value="question_category">PLG_TJLMSTHANKYOUPAGE_SUMMARY_QUESTION_CATEGORY</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

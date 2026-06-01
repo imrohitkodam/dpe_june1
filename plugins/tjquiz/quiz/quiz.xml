@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="tjquiz" method="upgrade">
+	<name>PLG_TJQUIZ_QUIZ</name>
+	<author>Techjoomla</author>
+	<creationDate>13th Jul 2023</creationDate>
+	<copyright>Copyright (C) 2014 - 2023 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<version>4.0.5</version>
+	<description>PLG_TJQUIZ_QUIZ_DESCRIPTION</description>
+
+	<files>
+		<file plugin="quiz">quiz.php</file>
+		<file>index.html</file>
+		<folder>tmpl</folder>
+		<folder>assets</folder>
+	</files>
+	<languages folder="language">
+			<language tag="en-GB">en-GB/en-GB.plg_tjquiz_quiz.ini</language>
+			<language tag="en-GB">en-GB/en-GB.plg_tjquiz_quiz.sys.ini</language>
+	</languages>
+
+	<config name="params">
+		<fields name="params">
+		<fieldset name="basic" label="PLG_EXERCISE_FORM_PARAMETER" >
+			<field name="show_resume" type="hidden" default="0" label="PLG_TJQUIZ_QUIZ_SHOW_RESUME_LABEL" description="PLG_TJQUIZ_QUIZ_SHOW_RESUME_DESC" class="btn-group">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="assessment" type="hidden" default="0" value="0" label="PLG_TJQUIZ_ASSESMENT_LABEL" description="PLG_TJQUIZ_ASSESMENT_DESC" class="btn-group" />
+		</fieldset>
+		</fields>
+	</config>
+</extension>

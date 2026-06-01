@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="default" addfieldpath="/plugins/tjcompetencycontenttype/event/fields">
+		<field
+			name="client_id"
+			type="competencyevents"
+			label="PLG_TJCOMPETENCYCONTENTTYPE_EVENT_FORM_LBL_CONTENT"
+			description="PLG_TJCOMPETENCYCONTENTTYPE_EVENT_FORM_DESC_CONTENT"
+			required="true"
+		/>
+	</fieldset>
+</form>

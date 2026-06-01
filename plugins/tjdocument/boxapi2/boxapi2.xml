@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="tjdocument" method="upgrade">
+	<name>plg_tjdocument_boxapi2</name>
+	<author>Techjoomla</author>
+	<creationDate>13th Jul 2023</creationDate>
+	<copyright>Copyright (C) 2014 - 2023 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<version>4.0.5</version>
+	<isapplication>true</isapplication>
+	<description>PLG_TJDOCUMENT_BOXAPI2_DESC</description>
+
+	<files>
+		<file plugin="boxapi2">boxapi2.php</file>
+		<folder>assets</folder>
+		<folder>classes</folder>
+		<folder>element</folder>
+		<folder>language</folder>
+		<folder>lib</folder>
+		<folder>tmpl</folder>
+	</files>
+
+	<config name="params">
+		<fields name="params">
+			<fieldset  name="basic" addfieldpath="plugins/tjdocument/boxapi2/element/fields" label="PLG_TJDOCUMENT_BOXAPI2_JWT_CREDENTIAL_PARAM_LABEL" description="PLG_TJDOCUMENT_BOXAPI2_JWT_CREDENTIAL_PARAM_DESC">
+				<field name="boxapi2_getkey" type="note" label="PLG_TJDOCUMENT_BOXAPI2_JWT_GET_CREDENTIAL_LABEL" description="PLG_TJDOCUMENT_BOXAPI2_JWT_GET_CREDENTIAL_DESC" />
+				<field name="pathapi_boxapi2" type="note" label="PLG_TJDOCUMENT_BOXAPI2_API_GET_KEY" description="PLG_TJDOCUMENT_BOXAPI2_API_GET_KEY_DESC" />
+				<field name="boxapi2_configtype" type="radio" default="json" label="PLG_TJDOCUMENT_BOXAPI2_CONFIG_TYPE_LABEL" description="PLG_TJDOCUMENT_BOXAPI2_CONFIG_TYPE_DESC" class="btn-group">
+					<option value="json">PLG_TJDOCUMENT_BOXAPI2_CONFIG_TYPE_JSON</option>
+					<option value="individual">PLG_TJDOCUMENT_BOXAPI2_CONFIG_TYPE_INDIVIDUAL_FIELD</option>
+				</field>
+				<field rows="15" cols="50" showon="boxapi2_configtype:json" class="input-xxlarge span8 col-xs-8" name="boxapi2_boxjson" type="jstextarea" label="PLG_TJDOCUMENT_BOXAPI2_JSON_PARSE_LABEL" description="PLG_TJDOCUMENT_BOXAPI2_JSON_PARSE_DESC" hint="PLG_TJDOCUMENT_BOXAPI2_JSON_PARSE_HINT" onchange="tjBoxapi2.parseJson(this)"/>
+				<field name="boxapi2_client_id" showon="boxapi2_configtype:individual" class="issuer setid" type="text" label="PLG_TJDOCUMENT_BOXAPI2_JWT_CLIENT_ID_LABEL" description="PLG_TJDOCUMENT_BOXAPI2_JWT_CLIENT_ID_DESC" default="" required="true"/>
+				<field name="boxapi2_client_secret" showon="boxapi2_configtype:individual" type="text" label="PLG_TJDOCUMENT_BOXAPI2_JWT_CLIENT_SECRET_LABEL" description="PLG_TJDOCUMENT_BOXAPI2_JWT_CLIENT_SECRET_DESC" default="" required="true"/>
+				<field name="boxapi2_enterpriseID" showon="boxapi2_configtype:individual" class="subject" type="text" label="PLG_TJDOCUMENT_BOXAPI2_JWT_ENTERPRISEID_LABEL" description="PLG_TJDOCUMENT_BOXAPI2_JWT_ENTERPRISEID_DESC" default="" required="true"/>
+				<field name="boxapi2_publicKeyID" showon="boxapi2_configtype:individual" class="kid" type="text" label="PLG_TJDOCUMENT_BOXAPI2_JWT_PUBLICKEYID_LABEL" description="PLG_TJDOCUMENT_BOXAPI2_JWT_PUBLICKEYID_DESC" default="" required="true"/>
+				<field rows="15" cols="50" showon="boxapi2_configtype:individual" class="input-xxlarge span8 col-xs-8" name="boxapi2_privatekey" type="textarea" label="PLG_TJDOCUMENT_BOXAPI2_JWT_PRIVATEKEY_LABEL" description="PLG_TJDOCUMENT_BOXAPI2_JWT_PRIVATEKEY_DESC" hint="PLG_TJDOCUMENT_BOXAPI2_JWT_PRIVATEKEY_HINT" required="true"/>
+				<field name="boxapi2_passphrase" showon="boxapi2_configtype:individual" type="text" label="PLG_TJDOCUMENT_BOXAPI2_JWT_PASSPHRASE_LABEL" description="PLG_TJDOCUMENT_BOXAPI2_JWT_PASSPHRASE_DESC" default="" required="true"/>
+				<field name="boxapi2_document_setting" type="note" label="PLG_TJDOCUMENT_BOXAPI2_DOC_SETTING_LABEL" description="PLG_TJDOCUMENT_BOXAPI2_DOC_SETTING_DESC" />
+				<field name="plugin_name" type="transtext" default="PLG_TJDOCUMENT_BOXAPI2_PLUGIN_NAME" label="PLG_TJDOCUMENT_BOXAPI2_PLUGIN_NAME_LABEL" description="PLG_TJDOCUMENT_BOXAPI2_PLUGIN_NAME_DESC" />
+				<field name="show_resume" type="radio" default="1" label="PLG_TJDOCUMENT_BOXAPI2_SHOW_RESUME_LABEL" description="PLG_TJDOCUMENT_BOXAPI2_SHOW_RESUME_DESC" class="btn-group">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+			<fieldset name="migration_detail" label="PLG_TJDOCUMENT_BOXAPI2_MIGRATION_TAB_LABEL" description="">
+				<field name="boxapi2_getkey" type="customnote" label="PLG_TJDOCUMENT_BOXAPI2_MIGRATION_NOTE_LABEL" heading="div" class="alert alert-info" description="PLG_TJDOCUMENT_BOXAPI2_MIGRATION_NOTE_DESC" />
+				<field name="boxapi2_migration" hiddenLabel="true" type="migration" label="PLG_TJDOCUMENT_BOXAPI2_MIGRATION_LABEL" description="PLG_TJDOCUMENT_BOXAPI2_MIGRATION_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+
+</extension>

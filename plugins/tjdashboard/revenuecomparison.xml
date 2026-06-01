@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="tjdashboard" method="upgrade">
+	<name>PLG_TJDASHBOARD_REVENUE_COMPARISION</name>
+	<author>Techjoomla</author>
+	<creationDate>13th Jul 2023</creationDate>
+	<copyright>Copyright (C) 2014 - 2023 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<version>4.0.5</version>
+	<description>PLG_TJDASHBOARD_REVENUE_COMPARISION_DESC</description>
+
+	<files>
+		<filename plugin="revenuecomparison">revenuecomparison.php</filename>
+		<filename>index.html</filename>
+		<folder>revenuecomparison</folder>
+		<folder>assets</folder>
+	</files>
+
+	<languages>
+		<language tag="en-GB">en-GB/en-GB.plg_tjdashboard_revenuecomparison.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_tjdashboard_revenuecomparison.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="no_of_years" type="text"
+					default="3"
+					class="validate-numeric"
+					description="PLG_TJDASHBOARD_REVENUE_COMPARISION_NO_OF_YEARS_DESC"
+					label="PLG_TJDASHBOARD_REVENUE_COMPARISION_NO_OF_YEARS"
+				/>
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>

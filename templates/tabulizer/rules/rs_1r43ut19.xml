@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules name="rs_1r43ut19" title="Table Demo-PDF file to link + PDF icon replacement" style="rs_1r43ut19.css">
+    <meta  version="1.0" compatibility="4" generator="Online Creation Wizard" author_name="Alterora" author_email="info@alterora.gr" author_url="www.tabulizer.com"/>
+    <ruleset name="rs_1r43ut19" title="Demo for pdf file to link + PDF icon replacement" description="How to add a replacement rule to replace a PDF document path with a hyperlink and image." suffix="rs_1r43ut19"  >
+        			<rule element="table" range="ALL"  theme = "light.css" ></rule>
+			<rule element="column" range="2" replacement="0^RWS^KC4rKVwuaHRtbA==^RWS^PGEgaHJlZj0icHJvcGVydGllcy9wcm9wZXJ0aWVzLWZvci1zYWxlL1wxLmh0bWwiIHRhcmdldD0iX2JsYW5rIj48aW1nIHNyYz0iaHR0cDovL2dyZWF0ZXJtaW5kc2xsYy5jb20vZGV2LWxvcmFuZGFncm91cC9pbWFnZXMvc29sZHRodW1icy9wZGZpY29uLmpwZyI+PC9hPg==" ></rule>
+			<rule element="row" range="1" style="tr_ht1" autospan="1"  ></rule>
+<sample_data  sep="cm" enc="dq">Property Title,PDF
+Seaside House,seaside.html
+City center,appartment.html
+
+
+</sample_data>
+    </ruleset>
+</rules>

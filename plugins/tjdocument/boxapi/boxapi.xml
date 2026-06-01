@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="tjdocument" method="upgrade">
+	<name>PLG_TJDOCUMENT_BOXAPI</name>
+	<author>Techjoomla</author>
+	<creationDate>13th Jul 2023</creationDate>
+	<copyright>Copyright (C) 2014 - 2023 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<version>4.0.5</version>
+	<isapplication>true</isapplication>
+	<description>PLG_TJDOCUMENT_BOXAPI</description>
+
+	<files>
+		<file plugin="boxapi">boxapi.php</file>
+		<folder>boxapi</folder>
+		<folder>tmpl</folder>
+	</files>
+	<languages folder="language">
+			<language tag="en-GB">en-GB/en-GB.plg_tjdocument_boxapi.ini</language>
+			<language tag="en-GB">en-GB/en-GB.plg_tjdocument_boxapi.sys.ini</language>
+	</languages>
+
+	<!-- Fields for Joomla 1.8.x and onwards -->
+	<config name="params">
+		<fields name="params">
+			<fieldset name="basic" label="PLG_BOX_API_PARAMETER" addfieldpath="/plugins/tjdocument/boxapi/boxapi/element/pathapi">
+		<field name="pathapi_boxapi" type="pathapi" label="PLG_BOX_API_GET_KEY" description="PLG_BOX_API_GET_KEY_DESC" />
+				<field name="appkey" type="text" default="" label="PLG_BOX_API_KEY" description="PLG_BOX_API_KEY" />
+				<field name="doc_layout" type="list" default="pop" label="PLG_BOX_SELECT_LAYOUT" description="PLG_BOX_SELECT_LAYOUT_DESC" >
+						<option value="plain">PLG_TJDOCUMENT_NORMAL_PDF_MODE</option>
+						<option value="pop">PLG_TJDOCUMENT_POP_MODE</option>
+						<option value="fade">PLG_TJDOCUMENT_FADE_MODE</option>
+						<option value="spin">PLG_TJDOCUMENT_SPIN_MODE</option>
+						<option value="slide">PLG_TJDOCUMENT_SLIDE_MODE</option>
+						<option value="carousel">PLG_TJDOCUMENT_CAROUSEL_MODE</option>
+						<option value="book">PLG_TJDOCUMENT_BOOK_MODE</option>
+				</field>
+				<field class="btn-group" name="doc_layout_ft_option" type="radio" default="1" label="PLG_BOX_SELECT_LAYOUT_USER_OPTION" description="PLG_BOX_SELECT_LAYOUT_USER_OPTION_DESC" >
+					<option value="1">COM_TJLMS_PLG_BOX_YES</option>
+					<option value="0">COM_TJLMS_PLG_BOX_NO</option>
+				</field>
+				<field name="plugin_name" type="text" default="Box API Old (Depreciated)" label="PLG_TJDOCUMENT_BOXAPI_NAME" description="PLG_TJDOCUMENT_BOXAPI_NAME_DESC" />
+				<field name="show_resume" type="radio" default="1" label="PLG_TJDOCUMENT_BOXAPI_SHOW_RESUME_LABEL" description="PLG_TJDOCUMENT_BOXAPI_SHOW_RESUME_DESC" class="btn-group">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="plugin_name" type="text" default="box API" label="PLG_TJDOCUMENT_BOXAPI_NAME" description="PLG_TJDOCUMENT_BOXAPI_NAME_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

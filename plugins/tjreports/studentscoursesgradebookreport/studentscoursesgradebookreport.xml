@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="tjreports" method="upgrade">
+	<name>PLG_TJREPORTS_STUDENTSCOURSESGRADEBOOKREPORT</name>
+	<author>Techjoomla</author>
+	<creationDate>8th Jan 2020</creationDate>
+	<copyright>Copyright (C) 2014 - 2023 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<version>1.3.31</version>
+	<description>PLG_TJREPORTS_STUDENTSCOURSESGRADEBOOKREPORT_DESC</description>
+
+	<files>
+		<filename plugin="studentscoursesgradebookreport">studentscoursesgradebookreport.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_tjreports_studentscoursesgradebookreport.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_tjreports_studentscoursesgradebookreport.sys.ini</language>
+	</languages>
+</extension>

@@ -1,0 +1,4 @@
+satisfy any
+order deny,allow
+deny from all
+

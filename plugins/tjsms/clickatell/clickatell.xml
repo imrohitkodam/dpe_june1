@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="tjsms" method="upgrade">
+	<name>plg_tjsms_clickatell</name>
+	<author>Techjoomla</author>
+	<creationDate>8th March 2016</creationDate>
+	<copyright>Copyright (c) 2009-2021 Techjoomla. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<version>1.7</version>
+	<isapplication>true</isapplication>
+	<description>PLG_TJSMS_CLICKATELL_DESC</description>
+	<files>
+		<file plugin="clickatell">clickatell.php</file>
+		<folder>clickatell</folder>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_tjsms_clickatell.sys.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_tjsms_clickatell.ini</language>
+	</languages>
+	<config name="params">
+		<fields name="params">
+			<fieldset name="basic" label="PLG_TJSMS_CLICKATELL_API_PARAMETER" addfieldpath="/plugins/sms/clickatell/clickatell/element/pathapi">
+				<field name="pathapi_clickatell" type="pathapi" label="PLG_TJSMS_CLICKATELL_API_GET_KEY" description="PLG_TJSMS_CLICKATELL_API_GET_KEY_DESC" />
+				<field name="service_account" type="radio" class="btn-group" default="central" label="PLG_TJSMS_CLICKATELL_SERVICE_ACCOUNT" description="PLG_TJSMS_CLICKATELL_SERVICE_ACCOUNT_DESC">
+					<option value="sms_platform">PLG_TJSMS_CLICKATELL_SERVICE_SMS_PLATFORM</option>
+					<option value="central">PLG_TJSMS_CLICKATELL_SERVICE_CENTRAL</option>
+				</field>
+				<field name="apiKey" type="text" default="" label="PLG_TJSMS_CLICKATELL_API_KEY" description="PLG_TJSMS_CLICKATELL_API_KEY_DESC" showon="service_account:sms_platform"/>
+				<field name="appUsername" type="text" default="" label="PLG_TJSMS_CLICKATELL_USER_NAME" description="PLG_TJSMS_CLICKATELL_API_SECRETE_KEY_DESC" showon="service_account:central"/>
+				<field name="appPassword" type="text" default="" label="PLG_TJSMS_CLICKATELL_API_PASSWORD_KEY" description="PLG_TJSMS_CLICKATELL_API_PASSWORD_KEY_DESC" showon="service_account:central"/>
+				<field name="appkey" type="text" default="" label="PLG_TJSMS_CLICKATELL_API_KEY" description="PLG_TJSMS_CLICKATELL_API_KEY_DESC" showon="service_account:central"/>
+				<field name="from" type="text" default="" label="PLG_TJSMS_CLICKATELL_FROM_CONTACT" description="PLG_TJSMS_CLICKATELL_FROM_CONTACT_DESC" />
+				<field name="mobileoriginated" type="radio" class="btn-group" default="0" label="PLG_TJSMS_CLICKATELL_MO" description="PLG_TJSMS_CLICKATELL_MO_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

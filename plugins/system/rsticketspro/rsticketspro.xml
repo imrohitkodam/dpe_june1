@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension method="upgrade" version="2.5" type="plugin" group="system">
+	<name>plg_system_rsticketspro</name>
+	<author>RSJoomla!</author>
+	<creationDate>February 2014</creationDate>
+	<copyright>Copyright (C) 2010-2014 www.rsjoomla.com. All rights reserved.</copyright>
+	<license>GNU General Public License</license>
+	<authorEmail>support@rsjoomla.com</authorEmail>
+	<authorUrl>www.rsjoomla.com</authorUrl>
+	<version>1.0.0</version>
+	<description><![CDATA[PLG_SYSTEM_RSTICKETSPRO_DESC]]></description>
+
+	<updateservers>
+        <server type="extension" priority="1" name="System - RSTickets! Pro">https://www.rsjoomla.com/updates/com_rsticketspro/Other/plg_system.xml</server>
+    </updateservers>
+
+	<files>
+		<filename plugin="rsticketspro">rsticketspro.php</filename>
+		<filename>rsticketspro_anonymise.xml</filename>
+		<filename>index.html</filename>
+	</files>
+	
+	<languages folder="language/en-GB">
+		<language tag="en-GB">en-GB.plg_system_rsticketspro.ini</language>
+		<language tag="en-GB">en-GB.plg_system_rsticketspro.sys.ini</language>
+	</languages>
+</extension>

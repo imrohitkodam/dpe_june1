@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules name="rs_x76onpqa" title="Table Demo-Image replacement rule" style="rs_x76onpqa.css">
+    <meta  version="1.0" compatibility="4" generator="Online Creation Wizard" author_name="Alterora" author_email="info@alterora.gr" author_url="www.tabulizer.com"/>
+    <ruleset name="rs_x76onpqa" title="Demo for image replacement rule" description="A simple ruleset to demonstrate how to replace image filename with the full image HTML source tag." suffix="rs_x76onpqa"  >
+        			<rule element="table" range="ALL"  theme = "light.css" ></rule>
+			<rule element="column" range="2" replacement="0^RWS^KC4ranBnKQ==^RWS^PGltZyBzcmM9ImltYWdlcy90YWJ1bGl6ZXIvZGVtby9cMSIgLz4=" ></rule>
+			<rule element="row" range="3" replacement="0^RWS^KC4rZ2lmKQ==^RWS^PGltZyBzcmM9ImltYWdlcy90YWJ1bGl6ZXIvZGVtby9cMSIgLz4=" ></rule>
+			<rule element="table" range="all" replacement="0^RWS^KC4rcG5nKQ==^RWS^PGltZyBzcmM9ImltYWdlcy90YWJ1bGl6ZXIvZGVtby9cMSIgLz4=" ></rule>
+			<rule element="row" range="1" style="tr_ht1" autospan="1"  ></rule>
+<sample_data  sep="cm" enc="dq">Description,Image
+A nice car,car.jpg
+A pretty house,house.gif
+An awesome guitar,guitar.png</sample_data>
+    </ruleset>
+</rules>

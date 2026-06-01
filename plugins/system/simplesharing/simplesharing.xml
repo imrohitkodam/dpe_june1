@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="system" method="upgrade">
+	<name>PLG_SYSTEM_SIMPLESHARING</name>
+	<author>NYC HelpDesk.co LLC</author>
+	<creationDate>July 27, 2016</creationDate>
+	<copyright>Copyright (C) 2014-2017 JoomReem.com. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@nychelpdesk.co</authorEmail>
+	<authorUrl>nychelpdesk.co</authorUrl>
+	<version>1.0.44</version>
+	<description>PLG_SYSTEM_SIMPLESHARING_XML_DESCRIPTION</description>	
+	<files>		
+		<filename plugin="simplesharing">simplesharing.php</filename>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_system_simplesharing.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_system_simplesharing.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="client_key" type="password"
+					description="Key of the client side"
+					label="Key of the client side"
+					default="Key of the client side"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

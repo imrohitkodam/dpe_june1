@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules name="rs_un4vb4ae" title="Table Demo-Responsive Horizontal Scrollbars, pagination, table filtering and column filtering on second empty row" style="rs_un4vb4ae.css">
+    <meta  version="1.0" compatibility="4" generator="Online Creation Wizard" author_name="Alterora" author_email="info@alterora.gr" author_url="www.tabulizer.com"/>
+    <ruleset name="rs_un4vb4ae" title="Responsive Horizontal Scrollbars, pagination, table filtering and column filtering on second empty row" description="A sample ruleset to demonstrate a common idea on how to display a wide table on smaller and medium screen sizes." suffix="rs_un4vb4ae"  >
+        			<rule element="table" range="ALL"  column_filter = "enabled columns[1:input:smart,2:input:smart,3:select:exact,5:input:smart,6:select:exact,9:select:exact] headerrow:2 header_size:2" pagination = "enabled full limit10 limitchange[top-left] info[bottom-left] position[bottom-right] header_size:2" responsive = "1:[nicescroll:0][zoom:0][touch:0][cursor_display:1]" theme = "light.css" ></rule>
+			<rule element="table" range="ALL" modification="addemptyrow$2" ></rule>
+			<rule element="row" range="EVEN" style="tr_ze" ></rule>
+			<rule element="row" range="1" style="tr_ht1" ></rule>
+<sample_data  sep="sc" enc="dq">Last Name;Preferred Name;Gender;Birthdate;Homeroom;Level;Parent Addressee;Address;City;State;Zip Code;Home Phone;Email Address #1;Cell Phone #1 (mom);Email Address #2;Cell Phone #2 (dad)
+Adams;Maria;f;01-27-02;7th grade;Middle School;Tracy and Joe Adams;3 Leeward Court;Greensboro;NC;27455;282-0238;tracyadams22@aol.com;336-686-8281;jdadamsdds@aol.com;336-508-2632
+Al-Bustani;Neda;f;08-28-06; ;Lower Elementary;Nesreen Sabah &amp; Saif Al-Bustani;2523 Saintsbury Drive;Burlington;NC;27215; ;whiterosedds@hotmail.com;267-210-0495;sbustanidmd@gmail.com;267-210-2229
+Allega;Noah;m;12-16-10; ;Primary;Anna and Lance Allega;14 Foxglove Lane;Greensboro;NC;27455;370-6468;Anna.Allega@gmail.com;949-292-9694; ;609-4153
+Atchley;Abby;f;01-21-11; ;Primary;Shiho and Allen Atchley;904 Northern Shores Lane;Greensboro;NC;27455; ;shiho.kakiuchi@gmail.com;336-501-8378;allenatchley@hotmail.com;336-346-6521
+Azzarita;Ivy;f;08-24-04;John Archambault &amp; Cathy Moses;Upper Elementary;Frank and Susan Azzarita;5100 Heddon Way;Greensboro;NC;27455;540-0628;azzarita@aol.com;253-0636; ;314-5966
+Azzarita;Paige;f;08-03-01;8th grade;Middle School;Frank and Susan Azzarita;5100 Heddon Way;Greensboro;NC;27455;540-0628;azzarita@aol.com;253-0636; ;314-5966
+Banks;David;m; ; ;Primary;Vanessa and Kenneth Banks;3722 Deerfield St;High Point;NC;27265;905-8216;vobii@hotmail.com;250-8702;kebii@hotmail.com;250-8772
+Bassett;Abby;f;10-01-09;Isabelle Bangham &amp; Teresa Lamb;Primary;Amanda and Kent Bassett;6217 McKibben Circle;Summerfield;NC;27358; ;kabassett@hotmail.com;773-266-7250;amandabassett16@gmail.com;336-681-6184
+Bassett;Eli;m;09-11-05;Kristy Ford &amp; Cynthia Kiddy;Lower Elementary;Cary and Jim Bassett;4829 Harvey Road;Jamestown;NC;27282;454-2654;bassettclm@aol.com;337-0793;bassthnd@northstate.net;337-6993
+Bouska;Mason;m;10-16-03;John Archambault &amp; Cathy Moses;Upper Elementary;David Bouska;600 Lakeview St;Greensboro;NC;27401; ;davidbouska@gmail.com; ; ;430-8728
+Bouska;Nina;f;04-05-06;Kristy Ford &amp; Cynthia Kiddy;Lower Elementary;David Bouska;600 Lakeview St;Greensboro;NC;27401; ;davidbouska@gmail.com; ; ;430-8728
+Bouska;Mason;m;10-16-03;John Archambault &amp; Cathy Moses;Upper Elementary;Julie Williams;208 E. Hendrix Street;Greensboro;NC;27401; ;julie.williams7@yahoo.com;430-8727; ; 
+Bouska;Nina;f;04-05-06;Kristy Ford &amp; Cynthia Kiddy;Lower Elementary;Julie Williams;208 E. Hendrix Street;Greensboro;NC;27401; ;julie.williams7@yahoo.com;430-8727; ; 
+Breeden;Jacob;m;12-10-00;8th grade;Middle School;David Breeden;92 Tannenbaum Circle;Greensboro;NC;27410; ;devad4@hotmail.com; ; ;314-1437
+Breeden;Jacob;m;12-10-00;8th grade;Middle School;Wendy Slingerland;4762 Champion Court;Greensboro;NC;27410; ;wsbreeden@hotmail.com;430-0718; ; 
+Brevda;Bella;f;12-29-04; ;Upper Elementary;Heather Sparks &amp; Scott Brevda;1710 Foxhollow Rd;Greensboro;NC;27410;285-5656;heatherpaige789@gmail.com;420-1044;scottb@ryanscottdisplays.com;420-2442
+Brevda;Leila;f;04-05-07;Kristy Ford &amp; Cynthia Kiddy;Lower Elementary;Heather Sparks &amp; Scott Brevda;1710 Foxhollow Rd;Greensboro;NC;27410;285-5656;heatherpaige789@gmail.com;420-1044;scottb@ryanscottdisplays.com;420-2442
+Brown;Maddie;f;05-28-01;8th grade;Middle School;Tiffany and Will Brown;1104 Westminster Drive;Greensboro;NC;27410;854-3594;tdbrown1000@gmail.com;336-324-7420; ;336-324-6266
+Cabbell;Ava;f;01-23-06; ;Lower Elementary;Diane and Kyle Cabbell;1209-B Lakewood Drive;Greensboro;NC;27410;297-1965;diane.cabbell@gmail.com;253-6135;klcabbell@mac.com;253-3890
+Calhoun;Pierce;m;09-27-11; ;Primary;Ginna and William &quot;PJ&quot; Calhoun;1115 Westridge Rd;Greensboro;NC;27410;297-0413;ginnacalhoun@att.net;989-2902; ;340-1956
+Calhoun;Sophia;f;09-20-08;Isabelle Bangham &amp; Teresa Lamb;Primary;Ginna and William &quot;PJ&quot; Calhoun;1115 Westridge Rd;Greensboro;NC;27410;297-0413;ginnacalhoun@att.net;989-2902; ;340-1956
+Carabeau;Elena;f;06-19-02;7th grade;Middle School;Mary and Scott Carabeau;2303 Sherwood Street;Greensboro;NC;27403; ;scarabeau@triad.rr.com;669-2448;mcarabeau@triad.rr.com;362-2173
+Chisholm;Noah;m;05-04-10;Catherine Froelich;Primary;Kelly and Brian Chisholm;3622 Grindstaff Ave.;High Point;NC;27265;688-4920;kellym.chisholm@gmail.com;688-1564;brains.chisholm@gmail.com;688-4920
+Chusakul;V-raya;f;08-22-02; ;Middle School;Gunn and Pariyakorn Chusakul;508 Meadowood Street;Greensboro;NC;27409; ;mypetmarket@aol.com;253-1294; ;253-1294
+Clark;Avery;m;01-31-11; ;Primary;Isaac and Mary Kristen Clark;1903 Medhurst Drive;Greensboro;NC;27410; ;marykristen@hotmail.com;420-7560;issac_clark@hotmail.com;420-7559
+Clark;Bill;m;04-17-06; ;Lower Elementary;Kris and Tony Clark;1404 Worthington Place;Greensboro;NC;27410;540-1345;krisclark1404@earthlink.net;749-2324; ;254-8903
+Comick;Thomas;m;09-18-04;John Archambault &amp; Cathy Moses;Upper Elementary;Sophie Wilson &amp; Joe Comick;110 Beverly Place;Greensboro;NC;27403;852-7051;sfranceusa@yahoo.com;254-7431;comick@joecomick.com; 
+Cook;Robbie;M;04-16-04;John Archambault &amp; Cathy Moses;Upper Elementary;Suzi and Rob Cook;1313 Lakewood Dr;Greensboro;NC;27410;299-0280;suzicook@triad.rr.com;918-0244; ;456-2077
+Cordisco;Caden;m;09-26-09;Catherine Froelich;Primary;Stephanie and Chris Cordisco;7610 Charles Place Drive;Kernersville;NC;27284;298-7467;ssalkow@hotmail.com;508-0900;ccordisco@hotmail.com;336-601-4564
+Cordisco;Kellan;m;10-08-11;Gabriela McLean;Toddler;Stephanie and Chris Cordisco;7610 Charles Place Drive;Kernersville;NC;27284;298-7467;ssalkow@hotmail.com;508-0900;ccordisco@hotmail.com;336-601-4564
+Cosson;Isabella;f;10-13-10;Isabelle Bangham &amp; Teresa Lamb;Primary;Stacy &amp; Jamie Cosson;2823 Wright Yow Lane;Greensboro;NC;27406;698-9113;stacy@thegms.org;420-3292;jamie@campweaver.org;430-7653
+Craft;Faith;f;10-19-11; ;Primary;Blaire Areaux &amp; Bob Craft;3532 Covent Oak Court;High Point;NC;27265;307-4458;baareaux@hotmail.com;402-9058;racst33@yahoo.com;443-472-3548
+Craft;Phoebe;f;08-21-01;8th grade;Middle School;Kathy and Daniel Craft;1012 Country Club Dr.;Greensboro;NC;27408;379-7443;craftk@yahoo.com;686-1768;dccraft@craftinsurance.com;686-1766
+Davis;Jaxon;m;05-12-02;6th grade;Middle School;Robin Davis;313 S. Chapman St.;Greensboro;NC;27403; ;1jaxmom@gmail.com;508-6820; ; 
+Day;Fallon;f;12-24-11;Jessica Smith;Toddler;Shannon and Chris Day;5913 Autumn Gate Drive;Oak Ridge;NC;27310;298-7383;shannmariea@aol.com;404-7870; ;860-895-7583
+DeLashmutt;Ainsley;f;02-07-09;Catherine Froelich;Primary;Sarah DeLashmutt &amp; Patrick Emerson;3806 Manor Drive;Greensboro;NC;27403; ;sarahd@thegms.org;571-246-3935;emerson.patrick@gmail.com;336-312-5174
+Desai;Mahinda;m;01-01-07;Kristy Ford &amp; Cynthia Kiddy;Lower Elementary;Balaji Desai &amp; Miru Ranganathan;6193 Windsor Farme Road;Summerfield;NC;27358;412-344-5619;miru76r@gmail.com;412-805-0550;balaji.desai@gmail.com;412-805-7330
+Desai;Sangamitta;f;01-25-10;Isabelle Bangham &amp; Teresa Lamb;Primary;Balaji Desai &amp; Miru Ranganathan;6193 Windsor Farme Road;Summerfield;NC;27358;412-344-5619;miru76r@gmail.com;412-805-0550;balaji.desai@gmail.com;412-805-7330
+de Vries;Chris;m;02-15-09; ;Primary;Joost de Vries &amp; Jie &quot;Jasmin&quot; Song;1470 Bethan Drive;Summerfield;NC;27358; ;jiedevries@hotmail.com;650-817-5189;jjoostdevries@outlook.com;650-862-9625
+DiRosa-Taylor;Sylvia;f;10-17-08;Shelley Reynolds &amp; Stacy Cosson;Primary;Samantha DiRosa;1207 W. Northwood;Greensboro;NC;27408;333-2156;sdirosa@elon.edu;549-5175; ; 
+DiRosa-Taylor;Sylvia;f;10-17-08;Shelley Reynolds &amp; Stacy Cosson;Primary;Anthony Taylor;605 Park Ave.;Greensboro;NC;27405;303-0156; ; ;anthotaylo@mac.com;549-5173
+Dunlap;Elsa;f;05-14-11; ;Primary;Gwen and Mark Dunlap;2405 Southwick Drive;Greensboro;NC;27455; ;dunlap.gwen@gmail.com;919-656-4550; ;816-500-2182
+Dunn;Lee;m;03-26-01;8th grade;Middle School;Dina and Michael Dunn;105 Knollwood Drive;Greensboro;NC;27403; ;dina@blinkready.com;471-5584; ;471-7966
+Dutta;Saahil;m;04-12-08;Isabelle Bangham &amp; Teresa Lamb;Primary;Abhiroop and Payal Dutta;4508 Tenby Drive;Greensboro;NC;27455;269-408-1424;payal_kaishap@yahoo.com;202-6467;abhiroop_dutta@yahoo.com;978-4606
+Egbert;Isabel;f;04-17-03;6th grade;Middle School;Rhea and Andrew Egbert;1705 Swannanoa Drive;Greensboro;NC;27410;854-3599;egbertrhea@hotmail.com;339-8677;aegbert@reynolda.com;210-2770
+Elias;Nathan;m;12-06-09; ;Primary;Elias Ashame &amp; Lulit Kifle;4301 Merlot Way;Greensboro;NC;27410;336-676-4731;gklulit@yahoo.com;980-329-3496;eliassima24@yahoo.com;980-329-3495
+Farrell;Grace;f;09-11-09;Tracy Carr &amp; Cristina Ruas de Melo;Primary;Alyssa and Rich Farrell;610 Seven Oaks Drive;Greensboro;NC;27410;292-4484;alyssafarrell@triad.rr.com;919-332-4600; ;207-7999
+Fatah;Mahal;m;09-11-06;Kaki Sowinski, Lisa Kenny &amp; Sarah Delashmutt;Lower Elementary;Amal El Moghraby &amp; Omar Mohamed;3606 Chance Road;Greensboro;NC;27410;510-2804;amoghraby@gmail.com;202-615-4224; ;202-664-4710
+Fisher;Kayna;f;03-18-06;Kaki Sowinski, Lisa Kenny &amp; Sarah Delashmutt;Lower Elementary;Jill and Kayne Fisher;2207 Pinecrest Rd.;Greensboro;NC;27403;272-2026;jbillyfisher@yahoo.com;209-5257; ;209-5256
+Fisher;Knox;m;03-16-09;Tracy Carr &amp; Cristina Ruas de Melo;Primary;Jill and Kayne Fisher;2207 Pinecrest Rd.;Greensboro;NC;27403;272-2026;jbillyfisher@yahoo.com;209-5257; ;209-5256
+Frederiksen;Ida Marie;f;01-07-08; ;Lower Elementary;Jesper and Annika Frederiksen;6316 Katherine Louise Drive;Summerfield;NC;27358; ;af@kampff.dk; ;jesper.k.f@gilbarco.com;455-1575
+Frederiksen;Peter;m;06-21-02;6th grade;Middle School;Jesper and Annika Frederiksen;6316 Katherine Louise Drive;Summerfield;NC;27358; ;af@kampff.dk; ;jesper.k.f@gilbarco.com;455-1575
+Frontera;Tatiana;f;07-31-01;7th grade;Middle School;Maribel Ramos;5403 Greenough Way;Greensboro;NC;27410; ;maribelramos2801@bellsouth.net;471-9728; ; 
+Gates;Andrew;m;03-29-05;John Archambault &amp; Cathy Moses;Upper Elementary;Sarah and Brent Gates;4039 Lauder Lane;Burlington;NC;27215;270-4915;sarahgates_ma@hotmail.com;317-4710;brent.gates@hotmail.com;434-446-3105
+Gatlin;Kaleb;m;08-18-06;Kaki Sowinski, Lisa Kenny &amp; Sarah Delashmutt;Lower Elementary;Wendy and Keith Gatlin;2998 Grasmere Dr.;Greensboro;NC;27410;632-9874;wendybg70@gmail.com;210-6407;kgatlin4@yahoo.com;402-8207
+Gilbert;Mitch;m;09-21-07; ;Lower Elementary;Kelly Mitchell &amp; Kemp Gilbert;2451 N. Beech Lane;Greensboro;NC;27455; ;kmitchellgilbert@gmail.com;906-3007;kempgilbert@hotmail.com;455-3536
+Gilleland;Justin;m;05-14-01;7th grade;Middle School;Anna Ferguson &amp; Greg Gilleland;5696 Pepper Rd;Oak Ridge;NC;27310;643-3030;emailanna2@me.com;828-508-4594;ggilleland@gmail.com;317-7161
+Gonzalez;Evelyn;f;12-04-08;Tracy Carr &amp; Cristina Ruas de Melo;Primary;Laura and Jesus Gonzalez;3702 Stratton Hills Drive;Greensboro;NC;27410;419-0691;jmgonzal@gmail.com;919-824-3606;lmc.gonzalez@gmail.com;919-244-6207
+Gonzalez;Javier;m;12-04-08;Tracy Carr &amp; Cristina Ruas de Melo;Primary;Laura and Jesus Gonzalez;3702 Stratton Hills Drive;Greensboro;NC;27410;419-0691;jmgonzal@gmail.com;919-824-3606;lmc.gonzalez@gmail.com;919-244-6207
+Gonzalez;Julian;m;10-28-06;Kaki Sowinski, Lisa Kenny &amp; Sarah Delashmutt;Lower Elementary;Laura and Jesus Gonzalez;3702 Stratton Hills Drive;Greensboro;NC;27410;419-0691;jmgonzal@gmail.com;919-824-3606;lmc.gonzalez@gmail.com;919-244-6207
+Gonzalez;Marcela;f;05-28-02;7th grade;Middle School;Teresa and Hugo Gonzalez;291 Carousel Lane;Stokesdale;NC;27357;644-6047;mto68@hotmail.com;918-7571; ;362-3824
+Good;Caroline;f;04-23-10; ;Primary;Melanie and Woody Good;5815 Elkton Drive;Oak Ridge;NC;27310;644-6282;melbgood@gmail.com;919-606-9101;hsmbgood@gmail.com;919-605-0566
+Greene;May;F;05-13-01;8th grade;Middle School;Niles and Candy Greene;209 Mistletoe Drive;Greensboro;NC;27403; ;greenehouse4@gmail.com;577-6759; ;609-2007
+Gudat;Alex;m;09-06-08;Shelley Reynolds &amp; Stacy Cosson;Primary;Jamie Gudat;1050 Christmas Place;Greensboro;NC;27410;355-9536;jamiegudat@gmail.com;336-239-4629;sattler363@gmail.com; 
+Hackett;Catie;f;10-11-10; ;Primary;Melissa and Patrick Hackett;6081 Mountain Brook Road;Greensboro;NC;27455; ;lissa956@yahoo.com;616-723-5722; ;616-460-5163
+Hackett;Marah;f;02-29-12;Jessica Smith;Toddler;Melissa and Patrick Hackett;6081 Mountain Brook Road;Greensboro;NC;27455; ;lissa956@yahoo.com;616-723-5722; ;616-460-5163
+Hamer;Tilly;f;10-16-08;Isabelle Bangham &amp; Teresa Lamb;Primary;Molly Seabrook &amp; Greg Hamer;211 Mimosa Drive;Greensboro;NC;27403; ;seabrookm@gmail.com;455-1821;gnhamer@gmail.com;437-5423
+Hamer;William;m;10-14-06;Kaki Sowinski, Lisa Kenny &amp; Sarah Delashmutt;Lower Elementary;Molly Seabrook &amp; Greg Hamer;211 Mimosa Drive;Greensboro;NC;27403; </sample_data>
+    </ruleset>
+</rules>

@@ -1,0 +1,31 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+<extension version="3.0" type="plugin" group="tjhtmlzips" method="upgrade">
+	<name>PLG_TJHTMLZIPS_HTMLZIP</name>
+	<author>Techjoomla</author>
+	<creationDate>13th Jul 2023</creationDate>
+	<copyright>Copyright (C) 2014 - 2023 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<version>4.0.5</version>
+	<description>PLG_TJHTMLZIPS_HTMLZIP_DESC</description>
+
+	<files>
+		<file plugin="htmlzip">htmlzip.php</file>
+		<folder>tmpl</folder>
+	</files>
+	<languages folder="language">
+			<language tag="en-GB">en-GB.plg_tjhtmlzips_htmlzip.ini</language>
+			<language tag="en-GB">en-GB.plg_tjhtmlzips_htmlzip.sys.ini</language>
+	</languages>
+
+	<config name="params">
+		<fields name="params">
+			<fieldset name="basic" label="PLG_TJSCORM_NATIVESCORM_BASIC_FIELDSET" >
+
+				<field name="assessment" type="hidden" default="0" label="PLG_TJHTMLZIP_ASSESMENT_LABEL" description="PLG_TJHTMLZIP_ASSESMENT_LABEL_DESC" class="btn-group" />
+			</fieldset>
+		</fields>
+	</config>
+
+</extension>

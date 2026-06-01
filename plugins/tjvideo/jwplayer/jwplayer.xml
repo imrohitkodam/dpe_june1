@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="tjvideo" method="upgrade">
+	<name>PLG_TJVIDEO_JWPLAYER</name>
+	<author>Techjoomla</author>
+	<creationDate>13th Jul 2023</creationDate>
+	<copyright>Copyright (C) 2014 - 2023 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<version>4.0.5</version>
+	<isapplication>true</isapplication>
+	<description>PLG_TJVIDEO_JWPLAYER_DESC</description>
+
+	<files>
+		<file plugin="jwplayer">jwplayer.php</file>
+		<folder>jwplayer</folder>
+		<folder>tmpl</folder>
+	</files>
+	<languages folder="language">
+			<language tag="en-GB">en-GB/en-GB.plg_tjvideo_jwplayer.ini</language>
+			<language tag="en-GB">en-GB/en-GB.plg_tjvideo_jwplayer.sys.ini</language>
+	</languages>
+
+	<!-- Fields for Joomla 1.8.x and onwards -->
+	<config name="params">
+		<fields name="params">
+			<fieldset name="basic" label="PLG_TJVIDEO_JWPLAYER_PARAMETER" >
+				<field name="plugin_name" type="text" default="JWPlayer" label="PLG_TJVIDEO_JWPLAYER_NAME" description="PLG_TJVIDEO_JWPLAYER_NAME_DESC" />
+				<field name="playerkey" type="text" default="" label="PLG_TJVIDEO_JWPLAYER_PLAYER_KEY" description="PLG_TJVIDEO_JWPLAYER_PLAYER_KEY_DESC" />
+
+				<field name="assessment" type="hidden" default="1" label="PLG_JWPLAYER_VIDEO_ASSESMENT_LABEL" description="PLG_JWPLAYER_VIDEO_ASSESMENT_LABEL_DESC" class="btn-group" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

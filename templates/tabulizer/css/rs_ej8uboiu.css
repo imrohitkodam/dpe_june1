@@ -1,0 +1,14 @@
+table.tabtable-rs_ej8uboiu  { border-width: 1px;
+border-color: #000000;
+border-style: solid; } 
+table.tabtable-rs_ej8uboiu tr  { border: none; } 
+table.tabtable-rs_ej8uboiu  { 
+border-collapse:collapse;width:100%;background-color: transparent;}
+table.tabtable-rs_ej8uboiu tr.tabrow td.tabcol  { 
+font-style: normal;font-weight: normal;padding: 5px;background-color: transparent;}
+table.tabtable-rs_ej8uboiu tr:nth-child(even) td.tabcol  { 
+font-style: normal;font-weight: normal;background-color:#dbe5f1;}
+table.tabtable-rs_ej8uboiu tr.tr_hb1 td.tabcol, table.tabtable-rs_ej8uboiu tr.tr_hb1:hover td.tabcol, table.tabtable-rs_ej8uboiu tr.tr_hb1 td.tabcol:hover  { 
+font-style: normal;font-weight: normal;color: #1f497d;background-color:#ebf1dd;}
+table.tabtable-rs_ej8uboiu tr.tr_ht1 td.tabcol, table.tabtable-rs_ej8uboiu tr.tr_ht1:hover td.tabcol, table.tabtable-rs_ej8uboiu tr.tr_ht1 td.tabcol:hover  { 
+font-style: normal;font-weight: bold;color: #ffffff;background-color:#9bbb59;}

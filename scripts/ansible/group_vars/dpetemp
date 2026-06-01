@@ -1,0 +1,4 @@
+---
+machine_group: "dpetemp"
+
+config_src : "templates/configuration.php.j2"

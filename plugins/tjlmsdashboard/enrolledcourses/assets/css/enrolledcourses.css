@@ -1,0 +1,37 @@
+.course_progress .side_padding
+{
+	padding: 10px 10px 0px 10px;
+}
+
+.course_progress .dashboard-course-title
+{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.progress .bar_color_red
+{
+background-image: linear-gradient(to bottom,red,red) !important;
+background-color:red !important;
+}
+
+.progress .bar_color_green
+{
+background-image: linear-gradient(to bottom,#14D72B,#14D72B) !important;
+background-color:#14D72B !important;
+}
+
+
+.each_course_progress .tjlms_progress
+{
+	margin-top: 10px;
+	height: 5px !important;
+	margin-bottom: 15px !important;
+
+}
+.each_course_progress:last-child
+{
+margin-bottom: 5px;
+}
+.get-certificate{padding-left: 10px;}

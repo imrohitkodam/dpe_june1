@@ -1,0 +1,8 @@
+[slaqa-dpe]
+node-lte-dev.lteservers.com ansible_ssh_user={{dpe_slaqa_user}} ansible_ssh_private_key_file=~/.ssh/id_rsa
+
+[dpetemp:children]
+slaqa-dpe
+
+[dpe:children]
+dpetemp

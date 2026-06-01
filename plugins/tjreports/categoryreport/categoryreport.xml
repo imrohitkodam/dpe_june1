@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="tjreports" method="upgrade">
+	<name>PLG_TJREPORTS_CATEGORYREPORT_REPORT</name>
+	<author>Techjoomla</author>
+	<creationDate>26th Jun 2017</creationDate>
+	<copyright>(C)techjoomla.com</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>contact@techjoomla.com</authorEmail>
+	<authorUrl>www.techjoomla.com</authorUrl>
+	<version>1.0.0</version>
+	<description>PLG_TJREPORTS_CATEGORYREPORT_REPORT_DESC</description>
+
+	<files>
+		<filename plugin="categoryreport">categoryreport.php</filename>
+		<filename>index.html</filename>
+		<folder>language</folder>
+	</files>
+</extension>

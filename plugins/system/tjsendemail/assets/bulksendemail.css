@@ -1,0 +1,26 @@
+.is-progress {
+	background-color: #EEF2F6;
+	cursor: not-allowed;
+	z-index: 5;
+	opacity: 0.6;
+	-webkit-transition: background-color 500ms ease-out 1s;
+	-moz-transition: background-color 500ms ease-out 1s;
+	-o-transition: background-color 500ms ease-out 1s;
+	transition: background-color 500ms ease-out 1s;
+	position: relative;
+}
+
+.is-progress:before {
+	font-family: "FontAwesome";
+	content: "\f110";
+	position: absolute;
+	z-index:1040;
+	left: 50%;
+	top: 50%;
+	font-size: 45px;
+	color: #1664bd;
+	-webkit-animation: fa-spin 2s infinite linear;
+	animation: fa-spin 2s infinite linear;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}

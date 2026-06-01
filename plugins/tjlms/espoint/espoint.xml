@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<extension type="plugin" version="3.7.0" group="tjlms"
+	method="upgrade">
+	<name>plg_tjlms_espoint</name>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>(C)Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<creationDate>08 Aug 2020</creationDate>
+	<version>1.0.0</version>
+	<description>PLG_TJLMS_ESPOINT_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="espoint">espoint.php</filename>
+		<folder>language</folder>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB.plg_tjlms_espoint.ini</language>
+		<language tag="en-GB">en-GB.plg_tjlms_espoint.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="espoint">
+			<field type="spacer" class="tjintegration-label" label="PLG_TJLMS_ESPOINT" />
+			<field
+				name="onAfterCourseCompletion"
+				type="number"
+				label="PLG_TJLMS_ESPOINT_AFTERCOURSE_COMPLETION_LABEL"
+				description="PLG_TJLMS_ESPOINT_AFTERCOURSE_COMPLETION_LABEL_DESC"
+				multiple="true">
+			</field>
+		</fields>
+	</config>
+</extension>

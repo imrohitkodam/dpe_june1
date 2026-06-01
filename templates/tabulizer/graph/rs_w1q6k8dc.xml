@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules name="rs_w1q6k8dc" title="Line Graph with X-Axis Fit Values" style="rs_w1q6k8dc.css">
+	<meta  version="1.0" compatibility="4" generator="Online Creation Wizard" author_name="Alterora" author_email="info@alterora.gr" author_url="www.tabulizer.com"/>
+	<ruleset name="rs_w1q6k8dc" title="Line Graph with X-Axis Fit Values" description="A sample ruleset with vertical Y-Axis label and no margin in the X-Axis labels." suffix="rs_w1q6k8dc" >
+		<graph type="line" num_of_series="1" width="500px" height="300px"  />
+		<title show="1" data_source="text" text_value="Regional Sales" font_size="16px"  />
+		<legend show="1" placement="inside" position="se"  />
+		<grid lines_show="1" lines_width="1" border_show="1" border_size="2" shadow_show="1" shadow_angle="45" shadow_offset="1.5" shadow_alpha="0.05"  />
+		<axes>
+			<axis id="x" show="1" min="fit" max="fit" ticks_show_labels="1" ticks_show_marks="1" ticks_mark_size="6"  />
+			<axis id="y" show="1" label="Sales" label_vertical="1" ticks_show_labels="1" ticks_show_marks="1" ticks_mark_size="6"  />
+		</axes>
+		<series>
+			<serie id="1" show="1" label="West Region" color="#4f81bd" data_source_x_element="row" data_source_x_range="2" data_source_x_data_type="date" data_source_y_element="row" data_source_y_range="1" data_source_y_data_type="auto" line_show="1" line_width="2.5" markers_show="1" markers_size="9" markers_width="2" markers_shadow="1"  />
+		</series>
+	</ruleset>
+</rules>

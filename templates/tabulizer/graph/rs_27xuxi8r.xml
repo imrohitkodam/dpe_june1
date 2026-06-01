@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules name="rs_27xuxi8r" title="Donuts" style="rs_27xuxi8r.css">
+	<meta  version="1.0" compatibility="4" generator="Online Creation Wizard" author_name="Alterora" author_email="info@alterora.gr" author_url="www.tabulizer.com"/>
+	<ruleset name="rs_27xuxi8r" title="Donuts" description="Donuts for testing" suffix="rs_27xuxi8r" >
+		<graph type="donut" num_of_series="3" width="500px" height="300px"  />
+		<legend show="1"  />
+		<grid lines_show="1" lines_width="1" border_show="1" border_size="2" shadow_show="1" shadow_angle="45" shadow_offset="1.5" shadow_alpha="0.05"  />
+		<series>
+			<serie id="1" show="1" label="S1" color="#4f81bd" data_source_label_element="row" data_source_label_range="2" data_source_label_data_type="text" data_source_value_element="row" data_source_value_range="1" data_source_value_data_type="numeric" donut_padding="20" donut_fill="1" donut_labels_show="0"  />
+			<serie id="2" show="1" label="S2" color="#9bbb59" data_source_label_element="row" data_source_label_range="4" data_source_label_data_type="text" data_source_value_element="row" data_source_value_range="3" data_source_value_data_type="numeric" donut_padding="20" donut_fill="1" donut_labels_show="0"  />
+			<serie id="3" show="1" label="S3" color="#f79646" data_source_label_element="row" data_source_label_range="6" data_source_label_data_type="text" data_source_value_element="row" data_source_value_range="5" data_source_value_data_type="numeric" donut_padding="20" donut_fill="1" donut_labels_show="0"  />
+		</series>
+	</ruleset>
+</rules>

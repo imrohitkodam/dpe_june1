@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules name="rs_rd4rpszj" title="Graph Demo-Graph Transpose" style="rs_rd4rpszj.css">
+	<meta  version="1.0" compatibility="4" generator="Online Creation Wizard" author_name="Alterora" author_email="info@alterora.gr" author_url="www.tabulizer.com"/>
+	<ruleset name="rs_rd4rpszj" title="Demo for Graph Transpose" description="2 series with number and dates" suffix="rs_rd4rpszj"  >
+	<sample_data  sep="sc" enc="none">36;62;11;46;80;77;22;60;8;89
+2016-11-20;42;67;22;88;64;53;77;72;24
+2016-12-20;93;16;13;54;98;55;21;78;46
+2017-01-20;45;1;95;0;98;22;5;23;33
+2017-02-20;3;99;92;54;41;63;80;19;90
+2017-03-20;7;71;11;51;10;44;1;55;15
+2017-04-20;43;68;43;83;77;99;77;57;30
+2017-05-20;21;66;48;15;83;84;62;89;50
+2017-06-20;94;89;43;30;56;48;45;63;62
+2017-07-20;21;35;9;80;62;49;77;14;66
+</sample_data>
+
+			<rule element="table" range="ALL" graph="rs_rd4rpszj.xml" ></rule>
+
+	</ruleset>
+</rules>

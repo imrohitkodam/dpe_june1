@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="tjtextmedia" method="upgrade">
+	<name>PLG_TJTEXTMEDIA_JOOMLACONTENT</name>
+	<author>Techjoomla</author>
+	<creationDate>13th Jul 2023</creationDate>
+	<copyright>Copyright (C) 2014 - 2023 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<version>4.0.5</version>
+	<description>PLG_TECHJOOMLA_JOOMLA_CONTENT_DESCRIPTION</description>
+
+	<files>
+		<file plugin="joomlacontent">joomlacontent.php</file>
+		<file>index.html</file>
+		<folder>joomlacontent</folder>
+		<folder>tmpl</folder>
+	</files>
+	<languages folder="language">
+			<language tag="en-GB">en-GB/en-GB.plg_tjtextmedia_joomlacontent.ini</language>
+			<language tag="en-GB">en-GB/en-GB.plg_tjtextmedia_joomlacontent.sys.ini</language>
+	</languages>
+
+	<config name="params">
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="assessment" type="hidden" default="0" label="PLG_TJTEXTMEDIA_JC_ASSESMENT_LABEL" description="PLG_TJTEXTMEDIA_JC_ASSESMENT_LABEL_DESC" class="btn-group" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

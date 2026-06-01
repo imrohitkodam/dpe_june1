@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules name="rs_f63o8axa" title="Graph Demo-Meter Gauge Graph" style="rs_f63o8axa.css">
+	<meta  version="1.0" compatibility="4" generator="Online Creation Wizard" author_name="Alterora" author_email="info@alterora.gr" author_url="www.tabulizer.com"/>
+	<ruleset name="rs_f63o8axa" title="Demo for Meter Gauge Graph" description="A simple ruleset for converting a table into a meter graph." suffix="rs_f63o8axa"  >
+	<sample_data  sep="sc" enc="none">44;3;73;2;89;100;30;9;14;70
+3;10;17;24;52;1;84;25;80;72
+#9FB847;#B41700;#C38C6E;#86E10E;67;82;81;74;34;93
+17;32;87;54;73;23;89;27;69;42
+42;28;46;40;20;32;91;43;6;73
+37;40;32;91;77;42;28;53;75;9
+29;81;69;28;78;43;21;57;44;19
+81;91;58;50;98;17;14;64;2;28
+22;9;82;96;58;34;68;78;93;25
+51;33;14;67;33;19;59;11;78;54
+</sample_data>
+
+			<rule element="table" range="ALL" graph="rs_f63o8axa.xml" ></rule>
+
+	</ruleset>
+</rules>

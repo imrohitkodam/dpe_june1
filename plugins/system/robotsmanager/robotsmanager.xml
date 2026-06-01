@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="system" method="upgrade" version="5.0">
+    <name>Robots Manager</name>
+    <author>Tekdi Technologies</author>
+    <version>1.0.0</version>
+    <description>Plugin to automatically and manually update robots metadata based on access levels for article and menu.</description>
+    <files>
+        <filename plugin="robotsmanager">robotsmanager.php</filename>
+        <filename>helper.php</filename>
+        <folder>form</folder>
+        <folder>language</folder>
+        <folder>fields</folder>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset name="articles" label="Articles">
+                <field name="rules" type="subform" formsource="plugins/system/robotsmanager/form/robotsmanager.xml"
+                       multiple="true" label="Rules" />
+                <field name="batch_size" type="number" label="Batch Size" default="50" min="1" />
+
+                <field name="update_now" type="radio" label="Update articles now?" default="0">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </field>
+            </fieldset>
+            <fieldset name="menus" label="Menus">
+                <field name="menu_rules" type="subform" formsource="plugins/system/robotsmanager/form/robotsmanager.xml"
+                       multiple="true" label="Menu Rules" />
+                <field name="update_menus_now" type="radio" label="Update menus now?" default="0">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

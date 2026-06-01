@@ -1,0 +1,23 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+<extension version = "3.0" type = "plugin" group = "tjsurvey" method = "upgrade">
+	<name>surveyforce</name>
+	<author>Techjoomla</author>
+	<creationDate>13th Jul 2023</creationDate>
+	<copyright>Copyright (C) 2014 - 2023 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<version>4.0.5</version>
+	<description>PLG_TJEVENTS_JTEVENT_DESC</description>
+
+	<files>
+		<file plugin="surveyforce">surveyforce.php</file>
+		<folder>surveyforce</folder>
+	</files>
+	<languages folder="language">
+			<language tag="en-GB">en-GB.plg_tjsurvey_surveyforce.ini</language>
+	</languages>
+
+	<config>
+	</config>
+</extension>

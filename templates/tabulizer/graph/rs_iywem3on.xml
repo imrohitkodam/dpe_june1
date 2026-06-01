@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules name="rs_iywem3on" title="Demo for Bar Graph" style="rs_iywem3on.css">
+	<meta  version="1.0" compatibility="4" generator="Online Creation Wizard" author_name="Alterora" author_email="info@alterora.gr" author_url="www.tabulizer.com"/>
+	<ruleset name="rs_iywem3on" title="Demo for Bar Graph" description="The very basic bar graph with two series." suffix="rs_iywem3on" >
+		<graph type="bar" num_of_series="2" width="500px" height="300px"  />
+		<title show="1" data_source="text" text_value="Participation by Gender"  />
+		<legend show="1"  />
+		<grid lines_show="1" lines_width="1" border_show="1" border_size="2" shadow_show="1" shadow_angle="45" shadow_offset="1.5" shadow_alpha="0.05"  />
+		<axes>
+			<axis id="x" show="1" ticks_show_labels="1" ticks_show_marks="1" ticks_mark_size="6" ticks_data_source_label_element="row" ticks_data_source_label_range="3" ticks_data_source_label_data_type="text"  />
+			<axis id="y" show="1" ticks_show_labels="1" ticks_show_marks="1" ticks_mark_size="6" ticks_data_source_label_element="none" ticks_data_source_label_range="4" ticks_data_source_label_data_type="auto"  />
+		</axes>
+		<series>
+			<serie id="1" show="1" label="Male" color="#4f81bd" data_source_value_element="row" data_source_value_range="1" data_source_value_data_type="numeric" markers_show="1" markers_size="9" markers_width="2" markers_shadow="1" bar_padding="8" bar_margin="10"  />
+			<serie id="2" show="1" label="Female" color="#c0504d" data_source_value_element="row" data_source_value_range="2" data_source_value_data_type="numeric" markers_show="1" markers_size="9" markers_width="2" markers_shadow="1" bar_padding="8" bar_margin="10"  />
+		</series>
+	</ruleset>
+</rules>

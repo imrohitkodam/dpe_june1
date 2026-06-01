@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="system" method="upgrade">
+	<name>plg_system_tc</name>
+	<author>Techjoomla</author>
+	<creationDate>March 2017</creationDate>
+	<copyright>Copyright(C)2016-17 TechJoomla</copyright>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>http://www.techjoomla.com</authorUrl>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>1.0</version>
+	<description>PLG_SYSTEM_TC_DESC</description>
+	<files>
+		<filename plugin="tc">tc.php</filename>
+	</files>
+  	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_system_tc.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_system_tc.sys.ini</language>
+	</languages>
+  	<config name="params">
+	</config>
+</extension>
+

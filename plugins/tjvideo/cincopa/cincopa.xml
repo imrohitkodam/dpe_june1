@@ -1,0 +1,31 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+<extension version="3.7.0" type="plugin" group="tjvideo" method="upgrade">
+	<name>PLG_TJVIDEO_CINCOPA</name>
+	<author>Techjoomla</author>
+	<creationDate>12th NOV 2021</creationDate>
+	<copyright>Copyright (C) 2014 - 2023 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<version>1.8.0</version>
+	<description>PLG_TJVIDEO_CINCOPA_XML_DESCRIPTION</description>
+	<files>
+		<file plugin="cincopa">cincopa.php</file>
+		<folder>assets</folder>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_tjvideo_cincopa.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_tjvideo_cincopa.sys.ini</language>
+	</languages>
+	<!-- Fields for Joomla 1.8.x and onwards -->
+	<config name="params">
+		<fields name="params">
+			<fieldset name="basic" label="PLG_TJVIDEO_CINCOPA_PARAMETER" >
+				<field name="secret_key" type="text" default="" label="PLG_TJVIDEO_CINCOPA_SECRET_KEY" description="PLG_TJVIDEO_CINCOPA_SECRET_KEY_DESC" />
+				<field name="max_search" type="number" default="18" max="25" label="PLG_TJVIDEO_CINCOPA_MAX_SEARCH" description="PLG_TJVIDEO_CINCOPA_MAX_SEARCH_DESC" />
+    		</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="tjlms" method="upgrade">
+	<name>plg_tjlms_seb</name>
+	<author>Techjoomla</author>
+	<creationDate>5th April 2019</creationDate>
+	<copyright>Copyright (C) 2016 - 2019 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<version>1.0.0</version>
+	<description>PLG_TJLMS_SEB_XML_DESCRIPTION</description>
+
+  <files>
+		<filename plugin="seb">seb.php</filename>
+	</files>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB.plg_tjlms_seb.ini</language>
+		<language tag="en-GB">en-GB.plg_tjlms_seb.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+			</fieldset>
+		</fields>
+		<fields name="seb">
+			<field name="seb_keys" type="textarea"
+				label="PLG_TJLMS_SEB_KEYS"
+				description="PLG_TJLMS_SEB_KEYS_DESCRIPTION" rows="10" cols="5" />
+		</fields>
+	</config>
+</extension>

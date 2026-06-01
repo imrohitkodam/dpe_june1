@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules name="rs_rd4rpszj" title="Demo for Graph Transpose" style="rs_rd4rpszj.css">
+	<meta  version="1.0" compatibility="4" generator="Online Creation Wizard" author_name="Alterora" author_email="info@alterora.gr" author_url="www.tabulizer.com"/>
+	<ruleset name="rs_rd4rpszj" title="Demo for Graph Transpose" description="2 series with number and dates" suffix="rs_rd4rpszj" >
+		<graph type="line" num_of_series="2" width="500px" height="300px" responsive="1"  />
+		<legend show="1" placement="inside" position="se"  />
+		<grid lines_show="1" lines_width="1" border_show="1" border_size="2" shadow_show="1" shadow_angle="45" shadow_offset="1.5" shadow_alpha="0.05"  />
+		<axes>
+			<axis id="x" show="1" min="fit" max="fit" ticks_show_labels="1" ticks_show_marks="1" ticks_mark_size="6"  />
+			<axis id="y" show="1" ticks_show_labels="1" ticks_show_marks="1" ticks_mark_size="6"  />
+		</axes>
+		<series>
+			<serie id="1" show="1" label="Optigest Europe (Part C)" color="#1f497d" data_source_x_element="column" data_source_x_range="1" data_source_x_element_section="2-L1" data_source_x_data_type="date" data_source_y_element="column" data_source_y_range="2" data_source_y_element_section="2-L1" data_source_y_data_type="numeric" line_show="1" line_width="2.5" fill_show="0" markers_show="1" markers_size="9" markers_width="2" markers_shadow="1" trendline_show="0" pointlabels_show="0"  />
+			<serie id="2" show="1" label="Stoxx Europe 600 dividendes nets réinvestis" data_source_x_element="column" data_source_x_range="1" data_source_x_element_section="2-L1" data_source_x_data_type="date" data_source_y_element="column" data_source_y_range="3" data_source_y_element_section="2-L1" data_source_y_data_type="numeric" line_show="1" line_width="2.5" fill_show="0" markers_show="1" markers_size="9" markers_width="2" markers_shadow="1" trendline_show="0" pointlabels_show="0"  />
+		</series>
+	</ruleset>
+</rules>

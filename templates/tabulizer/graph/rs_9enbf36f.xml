@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules name="rs_9enbf36f" title="Demo for Bubble Graph" style="rs_9enbf36f.css">
+	<meta  version="1.0" compatibility="4" generator="Online Creation Wizard" author_name="Alterora" author_email="info@alterora.gr" author_url="www.tabulizer.com"/>
+	<ruleset name="rs_9enbf36f" title="Demo for Bubble Graph" description="A simple ruleset for converting a table into a bubble graph." suffix="rs_9enbf36f" >
+		<graph type="bubble" num_of_series="1" width="500px" height="300px"  />
+		<title show="1" data_source="text" text_value="Company Revenues"  />
+		<grid lines_show="1" lines_width="1" border_show="1" border_size="2" shadow_show="1" shadow_angle="45" shadow_offset="1.5" shadow_alpha="0.05"  />
+		<axes>
+			<axis id="x" show="1" label="Profit Margin" ticks_show_labels="1" ticks_format="%d" ticks_prefix="%" ticks_angle="4" ticks_show_marks="1" ticks_mark_size="6"  />
+			<axis id="y" show="1" label="Revenue Per Customer" label_vertical="1" ticks_show_labels="1" ticks_format="%0.2f" ticks_prefix="$" ticks_show_marks="1" ticks_mark_size="6"  />
+		</axes>
+		<series>
+			<serie id="1" show="1" data_source_x_element="row" data_source_x_range="1" data_source_x_data_type="numeric" data_source_y_element="row" data_source_y_range="2" data_source_y_data_type="numeric" data_source_radius_element="row" data_source_radius_range="3" data_source_radius_data_type="numeric" data_source_label_element="row" data_source_label_range="4" data_source_label_data_type="text" show_labels="1" mouse_over="1" gradient_colors="1" multiple_colors="1"  />
+		</series>
+	</ruleset>
+</rules>

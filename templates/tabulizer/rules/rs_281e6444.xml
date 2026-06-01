@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules name="rs_281e6444" title="Graph Demo-Date label format" style="rs_281e6444.css">
+	<meta  version="1.0" compatibility="4" generator="Online Creation Wizard" author_name="Alterora" author_email="info@alterora.gr" author_url="www.tabulizer.com"/>
+	<ruleset name="rs_281e6444" title="Demo the date label format" description="How to format the label" suffix="rs_281e6444"  >
+	<sample_data  sep="sc" enc="none">36;24;87;41;43;91;74;65;80;58
+2015-01-09;2015-02-09;2015-03-09;2015-04-09;2015-05-09;2015-06-09;2015-07-09;2015-08-09;2015-09-09;2015-10-09
+80;60;15;64;32;3;43;29;11;46
+95;69;25;46;20;22;17;39;93;93
+36;17;69;56;43;24;87;59;24;99
+14;2;36;4;90;16;48;94;70;49
+62;41;72;61;52;63;98;50;96;65
+27;70;90;72;59;66;22;18;30;79
+78;55;52;99;58;42;20;32;39;48
+39;6;42;65;66;51;100;80;82;86
+</sample_data>
+
+			<rule element="table" range="ALL" graph="rs_281e6444.xml" ></rule>
+
+	</ruleset>
+</rules>

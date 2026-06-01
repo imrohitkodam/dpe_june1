@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0"  type="plugin" group="system" method="upgrade">
+	<name>PLG_SYSTEM_TJSENDEMAIL</name>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>Copyright (C) 2014 - 2020 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<creationDate>13th Feb 2020</creationDate>
+	<version>1.0.0</version>
+	<description>PLG_SYSTEM_TJSENDEMAIL_DESCRIPTION</description>
+
+	<files>
+		<filename plugin="tjsendemail">tjsendemail.php</filename>
+		<folder>assets</folder>
+	</files>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_system_tjsendemail.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_system_tjsendemail.sys.ini</language>
+	</languages>
+</extension>

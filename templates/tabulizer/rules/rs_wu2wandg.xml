@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules name="rs_wu2wandg" title="Table Demo-Replacement Rules" style="rs_wu2wandg.css">
+    <meta  version="1.0" compatibility="4" generator="Online Creation Wizard" author_name="Alterora" author_email="info@alterora.gr" author_url="www.tabulizer.com"/>
+    <ruleset name="rs_wu2wandg" title="Ruleset with Replacement Rules" description="A demo ruleset with replacement rules for text and images" suffix="rs_wu2wandg"  >
+        			<rule element="table" range="ALL"  theme = "light.css" ></rule>
+			<rule element="column" range="3" replacement="0^RWS^WUVT^RWS^PGltZyBzcmM9Il9fUlVMRVNFVF9JTUFHRVNfVVJMX19pY29uX2ZlYXR1cmUxX3llcy5wbmciIC8+" ></rule>
+			<rule element="column" range="3" replacement="0^RWS^Tk8=^RWS^PGltZyBzcmM9Il9fUlVMRVNFVF9JTUFHRVNfVVJMX19pY29uX2ZlYXR1cmUxX25vLnBuZyIgLz4=" ></rule>
+			<rule element="table" range="all" replacement="0^RWS^d3d3XC5nb29nbGVcLmNvbQ==^RWS^PGEgaHJlZj0iaHR0cDovL3d3dy5nb29nbGUuY29tIj53d3cuZ29vZ2xlLmNvbTwvYT4=" ></rule>
+			<rule element="row" range="1" style="tr_ht1" autospan="1"  ></rule>
+<sample_data  sep="cm" enc="dq">Site Name,URL,Search engine
+Paypal,www.paypal.com,NO
+Google,www.google.com,YES
+Facebook,www.facebook.com,NO
+</sample_data>
+    </ruleset>
+</rules>

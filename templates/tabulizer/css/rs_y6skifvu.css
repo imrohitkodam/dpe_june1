@@ -1,0 +1,18 @@
+table.tabtable-rs_y6skifvu  { border-width: 1px;
+border-color: #000000;
+border-style: solid; } 
+table.tabtable-rs_y6skifvu tr  { border: none; } 
+table.tabtable-rs_y6skifvu  { 
+border-collapse:collapse;width:100%;background-color: transparent;}
+table.tabtable-rs_y6skifvu tr.tabrow td.tabcol  { 
+font-style: normal;font-weight: normal;padding: 5px;background-color:#ddd9c3;}
+table.tabtable-rs_y6skifvu tr.tabrow td.tabcustom1  { 
+font-style: normal;font-weight: normal;color: #ffffff;background-color:#e36c09;}
+table.tabtable-rs_y6skifvu tr:nth-child(even) td.tabcol  { 
+font-style: normal;font-weight: normal;background-color:#c4bd97;}
+table.tabtable-rs_y6skifvu tr.tabrow:hover td.tabcol  { 
+font-style: normal;font-weight: normal;background-color:#ebf1dd;}
+table.tabtable-rs_y6skifvu tr.tabrow td.td_hl1  { 
+font-style: normal;font-weight: normal;color: #4f81bd;background-color:#dbe5f1;}
+table.tabtable-rs_y6skifvu tr.tr_ht1 td.tabcol, table.tabtable-rs_y6skifvu tr.tr_ht1:hover td.tabcol, table.tabtable-rs_y6skifvu tr.tr_ht1 td.tabcol:hover  { 
+font-style: normal;font-weight: bold;color: #ffffff;background-color:#1f497d;}

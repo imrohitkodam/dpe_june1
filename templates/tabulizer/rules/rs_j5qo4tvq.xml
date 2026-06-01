@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules name="rs_j5qo4tvq" title="Table Demo-Responsive Reflow, Filter on 2nd row and Pagination" style="rs_j5qo4tvq.css">
+    <meta  version="1.0" compatibility="4" generator="Online Creation Wizard" author_name="Alterora" author_email="info@alterora.gr" author_url="www.tabulizer.com"/>
+    <ruleset name="rs_j5qo4tvq" title="Demo for Table with Responsive Reflow, Filter on 2nd row and Pagination" description="A demo ruleset to demonstrate various table features combinations." suffix="rs_j5qo4tvq"  >
+        			<rule element="table" range="ALL"  filter = "enabled position[top-right] header_size:1" column_filter = "enabled columns[2:input:date_dmy,3:input:smart,4:select:exact,5:select:exact,6:input:numeric_comma,7:input:smart] headerrow:2 header_size:2" pagination = "enabled basic limit50 limitchange[top-left] info[bottom-left] position[bottom-right]" responsive = "2" theme = "light.css" ></rule>
+			<rule element="table" range="ALL" modification="addemptyrow$2" ></rule>
+			<rule element="row" range="EVEN" style="tr_ze" ></rule>
+			<rule element="row" range="1" style="tr_ht1" ></rule>
+<sample_data  sep="cm" enc="dq">&quot;Α/Α&quot;,&quot;Ημερομηνία&quot;,&quot;Πελάτης&quot;,&quot;Νομός&quot;,&quot;Περιγραφή Ακινήτου&quot;,&quot;τ.μ.&quot;,&quot;Αριθμός Πρωτ. Επιθεώρησης&quot;
+1,12/01/2011,&quot;Μαρούδας Διονύσιος&quot;,&quot;Ζακύνθου&quot;,&quot;Διαμέρισμα πολυκατοικίας&quot;,&quot;68,18&quot;,&quot;92/2011&quot;
+2,13/01/2011,&quot;Κόκλας Νικόλαος&quot;,&quot;Ζακύνθου&quot;,&quot;Κατάστημα&quot;,&quot;75,11&quot;,&quot;135/2011&quot;
+3,13/01/2011,&quot;Κόκλα Αικατερίνη&quot;,&quot;Ζακύνθου&quot;,&quot;Πολυκατοικία&quot;,&quot;218,26&quot;,&quot;136/2011&quot;
+4,17/01/2011,&quot;Τορτορέλη Άννα&quot;,&quot;Ζακύνθου&quot;,&quot;Διαμέρισμα πολυκατοικίας&quot;,&quot;57,7&quot;,&quot;334/2011&quot;
+5,18/01/2011,&quot;Σαμολαδάς Ευριπίδης&quot;,&quot;Ζακύνθου&quot;,&quot;Διαμέρισμα πολυκατοικίας&quot;,&quot;56,25&quot;,&quot;561/2011&quot;
+6,19/01/2011,&quot;Ευστάθιος Καϊκης &amp;ΣΙΑ Ο.Ε&quot;,&quot;Τρικάλων&quot;,&quot;Διαμέρισμα πολυκατοικίας&quot;,&quot;76,7&quot;,&quot;846/2011&quot;
+7,19/01/2011,&quot;Ευστάθιος ΚαЇκης&amp;ΣΙΑ Ο.Ε&quot;,&quot;Τρικάλων&quot;,&quot;Διαμέρισμα πολυκατοικίας&quot;,&quot;76,7&quot;,&quot;871/2011&quot;
+8,27/01/2011,&quot;Σοφός Αντώνιος&quot;,&quot;Ζακύνθου&quot;,&quot;Μονοκατοικία&quot;,&quot;68,88&quot;,&quot;1657/2011&quot;
+9,26/01/2011,&quot;Τορτορέλη Άννα&quot;,&quot;Ζακύνθου&quot;,&quot;Μονοκατοικία&quot;,&quot;44,59&quot;,&quot;1870/2011&quot;
+10,28/01/2011,&quot;Κιτσίκης Διονύσιος&quot;,&quot;Ζακύνθου&quot;,&quot;Διαμέρισμα πολυκατοικίας&quot;,&quot;98,37&quot;,&quot;1992/2011&quot;
+11,29/01/2011,&quot;Αεροπόρος Ανδρέας&quot;,&quot;Ζακύνθου&quot;,&quot;Μονοκατοικία&quot;,&quot;119,9&quot;,&quot;2317/2011&quot;
+12,01/02/2011,&quot;Δαφαράνος Σπυρίδων&quot;,&quot;Ζακύνθου&quot;,&quot;Διαμέρισμα πολυκατοικίας&quot;,&quot;90,57&quot;,&quot;2917/2011&quot;
+13,01/02/2011,&quot;Σούρμπης Νικόλαος&quot;,&quot;Ζακύνθου&quot;,&quot;Μονοκατοικία&quot;,&quot;93,34&quot;,&quot;3055/2011&quot;
+14,08/02/2011,&quot;Ακτύπης Ανδρέας &quot;,&quot;Ζακύνθου&quot;,&quot;Διαμέρισμα πολυκατοικίας&quot;,&quot;57,59&quot;,&quot;3860/2011&quot;
+15,14/02/2011,&quot;ΑΦΟΙ Παναγιώτη Μάργαρη Ο.Ε.&quot;,&quot;Ζακύνθου&quot;,&quot;Πολυκατοικία&quot;,&quot;272,5&quot;,&quot;7335/2011&quot;
+16,23/02/2011,&quot;Καμπιώτης Χρήστος&quot;,&quot;Ζακύνθου&quot;,&quot;Κατάστημα&quot;,&quot;58,77&quot;,&quot;7416/2011&quot;
+17,09/03/2011,&quot;Καρδιανός Διονύσιος&quot;,&quot;Ζακύνθου&quot;,&quot;Καφενείο &quot;,&quot;85,36&quot;,&quot;8395/2011&quot;
+18,11/03/2011,&quot;Ντε Κονινγκ κορνελις &quot;,&quot;Ζακύνθου&quot;,&quot;Μονοκατοικία&quot;,&quot;79,95&quot;,&quot;10807/2011&quot;
+19,11/03/2001,&quot;Βισβάρδης Λάμπρος&quot;,&quot;Ζακύνθου&quot;,&quot;Μονοκατοικία&quot;,&quot;76,27&quot;,&quot;11398/2011&quot;
+20,18/03/2001,&quot;Βυθούλκας Δημήτριος&quot;,&quot;Ζακύνθου&quot;,&quot;Μονοκατοικία&quot;,&quot;103,84&quot;,&quot;12963/2011&quot;
+21,21/03/2001,&quot;Λευτάκη Δημητρία &quot;,&quot;Ζακύνθου&quot;,&quot;Μονοκατοικία&quot;,&quot;82,4&quot;,&quot;13909/2011&quot;
+22,21/03/2001,&quot;Παράσχη Αικατερίνη &quot;,&quot;Ζακύνθου&quot;,&quot;Διαμέρισμα πολυκατοικίας&quot;,&quot;75,83&quot;,&quot;14150/2011&quot;
+23,22/03/2001,&quot;Ζέππος Κων/νος&quot;,&quot;Ζακύνθου&quot;,&quot;Μονοκατοικία&quot;,&quot;72,9&quot;,&quot;13919/2011&quot;
+24,30/03/2011,&quot;Λογοθέτης Ευστάθιος&quot;,&quot;Ζακύνθου&quot;,&quot;Διαμέρισμα πολυκατοικίας&quot;,&quot;164,59&quot;,&quot;16490/2011&quot;
+25,30/03/2011,&quot;Χαρακτινός Χαράλαμπος&quot;,&quot;Ζακύνθου&quot;,&quot;Μονοκατοικία&quot;,&quot;84,89&quot;,&quot;18055/2011&quot;
+26,31/03/2011,&quot;Παπατζίκης Βασίλειος&quot;,&quot;Θεσσαλονίκης &quot;,&quot;Μονοκατοικία&quot;,&quot;178,5&quot;,&quot;14525/2011&quot;
+27,31/03/2011,&quot;Καμπιώτης Διονύσιος&quot;,&quot;Ζακύνθου&quot;,&quot;Διαμέρισμα πολυκατοικίας&quot;,&quot;53,65&quot;,&quot;17633/2011&quot;
+28,04/04/2001,&quot;Ρουμαντζάς Κωνσταντίνος&quot;,&quot;Ζακύνθου&quot;,&quot;Πολυκατοικία&quot;,240,&quot;18248/2011&quot;
+29,16/04/2011,&quot;Καραμαλίκης Γεώργιος&quot;,&quot;Ζακύνθου&quot;,&quot;Μονοκατοικία&quot;,&quot;70,13&quot;,&quot;17767/2011&quot;
+30,05/04/2011,&quot;Ξένος Ιωάννης&quot;,&quot;Ζακύνθου&quot;,&quot;Μονοκατοικία&quot;,&quot;108,6&quot;,&quot;19767/2011&quot;
+31,05/04/2011,&quot;Βαρδακαστάνης Ιωάννης&quot;,&quot;Ζακύνθου&quot;,&quot;Διαμέρισμα πολυκατοικίας&quot;,&quot;78,88&quot;,&quot;19843/2011&quot;
+32,16/04/2011,&quot;Καμπιώτης Χρήστος&quot;,&quot;Ζακύνθου&quot;,&quot;Κατάστημα&quot;,&quot;58,77&quot;,&quot;22151/2011&quot;
+33,20/04/2011,&quot;Αφοί Αποστολίδη Ο.Ε.&quot;,&quot;Θεσσαλονίκης&quot;,&quot;Διαμέρισμα πολυκατοικίας&quot;,85,&quot;22926/2011&quot;
+34,28/04/2011,&quot;Μαυρομάτης Σπυρίδων&quot;,&quot;Ζακύνθου&quot;,&quot;Μονοκατοικία&quot;,&quot;63,52&quot;,&quot;23950/2011&quot;
+</sample_data>
+    </ruleset>
+</rules>

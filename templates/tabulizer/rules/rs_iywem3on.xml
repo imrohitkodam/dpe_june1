@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules name="rs_iywem3on" title="Graph Demo-Bar Graph" style="rs_iywem3on.css">
+	<meta  version="1.0" compatibility="4" generator="Online Creation Wizard" author_name="Alterora" author_email="info@alterora.gr" author_url="www.tabulizer.com"/>
+	<ruleset name="rs_iywem3on" title="Demo for Bar Graph" description="The very basic bar graph with two series." suffix="rs_iywem3on"  >
+	<sample_data  sep="sc" enc="none">91;80;54;68;86;91;43;50;2;45
+92;33;64;21;85;85;56;73;23;43
+Text 1;Text 2;Text 3;Text 4;Text 5;Text 6;Text 7;Text 8;Text 9;Text 10
+5;7;81;69;90;19;31;0;93;69
+62;65;76;84;21;5;88;56;6;51
+62;1;6;60;84;80;83;92;37;59
+10;76;92;22;50;45;87;35;6;15
+73;84;95;79;74;46;75;45;99;66
+17;4;32;38;98;48;89;99;37;98
+87;45;100;23;96;47;42;32;86;90
+</sample_data>
+
+			<rule element="table" range="ALL" graph="rs_iywem3on.xml" ></rule>
+
+	</ruleset>
+</rules>

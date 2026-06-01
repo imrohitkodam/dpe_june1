@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="rules">
+        <field name="access" type="accesslevel" label="Access Level" required="true" />
+        <field name="robots" type="list" label="Robots" required="true">
+            <option value="index, follow">index, follow</option>
+            <option value="noindex, follow">noindex, follow</option>
+            <option value="index, nofollow">index, nofollow</option>
+            <option value="noindex, nofollow">noindex, nofollow</option>
+        </field>
+    </fields>
+</form>

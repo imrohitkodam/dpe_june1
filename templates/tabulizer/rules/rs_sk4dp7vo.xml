@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules name="rs_sk4dp7vo" title="Graph Demo-Donut Graph" style="rs_sk4dp7vo.css">
+	<meta  version="1.0" compatibility="4" generator="Online Creation Wizard" author_name="Alterora" author_email="info@alterora.gr" author_url="www.tabulizer.com"/>
+	<ruleset name="rs_sk4dp7vo" title="Demo for Donut Graph" description="A simple ruleset for converting a table into a donut graph." suffix="rs_sk4dp7vo"  >
+	<sample_data  sep="sc" enc="none">81;12;65;17;65;88;58;61;30;12
+Text 1;Text 2;Text 3;Text 4;Text 5;Text 6;Text 7;Text 8;Text 9;Text 10
+69;24;47;61;59;71;6;3;50;44
+Text 11;Text 12;Text 13;Text 14;Text 15;Text 16;Text 17;Text 18;Text 19;Text 20
+41;68;88;51;23;36;80;41;0;68
+Text 21;Text 22;Text 23;Text 24;Text 25;Text 26;Text 27;Text 28;Text 29;Text 30
+39;20;14;65;16;98;8;14;11;64
+83;42;54;66;39;47;88;55;31;47
+50;46;84;86;54;52;40;19;72;25
+35;77;46;87;93;73;82;23;92;31
+</sample_data>
+
+			<rule element="table" range="ALL" graph="rs_sk4dp7vo.xml" ></rule>
+
+	</ruleset>
+</rules>

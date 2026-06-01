@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules name="rs_27xuxi8r" title="Graph Demo-Donuts" style="rs_27xuxi8r.css">
+	<meta  version="1.0" compatibility="4" generator="Online Creation Wizard" author_name="Alterora" author_email="info@alterora.gr" author_url="www.tabulizer.com"/>
+	<ruleset name="rs_27xuxi8r" title="Donuts" description="Donuts for testing" suffix="rs_27xuxi8r"  >
+	<sample_data  sep="sc" enc="none">33;56;84;51;62;66;81;53;58;10
+Text 1;Text 2;Text 3;Text 4;Text 5;Text 6;Text 7;Text 8;Text 9;Text 10
+67;29;36;85;100;26;12;94;8;10
+Text 11;Text 12;Text 13;Text 14;Text 15;Text 16;Text 17;Text 18;Text 19;Text 20
+52;4;53;26;61;72;80;91;37;94
+Text 21;Text 22;Text 23;Text 24;Text 25;Text 26;Text 27;Text 28;Text 29;Text 30
+28;4;34;3;86;77;71;11;23;24
+93;97;22;2;64;25;4;69;77;2
+78;45;65;68;75;50;84;27;10;59
+66;25;46;61;81;57;21;95;42;46
+</sample_data>
+
+			<rule element="table" range="ALL" graph="rs_27xuxi8r.xml" ></rule>
+
+	</ruleset>
+</rules>

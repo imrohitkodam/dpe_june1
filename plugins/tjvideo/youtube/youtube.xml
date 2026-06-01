@@ -1,0 +1,37 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+<extension version="3.0" type="plugin" group="tjvideo" method="upgrade">
+	<name>PLG_TJVIDEO_YOUTUBE</name>
+	<author>Techjoomla</author>
+	<creationDate>13th Jul 2023</creationDate>
+	<copyright>Copyright (C) 2014 - 2023 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<version>4.0.5</version>
+	<description>PLG_TJVIDEO_YOUTUBE_DESC</description>
+
+	<files>
+		<file plugin="youtube">youtube.php</file>
+		<folder>youtube</folder>
+		<folder>tmpl</folder>
+	</files>
+	<languages folder="en-GB">
+			<language tag="en-GB">en-GB.plg_tjvideo_youtube.ini</language>
+			<language tag="en-GB">en-GB.plg_tjvideo_youtube.sys.ini</language>
+	</languages>
+	<config name="params">
+		<fields name="params">
+			<fieldset name="basic" label="PLG_TJSCORM_NATIVESCORM_BASIC_FIELDSET" >
+				<field name="assessment" type="hidden" default="0" label="PLG_TJVIDEO_YOUTUBE_ASSESMENT_LABEL" description="PLG_TJVIDEO_YOUTUBE_ASSESMENT_LABEL_DESC" class="btn-group" />
+				<field name="autoplay" class="btn-group" type="radio" default="0" description="PLG_TJVIDEO_YOUTUBE_AUTOPLAY_DESC" label="PLG_TJVIDEO_YOUTUBE_AUTOPLAY">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="logo" class="btn-group" type="radio" default="0" description="PLG_TJVIDEO_YOUTUBE_LOGO_DESC" label="PLG_TJVIDEO_YOUTUBE_LOGO">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

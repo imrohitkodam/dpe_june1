@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="rsticketspro_anonymise" addfieldpath="administrator/components/com_rsticketspro/models/fields">
+        <field
+                name="anonymise"
+                type="RSTicketsProAnonymiseButton"
+                label=""
+                description=""
+        />
+    </fieldset>
+</form>

@@ -1,0 +1,72 @@
+---
+- hosts: all
+  become: false
+  vars:
+    workspace: "{{ lookup('env','WORKSPACE') }}"
+  vars_files: ["secrets/{{site_id}}","secrets/ssh_passwords"]
+  tasks:
+  - name: Create configuration.php
+    template:
+      src: "{{ config_src }}"
+      dest: "{{ doc_root }}/configuration.php"
+      owner: "{{ server_live_runs_as }}"
+      group: "{{ server_live_runs_as_group }}"
+
+  - name: Create .htversion file
+    file:
+      path: "{{ doc_root }}/.htversion"
+      state: touch
+      owner: "{{ server_live_runs_as }}"
+      group: "{{ server_live_runs_as_group }}"
+
+  - name: Write commit number .htversion to file
+    shell: echo "{{ lookup('env','BUILD_NUMBER') }}" > {{ doc_root }}/.htversion
+
+  - name: Take backup of db before deployment
+    shell: "php {{doc_root}}/cli/akeeba-backup.php --profile=2"
+    ignore_errors: True
+
+  #~ - name: "Delete folders"
+    #~ file: path="{{ doc_root }}/{{ item }}" state=absent force=yes owner="{{server_live_runs_as}}" group="{{server_live_runs_as}}"
+    #~ with_items:
+      #~ - "cache"
+      #~ - "tmp"
+      #~ - "logs"
+      #~ - "administrator"
+      #~ - "components"
+      #~ - "modules"
+      #~ - "plugins"
+      #~ - "templates"
+      #~ - "language"
+      #~ - "libraries"
+      #~ - "includes"
+      #~ - "index.php"
+
+  #~ - name: "Create empty dirs"
+    #~ file: path="{{ doc_root }}/{{ item }}" state=directory force=yes owner="{{server_live_runs_as}}" group="{{server_live_runs_as}}"
+    #~ with_items:
+      #~ - "cache"
+      #~ - "tmp"
+      #~ - "logs"
+      #~ - "administrator"
+      #~ - "administrator/cache"
+      #~ - "administrator/components/com_akeeba/backup"
+
+  - name: create empty index.html files
+    file: path="{{ doc_root }}/{{ item }}/index.html" state=touch owner="{{server_live_runs_as}}" group="{{server_live_runs_as}}"
+    with_items:
+      - "cache"
+      - "tmp"
+      - "logs"
+      - "administrator/cache"
+
+  - name: Unarchive artifact on remote server
+    unarchive:
+      src: "{{ workspace | default('') }}/{{ artifact_filename }}"
+      dest: "{{ doc_root }}"
+      copy: yes
+      owner: "{{ server_live_runs_as }}"
+      group: "{{ server_live_runs_as }}"
+
+  #~ - name: recreate Akeeba dir
+    #~ shell: chmod 777 -R {{ doc_root }}/administrator/components/com_akeeba/

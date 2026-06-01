@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules name="rs_yhwwidf6" title="Graph Demo-Graph Background Grid" style="rs_yhwwidf6.css">
+	<meta  version="1.0" compatibility="4" generator="Online Creation Wizard" author_name="Alterora" author_email="info@alterora.gr" author_url="www.tabulizer.com"/>
+	<ruleset name="rs_yhwwidf6" title="Background Grid" description="A demo for background grid" suffix="rs_yhwwidf6"  >
+	<sample_data  sep="sc" enc="none">41;0;97;33;42;20;12;66;79;32
+46;70;3;99;89;98;47;1;42;0
+70;25;42;76;99;60;9;64;37;100
+42;62;70;8;85;10;69;87;60;65
+15;72;93;26;45;10;8;39;21;10
+78;71;7;29;98;17;15;3;8;72
+70;45;86;47;47;84;78;63;1;31
+52;17;85;0;16;96;65;72;5;11
+79;89;59;88;25;28;36;90;93;8
+19;29;70;16;31;19;3;28;68;59
+</sample_data>
+
+			<rule element="table" range="ALL" graph="rs_yhwwidf6.xml" ></rule>
+
+	</ruleset>
+</rules>

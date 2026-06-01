@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" method="upgrade" type="plugin" group="user">
+	<name>PLG_USER_DPEUSER</name>
+	<author>Techjoomla</author>
+	<creationDate>21st Dec 2020</creationDate>
+	<copyright>Copyright (C) 2014 - 2020 Techjoomla. All rights reserved.</copyright>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>1.0.0</version>
+	<description>PLG_USER_DPEUSER_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="dpeuser">dpeuser.php</filename>
+	</files>
+	<languages folder="language">
+			<language tag="en-GB">en-GB/en-GB.plg_user_dpeuser.ini</language>
+			<language tag="en-GB">en-GB/en-GB.plg_user_dpeuser.sys.ini</language>
+  	</languages>
+  	<config>
+		<fields name="params">
+			<fieldset name="basic">
+			<field name="dpe_admin_usergroup" type="usergroup"
+				label="PLG_USER_DPEUSER_USER_GROUP_LABEL"
+				description="PLG_USER_DPEUSER_USER_GROUP_LABEL_DESC" 
+				/>				
+			</fieldset>
+		</fields>
+	</config>
+</extension>
+

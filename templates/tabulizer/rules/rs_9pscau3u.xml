@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules name="rs_9pscau3u" title="Graph Demo-Angle labels" style="rs_9pscau3u.css">
+	<meta  version="1.0" compatibility="4" generator="Online Creation Wizard" author_name="Alterora" author_email="info@alterora.gr" author_url="www.tabulizer.com"/>
+	<ruleset name="rs_9pscau3u" title="Graph with angle labels" description="Graph with angle labels" suffix="rs_9pscau3u"  >
+	<sample_data  sep="sc" enc="none">96;8;18;79;73;96;13;23;36;70
+12;43;10;60;97;26;78;57;61;24
+17;26;7;79;11;35;42;22;85;19
+97;10;13;64;33;83;16;77;74;96
+26;91;40;63;62;5;95;94;63;10
+19;15;100;7;32;99;91;25;73;16
+98;2;85;89;99;1;28;15;93;11
+26;9;71;35;37;71;87;51;97;45
+32;32;77;0;60;16;29;9;92;53
+20;60;43;2;28;89;41;20;13;38
+</sample_data>
+
+			<rule element="table" range="ALL" graph="rs_9pscau3u.xml" ></rule>
+
+	</ruleset>
+</rules>

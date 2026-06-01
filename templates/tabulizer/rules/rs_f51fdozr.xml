@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules name="rs_f51fdozr" title="Table Demo-Server Side Processing with Search and Pagination" style="rs_f51fdozr.css">
+    <meta  version="1.0" compatibility="4" generator="Online Creation Wizard" author_name="Alterora" author_email="info@alterora.gr" author_url="www.tabulizer.com"/>
+    <ruleset name="rs_f51fdozr" title="Demo for Server Side Processing with Search and Pagination" description="A demo ruleset to used along with a data source with server side option enabled." suffix="rs_f51fdozr"  >
+        			<rule element="table" range="ALL"  filter = "enabled position[top-right] header_size:1" pagination = "enabled full limit10 limitchange[top-left] info[bottom-left] position[bottom-right]" theme = "light.css" ></rule>
+			<rule element="row" range="EVEN" style="tr_ze" ></rule>
+			<rule element="row" range="1" style="tr_ht1" ></rule>
+
+    </ruleset>
+</rules>

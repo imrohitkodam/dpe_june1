@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="tjlmsdashboard" method="upgrade">
+	<name>PLG_TJLMSDASHBOARD_ACTIVITYGRAPH</name>
+	<author>Techjoomla</author>
+	<creationDate>13th Jul 2023</creationDate>
+	<copyright>Copyright (C) 2014 - 2023 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<version>4.0.5</version>
+
+	<description>PLG_TJLMSDASHBOARD_ACTIVITY_GRAPH_DESC</description>
+
+	<files>
+		<filename plugin="activitygraph">activitygraph.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+	</files>
+
+	<languages>
+		<language tag="en-GB">en-GB/en-GB.plg_tjlmsdashboard_activitygraph.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_tjlmsdashboard_activitygraph.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="session_line_color" type="color"
+					default="#6fe620"
+					description="PLG_TJLMSDASHBOARD_ACTIVITY_GRAPH_SESSION_COLOR_DESC"
+					label="PLG_TJLMSDASHBOARD_ACTIVITY_GRAPH_SESSION_COLOR"
+				/>
+
+				<field name="activity_line_color" type="color"
+					default="#17d4a8"
+					description="PLG_TJLMSDASHBOARD_ACTIVITY_GRAPH_ACTIVITY_COLOR_DESC"
+					label="PLG_TJLMSDASHBOARD_ACTIVITY_GRAPH_ACTIVITY_COLOR"
+				/>
+				<field name="large_device_col_class" type="list" default="col-lg-12" label="PLG_TJLMSDASHBOARD_ACTIVITY_GRAPH_LARGE_COL_SIZE" description="PLG_TJLMSDASHBOARD_ACTIVITY_GRAPH_LARGE_COL_SIZE_DESC">
+					<option value="col-lg-12">col-lg-12</option>
+					<option value="col-lg-11">col-lg-11</option>
+					<option value="col-lg-10">col-lg-10</option>
+					<option value="col-lg-9">col-lg-9</option>
+					<option value="col-lg-8">col-lg-8</option>
+					<option value="col-lg-7">col-lg-7</option>
+					<option value="col-lg-6">col-lg-6</option>
+					<option value="col-lg-5">col-lg-5</option>
+					<option value="col-lg-4">col-lg-4</option>
+					<option value="col-lg-3">col-lg-3</option>
+					<option value="col-lg-2">col-lg-2</option>
+					<option value="col-lg-1">col-lg-1</option>
+				</field>
+
+
+				<field name="medium_device_col_class" type="list" default="col-md-12" label="PLG_TJLMSDASHBOARD_ACTIVITY_GRAPH_MEDIUM_COL_SIZE" description="PLG_TJLMSDASHBOARD_ACTIVITY_GRAPH_MEDIUM_COL_SIZE_DESC">
+					<option value="col-md-12">col-md-12</option>
+					<option value="col-md-11">col-md-11</option>
+					<option value="col-md-10">col-md-10</option>
+					<option value="col-md-9">col-md-9</option>
+					<option value="col-md-8">col-md-8</option>
+					<option value="col-md-7">col-md-7</option>
+					<option value="col-md-6">col-md-6</option>
+					<option value="col-md-5">col-md-5</option>
+					<option value="col-md-4">col-md-4</option>
+					<option value="col-md-3">col-md-3</option>
+					<option value="col-md-2">col-md-2</option>
+					<option value="col-md-1">col-md-1</option>
+				</field>
+
+				<field name="small_device_col_class" type="list" default="col-sm-12" label="PLG_TJLMSDASHBOARD_ACTIVITY_GRAPH_SMALL_COL_SIZE" description="PLG_TJLMSDASHBOARD_ACTIVITY_GRAPH_SMALL_COL_SIZE_DESC">
+					<option value="col-sm-12">col-sm-12</option>
+					<option value="col-sm-11">col-sm-11</option>
+					<option value="col-sm-10">col-sm-10</option>
+					<option value="col-sm-9">col-sm-9</option>
+					<option value="col-sm-8">col-sm-8</option>
+					<option value="col-sm-7">col-sm-7</option>
+					<option value="col-sm-6">col-sm-6</option>
+					<option value="col-sm-5">col-sm-5</option>
+					<option value="col-sm-4">col-sm-4</option>
+					<option value="col-sm-3">col-sm-3</option>
+					<option value="col-sm-2">col-sm-2</option>
+					<option value="col-sm-1">col-sm-1</option>
+				</field>
+
+				<field name="xsmall_device_col_class" type="list" default="col-xs-12" label="PLG_TJLMSDASHBOARD_ACTIVITY_GRAPH_XSMALL_COL_SIZE" description="PLG_TJLMSDASHBOARD_ACTIVITY_GRAPH_XSMALL_COL_SIZE_DESC">
+					<option value="col-xs-12">col-xs-12</option>
+					<option value="col-xs-11">col-xs-11</option>
+					<option value="col-xs-10">col-xs-10</option>
+					<option value="col-xs-9">col-xs-9</option>
+					<option value="col-xs-8">col-xs-8</option>
+					<option value="col-xs-7">col-xs-7</option>
+					<option value="col-xs-6">col-xs-6</option>
+					<option value="col-xs-5">col-xs-5</option>
+					<option value="col-xs-4">col-xs-4</option>
+					<option value="col-xs-3">col-xs-3</option>
+					<option value="col-xs-2">col-xs-2</option>
+					<option value="col-xs-1">col-xs-1</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

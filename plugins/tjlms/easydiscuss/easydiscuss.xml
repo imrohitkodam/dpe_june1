@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<extension type="plugin" version="3.7.0" group="tjlms"
+	method="upgrade">
+	<name>plg_tjlms_easydiscuss</name>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>(C)Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<creationDate>02 April 2019</creationDate>
+	<version>1.0.0</version>
+	<description>PLG_TJLMS_EASYDISCUSS_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="easydiscuss">easydiscuss.php</filename>
+		<folder>language</folder>
+		<folder>fields</folder>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB.plg_tjlms_easydiscuss.ini</language>
+		<language tag="en-GB">en-GB.plg_tjlms_easydiscuss.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="easydiscuss">
+			<field type="spacer" class="tjintegration-label" label="PLG_TJLMS_EDGROUP" />
+			<field name="onAfterCourseEnrol_Easydiscuss" type="discussion"
+				label="PLG_ONAFTERCOURSEENROLL_EASYDISCUSS_CONFIG_FIELD_LABEL"
+				description="PLG_ONAFTERCOURSEENROLL_EASYDISCUSS_CONFIG_DESC"
+				/>
+		</fields>
+	</config>
+</extension>

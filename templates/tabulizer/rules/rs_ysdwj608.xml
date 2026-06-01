@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules name="rs_ysdwj608" title="Graph Demo-Pie Graph" style="rs_ysdwj608.css">
+	<meta  version="1.0" compatibility="4" generator="Online Creation Wizard" author_name="Alterora" author_email="info@alterora.gr" author_url="www.tabulizer.com"/>
+	<ruleset name="rs_ysdwj608" title="Demo for Pie Graph" description="A simple ruleset for converting a table into a pie graph." suffix="rs_ysdwj608"  >
+	<sample_data  sep="sc" enc="none">11;36;32;65;88;100;39;91;62;45
+Text 1;Text 2;Text 3;Text 4;Text 5;Text 6;Text 7;Text 8;Text 9;Text 10
+25;90;69;64;9;29;88;19;77;67
+30;58;54;20;45;25;13;85;87;80
+34;0;10;5;86;82;55;79;9;20
+24;22;82;63;8;32;55;88;32;84
+22;57;67;48;61;99;60;43;100;12
+96;79;96;11;30;46;32;23;68;31
+20;43;65;77;88;5;13;66;70;20
+78;52;91;57;62;71;7;58;28;37
+</sample_data>
+
+			<rule element="table" range="ALL" graph="rs_ysdwj608.xml" ></rule>
+
+	</ruleset>
+</rules>

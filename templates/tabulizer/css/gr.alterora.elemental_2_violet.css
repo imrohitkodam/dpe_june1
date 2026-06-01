@@ -1,0 +1,358 @@
+/* Elemental 2 Violet Ruleset */
+
+/* S0 */
+table.tabtable-gr_alterora_elemental_2_violet_0s1 tr td.tabcol {    
+    color: #5d006a;
+    padding: 6px 8px;        
+}
+
+table.tabtable-gr_alterora_elemental_2_violet_0s2 {  
+	border-collapse: collapse;		
+}
+table.tabtable-gr_alterora_elemental_2_violet_0s2 tr td.tabcol {    
+    color: #5d006a;
+    padding: 6px 8px;
+	  border: 1px solid #5d006a;	  
+}
+
+/* S1 */
+table.tabtable-gr_alterora_elemental_2_violet_1s1,
+table.tabtable-gr_alterora_elemental_2_violet_1s2,
+table.tabtable-gr_alterora_elemental_2_violet_1s3
+{  
+	border-collapse: collapse;	
+}
+table.tabtable-gr_alterora_elemental_2_violet_1s1 tr td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_1s2 tr td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_1s3 tr td.tabcol
+{
+    border-bottom: 1px solid #CCCCCC;
+    color: #70007f;
+    padding: 6px 8px;    
+}
+table.tabtable-gr_alterora_elemental_2_violet_1s1 tr.tdmin_1h td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_1s2 tr.tdmin_1h td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_1s3 tr.tdmin_1h td.tabcol
+{
+    border-bottom: 3px solid #CCCCCC;
+    color: #4a0055;
+    padding: 6px 8px;
+}
+table.tabtable-gr_alterora_elemental_2_violet_1s1 tr.tdmin_1b td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_1s2 tr.tdmin_1b td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_1s3 tr.tdmin_1b td.tabcol
+{
+    border-bottom: 3px solid #CCCCCC;
+    color: #4a0055;
+    padding: 6px 8px;
+}
+table.tabtable-gr_alterora_elemental_2_violet_1s1 tr:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_1s2 tr:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_1s3 tr:hover td.tabcol
+{
+    color: #5d006a;
+    background-color: #DFDFDF;
+}
+table.tabtable-gr_alterora_elemental_2_violet_1s1 tr.tdmin_1h:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_1s2 tr.tdmin_1h:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_1s3 tr.tdmin_1h:hover td.tabcol
+{
+    color: #4a0055;
+}
+table.tabtable-gr_alterora_elemental_2_violet_1s1 tr.tdmin_1b:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_1s2 tr.tdmin_1b:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_1s3 tr.tdmin_1b:hover td.tabcol
+{
+    color: #4a0055;
+}
+
+/* S2 */
+table.tabtable-gr_alterora_elemental_2_violet_2s2 tr td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s3 tr td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s4 tr td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s5 tr td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s6 tr td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s7 tr td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s8 tr td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s9 tr td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s10 tr td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s11 tr td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s12 tr td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s13 tr td.tabcol
+{
+	background-color: #f8c0ff;
+    border-bottom: 1px solid #FFFFFF;
+    border-top: 1px solid transparent;
+    color: #5d006a;
+    padding: 8px;
+}
+
+
+
+table.tabtable-gr_alterora_elemental_2_violet_2s2 tr.tdmin_2e td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s3 tr.tdmin_2e td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s4 tr.tdmin_2e td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s5 tr.tdmin_2e td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s6 tr.tdmin_2e td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s7 tr.tdmin_2e td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s8 tr.tdmin_2e td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s9 tr.tdmin_2e td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s10 tr.tdmin_2e td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s11 tr.tdmin_2e td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s12 tr.tdmin_2e td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s13 tr.tdmin_2e td.tabcol
+{
+	background-color: #f8c0ff;
+}
+
+table.tabtable-gr_alterora_elemental_2_violet_2s2 tr.tdmin_2b td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s3 tr.tdmin_2b td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s4 tr.tdmin_2b td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s5 tr.tdmin_2b td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s6 tr.tdmin_2b td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s7 tr.tdmin_2b td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s8 tr.tdmin_2b td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s9 tr.tdmin_2b td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s10 tr.tdmin_2b td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s11 tr.tdmin_2b td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s12 tr.tdmin_2b td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s13 tr.tdmin_2b td.tabcol
+{
+	background-color: #f295ff;
+    border-bottom: 2px solid #ed6aff;
+    border-top: 1px solid #FFFFFF;
+    color: #70007f;
+    font-weight: bold;
+    padding: 8px;
+}
+
+table.tabtable-gr_alterora_elemental_2_violet_2s2 tr td.tdmin_2l,
+table.tabtable-gr_alterora_elemental_2_violet_2s3 tr td.tdmin_2l,
+
+table.tabtable-gr_alterora_elemental_2_violet_2s4 tr td.tdmin_2l,
+table.tabtable-gr_alterora_elemental_2_violet_2s5 tr td.tdmin_2l,
+table.tabtable-gr_alterora_elemental_2_violet_2s6 tr td.tdmin_2l,
+table.tabtable-gr_alterora_elemental_2_violet_2s7 tr td.tdmin_2l,
+table.tabtable-gr_alterora_elemental_2_violet_2s8 tr td.tdmin_2l,
+table.tabtable-gr_alterora_elemental_2_violet_2s9 tr td.tdmin_2l,
+table.tabtable-gr_alterora_elemental_2_violet_2s10 tr td.tdmin_2l,
+table.tabtable-gr_alterora_elemental_2_violet_2s11 tr td.tdmin_2l,
+table.tabtable-gr_alterora_elemental_2_violet_2s12 tr td.tdmin_2l,
+table.tabtable-gr_alterora_elemental_2_violet_2s13 tr td.tdmin_2l
+{
+	background-color: #f295ff;
+    border-bottom: 1px solid #FFFFFF;
+    border-top: 2px solid #ed6aff;
+    color: #70007f;
+    font-weight: bold;
+    padding: 8px;
+}
+
+table.tabtable-gr_alterora_elemental_2_violet_2s2 tr td.tdmin_2r,
+table.tabtable-gr_alterora_elemental_2_violet_2s3 tr td.tdmin_2r,
+table.tabtable-gr_alterora_elemental_2_violet_2s4 tr td.tdmin_2r,
+table.tabtable-gr_alterora_elemental_2_violet_2s5 tr td.tdmin_2r,
+table.tabtable-gr_alterora_elemental_2_violet_2s6 tr td.tdmin_2r,
+table.tabtable-gr_alterora_elemental_2_violet_2s7 tr td.tdmin_2r,
+table.tabtable-gr_alterora_elemental_2_violet_2s8 tr td.tdmin_2r,
+table.tabtable-gr_alterora_elemental_2_violet_2s9 tr td.tdmin_2r,
+table.tabtable-gr_alterora_elemental_2_violet_2s10 tr td.tdmin_2r,
+table.tabtable-gr_alterora_elemental_2_violet_2s11 tr td.tdmin_2r,
+table.tabtable-gr_alterora_elemental_2_violet_2s12 tr td.tdmin_2r,
+table.tabtable-gr_alterora_elemental_2_violet_2s13 tr td.tdmin_2r
+{
+	background-color: #f295ff;
+    border-bottom: 1px solid #FFFFFF;
+    border-top: 2px solid #ed6aff;
+    color: #70007f;
+    font-weight: bold;
+    padding: 8px;
+}
+
+table.tabtable-gr_alterora_elemental_2_violet_2s2 tr.tdmin_2h td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s3 tr.tdmin_2h td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s4 tr.tdmin_2h td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s5 tr.tdmin_2h td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s6 tr.tdmin_2h td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s7 tr.tdmin_2h td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s8 tr.tdmin_2h td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s9 tr.tdmin_2h td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s10 tr.tdmin_2h td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s11 tr.tdmin_2h td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s12 tr.tdmin_2h td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s13 tr.tdmin_2h td.tabcol
+{
+	background-color: #f295ff;
+    border-bottom: 1px solid #FFFFFF;
+    border-top: 2px solid #ed6aff;
+    color: #70007f;
+    font-weight: bold;
+    padding: 8px;
+}
+
+
+
+table.tabtable-gr_alterora_elemental_2_violet_2s2 tr:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s3 tr:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s4 tr:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s5 tr:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s6 tr:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s7 tr:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s8 tr:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s9 tr:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s10 tr:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s11 tr:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s12 tr:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s13 tr:hover td.tabcol
+{
+	background-color: #ed6aff;
+    color: #9500aa;
+}
+
+table.tabtable-gr_alterora_elemental_2_violet_2s2 tr.tdmin_2b:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s3 tr.tdmin_2b:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s4 tr.tdmin_2b:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s5 tr.tdmin_2b:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s6 tr.tdmin_2b:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s7 tr.tdmin_2b:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s8 tr.tdmin_2b:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s9 tr.tdmin_2b:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s10 tr.tdmin_2b:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s11 tr.tdmin_2b:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s12 tr.tdmin_2b:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s13 tr.tdmin_2b:hover td.tabcol
+{
+	background-color: #f080ff;
+    color: #70007f;	
+}
+
+table.tabtable-gr_alterora_elemental_2_violet_2s2 tr.tdmin_2h:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s3 tr.tdmin_2h:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s4 tr.tdmin_2h:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s5 tr.tdmin_2h:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s6 tr.tdmin_2h:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s7 tr.tdmin_2h:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s8 tr.tdmin_2h:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s9 tr.tdmin_2h:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s10 tr.tdmin_2h:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s11 tr.tdmin_2h:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s12 tr.tdmin_2h:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_2s13 tr.tdmin_2h:hover td.tabcol
+{
+	background-color: #f295ff;
+    color: #70007f;
+}
+
+/* S3 */
+
+table.tabtable-gr_alterora_elemental_2_violet_3s1 tr td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_3s2 tr td.tabcol
+{
+	color: #5d006a;
+	background-color: #fad5ff;
+    padding: 8px;
+}
+
+table.tabtable-gr_alterora_elemental_2_violet_3s1 tr.tdmin_3e td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_3s2 tr.tdmin_3e td.tabcol
+{
+	background: none repeat scroll 0 0 #f8c0ff;
+}
+
+table.tabtable-gr_alterora_elemental_2_violet_3s1 tr.tdmin_3h td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_3s2 tr.tdmin_3h td.tabcol
+{
+	color: #70007f;
+	background-color: #f5aaff;
+    font-size: larger;
+    font-weight: normal;
+    padding: 10px 8px;
+}
+
+table.tabtable-gr_alterora_elemental_2_violet_3s1 tr.tdmin_3b td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_3s2 tr.tdmin_3b td.tabcol
+{
+	color: #70007f;
+	background-color: #f5aaff;
+    font-size: larger;
+    font-weight: normal;
+    padding: 10px 8px;
+}
+
+table.tabtable-gr_alterora_elemental_2_violet_3s1 tr:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_3s2 tr:hover td.tabcol 
+{
+	background-color: #ed6aff;
+    color: #9500aa;
+}
+
+table.tabtable-gr_alterora_elemental_2_violet_3s1 tr.tdmin_3b:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_3s2 tr.tdmin_3b:hover td.tabcol 
+{
+	background-color: #ed6aff;
+    color: #9500aa;
+}
+
+table.tabtable-gr_alterora_elemental_2_violet_3s1 tr.tdmin_3h:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_3s2 tr.tdmin_3h:hover td.tabcol 
+{
+	background-color: #ed6aff;
+    color: #9500aa;
+}
+
+/* S4 */
+
+table.tabtable-gr_alterora_elemental_2_violet_4s1 tr td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_4s2 tr td.tabcol
+{
+	color: #5d006a;
+	background-color: #fad5ff;
+    padding: 8px;
+}
+
+table.tabtable-gr_alterora_elemental_2_violet_4s1 tr td.tdmin_4e,
+table.tabtable-gr_alterora_elemental_2_violet_4s2 tr td.tdmin_4e
+{
+	background: none repeat scroll 0 0 #f8c0ff;
+}
+
+table.tabtable-gr_alterora_elemental_2_violet_4s1 tr.tdmin_4h td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_4s2 tr.tdmin_4h td.tabcol
+{
+	color: #70007f;
+	background-color: #f5aaff;
+    font-size: larger;
+    font-weight: normal;
+    padding: 10px 8px;
+}
+
+table.tabtable-gr_alterora_elemental_2_violet_4s1 tr.tdmin_4b td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_4s2 tr.tdmin_4b td.tabcol
+{
+	color: #70007f;
+	background-color: #f5aaff;
+    font-size: larger;
+    font-weight: normal;
+    padding: 10px 8px;
+}
+
+table.tabtable-gr_alterora_elemental_2_violet_4s1 tr:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_4s2 tr:hover td.tabcol 
+{
+	background-color: #ed6aff;
+    color: #9500aa;
+}
+
+table.tabtable-gr_alterora_elemental_2_violet_4s1 tr.tdmin_4b:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_4s2 tr.tdmin_4b:hover td.tabcol 
+{
+	background-color: #ed6aff;
+    color: #9500aa;
+}
+
+table.tabtable-gr_alterora_elemental_2_violet_4s1 tr.tdmin_4h:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_violet_4s2 tr.tdmin_4h:hover td.tabcol 
+{
+	background-color: #ed6aff;
+    color: #9500aa;
+}

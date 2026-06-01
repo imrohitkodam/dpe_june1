@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="tjtincanlrs" method="upgrade">
+	<name>Techjoomla-Tincan LRS API</name>
+	<author>Techjoomla</author>
+	<creationDate>13th Jul 2023</creationDate>
+	<copyright>Copyright (C) 2014 - 2023 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<version>4.0.5</version>
+	<isapplication>true</isapplication>
+	<description>Techjoomla-Tincan LRS API</description>
+
+	<files>
+		<file plugin="tjscormcloud">tjscormcloud.php</file>
+		<folder>tjscormcloud</folder>
+	</files>
+	<languages folder="language">
+			<language tag="en-GB">en-GB/en-GB.plg_tjscormcloud.ini</language>
+	</languages>
+
+	<config name="params">
+		<fields name="params">
+			<fieldset name="basic" label="PLG_BOX_API_PARAMETER" addfieldpath="/plugins/tjtincanlrs/tjscormcloud/tjscormcloud/element/pathapi">
+				<field name="pathapi_scormcloud" type="pathapi" label="PLG_SCORM_CLOUD_GET_KEY" description="PLG_SCORM_CLOUD_GET_KEY_DESC" />
+				<field name="appId" type="text" default="" label="PLG_SCORM_CLOUD_APP_ID" description="PLG_SCORM_CLOUD_APP_ID_DESC" />
+				<field name="secretKey" type="text" default="" label="PLG_SCORM_CLOUD_SECRET_KEY" description="PLG_SCORM_CLOUD_SECRET_KEY_DESC" />
+				<field name="plugin_name" type="text" default="Scorm-cloud API" label="PLG_SCORM_CLOUD_NAME" description="PLG_SCORM_CLOUD_NAME_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

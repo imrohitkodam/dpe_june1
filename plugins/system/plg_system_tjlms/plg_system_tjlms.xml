@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0"  type="plugin" group="system" method="upgrade">
+	<name>PLG_SYSTEM_PLG_SYSTEM_TJLMS</name>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>Copyright (C) 2014 - 2021 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<creationDate>27th Sep 2021</creationDate>
+	<version>1.5.0</version>
+
+	<description>PLG_TJLMS_SYSTEM_DESC</description>
+
+	<files>
+		<filename plugin="plg_system_tjlms">plg_system_tjlms.php</filename>
+	</files>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_system_tjlms.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_system_tjlms.sys.ini</language>
+	</languages>
+</extension>

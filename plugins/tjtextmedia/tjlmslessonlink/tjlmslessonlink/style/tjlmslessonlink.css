@@ -1,0 +1,11 @@
+.url_len{
+display:inline-block;
+width:645px;
+white-space: nowrap;
+overflow:hidden !important;
+text-overflow: ellipsis;
+}
+.hide_lesson_scroll{
+overflow-x:hidden !important;
+overflow-y: hidden !important;
+}

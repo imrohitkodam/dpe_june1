@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="tjsms" method="upgrade">
+	<name>plg_tjsms_smshorizon</name>
+	<author>Techjoomla</author>
+	<creationDate>8th March 2016</creationDate>
+	<copyright>Copyright (c) 2009-2021 Techjoomla. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<version>1.7</version>
+	<isapplication>true</isapplication>
+	<description>PLG_TJSMS_SMSHORIZON</description>
+	<files>
+		<file plugin="smshorizon">smshorizon.php</file>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_tjsms_smshorizon.sys.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_tjsms_smshorizon.ini</language>
+	</languages>
+	<config name="params">
+		<fields name="params">
+			<fieldset name="basic" label="PLG_TJSMS_SMSHORIZON_API_PARAMETER">
+				<field name="user" type="text" default="" label="PLG_TJSMS_SMSHORIZON_USER_NAME" description="PLG_TJSMS_SMSHORIZON_API_SECRETE_KEY_DESC" />
+				<field name="apikey" type="text" default="" label="PLG_TJSMS_SMSHORIZON_API_PASSWORD_KEY" description="PLG_TJSMS_SMSHORIZON_API_PASSWORD_KEY" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

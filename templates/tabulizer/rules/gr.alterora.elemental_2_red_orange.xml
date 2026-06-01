@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules name="gr.alterora.elemental_2_red_orange" title="Elemental 2 Red-Orange" style="gr.alterora.elemental_2_red_orange.css">
+<meta  version="1.0" compatibility="4" generator="Tabulizer v.4.0.0" last_modified="2013-07-14 18:42:47" author_name="Dimitrios Mourloukos" author_email="info@alterora.gr" author_url="www.tabulizer.com"/>
+<ruleset name="gr.alterora.elemental_2_red_orange_0s1" title="Elemental 2 Red-Orange Plain Box - No border" description="No table border" suffix="gr_alterora_elemental_2_red_orange_0s1"  >  
+</ruleset>
+<ruleset name="gr.alterora.elemental_2_red_orange_0s2" title="Elemental 2 Red-Orange Plain Box - With border" description="Simple table border" suffix="gr_alterora_elemental_2_red_orange_0s2"  >  
+</ruleset>
+<ruleset name="gr.alterora.elemental_2_red_orange_1s1" title="Elemental 2 Red-Orange Bottom Border - Top Header" description="Top header with a border underneath all rows" suffix="gr_alterora_elemental_2_red_orange_1s1"  >
+  <rule element="row" range="1" style="tdmin_1h" autospan="1" ></rule>
+</ruleset>
+<ruleset name="gr.alterora.elemental_2_red_orange_1s2" title="Elemental 2 Red-Orange Bottom Border - Top Bottom Header" description="Top, bottom headers with a border underneath all rows" suffix="gr_alterora_elemental_2_red_orange_1s2"  >
+  <rule element="row" range="1" style="tdmin_1h" autospan="1" ></rule>
+  <rule element="row" range="L1" style="tdmin_1b" autospan="1" ></rule>
+</ruleset>
+<ruleset name="gr.alterora.elemental_2_red_orange_1s3" title="Elemental 2 Red-Orange Bottom Border - Bottom Header" description="Bottom header with a border underneath all rows" suffix="gr_alterora_elemental_2_red_orange_1s3"  >
+  <rule element="row" range="L1" style="tdmin_1b" autospan="1" ></rule>
+</ruleset>
+<ruleset name="gr.alterora.elemental_2_red_orange_2s2" title="Elemental 2 Red-Orange Colored Background - Top Row Header" description="Highlighted 1st row" suffix="gr_alterora_elemental_2_red_orange_2s2"  >
+  <rule element="row" range="1" style="tdmin_2h" autospan="1" ></rule>  
+</ruleset>
+<ruleset name="gr.alterora.elemental_2_red_orange_2s3" title="Elemental 2 Red-Orange Colored Background - Bottom Row Header" description="Highlighted last row" suffix="gr_alterora_elemental_2_red_orange_2s3"  >
+  <rule element="row" range="L1" style="tdmin_2b" autospan="1" ></rule>  
+</ruleset>
+<ruleset name="gr.alterora.elemental_2_red_orange_2s4" title="Elemental 2 Red-Orange Colored Background - Top Bottom Row Header" description="Highlighted 1st and last row" suffix="gr_alterora_elemental_2_red_orange_2s4"  >
+  <rule element="row" range="1" style="tdmin_2h" autospan="1" ></rule>  
+  <rule element="row" range="L1" style="tdmin_2b" autospan="1" ></rule>  
+</ruleset>
+<ruleset name="gr.alterora.elemental_2_red_orange_2s5" title="Elemental 2 Red-Orange Colored Background - Left Column Header " description="Highlighted 1st column" suffix="gr_alterora_elemental_2_red_orange_2s5"  >
+  <rule element="column" range="1" style="tdmin_2l" autospan="1" ></rule>  
+</ruleset>
+<ruleset name="gr.alterora.elemental_2_red_orange_2s6" title="Elemental 2 Red-Orange Colored Background - Right Column Header" description="Highlighted last column" suffix="gr_alterora_elemental_2_red_orange_2s6"  >
+  <rule element="column" range="L1" style="tdmin_2r" autospan="1" ></rule>
+</ruleset>
+<ruleset name="gr.alterora.elemental_2_red_orange_2s7" title="Elemental 2 Red-Orange Colored Background - Left Right Column Header" description="Highlighted 1st and last column" suffix="gr_alterora_elemental_2_red_orange_2s7"  >
+  <rule element="column" range="1" style="tdmin_2l" autospan="1" ></rule>	
+  <rule element="column" range="L1" style="tdmin_2r" autospan="1" ></rule>
+</ruleset>
+<ruleset name="gr.alterora.elemental_2_red_orange_2s8" title="Elemental 2 Red-Orange Colored Background - Top Row Left Column Header" description="Highlighted 1st row, 1st column" suffix="gr_alterora_elemental_2_red_orange_2s8"  >
+  <rule element="row" range="1" style="tdmin_2h" autospan="1" ></rule>  	
+  <rule element="column" range="1" style="tdmin_2l" autospan="1" ></rule> 
+</ruleset>
+<ruleset name="gr.alterora.elemental_2_red_orange_2s9" title="Elemental 2 Red-Orange Colored Background - Top Row Right Column Header" description="Highlighted 1st row, last column" suffix="gr_alterora_elemental_2_red_orange_2s9"  >
+  <rule element="row" range="1" style="tdmin_2h" autospan="1" ></rule>  	
+  <rule element="column" range="L1" style="tdmin_2r" autospan="1" ></rule> 
+</ruleset>
+<ruleset name="gr.alterora.elemental_2_red_orange_2s10" title="Elemental 2 Red-Orange Colored Background - Top Row Left Right Column Header" description="Highlighted 1st row, 1st and last column" suffix="gr_alterora_elemental_2_red_orange_2s10"  >
+  <rule element="row" range="1" style="tdmin_2h" autospan="1" ></rule>  	
+  <rule element="column" range="1" style="tdmin_2l" autospan="1" ></rule> 
+  <rule element="column" range="L1" style="tdmin_2r" autospan="1" ></rule> 
+</ruleset>
+<ruleset name="gr.alterora.elemental_2_red_orange_2s11" title="Elemental 2 Red-Orange Colored Background - Top Bottom Row Left Right Column Header" description="Highlighted 1st and last row, 1st and last column" suffix="gr_alterora_elemental_2_red_orange_2s11"  >
+  <rule element="row" range="1" style="tdmin_2h" autospan="1" ></rule> 
+  <rule element="row" range="L1" style="tdmin_2b" autospan="1" ></rule>  	
+  <rule element="column" range="1" style="tdmin_2l" autospan="1" ></rule> 
+  <rule element="column" range="L1" style="tdmin_2r" autospan="1" ></rule> 
+</ruleset>
+<ruleset name="gr.alterora.elemental_2_red_orange_2s12" title="Elemental 2 Red-Orange Colored Background - Top Bottom Row Left Column Header" description="Highlighted 1st and last row, 1st column" suffix="gr_alterora_elemental_2_red_orange_2s12"  >
+  <rule element="row" range="1" style="tdmin_2h" autospan="1" ></rule> 
+  <rule element="row" range="L1" style="tdmin_2b" autospan="1" ></rule>  	
+  <rule element="column" range="1" style="tdmin_2l" autospan="1" ></rule> 
+</ruleset>
+<ruleset name="gr.alterora.elemental_2_red_orange_2s13" title="Elemental 2 Red-Orange Colored Background - Top Bottom Row Right Column Header" description="Highlighted 1st and last row, last column" suffix="gr_alterora_elemental_2_red_orange_2s13"  >
+  <rule element="row" range="1" style="tdmin_2h" autospan="1" ></rule> 
+  <rule element="row" range="L1" style="tdmin_2b" autospan="1" ></rule>  	
+  <rule element="column" range="L1" style="tdmin_2r" autospan="1" ></rule> 
+</ruleset>
+<ruleset name="gr.alterora.elemental_2_red_orange_3s1" title="Elemental 2 Red-Orange Zebra Horizontal - Top Row Header" description="Top header, odd and even rows are different" suffix="gr_alterora_elemental_2_red_orange_3s1"  >
+  <rule element="row" range="1" style="tdmin_3h" autospan="1" ></rule>
+  <rule element="row" range="EVEN" style="tdmin_3e" ></rule>
+</ruleset>
+<ruleset name="gr.alterora.elemental_2_red_orange_3s2" title="Elemental 2 Red-Orange Zebra Horizontal - Top Bottom Row Header" description="Top and bottom header, odd and even rows are different" suffix="gr_alterora_elemental_2_red_orange_3s1"  >
+  <rule element="row" range="1" style="tdmin_3h" autospan="1" ></rule>
+  <rule element="row" range="EVEN" style="tdmin_3e" ></rule>
+  <rule element="row" range="L1" style="tdmin_3b" autospan="1" ></rule>
+</ruleset>
+<ruleset name="gr.alterora.elemental_2_red_orange_4s1" title="Elemental 2 Red-Orange Zebra Vertical - Top Row Header" description="Top header, odd and even columns are different" suffix="gr_alterora_elemental_2_red_orange_4s1"  >
+  <rule element="row" range="1" style="tdmin_4h" autospan="1" ></rule>
+  <rule element="column" range="EVEN" style="tdmin_4e" ></rule>
+</ruleset>
+<ruleset name="gr.alterora.elemental_2_red_orange_4s2" title="Elemental 2 Red-Orange Zebra Box - Top Bottom Row Header" description="Top and bottom header, odd and even columns are different" suffix="gr_alterora_elemental_2_red_orange_4s2"  >
+  <rule element="row" range="1" style="tdmin_4h" autospan="1" ></rule>
+  <rule element="row" range="L1" style="tdmin_4b" autospan="1" ></rule>
+  <rule element="column" range="EVEN" style="tdmin_4e" ></rule>
+</ruleset>
+</rules>

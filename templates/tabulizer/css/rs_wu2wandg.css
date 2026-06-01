@@ -1,0 +1,10 @@
+table.tabtable-rs_wu2wandg, table.tabtable-rs_wu2wandg tr td.tabcol  { border: none; } 
+table.tabtable-rs_wu2wandg tr  { border-width: 1px;
+border-color: #000000;
+border-style: solid; border-left: none; border-right: none; } 
+table.tabtable-rs_wu2wandg  { 
+border-collapse:collapse;width:100%;background-color: transparent;}
+table.tabtable-rs_wu2wandg tr.tabrow td.tabcol  { 
+font-style: normal;font-weight: normal;padding: 5px;background-color:#dbe5f1;}
+table.tabtable-rs_wu2wandg tr.tr_ht1 td.tabcol, table.tabtable-rs_wu2wandg tr.tr_ht1:hover td.tabcol, table.tabtable-rs_wu2wandg tr.tr_ht1 td.tabcol:hover  { 
+font-style: normal;font-weight: normal;color: #ffffff;background-color:#9bbb59;}

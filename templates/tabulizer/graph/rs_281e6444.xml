@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules name="rs_281e6444" title="Demo the date label format" style="rs_281e6444.css">
+	<meta  version="1.0" compatibility="4" generator="Online Creation Wizard" author_name="Alterora" author_email="info@alterora.gr" author_url="www.tabulizer.com"/>
+	<ruleset name="rs_281e6444" title="Demo the date label format" description="How to format the label" suffix="rs_281e6444" >
+		<graph type="line" num_of_series="1" width="500px" height="300px"  />
+		<grid lines_show="1" lines_width="1" border_show="1" border_size="2" shadow_show="1" shadow_angle="45" shadow_offset="1.5" shadow_alpha="0.05"  />
+		<axes>
+			<axis id="x" show="1" label="Dates" ticks_show_labels="1" ticks_format="%d-%m-%y" ticks_show_marks="1" ticks_mark_size="6"  />
+			<axis id="y" show="1" ticks_show_labels="1" ticks_show_marks="1" ticks_mark_size="6"  />
+		</axes>
+		<series>
+			<serie id="1" show="1" label="Sales" data_source_x_element="row" data_source_x_range="2" data_source_x_data_type="date" data_source_y_element="row" data_source_y_range="1" data_source_y_data_type="auto" line_show="1" line_width="2.5" fill_show="0" markers_show="1" markers_size="9" markers_width="2" markers_shadow="1" trendline_show="0" pointlabels_show="0"  />
+		</series>
+	</ruleset>
+</rules>

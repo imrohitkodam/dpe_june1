@@ -1,0 +1,77 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+<extension version="3.0" type="plugin" group="tjvideo" method="upgrade">
+	<name>PLG_TJVIDEO_KPOINT</name>
+	<author>Techjoomla</author>
+	<creationDate>13th Jul 2023</creationDate>
+	<copyright>Copyright (C) 2014 - 2023 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<version>4.0.5</version>
+	<description>PLG_TJVIDEO_KPOINT</description>
+
+	<files>
+		<file plugin="kpoint">kpoint.php</file>
+		<folder>assets</folder>
+		<folder>tmpl</folder>
+	</files>
+	<languages folder="language">
+			<language tag="en-GB">en-GB/en-GB.plg_tjvideo_kpoint.ini</language>
+			<language tag="en-GB">en-GB/en-GB.plg_tjvideo_kpoint.sys.ini</language>
+	</languages>
+
+	<!-- Fields for Joomla 1.8.x and onwards -->
+	<config name="params">
+		<fields name="params">
+			<fieldset name="basic" label="PLG_TJVIDEO_KPOINT_PARAMETER" >
+				<field name="plugin_name" type="text" default="kpoint" label="PLG_TJVIDEO_KPOINT_PLUG_NAME" description="PLG_TJVIDEO_KPOINT_PLUG_NAME_DESC" />
+
+				<field name="domain_name" type="text" default="" label="PLG_TJVIDEO_KPOINT_DOMAIN_NAME" description="PLG_TJVIDEO_KPOINT_DOMAIN_NAME_DESC" />
+
+				<field name="client_id" type="text" default="" label="PLG_TJVIDEO_KPOINT_CLIENT_ID" description="PLG_TJVIDEO_KPOINT_CLIENT_ID_DESC" />
+
+				<field name="secret_key" type="text" default="" label="PLG_TJVIDEO_KPOINT_SECRET_KEY" description="PLG_TJVIDEO_KPOINT_SECRET_KEY_DESC" />
+
+				<field name="email_id" type="text" default="" label="PLG_TJVIDEO_KPOINT_EMAIL_ID" description="PLG_TJVIDEO_KPOINT_EMAIL_ID_DESC" />
+
+				<field name="display_name" type="text" default="" label="PLG_TJVIDEO_KPOINT_DISPLAY_NAME" description="PLG_TJVIDEO_KPOINT_DISPLAY_NAME_DESC" />
+
+				<field name="download_video" type="hidden" class="btn-group btn-group-yesno" default="0" label="PLG_TJVIDEO_KPOINT_DOWNLOAD_VIDEO_LABEL" description="" />
+
+				<!--field name="download_video" type="radio" class="btn-group btn-group-yesno" default="1" label="PLG_TJVIDEO_KPOINT_DOWNLOAD_VIDEO_LABEL" description="" >
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+				</field-->
+
+				<field name="create_video" type="hidden" class="btn-group btn-group-yesno" default="0" label="PLG_TJVIDEO_KPOINT_CREATE_VIDEO_LABEL" description="" />
+
+				<field name="assessment" type="hidden" default="1" label="PLG_TJVIDEO_KPOINT_ASSESMENT_LABEL" description="PLG_TJVIDEO_KPOINT_ASSESMENT_LABEL_DESC" class="btn-group" />
+
+				<field name="max_search" type="number" default="10" max="25" label="PLG_TJVIDEO_KPOINT_MAX_SEARCH" description="PLG_TJVIDEO_KPOINT_MAX_SEARCH_DESC" />
+
+				<field name="show_like" type="radio" default="1" label="PLG_TJVIDEO_KPOINT_SHOW_LIKE" description="PLG_TJVIDEO_KPOINT_SHOW_LIKE_DESC" class="btn-group">
+ 					<option value="1">JYES</option>
+ 					<option value="0">JNO</option>
+				</field>				
+
+				<field name="show_seekbar" type="radio" default="1" label="PLG_TJVIDEO_KPOINT_SHOW_SEEKBAR" description="PLG_TJVIDEO_KPOINT_SHOW_SEEKBAR_DESC" class="btn-group">
+ 					<option value="1">JYES</option>
+ 					<option value="0">JNO</option>
+				</field>
+
+				<field name="authentication" type="radio" default="email" label="PLG_TJVIDEO_KPOINT_AUTHENTICATION" description="PLG_TJVIDEO_KPOINT_AUTHENTICATION_DESC" class="btn-group">
+					<option value="email">PLG_TJVIDEO_KPOINT_EMAIL_AUTHENTICATION</option>
+ 					<option value="account_number">PLG_TJVIDEO_KPOINT_ACCOUNT_NUMBER_AUTHENTICATION</option>
+ 					<option value="both">PLG_TJVIDEO_KPOINT_BOTH_AUTHENTICATION</option>
+				</field>
+
+			</fieldset>
+			<fieldset name="advance" label="PLG_TJVIDEO_KPOINT_LESSON_ADVANCE_SETTING">
+				<field name="show_external_url" type="radio" default="0" label="PLG_TJVIDEO_KPOINT_SHOW_EXTERNAL_URL" description="PLG_TJVIDEO_KPOINT_SHOW_EXTERNAL_URL_DESC" class="btn-group">
+					<option value="1">JYES</option>
+ 					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

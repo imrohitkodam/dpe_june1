@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules name="rs_t1h36qdp" title="Graph Demo-Linear Graph" style="rs_t1h36qdp.css">
+	<meta  version="1.0" compatibility="4" generator="Online Creation Wizard" author_name="Alterora" author_email="info@alterora.gr" author_url="www.tabulizer.com"/>
+	<ruleset name="rs_t1h36qdp" title="Demo for Linear Graph" description="A simple ruleset for converting a table into a liner graph." suffix="rs_t1h36qdp"  >
+	<sample_data  sep="sc" enc="none">2019-02-22;2019-03-22;2019-04-22;2019-05-22;2019-06-22;2019-07-22;2019-08-22;2019-09-22;2019-10-22;2019-11-22
+79;43;28;75;65;43;88;44;84;93
+15;52;84;59;65;91;83;89;88;84
+89;79;9;78;61;7;83;26;47;52
+47;17;23;41;57;73;15;34;92;52
+62;27;57;59;12;27;70;27;6;86
+46;1;93;5;82;93;85;85;89;77
+83;37;21;79;28;70;92;32;84;36
+88;39;31;47;89;97;64;93;93;36
+88;58;97;15;15;79;51;10;32;81
+</sample_data>
+
+			<rule element="table" range="ALL" graph="rs_t1h36qdp.xml" ></rule>
+
+	</ruleset>
+</rules>

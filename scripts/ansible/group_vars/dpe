@@ -1,0 +1,12 @@
+---
+server_runs_as: "dev-kb-dpe"
+server_runs_as_group: "dev-kb-dpe"
+
+server_migration_runs_as: "qa-kb-dpe"
+server_migration_runs_as_group: "qa-kb-dpe"
+
+server_live_runs_as: "dataprotection"
+server_live_runs_as_group: "dataprotection"
+
+server_slaqa_runs_as: "qa-dpe"
+server_slaqa_runs_as_group: "qa-dpe"

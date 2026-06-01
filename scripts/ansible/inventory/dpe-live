@@ -1,0 +1,8 @@
+[live-dpe]
+51.75.171.58 ansible_ssh_user={{dpe_live_user}} ansible_ssh_private_key_file=~/.ssh/id_rsa
+
+[dpetemp:children]
+live-dpe
+
+[dpe:children]
+dpetemp

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules name="rs_w8z5xxp4" title="Graph Demo-Candlestick Graph (bar chart version)" style="rs_w8z5xxp4.css">
+	<meta  version="1.0" compatibility="4" generator="Online Creation Wizard" author_name="Alterora" author_email="info@alterora.gr" author_url="www.tabulizer.com"/>
+	<ruleset name="rs_w8z5xxp4" title="Demo for Candlestick Graph (bar chart version)" description="A simple ruleset for converting a table into a candlestick graph." suffix="rs_w8z5xxp4"  >
+	<sample_data  sep="sc" enc="none">2014-08-24;2014-08-25;2014-08-26;2014-08-27;2014-08-28;2014-08-29;2014-08-30;2014-08-31;2014-09-01;2014-09-02
+10;10;17;25;32;33;40;41;47;47
+15;21;35;42;36;48;42;55;56;51
+0;2;15;16;22;31;40;34;39;41
+10;17;25;32;33;40;41;47;47;51
+63;84;65;15;5;1;22;24;29;87
+76;84;74;90;89;94;59;72;20;82
+23;17;19;50;32;40;82;92;78;58
+8;77;34;53;54;35;79;93;68;90
+9;15;15;99;32;51;78;80;28;92
+</sample_data>
+
+			<rule element="table" range="ALL" graph="rs_w8z5xxp4.xml" ></rule>
+
+	</ruleset>
+</rules>

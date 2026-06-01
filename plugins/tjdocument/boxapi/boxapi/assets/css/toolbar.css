@@ -1,0 +1,118 @@
+.viewer_toolbar
+{
+display:table;
+table-layout:fixed;
+width: 100%;
+text-align: center;
+height: 45px;
+line-height: 45px;
+background-color:#eee;
+border-top: 1px solid #aaa;
+position:fixed;
+bottom:0px;
+left: 0px;
+z-index: 2;
+padding: 0px;
+box-shadow: 0 -5px 5px -5px #aaa;
+-moz-box-shadow:0 -5px 5px -5px #aaa;
+-webkit-box-shadow: 0 -5px 5px -5px #aaa;
+}
+
+.viewer_controls
+{
+display:table-cell;
+}
+
+.view-right
+{
+text-align:right;
+
+}
+
+.view-left
+{
+text-align:left;
+}
+
+.view-center
+{
+text-align:center;
+}
+
+.viewer_gotopage:focus
+{
+	outline: 0;
+	border: 1px solid #aaa;
+	box-shadow: #ccc 0 0 1px inset;
+	margin-bottom:0px !important;
+}
+
+.viewer_gotopage
+{
+width: 90px !important;
+}
+
+/*VAISHALI */
+.viewer_toolbar .pagedetails{
+	background-color: transparent;
+	cursor: pointer;
+	color:#0358af;
+	background: transparent;
+}
+
+
+
+/* one item */
+.viewer_controls:first-child:nth-last-child(1) {
+    width: 100%;
+}
+
+/* two items */
+.viewer_controls:first-child:nth-last-child(2),
+.viewer_controls:first-child:nth-last-child(2) ~ .viewer_controls {
+    width: 50%;
+}
+
+/* three items */
+.viewer_controls:first-child:nth-last-child(3),
+.viewer_controls:first-child:nth-last-child(3) ~ .viewer_controls {
+    width: 33.3333%;
+}
+
+.viewer_controls:first-child{
+	text-align:left;
+}
+
+.viewer_toolbar .fa{
+	font-size:18px;
+}
+
+.viewer_toolbar .transparent-button{
+	padding: 0px;
+	border: none;
+	background: transparent;
+	color:#0358af;
+	height: 30px;
+	line-height: 30px;
+	vertical-align: middle;
+	margin:0px 5px;
+}
+
+.viewer_toolbar .viewer_layouts
+{
+	border: 1px solid #0358af;
+}
+
+.tjlms-container.container-top .viewer_toolbar{
+	bottom:45px;
+}
+
+.viewer_toolbar .viewer-btn-disabled{
+	color: #aaa;
+	cursor: default;
+}
+
+.viewer_toolbar_jlike
+{
+	bottom:50px;
+}

@@ -1,0 +1,89 @@
+.topleft {
+  margin-top: 0;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+canvas {
+  /* width: 100% !important;
+  height: auto !important; */
+  margin-left: -2%;
+}
+
+.chart {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-top: 30px;
+}
+
+.pie {
+  position: relative;
+  padding: 10px 0;
+  padding-left: 10px;
+  padding-right: 0;
+  z-index: 10;
+}
+
+.legend {
+  position: absolute;
+  right: 10px;
+  top: 26px;
+  height: 100%;
+  left: 56%;
+  width: 48%;
+  z-index: 1;
+}
+
+@media (max-width: 767px) {
+  .chart {
+    flex-direction: column;
+  }
+
+  .pie,
+  .legend {
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .legend {
+    position: absolute;
+    width: 48%;
+  }
+}
+
+
+.pie-legend .box {
+  float: left;
+  height: 20px;
+  width: 20px;
+  margin-bottom: 15px;
+  border: 1px solid black;
+  clear: both;
+}
+
+.box {
+  float: left;
+  height: 16px;
+  width: 16px;
+  margin-bottom: 15px;
+  clear: both;
+  outline-width: thin;
+}
+
+.boxLeft {
+  float: left;
+  outline-width: thin;
+}
+
+.widget-boxes .panel .chart-panel-body {
+  padding: 0;
+}
+.mt-minus-22 {
+    margin-top: -22px;
+}

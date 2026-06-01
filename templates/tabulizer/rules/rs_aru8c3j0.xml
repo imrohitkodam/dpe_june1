@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules name="rs_aru8c3j0" title="Table Demo-Combination of Pagination, Sorting, Table Filtering, Column Filtering with Responsive Horizontal Scrollbar." style="rs_aru8c3j0.css">
+    <meta  version="1.0" compatibility="4" generator="Online Creation Wizard" author_name="Alterora" author_email="info@alterora.gr" author_url="www.tabulizer.com"/>
+    <ruleset name="rs_aru8c3j0" title="Demo for combination of Pagination, Sorting, Table Filtering, Column Filtering with Responsive Horizontal Scrollbar." description="A basic ruleset for combining table pagination, sorting, table filtering, column filtering on a second empty row added by the ruleset. Plus responsiveness!" suffix="rs_aru8c3j0"  >
+        			<rule element="column" range="2" style="tabcustom1" ></rule>
+			<rule element="column" range="4" style="tabcustom2" ></rule>
+			<rule element="table" range="ALL"  sort = "enabled orderby1:asc header_size:2 header_top:true" filter = "enabled position[top-right] header_size:2" column_filter = "enabled columns[4:input:smart,5:select:exact,7:input:start_with] headerrow:2 header_size:2" pagination = "enabled full limit10 limitchange[top-left] info[bottom-left] position[bottom-right] header_size:1" responsive = "1:[nicescroll:0][zoom:0][touch:0][cursor_display:1]" theme = "light.css" ></rule>
+			<rule element="table" range="ALL" modification="addemptyrow$2" ></rule>
+			<rule element="row" range="EVEN" style="tr_ze" ></rule>
+			<rule element="row" range="1" style="tr_ht1" ></rule>
+<sample_data  sep="sc" enc="dq">Rank;Time;Wind (m/s);Athlete;Country;Date;Location
+1;9.58;+0.9;Usain Bolt; Jamaica;16 August 2009;Berlin
+2;9.69;+2.0;Tyson Gay; United States;20 September 2009;Shanghai
+3;9.69;-0.1;Yohan Blake; Jamaica;23 August 2012;Lausanne
+4;9.72;+0.2;Asafa Powell; Jamaica;2 September 2008;Lausanne
+5;9.78;+0.9;Nesta Carter; Jamaica;29 August 2010;Rieti
+6;9.79;+0.1;Maurice Greene; United States;16 June 1999;Athens
+7;9.79;+1.5;Justin Gatlin; United States;5 August 2012;London
+8;9.80;+1.3;Steve Mullings; Jamaica;4 June 2011;Eugene
+9;9.82;+1.7;Richard Thompson; Trinidad and Tobago;21 June 2014;Port of Spain
+10;9.84;+0.7;Donovan Bailey; Canada;27 July 1996;Atlanta
+11;9.84;+0.2;Bruny Surin; Canada;22 August 1999;Seville
+12;9.85;+1.2;Leroy Burrell; United States;6 July 1994;Lausanne
+13;9.85;+1.7;Olusoji Fasuba; Nigeria;12 May 2006;Ad-Dawhah
+14;9.85;+1.3;Mike Rodgers; United States;4 June 2011;Eugene
+15;9.86;+1.2;Carl Lewis; United States;25 August 1991;Tokyo
+16;9.86;-0.7;Frankie Fredericks; Namibia;3 July 1996;Lausanne
+17;9.86;+1.8;Ato Boldon; Trinidad and Tobago;19 April 1998;Walnut
+18;9.86;+0.6;Francis Obikwelu; Portugal;22 August 2004;Athens
+19;9.86;+1.4;Keston Bledman; Trinidad and Tobago;23 June 2012;Port of Spain
+20;9.87;+0.3;Linford Christie; United Kingdom;15 August 1993;Stuttgart
+21;9.87;-0.2;Obadele Thompson [A]; Barbados;11 September 1998;Johannesburg
+22;9.88;+1.8;Shawn Crawford; United States;19 June 2004;Eugene
+23;9.88;+1.0;Walter Dix; United States;8 August 2010;Nottwil
+24;9.88;+0.9;Ryan Bailey; United States;29 August 2010;Rieti
+25;9.88;+1.0;Michael Frater; Jamaica;30 June 2011;Lausanne</sample_data>
+    </ruleset>
+</rules>

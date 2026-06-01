@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" method="upgrade" type="plugin" group="user">
+	<name>PLG_USER_TJLMSUSERLOG</name>
+	<author>Techjoomla</author>
+	<creationDate>13th Jul 2023</creationDate>
+	<copyright>Copyright (C) 2014 - 2023 Techjoomla. All rights reserved.</copyright>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>4.0.5</version>
+	<description>This is user plug-in will work on after user logged in and out to keep the user log.</description>
+	<files>
+		<filename plugin="tjlmsuserlog">tjlmsuserlog.php</filename>
+	</files>
+	<languages folder="language">
+			<language tag="en-GB">en-GB/en-GB.plg_user_tjlmsuserlog.ini</language>
+			<language tag="en-GB">en-GB/en-GB.plg_user_tjlmsuserlog.sys.ini</language>
+  	</languages>
+  	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="admin_redirect_to_dashboard" type="radio" default="0"
+					label="PLG_USER_TJLMS_ADMIN_REDIRECT" description="PLG_USER_TJLMS_ADMIN_REDIRECT_DESC">
+					<option value="1">PLG_USER_TJLMS_YES</option>
+					<option value="0">PLG_USER_TJLMS_NO</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
+

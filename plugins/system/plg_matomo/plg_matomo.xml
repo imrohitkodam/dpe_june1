@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" method="upgrade" type="plugin" group="system">
+	<name>System - itcs Matomo</name>
+	<author>itcs</author>
+	<creationDate>December 2018</creationDate>
+	<copyright>Copyright it-conserv.de 2018</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>info@it-conserv.de</authorEmail>
+	<authorUrl>www.it-conserv.de</authorUrl>
+	<version>1.0.1</version>
+	<description>
+	<![CDATA[
+	<div class="alert alert-success" style="background-color:#DFF0D8;border-color:#D6E9C6;color: #468847;padding: 1px 0;">
+		<div align="center">
+			<h2 style="color: #f39c12;">Matomo (formerly Piwik) Plugin</h2>
+			<p>Version 1.0.1</p>
+			<h4>A Plugin for the Matomo(formerly Piwik) Analytics Tool</h4>
+			<p> </p>
+			<p>Insert here the tracking code, which should come into the Head area.</p>
+			<p>In addition, insert the iframe Custom Opt-Out code to be included in the privacy statement.<br />
+			Simply enter the short code <strong>{matomo_opt_out}</strong> in the privacy statement.</p>
+			<p><strong>Please activate the plugin and enter the codes.</strong></p>
+			<p>Copyright 2018 <a href="http://www.it-conserv.de/" title="it-conserv.de" rel="noopener noreferrer" target="_blank">www.it-conserv.de</a>.</p>
+		</div>
+     <style>table.adminform{width: 100%;}</style>
+	 </div>
+		]]>
+	</description>
+	<languages>
+		<language tag="de-DE">language/de-DE.plg_system_plg_matomo.ini</language>
+		<language tag="de-DE">language/de-DE.plg_system_plg_matomo.sys.ini</language>
+		<language tag="en-GB">language/en-GB.plg_system_plg_matomo.ini</language>
+		<language tag="en-GB">language/en-GB.plg_system_plg_matomo.sys.ini</language>
+	</languages>
+	<updateservers>
+		<server type="extension" priority="2" name="Plugin itcs Matomo">
+			https://it-conserv.de/downloads/plugins/plg_matomo/plg_matomo-update.xml
+		</server>
+	</updateservers>	
+	<files>
+		<filename plugin="plg_matomo">plg_matomo.php</filename>
+		<filename>index.html</filename>
+		<filename>lizenz_gpl.txt</filename>
+		<folder>language</folder>
+		<folder>fields</folder>
+	</files>
+	
+  <config>
+  	<fields name="params" addfieldpath="/plugins/system/plg_matomo/fields">
+  		<fieldset name="basic">
+			<field type="itcsdonation" />
+	  		<field name="hcode" type="textarea" filter="raw"
+					label="PLG_MATOMO_ANALYTIC_CODE"			
+					description="PLG_MATOMO_ANALYTIC_CODE_DESC"
+					rows="12" cols="30"
+				/>
+	  		<field name="optout_note" type="note"
+					label="PLG_MATOMO_OPTOUT_NOTE"
+					description="PLG_MATOMO_OPTOUT_NOTE_DESC"
+				/>
+			<field name="optout" type="textarea" filter="raw" 
+					label="PLG_MATOMO_OPTOUT_CODE"
+					description="PLG_MATOMO_OPTOUT_CODE_DESC"					
+					rows="12" cols="30"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

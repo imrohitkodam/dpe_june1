@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules name="rs_ysdwj608" title="Demo for Pie Graph" style="rs_ysdwj608.css">
+	<meta  version="1.0" compatibility="4" generator="Online Creation Wizard" author_name="Alterora" author_email="info@alterora.gr" author_url="www.tabulizer.com"/>
+	<ruleset name="rs_ysdwj608" title="Demo for Pie Graph" description="A simple ruleset for converting a table into a pie graph." suffix="rs_ysdwj608" >
+		<graph type="pie" num_of_series="1" width="500px" height="300px"  />
+		<title show="1" data_source="text" text_value="Market Share"  />
+		<legend show="1"  />
+		<grid lines_show="1" lines_width="1" border_show="1" border_size="2" shadow_show="1" shadow_angle="45" shadow_offset="1.5" shadow_alpha="0.05"  />
+		<series>
+			<serie id="1" show="1" data_source_label_element="row" data_source_label_range="2" data_source_label_data_type="text" data_source_value_element="row" data_source_value_range="1" data_source_value_data_type="numeric" pie_padding="20" pie_margin="5" pie_fill="1" pie_labels_show="1" pie_labels_type="percent"  />
+		</series>
+	</ruleset>
+</rules>

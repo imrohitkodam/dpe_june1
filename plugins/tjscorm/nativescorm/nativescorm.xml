@@ -1,0 +1,40 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+<extension version="3.0" type="plugin" group="tjscorm" method="upgrade">
+	<name>PLG_TJSCORM_NATIVESCORM</name>
+	<author>Techjoomla</author>
+	<creationDate>13th Jul 2023</creationDate>
+	<copyright>Copyright (C) 2014 - 2023 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<version>4.0.5</version>
+	<description>PLG_TJSCORM_NATIVESCORM_DESC</description>
+
+	<files>
+		<file plugin="nativescorm">nativescorm.php</file>
+		<folder>nativescorm</folder>
+		<folder>tmpl</folder>
+		<folder>assets</folder>
+	</files>
+	<languages folder="language">
+			<language tag="en-GB">en-GB.plg_tjscorm_nativescorm.ini</language>
+			<language tag="en-GB">en-GB.plg_tjscorm_nativescorm.sys.ini</language>
+	</languages>
+
+	<!-- Fields for Joomla 1.8.x and onwards -->
+	<config name="params">
+		<fields name="params">
+			<fieldset name="basic" label="PLG_TJSCORM_NATIVE_PARAMETER" >
+				<field name="launch_in" type="list" label="PLG_TJSCORM_NATIVE_LAUNCHIN" desc="PLG_TJSCORM_NATIVE_LAUNCHIN" default="iframe">
+					<option value="iframe">PLG_TJSCORM_NATIVE_LAUNCHIN_IFRAME</option>
+					<option value="object">PLG_TJSCORM_NATIVE_LAUNCHIN_OBJECT</option>
+				</field>
+				<field name="show_resume" type="radio" default="1" label="PLG_TJSCORM_NATIVESCORM_SHOW_RESUME_LABEL" description="PLG_TJSCORM_NATIVESCORM_SHOW_RESUME_DESC" class="btn-group">
+ 					<option value="1">JYES</option>
+ 					<option value="0">JNO</option>
+ 				</field>
+				<field name="assessment" type="hidden" default="0" label="PLG_TJSCORM_ASSESMENT_LABEL" description="PLG_TJSCORM_ASSESMENT_LABEL_DESC" class="btn-group" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

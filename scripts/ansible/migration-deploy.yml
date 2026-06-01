@@ -1,0 +1,117 @@
+---
+- hosts: all
+  become: false
+  vars:
+    workspace: "{{ lookup('env','WORKSPACE') }}"
+  vars_files: ["secrets/{{site_id}}","secrets/ssh_passwords"]
+  tasks:
+  - name: Create configuration.php
+    template:
+      src: "{{ config_src }}"
+      dest: "{{ doc_root }}/configuration.php"
+      owner: "{{ server_migration_runs_as }}"
+      group: "{{ server_migration_runs_as }}"
+
+  - name: Create .htversion file
+    file:
+      path: "{{ doc_root }}/.htversion"
+      state: touch
+      owner: "{{ server_migration_runs_as }}"
+      group: "{{ server_migration_runs_as }}"
+
+  - name: Write commit number .htversion to file
+    shell: echo "{{ lookup('env','BUILD_NUMBER') }}" > {{ doc_root }}/.htversion
+
+  - name: "Create a Directory to backup Tjucm Forms Xmls"
+    file:
+      path: "{{ doc_root }}/tjucm_form_bk"
+      state: directory
+      owner: "{{ server_migration_runs_as }}"
+      group: "{{ server_migration_runs_as_group }}"
+
+  - name: "Create a Directory to backup admin side Tjucm Forms Xmls"
+    file:
+      path: "{{ doc_root }}/tjucm_form_bk/admin"
+      state: directory
+      owner: "{{ server_migration_runs_as }}"
+      group: "{{ server_migration_runs_as_group }}"
+
+  - name: "Create a Directory to backup client side Tjucm Forms Xmls"
+    file:
+      path: "{{ doc_root }}/tjucm_form_bk/client"
+      state: directory
+      owner: "{{ server_migration_runs_as }}"
+      group: "{{ server_migration_runs_as_group }}"
+
+  - name: "Backup admin side Tjucm Forms Xmls"
+    shell: cp -rf {{ doc_root }}/administrator/components/com_tjucm/models/forms/ {{ doc_root }}/tjucm_form_bk/admin/
+
+  - name: "Backup client side Tjucm Forms Xmls"
+    shell: cp -rf {{ doc_root }}/components/com_tjucm/models/forms/ {{ doc_root }}/tjucm_form_bk/client/
+
+  - name: "Delete folders"
+    file: path="{{ doc_root }}/{{ item }}" state=absent force=yes owner="{{server_migration_runs_as}}" group="{{server_migration_runs_as}}"
+    with_items:
+      - "cache"
+      - "tmp"
+      - "logs"
+      - "administrator"
+      - "components"
+      - "modules"
+      - "plugins"
+      - "templates"
+      - "language"
+      - "libraries"
+      - "includes"
+      - "index.php"
+
+  - name: "Create empty dirs"
+    file: path="{{ doc_root }}/{{ item }}" state=directory force=yes owner="{{server_migration_runs_as}}" group="{{server_migration_runs_as}}"
+    with_items:
+      - "cache"
+      - "tmp"
+      - "logs"
+      - "administrator"
+      - "administrator/cache"
+      - "administrator/components/com_akeeba/backup"
+
+
+
+  - name: create empty index.html files
+    file: path="{{ doc_root }}/{{ item }}/index.html" state=touch owner="{{server_migration_runs_as}}" group="{{server_migration_runs_as}}"
+    with_items:
+      - "cache"
+      - "tmp"
+      - "logs"
+      - "administrator/cache"
+
+  - name: Unarchive artifact on remote server
+    unarchive:
+      src: "{{ workspace | default('') }}/{{ artifact_filename }}"
+      dest: "{{ doc_root }}"
+      copy: yes
+      owner: "{{ server_migration_runs_as }}"
+      group: "{{ server_migration_runs_as }}"
+
+  - name: "Restore admin side Tjucm Forms Xmls"
+    shell: rsync -avzhu --exclude item.xml --exclude type.xml {{ doc_root }}/tjucm_form_bk/admin/forms/ {{ doc_root }}/administrator/components/com_tjucm/models/forms
+
+  - name: "Restore client side Tjucm Forms Xmls"
+    shell: rsync -avzhu --exclude itemform.xml {{ doc_root }}/tjucm_form_bk/client/forms/ {{ doc_root }}/components/com_tjucm/models/forms
+
+  - name: "Restore com_tjucm forms permissions"
+    file: path="{{ doc_root }}/{{ item }}" owner="{{server_migration_runs_as}}" group="{{server_migration_runs_as_group}}" recurse=yes
+    with_items:
+      - "administrator/components/com_tjucm/models/forms"
+      - "components/com_tjucm/models/forms"
+
+  - name: "Delete Tjucm backup folders"
+    file:
+      path: "{{ doc_root }}/tjucm_form_bk"
+      state: absent
+      force: yes
+      owner: "{{server_migration_runs_as}}"
+      group: "{{server_migration_runs_as_group}}"
+
+  - name: recreate Akeeba dir
+    shell: chmod 777 -R {{ doc_root }}/administrator/components/com_akeeba/

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules name="rs_9enbf36f" title="Graph Demo-Bubble Graph" style="rs_9enbf36f.css">
+	<meta  version="1.0" compatibility="4" generator="Online Creation Wizard" author_name="Alterora" author_email="info@alterora.gr" author_url="www.tabulizer.com"/>
+	<ruleset name="rs_9enbf36f" title="Demo for Bubble Graph" description="A simple ruleset for converting a table into a bubble graph." suffix="rs_9enbf36f"  >
+	<sample_data  sep="sc" enc="none">76;49;85;50;26;7;37;25;55;46
+38;60;69;44;2;19;86;39;43;93
+42;49;32;87;4;71;40;80;58;21
+Text 1;Text 2;Text 3;Text 4;Text 5;Text 6;Text 7;Text 8;Text 9;Text 10
+56;54;10;44;49;42;22;39;88;90
+1;12;0;89;68;12;55;57;45;26
+76;58;26;10;41;81;89;77;11;42
+15;38;0;25;46;76;82;98;61;5
+88;40;62;96;86;95;17;34;71;38
+3;18;80;100;76;98;53;35;63;37
+</sample_data>
+
+			<rule element="table" range="ALL" graph="rs_9enbf36f.xml" ></rule>
+
+	</ruleset>
+</rules>

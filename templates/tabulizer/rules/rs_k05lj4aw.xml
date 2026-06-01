@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules name="rs_k05lj4aw" title="Table Demo-Ruleset for Google Docs with pagination and first row removal" style="rs_k05lj4aw.css">
+    <meta  version="1.0" compatibility="4" generator="Online Creation Wizard" author_name="Alterora" author_email="info@alterora.gr" author_url="www.tabulizer.com"/>
+    <ruleset name="rs_k05lj4aw" title="Ruleset for Google Docs with pagination and first row removal" description="A sample ruleset that can be used to read data from a published Google Docs URL." suffix="rs_k05lj4aw"  >
+        			<rule element="table" range="ALL"  filter = "enabled position[top-right] header_size:1" pagination = "enabled full limit50 limitchange[top-left] info[bottom-left] position[bottom-right]" theme = "light.css" ></rule>
+			<rule element="row" range="1" remove="1" ></rule>
+			<rule element="row" range="EVEN" style="tr_ze" ></rule>
+			<rule element="row" range="1" style="tr_ht1" ></rule>
+
+    </ruleset>
+</rules>

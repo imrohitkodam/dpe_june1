@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" method="upgrade" type="plugin" group="user">
+	<name>User - JMailAlerts - Registration</name>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>Copyright (C) 2009 - 2022 Techjoomla. All rights reserved.</copyright>
+	<creationDate>24th Mar 2022</creationDate>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>3.0.0</version>
+	<description>This is user plug-in will work on after user registration to store default plugin settings for that user in JMailAlerts component.</description>
+	<files>
+		<filename plugin="plug_usr_mailalert">plug_usr_mailalert.php</filename>
+		<filename>index.html</filename>
+	</files>
+</extension>

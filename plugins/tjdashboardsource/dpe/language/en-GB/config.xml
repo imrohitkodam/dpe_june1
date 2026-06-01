@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fieldset label="COM_DPE" name="dpe" addfieldpath="/administrator/components/com_menus/models/fields/modal" >
+		<field name="migrationKey" type="text" label="COM_DPE_MIGRATION_KEY_LBL" description="COM_DPE_MIGRATION_KEY_DESC" />
+		<field name="dateFormat" type="text" default="d-m-Y" label="COM_DPE_DATE_FORMAT_LBL" description="COM_DPE_DATE_FORMAT_DESC" />
+		<field name="dateTimeFormat" type="text" default="d-m-Y H:i" label="COM_DPE_DATE_TIME_FORMAT_LBL" description="COM_DPE_DATE_TIME_FORMAT_DESC" />
+		<field name="tjucmBreachType" type="sql" style="width: 100%;" label="COM_DPE_TJUCM_SELECT_TYPE_BRECH_FIELD"  description="COM_DPE_TJUCM_SELECT_TYPE_BRECH_FIELD" query="SELECT alias, title FROM #__tj_ucm_types where state = 1 ORDER BY title ASC" key_field="alias" value_field="title" required="true" >
+		<option value="">COM_DPE_TJUCM_SELECT_TYPE_BRECH_FIELD</option>
+		</field>
+		<field name="breachStatus" type="sql" style="width: 100%;" label="COM_DPE_TJUCM_BREACH_STATUS_FIELD"  description="COM_DPE_TJUCM_BREACH_STATUS_FIELD" query="SELECT id, title FROM #__tjfields_fields where state = 1 ORDER BY title ASC" key_field="id" value_field="title" required="true" >
+				<option value="">COM_DPE_TJUCM_SELECT_REPORTED_TO_ICO_FIELD</option>
+		</field>
+		<field name="reportedToICO" type="sql" style="width: 100%;" label="COM_DPE_TJUCM_REPORTED_TO_ICO_FIELD"  description="COM_DPE_TJUCM_REPORTED_TO_ICO_FIELD" query="SELECT id, title FROM #__tjfields_fields where state = 1 ORDER BY title ASC" key_field="id" value_field="title" required="true" >
+				<option value="">COM_DPE_TJUCM_SELECT_REPORTED_TO_ICO_FIELD</option>
+		</field>
+		<field name="tjucmsarType" type="sql" style="width: 100%;" label="COM_DPE_TJUCM_SELECT_TYPE_SAR_FIELD"  description="COM_DPE_TJUCM_SELECT_TYPE_SAR_FIELD" query="SELECT alias, title FROM #__tj_ucm_types where state = 1 ORDER BY title ASC" key_field="alias" value_field="title" required="true" >
+				<option value="">COM_DPE_TJUCM_SELECT_TYPE_SAR_FIELD</option>
+		</field>
+		<field name="dateToRespond" type="sql" style="width: 100%;" label="COM_DPE_TJUCM_DATE_TO_RESPOND_FIELD"  description="COM_DPE_TJUCM_DATE_TO_RESPOND_FIELD" query="SELECT id, title FROM #__tjfields_fields where state = 1 ORDER BY title ASC" key_field="id" value_field="title" required="true" >
+				<option value="">COM_DPE_TJUCM_SELECT_REPORTED_TO_ICO_FIELD</option>
+		</field>
+		<field name="requestStatus" type="sql" style="width: 100%;" label="COM_DPE_TJUCM_REQUEST_STATUS_FIELD"  description="COM_DPE_TJUCM_REQUEST_STATUS_FIELD" query="SELECT id, title FROM #__tjfields_fields where state = 1 ORDER BY title ASC" key_field="id" value_field="title" required="true" >
+				<option value="">COM_DPE_TJUCM_SELECT_REPORTED_TO_ICO_FIELD</option>
+		</field>
+		<field name="checklistSchool" type="sql" style="width: 100%;" label="COM_DPE_CHECKLIST_SCHOOL_FIELD"  description="COM_DPE_CHECKLIST_SCHOOL_FIELD" query="SELECT id, title FROM #__tjfields_fields where state = 1 ORDER BY title ASC" key_field="id" value_field="title" required="true" >
+				<option value="">COM_DPE_TJUCM_SELECT_REPORTED_TO_ICO_FIELD</option>
+		</field>
+		<field name="cluster_id" class="cluster-info" type="cluster" required="true" default="" label="COM_DPE_ASSIGNED_SCHOOLS_ROP" description="COM_DPE_ASSIGNED_SCHOOLS_ROP_DESC" addfieldpath="administrator/components/com_tjfields/models/fields" filter="INT"/>
+		<field name="cronSecretKey" type="text" required="true" default="BRESAR7CR" label="COM_DPE_CRON_SECRET_KEY" description="COM_DPE_CRON_SECRET_KEY_DESC" filter="STRING"/>
+
+		<field name="foirequestStatus" type="sql" style="width: 100%;" label="COM_DPE_TJUCM_FOI_REQUEST_STATUS_FIELD"  description="COM_DPE_TJUCM_FOI_REQUEST_STATUS_FIELD_DESC" query="SELECT id, title FROM #__tjfields_fields where state = 1 AND client='com_tjucm.FOIlog' ORDER BY title ASC" key_field="id" value_field="title" required="true" >
+				<option value="">COM_DPE_TJUCM_SELECT_FIELD</option>
+		</field>
+
+		<field name="foiDateToRespond" type="sql" style="width: 100%;" label="COM_DPE_TJUCM_FOI_DATE_TO_RESPOND_FIELD"  description="COM_DPE_TJUCM_FOI_DATE_TO_RESPOND_FIELD_DESC" query="SELECT id, title FROM #__tjfields_fields where state = 1 AND client='com_tjucm.FOIlog' ORDER BY title ASC" key_field="id" value_field="title" required="true" >
+				<option value="">COM_DPE_TJUCM_SELECT_FIELD</option>
+		</field>
+
+		<field name="ropRequestStatus" type="sql" style="width: 100%;" label="COM_DPE_TJUCM_ROP_REQUEST_STATUS"  description="COM_DPE_TJUCM_ROP_REQUEST_STATUS_DESC" query="SELECT id, title FROM #__tjfields_fields where state = 1 AND client='com_tjucm.rop' ORDER BY title ASC" key_field="id" value_field="title" required="true" >
+				<option value="">COM_DPE_TJUCM_SELECT_FIELD</option>
+		</field>
+
+		<field name="ropReviewDate" type="sql" style="width: 100%;" label="COM_DPE_TJUCM_ROP_NEXT_DATE_REVIEW"  description="COM_DPE_TJUCM_ROP_NEXT_DATE_REVIEW_DESC" query="SELECT id, title FROM #__tjfields_fields where state = 1 AND client='com_tjucm.rop' ORDER BY title ASC" key_field="id" value_field="title" required="true" >
+				<option value="">COM_DPE_TJUCM_SELECT_FIELD</option>
+		</field>
+
+		<field name="softwareStatus" type="sql" style="width: 100%;" label="COM_DPE_TJUCM_SOFT_STATUS_FIELD"  description="COM_DPE_TJUCM_SOFT_STATUS_FIELD_DESC" query="SELECT id, title FROM #__tjfields_fields where state = 1 AND client='com_tjucm.software' ORDER BY title ASC" key_field="id" value_field="title" required="true" >
+				<option value="">COM_DPE_TJUCM_SELECT_FIELD</option>
+		</field>
+
+		<field name="hardwareStatus" type="sql" style="width: 100%;" label="COM_DPE_TJUCM_HARD_STATUS_FIELD"  description="COM_DPE_TJUCM_HARD_STATUS_FIELD_DESC" query="SELECT id, title FROM #__tjfields_fields where state = 1 AND client='com_tjucm.ithardware' ORDER BY title ASC" key_field="id" value_field="title" required="true" >
+				<option value="">COM_DPE_TJUCM_SELECT_FIELD</option>
+		</field>
+
+		<field name="ropvendorsStatus" type="sql" style="width: 100%;" label="COM_DPE_TJUCM_VENDOR_STATUS_FIELD"  description="COM_DPE_TJUCM_VENDOR_STATUS_FIELD_DESC" query="SELECT id, title FROM #__tjfields_fields where state = 1 AND client='com_tjucm.ropvendors' ORDER BY title ASC" key_field="id" value_field="title" required="true" >
+				<option value="">COM_DPE_TJUCM_SELECT_FIELD</option>
+		</field>
+		<field name="jobtitle" type="sql" style="width: 100%;" label="COM_DPE_JOBTITLE_STATUS_FIELD"  description="COM_DPE_JOBTITLE_STATUS_FIELD" query="SELECT id, title FROM #__tjfields_fields where state = 1 AND client='com_tjucm.role' ORDER BY title ASC" key_field="id" value_field="title" required="true" >
+				<option value="">COM_DPE_TJUCM_SELECT_FIELD</option>
+		</field>
+		<field name="rsticketstatus" type="sql" style="width: 100%;" label="COM_DPE_RSTICKET_STATUS_FIELD"  description="COM_DPE_RSTICKET_STATUS_FIELD" query="SELECT id, name as title FROM #__rsticketspro_statuses where published = 1 ORDER BY name ASC" key_field="id" value_field="title" required="true" >
+				<option value="">COM_DPE_TJUCM_SELECT_FIELD</option>
+		</field>
+
+		<field name="rsticketLogtype" type="sql" style="width: 100%;" label="COM_DPE_RSTICKET_CHOOSE_LOG"  description="COM_DPE_RSTICKET_CHOOSE_LOG" query="SELECT alias, title FROM #__tj_ucm_types where state = 1 ORDER BY title ASC" key_field="alias" value_field="title" multiple="true" >
+		<option value="">COM_DPE_RSTICKET_CHOOSE_LOG_SELECT</option>
+		</field>
+
+
+		<field name="alsoknownas" type="text" style="width: 100%;" label="COM_DPE_TJUCM_VENDOR_ALSOKNOWN_FIELD"  description="COM_DPE_TJUCM_VENDOR_ALSOKNOWN_FIELD_DESCRIPTION"  >
+		</field>
+
+		<field name="makingtheRounds" type="sql" style="width: 100%;" label="COM_DPE_TJUCM_MAKEROUND_STATUS_FIELD"  description="COM_DPE_TJUCM_MAKEROUND_STATUS_FIELD_DESC" query="SELECT id, title FROM #__tjfields_fields where state = 1 AND client='com_tjucm.monitoringcompliancemakingtherounds' ORDER BY title ASC" key_field="id" value_field="title" required="true" >
+				<option value="">COM_DPE_TJUCM_SELECT_FIELD</option>
+		</field>
+		<field name="riskregister" type="sql" style="width: 100%;" label="COM_DPE_TJUCM_RISKREGISTER_STATUS_FIELD"  description="COM_DPE_TJUCM_RISKREGISTER_STATUS_FIELD" query="SELECT id, title FROM #__tjfields_fields where state = 1 AND client='com_tjucm.riskregister' ORDER BY title ASC" key_field="id" value_field="title" required="true" >
+				<option value="">COM_DPE_TJUCM_SELECT_FIELD</option>
+		</field>
+		<field name="dpialite" type="sql" style="width: 100%;" label="COM_DPE_TJUCM_DPIA_LITE_STATUS_FIELD"  description="COM_DPE_TJUCM_DPIA_LITE_STATUS_FIELD" query="SELECT id, title FROM #__tjfields_fields where state = 1 AND client='com_tjucm.dpialite' ORDER BY title ASC" key_field="id" value_field="title" required="true" >
+				<option value="">COM_DPE_TJUCM_SELECT_FIELD</option>
+		</field>
+		<field
+			name="dashboardlinkDpe"
+			type="modal_menu"
+			label="COM_DPE_DASHBOARD_DPE_URL"
+			description="COM_DPE_DASHBOARD_DPE_URL_DESC"
+			disable="separator,alias,heading,url"
+			select="true"
+			clear="true"
+			>
+			<option value="">JDEFAULT</option>
+		</field>
+
+		<field
+			name="dashboardlink"
+			type="modal_menu"
+			label="COM_DPE_DASHBOARD_URL"
+			description="COM_DPE_DASHBOARD_URL_DESC"
+			disable="separator,alias,heading,url"
+			select="true"
+			clear="true"
+			>
+			<option value="">JDEFAULT</option>
+		</field>
+
+		<field
+			name="trusteeDashboardLink"
+			type="modal_menu"
+			label="COM_DPE_DASHBOARD_TRUSTEE_URL"
+			description="COM_DPE_DASHBOARD_TRUSTEE_URL_DESC"
+			disable="separator,alias,heading,url"
+			select="true"
+			clear="true"
+			>
+			<option value="">JDEFAULT</option>
+		</field>
+
+		<field
+			name="staffDashboardLink"
+			type="modal_menu"
+			label="COM_DPE_DASHBOARD_STAFF_URL"
+			description="COM_DPE_DASHBOARD_STAFF_URL_DESC"
+			disable="separator,alias,heading,url"
+			select="true"
+			clear="true"
+			>
+			<option value="">JDEFAULT</option>
+		</field>
+
+		<field
+			name="checklistlibrarylink"
+			type="modal_menu"
+			label="COM_DPE_CHECKLIST_LIBRARY_URL"
+			description="COM_DPE_CHECKLIST_LIBRARY_URL_DESC"
+			disable="separator,alias,heading,url"
+			select="true"
+			clear="true"
+			>
+			<option value="">JDEFAULT</option>
+		</field>
+
+		<field
+			name="checklistlink"
+			type="modal_menu"
+			label="COM_DPE_CHECKLIST_URL"
+			description="COM_DPE_CHECKLIST_URL_DESC"
+			disable="separator,alias,heading,url"
+			select="true"
+			clear="true"
+			>
+			<option value="">JDEFAULT</option>
+		</field>
+
+		<field
+			name="courselistlink"
+			type="modal_menu"
+			label="COM_DPE_COURSE_LIST_URL"
+			description="COM_DPE_COURSE_LIST_URL_DESC"
+			disable="separator,alias,heading,url"
+			select="true"
+			clear="true"
+			>
+			<option value="">JDEFAULT</option>
+		</field>
+
+		<field name="agencyFilterField"
+			type="sql"
+			label="COM_DPE_MULTIAGENCY_FILTER_FIELD"
+			description="COM_DPE_MULTIAGENCY_FILTER_FIELD_DESC"
+			query="SELECT id, title FROM #__fields where context='com_multiagency.multiagency' AND state = 1 ORDER BY id DESC"
+			key_field="id"
+			value_field="title"
+			/>
+
+		<field name="agencyFilterValue"
+			type="agencyFilter"
+			label="COM_DPE_MULTIAGENCY_FILTER_FIELD_DEFAULT_VALUE"
+			description="COM_DPE_MULTIAGENCY_FILTER_FIELD_DEFAULT_VALUE_DESC"
+			addfieldpath="/components/com_dpe/models/fields"
+			/>
+
+		<field name="platformField"
+			type="sql"
+			label="COM_DPE_MULTIAGENCY_PLATFORM_FIELD"
+			description="COM_DPE_MULTIAGENCY_PLATFORM_FIELD_DESC"
+			query="SELECT id, title FROM #__fields where context='com_multiagency.multiagency' AND state = 1 ORDER BY id DESC"
+			key_field="id"
+			value_field="title"
+			/>
+
+		<field name="platformShortValues"
+			type="text"
+			label="COM_DPE_MULTIAGENCY_PLATFORM_VALUE_SHORT_FORM"
+			description="COM_DPE_MULTIAGENCY_PLATFORM_VALUE_SHORT_FORM_DESC"
+			/>
+
+		<field name="allTools"
+			type="text"
+			label="COM_DPE_SLA_ALL_TOOLS"
+			description="COM_DPE_SLA_ALL_TOOLS_DESC"
+			/>
+		<field name="dpe_role_ids"
+			type="text"
+			label="COM_DPE_CORE_ROLE_TOOLS"
+			description=""
+			/>
+		<field name="additional_role"
+			type="text"
+			label="COM_DPE_ADDITIONAL_ROLE"
+			description="COM_DPE_ADDITIONAL_ROLE_DESC"
+			/>
+		<field name="related_roles"
+			type="text"
+			label="COM_DPE_RELATED_ROLE"
+			description="COM_DPE_RELATED_ROLE_DESC"
+			/>
+		<field name="allowed_roles"
+			type="text"
+			label="COM_DPE_ALLOWED_ROLE"
+			description="COM_DPE_ALLOWED_ROLE_DESC"
+			/>
+
+		<field name="tools_menu_to_hide"
+			type="textarea"
+			label="COM_DPE_TOOLS_MENU_CONFIG"
+			description="COM_DPE_TOOLS_MENU_CONFIG_DESC"
+			/>
+
+		<field name="loginwithoutpassword"
+			type="textarea"
+			default=""
+			label="COM_DPE_LOGIN_WITHOUT_PASSWORD_ARTICLE_AND_MENU"
+			description="COM_DPE_LOGIN_WITHOUT_PASSWORD_ARTICLE_AND_MENU_DESC"
+			rows="3"
+			cols="3"
+			/>
+		<field name="tjqueue_todo_limit"
+			type="number"
+			label="COM_DPE_TJQUEUE_LIMIT_FOR_TODO"
+			description="COM_DPE_TJQUEUE_LIMIT_FOR_TODO"
+			default="10"
+			/>
+
+		<field name="allowed_character_limit"
+			type="text"
+			label="COM_DPE_ALLOWED_CHARACTERLIMIT_IN_BLOG"
+			description="COM_DPE_ALLOWED_CHARACTERLIMIT_IN_BLOG"
+			/>
+		<field
+			name="guest_usergroup"
+			type="usergrouplist"
+			label="COM_DPE_SELECT_STAFF_FOR_TICKET"
+			default="1"
+			checksuperusergroup="1"
+		/>
+		<field
+			name="admin_usergroup"
+			type="usergrouplist"
+			label="COM_DPE_SELECT_ADMIN_FOR_TICKET"
+			default="1"
+			checksuperusergroup="1"
+		/>
+
+		<field name="sarrequestStatus" type="sql" style="width: 100%;" label="COM_DPE_TJUCM_SAR_REQUEST_STATUS_FIELD"  description="COM_DPE_TJUCM_SAR_REQUEST_STATUS_FIELD" query="SELECT id, title FROM #__tjfields_fields where state = 1 AND client='com_tjucm.sarlog' ORDER BY title ASC" key_field="id" value_field="title" required="true" >
+				<option value="">COM_DPE_TJUCM_SELECT_FIELD</option>
+		</field>
+
+		<field name="enableUserOnboard" type="radio" default="1"
+			   label="COM_DPE_ENABLE_USER_ONBOARD"
+			   description="COM_DPE_ENABLE_USER_ONBOARD"
+			   class="btn-group btn-group-yesno">
+			<option value="0">JNo</option>
+			<option value="1">JYes</option>
+		</field>
+	</fieldset>
+	<fieldset name="SLA_DPE_ADMIN" >
+		<field 
+			name="sladpeadmin"
+			type="sql"
+			label="Select Dpe Admin"
+			query="SELECT u.id as id, u.name as title
+			FROM #__users AS u
+			LEFT JOIN #__user_usergroup_map AS map ON u.id = map.user_id
+			WHERE map.group_id = (SELECT id from z467w_usergroups where title='DPE Admin') AND u.block = 0
+			GROUP BY u.id
+			ORDER BY u.name ASC" 
+			key_field="id"
+			value_field="title"
+			multiple='true'
+			/>
+
+	</fieldset>
+
+	<fieldset name="Visualisation" >
+	<field
+		name="box_color"
+		type="subform"
+		label="COM_DPE_BOX_COLOR_FORMAT_LBL"
+		description="COM_DPE_BOX_COLOR_FORMAT_LBL"
+		multiple="true"
+		min="3"
+		max="6"
+		>
+		<form>
+			<field
+				name='box_color_code'
+				type='color'
+				label='COM_DPE_BOX_COLOR_FORMAT_LBL'
+				/>
+			<field
+				name='box_color_field_name_value'
+				type='text'
+				label='COM_DPE_BOX_COLOR_FIELD_NAME_LBL'
+				hint='com_tjucm_ropdataflow_whereisthedataprocessed'
+				cols='40'
+				rows='8'
+				readonly='1'
+				/>
+			<field
+				name='box_color_field_value'
+				type='text'
+				label='COM_DPE_BOX_COLOR_FIELD_VALUE_LBL'
+				hint='In School'
+				cols='40'
+				rows='8'
+				/>
+		</form>
+	</field>
+	<field
+		name='border_color'
+		type='subform'
+		label='COM_DPE_BORDER_COLOR_FORMAT_LBL'
+		description='COM_DPE_BORDER_COLOR_FORMAT_LBL'
+		multiple='true'
+		min='2'
+		max='6'
+		>
+		<form>
+			<field
+				name='border_color_code'
+				type='color'
+				label='COM_DPE_BORDER_COLOR_FORMAT_LBL'
+				/>
+			<field
+				name='border_color_field_name_value'
+				type='text'
+				label='COM_DPE_BOX_COLOR_FIELD_NAME_LBL'
+				hint='com_tjucm_ropdataflow_systemsecurity'
+				cols='40'
+				rows='8'
+				readonly='1'
+				/>
+			<field
+				name='border_color_field_value'
+				type='text'
+				label='COM_DPE_BOX_COLOR_FIELD_VALUE_LBL'
+				hint='None/unknown'
+				cols='40'
+				rows='8'
+				/>
+		</form>
+	</field>
+	<field
+		name='line_color'
+		type='subform'
+		label='COM_DPE_LINE_COLOR_FORMAT_LBL'
+		description='COM_DPE_LINE_COLOR_FORMAT_LBL'
+		multiple='true'
+		min='2'
+		max='6'
+		>
+		<form>
+			<field
+				name='line_color_code'
+				type='color'
+				label='COM_DPE_LINE_COLOR_FORMAT_LBL'
+				/>
+			<field
+				name='line_color_field_name_value'
+				type='text'
+				label='COM_DPE_BOX_COLOR_FIELD_NAME_LBL'
+				hint='com_tjucm_ropdataflow_systemsecurity'
+				cols='40'
+				rows='8'
+				readonly='1'
+				/>
+			<field
+				name='line_color_field_value'
+				type='text'
+				label='COM_DPE_BOX_COLOR_FIELD_VALUE_LBL'
+				hint='None/unknown'
+				cols='40'
+				rows='8'
+				/>
+		</form>
+	</field>
+	<field name="visualisationFields"
+		type="textarea"
+		default=""
+		label="COM_DPE_VISULIZATION_FIELDS_CONFIG"
+		description="COM_DPE_VISULIZATION_FIELDS_CONFIG"
+		rows="10"
+		cols="10" />
+
+    </fieldset>
+
+	<fieldset name="Cron-setting" label="COM_DPE_CRON_LBL">
+		<field name="private_key_storage_cron" default="abcd1234"
+			type="text" label="COM_DPE_PRIVATE_KEY_CRON" description="COM_DPE_PRIVATE_KEY_CRON_DESC"
+		/>
+		<field name="cron_limit" default="5"
+			type="number" label="COM_DPE_LICENCE_CRON_LIMIT" description="COM_DPE_LICENCE_CRON_LIMIT_DESC"
+		/>
+    </fieldset>
+	<fieldset name="staff-dashboard"
+			  label="COM_DPE_STAFF_DASHBOARD"
+			  >
+		<field name="showAssignDocLimit" type="number" label="COM_DPE_STAFF_DASHBOARD_DOC_LIMIT" description="COM_DPE_STAFF_DASHBOARD_DOC_LIMIT_DESC" default="5"/>
+		<field name="showLatestCourseLimit" type="number" label="COM_DPE_STAFF_DASHBOARD_LATEST_COURSE_LIMIT" description="COM_DPE_STAFF_DASHBOARD_LATEST_COURSE_LIMIT_DESC" default="5"/>
+		<field name="showEnrolledLimit" type="number" label="COM_DPE_STAFF_DASHBOARD_ENROLLED_COURSE_LIMIT" description="COM_DPE_STAFF_DASHBOARD_ENROLLED_COURSE_LIMIT_DESC" default="5"/>
+		<field name="showCertificateLimit" type="number" label="COM_DPE_STAFF_DASHBOARD_CERTIFICATE_LIMIT" description="COM_DPE_STAFF_DASHBOARD_CERTIFICATE_LIMIT_DESC" default="5"/>
+		<field name="showsSarLogAssignedLimit" type="number" label="COM_DPE_STAFF_DASHBOARD_SAR_ASSIGNED_RECORD_LIMIT" description="COM_DPE_STAFF_DASHBOARD_SAR_ASSIGNED_RECORD_LIMIT_DESC" default="3"/>
+		<field name="showBreachAssignedLimit" type="number" label="COM_DPE_STAFF_DASHBOARD_BREACH_ASSIGNED_RECORD_LIMIT" description="COM_DPE_STAFF_DASHBOARD_BREACH_ASSIGNED_RECORD_LIMIT_DESC" default="3"/>
+		<field name="showFoiAssignedLimit" type="number" label="COM_DPE_STAFF_DASHBOARD_FOI_ASSIGNED_RECORD_LIMIT" description="COM_DPE_STAFF_DASHBOARD_FOI_ASSIGNED_RECORD_LIMIT_DESC" default="3"/>
+		<field name="showTodosLimit" type="number" label="COM_DPE_STAFF_DASHBOARD_TODOS_LIMIT" description="COM_DPE_STAFF_DASHBOARD_TODOS_LIMIT_DESC" default="3"/>
+		<field name="breachTitleField" type="sql" label="COM_DPE_TJUCM_BREACH_TITLE_FIELD"  description="COM_DPE_TJUCM_BREACH_TITLE_FIELD_DESC" query="SELECT id, title FROM #__tjfields_fields where state = 1 AND client='com_tjucm.breachlog' ORDER BY title ASC" key_field="id" value_field="title" required="true" >
+				<option value="">COM_DPE_TJUCM_SELECT_REPORTED_TO_ICO_FIELD</option>
+		</field>
+		<field name="sarTitleField" type="sql" label="COM_DPE_TJUCM_SAR_TITLE_FIELD"  description="COM_DPE_TJUCM_SAR_TITLE_FIELD_DESC" query="SELECT id, title FROM #__tjfields_fields where state = 1 AND client='com_tjucm.sarlog' ORDER BY title ASC" key_field="id" value_field="title" required="true" >
+				<option value="">COM_DPE_TJUCM_SELECT_REPORTED_TO_ICO_FIELD</option>
+		</field>
+		<field name="foiTitleField" type="sql" label="COM_DPE_TJUCM_FOI_TITLE_FIELD"  description="COM_DPE_TJUCM_FOI_TITLE_FIELD_DESC" query="SELECT id, title FROM #__tjfields_fields where state = 1 AND client='com_tjucm.FOIlog' ORDER BY title ASC" key_field="id" value_field="title" required="true" >
+				<option value="">COM_DPE_TJUCM_SELECT_REPORTED_TO_ICO_FIELD</option>
+		</field>
+		<field name="courseEnrollReportId" type="number" label="COM_DPE_COURSE_ENROLLMENT_REPORT_ID" description="COM_DPE_COURSE_ENROLLMENT_REPORT_ID_DESC" default="0"/>
+		<field name="elearningReports" type="sql" label="COM_DPE_ELEARNING_COURSES" description="COM_DPE_ELEARNING_COURSES_DESC" query="SELECT id, title FROM #__tj_reports where client IN ('com_tjlms','com_sla') AND plugin LIKE '%dpe%' ORDER BY title ASC" key_field="id" value_field="title" required="true" multiple="true"/>
+	</fieldset>
+	<fieldset name="coredata" label="Core Data (MasterList)" >
+		<field name="coredatatitlefields" type="textarea" label="COM_DPE_CORE_DATA_TITLE_FIELDS_FOR_COPY_LBL" description="COM_DPE_CORE_DATA_TITLE_FIELDS_FOR_COPY_LBL" rows="8" cols="14" />
+		<field name="coredataReverseUcmTypes" type="textarea" label="COM_DPE_CORE_DATA_REVERSE_UCM_TYPE_LBL" description="COM_DPE_CORE_DATA_REVERSE_UCM_TYPE_DESC" rows="8" cols="14" />
+	</fieldset>
+	<fieldset name="migration"
+			  label="COM_DPE_MIGRATION_LBL">
+		<field name="singleTool"
+			type="text"
+			label="COM_DPE_SLA_SINGLE_TOOL"
+			description="COM_DPE_SLA_SINGLE_TOOL_DESC"
+			/>
+		<field name="json_format"
+			type="note"
+			label="COM_DPE_SLA_SINGLE_TOOL_JSON_FORMAT"
+			/>
+	</fieldset>
+	<fieldset name="notification_manager"
+			  label="COM_DPE_NOTIFICATION_MANAGER_LBL">
+		<field name="compliance_list"
+			type="number"
+			label="COM_DPE_COMPLIANCE_LIST"
+			description="COM_DPE_COMPLIANCE_LIST_DESC"
+			/>
+		<field name="ticket_list"
+			type="number"
+			label="COM_DPE_TICKET_LIST"
+			description="COM_DPE_TICKET_LIST_DESC"
+			/>
+			<field name="dayForOrange"
+			type="number"
+			label="COM_DPE_DAY_FOR_ORANGE"
+			description="COM_DPE_DAY_FOR_ORANGE_DESC"
+			/>
+			<field name="dayForGreen"
+			type="number"
+			label="COM_DPE_DAY_FOR_GREEN"
+			description="COM_DPE_DAY_FOR_GREEN_DESC"
+			/>
+	</fieldset>
+	<fieldset name="permissions"
+			  label="JCONFIG_PERMISSIONS_LABEL"
+			  description="JCONFIG_PERMISSIONS_DESC">
+		<field name="rules"
+			   type="rules"
+			   label="JCONFIG_PERMISSIONS_LABEL"
+			   class="inputbox"
+			   validate="rules"
+			   filter="rules"
+			   component="com_dpe"
+			   section="component" />
+	</fieldset>
+	<fieldset name="SupportedTools" >
+		<field name="tjucmrelatedtools"
+			type="textarea"
+			default=""
+			label="COM_DPE_CONFIG_TJUCMRELATEDTOOLS_DATA"
+			description="COM_DPE_CONFIG_TJUCMRELATEDTOOLS_DATA_DESC"
+			rows="5"
+			cols="20"
+			/>
+
+	</fieldset>
+</config>

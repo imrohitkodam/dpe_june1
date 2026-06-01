@@ -1,0 +1,847 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:ror="http://rorweb.com/0.1/">
+<channel>
+	<title>ROR Sitemap for https://dataprotection.education/</title>
+	<description>ROR Sitemap for https://dataprotection.education/</description>
+	<link>https://dataprotection.education/</link>
+	<item>
+		<title>ROR Sitemap for https://dataprotection.education/</title>
+		<link>https://dataprotection.education/</link>
+		<ror:about>sitemap</ror:about>
+		<ror:type>SiteMap</ror:type>
+	</item>
+	<item>
+		<link>https://dataprotection.education/</link>
+		<title>Home</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>0</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/login</link>
+		<title>Knowledge Bank Login</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>1</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/welcome</link>
+		<title>Welcome</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>1</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/how-we-work</link>
+		<title>How we work</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>1</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/what-we-do</link>
+		<title>What we do</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>1</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/what-we-do/data-protection-officer</link>
+		<title>Data Protection Officer</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>1</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/what-we-do/knowledge-bank</link>
+		<title>DPE Knowledge Bank</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>1</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/what-we-do/data-protection-audits</link>
+		<title>Data Protection Audits</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>1</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/what-we-do/training-and-consultancy</link>
+		<title>Training and consultancy</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>1</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/what-we-do/cctv-redaction</link>
+		<title>CCTV Redaction</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>1</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/what-we-do/dpo-support</link>
+		<title>DPO Support</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>1</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/about-us</link>
+		<title>About Data Protection Education</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>1</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/partners</link>
+		<title>Partners</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>1</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/news</link>
+		<title>News</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>1</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/contact-us</link>
+		<title>Contact Us</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>1</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/terms-and-conditions</link>
+		<title>Terms and Conditions</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>1</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/privacy-notice</link>
+		<title>Privacy Notice</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>1</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/cookie-policy</link>
+		<title>Cookie Policy</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>1</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/acceptable-use-policy</link>
+		<title>Acceptable Use Policy</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>1</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/login?view=reset</link>
+		<title>Knowledge Bank Login</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/login?view=remind</link>
+		<title>Knowledge Bank Login</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/partners</link>
+		<title>Partners</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/news/83-blog/best-practice-updates/178-brexit-what-we-know-so-far</link>
+		<title>Brexit...what we know so far.</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/component/seoglossary/1-data-protection-definitions/processing</link>
+		<title>404 - Error: 404</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/component/seoglossary/1-data-protection-definitions/transfer</link>
+		<title>404 - Error: 404</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/component/seoglossary/1-data-protection-definitions/contractual-clauses</link>
+		<title>404 - Error: 404</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/component/seoglossary/1-data-protection-definitions/privacy</link>
+		<title>404 - Error: 404</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/component/seoglossary/1-data-protection-definitions/processor</link>
+		<title>404 - Error: 404</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/component/seoglossary/1-data-protection-definitions/data-processor</link>
+		<title>404 - Error: 404</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/component/seoglossary/1-data-protection-definitions/controller</link>
+		<title>404 - Error: 404</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/component/seoglossary/1-data-protection-education-definitions/controller</link>
+		<title>Data Protection Education Definitions - Controller</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/component/seoglossary/1-data-protection-education-definitions/personal-data</link>
+		<title>Data Protection Education Definitions - Personal data</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/component/seoglossary/1-data-protection-definitions/data-subject</link>
+		<title>404 - Error: 404</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/news/147-blog/news/public-updates/177-do-you-need-help-getting-focused</link>
+		<title>Do you need help getting focused?</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/news/83-blog/best-practice-updates/176-sar-er-foi</link>
+		<title>SAR? ER? FOI?</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/component/seoglossary/1-data-protection-definitions/encryption</link>
+		<title>404 - Error: 404</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/component/seoglossary/1-data-protection-definitions/data-breach</link>
+		<title>404 - Error: 404</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/terms-and-conditions/92-policies</link>
+		<title>Policies</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/index.php/privacy-notice</link>
+		<title>Privacy Notice</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/index.php/acceptable-use-policy</link>
+		<title>Acceptable Use Policy</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/index.php/cookie-policy</link>
+		<title>Cookie Policy</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/component/seoglossary/1-data-protection-definitions/cookie</link>
+		<title>404 - Error: 404</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/component/seoglossary/1-data-protection-definitions/third-party</link>
+		<title>404 - Error: 404</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/component/seoglossary/1-data-protection-definitions/confidentiality</link>
+		<title>404 - Error: 404</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/component/seoglossary/1-data-protection-definitions/accuracy</link>
+		<title>404 - Error: 404</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/privacy-notice/92-policies</link>
+		<title>Policies</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/component/seoglossary/1-data-protection-definitions/privacy-notice</link>
+		<title>404 - Error: 404</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/index.php/terms-and-conditions</link>
+		<title>Terms and Conditions</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/component/seoglossary/1-data-protection-definitions/right-of-access</link>
+		<title>404 - Error: 404</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/cookie-policy/92-policies</link>
+		<title>Policies</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/acceptable-use-policy/92-policies</link>
+		<title>Policies</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/freebies/child-friendly-privacy-notices</link>
+		<title>Child-friendly privacy notices for schools</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/freebies/data-protection-competency-framework</link>
+		<title>DPE Data Protection Competency Framework</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/about-us/work-for-us</link>
+		<title>Work for us</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/news/com-coupon</link>
+		<title>404 - Error: 404</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/freebies/free-data-protection-inset-training</link>
+		<title>404 - Error: 404</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/all-news/92-policies</link>
+		<title>Policies</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/component/seoglossary/1-data-protection-education-definitions/personal-data</link>
+		<title>Data Protection Education Definitions - Personal data</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/component/seoglossary/1-data-protection-education-definitions/consent</link>
+		<title>Data Protection Education Definitions - Consent</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/component/seoglossary/1-data-protection-education-definitions/processing</link>
+		<title>Data Protection Education Definitions - Processing</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/component/seoglossary/1-data-protection-education-definitions/privacy</link>
+		<title>Data Protection Education Definitions - Privacy</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/component/seoglossary/1-data-protection-education-definitions/processor</link>
+		<title>Data Protection Education Definitions - Processor</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/component/seoglossary/1-data-protection-education-definitions/cookie</link>
+		<title>Data Protection Education Definitions - Cookie</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/component/seoglossary/1-data-protection-education-definitions/third-party</link>
+		<title>Data Protection Education Definitions - Third Party</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/component/seoglossary/1-data-protection-education-definitions/confidentiality</link>
+		<title>Data Protection Education Definitions - Confidentiality</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/component/seoglossary/1-data-protection-education-definitions/accuracy</link>
+		<title>Data Protection Education Definitions - Accuracy</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/best-practice-library/best-practice/data-migration</link>
+		<title>Data Migration</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/best-practice-library/best-practice/frequently-asked-questions</link>
+		<title>Frequently Asked Questions</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/best-practice-library/best-practice/leadership-and-oversight</link>
+		<title>Leadership and Oversight</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/best-practice-library/best-practice/accountability-framework</link>
+		<title>Accountability Framework</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/best-practice-library/best-practice/policies-and-procedures</link>
+		<title>Policies and Procedures</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/best-practice-library/best-practice/training-and-awareness</link>
+		<title>Training and Awareness</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/best-practice-library/best-practice/individual-s-rights</link>
+		<title>Individual's Rights</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/best-practice-library/best-practice/contracts-and-data-sharing</link>
+		<title>Contracts and Data Sharing</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/best-practice-library/best-practice/risks-and-dpia-s</link>
+		<title>Risks and DPIA's</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/best-practice-library/best-practice/breach-response-and-monitoring</link>
+		<title>Breach Response and Monitoring</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/best-practice-library/best-practice/data-retention-destruction</link>
+		<title>Data Retention &amp; Destruction</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/news/166-information-security/243-are-you-ready-for-a-data-breach</link>
+		<title>Are you ready for a Data Breach?</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/component/seoglossary/1-data-protection-education-definitions/data-breach</link>
+		<title>Data Protection Education Definitions - Data Breach</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/news/166-information-security/241-information-security-basics-explaining-cookies</link>
+		<title>Information Security Basics: What are Cookies?</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/component/seoglossary/1-data-protection-education-definitions/information-security</link>
+		<title>Data Protection Education Definitions - Information Security</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/news/166-information-security/240-weekly-cyber-update-february-8th</link>
+		<title>Weekly Cyber Update February 8th</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/news/239-privacy-in-the-metaverse</link>
+		<title>Privacy in the Metaverse</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/news/166-information-security/238-weekly-cyber-update-fraud-ransomware-and-cyber-essentials</link>
+		<title>Weekly Cyber Update: Fraud, Ransomware and Cyber Essentials</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/news/235-data-privacy-day</link>
+		<title>Data Privacy Day</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/news/167-data-retention-destruction/222-how-long-should-you-keep-personal-data-for</link>
+		<title>How Long Should You Keep Personal Data For?</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/news/166-information-security/203-the-education-sector-now-at-highest-risk-of-cyber-attacks</link>
+		<title>The Education sector now at highest risk of cyber attacks</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/news/166-information-security/220-assessing-the-state-of-your-data-security</link>
+		<title>How to Assess your Data Security</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/news/147-public-updates/219-eu-s-data-protection-advisor-latest-to-call-ban-on-tracking-ads</link>
+		<title>EU’s Data Protection Advisor latest to call ban on tracking ads</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/news/165-using-the-knowledge-bank/218-using-the-knowledge-bank</link>
+		<title>Using the Knowledge Bank</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/news/217-lloyd-v-google-awarding-losses-without-proving-damage</link>
+		<title>Lloyd v Google: A Landmark Case</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/news/164-biometrics/216-schools-blocked-from-using-facial-recognition-systems</link>
+		<title>Schools Blocked from Using Facial Recognition Systems</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/news/79-blog/215-our-opinion-data-a-new-direction</link>
+		<title>Our Opinion. Data: A New Direction</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/news/214-facebook-breaks-a-habit-of-a-lifetime-by-giving-up-user-data</link>
+		<title>Facebook Deletes User Data</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/news/213-the-government-s-data-a-new-direction</link>
+		<title>The Government's 'Data: a New Direction'</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/news/174-sharing-this-year-s-nativity-play-online</link>
+		<title>Sharing this year’s Nativity play online</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/news/212-how-facebook-knows-where-you-are-without-knowing-where-you-are</link>
+		<title>How Facebook Knows Where You Are Without Knowing Where You Are</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/news/166-information-security/211-the-importance-of-schools-staying-protected-against-ransomware</link>
+		<title>The Importance of Schools Staying Protected Against Ransomware</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/news/157-articles/204-a-dpo-s-role</link>
+		<title>A Data Protection Officer's Role</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/component/seoglossary/1-data-protection-education-definitions/data-protection-officer</link>
+		<title>Data Protection Education Definitions - Data Protection Officer</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/news/158-weekly-news-updates/210-weekly-news-update-oct-20th</link>
+		<title>October 20th</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/news/208-the-ico-s-new-data-sharing-code</link>
+		<title>The ICO's New Data Sharing Code</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/component/seoglossary/1-data-protection-education-definitions/ico</link>
+		<title>Data Protection Education Definitions - ICO</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/news/81-blog/data-breaches/207-how-to-handle-a-data-breach</link>
+		<title>How to Handle a Data Breach</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/news/205-weekly-news-update</link>
+		<title>Apple's New Privacy Focused Software: News Update October 15th 2021</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/news/202-the-flow-of-data-post-brexit</link>
+		<title>The Flow of Data Post Brexit</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/news/147-public-updates/201-the-children-s-code</link>
+		<title>The Children's Code</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/news/166-information-security/188-cyber-attacks</link>
+		<title>Cyber Attacks</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/news/187-brexit-update-adequacy</link>
+		<title>Brexit update - Adequacy</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/news/184-brexity-update</link>
+		<title>Brexit update</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/news/147-public-updates/177-do-you-need-help-getting-focused</link>
+		<title>Do you need help getting focused?</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/news/81-blog/data-breaches/149-morrisons-and-vicarious-liability</link>
+		<title>Morrisons and Vicarious Liability</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/component/seoglossary/1-data-protection-education-definitions/privacy-notice</link>
+		<title>Data Protection Education Definitions - Privacy Notice</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/component/seoglossary/1-data-protection-education-definitions/data-subject</link>
+		<title>Data Protection Education Definitions - Data Subject</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/component/seoglossary/1-data-protection-education-definitions/controller</link>
+		<title>Data Protection Education Definitions - Controller</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/component/seoglossary/1-data-protection-education-definitions/opt-in</link>
+		<title>Data Protection Education Definitions - Opt-In</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/component/seoglossary/1-data-protection-education-definitions/contractual-clauses</link>
+		<title>Data Protection Education Definitions - Contractual Clauses</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/component/seoglossary/1-data-protection-education-definitions/transfer</link>
+		<title>Data Protection Education Definitions - Transfer</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+	<item>
+		<link>https://dataprotection.education/component/seoglossary/1-data-protection-education-definitions/right-of-access</link>
+		<title>Data Protection Education Definitions - Right of Access</title>
+		<ror:updatePeriod>weekly</ror:updatePeriod>
+		<ror:sortOrder>2</ror:sortOrder>
+		<ror:resourceOf>sitemap</ror:resourceOf>
+	</item>
+</channel>
+</rss>

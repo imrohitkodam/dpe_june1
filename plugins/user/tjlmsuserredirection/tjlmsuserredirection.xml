@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" method="upgrade" type="plugin" group="user">
+	<name>PLG_USER_TJLMSUSERREDIRECTION</name>
+	<author>Techjoomla</author>
+	<creationDate>13th Jul 2023</creationDate>
+	<copyright>Copyright (C) 2014 - 2023 Techjoomla. All rights reserved.</copyright>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>4.0.5</version>
+	<description>PLG_TJLMS_USERREDIRECT_DESC</description>
+	<files>
+		<filename plugin="tjlmsuserredirection">tjlmsuserredirection.php</filename>
+	</files>
+	<languages folder="language">
+			<language tag="en-GB">en-GB/en-GB.plg_user_tjlmsuserredirection.ini</language>
+			<language tag="en-GB">en-GB/en-GB.plg_user_tjlmsuserredirection.sys.ini</language>
+  	</languages>
+  	<config name="params">
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="admin_redirect_to_dashboard" type="radio" default="0"
+					label="PLG_TJLMS_USER_REDIRECT_ADMIN_REDIRECT" description="PLG_TJLMS_USER_REDIRECT_ADMIN_REDIRECT_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field name="user_redirect_to_dashboard" type="radio" default="0"
+					label="PLG_TJLMS_USER_REDIRECT_REDIRECT" description="PLG_TJLMS_USER_REDIRECT_REDIRECT_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+		</fields>
+
+	</config>
+</extension>
+

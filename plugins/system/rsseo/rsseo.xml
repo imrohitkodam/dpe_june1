@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+	<name>plg_system_rsseo</name>
+	<author>RSJoomla!</author>
+	<creationDate>June 2012</creationDate>
+	<license>GNU General Public License</license>
+	<authorEmail>supporttickets@rsjoomla.com</authorEmail>
+	<authorUrl>www.rsjoomla.com</authorUrl>
+	<version>1.5</version>
+	<description>RSSEO_SYSTEM_PLUGIN_DESC</description>
+	<files>
+		<filename plugin="rsseo">rsseo.php</filename>
+		<filename>index.html</filename>
+		<folder>helpers</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_system_rsseo.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_system_rsseo.sys.ini</language>
+	</languages>
+	
+	<updateservers>
+		<server type="extension" priority="1" name="RSSeo! - System plugin">https://www.rsjoomla.com/updates/com_rsseo/Other/plg_sys_rsseo.xml</server>
+	</updateservers>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="frontend_seo" type="radio" class="btn-group btn-group-yesno" default="0" label="RSSEO_ENABLE_FRONTEND_SEO" description="RSSEO_ENABLE_FRONTEND_SEO_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field name="frontend_seo_groups" type="usergrouplist" multiple="multiple" default="" label="RSSEO_ENABLE_FRONTEND_SEO_GROUPS" description="RSSEO_ENABLE_FRONTEND_SEO_GROUPS_DESC" />
+				
+				<field name="generator" type="radio" class="btn-group btn-group-yesno" default="0" label="RSSEO_REMOVE_GENERATOR_LINK" description="RSSEO_REMOVE_GENERATOR_LINK_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field name="cookie_accept" type="radio" class="btn-group btn-group-yesno" default="0" label="RSSEO_ENABLE_COOKIE_ACCEPT" description="RSSEO_ENABLE_COOKIE_ACCEPT_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="cookie_info" type="text" default="" size="30" label="RSSEO_COOKIE_INFO_URL" description="RSSEO_COOKIE_INFO_URL_DESC" />
+				<field name="cookie_position" type="list" default="down" label="RSSEO_ENABLE_COOKIE_ACCEPT_POSITION" description="RSSEO_ENABLE_COOKIE_ACCEPT_POSITION_DESC">
+					<option value="up">RSSEO_ENABLE_COOKIE_ACCEPT_POSITION_UP</option>
+					<option value="down">RSSEO_ENABLE_COOKIE_ACCEPT_POSITION_DOWN</option>
+				</field>
+				
+				<field name="spacer4" type="spacer" class="text" label="RSSEO_CANONICALIZATION" />
+				<field name="enablecan" type="radio" class="btn-group btn-group-yesno" default="0" label="RSSEO_ENABLE_CANONICALIZATION" description="RSSEO_ENABLE_CANONICALIZATION_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="domain" type="text" default="" size="30" label="RSSEO_DOMAIN_NAME" description="RSSEO_DOMAIN_NAME_DESC" />
+			</fieldset>
+			
+			<fieldset name="verification">
+				<field name="spacer1" type="spacer" class="text" label="RSSEO_GOOGLE_SITEMAP_VERIFICATION" />
+				<field name="enable" type="radio" class="btn-group btn-group-yesno" default="0" label="RSSEO_ENABLE_GOOGLE_SITEMAP_VERIFICATION">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="type" type="radio" class="btn-group" default="google-site-verification" label="RSSEO_VERIFICATION_NAME" description="RSSEO_VERIFICATION_NAME">
+					<option value="google-site-verification">google-site-verification</option>
+					<option value="verify-v1">verify-v1</option>
+				</field>
+				<field name="content" type="text" default="" size="70" label="RSSEO_VERIFICATION_GOOGLE_CONTENT" description="RSSEO_VERIFICATION_GOOGLE_CONTENT_DESC" />
+				<field name="spacer2" type="spacer" class="text" label="RSSEO_YANDEX_SITEMAP_VERIFICATION" />
+				<field name="enabley" type="radio" class="btn-group btn-group-yesno" default="0" label="RSSEO_ENABLE_YANDEX_SITEMAP_VERIFICATION">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="contenty" type="text" default="" size="70" label="RSSEO_VERIFICATION_YANDEX_CONTENT" description="RSSEO_VERIFICATION_YANDEX_CONTENT_DESC" />
+				<field name="spacer3" type="spacer" class="text" label="RSSEO_BING_SITEMAP_VERIFICATION" />
+				<field name="enableb" type="radio" class="btn-group btn-group-yesno" default="0" label="RSSEO_ENABLE_BING_SITEMAP_VERIFICATION">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="contentb" type="text" default="" size="70" label="RSSEO_VERIFICATION_BING_CONTENT" description="RSSEO_VERIFICATION_BING_CONTENT_DESC" />
+			</fieldset>
+			
+			<fieldset name="optimizations" label="RSSEO_OPTIMIZATIONS">
+				<field name="minify_js" class="btn-group btn-group-yesno" type="radio" default="0" label="RSSEO_MINIFY_JS" description="RSSEO_MINIFY_JS_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="merge_all_js" class="btn-group btn-group-yesno" type="radio" default="0" label="RSSEO_MERGE_ALL_JS" description="RSSEO_MERGE_ALL_JS_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="skip_defer" class="btn-group btn-group-yesno" type="radio" default="0" label="RSSEO_SKIP_DEFER_JS" description="RSSEO_SKIP_DEFER_JS_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="merge_inline_js" class="btn-group btn-group-yesno" type="radio" default="0" label="RSSEO_MERGE_INLINE_JS" description="RSSEO_MERGE_INLINE_JS_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="minify_css" class="btn-group btn-group-yesno" type="radio" default="0" label="RSSEO_MINIFY_CSS" description="RSSEO_MINIFY_CSS_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="merge_all_css" class="btn-group btn-group-yesno" type="radio" default="0" label="RSSEO_MERGE_ALL_CSS" description="RSSEO_MERGE_ALL_CSS_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="merge_inline_css" class="btn-group btn-group-yesno" type="radio" default="0" label="RSSEO_MERGE_INLINE_CSS" description="RSSEO_MERGE_INLINE_CSS_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="gzip" class="btn-group btn-group-yesno" type="radio" default="0" label="RSSEO_GZIP" description="RSSEO_GZIP_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="try_catch" class="btn-group btn-group-yesno" type="radio" default="0" label="RSSEO_TRY_CATCH" description="RSSEO_TRY_CATCH_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="minify_html" class="btn-group btn-group-yesno" type="radio" default="0" label="RSSEO_MINIFY_HTML" description="RSSEO_MINIFY_HTML_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="exclude_files" type="textarea" class="input-xxlarge" rows="8" label="RSSEO_EXCLUDE_FILES" description="RSSEO_EXCLUDE_FILES_DESC" />
+				<field name="exclude_urls" type="textarea" class="input-xxlarge" rows="8" label="RSSEO_EXCLUDE_URLS" description="RSSEO_EXCLUDE_FILES_URLS" />
+			</fieldset>
+			<fieldset name="webp" label="RSSEO_WEBP">
+				<field name="enable_webp" class="btn-group btn-group-yesno" type="radio" default="0" label="RSSEO_WEBP_ENABLE" description="RSSEO_WEBP_ENABLE_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="webp_image_location" type="list" default="1" class="input-large" label="RSSEO_WEBP_IMAGE_LOCATION" description="RSSEO_WEBP_IMAGE_LOCATION_DESC">
+					<option value="0">RSSEO_WEBP_IMAGE_LOCATION_STANDARD</option>
+					<option value="1">RSSEO_WEBP_IMAGE_LOCATION_MEDIA</option>
+				</field>
+				<field name="exclusions" showon="enable_webp:1" class="input-xxlarge" rows="10" type="textarea" label="RSSEO_WEBP_EXCLUSIONS" description="RSSEO_WEBP_EXCLUSIONS_DESC" />
+			</fieldset>
+			
+			<fieldset name="cdn" label="RSSEO_CDN">
+				<field name="enable_cdn" class="btn-group btn-group-yesno" type="radio" default="0" label="RSSEO_ENABLE_CDN" description="RSSEO_ENABLE_CDN_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="cdn_url" filter="url" validate="url" type="url" schemes="http,https" class="input-xxlarge" label="RSSEO_CDN_URL" description="RSSEO_CDN_URL_DESC" />
+				<field name="cdn_filetypes" type="list" default="" multiple="multiple" class="input-large" label="RSSEO_CDN_FILETYPES" description="RSSEO_CDN_FILETYPES_DESC">
+					<option value="css">css</option>
+					<option value="js">js</option>
+					<option value="bmp">bmp</option>
+					<option value="gif">gif</option>
+					<option value="jpg">jpg</option>
+					<option value="jpeg">jpeg</option>
+					<option value="ico">ico</option>
+					<option value="png">png</option>
+					<option value="tif">tif</option>
+					<option value="tiff">tiff</option>
+				</field>
+			</fieldset>
+			
+		</fields>
+	</config>
+	
+</extension>

@@ -1,0 +1,358 @@
+/* Elemental 2 Blue-Green Ruleset */
+
+/* S0 */
+table.tabtable-gr_alterora_elemental_2_blue_green_0s1 tr td.tabcol {    
+    color: #003d6a;
+    padding: 6px 8px;        
+}
+
+table.tabtable-gr_alterora_elemental_2_blue_green_0s2 {  
+	border-collapse: collapse;		
+}
+table.tabtable-gr_alterora_elemental_2_blue_green_0s2 tr td.tabcol {    
+    color: #003d6a;
+    padding: 6px 8px;
+	  border: 1px solid #003d6a;	  
+}
+
+/* S1 */
+table.tabtable-gr_alterora_elemental_2_blue_green_1s1,
+table.tabtable-gr_alterora_elemental_2_blue_green_1s2,
+table.tabtable-gr_alterora_elemental_2_blue_green_1s3
+{  
+	border-collapse: collapse;	
+}
+table.tabtable-gr_alterora_elemental_2_blue_green_1s1 tr td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_1s2 tr td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_1s3 tr td.tabcol
+{
+    border-bottom: 1px solid #CCCCCC;
+    color: #00497f;
+    padding: 6px 8px;    
+}
+table.tabtable-gr_alterora_elemental_2_blue_green_1s1 tr.tdmin_1h td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_1s2 tr.tdmin_1h td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_1s3 tr.tdmin_1h td.tabcol
+{
+    border-bottom: 3px solid #CCCCCC;
+    color: #003155;
+    padding: 6px 8px;
+}
+table.tabtable-gr_alterora_elemental_2_blue_green_1s1 tr.tdmin_1b td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_1s2 tr.tdmin_1b td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_1s3 tr.tdmin_1b td.tabcol
+{
+    border-bottom: 3px solid #CCCCCC;
+    color: #003155;
+    padding: 6px 8px;
+}
+table.tabtable-gr_alterora_elemental_2_blue_green_1s1 tr:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_1s2 tr:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_1s3 tr:hover td.tabcol
+{
+    color: #003d6a;
+    background-color: #DFDFDF;
+}
+table.tabtable-gr_alterora_elemental_2_blue_green_1s1 tr.tdmin_1h:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_1s2 tr.tdmin_1h:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_1s3 tr.tdmin_1h:hover td.tabcol
+{
+    color: #003155;
+}
+table.tabtable-gr_alterora_elemental_2_blue_green_1s1 tr.tdmin_1b:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_1s2 tr.tdmin_1b:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_1s3 tr.tdmin_1b:hover td.tabcol
+{
+    color: #003155;
+}
+
+/* S2 */
+table.tabtable-gr_alterora_elemental_2_blue_green_2s2 tr td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s3 tr td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s4 tr td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s5 tr td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s6 tr td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s7 tr td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s8 tr td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s9 tr td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s10 tr td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s11 tr td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s12 tr td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s13 tr td.tabcol
+{
+	background-color: #c0e4ff;
+    border-bottom: 1px solid #FFFFFF;
+    border-top: 1px solid transparent;
+    color: #003d6a;
+    padding: 8px;
+}
+
+
+
+table.tabtable-gr_alterora_elemental_2_blue_green_2s2 tr.tdmin_2e td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s3 tr.tdmin_2e td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s4 tr.tdmin_2e td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s5 tr.tdmin_2e td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s6 tr.tdmin_2e td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s7 tr.tdmin_2e td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s8 tr.tdmin_2e td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s9 tr.tdmin_2e td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s10 tr.tdmin_2e td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s11 tr.tdmin_2e td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s12 tr.tdmin_2e td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s13 tr.tdmin_2e td.tabcol
+{
+	background-color: #c0e4ff;
+}
+
+table.tabtable-gr_alterora_elemental_2_blue_green_2s2 tr.tdmin_2b td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s3 tr.tdmin_2b td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s4 tr.tdmin_2b td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s5 tr.tdmin_2b td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s6 tr.tdmin_2b td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s7 tr.tdmin_2b td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s8 tr.tdmin_2b td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s9 tr.tdmin_2b td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s10 tr.tdmin_2b td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s11 tr.tdmin_2b td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s12 tr.tdmin_2b td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s13 tr.tdmin_2b td.tabcol
+{
+	background-color: #95d2ff;
+    border-bottom: 2px solid #6ac0ff;
+    border-top: 1px solid #FFFFFF;
+    color: #00497f;
+    font-weight: bold;
+    padding: 8px;
+}
+
+table.tabtable-gr_alterora_elemental_2_blue_green_2s2 tr td.tdmin_2l,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s3 tr td.tdmin_2l,
+
+table.tabtable-gr_alterora_elemental_2_blue_green_2s4 tr td.tdmin_2l,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s5 tr td.tdmin_2l,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s6 tr td.tdmin_2l,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s7 tr td.tdmin_2l,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s8 tr td.tdmin_2l,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s9 tr td.tdmin_2l,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s10 tr td.tdmin_2l,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s11 tr td.tdmin_2l,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s12 tr td.tdmin_2l,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s13 tr td.tdmin_2l
+{
+	background-color: #95d2ff;
+    border-bottom: 1px solid #FFFFFF;
+    border-top: 2px solid #6ac0ff;
+    color: #00497f;
+    font-weight: bold;
+    padding: 8px;
+}
+
+table.tabtable-gr_alterora_elemental_2_blue_green_2s2 tr td.tdmin_2r,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s3 tr td.tdmin_2r,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s4 tr td.tdmin_2r,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s5 tr td.tdmin_2r,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s6 tr td.tdmin_2r,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s7 tr td.tdmin_2r,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s8 tr td.tdmin_2r,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s9 tr td.tdmin_2r,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s10 tr td.tdmin_2r,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s11 tr td.tdmin_2r,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s12 tr td.tdmin_2r,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s13 tr td.tdmin_2r
+{
+	background-color: #95d2ff;
+    border-bottom: 1px solid #FFFFFF;
+    border-top: 2px solid #6ac0ff;
+    color: #00497f;
+    font-weight: bold;
+    padding: 8px;
+}
+
+table.tabtable-gr_alterora_elemental_2_blue_green_2s2 tr.tdmin_2h td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s3 tr.tdmin_2h td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s4 tr.tdmin_2h td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s5 tr.tdmin_2h td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s6 tr.tdmin_2h td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s7 tr.tdmin_2h td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s8 tr.tdmin_2h td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s9 tr.tdmin_2h td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s10 tr.tdmin_2h td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s11 tr.tdmin_2h td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s12 tr.tdmin_2h td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s13 tr.tdmin_2h td.tabcol
+{
+	background-color: #95d2ff;
+    border-bottom: 1px solid #FFFFFF;
+    border-top: 2px solid #6ac0ff;
+    color: #00497f;
+    font-weight: bold;
+    padding: 8px;
+}
+
+
+
+table.tabtable-gr_alterora_elemental_2_blue_green_2s2 tr:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s3 tr:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s4 tr:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s5 tr:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s6 tr:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s7 tr:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s8 tr:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s9 tr:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s10 tr:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s11 tr:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s12 tr:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s13 tr:hover td.tabcol
+{
+	background-color: #6ac0ff;
+    color: #0062aa;
+}
+
+table.tabtable-gr_alterora_elemental_2_blue_green_2s2 tr.tdmin_2b:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s3 tr.tdmin_2b:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s4 tr.tdmin_2b:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s5 tr.tdmin_2b:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s6 tr.tdmin_2b:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s7 tr.tdmin_2b:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s8 tr.tdmin_2b:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s9 tr.tdmin_2b:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s10 tr.tdmin_2b:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s11 tr.tdmin_2b:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s12 tr.tdmin_2b:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s13 tr.tdmin_2b:hover td.tabcol
+{
+	background-color: #80c9ff;
+    color: #00497f;	
+}
+
+table.tabtable-gr_alterora_elemental_2_blue_green_2s2 tr.tdmin_2h:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s3 tr.tdmin_2h:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s4 tr.tdmin_2h:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s5 tr.tdmin_2h:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s6 tr.tdmin_2h:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s7 tr.tdmin_2h:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s8 tr.tdmin_2h:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s9 tr.tdmin_2h:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s10 tr.tdmin_2h:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s11 tr.tdmin_2h:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s12 tr.tdmin_2h:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_2s13 tr.tdmin_2h:hover td.tabcol
+{
+	background-color: #95d2ff;
+    color: #00497f;
+}
+
+/* S3 */
+
+table.tabtable-gr_alterora_elemental_2_blue_green_3s1 tr td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_3s2 tr td.tabcol
+{
+	color: #003d6a;
+	background-color: #d5edff;
+    padding: 8px;
+}
+
+table.tabtable-gr_alterora_elemental_2_blue_green_3s1 tr.tdmin_3e td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_3s2 tr.tdmin_3e td.tabcol
+{
+	background: none repeat scroll 0 0 #c0e4ff;
+}
+
+table.tabtable-gr_alterora_elemental_2_blue_green_3s1 tr.tdmin_3h td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_3s2 tr.tdmin_3h td.tabcol
+{
+	color: #00497f;
+	background-color: #aadbff;
+    font-size: larger;
+    font-weight: normal;
+    padding: 10px 8px;
+}
+
+table.tabtable-gr_alterora_elemental_2_blue_green_3s1 tr.tdmin_3b td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_3s2 tr.tdmin_3b td.tabcol
+{
+	color: #00497f;
+	background-color: #aadbff;
+    font-size: larger;
+    font-weight: normal;
+    padding: 10px 8px;
+}
+
+table.tabtable-gr_alterora_elemental_2_blue_green_3s1 tr:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_3s2 tr:hover td.tabcol 
+{
+	background-color: #6ac0ff;
+    color: #0062aa;
+}
+
+table.tabtable-gr_alterora_elemental_2_blue_green_3s1 tr.tdmin_3b:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_3s2 tr.tdmin_3b:hover td.tabcol 
+{
+	background-color: #6ac0ff;
+    color: #0062aa;
+}
+
+table.tabtable-gr_alterora_elemental_2_blue_green_3s1 tr.tdmin_3h:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_3s2 tr.tdmin_3h:hover td.tabcol 
+{
+	background-color: #6ac0ff;
+    color: #0062aa;
+}
+
+/* S4 */
+
+table.tabtable-gr_alterora_elemental_2_blue_green_4s1 tr td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_4s2 tr td.tabcol
+{
+	color: #003d6a;
+	background-color: #d5edff;
+    padding: 8px;
+}
+
+table.tabtable-gr_alterora_elemental_2_blue_green_4s1 tr td.tdmin_4e,
+table.tabtable-gr_alterora_elemental_2_blue_green_4s2 tr td.tdmin_4e
+{
+	background: none repeat scroll 0 0 #c0e4ff;
+}
+
+table.tabtable-gr_alterora_elemental_2_blue_green_4s1 tr.tdmin_4h td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_4s2 tr.tdmin_4h td.tabcol
+{
+	color: #00497f;
+	background-color: #aadbff;
+    font-size: larger;
+    font-weight: normal;
+    padding: 10px 8px;
+}
+
+table.tabtable-gr_alterora_elemental_2_blue_green_4s1 tr.tdmin_4b td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_4s2 tr.tdmin_4b td.tabcol
+{
+	color: #00497f;
+	background-color: #aadbff;
+    font-size: larger;
+    font-weight: normal;
+    padding: 10px 8px;
+}
+
+table.tabtable-gr_alterora_elemental_2_blue_green_4s1 tr:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_4s2 tr:hover td.tabcol 
+{
+	background-color: #6ac0ff;
+    color: #0062aa;
+}
+
+table.tabtable-gr_alterora_elemental_2_blue_green_4s1 tr.tdmin_4b:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_4s2 tr.tdmin_4b:hover td.tabcol 
+{
+	background-color: #6ac0ff;
+    color: #0062aa;
+}
+
+table.tabtable-gr_alterora_elemental_2_blue_green_4s1 tr.tdmin_4h:hover td.tabcol,
+table.tabtable-gr_alterora_elemental_2_blue_green_4s2 tr.tdmin_4h:hover td.tabcol 
+{
+	background-color: #6ac0ff;
+    color: #0062aa;
+}

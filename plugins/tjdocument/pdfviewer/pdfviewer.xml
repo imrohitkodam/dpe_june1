@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="tjdocument" method="upgrade">
+	<name>plg_tjdocument_pdfviewer</name>
+	<author>Techjoomla</author>
+	<creationDate>13th Jul 2023</creationDate>
+	<copyright>Copyright (C) 2014 - 2023 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<version>4.0.5</version>
+	<isapplication>true</isapplication>
+	<description>PLG_TJDOCUMENT_PDFVIEWER_DESC</description>
+
+	<files>
+		<file plugin="pdfviewer">pdfviewer.php</file>
+		<folder>assets</folder>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+		<folder>pdfjs</folder>
+	</files>
+
+	<config name="params">
+		<fields name="params">
+			<fieldset addfieldpath="plugins/tjdocument/pdfviewer/element/fields"  name="basic" label="PLG_TJDOCUMENT_PDFVIEWER_JWT_CREDENTIAL_PARAM_LABEL" description="PLG_TJDOCUMENT_PDFVIEWER_JWT_CREDENTIAL_PARAM_DESC">
+				<field name="plugin_name" type="text" default="PDF Viewer" label="PLG_TJDOCUMENT_PDFVIEWER_PLUGIN_NAME_LABEL" description="PLG_TJDOCUMENT_PDFVIEWER_PLUGIN_NAME_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

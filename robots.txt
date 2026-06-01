@@ -1,0 +1,5 @@
+# Block all search engines from crawling the entire site
+User-agent: *
+Allow: /news/
+Disallow: /
+

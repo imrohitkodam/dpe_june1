@@ -1,0 +1,11 @@
+table.tabtable-rs_j5qo4tvq, table.tabtable-rs_j5qo4tvq tr, table.tabtable-rs_j5qo4tvq tr td.tabcol  { border: none } 
+table.tabtable-rs_j5qo4tvq  { 
+border-collapse:collapse;width:100%;background-color: transparent;}
+table.tabtable-rs_j5qo4tvq tr.tabrow td.tabcol  { 
+font-style: normal;font-weight: normal;padding: 5px;background-color: transparent;}
+table.tabtable-rs_j5qo4tvq tr:nth-child(even) td.tabcol  { 
+font-style: normal;font-weight: normal;background-color:#CCCCCC;}
+table.tabtable-rs_j5qo4tvq tr.tabrow:hover td.tabcol  { 
+font-style: normal;font-weight: normal;background-color:#ddd9c3;}
+table.tabtable-rs_j5qo4tvq tr.tr_ht1 td.tabcol, table.tabtable-rs_j5qo4tvq tr.tr_ht1:hover td.tabcol, table.tabtable-rs_j5qo4tvq tr.tr_ht1 td.tabcol:hover  { 
+font-style: normal;font-weight: normal;color: #ffffff;background-color:#FF9100;}

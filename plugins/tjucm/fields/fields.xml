@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.0" type="plugin" group="tjucm" method="upgrade">
+	<name>plg_tjucm_fields</name>
+	<author>Techjoomla</author>
+	<creationDate>18th Octobar 2019</creationDate>
+	<copyright>Copyright (C) 2014 - 2019 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<version>1.0.0</version>
+	<description>PLG_TJUCM_FIELDS_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="fields">fields.php</filename>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_tjucm_fields.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_tjucm_fields.sys.ini</language>
+	</languages>
+</extension>
