@@ -1,0 +1,206 @@
+{
+	"template1": {
+		"id": "",
+		"client": "com_tjcompetency",
+		"key": "skillAwardedMailToUser",
+		"title": "User notification when skill is awarded",
+		"user_control": 1,
+		"state": 1,
+		"core": 1,
+		"email": {
+			"state": 1,
+			"cc": "",
+			"bcc": "",
+			"from_name": "",
+			"from_email": "",
+			"emailfields": {
+				"emailfields0": {
+					"id": "",
+					"language": "*",
+					"subject": "Congratulations! You have earned a new Skill ({{record.skill_title}} - {{record.scale_title}})",
+					"body": "<p>Dear {{user.name}},<br /><br />Congratulations! You have now earned a new Skill ({{record.skill_title}} - {{record.scale_title}}) for accomplishing the content {{record.contentName}}. <br /> <br />Thank you!</p>"
+				}
+			}
+		},
+		"replacement_tags": [{
+				"name": "user.name",
+				"description": "Name of record owner"
+			},
+			{
+				"name": "info.sitename",
+				"description": "Sitename"
+			},
+			{
+				"name": "record.skill_title",
+				"description": "Name of the Skill"
+			},
+			{
+				"name": "record.scale_title",
+				"description": "Name of the Scale"
+			},
+			{
+				"name": "record.contentType",
+				"description": "Name of the Content Type"
+			},
+			{
+				"name": "record.contentName",
+				"description": "Name of the Content"
+			}
+		]
+	},
+	"template2": {
+		"id": "",
+		"client": "com_tjcompetency",
+		"key": "skillAwardedMailToAdmin",
+		"title": "Admin notification when skill is awarded to the users",
+		"user_control": 1,
+		"state": 1,
+		"core": 1,
+		"email": {
+			"state": 1,
+			"cc": "",
+			"bcc": "",
+			"from_name": "",
+			"from_email": "",
+			"emailfields": {
+				"emailfields0": {
+					"id": "",
+					"language": "*",
+					"subject": "User {{user.name}} has earned a new Skill ({{record.skill_title}} - {{record.scale_title}})",
+					"body": "<p>Hello Admin,<br /><br /> {{user.name}} has now earned a new Skill ({{record.skill_title}} - {{record.scale_title}}) for accomplishing the content {{record.contentName}}. <br /> Please check <a href='{{record.admin_link}}'>here</a> page for more details. <br /> <br />Thank you!</p>"
+				}
+			}
+		},
+		"replacement_tags": [{
+				"name": "user.name",
+				"description": "Name of record owner"
+			},
+			{
+				"name": "info.sitename",
+				"description": "Sitename"
+			},
+			{
+				"name": "record.skill_title",
+				"description": "Name of the Skill"
+			},
+			{
+				"name": "record.scale_title",
+				"description": "Name of the Scale"
+			},
+			{
+				"name": "record.contentType",
+				"description": "Name of the Content Type"
+			},
+			{
+				"name": "record.contentName",
+				"description": "Name of the Content"
+			},
+			{
+				"name": "record.admin_link",
+				"description": "Link to the record in the admin side"
+			}
+		]
+	},
+	"template3": {
+		"id": "",
+		"client": "com_tjcompetency",
+		"key": "skillPendingApprovalMailToUser",
+		"title": "User notification when skill is pending for approval",
+		"user_control": 1,
+		"state": 1,
+		"core": 1,
+		"email": {
+			"state": 1,
+			"cc": "",
+			"bcc": "",
+			"from_name": "",
+			"from_email": "",
+			"emailfields": {
+				"emailfields0": {
+					"id": "",
+					"language": "*",
+					"subject": "Congratulations! Your new Skill ({{record.skill_title}} - {{record.scale_title}}) is pending for approval",
+					"body": "<p>Dear {{user.name}},<br /><br />Congratulations! You have come one step closer to aquire a new Skill ({{record.skill_title}} - {{record.scale_title}}) for accomplishing the content {{record.contentName}}. <br /> <br /> Thank you!</p>"
+				}
+			}
+		},
+		"replacement_tags": [{
+				"name": "user.name",
+				"description": "Name of record owner"
+			},
+			{
+				"name": "info.sitename",
+				"description": "Sitename"
+			},
+			{
+				"name": "record.skill_title",
+				"description": "Na me of the Skill"
+			},
+			{
+				"name": "record.scale_title",
+				"description": "Name of the Scale"
+			},
+			{
+				"name": "record.contentType",
+				"description": "Name of the Content Type"
+			},
+			{
+				"name": "record.contentName",
+				"description": "Name of the Content"
+			}
+		]
+	},
+	"template4": {
+		"id": "",
+		"client": "com_tjcompetency",
+		"key": "skillPendingApprovalMailToAdmin",
+		"title": "Admin notification when skill is pending for approval",
+		"user_control": 1,
+		"state": 1,
+		"core": 1,
+		"email": {
+			"state": 1,
+			"cc": "",
+			"bcc": "",
+			"from_name": "",
+			"from_email": "",
+			"emailfields": {
+				"emailfields0": {
+					"id": "",
+					"language": "*",
+					"subject": "User {{user.name}} has a new Skill ({{record.skill_title}} - {{record.scale_title}}) pending for approval",
+					"body": "<p>Hello Admin,<br /><br /> {{user.name}} has a new Skill ({{record.skill_title}} - {{record.scale_title}}) pending for approval for accomplishing the content {{record.contentName}}. <br /> Please check <a href='{{record.admin_link}}'>here</a> page for more details. <br /> <br />Thank you!</p>"
+				}
+			}
+		},
+		"replacement_tags": [{
+				"name": "user.name",
+				"description": "Name of record owner"
+			},
+			{
+				"name": "info.sitename",
+				"description": "Sitename"
+			},
+			{
+				"name": "record.skill_title",
+				"description": "Name of the Skill"
+			},
+			{
+				"name": "record.scale_title",
+				"description": "Name of the Scale"
+			},
+			{
+				"name": "record.contentType",
+				"description": "Name of the Content Type"
+			},
+			{
+				"name": "record.contentName",
+				"description": "Name of the Content"
+			},
+			{
+				"name": "record.admin_link",
+				"description": "Link to the record in the admin side"
+			}
+		]
+	}
+}

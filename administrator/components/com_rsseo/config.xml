@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fieldset name="general_options" label="COM_RSSEO_CONFIGURATION_GENERAL">
+		<field name="global_register_code" type="text" class="input-xxlarge" description="COM_RSSEO_CONFIGURATION_GENERAL_LICENSE_CODE_DESC" label="COM_RSSEO_CONFIGURATION_GENERAL_LICENSE_CODE" size="70" />
+		<field name="global_dateformat" type="text" class="input-large" default="d M y H:i" description="COM_RSSEO_CONFIGURATION_GENERAL_DATE_FORMAT_DESC" label="COM_RSSEO_CONFIGURATION_GENERAL_DATE_FORMAT" size="70" />
+		<field name="load_jquery" type="radio" class="btn-group btn-group-yesno" default="1" label="COM_RSSEO_CONFIGURATION_LOAD_JQUERY" description="COM_RSSEO_CONFIGURATION_LOAD_JQUERY_DESC" >
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="log_errors" type="radio" class="btn-group btn-group-yesno" default="1" label="COM_RSSEO_CONFIGURATION_LOG_ERRORS" description="COM_RSSEO_CONFIGURATION_LOG_ERRORS_DESC" >
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="custom_errors" type="radio" class="btn-group btn-group-yesno" default="1" label="COM_RSSEO_CONFIGURATION_CUSTOM_ERROR_PAGES" description="COM_RSSEO_CONFIGURATION_CUSTOM_ERROR_PAGES_DESC" >
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="obfuscate_visitor_ip" type="radio" class="btn-group btn-group-yesno" default="1" label="COM_RSSEO_CONFIGURATION_OBFUSCATE_VISITOR_IP" description="COM_RSSEO_CONFIGURATION_OBFUSCATE_VISITOR_IP_DESC" >
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="enable_sef" type="radio" class="btn-group btn-group-yesno" default="1" label="COM_RSSEO_CONFIGURATION_ENABLE_SEF" description="COM_RSSEO_CONFIGURATION_ENABLE_SEF_DESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="robots_permissions" type="text" class="input-small" default="644" description="COM_RSSEO_CONFIGURATION_ROBOTS_PERMISSIONS_DESC" label="COM_RSSEO_CONFIGURATION_ROBOTS_PERMISSIONS" />
+		<field name="title_length" type="text" class="input-small" default="70" label="COM_RSSEO_CONFIGURATION_TITLE_LENGTH" />
+		<field name="keywords_length" type="text" class="input-small" default="10" label="COM_RSSEO_CONFIGURATION_KEYWORDS_LENGTH" />
+		<field name="description_length" type="text" class="input-small" default="300" label="COM_RSSEO_CONFIGURATION_DESCRIPTION_LENGTH" />
+		<field name="customhead" type="textarea" class="span12" cols="60" rows="10" filter="raw" label="COM_RSSEO_CONFIGURATION_CUSTOM_HEAD_SCRIPTS" description="COM_RSSEO_CONFIGURATION_CUSTOM_HEAD_SCRIPTS_DESC" />
+		
+		<field name="s1" type="spacer" label="COM_RSSEO_CONFIGURATION_CURL_SPACER" />
+		<field name="proxy_enable" type="radio" class="btn-group btn-group-yesno" default="0" label="COM_RSSEO_CONFIGURATION_CURL_PROXY_ENABLE" description="COM_RSSEO_CONFIGURATION_CURL_PROXY_ENABLE_DESC" >
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		
+		<field name="proxy_server" showon="proxy_enable:1" type="text" class="input-large" default="" label="COM_RSSEO_CONFIGURATION_CURL_SERVER" description="COM_RSSEO_CONFIGURATION_CURL_SERVER_DESC" size="50" />
+		<field name="proxy_port" showon="proxy_enable:1" type="text" class="input-large" default="" label="COM_RSSEO_CONFIGURATION_CURL_PORT" description="COM_RSSEO_CONFIGURATION_CURL_PORT_DESC" size="50" />
+		<field name="proxy_username" showon="proxy_enable:1" type="text" class="input-large" default="" label="COM_RSSEO_CONFIGURATION_CURL_USERNAME" description="COM_RSSEO_CONFIGURATION_CURL_USERNAME_DESC" size="50" />
+		<field name="proxy_password" showon="proxy_enable:1" type="password" class="input-large" default="" label="COM_RSSEO_CONFIGURATION_CURL_PASSWORD" description="COM_RSSEO_CONFIGURATION_CURL_PASSWORD_DESC" size="50" />
+		
+	</fieldset>
+	
+	<fieldset name="crawler" label="COM_RSSEO_CONFIGURATION_CRAWLER">
+		<field name="request_timeout" type="text" class="input-large" default="0" description="COM_RSSEO_CONFIGURATION_REQUEST_TIMEOUT_DESC" label="COM_RSSEO_CONFIGURATION_REQUEST_TIMEOUT" size="50" />
+		<field name="crawler_type" type="radio" class="btn-group" default="loopback" label="COM_RSSEO_CONFIGURATION_CRAWLER_TYPE" description="COM_RSSEO_CONFIGURATION_CRAWLER_TYPE_DESC" >
+			<option value="ajax">COM_RSSEO_CONFIGURATION_CRAWLER_TYPE_AJAX</option>
+			<option value="loopback">COM_RSSEO_CONFIGURATION_CRAWLER_TYPE_LOOPBACK</option>
+		</field>
+		<field name="crawler_enable_auto" type="radio" class="btn-group btn-group-yesno" default="1" label="COM_RSSEO_CONFIGURATION_CRAWLER_AUTO" description="COM_RSSEO_CONFIGURATION_CRAWLER_AUTO_DESC" >
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="crawler_save" type="radio" class="btn-group btn-group-yesno" default="1" label="COM_RSSEO_CONFIGURATION_CRAWLER_SAVE" description="COM_RSSEO_CONFIGURATION_CRAWLER_SAVE_DESC" >
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="crawler_nofollow" type="radio" class="btn-group btn-group-yesno" default="0" label="COM_RSSEO_CONFIGURATION_CRAWLER_NOFOLLOW" description="COM_RSSEO_CONFIGURATION_CRAWLER_NOFOLLOW_DESC" >
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="crawler_level" type="list" class="inputbox" default="1" size="1" label="COM_RSSEO_CONFIGURATION_CRAWLER_LEVEL" description="COM_RSSEO_CONFIGURATION_CRAWLER_LEVEL_DESC">
+			<option value="-1">COM_RSSEO_CONFIGURATION_CRAWLER_LEVEL_UNLIMITED</option>
+			<option	value="1">1</option>
+			<option	value="2">2</option>
+			<option	value="3">3</option>
+			<option	value="4">4</option>
+			<option	value="5">5</option>
+			<option	value="6">6</option>
+			<option	value="7">7</option>
+			<option	value="8">8</option>
+			<option	value="9">9</option>
+			<option	value="10">10</option>
+		</field>
+		
+		<field name="spacer1" type="spacer" hr="true" />
+		
+		<field name="site_name_in_title" type="list" class="inputbox" default="0" size="1" label="COM_RSSEO_CONFIGURATION_CRAWLER_SITE_NAME_TITLE" description="COM_RSSEO_CONFIGURATION_CRAWLER_SITE_NAME_TITLE_DESC" >
+			<option value="0">JNO</option>
+			<option value="1">COM_RSSEO_CONFIGURATION_CRAWLER_SITE_NAME_TITLE_AFTER</option>
+			<option value="2">COM_RSSEO_CONFIGURATION_CRAWLER_SITE_NAME_TITLE_BEFORE</option>
+		</field>
+		<field name="site_name_separator" type="text" class="input-small" default="|" description="COM_RSSEO_CONFIGURATION_CRAWLER_SITE_NAME_TITLE_SEPARATOR_DESC" label="COM_RSSEO_CONFIGURATION_CRAWLER_SITE_NAME_TITLE_SEPARATOR" size="50" />
+		
+		<field name="spacer2" type="spacer" hr="true" />
+		
+		<field name="crawler_sef" type="radio" class="btn-group btn-group-yesno" default="1" label="COM_RSSEO_CONFIGURATION_CRAWLER_CHECK_SEF" description="COM_RSSEO_CONFIGURATION_CRAWLER_CHECK_SEF_DESC" >
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="crawler_title_duplicate" type="radio" class="btn-group btn-group-yesno" default="1" label="COM_RSSEO_CONFIGURATION_CRAWLER_CHECK_DUPLICATE_TITLE" description="COM_RSSEO_CONFIGURATION_CRAWLER_CHECK_DUPLICATE_TITLE_DESC" >
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="crawler_title_length" type="radio" class="btn-group btn-group-yesno" default="1" label="COM_RSSEO_CONFIGURATION_CRAWLER_CHECK_TITLE_LENGTH" description="COM_RSSEO_CONFIGURATION_CRAWLER_CHECK_TITLE_LENGTH_DESC" >
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="crawler_description_duplicate" type="radio" class="btn-group btn-group-yesno" default="1" label="COM_RSSEO_CONFIGURATION_CRAWLER_CHECK_DUPLICATE_DESCR" description="COM_RSSEO_CONFIGURATION_CRAWLER_CHECK_DUPLICATE_DESCR_DESC" >
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="crawler_description_length" type="radio" class="btn-group btn-group-yesno" default="1" label="COM_RSSEO_CONFIGURATION_CRAWLER_CHECK_DESCR_LENGTH" description="COM_RSSEO_CONFIGURATION_CRAWLER_CHECK_DESCR_LENGTH_DESC" >
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="crawler_keywords" type="radio" class="btn-group btn-group-yesno" default="1" label="COM_RSSEO_CONFIGURATION_CRAWLER_CHECK_KEYWORDS" description="COM_RSSEO_CONFIGURATION_CRAWLER_CHECK_KEYWORDS_DESC" >
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="crawler_headings" type="radio" class="btn-group btn-group-yesno" default="1" label="COM_RSSEO_CONFIGURATION_CRAWLER_CHECK_HEADINGS" description="COM_RSSEO_CONFIGURATION_CRAWLER_CHECK_HEADINGS_DESC" >
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="crawler_images" type="radio" class="btn-group btn-group-yesno" default="1" label="COM_RSSEO_CONFIGURATION_CRAWLER_CHECK_IMAGES" description="COM_RSSEO_CONFIGURATION_CRAWLER_CHECK_IMAGES_DESC" >
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="crawler_images_alt" type="radio" class="btn-group btn-group-yesno" default="1" label="COM_RSSEO_CONFIGURATION_CRAWLER_CHECK_ALT_IMAGE" description="COM_RSSEO_CONFIGURATION_CRAWLER_CHECK_ALT_IMAGE_DESC" >
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="crawler_images_hw" type="radio" class="btn-group btn-group-yesno" default="1" label="COM_RSSEO_CONFIGURATION_CRAWLER_CHECK_HW_IMAGE" description="COM_RSSEO_CONFIGURATION_CRAWLER_CHECK_HW_IMAGE_DESC" >
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="crawler_intext_links" type="radio" class="btn-group btn-group-yesno" default="1" label="COM_RSSEO_CONFIGURATION_CRAWLER_CHECK_IE_LINKS" description="COM_RSSEO_CONFIGURATION_CRAWLER_CHECK_IE_LINKS_DESC" >
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		
+		<field name="crawler_ignore" type="textarea" translate_default="true" default="COM_RSSEO_CONFIGURATION_CRAWLER_IGNORE_DEFAULT" class="inputbox span5" rows="10" cols="70" description="COM_RSSEO_CONFIGURATION_CRAWLER_IGNORE_DESC" label="COM_RSSEO_CONFIGURATION_CRAWLER_IGNORE" />
+		<field name="spacer3" type="spacer" label="COM_RSSEO_CONFIGURATION_CRAWLER_IGNORE_INFO" />
+	</fieldset>
+	
+	<fieldset name="sitemap" label="COM_RSSEO_CONFIGURATION_SITEMAP" description="COM_RSSEO_CONFIGURATION_SITEMAP_DESC"  addfieldpath="/administrator/components/com_rsseo/models/fields">
+		<field name="sitemap_limit" type="text" class="input-small" default="500" description="COM_RSSEO_CONFIGURATION_SITEMAP_LIMIT_DESC" label="COM_RSSEO_CONFIGURATION_SITEMAP_LIMIT" />
+		<field name="exclude_noindex" type="radio" class="btn-group btn-group-yesno" default="0" label="COM_RSSEO_CONFIGURATION_EXCLUDE_NOINDEX" description="COM_RSSEO_CONFIGURATION_EXCLUDE_NOINDEX_DESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="exclude_autocrawled" type="radio" class="btn-group btn-group-yesno" default="0" label="COM_RSSEO_CONFIGURATION_EXCLUDE_AUTOCRAWLED" description="COM_RSSEO_CONFIGURATION_EXCLUDE_AUTOCRAWLED_DESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="sitemap_permissions" type="text" class="input-small" default="644" description="COM_RSSEO_CONFIGURATION_SITEMAP_PERMISSIONS_DESC" label="COM_RSSEO_CONFIGURATION_SITEMAP_PERMISSIONS" />
+		<field name="enable_sitemap_cron" type="radio" class="btn-group btn-group-yesno" default="0" label="COM_RSSEO_CONFIGURATION_ENABLE_SITEMAP_CRON" description="COM_RSSEO_CONFIGURATION_ENABLE_SITEMAP_CRON_DESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field showon="enable_sitemap_cron:1" name="sitemap_cron_type" type="list" class="inputbox" default="0" size="1" label="COM_RSSEO_CONFIGURATION_SITEMAP_CRON_TYPE" description="COM_RSSEO_CONFIGURATION_SITEMAP_CRON_TYPE_DESC">
+			<option value="0">COM_RSSEO_CONFIGURATION_SITEMAP_CRON_TYPE_MANUAL</option>
+			<option value="1">COM_RSSEO_CONFIGURATION_SITEMAP_CRON_TYPE_AUTOMATIC</option>
+			<option value="2">COM_RSSEO_CONFIGURATION_SITEMAP_CRON_TYPE_BOTH</option>
+		</field>
+		<field showon="enable_sitemap_cron:1" name="sitemap_cron_security" type="text" class="input-xlarge" default="707cb49519002c0b36d6ae726aa02589" description="COM_RSSEO_CONFIGURATION_SITEMAP_CRON_SECURITY_DESC" label="COM_RSSEO_CONFIGURATION_SITEMAP_CRON_SECURITY" size="50" onchange="rsseo_sitemap()" />
+		
+		<field name="sitemap_autocrawled" type="list" default="2" label="COM_RSSEO_CONFIGURATION_SITEMAP_AUTOCRAWLED" description="COM_RSSEO_CONFIGURATION_SITEMAP_AUTOCRAWLED_DESC">
+			<option value="1">COM_RSSEO_CONFIGURATION_SITEMAP_AUTOCRAWLED_1</option>
+			<option value="2">COM_RSSEO_CONFIGURATION_SITEMAP_AUTOCRAWLED_2</option>
+			<option value="3">COM_RSSEO_CONFIGURATION_SITEMAP_AUTOCRAWLED_3</option>
+		</field>
+		
+		<field showon="sitemap_autocrawled:3" name="sitemap_autocrawled_rule" type="textarea" class="inputbox span5" rows="10" cols="70" label="COM_RSSEO_CONFIGURATION_SITEMAP_AUTOCRAWLED_RULE" />
+		<field name="sspacer1" showon="sitemap_autocrawled:3" type="spacer" label="COM_RSSEO_CONFIGURATION_SITEMAP_AUTOCRAWLED_RULE_INFO" />
+		<field type="rsscripts" />
+	</fieldset>
+	
+	<fieldset name="keywords" label="COM_RSSEO_CONFIGURATION_KEYWORDS">
+		<field name="kspacer1" type="spacer" label="COM_RSSEO_CONFIGURATION_REPLACEMENTS" />
+		
+		<field name="enable_keyword_replace" type="radio" class="btn-group btn-group-yesno" default="1" label="COM_RSSEO_CONFIGURATION_REPLACEMENTS_ENABLE" description="COM_RSSEO_CONFIGURATION_REPLACEMENTS_ENABLE_DESC" >
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="approved_chars" type="text" class="input-large" translate_default="true" default="COM_RSSEO_CONFIGURATION_REPLACEMENTS_DEFAULT" size="50" label="COM_RSSEO_CONFIGURATION_REPLACEMENTS_CHARS" description="COM_RSSEO_CONFIGURATION_REPLACEMENTS_CHARS_DESC" filter="raw" />
+		
+		<field name="kspacer2" type="spacer" label="COM_RSSEO_CONFIGURATION_KEYWORD_DENSITY" />
+		
+		<field name="keyword_density_enable" type="radio" class="btn-group btn-group-yesno" default="1" label="COM_RSSEO_CONFIGURATION_KEYWORD_DENSITY_ENABLE" description="COM_RSSEO_CONFIGURATION_KEYWORD_DENSITY_ENABLE_DESC" >
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="copykeywords" type="radio" class="btn-group btn-group-yesno" default="0" label="COM_RSSEO_CONFIGURATION_KEYWORD_DENSITY_COPY" description="COM_RSSEO_CONFIGURATION_KEYWORD_DENSITY_COPY_DESC" >
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="overwritekeywords" type="radio" class="btn-group btn-group-yesno" default="0" label="COM_RSSEO_CONFIGURATION_KEYWORD_DENSITY_OVERWRITE" description="COM_RSSEO_CONFIGURATION_KEYWORD_DENSITY_OVERWRITE_DESC" >
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+	</fieldset>
+	
+	<fieldset name="images" label="COM_RSSEO_CONFIGURATION_IMAGES" description="COM_RSSEO_CONFIGURATION_IMAGES_DESC">
+		<field name="img_auto_alt" type="list" default="0" label="COM_RSSEO_CONFIGURATION_IMAGES_AUTO_ALT" description="COM_RSSEO_CONFIGURATION_IMAGES_AUTO_ALT_DESC">
+			<option value="0">JNO</option>
+			<option value="1">COM_RSSEO_CONFIGURATION_IMAGES_AUTO_ALT_1</option>
+			<option value="2">COM_RSSEO_CONFIGURATION_IMAGES_AUTO_ALT_2</option>
+		</field>
+		<field name="img_auto_alt_rule" showon="img_auto_alt:1,2" type="text" class="input-large" default="{name} {title}" label="COM_RSSEO_CONFIGURATION_IMAGES_AUTO_ALT_RULE" description="COM_RSSEO_CONFIGURATION_IMAGES_AUTO_ALT_RULE_DESC" size="50" />
+		
+		<field name="img_auto_title" type="list" default="0" label="COM_RSSEO_CONFIGURATION_IMAGES_AUTO_TITLE" description="COM_RSSEO_CONFIGURATION_IMAGES_AUTO_TITLE_DESC">
+			<option value="0">JNO</option>
+			<option value="1">COM_RSSEO_CONFIGURATION_IMAGES_AUTO_TITLE_1</option>
+			<option value="2">COM_RSSEO_CONFIGURATION_IMAGES_AUTO_TITLE_2</option>
+		</field>
+		<field name="img_auto_title_rule" showon="img_auto_title:1,2" type="text" class="input-large" default="{name} image" label="COM_RSSEO_CONFIGURATION_IMAGES_AUTO_TITLE_RULE" description="COM_RSSEO_CONFIGURATION_IMAGES_AUTO_TITLE_RULE_DESC" size="50" />
+		<field name="ispacer1" showon="img_auto_alt:1,2[OR]img_auto_title:1,2" type="note" label="COM_RSSEO_CONFIGURATION_IMAGE_RULES" description="COM_RSSEO_CONFIGURATION_IMAGE_RULES_DESC" />
+	</fieldset>
+	
+	<fieldset name="visitors" label="COM_RSSEO_CONFIGURATION_VISITORS">
+		<field name="track_visitors" type="radio" class="btn-group btn-group-yesno" default="1" label="COM_RSSEO_CONFIGURATION_TRACK_VISITORS" description="COM_RSSEO_CONFIGURATION_TRACK_VISITORS_DESC" >
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="autodeletevisitors" showon="track_visitors:1" type="text" class="input-large" default="" label="COM_RSSEO_CONFIGURATION_VISITORS_AUTO_DELETE" description="COM_RSSEO_CONFIGURATION_VISITORS_AUTO_DELETE_DESC" size="50" />
+		<field name="visitors_ip" showon="track_visitors:1" type="textarea" class="span5" rows="10" cols="70" description="COM_RSSEO_CONFIGURATION_VISITORS_IP_DESC" label="COM_RSSEO_CONFIGURATION_VISITORS_IP" />
+	</fieldset>
+	
+	<fieldset name="google" label="COM_RSSEO_CONFIGURATION_GOOGLE" description="COM_RSSEO_CONFIGURATION_GOOGLE_SERVICE_ACCOUNT_KEY_DESC">
+		
+		<field name="s2" type="spacer" label="COM_RSSEO_CONFIGURATION_GOOGLE_SERVICE_ACCOUNT_KEY" />
+		<field name="plugincheck" type="plugincheck" />
+		<field name="key" type="file" accept=".json" class="input-large" default="" description="COM_RSSEO_CONFIGURATION_GOOGLE_SERVICE_KEY_DESC" label="COM_RSSEO_CONFIGURATION_GOOGLE_SERVICE_KEY" />
+		
+		<field name="s3" type="spacer" label="COM_RSSEO_CONFIGURATION_GOOGLE_ANALYTICS_SPACER" />
+		<field name="analytics_enable" type="radio" class="btn-group btn-group-yesno" default="0" label="COM_RSSEO_CONFIGURATION_GOOGLE_ANALYTICS_ENABLE" description="COM_RSSEO_CONFIGURATION_GOOGLE_ANALYTICS_ENABLE_DESC" >
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		
+		<field name="ga_tracking" type="radio" class="btn-group btn-group-yesno" default="0" label="COM_RSSEO_CONFIGURATION_GOOGLE_ANALYTICS_ENABLE_TRACKING" description="COM_RSSEO_CONFIGURATION_GOOGLE_ANALYTICS_ENABLE_TRACKING_DESC" >
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		
+		<field name="ga_type" showon="ga_tracking:1" type="list" class="inputbox" default="0" size="1" label="COM_RSSEO_CONFIGURATION_TRACKING_TYPE" description="COM_RSSEO_CONFIGURATION_TRACKING_TYPE_DESC">
+			<option	value="0">COM_RSSEO_CONFIGURATION_TRACKING_TYPE_CLASSIC</option>
+			<option	value="1">COM_RSSEO_CONFIGURATION_TRACKING_TYPE_UNIVERSAL</option>
+			<option	value="2">COM_RSSEO_CONFIGURATION_TRACKING_TYPE_GTAG</option>
+		</field>
+		
+		<field name="ga_code" showon="ga_tracking:1" type="text" class="input-large" default="" description="COM_RSSEO_CONFIGURATION_GOOGLE_ANALYTICS_CODE_DESC" label="COM_RSSEO_CONFIGURATION_GOOGLE_ANALYTICS_CODE" size="50" />
+		<field name="ga_options" showon="ga_tracking:1[AND]ga_type:1" type="textarea" class="input-xxlarge" rows="5" default="" description="COM_RSSEO_CONFIGURATION_GOOGLE_ANALYTICS_OPTIONS_DESC" label="COM_RSSEO_CONFIGURATION_GOOGLE_ANALYTICS_OPTIONS" />
+		<field name="ga_options_4" showon="ga_tracking:1[AND]ga_type:2" type="textarea" class="input-xxlarge" rows="5" default="" description="COM_RSSEO_CONFIGURATION_GOOGLE_ANALYTICS_4_OPTIONS_DESC" label="COM_RSSEO_CONFIGURATION_GOOGLE_ANALYTICS_OPTIONS" />
+	
+		<field name="s4" type="spacer" label="COM_RSSEO_CONFIGURATION_WEBMASTERS_SPACER" />
+		<field name="enable_g_keywords" type="radio" class="btn-group btn-group-yesno" default="0" label="COM_RSSEO_CONFIGURATION_ENABLE_G_KEYWORDS" description="COM_RSSEO_CONFIGURATION_ENABLE_G_KEYWORDS_DESC" >
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="g_date_format" type="text" class="input-small" default="d M Y" description="COM_RSSEO_CONFIGURATION_GOOGLE_DATE_FORMAT_DESC" label="COM_RSSEO_CONFIGURATION_GOOGLE_DATE_FORMAT" />
+		
+		<field name="kspacer3" type="spacer" label="COM_RSSEO_CONFIGURATION_KEYWORDS_CRON" />
+		
+		<field name="eanble_k_cron" type="radio" class="btn-group btn-group-yesno" default="0" label="COM_RSSEO_CONFIGURATION_ENABLE_K_CRON" description="COM_RSSEO_CONFIGURATION_ENABLE_K_CRON_DESC" >
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		
+		<field name="k_cron_run" type="list" class="inputbox" default="daily" size="1" label="COM_RSSEO_CONFIGURATION_K_CRON_RUN" description="COM_RSSEO_CONFIGURATION_K_CRON_RUN_DESC">
+			<option value="daily">COM_RSSEO_CONFIGURATION_K_CRON_RUN_DAILY</option>
+			<option value="weekly">COM_RSSEO_CONFIGURATION_K_CRON_RUN_WEEKLY</option>
+			<option value="monthly">COM_RSSEO_CONFIGURATION_K_CRON_RUN_MONTHLY</option>
+		</field>
+	
+	</fieldset>
+	
+	<fieldset name="permissions" label="JCONFIG_PERMISSIONS_LABEL" description="JCONFIG_PERMISSIONS_DESC">
+		<field name="rules" type="rules" label="JCONFIG_PERMISSIONS_LABEL" class="inputbox" validate="rules" filter="rules" component="com_rsseo" section="component"/>
+		<field type="hidden" name="sitemapauto" default="" />
+		<field type="hidden" name="sitemapprotocol" default="0" />
+		<field type="hidden" name="sitemapport" default="0" />
+		<field type="hidden" name="sitemapmodified_date" default="1" />
+		<field type="hidden" name="sitemapmodified" default="" />
+		<field type="hidden" name="sitemapwebsite" default="" />
+		<field type="hidden" name="ga_account" default="" />
+		<field type="hidden" name="ga_start" default="" />
+		<field type="hidden" name="ga_end" default="" />
+		<field type="hidden" name="ga_token" default="" />
+		<field type="hidden" name="sitemap_menus" default="" />
+		<field type="hidden" name="sitemap_excludes" default="" />
+		<field type="hidden" name="sitemap_timestamp" default="" />
+		<field type="hidden" name="report" default="" />
+		<field type="hidden" name="lastrun" default="" />
+		<field type="hidden" name="lastrunvisitors" default="" />
+	</fieldset>
+
+</config>

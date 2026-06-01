@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="params">
+		<field name="name" type="text" description="RST_SEARCH_NAME_DESC" label="RST_SEARCH_NAME" required="true" size="64" />
+		<field name="default" type="radio" class="btn-group btn-group-yesno" description="RST_DEFAULT_SEARCH_DESC" label="RST_DEFAULT_SEARCH" default="0" size="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="update" type="list" description="RST_UPDATE_SEARCH_DESC" label="RST_UPDATE_SEARCH" default="0" size="1">
+			<option value="1">RST_UPDATE_SEARCH_OK</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="published" type="radio" class="btn-group btn-group-yesno" label="JPUBLISHED" size="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="id" type="hidden" />
+	</fieldset>
+</form>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="params">
+		<field name="subject" type="text" description="RST_EMAIL_SUBJECT_DESC" label="RST_EMAIL_SUBJECT" size="64" />
+		<field name="message" type="editor" label="RST_EMAIL_MESSAGE" description="RST_EMAIL_MESSAGE_DESC" required="true" filter="raw" buttons="true" />
+		<field name="published" type="radio" class="btn-group btn-group-yesno" label="JPUBLISHED" size="1">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="type" type="hidden" />
+		<field name="lang" type="hidden" />
+		<field name="id" type="hidden" />
+	</fieldset>
+</form>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="general_settings" addfieldpath="/administrator/components/com_jmailalerts/models/fields">
+		<field name="id" type="text" default="0" label="COM_JMAILALERTS_FORM_LBL_ALERT_ID" readonly="true" class="readonly" description="JGLOBAL_FIELD_ID_DESC" />
+		<field name="title" type="text" label="COM_JMAILALERTS_FORM_LBL_ALERT_TITLE" description="COM_JMAILALERTS_FORM_DESC_ALERT_TITLE" required="true" filter="string" maxlength="255" />
+		<field name="description" type="textarea" label="COM_JMAILALERTS_FORM_LBL_ALERT_DESCRIPTION" description="COM_JMAILALERTS_FORM_DESC_ALERT_DESCRIPTION" cols="100" rows="8" filter="raw" />
+		<field name="allow_users_select_plugins" type="radio" label="COM_JMAILALERTS_FORM_LBL_ALERT_ALLOW_USERS_SELECT_PLUGINS" description="COM_JMAILALERTS_FORM_DESC_ALERT_ALLOW_USERS_SELECT_PLUGINS" required="true" filter="raw" class="btn-group btn-group-yesno" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="respect_last_email_date" type="radio" label="COM_JMAILALERTS_FORM_LBL_ALERT_RESPECT_LAST_EMAIL_DATE" description="COM_JMAILALERTS_FORM_DESC_ALERT_RESPECT_LAST_EMAIL_DATE" required="true" filter="raw" class="btn-group btn-group-yesno" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="is_default" type="radio" label="COM_JMAILALERTS_FORM_LBL_ALERT_IS_DEFAULT" description="COM_JMAILALERTS_FORM_DESC_ALERT_IS_DEFAULT" required="true" filter="raw" class="btn-group btn-group-yesno" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="filter_is_default" type="list" onchange="this.form.submit();">
+			<option value="">COM_JMAILALERTS_ALERTS_IS_DEFAULT_FILTER</option>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="allowed_freq" type="sql" label="COM_JMAILALERTS_FORM_LBL_ALERT_ALLOWED_FREQ" description="COM_JMAILALERTS_FORM_DESC_ALERT_ALLOWED_FREQ" required="true" multiple="true" query="SELECT freq.id, freq.name FROM `#__jma_frequencies` AS freq WHERE freq.state=1" key_field="id" value_field="name"/>
+
+		<field name="usergroup" type="sql" label="COM_JMAILALERTS_FORM_LBL_ALERT_ALLOWED_USERGROUPS" description="COM_JMAILALERTS_FORM_LBL_ALERT_ALLOWED_USERGROUPS" multiple="true" query="SELECT ug.id, ug.title FROM `#__usergroups` AS ug " key_field="id" value_field="title" showon="is_default:1"/>
+
+		<field name="default_freq" type="sql" label="COM_JMAILALERTS_FORM_LBL_ALERT_DEFAULT_FREQ" description="COM_JMAILALERTS_FORM_DESC_ALERT_DEFAULT_FREQ" required="true" filter="raw" multiple="false" query="SELECT freq.id, freq.name FROM `#__jma_frequencies` AS freq WHERE freq.state=1" key_field="id" value_field="name"/>
+
+		<field name="batch_size" type="text" label="COM_JMAILALERTS_FORM_LBL_ALERT_BATCH_SIZE" description="COM_JMAILALERTS_FORM_DESC_ALERT_BATCH_SIZE" default="40" filter="raw" />
+		<field name="enable_batch" type="radio" label="COM_JMAILALERTS_FORM_LBL_ALERT_ENABLE_BATCH" description="COM_JMAILALERTS_FORM_DESC_ALERT_ENABLE_BATCH" class="btn-group btn-group-yesno" default="0" required="true" filter="raw">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="email_subject" type="text" label="COM_JMAILALERTS_FORM_LBL_ALERT_EMAIL_SUBJECT" description="COM_JMAILALERTS_FORM_DESC_ALERT_EMAIL_SUBJECT" required="true" filter="string" maxlength="255" />
+		<field name="template" type="editor" label="COM_JMAILALERTS_FORM_LBL_ALERT_TEMPLATE" description="COM_JMAILALERTS_FORM_DESC_ALERT_TEMPLATE" required="true" cols="150" rows="20" filter="raw" width="95%"/>
+		<field name="template_css" type="textarea" label="COM_JMAILALERTS_FORM_LBL_ALERT_TEMPLATE_CSS" description="COM_JMAILALERTS_FORM_DESC_ALERT_TEMPLATE_CSS" cols="150" rows="8" filter="raw" class="jma_width_90"/>
+		<field name="state" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1" default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+		<field name="checked_out" type="hidden" filter="unset" />
+		<field name="checked_out_time" type="hidden" filter="unset" />
+	</fieldset>
+</form>

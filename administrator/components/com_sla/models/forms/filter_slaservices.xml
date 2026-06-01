@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter">
+		<field
+			name="search"
+			type="text"
+			filter="string"
+			label="COM_SLA_SLA_SERVICE_FILTER_SEARCH_LABEL"
+			description="COM_SLA_SLA_SERVICE_FILTER_SEARCH_DESC"
+			hint="JSEARCH_FILTER"
+		/>
+		<field
+			name="sla_id"
+			type="sql"
+			filter="int"
+			query="SELECT id,title FROM `#__tj_slas` WHERE state = '1' ORDER BY id DESC" key_field="id" value_field="title"
+			translate="false"
+			header="COM_SLA_SLA_SERVICE_FILTER_SLA"
+			label="COM_SLA_SLA_SERVICE_FILTER_SLA"
+			description="COM_SLA_SLA_SERVICE_FILTER_SLA"
+			onchange="this.form.submit();"
+		/>
+		<field
+			name="sla_activity_type_id"
+			type="sql"
+			filter="int"
+			query="SELECT id,title FROM `#__tj_sla_activity_types` WHERE state = '1' ORDER BY id DESC" key_field="id" value_field="title"
+			translate="false"
+			header="COM_SLA_SLA_SERVICE_FILTER_SLA_ACTIVITY_TYPE"
+			label="COM_SLA_SLA_SERVICE_FILTER_SLA_ACTIVITY_TYPE"
+			description="COM_SLA_SLA_SERVICE_FILTER_SLA_ACTIVITY_TYPE"
+			onchange="this.form.submit();"
+		/>
+		<field
+			name="state"
+			type="status"
+			label="COM_SLA_SLA_SERVICE_FILTER_PUBLISHED"
+			description="COM_SLA_SLA_SERVICE_FILTER_PUBLISHED_DESC"
+			onchange="this.form.submit();"
+			>
+			<option value="">JOPTION_SELECT_PUBLISHED</option>
+		</field>
+		<input type="hidden" name="form_submited" value="1"/>
+	</fields>
+
+	<fields name="list">
+		<field
+			name="limit"
+			type="limitbox"
+			label="JGLOBAL_LIMIT"
+			description="JGLOBAL_LIMIT"
+			class="input-mini"
+			default="25"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</form>

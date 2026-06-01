@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+    <name>com_tc</name>
+	<creationDate>10th Feb 2020</creationDate>
+    <copyright>Copyright (C) 2016 - 2020 Techjoomla. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <author>Techjoomla</author>
+    <authorEmail>extensions@techjoomla.com</authorEmail>
+    <authorUrl>https://techjoomla.com</authorUrl>
+    <version>1.0.1</version>
+    <description>This TC manager is used to assign TC's for any pages of site.</description>
+	<scriptfile>script.tc.php</scriptfile>
+
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <update> <!-- Runs on update -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/update.mysql.utf8.sql</file>
+        </sql>
+    </update>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>tc.php</filename>
+        <filename>controller.php</filename>
+        <folder>views</folder>
+        <folder>models</folder>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+    </files>
+    <media destination="com_tc" folder="media">
+        <folder>js</folder>
+        <folder>css</folder>
+    </media>
+    <languages folder="languages/site">
+			<language tag="en-GB">en-GB/en-GB.com_tc.ini</language>
+    </languages>
+    <administration>
+		<menu img="media/com_tc/images/s_com_tc.png" >COM_TC</menu>
+        <submenu>
+			<menu link="option=com_tc&amp;view=contents" view="contents" img="components/com_tc/assets/images/s_contents.png" alt="Tc/Contents">COM_TC_TITLE_CONTENTS</menu>
+			<menu link="option=com_tc&amp;view=usertcs" view="usertcs" img="components/com_tc/assets/images/s_contents.png" alt="Tc/usertcs">COM_TC_TITLE_USERTCS</menu>
+        </submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>tc.php</filename>
+            <folder>controllers</folder>
+            <folder>assets</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="languages/administrator">
+			<language tag="en-GB">en-GB/en-GB.com_tc.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_tc.sys.ini</language>
+        </languages>
+    </administration>
+    <config>
+
+    </config>
+</extension>

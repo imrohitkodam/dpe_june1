@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="params">
+		<field name="name" type="text" description="RST_KB_CATEGORY_NAME_DESC" label="RST_KB_CATEGORY_NAME" required="true" size="64" />
+		<field name="alias" type="text" description="RST_KB_CATEGORY_ALIAS_DESC" label="RST_KB_CATEGORY_ALIAS" size="64" />
+		<field name="parent_id" type="kbcategories" label="RST_KB_CATEGORY_PARENT" description="RST_KB_CATEGORY_PARENT_DESC" show_noparent="true" />
+		<field name="show_name" type="radio" class="btn-group btn-group-yesno" label="RST_KB_SHOW_CATEGORY_NAME" description="RST_KB_SHOW_CATEGORY_NAME_DESC" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="description" type="editor" label="RST_KB_CATEGORY_DESCRIPTION" description="RST_KB_CATEGORY_DESCRIPTION_DESC" filter="raw" buttons="true" />
+		<field name="thumb" type="file" label="RST_KB_CATEGORY_THUMB" description="RST_KB_CATEGORY_THUMB_DESC" />
+		<field name="delete_thumb" type="radio" class="btn-group btn-group-yesno" label="RST_REMOVE_THUMB" description="RST_REMOVE_THUMB_DESC" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="layout" type="list" default="list" label="RST_CATEGORY_RESULTS_LAYOUT" description="RST_CATEGORY_RESULTS_LAYOUT_DESC">
+			<option value="list">RST_LIST_LAYOUT</option>
+			<option value="columns">RST_COLUMN_LAYOUT</option>
+		</field>
+		<field name="columns" type="list" default="3" label="RST_CATEGORY_COLUMNS_NUMBER" description="RST_CATEGORY_COLUMNS_NUMBER_DESC" showon="layout:columns">
+			<option value="2">J2</option>
+			<option value="3">J3</option>
+			<option value="4">J4</option>
+			<option value="6">J6</option>
+		</field>
+		<field name="tag_sorting" type="radio" class="btn-group btn-group-yesno" default="0" label="RST_CATEGORY_TAG_SORTING" description="RST_CATEGORY_TAG_SORTING_DESC">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="meta_description" label="RST_KB_CATEGORY_META_DESCRIPTION" description="RST_KB_CATEGORY_META_DESCRIPTION_DESC" type="textarea" filter="raw" rows="5" cols="50" />
+		<field name="meta_keywords" label="RST_KB_CATEGORY_META_KEYWORDS" description="RST_KB_CATEGORY_META_KEYWORDS_DESC" type="textarea" filter="raw" rows="5" cols="50" />
+		<field name="private" type="radio" class="btn-group btn-group-yesno" label="RST_PRIVATE" description="RST_PRIVATE_DESC" size="1" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="published" type="radio" class="btn-group btn-group-yesno" label="JPUBLISHED" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="id" type="hidden" />
+	</fieldset>
+</form>

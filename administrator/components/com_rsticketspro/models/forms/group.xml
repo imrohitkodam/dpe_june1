@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="general" label="RST_GENERAL">
+		<field name="name" type="text" description="RST_GROUP_DESC" label="RST_GROUP" required="true" size="64" />
+		<field name="export_tickets" default="0" type="radio" class="btn-group btn-group-yesno" description="RST_CAN_EXPORT_TICKETS_DESC" label="RST_CAN_EXPORT_TICKETS">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="id" type="hidden" />
+	</fieldset>
+	<fieldset name="submitting" label="RST_GROUP_SUBMITTING">
+		<field name="add_ticket" type="radio" class="btn-group btn-group-yesno" description="RST_CAN_ADD_TICKET_DESC" label="RST_CAN_ADD_TICKET">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="add_ticket_customers" type="radio" class="btn-group btn-group-yesno" description="RST_CAN_ADD_TICKET_CUSTOMERS_DESC" label="RST_CAN_ADD_TICKET_CUSTOMERS">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="add_ticket_staff" type="radio" class="btn-group btn-group-yesno" description="RST_CAN_ADD_TICKET_STAFF_DESC" label="RST_CAN_ADD_TICKET_STAFF">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+	</fieldset>
+	<fieldset name="replying" label="RST_GROUP_REPLYING">
+		<field name="answer_ticket" type="radio" class="btn-group btn-group-yesno" description="RST_CAN_ANSWER_TICKET_DESC" label="RST_CAN_ANSWER_TICKET">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="update_ticket_replies" type="radio" class="btn-group btn-group-yesno" description="RST_CAN_UPDATE_TICKET_REPLIES_DESC" label="RST_CAN_UPDATE_TICKET_REPLIES">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="update_ticket_replies_customers" type="radio" class="btn-group btn-group-yesno" description="RST_CAN_UPDATE_TICKET_REPLIES_CUSTOMERS_DESC" label="RST_CAN_UPDATE_TICKET_REPLIES_CUSTOMERS">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="update_ticket_replies_staff" type="radio" class="btn-group btn-group-yesno" description="RST_CAN_UPDATE_TICKET_REPLIES_STAFF_DESC" label="RST_CAN_UPDATE_TICKET_REPLIES_STAFF">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="delete_ticket_replies" type="radio" class="btn-group btn-group-yesno" description="RST_CAN_DELETE_TICKET_REPLIES_DESC" label="RST_CAN_DELETE_TICKET_REPLIES">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="delete_ticket_replies_customers" type="radio" class="btn-group btn-group-yesno" description="RST_CAN_DELETE_TICKET_REPLIES_CUSTOMERS_DESC" label="RST_CAN_DELETE_TICKET_REPLIES_CUSTOMERS">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="delete_ticket_replies_staff" type="radio" class="btn-group btn-group-yesno" description="RST_CAN_DELETE_TICKET_REPLIES_STAFF_DESC" label="RST_CAN_DELETE_TICKET_REPLIES_STAFF">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+	</fieldset>
+	<fieldset name="viewing" label="RST_GROUP_VIEWING">
+		<field name="see_unassigned_tickets" type="radio" class="btn-group btn-group-yesno" description="RST_CAN_SEE_UNASSIGNED_TICKETS_DESC" label="RST_CAN_SEE_UNASSIGNED_TICKETS">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="see_other_tickets" type="radio" class="btn-group btn-group-yesno" description="RST_CAN_SEE_OTHER_TICKETS_DESC" label="RST_CAN_SEE_OTHER_TICKETS">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+	</fieldset>
+	<fieldset name="updating" label="RST_GROUP_UPDATING">
+		<field name="update_ticket" type="radio" class="btn-group btn-group-yesno" description="RST_CAN_UPDATE_TICKET_DESC" label="RST_CAN_UPDATE_TICKET">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="update_ticket_custom_fields" type="radio" class="btn-group btn-group-yesno" description="RST_CAN_UPDATE_TICKET_CUSTOM_FIELDS_DESC" label="RST_CAN_UPDATE_TICKET_CUSTOM_FIELDS">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="assign_tickets" type="radio" class="btn-group btn-group-yesno" description="RST_CAN_ASSIGN_TICKETS_DESC" label="RST_CAN_ASSIGN_TICKETS">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="change_ticket_status" type="radio" class="btn-group btn-group-yesno" description="RST_CAN_CHANGE_TICKET_STATUS_DESC" label="RST_CAN_CHANGE_TICKET_STATUS">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="move_ticket" type="radio" class="btn-group btn-group-yesno" description="RST_CAN_MOVE_TICKET_DESC" label="RST_CAN_MOVE_TICKET">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="delete_ticket" type="radio" class="btn-group btn-group-yesno" description="RST_CAN_DELETE_TICKET_DESC" label="RST_CAN_DELETE_TICKET">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+	</fieldset>
+	<fieldset name="notes" label="RST_GROUP_NOTES">
+		<field name="view_notes" type="radio" class="btn-group btn-group-yesno" description="RST_CAN_VIEW_NOTES_DESC" label="RST_CAN_VIEW_NOTES">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="add_note" type="radio" class="btn-group btn-group-yesno" description="RST_CAN_ADD_NOTE_DESC" label="RST_CAN_ADD_NOTE">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="update_note" type="radio" class="btn-group btn-group-yesno" description="RST_CAN_UPDATE_NOTE_DESC" label="RST_CAN_UPDATE_NOTE">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="update_note_staff" type="radio" class="btn-group btn-group-yesno" description="RST_CAN_UPDATE_NOTE_STAFF_DESC" label="RST_CAN_UPDATE_NOTE_STAFF">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="delete_note" type="radio" class="btn-group btn-group-yesno" description="RST_CAN_DELETE_NOTE_DESC" label="RST_CAN_DELETE_NOTE">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="delete_note_staff" type="radio" class="btn-group btn-group-yesno" description="RST_CAN_DELETE_NOTE_STAFF_DESC" label="RST_CAN_DELETE_NOTE_STAFF">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+	</fieldset>
+</form>

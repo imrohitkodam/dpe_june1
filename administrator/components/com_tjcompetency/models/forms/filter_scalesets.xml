@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter">
+		<field
+			name="search"
+			type="text"
+			filter="string"
+			label="COM_COMPETENCY_COMPETENCY_SCALESET_FILTER_SEARCH_LABEL"
+			description="COM_COMPETENCY_COMPETENCY_SCALESET_FILTER_SEARCH_LABEL_DESC"
+			hint="JSEARCH_FILTER"
+		/>
+
+		<field
+			name="created_by"
+			type="sql"
+			query="SELECT DISTINCT (`cf`.`created_by`) as tmpl_created_by, u.name FROM `#__tjcompetency_scale_sets` AS cf LEFT JOIN `#__users` AS u ON (cf.created_by = u.id)"
+			key_field="tmpl_created_by"
+			value_field="name"
+			filter="safehtml"
+			label="COM_COMPETENCY_COMPETENCY_SCALESET_FILTER_CREATED_BY_LABEL"
+			description="COM_COMPETENCY_COMPETENCY_SCALESET_FILTER_CREATED_BY_DESC"
+			onchange="this.form.submit();">
+			<option value="">COM_COMPETENCY_COMPETENCY_SCALESET_FILTER_CREATED_BY_SELECT_USER</option>
+		</field>
+
+		<field
+			name="state"
+			type="status"
+			label="COM_COMPETENCY_COMPETENCY_SCALESET_FILTER_STATUS_LABEL"
+			description="COM_COMPETENCY_COMPETENCY_SCALESET_FILTER_STATUS_DESC"
+			onchange="this.form.submit();"
+			>
+			<option value="">JOPTION_SELECT_PUBLISHED</option>
+		</field>
+		<input type="hidden" name="form_submited" value="1"/>
+	</fields>
+
+	<fields name="list">
+		<field
+			name="limit"
+			type="limitbox"
+			class="input-mini"
+			default="25"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</form>

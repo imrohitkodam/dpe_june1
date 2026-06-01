@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="details">
+        <field
+            name="id"
+            type="hidden"
+        />
+        <field
+            name="title"
+            type="text"
+            label="COM_SEAICHAT_CTA_FIELD_TITLE"
+            description="COM_SEAICHAT_CTA_FIELD_TITLE_DESC"
+            required="true"
+            maxlength="255"
+            hint="e.g. Ticket Page, Pricing, Contact Us"
+        />
+        <field
+            name="keywords"
+            type="text"
+            label="COM_SEAICHAT_CTA_FIELD_KEYWORDS"
+            description="COM_SEAICHAT_CTA_FIELD_KEYWORDS_DESC"
+            required="true"
+            maxlength="1000"
+            hint="ticket, support, help, issue"
+        />
+        <field
+            name="button_label"
+            type="text"
+            label="COM_SEAICHAT_CTA_FIELD_BUTTON_LABEL"
+            description="COM_SEAICHAT_CTA_FIELD_BUTTON_LABEL_DESC"
+            required="true"
+            maxlength="255"
+            hint="Open a Ticket"
+        />
+        <field
+            name="button_url"
+            type="text"
+            label="COM_SEAICHAT_CTA_FIELD_BUTTON_URL"
+            description="COM_SEAICHAT_CTA_FIELD_BUTTON_URL_DESC"
+            required="true"
+            maxlength="1000"
+            hint="/support/tickets or https://example.com/tickets"
+            filter="raw"
+        />
+        <field
+            name="button_icon"
+            type="text"
+            label="COM_SEAICHAT_CTA_FIELD_BUTTON_ICON"
+            description="COM_SEAICHAT_CTA_FIELD_BUTTON_ICON_DESC"
+            maxlength="100"
+            hint="fa-ticket"
+            default="fa-arrow-up-right-from-square"
+        />
+        <field
+            name="button_target"
+            type="list"
+            label="COM_SEAICHAT_CTA_FIELD_BUTTON_TARGET"
+            default="_self"
+        >
+            <option value="_self">Same Window</option>
+            <option value="_blank">New Window</option>
+        </field>
+        <field
+            name="published"
+            type="list"
+            label="JSTATUS"
+            default="1"
+        >
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+        </field>
+        <field
+            name="ordering"
+            type="number"
+            label="JFIELD_ORDERING_LABEL"
+            default="0"
+            min="0"
+        />
+    </fieldset>
+</form>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="general">
+		<field name="published" type="list" class="inputbox" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" size="1" filter="intval" default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+		<field name="name" type="text" class="input-xxlarge" label="COM_RSSEO_ERRORS_NAME" description="COM_RSSEO_ERRORS_NAME_DESC" required="true" size="70" />
+		<field name="error" type="text" class="input-small" label="COM_RSSEO_ERRORS_ERROR_CODE" description="COM_RSSEO_ERRORS_ERROR_CODE_DESC" required="true" size="20" filter="intval" />
+		<field name="type" type="list" class="inputbox" label="COM_RSSEO_ERRORS_ERROR_HANDLE" description="COM_RSSEO_ERRORS_ERROR_HANDLE_DESC" onchange="RSSeo.errorType(this.value)">
+			<option value="1">COM_RSSEO_ERRORS_ERROR_HANDLE_LAYOUT</option>
+			<option value="2">COM_RSSEO_ERRORS_ERROR_HANDLE_REDIRECT</option>
+		</field>
+		<field name="url" showon="type:2" type="url" filter="url" label="COM_RSSEO_ERRORS_ERROR_URL" description="COM_RSSEO_ERRORS_ERROR_URL_DESC" size="50" class="input-xxlarge" />
+		<field name="itemid" showon="type:1" type="text" class="input-small" label="COM_RSSEO_ERRORS_ERROR_ITEMID" description="COM_RSSEO_ERRORS_ERROR_ITEMID_DESC" size="20" filter="intval" default="" />
+		<field name="layout" showon="type:1" type="editor" filter="\Joomla\CMS\Component\ComponentHelper::filterText" class="inputbox" label="COM_RSSEO_ERRORS_ERROR_LAYOUT" description="COM_RSSEO_ERRORS_ERROR_LAYOUT_DESC" buttons="true" />
+		<field name="id" type="hidden" label="JGLOBAL_FIELD_ID_LABEL" description="JGLOBAL_FIELD_ID_DESC" size="10" default="0" readonly="true" />
+	</fieldset>
+</form>

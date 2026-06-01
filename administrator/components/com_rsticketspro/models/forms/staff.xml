@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="params">
+		<field name="user_id" type="user" label="JGLOBAL_USERNAME" labelclass="control-label" required="true" />
+		<field name="group_id" type="groups" label="RST_STAFF_GROUP" description="RST_STAFF_GROUP_DESC" />
+		<field name="department_id" type="departments" default="0" label="RST_STAFF_DEPARTMENTS" description="RST_STAFF_DEPARTMENTS_DESC" multiple="multiple" required="true" />
+		<field name="exclude_auto_assign" type="radio" default="0" class="btn-group btn-group-yesno" description="RST_STAFF_EXCLUDE_AUTO_ASSIGN_DESC" label="RST_STAFF_EXCLUDE_AUTO_ASSIGN">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="can_delete_time_history" type="radio" default="0" class="btn-group btn-group-yesno" description="RST_STAFF_CAN_DELETE_TIME_HISTORY_DESC" label="RST_STAFF_CAN_DELETE_TIME_HISTORY">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="can_delete_own_time_history" showon="can_delete_time_history:0" type="radio" default="0" class="btn-group btn-group-yesno" description="RST_STAFF_CAN_DELETE_OWN_TIME_HISTORY_DESC" label="RST_STAFF_CAN_DELETE_OWN_TIME_HISTORY">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="priority_id" type="priorities" label="RST_STAFF_PRIORITY" description="RST_STAFF_PRIORITY_DESC" all="true" />
+		<field name="signature" type="editor" label="RST_SIGNATURE" description="RST_SIGNATURE_DESC" filter="raw" buttons="true" />
+		<field name="id" type="hidden" />
+	</fieldset>
+</form>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="component" method="upgrade">
+    <name>com_mailcatcher</name>
+    <author>Solidres Team</author>
+    <creationDate>Oct 2022</creationDate>
+    <copyright>Copyright (C) 2016 Solidres. All rights reserved.</copyright>
+    <license>GNU General Public License version 3, or later</license>
+    <authorEmail>contact@solidres.com</authorEmail>
+    <authorUrl>https://www.solidres.com</authorUrl>
+    <version>1.2.0</version>
+    <description>COM_MAILCATCHER_XML_DESCRIPTION</description>
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/mysql/install.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/mysql/uninstall.sql</file>
+        </sql>
+    </uninstall>
+    <media folder="frontend/media/com_mailcatcher" destination="com_mailcatcher">
+        <folder>assets</folder>
+    </media>
+    <update>
+        <schemas>
+            <schemapath type="mysql">sql/mysql/updates</schemapath>
+        </schemas>
+    </update>
+    <administration>
+        <menu>COM_MAILCATCHER</menu>
+        <files folder="admin">
+            <filename>controller.php</filename>
+            <filename>mailcatcher.php</filename>
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>mailcatcher.xml</filename>
+            <folder>controllers</folder>
+            <folder>language</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+    </administration>
+</extension>

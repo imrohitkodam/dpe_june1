@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+        <field
+                name="search"
+                type="text"
+                label="COM_RSTICKETSPRO_FILTER_SEARCH_LABEL"
+                description="COM_RSTICKETSPRO_SEARCH_FILTER_PLACEHOLDER"
+                hint="JSEARCH_FILTER"
+        />
+
+		<field
+				name="department_id"
+				type="departments"
+				onchange="this.form.submit();"
+				default=""
+		>
+			<option value="">RST_SELECT_DEPARTMENT</option>
+		</field>
+
+		<field
+				name="priority_id"
+				type="priorities"
+				onchange="this.form.submit();"
+				default=""
+		>
+			<option value="">RST_SELECT_PRIORITY</option>
+		</field>
+
+		<field
+				name="status_id"
+				type="statuses"
+				onchange="this.form.submit();"
+				default=""
+		>
+			<option value="">RST_SELECT_STATUS</option>
+		</field>
+    </fields>
+
+    <fields name="list">
+        <field
+                name="fullordering"
+                type="list"
+                label="JGLOBAL_SORT_BY"
+                onchange="this.form.submit();"
+                default="date DESC"
+        >
+            <option value="">JGLOBAL_SORT_BY</option>
+			<option value="date ASC">COM_RSTICKETSPRO_DATE_ORDER_ASC</option>
+			<option value="date DESC">COM_RSTICKETSPRO_DATE_ORDER_DESC</option>
+			<option value="last_reply ASC">COM_RSTICKETSPRO_LASTREPLY_ORDER_ASC</option>
+			<option value="last_reply DESC">COM_RSTICKETSPRO_LASTREPLY_ORDER_DESC</option>
+			<option value="flagged ASC">COM_RSTICKETSPRO_FLAGGED_ORDER_ASC</option>
+			<option value="flagged DESC">COM_RSTICKETSPRO_FLAGGED_ORDER_DESC</option>
+			<option value="code ASC">COM_RSTICKETSPRO_CODE_ORDER_ASC</option>
+			<option value="code DESC">COM_RSTICKETSPRO_CODE_ORDER_DESC</option>
+			<option value="subject ASC">COM_RSTICKETSPRO_SUBJECT_ORDER_ASC</option>
+			<option value="subject DESC">COM_RSTICKETSPRO_SUBJECT_ORDER_DESC</option>
+			<option value="customer ASC">COM_RSTICKETSPRO_CUSTOMER_ORDER_ASC</option>
+			<option value="customer DESC">COM_RSTICKETSPRO_CUSTOMER_ORDER_DESC</option>
+			<option value="priority ASC">COM_RSTICKETSPRO_PRIORITY_ORDER_ASC</option>
+			<option value="priority DESC">COM_RSTICKETSPRO_PRIORITY_ORDER_DESC</option>
+			<option value="status ASC">COM_RSTICKETSPRO_STATUS_ORDER_ASC</option>
+			<option value="status DESC">COM_RSTICKETSPRO_STATUS_ORDER_DESC</option>
+			<option value="staff ASC">COM_RSTICKETSPRO_STAFF_ORDER_ASC</option>
+			<option value="staff DESC">COM_RSTICKETSPRO_STAFF_ORDER_DESC</option>
+        </field>
+
+        <field
+                name="limit"
+                type="limitbox"
+                label="JGLOBAL_LIST_LIMIT"
+                default="25"
+                onchange="this.form.submit();"
+        />
+    </fields>
+</form>

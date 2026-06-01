@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="general" label="RST_CRON_GENERAL">
+		<field name="name" type="text" description="RST_ACCOUNT_NAME_DESC" label="RST_ACCOUNT_NAME" required="true" size="64" />
+		<field name="server" type="text" description="RST_ACCOUNT_SERVER_DESC" label="RST_ACCOUNT_SERVER" required="true" size="64" />
+		<field name="protocol" type="list" description="RST_ACCOUNT_PROTOCOL_DESC" label="RST_ACCOUNT_PROTOCOL">
+			<option value="pop3">POP3</option>
+			<option value="imap">IMAP</option>
+		</field>
+		<field name="port" type="text" description="RST_ACCOUNT_PORT_DESC" label="RST_ACCOUNT_PORT" required="true" size="64" />
+		<field name="username" type="text" description="RST_ACCOUNT_USERNAME_DESC" label="RST_ACCOUNT_USERNAME" required="true" size="64" />
+		<field name="password" type="password" description="RST_ACCOUNT_PASSWORD_DESC" label="RST_ACCOUNT_PASSWORD" required="true" size="64" />
+		<field name="security" type="list" label="RST_ACCOUNT_SECURITY" description="RST_ACCOUNT_SECURITY_DESC" default="">
+			<option value="">RST_ACCOUNT_NONE</option>
+			<option value="ssl">SSL</option>
+			<option value="tls">TLS</option>
+		</field>
+		<field name="validate" type="radio" class="btn-group btn-group-yesno" label="RST_ACCOUNT_VALIDATE" description="RST_ACCOUNT_VALIDATE_DESC" default="0" showon="security:ssl,tls">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="check_interval" type="text" description="RST_ACCOUNT_CHECK_INTERVAL_DESC" label="RST_ACCOUNT_CHECK_INTERVAL" size="64" default="5" />
+		<field name="type" type="list" description="RST_ACCOUNT_TYPE_DESC" label="RST_ACCOUNT_TYPE" default="0">
+			<option value="0">RST_ACCOUNT_TYPE_AUTOMATIC</option>
+			<option value="1">RST_ACCOUNT_TYPE_MANUAL</option>
+			<option value="2">RST_ACCOUNT_TYPE_BOTH</option>
+		</field>
+		<field name="published" type="radio" class="btn-group btn-group-yesno" label="JPUBLISHED" size="1" default="1">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="id" type="hidden" />
+	</fieldset>
+	<fieldset name="advanced" label="RST_CRON_ADVANCED">
+		<field name="accept" type="list" description="RST_ACCOUNT_ACCEPT_DESC" label="RST_ACCOUNT_ACCEPT" default="2">
+			<option value="0">RST_NOBODY</option>
+			<option value="1">RST_REGISTERED</option>
+			<option value="2">RST_EVERYONE</option>
+		</field>
+		<field name="accept_all_replies" type="radio" class="btn-group btn-group-yesno" label="RST_ACCOUNT_ACCEPT_ALL_REPLIES" description="RST_ACCOUNT_ACCEPT_ALL_REPLIES_DESC" default="0">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="department_id" type="departments" published="true" label="RST_ACCOUNT_DEPARTMENTS" description="RST_ACCOUNT_DEPARTMENTS_DESC" />
+		<field name="priority_id" type="priorities" published="true" label="RST_ACCOUNT_PRIORITIES" description="RST_ACCOUNT_PRIORITIES_DESC" />
+		<field name="blacklist" type="textarea" label="RST_ACCOUNT_BLACKLIST" description="RST_ACCOUNT_BLACKLIST_DESC" rows="5" cols="50" />
+	</fieldset>
+</form>

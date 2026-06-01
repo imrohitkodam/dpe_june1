@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+<fieldset addfieldpath="/administrator/components/com_tjcompetency/models/fields">
+	<field name="id" type="hidden"/>
+
+	<field
+		name="scale_set_id"
+		type="competencyscalesets"
+		label="COM_COMPETENCY_COMPETENCY_SCALE_FORM_LBL_SCALESET"
+		description="COM_COMPETENCY_COMPETENCY_SCALE_FORM_DESC_SCALESET"
+		required="true"
+	/>
+
+	<field
+		name="title"
+		type="text"
+		label="JGLOBAL_TITLE"
+		description="JFIELD_TITLE_DESC"
+		class="input-xxlarge input-large-text"
+		size="40"
+		required="true"
+	/>
+
+	<field
+		name="sequence_number"
+		type="number"
+		label="COM_COMPETENCY_COMPETENCY_SCALE_FORM_LBL_SEQUENCE_NUMBER"
+		description="COM_COMPETENCY_COMPETENCY_SCALE_FORM_DESC_SEQUENCE_NUMBER"
+		min="0"
+		step="1"
+		filter="integer"
+		required="true"
+	/>
+
+	<field
+		name="description"
+		type="editor"
+		label="JGLOBAL_DESCRIPTION"
+		description="COM_CATEGORIES_DESCRIPTION_DESC"
+		filter="JComponentHelper::filterText"
+		buttons="true"
+		hide="readmore,pagebreak"
+	/>
+
+	<field
+		name="state"
+		type="list"
+		label="JSTATUS"
+		description="JFIELD_PUBLISHED_DESC"
+		default="1"
+		class="chzn-color-state"
+		size="1"
+		>
+		<option value="1">JPUBLISHED</option>
+		<option value="0">JUNPUBLISHED</option>
+		<option value="2">JARCHIVED</option>
+		<option value="-2">JTRASHED</option>
+	</field>
+
+	<field
+		name="created_by"
+		type="hidden"
+		/>
+
+		<field
+			name="modified_on"
+			type="hidden"/>
+
+		<field
+			name="modified_by"
+			type="hidden"
+		/>
+
+		<field
+			name="created_on"
+			type="hidden"/>
+
+		<field
+			name="checked_out"
+			type="hidden"
+			filter="unset"/>
+
+		<field
+			name="checked_out_time"
+			type="hidden"
+			filter="unset"/>
+
+		<fields name="params" label="COM_COMPETENCY_COMPETENCY_SCALE_FORM_LBL_PARAMS">
+		</fields>
+</fieldset>
+</form>

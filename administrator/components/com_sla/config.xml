@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+
+	<fieldset name="component" label="COM_SLA_SLA_GENEARAL_SETINGS" description="" addfieldpath="/media/com_sla/fields">
+		<field type="number" name="activityLimit" label="COM_SLA_ACTIVITY_COUNT_LIMIT" description="COM_SLA_ACTIVITY_COUNT_LIMIT_DESC" default="20"/>
+		<field menu="hide" type="legend" id="sla-reminder_cron_settings"
+			name="sla-reminder_cron_settings" label="" default="COM_SLA_SLA_REMINDER_CRON_SETTINGS" hint=""
+		/>
+		<field name="reminder_cron" type="remindercron"
+			label="COM_SLA_SLA_REMINDERCRON_LABEL" description="COM_SLA_SLA_REMINDERCRON_DESC"
+		/>
+	</fieldset>
+
+	<fieldset name="permissions" description="JCONFIG_PERMISSIONS_DESC" label="JCONFIG_PERMISSIONS_LABEL">
+		<field name="rules" type="rules" component="com_sla" class="inputbox" filter="rules" validate="rules" label="JCONFIG_PERMISSIONS_LABEL" section="component" />
+	</fieldset>
+</config>

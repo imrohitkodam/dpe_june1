@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<!-- Media setting  -->
+	<fieldset name="media_sets" label="COM_TIMELOG_MEDIA_SETS" description="">
+		<field name="upload_maxsize" type="text" default="10" label="COM_TIMELOG_UPLOAD_MAX_SIZE" description="COM_TIMELOG_UPLOAD_MAX_SIZE_DESC" />
+		<field name="upload_extensions" type="text" cols="60" rows="5" default="image/jpeg,image/jpg,image/png,application/pdf,text/plain" label="COM_TIMELOG_LEGAL_EXTENSION" description="COM_TIMELOG_LEGAL_EXTENSION_DESC" />
+		<field name="file_path" type="text" default="media/com_timelog/uploads/" label="COM_TIMELOG_UPLOAD_FILE_PATH" description="COM_TIMELOG_UPLOAD_FILE_PATH_DESC"/>
+	</fieldset>
+
+	<fieldset name="permissions" description="JCONFIG_PERMISSIONS_DESC" label="JCONFIG_PERMISSIONS_LABEL">
+		<field name="rules" type="rules" component="com_timelog" class="inputbox" filter="rules" validate="rules" label="JCONFIG_PERMISSIONS_LABEL" section="component" />
+	</fieldset>
+</config>

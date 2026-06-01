@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="4" type="component" method="upgrade">
+  <name>COM_REGULARLABSMANAGER</name>
+  <description>COM_REGULARLABSMANAGER_DESC</description>
+  <version>9.2.5</version>
+  <creationDate>October 2025</creationDate>
+  <author>Regular Labs (Peter van Westen)</author>
+  <authorEmail>info@regularlabs.com</authorEmail>
+  <authorUrl>https://regularlabs.com</authorUrl>
+  <copyright>Copyright © 2025 Regular Labs - All Rights Reserved</copyright>
+  <license>GNU General Public License version 2 or later</license>
+  <namespace path="src">RegularLabs\Component\RegularLabsExtensionsManager</namespace>
+  <scriptfile>script.install.php</scriptfile>
+  <administration>
+    <menu link="option=com_regularlabsmanager" img="class:regularlabs-extensionmanager">COM_REGULARLABSMANAGER
+        </menu>
+    <files folder="admin">
+      <file>access.xml</file>
+      <file>config.xml</file>
+      <file>regularlabsmanager.xml</file>
+      <folder>language</folder>
+      <folder>layouts</folder>
+      <folder>services</folder>
+      <folder>src</folder>
+      <folder>tmpl</folder>
+    </files>
+  </administration>
+  <media folder="media" destination="regularlabsmanager">
+    <folder>js</folder>
+  </media>
+</extension>

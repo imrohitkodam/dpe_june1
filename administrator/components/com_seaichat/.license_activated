@@ -1,0 +1,17 @@
+{
+    "activated": true,
+    "license_key": "SS-II0W-09QU-15BA-1E33",
+    "activated_date": "2026-05-27 12:38:18",
+    "domain": "qa.dataprotection.education",
+    "plan_title": "SE AI CHATBOT PRO",
+    "expires_at": "2027-05-19 10:09:16",
+    "status": "active",
+    "features": [
+        "tier:pro",
+        "max_kb_sources:unlimited",
+        "max_ctas:unlimited",
+        "premium_models",
+        "custom_system_prompt",
+        "source_links"
+    ]
+}

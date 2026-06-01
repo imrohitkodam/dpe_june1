@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+<fieldset addfieldpath="/administrator/components/com_tjcompetency/models/fields">
+	<field name="id" type="hidden"/>
+
+	<field
+		name="user_id"
+		type="user"
+		label="COM_COMPETENCY_COMPETENCY_SKILLCONTENTUSERMAP_FORM_LBL_USER"
+		description="COM_COMPETENCY_COMPETENCY_SKILLCONTENTUSERMAP_FORM_DESC_USER"
+		required="true"
+	/>
+
+	<field
+		name="skill_id"
+		type="CompetencySkills"
+		label="COM_COMPETENCY_COMPETENCY_SKILLCONTENTUSERMAP_FORM_LBL_SKILL"
+		description="COM_COMPETENCY_COMPETENCY_SKILLCONTENTUSERMAP_FORM_DESC_SKILL"
+		required="true"
+	/>
+
+	<field
+		name="scale_id"
+		type="CompetencyScales"
+		label="COM_COMPETENCY_COMPETENCY_SKILLCONTENTUSERMAP_FORM_LBL_SCALE"
+		description="COM_COMPETENCY_COMPETENCY_SKILLCONTENTUSERMAP_FORM_DESC_SCALE"
+		required="true"
+	/>
+
+	<field
+		name="client"
+		type="CompetencyContentTypes"
+		label="COM_COMPETENCY_COMPETENCY_SKILLCONTENTUSERMAP_FILTER_CONTENT_TYPE_LABEL"
+		description="COM_COMPETENCY_COMPETENCY_SKILLCONTENTUSERMAP_FILTER_CONTENT_TYPE_LABEL"
+		required="true"
+	/>
+
+	<field
+		name="reviewer_id"
+		type="user"
+		label="COM_COMPETENCY_COMPETENCY_SKILLCONTENTUSERMAP_FORM_LBL_REVIEWER"
+		description="COM_COMPETENCY_COMPETENCY_SKILLCONTENTUSERMAP_FORM_DESC_REVIEWER"
+	/>
+
+	<field
+		name="note"
+		type="textarea"
+		label="COM_COMPETENCY_COMPETENCY_SKILLCONTENTUSERMAP_FORM_LBL_NOTE"
+		description="COM_COMPETENCY_COMPETENCY_SKILLCONTENTUSERMAP_FORM_DESC_NOTE"
+	/>
+
+	<field
+		name="state"
+		type="list"
+		label="JSTATUS"
+		description="JFIELD_PUBLISHED_DESC"
+		default="1"
+		class="chzn-color-state"
+		size="1"
+		>
+		<option value="1">JPUBLISHED</option>
+		<option value="0">JUNPUBLISHED</option>
+		<option value="2">JARCHIVED</option>
+		<option value="-2">JTRASHED</option>
+		<option value="3">COM_COMPETENCY_COMPETENCY_SKILLCONTENTUSERMAP_STATE_OPTION_INREVIEW</option>
+	</field>
+
+	<field
+		name="created_by"
+		type="hidden"
+		/>
+
+		<field
+			name="modified_on"
+			type="hidden"/>
+
+		<field
+			name="modified_by"
+			type="hidden"
+		/>
+
+		<field
+			name="created_on"
+			type="calendar"
+			filter="user_utc"
+			format="%Y-%m-%d %H:%M:%S"
+			singleheader="true"
+			showtime="true"
+			timeformat="24"
+			todaybutton="false"
+			weeknumbers="false"
+			filltable="true"
+			minyear="-1"
+			maxyear="5"
+			default="now"
+			label="COM_COMPETENCY_COMPETENCY_SKILLCONTENTUSERMAP_FORM_LBL_CREATED_DATE"
+			description="COM_COMPETENCY_COMPETENCY_SKILLCONTENTUSERMAP_FORM_DESC_CREATED_DATE"
+		/>
+
+		<field
+			name="checked_out"
+			type="hidden"
+			filter="unset"/>
+
+		<field
+			name="checked_out_time"
+			type="hidden"
+			filter="unset"/>
+
+		<fields name="params" label="COM_COMPETENCY_COMPETENCY_SKILLCONTENTUSERMAP_FORM_LBL_PARAMS">
+		</fields>
+</fieldset>
+</form>

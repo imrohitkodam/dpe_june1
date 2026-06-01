@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter">
+		<field name="search" type="text" label="JSEARCH_FILTER" hint="JSEARCH_FILTER" />
+	</fields>
+
+	<fields name="list">
+		<field name="fullordering" type="list" onchange="this.form.submit();" default="id ASC">
+			<option value="">JGLOBAL_SORT_BY</option>
+			<option value="id ASC">JGRID_HEADING_ID_ASC</option>
+			<option value="id DESC">JGRID_HEADING_ID_DESC</option>
+			<option value="url ASC">COM_RSSEO_URL_ASC</option>
+			<option value="url DESC">COM_RSSEO_URL_DESC</option>
+			<option value="count ASC">COM_RSSEO_COUNT_ASC</option>
+			<option value="count DESC">COM_RSSEO_COUNT_DESC</option>
+			<option value="code ASC">COM_RSSEO_CODE_ASC</option>
+			<option value="code DESC">COM_RSSEO_CODE_DESC</option>
+		</field>
+		
+		<field name="limit" type="limitbox" default="25" class="input-mini" onchange="this.form.submit();" />
+	</fields>
+</form>

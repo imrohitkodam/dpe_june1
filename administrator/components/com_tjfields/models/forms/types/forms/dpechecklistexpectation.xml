@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="params" label="COM_TJFIELDS_FIELD_BASIC_LABEL">
+		<fieldset name="params">
+			<field name="tjfields[0][optionname]" type="text" readonly="true" default="Not Applicable" label="COM_TJFIELDS_CHECKLIST_EXPECTATION_NOT_APPLICABLE_LBL" description="COM_TJFIELDS_FORM_DESC_FIELD_QUERY"/>
+			<field name="tjfields[0][optionvalue]" type="hidden" readonly="true" default="Not Applicable" label="COM_TJFIELDS_FORM_LBL_FIELD_QUERY" description="COM_TJFIELDS_FORM_DESC_FIELD_QUERY"/>
+
+			<field name="tjfields[1][optionname]" type="text" readonly="true" default="Not Meeting Expectation" label="COM_TJFIELDS_CHECKLIST_EXPECTATION_NOT_MEETING_EXPECTATION_LBL" description="COM_TJFIELDS_FORM_DESC_FIELD_QUERY"/>
+			<field name="tjfields[1][optionvalue]" type="hidden" readonly="true" default="Not Meeting Expectation" label="COM_TJFIELDS_FORM_LBL_FIELD_QUERY" description="COM_TJFIELDS_FORM_DESC_FIELD_QUERY"/>
+
+			<field name="tjfields[2][optionname]" type="text" readonly="true" default="Partially Meeting Expectation" label="COM_TJFIELDS_CHECKLIST_EXPECTATION_PARTIALLY_MEETING_EXPECTATION_LBL" description="COM_TJFIELDS_FORM_DESC_FIELD_QUERY"/>
+			<field name="tjfields[2][optionvalue]" type="hidden" readonly="true" default="Partially Meeting Expectation" label="COM_TJFIELDS_FORM_LBL_FIELD_QUERY" description="COM_TJFIELDS_FORM_DESC_FIELD_QUERY"/>
+
+			<field name="tjfields[3][optionname]" type="text" readonly="true" default="Fully Meeting Expectation" label="COM_TJFIELDS_CHECKLIST_EXPECTATION_FULLY_MEETING_EXPECTATION_LBL" description="COM_TJFIELDS_FORM_DESC_FIELD_QUERY"/>
+			<field name="tjfields[3][optionvalue]" type="hidden" readonly="true" default="Fully Meeting Expectation" label="COM_TJFIELDS_FORM_LBL_FIELD_QUERY" description="COM_TJFIELDS_FORM_DESC_FIELD_QUERY"/>
+
+			<field name="addfieldpath" type="hidden" default="/administrator/components/com_tjfields/models/fields"/>
+
+		</fieldset>
+	</fields>
+</form>

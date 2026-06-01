@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fieldset name="component" label="COM_JMAILALERTS_COMPONENT_LABEL" description="" addfieldpath="/administrator/components/com_jmailalerts/models/fields/">
+		<field menu="hide" type="legend" id="jma-display-settings" name="jma-display-settings" label="" default="COM_JMAILALERTS_DISPLAY_SETTINGS" hint="" />
+		<field name="intro_msg" type="textarea" default="Unsubscribe or change your Keep in the Know! Preferences." label="" description="COM_JMAILALERTS_INTRO_MSG_DESC" rows="5" />
+		 <field name="guest_subcription" type="radio" default="0" class="btn-group btn-group-yesno" label="COM_JMAILALERTS_GUEST_SUBS" description="COM_JMAILALERTS_GUEST_SUBS_DESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="enable_login" type="radio" default="1" class="btn-group btn-group-yesno"  label="COM_JMAILALERTS_HIDE_LOGIN" description="COM_JMAILALERTS_HIDE_LOGIN_DESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="jstoolbar" type="radio" default="0" class="btn-group btn-group-yesno" label="COM_JMAILALERTS_SHOW_JOMSOCIAL_TOOLBAR" description="COM_JMAILALERTS_SHOW_JOMSOCIAL_TOOLBAR_DESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field menu="hide" type="legend" id="jma-cron-settings" name="jma-cron-settings" label="" default="COM_JMAILALERTS_CRON_SETTINGS" hint="" />
+		<field name="private_key_cronjob" type="cron" default="" label="COM_JMAILALERTS_PRIVATE_KEY_CRON" description="COM_JMAILALERTS_PRIVATE_KEY_CRON_DESC" />
+		<field name="cron_url" type="cron" default="" label="COM_JMAILALERTS_CRON_URL" description="COM_JMAILALERTS_CRON_URL_DESC" />
+		<field name="enable_logging" type="radio" default="1" class="btn-group btn-group-yesno" label="COM_JMAILALERTS_ENABLE_CRON_OP_LOG" description="COM_JMAILALERTS_ENABLE_CRON_OP_LOG_DESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field menu="hide" type="legend" id="jma-log-settings" name="jma-log-settings" label="" default="COM_JMAILALERTS_LOG_SETTINGS" hint="" />
+		<!-- <field name="enb_debug" type="radio" default="0" class="btn-group btn-group-yesno" label="COM_JMAILALERTS_VERBOSE_DEBUG" description="COM_JMAILALERTS_VERBOSE_DEBUG_DESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field> -->
+		<field name="mask_email_log" type="radio" default="1" class="btn-group btn-group-yesno" label="COM_JMAILALERTS_HIDE_EMAIL_IN_LOG" description="COM_JMAILALERTS_HIDE_EMAIL_IN_LOG_DESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="log_file_size" type="number" default="10" label="COM_JMAILALERTS_LOG_FILE_SIZE" description="COM_JMAILALERTS_LOG_FILE_SIZE_DESC" />
+	</fieldset>
+	<fieldset name="updates" label="COM_JMAILALERTS_OPTIONS_UPDATES_LBL">
+		<field name="downloadid" type="text" default="" size="30" label="COM_JMAILALERTS_OPTIONS_DOWNLOADID_LBL" description="COM_JMAILALERTS_OPTIONS_DOWNLOADID_DESC" />
+	</fieldset>
+	<fieldset name="permissions" description="JCONFIG_PERMISSIONS_DESC" label="JCONFIG_PERMISSIONS_LABEL">
+		<field name="rules" type="rules" component="com_jmailalerts" class="inputbox" filter="rules" validate="rules" label="JCONFIG_PERMISSIONS_LABEL" section="component" />
+	</fieldset>
+</config>

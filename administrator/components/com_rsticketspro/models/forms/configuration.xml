@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="general"
+	          label="RST_GENERAL">
+		<field name="date_format"
+		       label="RST_DATE_TIME"
+		       description="RST_DATE_TIME_DESC"
+		       type="text"
+		       size="40"/>
+		<field name="date_format_notime"
+		       label="RST_DATE_TIME_NOTIME"
+		       description="RST_DATE_TIME_NOTIME_DESC"
+		       type="text"
+		       size="40"/>
+		<field name="bootstrap"
+		       type="radio"
+		       class="btn-group btn-group-yesno"
+		       description="RST_RSTICKETSPRO_BOOTSTRAP_DESC"
+		       label="RST_RSTICKETSPRO_BOOTSTRAP"
+		       default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="jquery"
+		       type="radio"
+		       class="btn-group btn-group-yesno"
+		       description="RST_RSTICKETSPRO_LOAD_JQUERY_DESC"
+		       label="RST_RSTICKETSPRO_LOAD_JQUERY"
+		       default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="use_btn_group_radio"
+			   type="radio"
+			   class="btn-group btn-group-yesno"
+			   default="1"
+			   label="COM_RSTICKETSPRO_USE_BTNGROUP_ON_RADIOS"
+			   description="COM_RSTICKETSPRO_USE_BTNGROUP_ON_RADIOS_DESC">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="use_magnific_popup"
+			   type="radio"
+			   class="btn-group btn-group-yesno"
+			   default="0"
+			   label="RST_USE_MAGNIFIC_POPUP"
+			   description="RST_USE_MAGNIFIC_POPUP_DESC">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="allow_rich_editor"
+			   type="radio"
+			   class="btn-group btn-group-yesno"
+			   description="RST_ALLOW_RICH_EDITOR_DESC"
+			   label="RST_ALLOW_RICH_EDITOR">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="allow_rich_editor_buttons"
+			   type="radio"
+			   showon="allow_rich_editor:1"
+			   class="btn-group btn-group-yesno"
+			   description="RST_ALLOW_RICH_EDITOR_BUTTONS_DESC"
+			   label="RST_ALLOW_RICH_EDITOR_BUTTONS">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="calculate_itemids"
+			   type="radio"
+			   class="btn-group btn-group-yesno"
+			   description="RST_CALCULATE_ITEMIDS_DESC"
+			   label="RST_CALCULATE_ITEMIDS">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="rsticketspro_link"
+		       type="radio"
+		       class="btn-group btn-group-yesno"
+		       description="RST_RSTICKETSPRO_LINK_DESC"
+		       label="RST_RSTICKETSPRO_LINK">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+	</fieldset>
+	<fieldset name="data_protection" label="COM_RSTICKETSPRO_DATA_PROTECTION">
+		<field name="forms_consent" type="radio" default="1" class="btn-group btn-group-yesno" label="COM_RSTICKETSPRO_FORMS_CONSENT" description="COM_RSTICKETSPRO_FORMS_CONSENT_DESC" labelclass="control-label">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="forms_consent_staff_skip" type="radio" default="0" class="btn-group btn-group-yesno" label="COM_RSTICKETSPRO_FORMS_CONSENT_STAFF_SKIP" description="COM_RSTICKETSPRO_FORMS_CONSENT_STAFF_SKIP_DESC" labelclass="control-label" showon="forms_consent:1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="store_ip" type="radio" default="1" class="btn-group btn-group-yesno" label="COM_RSTICKETSPRO_STORE_IP" description="COM_RSTICKETSPRO_STORE_IP_DESC" labelclass="control-label">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="store_user_agent" type="radio" default="1" class="btn-group btn-group-yesno" label="COM_RSTICKETSPRO_STORE_USER_AGENT" description="COM_RSTICKETSPRO_STORE_USER_AGENT_DESC" labelclass="control-label">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="allow_self_anonymisation" type="radio" default="0" class="btn-group btn-group-yesno" label="COM_RSTICKETSPRO_ALLOW_SELF_ANONYMISATION" description="COM_RSTICKETSPRO_ALLOW_SELF_ANONYMISATION_DESC" labelclass="control-label">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="anonymise_joomla_data" type="radio" default="1" class="btn-group btn-group-yesno" label="COM_RSTICKETSPRO_ANONYMISE_JOOMLA_DATA" description="COM_RSTICKETSPRO_ANONYMISE_JOOMLA_DATA_DESC" labelclass="control-label">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+	</fieldset>
+	<fieldset name="messages"
+			  label="RST_MESSAGES">
+		<field name="global_message"
+			   type="editor"
+			   label="RST_GLOBAL_MESSAGE"
+			   description="RST_GLOBAL_MESSAGE_DESC"
+			   filter="raw"
+			   buttons="true"/>
+		<field name="global_message_position"
+			   type="list"
+			   default="top"
+			   label="RST_GLOBAL_MESSAGE_POSITION"
+			   description="RST_GLOBAL_MESSAGE_POSITION_DESC">
+			<option value="top">RST_MESSAGE_FORM_TOP</option>
+			<option value="bottom">RST_MESSAGE_FORM_BOTTOM</option>
+			<option value="disabled">RST_MESSAGE_FORM_DISABLED</option>
+		</field>
+		<field name="submit_message"
+			   type="editor"
+			   label="RST_SUBMIT_MESSAGE"
+			   description="RST_SUBMIT_MESSAGE_DESC"
+			   filter="raw"
+			   buttons="true"/>
+		<field name="submit_message_position"
+			   type="list"
+			   default="bottom"
+			   label="RST_SUBMIT_MESSAGE_POSITION"
+			   description="RST_SUBMIT_MESSAGE_POSITION_DESC">
+			<option value="top">RST_MESSAGE_FORM_TOP</option>
+			<option value="bottom">RST_MESSAGE_FORM_BOTTOM</option>
+			<option value="disabled">RST_MESSAGE_FORM_DISABLED</option>
+		</field>
+	</fieldset>
+	<fieldset name="ticket_submission" label="COM_RSTICKETSPRO_TICKET_SUBMISSION">
+		<field name="rsticketspro_add_tickets"
+			   type="list"
+			   description="RST_RECEIVE_TICKETS_FROM_DESC"
+			   label="RST_RECEIVE_TICKETS_FROM">
+			<option value="1">RST_EVERYONE</option>
+			<option value="0">RST_REGISTERED</option>
+		</field>
+		<field name="blocklist" type="textarea" label="RST_EMAIL_SUBMIT_BLOCKLIST" description="RST_EMAIL_SUBMIT_BLOCKLIST_DESC" rows="5" cols="50" />
+		<field name="emails_as_usernames"
+			   type="radio"
+			   class="btn-group btn-group-yesno"
+			   default="0"
+			   description="RST_RSTICKETSPRO_EMAILS_TO_USERS_DESC"
+			   label="RST_RSTICKETSPRO_EMAILS_TO_USERS_LABEL">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="show_alternative_email"
+			   type="radio"
+			   class="btn-group btn-group-yesno"
+			   description="RST_SHOW_ALTERNATIVE_EMAIL_DESC"
+			   label="RST_SHOW_ALTERNATIVE_EMAIL">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="allow_password_change"
+			   type="radio"
+			   class="btn-group btn-group-yesno"
+			   default="0"
+			   description="RST_RSTICKETSPRO_ALLOW_PASSWORD_DESC"
+			   label="RST_RSTICKETSPRO_ALLOW_PASSWORD_LABEL">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="user_type"
+			   type="usergrouplist"
+			   description="RST_NEW_USER_TYPE_DESC"
+			   label="RST_NEW_USER_TYPE"
+			   default="2"/>
+		<field name="submit_redirect"
+			   label="RST_REDIRECT_AFTER_SUBMIT"
+			   description="RST_REDIRECT_AFTER_SUBMIT_DESC"
+			   type="text"
+			   size="40"/>
+		<field name="spacer_predefined_subjects"
+			   type="spacer"
+			   label="RST_PREDEFINED_SUBJECTS"
+			   class="com-rsticketspro-spacer"/>
+		<field name="allow_predefined_subjects"
+			   type="radio"
+			   class="btn-group btn-group-yesno"
+			   description="RST_USE_PREDEFINED_SUBJECTS_DESC"
+			   label="RST_USE_PREDEFINED_SUBJECTS">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+	</fieldset>
+	<fieldset name="tickets"
+	          label="RST_TICKETS">
+		<field name="spacer_appearance"
+		       type="spacer"
+		       label="RST_APPEARANCE"
+		       class="com-rsticketspro-spacer"/>
+		<field name="ticket_view"
+		       type="list"
+		       description="RST_TICKET_VIEW_DESC"
+		       label="RST_TICKET_VIEW">
+			<option value="plain">RST_TICKET_VIEW_PLAIN</option>
+			<option value="tabbed">RST_TICKET_VIEW_TABBED</option>
+			<option value="accordion">RST_TICKET_VIEW_ACCORDION</option>
+		</field>
+		<field name="messages_direction"
+		       type="list"
+		       description="RST_MESSAGES_DIRECTION_DESC"
+		       label="RST_MESSAGES_DIRECTION">
+			<option value="ASC">RST_MESSAGES_ASC</option>
+			<option value="DESC">RST_MESSAGES_DESC</option>
+		</field>
+		<field name="show_ticket_info"
+		       type="radio"
+		       class="btn-group btn-group-yesno"
+		       description="RST_SHOW_TICKET_INFO_DESC"
+		       label="RST_SHOW_TICKET_INFO">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="show_user_info"
+		       type="list"
+		       description="RST_SHOW_USER_INFO_DESC"
+		       label="RST_SHOW_USER_INFO">
+			<option value="name">RST_NAME</option>
+			<option value="username">RST_USERNAME</option>
+			<option value="email">RST_EMAIL</option>
+		</field>
+		<field name="show_email_link"
+		       type="radio"
+		       class="btn-group btn-group-yesno"
+		       description="RST_SHOW_EMAIL_LINK_DESC"
+		       label="RST_SHOW_EMAIL_LINK">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="avatars"
+			   type="avatars"
+			   description="RST_AVATARS_ENABLE_DESC"
+			   label="RST_AVATARS_ENABLE"/>
+		<field name="ticket_viewing_history"
+		       type="list"
+		       description="RST_TICKET_VIEWING_HISTORY_DESC"
+		       label="RST_TICKET_VIEWING_HISTORY">
+			<option value="0">RST_TICKET_VIEWING_HISTORY_DISABLE</option>
+			<option value="1">RST_TICKET_VIEWING_HISTORY_STAFF</option>
+			<option value="2">RST_TICKET_VIEWING_HISTORY_CUSTOMER</option>
+		</field>
+		<field name="color_whole_ticket"
+		       type="radio"
+		       class="btn-group btn-group-yesno"
+		       description="RST_COLOR_WHOLE_TICKET_DESC"
+		       label="RST_COLOR_WHOLE_TICKET">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="spacer_customer_input"
+		       type="spacer"
+		       label="RST_CUSTOMER_INPUT"
+		       class="com-rsticketspro-spacer"/>
+		<field name="enable_followup"
+			   type="radio"
+			   class="btn-group btn-group-yesno"
+			   description="RST_ENABLE_FOLLOWUP_DESC"
+			   label="RST_ENABLE_FOLLOWUP_LABEL"
+			   default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="followup_cron_interval"
+		       label="RST_FOLLOWUP_CHECK"
+		       description="RST_FOLLOWUP_CHECK_DESC"
+		       type="text"
+		       size="40"/>
+		<field name="followup_interval"
+			   type="text"
+			   default="1"
+			   label="RST_EMAIL_FOLLOWUP_INTERVAL_LABEL"
+			   description="RST_EMAIL_FOLLOWUP_INTERVAL_DESC"/>
+		<field name="followup_enabled_time"
+			   type="hidden"
+			   default="0"/>
+		<field name="show_ticket_voting"
+			   type="radio"
+			   class="btn-group btn-group-yesno"
+			   description="RST_SHOW_TICKET_VOTING_DESC"
+			   label="RST_SHOW_TICKET_VOTING">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="allow_ticket_closing"
+		       type="radio"
+		       class="btn-group btn-group-yesno"
+		       description="RST_ALLOW_TICKET_CLOSING_DESC"
+		       label="RST_ALLOW_TICKET_CLOSING">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="allow_ticket_reopening"
+		       type="radio"
+		       class="btn-group btn-group-yesno"
+		       description="RST_ALLOW_TICKET_REOPENING_DESC"
+		       label="RST_ALLOW_TICKET_REOPENING">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="spacer_time_spent"
+		       type="spacer"
+		       label="RST_TIME_SPENT"
+		       class="com-rsticketspro-spacer"/>
+		<field name="enable_time_spent"
+		       type="radio"
+		       class="btn-group btn-group-yesno"
+		       description="RST_ENABLE_TIME_SPENT_DESC"
+		       label="RST_ENABLE_TIME_SPENT">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="time_spent_type"
+			   type="list"
+			   description="RST_TIME_SPENT_TYPE_DESC"
+			   label="RST_TIME_SPENT_TYPE">
+			<option value="input">RST_TIME_SPENT_INPUT</option>
+			<option value="tracking">RST_TIME_SPENT_TRACKING</option>
+		</field>
+		<field name="time_spent_unit"
+		       type="list"
+		       description="RST_TIME_SPENT_UNIT_DESC"
+		       label="RST_TIME_SPENT_UNIT">
+			<option value="m">RST_TIME_UNIT_MINUTES</option>
+			<option value="h">RST_TIME_UNIT_HOURS</option>
+			<option value="d">RST_TIME_UNIT_DAYS</option>
+		</field>
+		<field name="spacer_csv_export"
+			   type="spacer"
+			   label="COM_RSTICKETSPRO_CSV_EXPORT_SETTINGS"
+			   class="com-rsticketspro-spacer"/>
+		<field name="csv_strip_tags"
+			   label="COM_RSTICKETSPRO_CSV_STRIP_TAGS"
+			   description="COM_RSTICKETSPRO_CSV_STRIP_TAGS_DESC"
+			   class="btn-group btn-group-yesno"
+			   type="radio">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="csv_strip_newlines"
+			   label="COM_RSTICKETSPRO_CSV_STRIP_NEWLINES"
+			   description="COM_RSTICKETSPRO_CSV_STRIP_NEWLINES_DESC"
+			   class="btn-group btn-group-yesno"
+			   type="radio">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="csv_delimiter"
+			   label="COM_RSTICKETSPRO_CSV_DELIMITER"
+			   type="text"
+			   size="40"/>
+		<field name="csv_enclosure"
+			   label="COM_RSTICKETSPRO_CSV_ENCLOSURE"
+			   type="text"
+			   size="40"/>
+	</fieldset>
+	<fieldset name="staff_options" label="COM_RSTICKETSPRO_STAFF_OPTIONS">
+		<field name="admin_groups"
+			   type="usergrouplist"
+			   multiple="multiple"
+			   description="COM_RSTICKETSPRO_ADMIN_GROUPS_DESC"
+			   label="COM_RSTICKETSPRO_ADMIN_GROUPS_LABEL"
+			   default="6,7,8"/>
+		<field name="show_reply_as_customer"
+			   type="radio"
+			   class="btn-group btn-group-yesno"
+			   description="RST_SHOW_REPLY_AS_CUSTOMER_DESC"
+			   label="RST_SHOW_REPLY_AS_CUSTOMER">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="show_kb_search"
+			   type="radio"
+			   class="btn-group btn-group-yesno"
+			   description="RST_SHOW_KB_SEARCH_DESC"
+			   label="RST_SHOW_KB_SEARCH">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="show_signature"
+			   type="radio"
+			   class="btn-group btn-group-yesno"
+			   description="RST_SHOW_SIGNATURE_DESC"
+			   label="RST_SHOW_SIGNATURE">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="staff_force_departments"
+			   type="radio"
+			   class="btn-group btn-group-yesno"
+			   description="RST_STAFF_MEMBERS_FORCE_DEPARTMENTS_DESC"
+			   label="RST_STAFF_MEMBERS_FORCE_DEPARTMENTS">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+	</fieldset>
+	<fieldset name="captcha"
+	          label="RST_CAPTCHA">
+		<field name="captcha_enabled"
+		       type="list"
+		       description="RST_CAPTCHA_ENABLE_DESC"
+		       label="RST_CAPTCHA_ENABLE">
+			<option value="0">JNO</option>
+			<option value="1">RST_USE_BUILTIN_CAPTCHA</option>
+			<option value="3">RST_USE_RECAPTCHA_NEW</option>
+			<option value="4">RST_USE_RECAPTCHA_NEW_INVISIBLE</option>
+			<option value="5">RST_USE_RECAPTCHA_BUILT_IN_JOOMLA</option>
+		</field>
+		<field name="captcha_enabled_for"
+		       type="list"
+			   class="advancedSelect"
+		       multiple="multiple"
+			   showon="captcha_enabled!:0"
+		       description="RST_CAPTCHA_ENABLED_FOR_DESC"
+		       label="RST_CAPTCHA_ENABLED_FOR">
+			<option value="unregistered">RST_CAPTCHA_UNREGISTERED</option>
+			<option value="customers">RST_CAPTCHA_CUSTOMERS</option>
+			<option value="staff">RST_CAPTCHA_STAFF</option>
+		</field>
+		<field name="spacer_captcha"
+		       type="spacer"
+			   showon="captcha_enabled:1"
+		       label="RST_BUILT_IN_CAPTCHA"
+		       class="com-rsticketspro-spacer"/>
+		<field name="captcha_characters"
+			   showon="captcha_enabled:1"
+		       label="RST_CAPTCHA_CHARACTERS"
+		       description="RST_CAPTCHA_CHARACTERS_DESC"
+		       type="text"
+		       size="40"/>
+		<field name="captcha_case_sensitive"
+			   showon="captcha_enabled:1"
+		       type="radio"
+		       class="btn-group btn-group-yesno"
+		       description="RST_CAPTCHA_CASE_SENSITIVE_DESC"
+		       label="RST_CAPTCHA_CASE_SENSITIVE">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="spacer_recaptcha_new"
+			   showon="captcha_enabled:3,4"
+		       type="spacer"
+		       label="RST_RECAPTCHA_NEW_SETTINGS"
+		       class="com-rsticketspro-spacer"/>
+		<field name="recaptcha_new_site_key"
+			   showon="captcha_enabled:3,4"
+		       type="text"
+		       class="input-xlarge"
+		       description="RST_RECAPTCHA_NEW_SITE_KEY_DESC"
+		       label="RST_RECAPTCHA_NEW_SITE_KEY"
+		       size="70"/>
+		<field name="recaptcha_new_secret_key"
+			   showon="captcha_enabled:3,4"
+		       type="text"
+		       class="input-xlarge"
+		       description="RST_RECAPTCHA_NEW_SECRET_KEY_DESC"
+		       label="RST_RECAPTCHA_NEW_SECRET_KEY"
+		       size="70"/>
+		<field name="recaptcha_new_theme"
+			   showon="captcha_enabled:3,4"
+		       type="list"
+		       default="light"
+		       label="RST_RECAPTCHA_NEW_THEME"
+		       description="RST_RECAPTCHA_NEW_THEME_DESC">
+			<option value="light">RST_RECAPTCHA_NEW_THEME_LIGHT</option>
+			<option value="dark">RST_RECAPTCHA_NEW_THEME_DARK</option>
+		</field>
+		<field name="recaptcha_new_type"
+			   showon="captcha_enabled:3,4"
+		       type="list"
+		       default="image"
+		       label="RST_RECAPTCHA_NEW_TYPE"
+		       description="RST_RECAPTCHA_NEW_TYPE_DESC">
+			<option value="image">RST_RECAPTCHA_NEW_TYPE_IMAGE</option>
+			<option value="audio">RST_RECAPTCHA_NEW_TYPE_AUDIO</option>
+		</field>
+	</fieldset>
+	<fieldset name="email"
+	          label="RST_EMAIL">
+		<field name="email_use_global"
+		       type="radio"
+		       class="btn-group btn-group-yesno"
+		       description="RST_EMAIL_USE_GLOBAL_DESC"
+		       label="RST_EMAIL_USE_GLOBAL">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="email_address"
+			   showon="email_use_global:0"
+		       label="RST_EMAIL_FROM_EMAIL"
+		       description="RST_EMAIL_FROM_EMAIL_DESC"
+		       type="text"
+		       size="40"/>
+		<field name="email_address_fullname"
+			   showon="email_use_global:0"
+		       label="RST_EMAIL_FROM_FULLNAME"
+		       description="RST_EMAIL_FROM_FULLNAME_DESC"
+		       type="text"
+		       size="40"/>
+		<field name="email_address_reply_to"
+			   showon="email_use_global:0"
+			   label="RST_EMAIL_REPLY_TO"
+			   description="RST_EMAIL_REPLY_TO_DESC"
+			   type="text"
+			   size="40"/>
+		<field name="email_address_reply_to_name"
+			   showon="email_use_global:0"
+			   label="RST_EMAIL_REPLY_TO_NAME"
+			   description="RST_EMAIL_REPLY_TO_NAME_DESC"
+			   type="text"
+			   size="40"/>
+		<field name="use_reply_above"
+			   type="radio"
+		       class="btn-group btn-group-yesno"
+			   default="1"
+		       label="RST_USE_REPLY_ABOVE"
+		       description="RST_USE_REPLY_ABOVE_DESC">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="reply_above"
+			   showon="use_reply_above:1"
+		       label="RST_REPLY_ABOVE"
+		       description="RST_REPLY_ABOVE_DESC"
+		       type="text"
+			   filter="raw"
+		       size="40"/>
+		<field name="customer_itemid"
+		       label="RST_CONFIG_CUSTOMER_ITEMID"
+		       description="RST_CONFIG_CUSTOMER_ITEMID_DESC"
+		       type="text"
+		       size="40"/>
+		<field name="staff_itemid"
+		       label="RST_CONFIG_STAFF_ITEMID"
+		       description="RST_CONFIG_STAFF_ITEMID_DESC"
+		       type="text"
+		       size="40"/>
+	</fieldset>
+	<fieldset name="autoclose"
+	          label="RST_AUTOCLOSE">
+		<field name="autoclose_enabled"
+		       type="radio"
+		       class="btn-group btn-group-yesno"
+		       description="RST_AUTOCLOSE_ENABLE_DESC"
+		       label="RST_AUTOCLOSE_ENABLE">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="autoclose_automatically"
+		       type="radio"
+		       class="btn-group btn-group-yesno"
+		       description="RST_AUTOCLOSE_AUTOMATICALLY_DESC"
+		       label="RST_AUTOCLOSE_AUTOMATICALLY_LABEL">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="autoclose_cron_interval"
+		       label="RST_AUTOCLOSE_CHECK_DESC"
+		       description="RST_AUTOCLOSE_CHECK_DESC"
+		       type="text"
+		       size="40"/>
+		<field name="autoclose_email_interval"
+		       label="RST_AUTOCLOSE_DAYS_STATUS"
+		       description="RST_AUTOCLOSE_DAYS_STATUS_DESC"
+		       type="text"
+		       size="40"/>
+		<field name="autoclose_interval"
+		       label="RST_AUTOCLOSE_DAYS_CLOSED"
+		       description="RST_AUTOCLOSE_DAYS_CLOSED_DESC"
+		       type="text"
+		       size="40"/>
+	</fieldset>
+	<fieldset name="notices"
+	          label="RST_NOTICES">
+		<field name="notice_email_address"
+		       label="RST_NOTICES_EMAIL"
+		       description="RST_NOTICES_EMAIL_DESC"
+		       type="text"
+		       size="40"/>
+		<field name="notice_max_replies_nr"
+		       label="RST_NOTICES_NO_REPLIES"
+		       description="RST_NOTICES_NO_REPLIES_DESC"
+		       type="text"
+		       size="40"/>
+		<field name="notice_replies_with_no_response_nr"
+		       label="RST_NOTICES_NO_REPLIES_WITH_NO_RESPONSE"
+		       description="RST_NOTICES_NO_REPLIES_WITH_NO_RESPONSE_DESC"
+		       type="text"
+		       size="40"/>
+		<field name="notice_not_allowed_keywords"
+		       label="RST_NOTICES_TRIGGERED_KEYWORDS"
+		       description="RST_NOTICES_TRIGGERED_KEYWORDS_DESC"
+		       type="textarea"
+		       rows="5"
+		       cols="50"/>
+	</fieldset>
+	<fieldset name="knowledgebase"
+	          label="RST_KNOWLEDGEBASE">
+		<field name="kb_advanced_sef"
+		       type="radio"
+		       default="0"
+		       class="btn-group btn-group-yesno"
+		       description="RST_KB_ADVANCED_SEF_DESC"
+		       label="RST_KB_ADVANCED_SEF">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="kb_show_thumbs"
+		       type="radio"
+		       default="0"
+		       class="btn-group btn-group-yesno"
+		       label="RST_KB_SHOW_THUMBS"
+			   description="RST_KB_SHOW_THUMBS_DESC">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="kb_auto_calculate_hot_hits"
+			   type="radio"
+			   default="0"
+			   class="btn-group btn-group-yesno"
+			   label="RST_KB_AUTO_CALCULATE_HOT_HITS"
+			   description="RST_KB_AUTO_CALCULATE_HOT_HITS_DESC">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="kb_hot_hits"
+		       label="RST_KB_HOT_HITS"
+		       description="RST_KB_HOT_HITS_DESC"
+		       type="text"
+			   showon="kb_auto_calculate_hot_hits:0"
+		       size="40"/>
+		<field name="kb_load_plugin"
+		       type="radio"
+		       default="0"
+		       class="btn-group btn-group-yesno"
+		       description="RST_KB_LOAD_CONTENT_PLUGIN_DESC"
+		       label="RST_KB_LOAD_CONTENT_PLUGIN">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="kb_feedback_section"
+		       type="radio"
+		       default="0"
+		       class="btn-group btn-group-yesno"
+		       label="RST_KB_FEEDBACK_SECTION"
+			   description="RST_KB_FEEDBACK_SECTION_DESC">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="kb_comments"
+		       type="comments"
+		       description="RST_KB_COMMENTS_DESC"
+		       label="RST_KB_COMMENTS"/>
+	</fieldset>
+	<fieldset name="kbtemplate" label="RST_KB_TEMPLATE">
+		<field name="kb_template_body" type="editor" label="RST_KB_TEMPLATE_BODY" description="RST_KB_TEMPLATE_BODY_DESC" filter="raw" buttons="true" />
+		<field name="kb_template_ticket_body" type="editor" label="RST_KB_TEMPLATE_TICKET_BODY" description="RST_KB_TEMPLATE_TICKET_BODY_DESC" filter="raw" buttons="true" />
+	</fieldset>
+	<fieldset name="updates"
+	          label="RST_UPDATES">
+		<field name="global_register_code"
+		       type="text"
+		       description="RST_LICENSE_CODE_DESC"
+		       label="RST_LICENSE_CODE"
+		       size="70"/>
+	</fieldset>
+</form>

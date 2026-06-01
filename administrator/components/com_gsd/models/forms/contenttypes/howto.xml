@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="contenttype">
+        <fields name="howto">
+            <field name="name" type="map"
+                label="NR_TITLE"
+                description="GSD_HOWTO_NAME_DESC"
+                hint="How to tie a tie"
+                default="gsd.item.headline"
+                required="true"
+            />
+            <field name="image" type="mapimage"
+                label="NR_IMAGE"
+                description="GSD_HOWTO_IMAGE_DESC"
+                default="gsd.item.image"
+            />
+            <field name="estimatedCost" type="map"
+                label="GSD_HOWTO_ESTIMATE_COST"
+                description="GSD_HOWTO_ESTIMATE_COST_DESC"
+            />
+            <field name="estimatedCostCurrency" type="map"
+                label="GSD_HOWTO_ESTIMATE_COST_CURRENCY"
+                description="GSD_HOWTO_ESTIMATE_COST_CURRENCY_DESC"
+                hint="USD">
+                <subform>
+                    <field name="fixed" type="nr_currencies"
+                        showon="option:fixed"
+                        showselect="false"
+                    />
+                </subform>
+            </field>
+            <field name="supply" type="map"
+                label="GSD_HOWTO_SUPPLY"
+                description="GSD_HOWTO_SUPPLY_DESC"
+                custom_value_multiple="true"
+            />
+            <field name="tool" type="map"
+                label="GSD_HOWTO_TOOL"
+                description="GSD_HOWTO_TOOL_DESC"
+                custom_value_multiple="true"
+            />
+            <field name="totalTime" type="map"
+                label="GSD_HOWTO_TOTALTIME"
+                description="GSD_HOWTO_TOTALTIME_DESC"
+                default="gsd.item.offerprice"
+            />
+            <field name="mode" type="radio" 
+		        label="GSD_HOWTO_STEPS"
+				description="GSD_HOWTO_STEPS_TYPE"
+				default="auto"
+                class="btn-group btn-group-yesno">
+				<option value="auto">GSD_USE_CSS_SELECTORS</option>
+				<option value="manual">GSD_MANUAL_ENTRY</option>
+			</field>
+            <field name="howto_repeater" type="subform"
+                label="GSD_HOWTO_STEPS"
+                description="GSD_HOWTO_STEPS_DESC"
+                showon="mode:manual"
+                layout="joomla.form.field.subform.repeatable-table"
+                class="howToRepeater"
+                multiple="true"
+                default='{"howto_repeater":{}}'>
+                <form>
+                    <field name="name" type="textarea"
+                        label="GSD_HOWTO_STEP_NAME"
+                        description="GSD_HOWTO_STEP_NAME_DESC"
+                        rows="4"
+                    />
+                    <field name="text" type="textarea"
+                        label="GSD_HOWTO_STEP_TEXT"
+                        description="GSD_HOWTO_STEP_TEXT_DESC"
+                        rows="4"
+                    />
+                    <field name="image" type="media"
+                        label="GSD_HOWTO_STEP_IMAGE"
+                        description="GSD_HOWTO_STEP_IMAGE_DESC"
+                        preview="false"
+                    />
+                    <field name="url" type="url"
+                        label="GSD_HOWTO_STEP_URL"
+                        description="GSD_HOWTO_STEP_URL_DESC"
+                    />
+                </form>
+            </field>
+            <field name="name_selector" type="cssselector"
+                label="GSD_HOWTO_STEP_NAME"
+                description="GSD_HOWTO_STEP_NAME_DESC"
+                showon="mode:auto"
+                default='{"selector":".howToStep .name","task":"text","attr":""}'
+                hint=".howToStep .name"
+            />
+            <field name="text_selector" type="cssselector"
+                label="GSD_HOWTO_STEP_TEXT"
+                description="GSD_HOWTO_STEP_TEXT_DESC"
+                showon="mode:auto"
+                default='{"selector":".howToStep .text","task":"innerhtml","attr":""}'
+                hint=".howToStep .text"
+            />
+            <field name="image_selector" type="cssselector"
+                label="GSD_HOWTO_STEP_IMAGE"
+                description="GSD_HOWTO_STEP_IMAGE_DESC"
+                showon="mode:auto"
+                default='{"selector":".howToStep .image","task":"attr","attr":"src"}'
+                hint=".howToStep .image"
+            />
+            <field name="url_selector" type="cssselector"
+                label="GSD_HOWTO_STEP_URL"
+                description="GSD_HOWTO_STEP_URL_DESC"
+                showon="mode:auto"
+                default='{"selector":".howToStep .url","task":"attr","attr":"href"}'
+                hint=".howToStep .url"
+            />
+        </fields>
+    </fieldset>
+</form>

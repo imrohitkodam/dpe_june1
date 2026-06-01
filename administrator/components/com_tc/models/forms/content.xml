@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field name="tc_id" type="text" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC" />
+    <field name="ordering" type="hidden" filter="integer" />
+    <field name="state" default="1" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1">
+      <option value="1">JPUBLISHED</option>
+      <option value="0">JUNPUBLISHED</option>
+      <option value="2">JARCHIVED</option>
+      <option value="-2">JTRASHED</option>
+    </field>
+    <field name="checked_out" type="hidden" filter="integer" />
+    <field name="checked_out_time" default="0000-00-00 00:00:00" type="hidden" filter="unset" />
+    <field name="title" required="true" label="COM_TC_FORM_LBL_CONTENT_TITLE" description="COM_TC_FORM_DESC_CONTENT_TITLE" hint="COM_TC_FORM_LBL_CONTENT_TITLE" />
+    <field name="version" required="true" class="validate-version" label="COM_TC_FORM_LBL_CONTENT_VERSION" description="COM_TC_FORM_DESC_CONTENT_VERSION" hint="COM_TC_FORM_LBL_CONTENT_VERSION" />
+    <field name="client" required="true" id="client_id" class="validate-client" label="COM_TC_FORM_LBL_CONTENT_TC_CODE" description="COM_TC_FORM_DESC_CONTENT_TC_CODE" hint="COM_TC_FORM_LBL_CONTENT_TC_CODE" />
+    <field name="global" type="radio" class="btn-group" id="global_id" label="COM_TC_FORM_LBL_CONTENT_GLOBAL" description="COM_TC_FORM_LBL_CONTENT_GLOBLA_DESC" default="0">
+      <option value="1">JYES</option>
+      <option value="0">JNO</option>
+    </field>
+    <field name= "url_pattern" required="true" id="url_pattern_id" description= "COM_TC_FORM_LBL_CONTENT_URL_PATTERN_DESC"  type= "subform"  label= "COM_TC_FORM_LBL_CONTENT_URL_PATTERN"  min= "1"  max= "1000" showon="global:0" formsource= "/administrator/components/com_tc/models/forms/url_pattern.xml"  multiple= "true"  buttons= "add,remove"  layout="joomla.form.field.subform.repeatable-table" groupByFieldset="false" />
+    <field name="start_date" type="calendar" default="now" showtime="true" class="inputbox" format="%Y-%m-%d %H:%M:%S" required="true" label="COM_TC_FORM_LBL_CONTENT_START_DATE" description="COM_TC_FORM_DESC_CONTENT_START_DATE" hint="COM_TC_FORM_LBL_CONTENT_START_DATE" filter="user_utc" />
+    <field name="content" type="editor" filter="raw" label="COM_TC_FORM_LBL_CONTENT_CONTENT" buttons="true" description="COM_TC_FORM_DESC_CONTENT_CONTENT" hint="COM_TC_FORM_LBL_CONTENT_CONTENT" />
+    <field name="groups" type="usergrouplist" multiple="true" default="0" label="COM_TC_FORM_LBL_CONTENT_SELECT_USER_GROUP" description="COM_TC_FORM_LBL_CONTENT_SELECT_USER_GROUP_DESC" />
+    <field name="is_blacklist" type="radio" class="btn-group" label="COM_TC_FORM_LBL_CONTENT_USER_GROUP_BEHAVIOUR" description="COM_TC_FORM_LBL_CONTENT_USER_GROUP_BEHAVIOUR_DESC" default="1">
+      <option value="1">COM_TC_FORM_LBL_CONTENT_USER_GROUP_BEHAVIOUR_YES</option>
+      <option value="0">COM_TC_FORM_LBL_CONTENT_USER_GROUP_BEHAVIOUR_NO</option>
+    </field>
+    <field name="enforce_delay_days" type="hidden" required="" label="COM_TC_FORM_LBL_CONTENT_ENFORCE_DELAYS_DAY" description="COM_TC_FORM_LBL_CONTENT_ENFORCE_DELAYS_DAY_DESC" hint="COM_TC_FORM_LBL_CONTENT_ENFORCE_DELAYS_DAY" />
+    <field name="created_by" type="hidden" default="0" filter="integer" />
+    <field name="modified_by" type="hidden" default="0" filter="integer" />
+    <field name="created_on" type="calendar" filter="user_utc" />
+    <field name="modified_on" type="calendar" filter="user_utc" />
+  </fieldset>
+</form>

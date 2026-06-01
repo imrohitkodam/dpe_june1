@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<field name="keywords" type="text" class="input-xlarge" label="COM_RSSEO_PAGE_KEYWORDS" description="COM_RSSEO_PAGE_KEYWORDS_DESC" size="70" />
+	<field name="description" type="textarea" class="input-xlarge" label="COM_RSSEO_PAGE_DESCRIPTION" description="COM_RSSEO_PAGE_DESCRIPTION_DESC" cols="60" rows="5" />
+	<field name="frequency" type="list" class="inputbox" label="COM_RSSEO_PAGE_FREQUENCY" description="COM_RSSEO_PAGE_FREQUENCY_DESC" size="1" default="weekly">
+		<option value="none">COM_RSSEO_PAGE_PRIORITY_NONE</option>
+		<option value="always">COM_RSSEO_PAGE_PRIORITY_ALWAYS</option>
+		<option value="hourly">COM_RSSEO_PAGE_PRIORITY_HOURLY</option>
+		<option value="daily">COM_RSSEO_PAGE_PRIORITY_DAILY</option>
+		<option value="weekly">COM_RSSEO_PAGE_PRIORITY_WEEKLY</option>
+		<option value="monthly">COM_RSSEO_PAGE_PRIORITY_MONTHLY</option>
+		<option value="yearly">COM_RSSEO_PAGE_PRIORITY_YEARLY</option>
+		<option value="never">COM_RSSEO_PAGE_PRIORITY_NEVER</option>
+	</field>
+	<field name="priority" type="list" class="inputbox" label="COM_RSSEO_PAGE_PRIORITY" description="COM_RSSEO_PAGE_PRIORITY_DESC" size="1" default="0.5">
+		<option value="0">0</option>
+		<option value="0.1">0.1</option>
+		<option value="0.2">0.2</option>
+		<option value="0.3">0.3</option>
+		<option value="0.4">0.4</option>
+		<option value="0.5">0.5</option>
+		<option value="0.6">0.6</option>
+		<option value="0.7">0.7</option>
+		<option value="0.8">0.8</option>
+		<option value="0.9">0.9</option>
+		<option value="1">1</option>
+	</field>
+	<field name="published" type="list" class="inputbox" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" size="1" default="-">
+		<option value="-">COM_RSSEO_IGNORE</option>
+		<option value="1">JPUBLISHED</option>
+		<option value="0">JUNPUBLISHED</option>
+	</field>
+	<field name="insitemap" type="list" class="inputbox" label="COM_RSSEO_PAGE_ADD_TO_SITEMAP" description="COM_RSSEO_PAGE_ADD_TO_SITEMAP_DESC" size="1" default="-">
+		<option value="-">COM_RSSEO_IGNORE</option>
+		<option value="1">COM_RSSEO_ADD</option>
+		<option value="0">COM_RSSEO_REMOVE</option>
+	</field>
+	<field name="canonical" type="text" class="input-xlarge" label="COM_RSSEO_PAGE_CANONICAL" description="COM_RSSEO_PAGE_CANONICAL_DESC" size="60" default="" />
+	<field name="customhead" type="textarea" class="span12" cols="60" rows="5" filter="raw" hiddenLabel="true" />
+	<field name="scripts" type="textarea" class="span12" cols="60" rows="5" filter="raw" hiddenLabel="true" />
+	<field name="css" type="textarea" class="span12" cols="60" rows="5" filter="raw" hiddenLabel="true" />
+	
+	<fields name="robots">
+		<field name="index" type="list" class="inputbox" label="COM_RSSEO_PAGE_ROBOTS_INDEX" description="COM_RSSEO_PAGE_ROBOTS_INDEX_DESC" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+			<option value="off">COM_RSSEO_GLOBAL_OFF</option>
+		</field>
+		<field name="follow" type="list" class="inputbox" label="COM_RSSEO_PAGE_ROBOTS_FOLLOW" description="COM_RSSEO_PAGE_ROBOTS_FOLLOW_DESC" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+			<option value="off">COM_RSSEO_GLOBAL_OFF</option>
+		</field>
+		<field name="archive" type="list" class="inputbox" label="COM_RSSEO_PAGE_ROBOTS_ARCHIVE" description="COM_RSSEO_PAGE_ROBOTS_ARCHIVE_DESC" size="1" default="off">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+			<option value="off">COM_RSSEO_GLOBAL_OFF</option>
+		</field>
+		<field name="snippet" type="list" class="inputbox" label="COM_RSSEO_PAGE_ROBOTS_SNIPPET" description="COM_RSSEO_PAGE_ROBOTS_SNIPPET_DESC" size="1" default="off">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+			<option value="off">COM_RSSEO_GLOBAL_OFF</option>
+		</field>
+	</fields>
+</form>

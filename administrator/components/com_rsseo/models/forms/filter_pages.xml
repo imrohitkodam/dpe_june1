@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter">
+		<field name="search" type="text" label="JSEARCH_FILTER" hint="JSEARCH_FILTER" />
+		
+		<field name="level" type="integer" label="JOPTION_FILTER_LEVEL" description="JOPTION_FILTER_LEVEL_DESC" first="1" last="10" step="1" languages="*" onchange="this.form.submit();">
+			<option value="">JOPTION_SELECT_MAX_LEVELS</option>
+			<option value="127">COM_RSSEO_GLOBAL_UNDEFINED</option>
+		</field>
+		
+		<field name="published" type="list" onchange="this.form.submit();" default="">
+			<option value="">JOPTION_SELECT_PUBLISHED</option>
+			<option value="-1">COM_RSSEO_GLOBAL_INVALID</option>
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+		
+		<field name="insitemap" type="list" onchange="this.form.submit();">
+			<option value="">COM_RSSEO_SITEMAP_FILTER</option>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		
+		<field name="modified" type="list" onchange="this.form.submit();">
+			<option value="">COM_RSSEO_PAGE_MODIFIED_FILTER</option>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		
+		<field name="status" type="sql" sql_select="DISTINCT status" sql_from="#__rsseo_pages" sql_where="published=1 and status != 0" key_field="status" value_field="status" onchange="this.form.submit();">
+			<option value="">COM_RSSEO_PAGE_STATUS_FILTER</option>
+		</field>
+		
+	</fields>
+
+	<fields name="list">
+		<field name="fullordering" type="list" onchange="this.form.submit();" default="level ASC">
+			<option value="">JGLOBAL_SORT_BY</option>
+			<option value="id ASC">JGRID_HEADING_ID_ASC</option>
+			<option value="id DESC">JGRID_HEADING_ID_DESC</option>
+			<option value="url ASC">COM_RSSEO_PAGE_URL_ASC</option>
+			<option value="url DESC">COM_RSSEO_PAGE_URL_DESC</option>
+			<option value="title ASC">COM_RSSEO_PAGE_TITLE_ASC</option>
+			<option value="title DESC">COM_RSSEO_PAGE_TITLE_DESC</option>
+			<option value="level ASC">COM_RSSEO_PAGE_LEVEL_ASC</option>
+			<option value="level DESC">COM_RSSEO_PAGE_LEVEL_DESC</option>
+			<option value="grade ASC">COM_RSSEO_PAGE_GRADE_ASC</option>
+			<option value="grade DESC">COM_RSSEO_PAGE_GRADE_DESC</option>
+			<option value="crawled ASC">COM_RSSEO_PAGE_CRAWLED_ASC</option>
+			<option value="crawled DESC">COM_RSSEO_PAGE_CRAWLED_DESC</option>
+			<option value="hits ASC">COM_RSSEO_PAGE_HITS_ASC</option>
+			<option value="hits DESC">COM_RSSEO_PAGE_HITS_DESC</option>
+			<option value="date ASC">COM_RSSEO_DATE_ASC</option>
+			<option value="date DESC">COM_RSSEO_DATE_DESC</option>
+			<option value="status ASC">COM_RSSEO_STATUS_ASC</option>
+			<option value="status DESC">COM_RSSEO_STATUS_DESC</option>
+		</field>
+		
+		<field name="limit" type="limitbox" default="25" class="input-mini" onchange="this.form.submit();" />
+	</fields>
+</form>

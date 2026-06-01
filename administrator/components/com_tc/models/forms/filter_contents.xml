@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fields name="filter">
+    <field name="search" type="text" filter="string" label="JSEARCH_FILTER" description="COM_TC_CONTENTS_SEARCH_FILTER_DESC" hint="JSEARCH_FILTER" />
+    <field name="state" type="status" label="COM_TC_CONTENTS_FILTER_PUBLISHED" description="COM_TC_CONTENTS_FILTER_PUBLISHED_DESC" onchange="this.form.submit();">
+      <option value="">JOPTION_SELECT_PUBLISHED</option>
+    </field>
+    <field name="client" type="sql" query="SELECT DISTINCT (`client`) FROM `#__tc_content` ORDER BY client ASC" key_field="client" value_field="client" filter="safehtml" label="COM_TC_CONTENTS_TC_CODE" description="COM_TC_CONTENTS_TC_CODE_FILTER_DESC" onchange="this.form.submit();">
+      <option value="">COM_TC_CONTENTS_TC_CODE_FILTER</option>
+    </field>
+    <input type="hidden" name="form_submited" value="1" />
+  </fields>
+  <fields name="list">
+    <field name="fullordering" type="list" label="COM_CONTENT_LIST_FULL_ORDERING" description="COM_CONTENT_LIST_FULL_ORDERING_DESC" onchange="this.form.submit();" default="a.tc_id DESC">
+      <option value="">JGLOBAL_SORT_BY</option>
+      <option value="a.tc_id ASC">JGRID_HEADING_ID_ASC</option>
+      <option value="a.tc_id DESC">JGRID_HEADING_ID_DESC</option>
+      <option value="a.ordering ASC">JGRID_HEADING_ORDERING_ASC</option>
+      <option value="a.ordering DESC">JGRID_HEADING_ORDERING_DESC</option>
+      <option value="a.state ASC">JSTATUS_ASC</option>
+      <option value="a.state DESC">JSTATUS_DESC</option>
+      <option value="a.title ASC">JGLOBAL_TITLE_ASC</option>
+      <option value="a.title DESC">JGLOBAL_TITLE_DESC</option>
+      <option value="a.version ASC">COM_TC_CONTENTS_VERSION_ASC</option>
+      <option value="a.version DESC">COM_TC_CONTENTS_VERSION_DES</option>
+      <option value="a.client ASC">COM_TC_CONTENTS_TC_CODE_ASC</option>
+      <option value="a.client DESC">COM_TC_CONTENTS_TC_CODE_DES</option>
+      <option value="a.start_date ASC">COM_TC_CONTENTS_STARTDATE_ASC</option>
+      <option value="a.start_date DESC">COM_TC_CONTENTS_STARTDATE_DES</option>
+    </field>
+    <field name="limit" type="limitbox" class="input-mini" default="25" onchange="this.form.submit();" />
+  </fields>
+</form>

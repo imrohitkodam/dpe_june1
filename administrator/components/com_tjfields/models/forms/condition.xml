@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="id" type="hidden" size="40" class="inputbox"
+			label="COM_TJFIELDS_FORM_LBL_CONDITION_ID"
+			description="COM_TJFIELDS_FORM_DESC_CONDITION_ID"
+			filter="safehtml" />
+		<field name="state" type="hiddle" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1" default="1">
+		</field>
+		<field
+			name="show"
+			type="list"
+			label="COM_TJFIELDS_FORM_LBL_CONDITION_SHOW"
+			description="COM_TJFIELDS_FORM_DESC_CONDITION_SHOW"
+			default="1"
+			required="true">
+			<option value="1">Show</option>
+			<option value="0">Hide</option>
+		</field>
+
+		<field
+			name="field_to_show"
+			type="conditionalfields"
+			label="COM_TJFIELDS_FORM_LBL_CONDITION_FIELD_TO_SHOW"
+			description="COM_TJFIELDS_FORM_DESC_CONDITION_FIELD_TO_SHOW"
+			required="true">
+		</field>
+
+		<field
+			name="condition_match"
+			type="list"
+			label="COM_TJFIELDS_FORM_LBL_CONDITION_CONDITION_MATCH"
+			description="COM_TJFIELDS_FORM_DESC_CONDITION_CONDITION_MATCH"
+			default="1"
+			required="true">
+			<option value="1">All</option>
+			<option value="0">Any</option>
+		</field>
+		<field
+			name= "condition"
+			description= ""
+			type= "subform"
+			label="COM_TJFIELDS_FORM_LBL_CONDITION"
+			min= "1"
+			required= "true"
+			formsource= "administrator/components/com_tjfields/models/forms/sub_condition.xml"
+			multiple= "true"
+			buttons= "add,remove"
+			layout="joomla.form.field.subform.repeatable"
+			groupByFieldset="false">
+		</field>
+	</fieldset>
+</form>

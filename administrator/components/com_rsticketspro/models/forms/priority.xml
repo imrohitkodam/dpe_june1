@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="params">
+		<field name="name" type="text" description="RST_PRIORITY_DESC" label="RST_PRIORITY" required="true" size="64" />
+		<field name="bg_color" type="color" description="RST_PRIORITY_BACKGROUND_COLOR_DESC" label="RST_PRIORITY_BACKGROUND_COLOR" />
+		<field name="fg_color" type="color" description="RST_PRIORITY_FOREGROUND_COLOR_DESC" label="RST_PRIORITY_FOREGROUND_COLOR" />
+		<field name="published" type="radio" class="btn-group btn-group-yesno" label="JPUBLISHED" size="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="id" type="hidden" />
+	</fieldset>
+</form>

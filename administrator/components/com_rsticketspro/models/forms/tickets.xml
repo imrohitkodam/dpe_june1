@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="bulk">
+		<field name="bulk_department_id" type="departments" default="0" label="RST_TICKET_DEPARTMENT" onchange="RSTicketsPro.disableStaff(this, document.getElementById('bulk_staff_id'));">
+			<option value="0">RST_DO_NOT_CHANGE_DEPARTMENT</option>
+		</field>
+		<field name="bulk_staff_id" type="staff" default="-1" unassigned="true" label="RST_TICKET_STAFF">
+			<option value="-1">RST_DO_NOT_CHANGE_ASSIGNMENT</option>
+		</field>
+		<field name="bulk_priority_id" type="priorities" default="0" label="RST_TICKET_PRIORITY" published="true">
+			<option value="0">RST_DO_NOT_CHANGE_PRIORITY</option>
+		</field>
+		<field name="bulk_status_id" type="statuses" default="0" label="RST_TICKET_STATUS" published="true">
+			<option value="0">RST_DO_NOT_CHANGE_STATUS</option>
+		</field>
+		<field name="bulk_notify" type="list" default="0">
+			<option value="0">RST_DO_NOT_NOTIFY</option>
+			<option value="1">RST_NOTIFY_SELECTED</option>
+		</field>
+		<field name="bulk_delete" type="list" default="0" onchange="RSTicketsPro.disableBulk(this.value);">
+			<option value="0">RST_DO_NOT_DELETE</option>
+			<option value="1">RST_DELETE_SELECTED</option>
+		</field>
+	</fieldset>
+</form>

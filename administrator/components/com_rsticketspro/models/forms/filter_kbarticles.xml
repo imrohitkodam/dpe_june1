@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+        <field
+                name="search"
+                type="text"
+                label="COM_RSTICKETSPRO_FILTER_SEARCH_LABEL"
+                description="COM_RSTICKETSPRO_SEARCH_FILTER_PLACEHOLDER"
+                hint="JSEARCH_FILTER"
+        />
+		<field
+				name="state"
+				type="list"
+				onchange="this.form.submit();"
+				default=""
+		>
+			<option value="">JOPTION_SELECT_PUBLISHED</option>
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+		<field name="category_id" onchange="this.form.submit();" type="kbcategories" show_noparent="true" please="true" />
+		<field
+				name="private"
+				type="list"
+				onchange="this.form.submit();"
+				default=""
+		>
+			<option value="">COM_RSTICKETSPRO_SELECT_PRIVATE</option>
+			<option value="1">COM_RSTICKETSPRO_PRIVATE</option>
+			<option value="0">COM_RSTICKETSPRO_PUBLIC</option>
+		</field>
+    </fields>
+
+    <fields name="list">
+        <field
+                name="fullordering"
+                type="list"
+                label="JGLOBAL_SORT_BY"
+                onchange="this.form.submit();"
+                default="FormId ASC"
+        >
+            <option value="">JGLOBAL_SORT_BY</option>
+			<option value="a.ordering ASC">COM_RSTICKETSPRO_ORDERING_ORDER_ASC</option>
+			<option value="a.ordering DESC">COM_RSTICKETSPRO_ORDERING_ORDER_DESC</option>
+			<option value="a.name ASC">COM_RSTICKETSPRO_ARTICLE_ORDER_ASC</option>
+			<option value="a.name DESC">COM_RSTICKETSPRO_ARTICLE_ORDER_DESC</option>
+			<option value="c.name ASC">COM_RSTICKETSPRO_CATEGORY_ORDER_ASC</option>
+			<option value="c.name DESC">COM_RSTICKETSPRO_CATEGORY_ORDER_DESC</option>
+			<option value="a.hits ASC">COM_RSTICKETSPRO_HITS_ORDER_ASC</option>
+			<option value="a.hits DESC">COM_RSTICKETSPRO_HITS_ORDER_DESC</option>
+			<option value="a.private ASC">COM_RSTICKETSPRO_PRIVATE_ORDER_ASC</option>
+			<option value="a.private DESC">COM_RSTICKETSPRO_PRIVATE_ORDER_DESC</option>
+			<option value="a.published ASC">COM_RSTICKETSPRO_STATE_ORDER_ASC</option>
+			<option value="a.published DESC">COM_RSTICKETSPRO_STATE_ORDER_DESC</option>
+			<option value="a.id ASC">COM_RSTICKETSPRO_ID_ORDER_ASC</option>
+			<option value="a.id DESC">COM_RSTICKETSPRO_ID_ORDER_DESC</option>
+        </field>
+
+        <field
+                name="limit"
+                type="limitbox"
+                label="JGLOBAL_LIST_LIMIT"
+                default="25"
+                onchange="this.form.submit();"
+        />
+    </fields>
+</form>

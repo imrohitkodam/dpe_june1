@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<field name="subject" label="RST_TICKET_SUBJECT" type="text" size="40" />
+	<field name="department_id" type="departments" default="0" label="RST_TICKET_DEPARTMENT" published="true" onchange="RSTicketsPro.disableStaff();" />
+	<field name="date" type="rsticketsprohtml" label="RST_TICKET_DATE" escape="true" />
+	<field name="code" type="rsticketsprohtml" label="RST_TICKET_CODE" escape="true" />
+	<field name="status_id" type="statuses" default="0" label="RST_TICKET_STATUS" published="true" />
+	<field name="priority_id" type="priorities" default="0" label="RST_TICKET_PRIORITY" published="true" />
+	<field name="customer_id" type="rscustomer" label="RST_TICKET_CUSTOMER" />
+	<field name="alternative_email" label="RST_ALTERNATIVE_EMAIL" type="text" size="40" />
+	<field name="staff_id" type="staff" unassigned="true" label="RST_TICKET_STAFF" />
+	<field name="time_spent" label="RST_TIME_SPENT" type="text" size="40" />
+	<field name="search" label="RST_KNOWLEDGEBASE" messagebox="ticket_message" type="typeahead" class="input-xxlarge" size="40" />
+	<field name="message" type="rseditor" default="" rows="12" cols="80" label="RST_TICKET_MESSAGE" description="RST_TICKET_MESSAGE_DESC" required="true" filter="JComponentHelper::filterText" class="input-xxlarge" />
+	<field name="use_signature" type="radio" default="1" label="RST_ATTACH_SIGNATURE" class="btn-group btn-group-yesno">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="reply_as_customer" type="radio" default="0" label="RST_TICKET_REPLY_AS_CUSTOMER" class="btn-group btn-group-yesno">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="consent" type="checkboxes" label="" description="">
+		<option value="1">RST_TICKET_CONSENT_SUBMIT</option>
+	</field>
+	<field name="files" type="rsuploads" onclick="RSTicketsPro.addReplyFile();" label="RST_TICKET_ATTACHMENTS" description="RST_TICKET_ATTACHMENTS_DESC" />
+</form>

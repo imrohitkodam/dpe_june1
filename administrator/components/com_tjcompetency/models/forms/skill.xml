@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+<fieldset addfieldpath="/administrator/components/com_tjcompetency/models/fields">
+	<field name="id" type="hidden"/>
+
+	<field
+		name="framework_id"
+		type="competencyframeworks"
+		label="COM_COMPETENCY_COMPETENCY_SKILL_FORM_LBL_FRAMEWORK"
+		description="COM_COMPETENCY_COMPETENCY_SKILL_FORM_DESC_FRAMEWORK"
+		required="true"
+	/>
+
+	<field
+		name="parent_id"
+		type="skilledit"
+		label="COM_COMPETENCY_COMPETENCY_SKILL_FORM_PARENT_LABEL"
+		description="COM_COMPETENCY_COMPETENCY_SKILL_FORM_PARENT_DESC"
+	/>
+
+	<field
+		name="lft"
+		type="hidden"
+		filter="unset"
+	/>
+
+	<field
+		name="rgt"
+		type="hidden"
+		filter="unset"
+	/>
+
+	<field
+		name="level"
+		type="hidden"
+		filter="unset"
+	/>
+
+	<field
+		name="path"
+		type="text"
+		label="COM_COMPETENCY_COMPETENCY_SKILL_FORM_PATH_LABEL"
+		description="COM_COMPETENCY_COMPETENCY_SKILL_FORM_PATH_DESC"
+		class="readonly"
+		size="40"
+		readonly="true"
+	/>
+
+	<field
+		name="title"
+		type="text"
+		label="JGLOBAL_TITLE"
+		description="JFIELD_TITLE_DESC"
+		class="input-xxlarge input-large-text"
+		size="40"
+		required="true"
+	/>
+
+	<field
+		name="alias"
+		type="text"
+		label="JFIELD_ALIAS_LABEL"
+		description="JFIELD_ALIAS_DESC"
+		size="45"
+		hint="JFIELD_ALIAS_PLACEHOLDER"
+	/>
+
+	<field name="unique_code"
+		type="text"
+		label="COM_COMPETENCY_COMPETENCY_SKILL_FORM_LBL_UNIQUE_CODE"
+		description="COM_COMPETENCY_COMPETENCY_SKILL_FORM_DESC_UNIQUE_CODE"
+		filter="CMD"
+	/>
+
+	<field
+		name="description"
+		type="editor"
+		label="JGLOBAL_DESCRIPTION"
+		description="JGLOBAL_DESCRIPTION"
+		filter="JComponentHelper::filterText"
+		buttons="true"
+		hide="readmore,pagebreak"
+	/>
+
+	<field
+		name="state"
+		type="list"
+		label="JSTATUS"
+		description="JFIELD_PUBLISHED_DESC"
+		default="1"
+		class="chzn-color-state"
+		size="1"
+		>
+		<option value="1">JPUBLISHED</option>
+		<option value="0">JUNPUBLISHED</option>
+		<option value="2">JARCHIVED</option>
+		<option value="-2">JTRASHED</option>
+	</field>
+
+	<field
+		name="created_by"
+		type="hidden"
+		/>
+
+		<field
+			name="modified_on"
+			type="hidden"/>
+
+		<field
+			name="modified_by"
+			type="hidden"
+		/>
+
+		<field
+			name="created_on"
+			type="hidden"/>
+
+		<field
+			name="checked_out"
+			type="hidden"
+			filter="unset"/>
+
+		<field
+			name="checked_out_time"
+			type="hidden"
+			filter="unset"/>
+
+		<fields name="params" label="COM_COMPETENCY_COMPETENCY_SKILL_FORM_LBL_PARAMS">
+		</fields>
+</fieldset>
+</form>

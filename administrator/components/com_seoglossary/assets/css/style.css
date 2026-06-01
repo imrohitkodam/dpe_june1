@@ -1,0 +1,138 @@
+/**
+ * Styles for admin part of component
+ * 
+ * We developed this code with our hearts and passion.
+ * We hope you found it useful, easy to understand and change.
+ * Otherwise, please feel free to contact us at contact@joomunited.com
+ *
+ * @package 	SEO Glossary
+ * @copyright 	Copyright (C) 2012 JoomUnited (http://www.joomunited.com). All rights reserved.
+ * @license 	GNU General Public License version 2 or later; http://www.gnu.org/licenses/gpl-2.0.html
+ */
+
+#cpanel div.seoicon a {
+	border-radius: 5px 5px 5px 5px;
+	background-color: #FFFFFF;
+	background-position: -30px 50%;
+	color: #565656;
+	display: block;
+	float: left;
+	height: 130px;
+	text-decoration: none;
+	vertical-align: middle;
+	width: 130px;
+	transition: all 0.5s ease;
+}
+
+#cpanel div.seoicon a img {
+	margin-top: 25px;
+	padding: 0 0 10px 0;
+}
+
+#cpanel div.seoicon {
+	float: left;
+	margin-bottom: 15px;
+	margin-right: 15px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#cpanel div.seoicon span {
+	font-weight: bold;
+}
+
+#cpanel div.seoicon a:hover,
+#cpanel div.seoicon a:focus,
+#cpanel div.seoicon a:active {
+	background-position: 0;
+	box-shadow: -5px 10px 15px rgba(0, 0, 0, 0.25);
+	position: relative;
+	z-index: 10;
+	transition: all 0.5s ease;
+}
+
+.icon-48-catglossaries,.icon-48-glossaries {
+	background-image: url("../../assets/images/logo_top.png");
+	padding-left: 110px !important;
+	background-position: 0 1px;
+}
+
+form#component-form.form-validate div.current dd.tabs ul.config-option-list li label {
+	min-width: 260px;
+}
+
+form#component-form.form-validate div.current dd.tabs ul.config-option-list li fieldset.radio label {
+	min-width: 250px;
+}
+
+form#component-form.form-validate div.current dd.tabs ul.config-option-list li {
+	line-height: 15px;
+}
+
+form#component-form.form-validate div.current dd.tabs p.tab-description {
+	font-weight: bold;
+	font-size: 14px;
+}
+
+td.order input.text-area-order {
+	max-width: 20px;
+	max-height: 15px;
+	margin-top: 7px;
+}
+
+table.adminlist tbody tr.row0 {
+	border-top: 1px solid #DDDDDD;
+	background-color: #F9F9F9;
+}
+
+table.adminlist tbody tr.row0 td.order, table.adminlist tbody tr.row1 td.order {
+	text-align: center;
+}
+
+table.adminlist tbody tr.row1 {
+	border-top: 1px solid #DDDDDD;
+}
+
+fieldset.seoglossary {
+	float: left;
+    max-width: 80%;
+    min-width: 650px;
+}
+#glossary-form .control-group .input-append.input-group.controls #jform_tterm
+{
+	max-width:300px;
+}
+
+.com_seoglossary.view-glossary.layout-edit div#system-message-container {
+    float: none;
+}
+
+form#exportadminForm p button.btn.btn-primary.btn-large, .btn-group.btn-group-yesno p button.btn.btn-primary.btn-large {
+    background: #1d6cb0 none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 2px;
+    box-shadow: none;
+    font-size: 14px;
+    height: auto;
+    text-shadow: none;
+    width: auto;
+}
+
+form#exportadminForm p button.btn.btn-primary.btn-large:hover, .btn-group.btn-group-yesno p button.btn.btn-primary.btn-large:hover {
+    box-shadow: 1px 1px 12px #ccc;
+}
+
+form#exportadminForm p button.btn.btn-primary.btn-large:active, .btn-group.btn-group-yesno p button.btn.btn-primary.btn-large:active {
+    box-shadow: -1px 2px 10px 3px rgba(0, 0, 0, 0.3) inset;
+}
+
+div#j-main-container.span10.j-toggle-main div.row-fluid div.span4, div#j-main-container.span10.j-toggle-main div.row-fluid div.span8 {
+    border-left: 3px dashed #ccc;
+    padding-left: 10px;
+}
+
+div#j-main-container.span10.j-toggle-main div.row-fluid div.span4 h1, div#j-main-container.span10.j-toggle-main div.row-fluid div.span8 h1 {
+    color: #444;
+}
+#catglossary-form .adminform{ margin-top:10px;}
+#ju-form .btn-group.radio.group-yesno  .btn{max-width:50px; }

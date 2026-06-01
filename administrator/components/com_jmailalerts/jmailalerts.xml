@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="component" method="upgrade">
+	<name>com_jmailalerts</name>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>Copyright (C) 2009 - 2022 Techjoomla. All rights reserved.</copyright>
+	<creationDate>24th Mar 2022</creationDate>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>3.0.0</version>
+	<description>A complete digest solution for joomla.</description>
+
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+	<uninstall />
+
+	<files folder="site">
+		<filename>controller.php</filename>
+		<filename>index.html</filename>
+		<filename>jmailalerts.php</filename>
+		<filename>router.php</filename>
+
+		<folder>assets</folder>
+		<folder>controllers</folder>
+		<folder>emails</folder>
+		<folder>helpers</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+	</files>
+
+	<languages folder="languages">
+		<language tag="en-GB">site/en-GB/en-GB.com_jmailalerts.ini</language>
+	</languages>
+
+	<administration>
+		<menu img="components/com_jmailalerts/assets/images/s_com_jmailalerts.png">COM_JMAILALERTS</menu>
+		<submenu>
+			<menu link="option=com_jmailalerts&amp;view=dashboard" view="dashboard" img="components/com_jmailalerts/assets/images/s_dashboard.png" alt="Jmailalerts/Dashboard">COM_JMAILALERTS_TITLE_DASHBOARD</menu>
+			<menu link="option=com_jmailalerts&amp;view=frequencies" view="frequencies" img="components/com_jmailalerts/assets/images/s_frequencies.png" alt="Jmailalerts/Frequencies">COM_JMAILALERTS_TITLE_FREQUENCIES</menu>
+			<menu link="option=com_jmailalerts&amp;view=alerts" view="alerts" img="components/com_jmailalerts/assets/images/s_alerts.png" alt="Jmailalerts/Alerts">COM_JMAILALERTS_TITLE_ALERTS</menu>
+			<menu link="option=com_jmailalerts&amp;view=sync" view="alerts" img="components/com_jmailalerts/assets/images/s_sync.png" alt="Jmailalerts/Sync">COM_JMAILALERTS_TITLE_SYNC</menu>
+			<menu link="option=com_jmailalerts&amp;view=mailsimulate" view="mailsimulate" img="components/com_jmailalerts/assets/images/s_mailsimulate.png" alt="Jmailalerts/Mailsimulate">COM_JMAILALERTS_MAILSIMULATE</menu>
+			<menu link="option=com_jmailalerts&amp;view=subscribers" view="subscribers" img="components/com_jmailalerts/assets/images/s_subscribers.png" alt="Jmailalerts/Subscribers">COM_JMAILALERTS_TITLE_SUBSCRIBERS</menu>
+			<menu link="option=com_jmailalerts&amp;view=healthcheck" view="healthcheck" img="components/com_jmailalerts/assets/images/s_healthcheck.png" alt="Jmailalerts/Healthcheck">COM_JMAILALERTS_HEALTHCHECK</menu>
+		</submenu>
+
+		<files folder="administrator">
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>jmailalerts.php</filename>
+
+			<folder>assets</folder>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>models</folder>
+			<folder>plugins</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+
+		<languages folder="languages">
+			<language tag="en-GB">administrator/en-GB/en-GB.com_jmailalerts.ini</language>
+			<language tag="en-GB">administrator/en-GB/en-GB.com_jmailalerts.sys.ini</language>
+		</languages>
+
+	</administration>
+</extension>

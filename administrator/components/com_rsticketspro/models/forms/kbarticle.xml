@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="params" addfieldpath="/administrator/components/com_rsticketspro/models/fields">
+		<field name="name" type="text" description="RST_KB_ARTICLE_NAME_DESC" label="RST_KB_ARTICLE_NAME" required="true" size="64" />
+		<field name="alias" type="text" description="RST_KB_ARTICLE_ALIAS_DESC" label="RST_KB_ARTICLE_ALIAS" size="64" />
+		<field name="category_id" type="kbcategories" label="RST_KB_ARTICLE_CATEGORY" description="RST_KB_ARTICLE_CATEGORY_DESC" show_noparent="true" />
+		<field name="text" type="editor" label="RST_KB_ARTICLE_TEXT" description="RST_KB_ARTICLE_TEXT_DESC" filter="raw" buttons="true" />
+		<field name="draft" type="editor" label="RST_KB_ARTICLE_DRAFT" description="RST_KB_ARTICLE_DRAFT_DESC" filter="raw" buttons="true" />
+		<field name="thumb" type="file" label="RST_KB_ARTICLE_THUMB" description="RST_KB_ARTICLE_THUMB_DESC" />
+		<field name="delete_thumb" type="radio" class="btn-group btn-group-yesno" label="RST_REMOVE_THUMB" description="RST_REMOVE_THUMB_DESC" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="tags" type="rstags" label="RST_KB_ARTICLE_TAGS" class="rst-tags" description="RST_KB_ARTICLE_TAGS_DESC" multiple="true" />
+		<field name="meta_description" label="RST_KB_ARTICLE_META_DESCRIPTION" description="RST_KB_ARTICLE_META_DESCRIPTION_DESC" type="textarea" filter="raw" rows="5" cols="50" />
+		<field name="meta_keywords" label="RST_KB_ARTICLE_META_KEYWORDS" description="RST_KB_ARTICLE_META_KEYWORDS_DESC" type="textarea" filter="raw" rows="5" cols="50" />
+		<field name="private" type="radio" class="btn-group btn-group-yesno" label="RST_PRIVATE" description="RST_PRIVATE_DESC" size="1" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="published" type="radio" class="btn-group btn-group-yesno" label="JPUBLISHED" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="id" type="hidden" />
+	</fieldset>
+</form>

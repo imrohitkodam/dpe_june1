@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fields name="filter">
+    <field name="search" type="text" filter="string" label="JSEARCH_FILTER" description="COM_TC_USERS_SEARCH_FILTER_DESC" hint="JSEARCH_FILTER" />
+    <field name="client" type="sql" query="SELECT DISTINCT (`client`) FROM `#__tc_content` ORDER BY client ASC" key_field="client" value_field="client" filter="safehtml" label="COM_TC_CONTENTS_TC_CODE" description="COM_TC_CONTENTS_TC_CODE_FILTER_DESC" onchange="this.form.submit();">
+      <option value="">COM_TC_CONTENTS_TC_CODE_FILTER</option>
+    </field>
+    <input type="hidden" name="form_submited" value="1" />
+  </fields>
+  <fields name="list">
+    <field name="limit" type="limitbox" class="input-mini" default="25" onchange="this.form.submit();" />
+  </fields>
+</form>

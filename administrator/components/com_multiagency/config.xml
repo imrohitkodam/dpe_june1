@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fieldset label="COM_MULTIAGENCY" name="multiagency" addfieldpath="/administrator/components/com_multiagency/elements">
+		<field name="multiagency_manager_group" type="usergrouplist" default="0" label="COM_MULTIAGENCY_MULTIAGENCY_MANAGER_GROUP_LBL" description="COM_MULTIAGENCY_MULTIAGENCY_MANAGER_GROUP_DESC" />
+		<field name="multiagency_school_admin_group" type="usergrouplist" default="0" label="COM_MULTIAGENCY_MULTIAGENCY_SA_GROUP_LBL" description="COM_MULTIAGENCY_MULTIAGENCY_SA_GROUP_DESC" />
+		<field name="multiagency_admin_group" type="usergrouplist" default="0" label="COM_MULTIAGENCY_MULTIAGENCY_ADMIN_GROUP_LBL" description="COM_MULTIAGENCY_MULTIAGENCY_ADMIN_GROUP_DESC" />
+
+		<field name="multiagency_leadconsultant_group" type="usergrouplist" default="0" label="COM_MULTIAGENCY_MULTIAGENCY_LC_GROUP_LBL" description="COM_MULTIAGENCY_MULTIAGENCY_LC_GROUP_DESC" />
+
+		<field name="multiagency_trustee_group" type="usergrouplist" default="0" label="COM_MULTIAGENCY_MULTIAGENCY_TRUSTEE_GROUP_LBL" description="COM_MULTIAGENCY_MULTIAGENCY_TRUSTEE_GROUP_DESC" />
+
+		<field name="social_integration" class="btn-group" default="joomla" type="integration" label="COM_MULTIAGENCY_INTERATION" description="COM_MULTIAGENCY_INTERATION_DESC">
+		</field>
+		<!--<field name="manager_role_id" type="sql" style="width: 100%;" label="COM_MULTIAGENCY_MANAGER_USER_ROLE_LICENCES"  description="COM_MULTIAGENCY_MANAGER_USER_ROLE_LICENCES_DESC" query="SELECT id, name FROM #__tjsu_roles ORDER BY name ASC" key_field="id" value_field="name" required="true" >
+				<option value="">COM_MULTIAGENCY_MANAGER_ROLE</option>
+		</field>-->
+		<field name="multyagency_admin_role_id" type="sql" style="width: 100%;" label="COM_MULTIAGENCY_MULTIAGENCY_ADMIN_ROLE"  description="COM_MULTIAGENCY_MULTIAGENCY_ADMIN_ROLE_DESC" query="SELECT id, name FROM #__tjsu_roles ORDER BY name ASC" key_field="id" value_field="name" required="true" >
+				<option value="">COM_MULTIAGENCY_MULTIAGENCY_ADMIN_ROLE</option>
+		</field>
+		<field name="member_role_id" type="sql" style="width: 100%;" label="COM_MULTIAGENCY_STAFF_USER_ROLE_LICENCES"  description="COM_MULTIAGENCY_STAFF_USER_ROLE_LICENCES_DESC" query="SELECT id, name FROM #__tjsu_roles ORDER BY name ASC" key_field="id" value_field="name" required="true" >
+				<option value="">COM_MULTIAGENCY_MEMBER_ROLE</option>
+		</field>
+		<field name="school_admin_role_id" type="sql" style="width: 100%;" label="COM_MULTIAGENCY_SA_ROLE_LICENCES"  description="COM_MULTIAGENCY_SA_ROLE_LICENCES_DESC" query="SELECT id, name FROM #__tjsu_roles ORDER BY name ASC" key_field="id" value_field="name" required="true" >
+				<option value="">COM_MULTIAGENCY_SA_ROLE</option>
+		</field>
+		<field name="organization_lead_consultant_role_id" type="sql" style="width: 100%;" label="COM_MULTIAGENCY_LC_ROLE"  description="COM_MULTIAGENCY_LC_ROLE_DESC" query="SELECT id, name FROM #__tjsu_roles ORDER BY name ASC" key_field="id" value_field="name" required="true" >
+				<option value="">COM_MULTIAGENCY_LC_ROLE_DESC</option>
+		</field>
+		<field name="organization_trustee_role_id" type="sql" style="width: 100%;" label="COM_MULTIAGENCY_ROLE_TRUSTEE_LBL"  description="COM_MULTIAGENCY_ROLE_TRUSTEE_DESC" query="SELECT id, name FROM #__tjsu_roles ORDER BY name ASC" key_field="id" value_field="name" required="true" >
+				<option value="">COM_MULTIAGENCY_ROLE_TRUSTEE_DESC</option>
+		</field>
+		<field name="clusterIntergration" type="radio" label="COM_MULTIAGENCY_CLUSTER_INTEGRATION_LBL" description="COM_MULTIAGENCY_CLUSTER_INTEGRATION_DESC" class="btn-group btn-group-yesno" default="0"><option value="1">JYES</option><option value="0">JNO</option></field>
+		<field name="import_user_count"  class="validate-numeric" default="20" type="number" min="1" label="COM_MULTIAGENCY_IMPORT_USER_COUNT" description="COM_MULTIAGENCY_IMPORT_USER_COUNT_DESC">
+		</field>
+		<field name="dporesponding" type="text" default="" label="COM_MULTIAGENCY_DPORESPONDING" description="COM_MULTIAGENCY_DPORESPONDING_DESC"/>
+
+		<field name="schoolEmail" type="sql" label="COM_MULTIAGENCY_SCHOOL_EMAIL_FIELD"  description="COM_MULTIAGENCY_SCHOOL_EMAIL_FIELD_DESC" query="SELECT id, label FROM #__fields where state = 1 AND context='com_multiagency.multiagency' ORDER BY title ASC" key_field="id" value_field="label" >
+				<option value="">COM_MULTIAGENCY_SELECT_FIELD</option>
+		</field>
+		<field name="multliyear_licence_limit" type="number" label="COM_MULTIAGENCY_MULTIYEAR_LICENCE_LIMIT"  description="COM_MULTIAGENCY_MULTIYEAR_LICENCE_LIMIT_DESC" default="5"/>
+		<field name="min_licence_limit" type="number" label="COM_MULTIAGENCY_MULTIYEAR_MIN_LICENCE_LIMIT"  description="COM_MULTIAGENCY_MULTIYEAR_MIN_LICENCE_LIMIT_DESC" default="2"/>
+		<field name="agency_details_fields" type="sql" label="COM_MULTIAGENCY_AGENCY_DETAILS_FIELDS"  description="COM_MULTIAGENCY_AGENCY_DETAILS_FIELDS_DESC" query="SELECT id, label FROM #__fields where state = 1 AND context='com_multiagency.multiagency' ORDER BY title ASC" key_field="id" value_field="label" multiple="true">
+				<option value="">COM_MULTIAGENCY_SELECT_FIELDS</option>
+		</field>
+	</fieldset>
+
+	<fieldset name="permissions" description="JCONFIG_PERMISSIONS_DESC" label="JCONFIG_PERMISSIONS_LABEL">
+		<field name="rules" type="rules" component="com_multiagency" class="inputbox" filter="rules" validate="rules" label="JCONFIG_PERMISSIONS_LABEL" section="component" />
+	</fieldset>
+</config>

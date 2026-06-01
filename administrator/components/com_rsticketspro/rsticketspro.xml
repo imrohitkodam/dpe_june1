@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.7.0" method="upgrade">
+	<name>com_rsticketspro</name>
+	<creationDate>March 2015</creationDate>
+	<author>RSJoomla!</author>
+	<copyright>(C) 2010-2023 www.rsjoomla.com</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license> 
+	<authorEmail>support@rsjoomla.com</authorEmail>
+	<authorUrl>www.rsjoomla.com</authorUrl>
+	<version>3.1.0</version>
+	<description>COM_RSTICKETSPRO_INSTALL_DESC</description>
+	<scriptfile>script.rsticketspro.php</scriptfile>
+
+	<updateservers>
+		<server type="extension" priority="1" name="RSTickets! Pro">https://www.rsjoomla.com/updates/com_rsticketspro/Component/com_rsticketspro_2.5-3.0.xml</server>
+	</updateservers>
+
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.sql</file>
+			<file driver="mysql" charset="utf8">sql/sample.sql</file>
+		</sql>
+	</install>
+
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.sql</file>
+		</sql>
+	</uninstall>
+
+	<files folder="site">
+		<filename>controller.php</filename>
+		<filename>index.html</filename>
+		<filename>router.php</filename>
+		<filename>rsticketspro.php</filename>
+		<folder>assets</folder>
+		<folder>controllers</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+	</files>
+	
+	<media destination="com_rsticketspro" folder="media">
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<filename>index.html</filename>
+	</media>
+
+	<languages folder="site/language">
+		<language tag="en-GB">en-GB/en-GB.com_rsticketspro.ini</language>
+	</languages>
+
+	<administration>
+
+		<menu>RSTicketsPro</menu>
+		<submenu>
+			<menu link="option=com_rsticketspro">COM_RSTICKETSPRO_OVERVIEW</menu>
+			<menu view="tickets">COM_RSTICKETSPRO_MANAGE_TICKETS</menu>
+			<menu view="departments">COM_RSTICKETSPRO_DEPARTMENTS</menu>
+			<menu view="customfields">COM_RSTICKETSPRO_CUSTOM_FIELDS</menu>
+			<menu view="groups">COM_RSTICKETSPRO_GROUPS</menu>
+			<menu view="staffs">COM_RSTICKETSPRO_STAFF_MEMBERS</menu>
+			<menu view="priorities">COM_RSTICKETSPRO_PRIORITIES</menu>
+			<menu view="statuses">COM_RSTICKETSPRO_STATUSES</menu>
+			<menu view="emails">COM_RSTICKETSPRO_EMAIL_MESSAGES</menu>
+			<menu view="configuration">COM_RSTICKETSPRO_CONFIGURATION</menu>
+			<menu view="kbcategories">COM_RSTICKETSPRO_KB_CATEGORIES</menu>
+			<menu view="kbarticles">COM_RSTICKETSPRO_KB_ARTICLES</menu>
+			<menu view="kbrules">COM_RSTICKETSPRO_KB_CONVERSION_RULES</menu>
+		</submenu>
+		
+		<files folder="admin">
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>rsticketspro.php</filename>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+
+		<languages folder="admin/language">
+			<language tag="en-GB">en-GB/en-GB.com_rsticketspro.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_rsticketspro.sys.ini</language>
+		</languages>
+
+	</administration>
+</extension>

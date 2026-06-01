@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="slaservice" option="View">
+        <message>
+            <![CDATA[COM_SLA_SERVICE_FIELDSET_ITEM_ID_SELECT_DESC]]>
+        </message>
+    </layout>
+    <fields name="params">
+        <fieldset
+            name="basic"
+            label="COM_SLA_SERVICE_FIELDSET_ITEM_ID_SELECT_LABEL">
+        </fieldset>
+    </fields>
+</metadata>

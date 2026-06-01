@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+	<name>com_dpe</name>
+	<creationDate>2018-08-28</creationDate>
+	<copyright>Copyright (C) 2009 - 2018 Techjoomla. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<author></author>
+	<authorEmail></authorEmail>
+	<authorUrl></authorUrl>
+	<version>1.4.1</version>
+	<description></description>
+
+	<!-- Runs on install -->
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+
+	<!-- Runs on uninstall -->
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>dpe.php</filename>
+		<filename>controller.php</filename>
+		<filename>router.php</filename>
+		<folder>assets</folder>
+		<folder>views</folder>
+		<folder>models</folder>
+		<folder>controllers</folder>
+		<folder>helpers</folder>
+	</files>
+	<languages folder="site">
+		<language tag="en-GB">language/en-GB/en-GB.com_dpe.ini</language>
+	</languages>
+	<administration>
+<!--
+		<menu img="components/com_dpe/assets/images/main-16x16-dpe.png">COM_DPE</menu>
+-->
+		<menu link="option=com_dpe&amp;view=cp" img="components/com_dpe/assets/images/main-16x16-dpe.png">COM_DPE</menu>
+		<submenu>
+<!--
+			<menu link="option=com_dpe&amp;view=user_dashboards" view="user_dashboards" img="components/com_dpe/assets/images/view-16x16-user_dashboards.png" alt="Dpe/User_dashboards">COM_DPE_TITLE_USER_DASHBOARDS</menu>
+-->
+			<menu link="option=com_dpe&amp;view=cp&amp;layout=default" img="components/com_dpe/assets/images/view-16x16-user_dashboards.png">COM_DPE_TITLE_USER_DASHBOARDS</menu>
+		</submenu>
+		<files folder="administrator">
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>dpe.php</filename>
+			<folder>assets</folder>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+		<languages folder="administrator">
+			<language tag="en-GB">language/en-GB/en-GB.com_dpe.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_dpe.sys.ini</language>
+		</languages>
+	</administration>
+	<!-- Generated with the ComponentGenerator.com -->
+</extension>

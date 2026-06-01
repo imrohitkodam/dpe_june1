@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5.0" method="upgrade">
+  <name>com_autotweet</name>
+  <version>9.6.1</version>
+  <creationDate>2022-02-11</creationDate>
+
+	<author>Extly, CB</author>
+	<authorEmail>team@extly.com</authorEmail>
+	<authorUrl>https://www.extly.com</authorUrl>
+	<copyright>Copyright (c)2012-2022 Extly, CB All rights reserved.</copyright>
+	<license>GNU/GPLv3 www.gnu.org/licenses/gpl-3.0.html</license>
+
+  <description>
+    <![CDATA[
+Publish your content easily and engage your audience.
+  ]]>
+  </description>
+
+  <!-- Public front end files -->
+  <files folder="frontend">
+    <folder>controllers</folder>
+    <folder>views</folder>
+    <filename>autotweet.php</filename>
+    <filename>dispatcher.php</filename>
+    <filename>router.php</filename>
+  </files>
+
+  <!-- Front end translation files -->
+  <languages folder="language/frontend">
+    <language tag="en-GB">en-GB/en-GB.autotweet_cli.ini</language>
+    <language tag="en-GB">en-GB/en-GB.com_autotweet.ini</language>
+  </languages>
+
+  <!-- SQL query files to execute on installation -->
+  <install>
+    <sql>
+      <file charset="utf8" driver="mysql">sql/install/mysql/install.sql</file>
+    </sql>
+  </install>
+
+  <!-- SQL query files to execute on uninstallation -->
+  <uninstall>
+    <sql>
+      <file charset="utf8" driver="mysql">sql/install/mysql/uninstall.sql</file>
+    </sql>
+  </uninstall>
+
+  <!-- SQL files to run on update -->
+  <update>
+    <schemas>
+      <schemapath charset="utf8" type="mysql">sql/updates/mysql</schemapath>
+    </schemas>
+  </update>
+
+  <!-- Media files -->
+  <media destination="com_autotweet" folder="media">
+    <folder>css</folder>
+    <folder>composer</folder>
+    <folder>fullcalendar</folder>
+    <folder>images</folder>
+    <folder>js</folder>
+  </media>
+
+  <!-- Administrator back-end section -->
+  <administration>
+    <menu link="option=com_autotweet&amp;view=cpanels">Perfect Publisher PRO</menu>
+
+    <!-- Back-end files -->
+    <files folder="backend">
+      <folder>api</folder>
+      <folder>controllers</folder>
+      <folder>helpers</folder>
+      <folder>layouts</folder>
+      <folder>models</folder>
+      <folder>sql</folder>
+      <folder>tables</folder>
+      <folder>views</folder>
+
+      <filename>access.xml</filename>
+      <filename>autoload.php</filename>
+      <filename>autotweet.php</filename>
+      <filename>config.xml</filename>
+      <filename>dispatcher.php</filename>
+      <filename>fof.xml</filename>
+      <filename>toolbar.php</filename>
+    </files>
+
+    <!-- Back-end translation files -->
+    <languages folder="language/backend">
+
+      <language tag="en-GB">en-GB/en-GB.com_autotweet.ini</language>
+      <language tag="en-GB">en-GB/en-GB.com_autotweet.sys.ini</language>
+
+    </languages>
+  </administration>
+
+  <!-- Installation / uninstallation script file -->
+  <scriptfile>script.php</scriptfile>
+
+</extension>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fieldset name="general" label="COM_TJGOPHISH_API_CONFIG">
+		<field name="api_base_url" type="text" label="COM_TJGOPHISH_API_BASE_URL_LBL" description="COM_TJGOPHISH_API_BASE_URL_DESC" />
+		<field name="api_key" type="text" label="COM_TJGOPHISH_API_KEY_LBL" description="COM_TJGOPHISH_API_KEY_DESC" />
+		<field name="listener_url" type="text" label="COM_TJGOPHISH_LISTENER_URL_LBL" description="COM_TJGOPHISH_LISTENER_URL_DESC" />
+		<field name="templateURL" type="textarea" label="COM_TJGOPHISH_TEMPLATE_URL_LBL" description="COM_TJGOPHISH_TEMPLATE_URL_DESC" rows="8" cols="14" />
+	</fieldset>
+	<fieldset name="permissions" label="JCONFIG_PERMISSIONS_LABEL" description="JCONFIG_PERMISSIONS_DESC">
+		<field name="rules" type="rules" label="JCONFIG_PERMISSIONS_LABEL" class="inputbox" validate="rules" filter="rules" component="com_tjgophish" section="component" />
+	</fieldset>
+</config>

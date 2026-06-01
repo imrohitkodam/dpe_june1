@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="params" label="COM_TJFIELDS_FIELD_BASIC_LABEL">
+		<fieldset name="params">
+
+		<field name="enablechecklistscore" type="radio" default="0" class="btn-group btn-group-yesno"  
+				label="COM_TJFIELDS_FORM_CHECKLIST_SCORE_FIELD" description="COM_TJFIELDS_FORM_CHECKLIST_SCORE_FIELD">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+
+			<field name="tjfields[0][optionname]" type="text" readonly="true" default="To-Do" label="COM_TJFIELDS_OPTION_TODO" description="COM_TJFIELDS_FORM_DESC_FIELD_QUERY"/>
+			<field name="tjfields[0][optionvalue]" type="hidden" readonly="true" default="todo" label="COM_TJFIELDS_FORM_LBL_FIELD_QUERY" description="COM_TJFIELDS_FORM_DESC_FIELD_QUERY"/>
+			<field name="tjfields[0][numeric_value]" type="number"  label="COM_TJFIELDS_DPE_NUMERIC_VALUE" description="COM_TJFIELDS_DPE_NUMERIC_SCORE" showon="enablechecklistscore:1"/>
+			<field name="tjfields[1][optionname]" type="text" readonly="true" default="In Progress" label="COM_TJFIELDS_OPTION_INPROGRESS" description="COM_TJFIELDS_FORM_DESC_FIELD_QUERY"/>
+			<field name="tjfields[1][optionvalue]" type="hidden" readonly="true" default="inprogress" label="COM_TJFIELDS_FORM_LBL_FIELD_QUERY" description="COM_TJFIELDS_FORM_DESC_FIELD_QUERY"/>
+			<field name="tjfields[1][numeric_value]" type="number"  label="COM_TJFIELDS_DPE_NUMERIC_VALUE" description="COM_TJFIELDS_DPE_NUMERIC_SCORE" showon="enablechecklistscore:1"/>
+			<field name="tjfields[2][optionname]" type="text" readonly="true" default="Done" label="COM_TJFIELDS_OPTION_DONE" description="COM_TJFIELDS_FORM_DESC_FIELD_QUERY"/>
+			<field name="tjfields[2][optionvalue]" type="hidden" readonly="true" default="done" label="COM_TJFIELDS_FORM_LBL_FIELD_QUERY" description="COM_TJFIELDS_FORM_DESC_FIELD_QUERY"/>
+			<field name="tjfields[2][numeric_value]" type="number"  label="COM_TJFIELDS_DPE_NUMERIC_VALUE" description="COM_TJFIELDS_DPE_NUMERIC_SCORE" showon="enablechecklistscore:1"/>
+
+			<field name="enablechecklistna" type="radio" default="0" class="btn-group btn-group-yesno"  
+				label="COM_TJFIELDS_FORM_CHECKLIST_NA_FIELD" description="COM_TJFIELDS_FORM_CHECKLIST_NA_FIELD">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="tjfields[3][optionname]" type="text" readonly="true" default="N/A" label="COM_TJFIELDS_OPTION_NA" description="COM_TJFIELDS_FORM_DESC_FIELD_QUERY" showon="enablechecklistna:1"/>
+			<field name="tjfields[3][optionvalue]" type="hidden" readonly="true" default="na" label="COM_TJFIELDS_FORM_LBL_FIELD_QUERY" description="COM_TJFIELDS_FORM_DESC_FIELD_QUERY" showon="enablechecklistna:1"/>
+			<field name="addfieldpath" type="hidden" default="/administrator/components/com_tjfields/models/fields"/>
+			<field name="enablechecklistnote" type="radio" default="1" class="btn-group btn-group-yesno"  
+				label="COM_TJFIELDS_FORM_CHECKLIST_NOTE_FIELD" description="COM_TJFIELDS_FORM_CHECKLIST_NOTE_FIELD">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			</fieldset>
+		</fields>
+	</form>

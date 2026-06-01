@@ -1,0 +1,220 @@
+<?php
+/**    
+ * SEO Glossary Catglossaries view Default layout
+ *
+ * We developed this code with our hearts and passion.
+ * We hope you found it useful, easy to understand and change.
+ * Otherwise, please feel free to contact us at contact@joomunited.com
+ *
+ * @package 	SEO Glossary
+ * @copyright 	Copyright (C) 2012 JoomUnited (http://www.joomunited.com). All rights reserved.
+ * @license 	GNU General Public License version 2 or later; http://www.gnu.org/licenses/gpl-2.0.html
+ */
+
+
+defined('_JEXEC') or die;
+jimport('cms.html.formbehavior');
+// Include the component HTML helpers.
+JHtml::addIncludePath(JPATH_COMPONENT.'/helpers/html');
+JHtml::_('behavior.multiselect');
+$document = JFactory::getDocument();
+$document->addStyleSheet(JURI::root() . '/components/com_seoglossary/assets/css/materialize.css');
+
+$user		= JFactory::getUser();
+$userId		= $user->get('id');
+$extension	= $this->escape($this->state->get('filter.extension'));
+$listOrder	= $this->escape($this->state->get('list.ordering'));
+$listDirn	= $this->escape($this->state->get('list.direction'));
+$ordering 	= ($listOrder == 'a.ordering');
+$saveOrder 	= ($listOrder == 'a.ordering' && $listDirn == 'asc');
+
+if ($saveOrder)
+{
+	$saveOrderingUrl = 'index.php?option=com_seoglossary&task=glossaries.saveOrderAjax&tmpl=component';
+	JHtml::_('sortablelist.sortable', 'categoryList', 'adminForm', strtolower($listDirn), $saveOrderingUrl, false, true);
+}
+$sortFields = $this->getSortFields();
+?>
+<script type="text/javascript">
+	Joomla.orderTable = function() {
+		table = document.getElementById("sortTable");
+		direction = document.getElementById("directionTable");
+		order = table.options[table.selectedIndex].value;
+		if (order != '<?php echo $listOrder; ?>') {
+			dirn = 'asc';
+		} else {
+			dirn = direction.options[direction.selectedIndex].value;
+		}
+		Joomla.tableOrdering(order, dirn, '');
+	}
+</script>
+<form action="<?php echo JRoute::_('index.php?option=com_seoglossary&view=glossaries');?>" method="post" name="adminForm" id="adminForm">
+<?php if(!empty( $this->sidebar)): ?>
+	<div id="j-sidebar-container" class="span2">
+		<?php echo $this->sidebar; ?>
+	</div>
+	<div id="j-main-container" class="span10">
+<?php else : ?>
+	<div id="j-main-container">
+<?php endif;?>
+		<div id="filter-bar" class="btn-toolbar">
+			<div class="filter-search btn-group pull-left input-group">
+				<label for="filter_search" class="element-invisible"><?php echo JText::_('JSEARCH_FILTER_LABEL');?></label>
+				<input type="text" name="filter_search" id="filter_search" placeholder="<?php echo JText::_('JSEARCH_FILTER_LABEL'); ?>" value="<?php echo $this->escape($this->state->get('filter.search')); ?>" title="<?php echo JText::_('JSEARCH_FILTER_LABEL'); ?>" />
+			</div>
+			<div class="btn-group hidden-phone">
+				<button class="btn tip" type="submit" title="<?php echo JText::_('JSEARCH_FILTER_SUBMIT'); ?>"><i class="icon-search"></i></button>
+				<button class="btn tip" type="button" onclick="document.getElementById('filter_search').value='';this.form.submit();" title="<?php echo JText::_('JSEARCH_FILTER_CLEAR'); ?>"><i class="icon-remove"></i></button>
+			</div>
+			<div class="btn-group pull-right hidden-phone">
+				<label for="limit" class="element-invisible"><?php echo JText::_('JFIELD_PLG_SEARCH_SEARCHLIMIT_DESC');?></label>
+				<?php echo $this->pagination->getLimitBox(); ?>
+			</div>
+			<div class="btn-group pull-right hidden-phone">
+				<label for="directionTable" class="element-invisible"><?php echo JText::_('JFIELD_ORDERING_DESC');?></label>
+				<select name="directionTable" id="directionTable" class="input-medium form-select" onchange="Joomla.orderTable()">
+					<option value=""><?php echo JText::_('JFIELD_ORDERING_DESC');?></option>
+					<option value="asc" <?php if ($listDirn == 'asc') echo 'selected="selected"'; ?>><?php echo JText::_('JGLOBAL_ORDER_ASCENDING');?></option>
+					<option value="desc" <?php if ($listDirn == 'desc') echo 'selected="selected"'; ?>><?php echo JText::_('JGLOBAL_ORDER_DESCENDING');?></option>
+				</select>
+			</div>
+			<div class="btn-group pull-right">
+				<label for="sortTable" class="element-invisible"><?php echo JText::_('JGLOBAL_SORT_BY');?></label>
+				<select name="sortTable" id="sortTable" class="input-medium form-select" onchange="Joomla.orderTable()">
+					<option value=""><?php echo JText::_('JGLOBAL_SORT_BY');?></option>
+					<?php echo JHtml::_('select.options', $sortFields, 'value', 'text', $listOrder);?>
+				</select>
+			</div>
+			<?php if (version_compare(JVERSION, '4.0', 'ge')){ ?>
+			<div class="btn-group pull-right">
+					<label for="published"
+						   class="element-invisible">
+						<?php echo JText::_('JOPTION_SELECT_PUBLISHED'); ?>
+					</label>
+					<select name="filter_published" id="filter_published" class="input-medium form-select" onchange="this.form.submit()">
+					<?php echo JHtml::_('select.options', JHtml::_('jgrid.publishedOptions'), "value", "text", $this->state->get('filter.state'), true); ?>
+					</select>
+					<select name="filter_catid" id="filter_catid" class="input-medium form-select" onchange="this.form.submit()">
+					<?php echo JHtml::_('select.options', $this->f_catid, 'value', 'text', $this->state->get('filter.catid')); ?>
+					</select>
+				</div>
+			<div class="clearfix"></div>
+			<?php } ?>
+		</div>
+
+		<table class="table table-striped" id="categoryList">
+			<thead>
+				<tr>
+					<th width="1%" class="nowrap center hidden-phone">
+						<?php echo JHtml::_('grid.sort', '<i class="icon-menu-2"></i>', 'a.ordering', $listDirn, $listOrder, null, 'asc', 'JGRID_HEADING_ORDERING'); ?>
+					</th>
+					<th width="1%" class="hidden-phone">
+						<input type="checkbox" name="checkall-toggle" value="" title="<?php echo JText::_('JGLOBAL_CHECK_ALL'); ?>" onclick="Joomla.checkAll(this)" />
+					</th>
+					<th width="1%" class="nowrap center">
+						<?php echo JHtml::_('grid.sort', 'JSTATUS', 'a.state', $listDirn, $listOrder); ?>
+					</th>
+					<th>
+						<?php echo JHtml::_('grid.sort', 'COM_SEOGLOSSARY_FORM_LBL_GLOSSARY_TTERM', 'a.tterm', $listDirn, $listOrder); ?>
+					</th>
+                    <th>
+                        <?php echo JText::_('COM_SEOGLOSSARY_FORM_LBL_GLOSSARY_TSYNONYMS'); ?>
+                    </th>
+					<th width="20%" class="nowrap hidden-phone">
+						<?php echo JHtml::_('grid.sort', 'COM_SEOGLOSSARY_GLOSSARIES_CATID', 'catname', $this->state->get('list.direction'), $this->state->get('list.ordering')); ?>
+					</th>
+					<th>
+                        <?php echo JText::_('JGLOBAL_HITS'); ?>
+                    </th>
+					<th width="1%" class="nowrap hidden-phone">
+						<?php echo JHtml::_('grid.sort', 'JGRID_HEADING_ID', 'a.id', $listDirn, $listOrder); ?>
+					</th>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<td colspan="15">
+						<?php echo $this->pagination->getListFooter(); ?>
+					</td>
+				</tr>
+			</tfoot>
+			<tbody>
+				<?php
+				foreach ($this->items as $i => $item) :
+					$item->parent_id=0;
+					$canEdit    = $user->authorise('core.edit',       $extension . '.glossary.' . $item->id);
+					$canCheckin = $user->authorise('core.admin',      'com_checkin') || $item->checked_out == $userId || $item->checked_out == 0;
+					$canEditOwn = $user->authorise('core.edit.own',   $extension . '.glossary.' . $item->id) && @$item->created_user_id == $userId;
+					$canChange  = $user->authorise('core.edit.state', $extension . '.glossary.' . $item->id) && $canCheckin;
+					?>
+				<tr class="row<?php echo $i % 2; ?>" sortable-group-id="<?php echo $item->catid;?>">
+					<td class="order nowrap center hidden-phone">
+					<?php if ($canChange) :
+						$disableClassName = '';
+						$disabledLabel    = '';
+						if (!$saveOrder) :
+							$disabledLabel    = JText::_('JORDERINGDISABLED');
+							$disableClassName = 'inactive tip-top';
+						endif; ?>
+						<span class="sortable-handler hasTooltip <?php echo $disableClassName?>" title="<?php echo $disabledLabel?>">
+							<i class="icon-menu"></i>
+						</span>
+
+					<?php else : ?>
+						<span class="sortable-handler inactive">
+							<i class="icon-menu"></i>
+						</span>
+					<?php endif; ?>
+						<input type="text" style="display:none" name="order[]" size="5" value="<?php echo $item->ordering;?>" />
+					</td>
+					<td class="center hidden-phone">
+						<?php echo JHtml::_('grid.id', $i, $item->id); ?>
+					</td>
+					<td class="center">
+						<?php echo JHtml::_('jgrid.published', $item->state, $i, 'glossaries.', $canChange);?>
+					</td>
+					<td>
+					<div class="break-word">	
+						<?php if ($item->checked_out) : ?>
+							<?php echo JHtml::_('jgrid.checkedout', $i, $item->editor, $item->checked_out_time, 'glossaries.', $canCheckin); ?>
+						<?php endif; ?>
+						<?php if ($canEdit || $canEditOwn) : ?>
+							<a href="<?php echo JRoute::_('index.php?option=com_seoglossary&task=glossary.edit&id='.$item->id);?>">
+								<?php echo $this->escape($item->tterm); ?></a>
+						<?php else : ?>
+							<?php echo $this->escape($item->tterm); ?>
+						<?php endif; ?>
+						<span class="small break-word">
+                                        <?php echo JText::sprintf('JGLOBAL_LIST_ALIAS', $this->escape($item->alias)); ?>
+                                    </span>
+									<div class="small">
+									<a href="<?php echo JRoute::_('index.php?option=com_seoglossary&task=catglossary.edit&id='.$item->catid);?>"> <?php echo $item->catname; ?></a>
+                                    </div>
+					</div>
+					</td>
+                    <td>
+                        <?php echo $this->escape($item->tsynonyms); ?>
+                    </td>
+					<td>
+						<?php echo $this->escape($item->catname); ?>
+					</td>
+					<td>
+						<?php echo $this->escape($item->hits); ?>
+					</td>
+					<td class="center hidden-phone">
+						<span title="<?php echo sprintf('%d-%d', @$item->lft, @$item->rgt);?>">
+							<?php echo (int) $item->id; ?></span>
+					</td>
+				</tr>
+			<?php endforeach; ?>
+			</tbody>
+		</table>
+
+		<input type="hidden" name="extension" value="<?php echo $extension;?>" />
+		<input type="hidden" name="task" value="" />
+		<input type="hidden" name="boxchecked" value="0" />
+		<input type="hidden" name="filter_order" value="<?php echo $listOrder; ?>" />
+		<input type="hidden" name="filter_order_Dir" value="<?php echo $listDirn; ?>" />
+		<?php echo JHtml::_('form.token'); ?>
+	</div>
+</form>

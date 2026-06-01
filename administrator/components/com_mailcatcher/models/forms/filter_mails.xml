@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+        <field
+                name="search"
+                type="text"
+                hint="JSEARCH_FILTER"/>
+        <field
+                name="sent_status"
+                type="list"
+                label="COM_MAILCATCHER_SENT_STATUS"
+                onchange="this.form.submit();">
+            <option value="">COM_MAILCATCHER_SENT_STATUS_SELECT</option>
+            <option value="1">COM_MAILCATCHER_SUCCEED</option>
+            <option value="0">COM_MAILCATCHER_FAIL</option>
+        </field>
+        <field
+                name="created_date"
+                type="calendar"
+                label="COM_MAILCATCHER_CREATED_DATE"
+                hint="COM_MAILCATCHER_CREATED_DATE"
+                onchange="this.form.submit();"
+                filter="calendar"/>
+    </fields>
+    <fields name="list">
+        <field
+                name="fullordering"
+                type="hidden"/>
+        <field
+                name="limit"
+                type="limitbox"
+                class="input-mini"
+                default="25"
+                onchange="this.form.submit();"/>
+    </fields>
+</form>

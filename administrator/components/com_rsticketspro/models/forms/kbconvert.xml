@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="params">
+		<field name="name" type="text" description="RST_KB_ARTICLE_NAME_DESC" label="RST_KB_ARTICLE_NAME" required="true" size="64" />
+		<field name="category_id" type="kbcategories" label="RST_KB_CATEGORY_NAME" show_noparent="true" />
+		<field name="private" type="radio" class="btn-group btn-group-yesno" label="RST_PRIVATE" description="RST_PRIVATE_DESC" size="1" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="publish_article" type="radio" class="btn-group btn-group-yesno" label="RST_PUBLISH_ARTICLE" description="RST_PUBLISH_ARTICLE_DESC" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="private" type="radio" class="btn-group btn-group-yesno" label="RST_PRIVATE_ARTICLE" description="RST_PRIVATE_ARTICLE_DESC" size="1" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="ticket_id" type="hidden" />
+	</fieldset>
+</form>

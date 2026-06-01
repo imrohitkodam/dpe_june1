@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="params">
+		<field name="submit_type" type="radio" class="btn-group btn-group-yesno" default="1" description="" label="">
+			<option value="1">RST_SHORT_NEW_USER</option>
+			<option value="2">RST_SHORT_EXISTING_USER</option>
+		</field>
+		<field name="email" label="RST_YOUR_EMAIL" description="RST_YOUR_EMAIL_DESC" type="text" size="40" showon="submit_type:1" />
+		<field name="alternative_email" label="RST_ALTERNATIVE_EMAIL" description="RST_ALTERNATIVE_EMAIL_DESC" type="text" size="40" showon="submit_type:1" />
+		<field name="name" label="RST_YOUR_NAME" description="RST_YOUR_NAME_DESC" type="text" size="40" showon="submit_type:1" />
+		<field name="password" label="RST_YOUR_PASSWORD" description="RST_YOUR_PASSWORD_DESC" type="password" showon="submit_type:1" />
+		<field name="customer_id" label="RST_EXISTING_CUSTOMER" description="RST_EXISTING_CUSTOMER_DESC" type="rscustomer" size="40" showon="submit_type:2" />
+		<field name="department_id" type="departments" default="0" please="true" published="true" onchange="RSTicketsPro.changeDepartment();" label="RST_TICKET_DEPARTMENT" description="RST_TICKET_DEPARTMENT_DESC" required="true" />
+		<field name="subject" label="RST_TICKET_SUBJECT" description="RST_TICKET_SUBJECT_DESC" filter="text"  type="subject" required="true" />
+		<field name="message" type="rseditor" default="" rows="12" cols="80" label="RST_TICKET_MESSAGE" description="RST_TICKET_MESSAGE_DESC" required="true" filter="JComponentHelper::filterText" width="70%" />
+		<field name="priority_id" type="priorities" default="0" please="true" published="true" label="RST_TICKET_PRIORITY" description="RST_TICKET_PRIORITY_DESC" required="true" />
+		<field name="captcha" type="rscaptcha" label="RST_TICKET_CAPTCHA" description="RST_TICKET_CAPTCHA_DESC" refresh_label="RST_REFRESH_CAPTCHA" refresh_description="RST_REFRESH_CAPTCHA_DESC" />
+		<field name="consent" type="checkboxes" label="" description="">
+			<option value="1">RST_TICKET_CONSENT_SUBMIT</option>
+		</field>
+
+		<field
+					name="multiplecheckbox"
+					type="checkbox"
+					label="multiplecheckbox"
+					description="COM_CATEGORIES_FIELD_IMAGE_ALT_EMPTY_DESC"
+					default='0'
+					onchange='showForm(this)'
+				/>
+
+		<field
+			name="cluster_id"
+			description= "COM_TJLMS_FORM_DESC_COURSE_SUBS_PLANS"
+			type="subform"
+			label="COM_DPE_TICKET_ORGANISATION_AND_CUSTOMER"
+			min="1"
+			formsource="/administrator/components/com_rsticketspro/models/forms/getorgansiation.xml"
+			multiple="true"
+			buttons="add,remove"
+			layout="joomla.form.field.subform.repeatable"
+			groupByFieldset="false"
+			/>
+
+
+
+
+		<field name="files" type="rsuploads" onclick="RSTicketsPro.addSubmitFile();" label="RST_TICKET_ATTACHMENTS" description="RST_TICKET_ATTACHMENTS_DESC" />
+	</fieldset>
+</form>

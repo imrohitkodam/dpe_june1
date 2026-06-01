@@ -1,0 +1,883 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    
+    <fieldset name="component"
+		label="COM_SEOGLOSSARY_COMPONENT_USER_LABEL"
+		description="COM_SEOGLOSSARY_COMPONENT_USER_DESC" addfieldpath="/administrator/components/com_seoglossary/models/fields">
+			<field name="lang" type="lang"   description="" />
+		<field name="template"
+               type="list"
+               default="table"
+               label="COM_SEOGLOSSARY_FORM_SELECT_THEME"
+               description="COM_SEOGLOSSARY_DESC_SELECT_THEME">
+        <option value="table">COM_SEOGLOSSARY_TABLE</option>
+        <option value="grid">COM_SEOGLOSSARY_MASONARY</option>
+		<option value="alpha">COM_SEOGLOSSARY_ALPHABETICAL</option>
+         <option value="flat">COM_SEOGLOSSARY_FLAT</option>
+        <option value="responsive">COM_SEOGLOSSARY_RESPONSIVE</option>   
+        </field>
+			<field name="show_grid_image"
+             type="radio"
+			 class="btn-group btn-group-yesno"
+             default="1"
+             label="COM_SEOGLOSSARY_FORM_SELECT_USENETRY"
+			 description="COM_SEOGLOSSARY_DESC_SELECT_USENETRY">
+                 <option value="0">JNO</option>
+                 <option value="1">JYES</option>
+			</field>
+			<field name="show_glossaryplugin"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"
+			label="COM_SEOGLOSSARY_SHOW_PLUGIN"
+ 			description="COM_SEOGLOSSARY_SHOW_PLUGIN_HELP">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+			</field>
+			
+			<field name="alphabet"
+             type="radio"
+			 class="btn-group btn-group-yesno"
+             default="1"
+             label="COM_SEOGLOSSARY_SHOW_ALPHABET"
+             description="COM_SEOGLOSSARY_SHOW_ALPHABET_HELP">
+                 <option value="0">JHIDE</option>
+                 <option value="1">JSHOW</option>
+			</field>
+			
+			<field name="top_pagination"
+             type="radio"
+			 class="btn-group btn-group-yesno"
+             default="0"
+             label="COM_SEOGLOSSARY_COMPONENT_PAGINATION"
+             description="COM_SEOGLOSSARY_COMPONENT_PAGINATION_DESCRIPTION">
+                 <option value="0">JHIDE</option>
+                 <option value="1">JSHOW</option>
+			</field>
+		 
+			<field name="alphabetbelow"
+             type="radio"
+			 class="btn-group btn-group-yesno"
+             default="0"
+             label="COM_SEOGLOSSARY_SHOW_ALPHABETBELOW"
+             description="COM_SEOGLOSSARY_SHOW_ALPHABETBELOW_HELP">
+                 <option value="0">JHIDE</option>
+                 <option value="1">JSHOW</option>
+			</field>
+			
+			<field name="bottom_pagination"
+             type="radio"
+			 class="btn-group btn-group-yesno"
+             default="1"
+             label="COM_SEOGLOSSARY_COMPONENT_PAGINATIONBELOW"
+             description="COM_SEOGLOSSARY_COMPONENT_PAGINATIONBELOW_DESCRIPTION">
+                 <option value="0">JHIDE</option>
+                 <option value="1">JSHOW</option>
+			</field>
+		 
+			<field name="search"
+             type="radio"
+			 class="btn-group btn-group-yesno"
+             default="1"
+             label="COM_SEOGLOSSARY_SHOW_SEARCH"
+             description="COM_SEOGLOSSARY_SHOW_SEARCH_HELP">
+                 <option value="0">JHIDE</option>
+                 <option value="1">JSHOW</option>
+			</field>
+			
+			<field name="show_count"
+             type="radio"
+			 class="btn-group btn-group-yesno"
+             default="0"
+             label="COM_SEOGLOSSARY_SHOW_COUNT"
+             description="COM_SEOGLOSSARY_SHOW_COUNT_HELP">
+                 <option value="0">JHIDE</option>
+                 <option value="1">JSHOW</option>
+			</field>
+		 
+			<field name="hide_author"
+             type="radio"
+			 class="btn-group btn-group-yesno"
+             default="1"
+             label="COM_SEOGLOSSARY_SHOW_HIDEAUTHOR"
+             description="COM_SEOGLOSSARY_SHOW_HIDEAUTHOR_HELP">
+                 <option value="0">JHIDE</option>
+                 <option value="1">JSHOW</option>
+			</field>
+		 
+			<field name="author"
+             type="radio"
+			 class="btn-group btn-group-yesno"
+             default="1"
+             label="COM_SEOGLOSSARY_SHOW_AUTHOR"
+             description="COM_SEOGLOSSARY_SHOW_AUTHOR_HELP">
+                 <option value="0">JHIDE</option>
+                 <option value="1">JSHOW</option>
+			</field>
+			
+			<field name="show_hits"
+             type="radio"
+			 class="btn-group btn-group-yesno"
+             default="1"
+             label="JGLOBAL_SHOW_HITS_LABEL"
+             description="JGLOBAL_SHOW_HITS_LABEL">
+                 <option value="0">JHIDE</option>
+                 <option value="1">JSHOW</option>
+			</field>
+			
+			<field
+				id="default_search_mode"
+				name="default_search_mode"
+				type="list"
+				label="COM_SEOGLOSSARY_COMPONENT_SEARCHMODE"
+				description="COM_SEOGLOSSARY_COMPONENT_SEARCHMODE_DESCRIPTION"
+				default="1"
+				class="inputbox">
+				<option value="1">COM_SEOGLOSSARY_SEARCH_BEGIN</option>
+				<option value="2">COM_SEOGLOSSARY_SEARCH_CONTAINS</option>
+				<option value="3">COM_SEOGLOSSARY_SEARCH_EXACT</option>
+				<option value="4">COM_SEOGLOSSARY_SEARCH_LIKE</option>
+			</field>
+			
+			<field name="search_options"
+             type="radio"
+			 class="btn-group btn-group-yesno"
+             default="1"
+             label="COM_SEOGLOSSARY_COMPONENT_SEARCHOPTION"
+             description="COM_SEOGLOSSARY_COMPONENT_SEARCHOPTION_DESCRIPTION">
+                 <option value="0">JHIDE</option>
+                 <option value="1">JSHOW</option>
+			</field>
+		 
+			<field name="sound_like"
+             type="radio"
+			 class="btn-group btn-group-yesno"
+             default="1"
+             label="COM_SEOGLOSSARY_SHOW_SOUND_LIKE"
+             description="COM_SEOGLOSSARY_SHOW_SOUND_LIKE_HELP">
+                 <option value="0">JHIDE</option>
+                 <option value="1">JSHOW</option>
+			</field>
+
+			<field name="entry_perpage" type="text" default="15" label="COM_SEOGLOSSARY_SHOW_ENTRIES" description="COM_SEOGLOSSARY_SHOW_ENTRIES_HELP" size="5" filter="integer"/>
+			
+			<field name="auto_publish"
+             type="radio"
+			 class="btn-group btn-group-yesno"
+             default="1"
+             label="COM_SEOGLOSSARY_SHOW_AUTOPUBLISH"
+             description="COM_SEOGLOSSARY_SHOW_AUTOPUBLISH_HELP">
+                 <option value="0">JNO</option>
+                 <option value="1">JYES</option>
+			</field>
+
+			<field name="show_glossary"
+             type="radio"
+			 class="btn-group btn-group-yesno"
+             default="0"
+             label="COM_SEOGLOSSARY_SHOW_SHOWGLOSSARY"
+             description="COM_SEOGLOSSARY_SHOW_SHOWGLOSSARY_HELP">
+                 <option value="0">JHIDE</option>
+                 <option value="1">JSHOW</option>
+			</field>
+
+			<field name="show_glossarydescription"
+             type="radio"
+			 class="btn-group btn-group-yesno"
+             default="0"
+             label="COM_SEOGLOSSARY_SHOW_DESCRIPTION"
+             description="COM_SEOGLOSSARY_SHOW_DESCRIPTION_HELP">
+                 <option value="0">JHIDE</option>
+                 <option value="1">JSHOW</option>
+			</field>
+			
+			<field name="show_glossarieslist"
+			 type="radio"
+			 class="btn-group btn-group-yesno"
+			 default="1"
+			 label="COM_SEOGLOSSARY_SHOW_GLOSSARIES_LIST"
+			 description="COM_SEOGLOSSARY_SHOW_GLOSSARIES_LIST_HELP">
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+			
+			<field name="new_entry_url" type="text" default="add-new-entry" label="COM_SEOGLOSSARY_COMPONENT_ENTRY" description="COM_SEOGLOSSARY_COMPONENT_ENTRY_DESCRIPTION" size="50" />
+
+            <field name="show_glossary_name"
+                   type="radio"
+                   class="btn-group btn-group-yesno"
+                   default="1"
+                   label="COM_SEOGLOSSARY_COMPONENT_GNAMETITLE"
+                   description="COM_SEOGLOSSARY_COMPONENT_GNAMETITLE_DESCRIPTION">
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+
+            <field name="show_term_name"
+                   type="radio"
+                   class="btn-group btn-group-yesno"
+                   default="1"
+                   label="COM_SEOGLOSSARY_COMPONENT_GTERMTITLE"
+                   description="COM_SEOGLOSSARY_COMPONENT_GTERMTITLE_DESCRIPTION">
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="helperoverride" type="helperoverride"  label="COM_SEOGLOSSARY_FORM_LBL_HELPER" description="COM_SEOGLOSSARY_FORM_LBL_HELPER_DESC" />
+	</fieldset>
+
+	<fieldset name="admincomponent"
+		label="COM_SEOGLOSSARY_COMPONENT_MAILSETTING"
+		description="COM_SEOGLOSSARY_COMPONENT_ADMIN_DESC">
+		
+			<field name="notify_mail"
+             type="radio"
+			 class="btn-group btn-group-yesno"
+             default="1"
+             label="COM_SEOGLOSSARY_COMPONENT_ADMIN_NOTIFYMAIL"
+             description="COM_SEOGLOSSARY_COMPONENT_ADMIN_NOTIFYMAIL_HELP">
+                 <option value="0">JNO</option>
+                 <option value="1">JYES</option>
+			</field>
+			
+			<field name="email"
+			 type="text" 
+			 default="" 
+			 label="COM_SEOGLOSSARY_COMPONENT_ADMIN_MAIL" 
+			 description="COM_SEOGLOSSARY_COMPONENT_ADMIN_MAIL_HELP" 
+			 size="40" />
+		 
+			<field name="thank_user"
+             type="radio"
+			 class="btn-group btn-group-yesno"
+             default="0"
+             label="COM_SEOGLOSSARY_COMPONENT_ADMIN_NOTIFYUSER"
+             description="COM_SEOGLOSSARY_COMPONENT_ADMIN_NOTIFYUSER_HELP">
+                 <option value="0">JNO</option>
+                 <option value="1">JYES</option>
+			</field>
+		 
+			<field name="message" 
+			type="textarea"  
+			label="COM_SEOGLOSSARY_COMPONENT_ADMIN_MESSAGE"
+			description="COM_SEOGLOSSARY_COMPONENT_ADMIN_MESSAGE_HELP"  
+			rows="10" cols="55"  />
+			
+			<field name="email_from" 
+			type="text" default="" 
+			label="COM_SEOGLOSSARY_COMPONENT_ADMINFROM" 
+			description="COM_SEOGLOSSARY_COMPONENT_ADMINFROM_HELP" size="40" />
+	</fieldset>
+            
+	<fieldset name="Tooltip"
+		label="COM_SEOGLOSSARY_COMPONENT_TOOLTIP_LABEL"
+		description="COM_SEOGLOSSARY_COMPONENT_TOOLTIP_LABEL_SUBTITLE"
+		>
+		 <field name="tooltip_layout"
+             type="list"
+			 class="btn-group btn-group-yesno"
+             default="0"
+             label="COM_SEOGLOSSARY_COMPONENT_LAYOUT"
+			 description="COM_SEOGLOSSARY_COMPONENT_LAYOUT_DESCRIPTION">
+                 <option value="0">COM_SEOGLOSSARY_COMPONENT_BASIC</option>
+                 <option value="1">COM_SEOGLOSSARY_COMPONENT_ADVANCELAYOUT</option>
+                <option value="2">COM_SEOGLOSSARY_COMPONENT_BOOTSTRAP</option>
+                <option value="3">COM_SEOGLOSSARY_COMPONENT_MORDERN</option>
+			</field>
+			<field name="event"
+             type="radio"
+			 class="btn-group"
+             default="1"
+             label="COM_SEOGLOSSARY_EVENT"
+			 description="COM_SEOGLOSSARY_EVENTDESC">
+                 <option value="0">COM_SEOGLOSSARY_CLICK</option>
+                 <option value="1">COM_SEOGLOSSARY_HOVER</option>
+			</field>
+			<!-- Advance JQuery Options-->
+			<field name="advance_jquery"
+             type="radio"
+			 class="btn-group btn-group-yesno"
+             default="1"
+             label="COM_SEOGLOSSARY_COMPONENT_JQUERY"
+			 description="COM_SEOGLOSSARY_COMPONENT_JQUERY_DESCRIPTION">
+                 <option value="0">JNO</option>
+                 <option value="1">JYES</option>
+			</field>
+			<field name="advance_jquery_conflict"
+             type="radio"
+			 class="btn-group btn-group-yesno"
+             default="0"
+             label="COM_SEOGLOSSARY_LBL_JQUERYNOCONFLICT"
+			 description="COM_SEOGLOSSARY_LBL_JQUERYNOCONFLICT">
+                 <option value="0">JNO</option>
+                 <option value="1">JYES</option>
+			</field>
+			<field name="datatipposition"
+             type="list"
+	    default=""
+             label="COM_SEOGLOSSARY_COMPONENT_POSITION"
+			 description="COM_SEOGLOSSARY_COMPONENT_POSITION_DESCRIPTION" showon="tooltip_layout:1,2">
+                 <option value="">Tip on Top</option>
+                 <option value="tipright">Tip on Right</option>
+                 <option value="tipbottom">Tip on Bottom</option>
+		 <option value="tipleft">Tip on Left</option>
+			</field>
+			<field name="datatipmaxwidth"
+             type="input"
+	    default=""
+             label="COM_SEOGLOSSARY_COMPONENT_MAXWIDTH"
+		description="COM_SEOGLOSSARY_COMPONENT_MAXWIDTH_DESCRIPTION" showon="tooltip_layout:1">
+			</field>
+			<field name="datatiptheme"
+             type="list"
+	    default="tipthemeflatdarklight"
+            label="COM_SEOGLOSSARY_COMPONENT_THEME"
+	    description="COM_SEOGLOSSARY_COMPONENT_THEME_DESCRIPTION" showon="tooltip_layout:1">
+                 <option value="">Plain Blue</option>
+					<option value="tipthemesquareblack">Plain Black</option>
+					<option value="tipthemesquarewhite">Plain White</option>
+					<option value="tipthemesquaregreen">Plain Green</option>
+					<option value="tipthemesquarered">Plain Red</option>
+					<option value="tipthemesquareblue">Plain Blue</option>
+					<option value="tipthemesquareorange">Plain Orange</option>
+					<option value="tipthemesquareyellow">Plain Yellow</option>
+					<option value="tipthemesquarepurple">Plain Purple</option>
+					<option value="tipthemegreen">Smooth Green</option>
+					<option value="tipthemeyellow">Smooth Yellow</option>
+					<option value="tipthemeblue">Smooth Blue</option>
+					<option value="tipthemeorange">Smooth Orange</option>
+					<option value="tipthemepurple">Smooth Purple</option>
+					<option value="tipthemered">Smooth Red</option>
+					<option value="tipthemeblack">Smooth Black</option>
+					<option value="tipthemewhite">Smooth White</option>
+					<option value="tipthemecomicwhite">Bubble White</option>
+					<option value="tipthemecomicblue">Bubble Blue</option>
+					<option value="tipthemecomicyellow">Bubble Yellow</option>
+					<option value="tipthemeflatorange">Flat Orange</option>
+					<option value="tipthemeflataqua">Flat Aqua</option>
+					<option value="tipthemeflatyellow">Flat Yellow</option>
+					<option value="tipthemeflatblue">Flat Blue</option>
+					<option value="tipthemeflatpink">Flat Pink</option>
+					<option value="tipthemeflatgreen">Flat Green</option>
+					<option value="tipthemeflatdark">Flat Dark</option>
+					<option value="tipthemeflatred">Flat Red</option>
+					<option value="tipthemeflatbrown">Flat Brown</option>
+					<option value="tipthemeflatdarklight">Flat Dark Light</option>
+			</field>
+			<field name="datatipanimation"
+             type="list"
+             default=""
+             label="COM_SEOGLOSSARY_COMPONENT_OPENANIMATION"
+			 description="COM_SEOGLOSSARY_COMPONENT_OPENANIMATION_DESCRIPTION" showon="tooltip_layout:1">
+                       <option value="">COM_SEOGLOSSARY_COMPONENT_DEFAULT</option>
+		<option value="swingX">COM_SEOGLOSSARY_COMPONENT_SWINGX</option>
+		<option value="swingY">COM_SEOGLOSSARY_COMPONENT_SWINGY</option>
+		<option value="swingZ">COM_SEOGLOSSARY_COMPONENT_SWINGZ</option>
+		<option value="glow">COM_SEOGLOSSARY_COMPONENT_GLOW</option>
+			</field>
+			<field name="datatipanimationout"
+		type="list"
+		default=""
+		label="COM_SEOGLOSSARY_COMPONENT_CLOSEANIMATION"
+		description="COM_SEOGLOSSARY_COMPONENT_CLOSEANIMATION_DESCRIPTION" showon="tooltip_layout:1">
+                <option value="">COM_SEOGLOSSARY_COMPONENT_DEFAULT</option>
+		<option value="swingX">COM_SEOGLOSSARY_COMPONENT_SWINGX</option>
+		<option value="swingY">COM_SEOGLOSSARY_COMPONENT_SWINGY</option>
+		<option value="swingZ">COM_SEOGLOSSARY_COMPONENT_SWINGZ</option>
+		<option value="glow">COM_SEOGLOSSARY_COMPONENT_GLOW</option>
+			</field>
+			
+			
+			<field name="datatipfollowcursor"
+		type="radio"
+		default=""
+		label="COM_SEOGLOSSARY_COMPONENT_FOLLOWCURSOR"
+		class="btn-group btn-group-yesno"
+		description="COM_SEOGLOSSARY_COMPONENT_FOLLOWCURSOR_DESCRIPTION" showon="tooltip_layout:1">
+					<option  value="">JYES</option>
+					<option value="false">JNO</option>
+				</field>
+	
+			
+				
+			
+				
+		    <!-- Advance jquery Ends-->
+		<!-- Regular fields begin-->
+			<field name="show_jhtml"
+             type="radio"
+			 class="btn-group btn-group-yesno"
+             default="1"
+             label="COM_SEOGLOSSARY_COMPONENT_HTML_IN_TOOLTIP"
+			 description="COM_SEOGLOSSARY_COMPONENT_HTML_IN_TOOLTIP_HELP" showon="tooltip_layout:0">
+                 <option value="0">JNO</option>
+                 <option value="1">JYES</option>
+			</field>
+			
+			<field name="tooltip_width" 
+			type="text" 
+			default="200" 
+			label="COM_SEOGLOSSARY_COMPONENT_TOOLTIP_WIDTH" 
+			description="COM_SEOGLOSSARY_COMPONENT_TOOLTIP_WIDTH_HELP" 
+			size="10" showon="tooltip_layout:0" />
+			<field name="datatheme"
+			type="list"
+			default="qtip-plain"
+			label="COM_SEOGLOSSARY_COMPONENT_THEME"
+			description="COM_SEOGLOSSARY_COMPONENT_THEME_DESCRIPTION" showon="tooltip_layout:0">
+			    <option value="qtip-bootstrap">Bootstrap</option>
+			    <option value="qtip-tipsy">Tipsy</option>
+			    <option value="qtip-youtube">Youtube</option>
+			    <option value="qtip-jtools">Jtools</option>
+			    <option value="qtip-cluetip">Cluetip</option>
+			    <option value="qtip-tipped">Tipped</option>
+			    <option value="qtip-plain">Custom</option>
+			</field>
+
+			<field name="background_color" 
+			type="colorpicker" 
+			default="#FFFFFF" 
+			label="COM_SEOGLOSSARY_COMPONENT_BACKGROUND_COLOR"
+			description="COM_SEOGLOSSARY_COMPONENT_BACKGROUND_COLOR_HELP" 
+			showon="tooltip_layout:0"/>
+			
+			<field name="backgroundhead_color" 
+			type="colorpicker" 
+			default="#F1F1F1" 
+			label="COM_SEOGLOSSARY_LBL_BACKGROUND"
+			description="COM_SEOGLOSSARY_LBL_BACKGROUND" 
+			showon="tooltip_layout:0"/>
+
+			<field name="font_color" 
+			type="colorpicker" 
+			default="#444444" 
+			label="COM_SEOGLOSSARY_COMPONENT_TOOLTIP_FONT_COLOR" 
+			description="COM_SEOGLOSSARY_COMPONENT_TOOLTIP_FONT_COLOR_HELP"
+			showon="tooltip_layout:0"/>
+
+			<field name="font_size" 
+			type="text" 
+			default="12" 
+			label="COM_SEOGLOSSARY_COMPONENT_TOOLTIP_FONT_SIZE" 
+			description="COM_SEOGLOSSARY_COMPONENT_TOOLTIP_FONT_SIZE_HELP" 
+			size="2" showon="tooltip_layout:0"/>
+			
+
+			<field name="barder_color" 
+			type="colorpicker" 
+			default="#E2E2E2" 
+			label="COM_SEOGLOSSARY_COMPONENT_TOOLTIP_BORDER_COLOR" 
+			description="COM_SEOGLOSSARY_COMPONENT_TOOLTIP_BORDER_COLOR_HELP" showon="tooltip_layout:0"
+			/>
+            <field name="mbackgroundhead_color" 
+			type="colorpicker" 
+			default="#444444" 
+			label="COM_SEOGLOSSARY_LBL_BACKGROUND"
+			description="COM_SEOGLOSSARY_LBL_BACKGROUND" 
+			showon="tooltip_layout:3"/>
+            
+            <field name="mfont_color" 
+			type="colorpicker" 
+			default="#FAFAFA" 
+			label="COM_SEOGLOSSARY_COMPONENT_TOOLTIP_FONT_COLOR" 
+			description="COM_SEOGLOSSARY_COMPONENT_TOOLTIP_FONT_COLOR_HELP"
+			showon="tooltip_layout:3"/>
+            <field name="mbarder_color" 
+			type="colorpicker" 
+			default="#FAFAFA" 
+			label="COM_SEOGLOSSARY_COMPONENT_TOOLTIP_BORDER_COLOR" 
+			description="COM_SEOGLOSSARY_COMPONENT_TOOLTIP_BORDER_COLOR_HELP" showon="tooltip_layout:3"
+			/>
+			
+			<field name="no_link"
+             type="radio"
+			 class="btn-group btn-group-yesno"
+             default="0"
+             label="COM_SEOGLOSSARY_COMPONENT_NO_LINK"
+             description="COM_SEOGLOSSARY_COMPONENT_NO_LINK_HELP">
+                 <option value="0">JNO</option>
+                 <option value="1">JYES</option>
+			</field>
+			
+			
+			<field
+				id="tooltip_position"
+				name="tooltip_position"
+				type="list"
+				label="COM_SEOGLOSSARY_COMPONENT_POSITION"
+				description="COM_SEOGLOSSARY_COMPONENT_POSITION_DESCRIPTION"
+				default="top center"
+				class="inputbox" showon="tooltip_layout:0">
+				<option value="center left">center left</option>
+				<option value="top left">top left</option>
+				<option value="top center">top center</option>
+				<option value="top right">top right</option>
+				<option value="center right">center right</option>
+				<option value="bottom left">bottom left</option>
+				<option value="bottom center">bottom center</option>
+				<option value="bottom right">bottom right</option>
+			</field>
+			
+			<field
+				id="my_position"
+				name="my_position"
+				type="list"
+				label="COM_SEOGLOSSARY_LBL_MYPOSITION"
+				description="COM_SEOGLOSSARY_LBL_MYPOSITION_DESC"
+				default="bottom center"
+				class="inputbox" showon="tooltip_layout:0">
+				<option value="center left">center left</option>
+				<option value="top left">top left</option>
+				<option value="top center">top center</option>
+				<option value="top right">top right</option>
+				<option value="center right">center right</option>
+				<option value="bottom left">bottom left</option>
+				<option value="bottom center">bottom center</option>
+				<option value="bottom right">bottom right</option>
+			</field>
+			<!--Basic Field end-->
+				<field name="datatipeventout"
+		type="radio"
+		default="mouseout"
+		label="COM_SEOGLOSSARY_COMPONENT_TOOLTIPMLEAVE"
+		class="btn-group btn-group-yesno"
+		description="COM_SEOGLOSSARY_COMPONENT_TOOLTIPMLEAVE_DESCRIPTION" showon="tooltip_layout:0,1,2">
+		<option value="mouseout">JNO</option>
+		<option value="load">JYES</option>
+				</field>
+			
+			<field name="showclose"
+		type="radio"
+		default="0"
+		label="COM_SEOGLOSSARY_COMPONENT_SHOWCLOSE"
+		class="btn-group btn-group-yesno"
+		description="COM_SEOGLOSSARY_COMPONENT_SHOWCLOSE_DESCRIPTION" showon="tooltip_layout:0,1,2">
+					<option value="0">JNO</option>
+					<option  value="1">JYES</option>
+				</field>
+			
+			<field name="datatipdelay"
+			 type="text" 
+			 default="500" 
+			 label="COM_SEOGLOSSARY_TOOLTIP_DELAY" description="COM_SEOGLOSSARY_TOOLTIP_DELAY_HELP" filter="float" showon="tooltip_layout:0,1,2"/>
+			
+			<field name="occurences" type="text" default="1" label="COM_SEOGLOSSARY_COMPONENT_OCCUR" description="COM_SEOGLOSSARY_COMPONENT_OCCUR_DESCRIPTION" size="5" />
+			
+			<field name="ignored_tags" type="text" default="a, abbr" label="COM_SEOGLOSSARY_COMPONENT_IGONRETAG" description="COM_SEOGLOSSARY_COMPONENT_IGONRETAG_DESCRIPTION" size="30" />
+			
+			<field name="disable_tooltips"
+             type="radio"
+			 class="btn-group btn-group-yesno"
+             default="0"
+             label="COM_SEOGLOSSARY_COMPONENT_DISABLETOOLTIP"
+			 description="COM_SEOGLOSSARY_COMPONENT_DISABLETOOLTIP_DESCRIPTION">
+                 <option value="0">JNO</option>
+                 <option value="1">JYES</option>
+			</field>
+			
+			<field name="disable_javascript"
+             type="radio"
+			 class="btn-group btn-group-yesno"
+             default="0"
+             label="COM_SEOGLOSSARY_COMPONENT_NOINJECT"
+			 description="COM_SEOGLOSSARY_COMPONENT_NOINJECT_DESCRIPTION">
+                 <option value="0">JNO</option>
+                 <option value="1">JYES</option>
+			</field>
+
+            <field name="show_read_more_tooltip"
+                   type="radio"
+                   class="btn-group btn-group-yesno"
+                   default="0"
+                   label="COM_SEOGLOSSARY_COMPONENT_READMORE"
+                   description="COM_SEOGLOSSARY_COMPONENT_READMORE_DESCRIPTION">
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+        <field name="more_link" type="text" default="..." label="COM_SEOGLOSSARY_COMPONENT_READMORETEXT" description="COM_SEOGLOSSARY_COMPONENT_READMORETEXT_DESCRIPTION" size="50" />
+
+    </fieldset>
+		    
+	<fieldset name="permissions"
+			description="JCONFIG_PERMISSIONS_DESC"
+			label="JCONFIG_PERMISSIONS_LABEL">
+
+			<field name="rules" type="rules"
+			component="com_seoglossary"
+			filter="rules"
+			validate="rules"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			section="component" />
+	</fieldset>
+	
+	<fieldset name="search"
+			  description="COM_SEOGLOSSARY_COMPONENT_SEARCHPLUGIN_DESCRIPTION"
+			  label="COM_SEOGLOSSARY_COMPONENT_SEARCHPLUGIN">
+		
+			<field name="search_in_name"
+             type="radio"
+			 class="btn-group btn-group-yesno"
+             default="1"
+             label="COM_SEOGLOSSARY_COMPONENT_NAMESEARCH"
+             description="COM_SEOGLOSSARY_COMPONENT_NAMESEARCH_DESCRIPTION">
+                 <option value="0">JNO</option>
+                 <option value="1">JYES</option>
+			</field>  
+			
+			<field name="search_in_definition"
+             type="radio"
+			 class="btn-group btn-group-yesno"
+             default="1"
+             label="COM_SEOGLOSSARY_COMPONENT_DSEARCH"
+             description="COM_SEOGLOSSARY_COMPONENT_DSEARCH_DESCRIPTION">
+                 <option value="0">JNO</option>
+                 <option value="1">JYES</option>
+			</field> 
+			
+            
+			<field name="search_in_synonym"
+             type="radio"
+			 class="btn-group btn-group-yesno"
+             default="0"
+             label="COM_SEOGLOSSARY_SEARCH_IN_SYNONYM"
+             description="COM_SEOGLOSSARY_SEARCH_IN_SYNONYM">
+                 <option value="0">JNO</option>
+                 <option value="1">JYES</option>
+			</field>
+            
+			<field name="search_in_keywords"
+             type="radio"
+			 class="btn-group btn-group-yesno"
+             default="0"
+             label="COM_SEOGLOSSARY_SEARCH_IN_KEYWORDS"
+             description="COM_SEOGLOSSARY_SEARCH_IN_KEYWORDS">
+                 <option value="0">JNO</option>
+                 <option value="1">JYES</option>
+			</field>
+            
+			<field name="search_in_meta"
+             type="radio"
+			 class="btn-group btn-group-yesno"
+             default="0"
+             label="COM_SEOGLOSSARY_SEARCH_IN_META"
+             description="COM_SEOGLOSSARY_SEARCH_IN_META">
+                 <option value="0">JNO</option>
+                 <option value="1">JYES</option>
+			</field>
+            
+            <field name="show_glossary_name"
+             type="radio"
+			 class="btn-group btn-group-yesno"
+             default="1"
+             label="COM_SEOGLOSSARY_COMPONENT_NSEARCH"
+             description="COM_SEOGLOSSARY_COMPONENT_NSEARCH_DESCRIPTION">
+                 <option value="0">JNO</option>
+                 <option value="1">JYES</option>
+			</field> 
+	</fieldset>
+	
+	
+	<fieldset name="socialmedia"
+			  description="COM_SEOGLOSSARY_COMPONENT_SOCIAL_DESCRIPTION"
+			  label="COM_SEOGLOSSARY_COMPONENT_SOCIAL">
+		
+		<field name="show_fb_list"
+		 type="radio"
+		 default="0"
+		 class="btn-group btn-group-yesno"
+		 label="COM_SEOGLOSSARY_COMPONENT_FBLIST"
+		 description="COM_SEOGLOSSARY_COMPONENT_FBLIST_DESCRIPTION">
+			 <option value="0">JNO</option>
+			 <option value="1">JYES</option>
+		</field> 
+		
+		<field name="show_fb_term"
+		 type="radio"
+		 default="0"
+		 class="btn-group btn-group-yesno"
+		 label="COM_SEOGLOSSARY_COMPONENT_FB"
+		 description="COM_SEOGLOSSARY_COMPONENT_FB_DESCRIPTION">
+			 <option value="0">JNO</option>
+			 <option value="1">JYES</option>
+		</field> 
+		
+		<field name="show_tw_list"
+		 type="radio"
+		 default="0"
+		 class="btn-group btn-group-yesno"
+		 label="COM_SEOGLOSSARY_COMPONENT_TWITTERLIST"
+		 description="COM_SEOGLOSSARY_COMPONENT_TWITTERLIST_DESCRIPTION">
+			 <option value="0">JNO</option>
+			 <option value="1">JYES</option>
+		</field> 
+		
+		<field name="show_tw_term"
+		 type="radio"
+		 default="0"
+		 class="btn-group btn-group-yesno"
+		 label="COM_SEOGLOSSARY_COMPONENT_TWITTER"
+		 description="COM_SEOGLOSSARY_COMPONENT_TWITTER_DESCRIPTION">
+			 <option value="0">JNO</option>
+			 <option value="1">JYES</option>
+		</field> 
+	</fieldset>
+
+    <fieldset name="disqus"
+              description="COM_SEOGLOSSARY_COMPONENT_DICUSSINT_DESCRIPTION"
+              label="COM_SEOGLOSSARY_COMPONENT_DICUSSINT">
+
+        <field name="disqus_shortname"
+               type="text"
+               default=""
+               label="COM_SEOGLOSSARY_COMPONENT_DICUSSUSER"
+               description="COM_SEOGLOSSARY_COMPONENT_DICUSSUSER_DESCRIPTION"
+               size="35">
+        </field>
+
+        <field name="disqus_terms"
+               type="radio"
+               default="0"
+               class="btn-group btn-group-yesno"
+               label="COM_SEOGLOSSARY_COMPONENT_DICUSSTERM"
+               description="COM_SEOGLOSSARY_COMPONENT_DICUSSTERM_DESCRIPTION">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field name="disqus_glossaries"
+               type="radio"
+               default="0"
+               class="btn-group btn-group-yesno"
+               label="COM_SEOGLOSSARY_COMPONENT_DICUSS"
+               description="COM_SEOGLOSSARY_COMPONENT_DICUSS_DESCRIPTION">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+    </fieldset>
+    
+    <fieldset name="restriction"
+              description="COM_SEOGLOSSARY_COMPONENT_RESTRICTION"
+              label="COM_SEOGLOSSARY_COMPONENT_RESTRICTION">
+	<field name="disable_menu"
+		type="menuitem"
+		default=""
+		label="COM_SEOGLOSSARY_COMPONENT_DISABLEMENU"
+		description="COM_SEOGLOSSARY_COMPONENT_DISABLEMENU_DESCRIPTION"
+		multiple="true">
+	   
+		</field>
+	
+	<field name="disable_component"
+		type="sql"
+		default=""
+		label="COM_SEOGLOSSARY_COMPONENT_DISABLECOMPONENT"
+		description="COM_SEOGLOSSARY_COMPONENT_DISABLECOMPONENT_DESCRIPTION"
+		query="select name ,element  from #__extensions where type='component' AND enabled=1 AND client_id=1"
+		multiple="true"
+        layout="joomla.form.field.list-fancy-select"
+		size="35" key_field="element" value_field="name">
+		</field>
+	
+	<field name="disable_context"
+		type="textarea"
+		default=""
+		label="COM_SEOGLOSSARY_LBL_DISABLECONTEXT"
+		description="COM_SEOGLOSSARY_LBL_DISABLECONTEXT_DESC"
+		size="35" >
+		</field>
+	
+	<field name="disable_category" type="category" extension="com_content" label="COM_SEOGLOSSARY_COMPONENT_DISABLECAT" description="COM_SEOGLOSSARY_COMPONENT_DISABLECAT_DESCRIPTION" layout="joomla.form.field.list-fancy-select" multiple="true"/>
+		
+    </fieldset>
+	
+	<fieldset name="advanced"
+			  description="COM_SEOGLOSSARY_COMPONENT_ADVANCE_DESCRIPTION"
+			  label="COM_SEOGLOSSARY_COMPONENT_ADVANCE">
+			  
+		<field name="set_description"
+		 type="radio"
+		 default="1"
+		 class="btn-group btn-group-yesno"
+		 label="COM_SEOGLOSSARY_COMPONENT_METADESC"
+		 description="COM_SEOGLOSSARY_COMPONENT_METADESC_DESCRIPTION">
+			 <option value="0">JNO</option>
+			 <option value="1">JYES</option>
+		</field> 
+		
+		<field name="set_keyword"
+		 type="radio"
+		 default="1"
+		 class="btn-group btn-group-yesno"
+		 label="COM_SEOGLOSSARY_COMPONENT_META"
+		 description="COM_SEOGLOSSARY_COMPONENT_META_DESCRIPTION">
+			 <option value="0">JNO</option>
+			 <option value="1">JYES</option>
+		</field> 
+		
+		<field name="disable_cmd"
+		type="text"
+		default="{seog:disable}"
+		label="COM_SEOGLOSSARY_COMPONENT_DISABLECMD"
+		description="COM_SEOGLOSSARY_COMPONENT_DISABLECMD_DESCRIPTION"
+		size="35">
+		</field>
+		
+		<field name="search_pattern"
+			type="text"
+			default="/([^\w])({word}[s]?)([^\w\-])/usi"
+			label="COM_SEOGLOSSARY_COMPONENT_SEARCHPATTERN"
+			description="COM_SEOGLOSSARY_COMPONENT_SEARCHPATTERN_DESCRIPTION"
+			size="35">
+		</field>
+		
+		<field name="apply_content_plugins"
+		 type="radio"
+		 default="1"
+		 label="COM_SEOGLOSSARY_COMPONENT_APPLYFRONTEND"
+		 class="btn-group btn-group-yesno"
+		 description="COM_SEOGLOSSARY_COMPONENT_APPLYFRONTEND">
+			 <option value="0">JNO</option>
+			 <option value="1">JYES</option>
+		</field>
+
+        <field name="custom_css"
+               type="textarea"
+               default=""
+               label="COM_SEOGLOSSARY_COMPONENT_CUSTOMCSS"
+               description="COM_SEOGLOSSARY_COMPONENT_CUSTOMCSS_DESCRIPTION"
+               size="500">
+        </field>
+
+        <field name="macro"
+               type="textarea"
+               default=""
+               filter="raw"
+               label="COM_SEOGLOSSARY_COMPONENT_MACRO"
+               description="COM_SEOGLOSSARY_COMPONENT_MACRO_DESCRIPTION"
+               size="1500">
+        </field>
+
+        <field name="legacy_slug"
+               type="radio"
+               default="0"
+               label="COM_SEOGLOSSARY_COMPONENT_LEGACYSLUG"
+               class="btn-group btn-group-yesno"
+               description="COM_SEOGLOSSARY_COMPONENT_LEGACYSLUG_DESCRIPTION">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+	</fieldset>
+	<fieldset
+            name="jutranslation"
+            label="Translations"
+            description="Joomunited translations"
+           >
+        <field name="jutranslation" label="Translations" type="jutranslation" />
+    </fieldset>
+	
+	  <fieldset 
+                name="liveupdate"
+		label="Live update"
+		description="Live update" > 
+                <field name="liveupdate" label="Live update status" type="updaterstatus" /> 
+        </fieldset> 
+</config>

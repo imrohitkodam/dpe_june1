@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="details">
+        <field
+            name="id"
+            type="hidden"
+        />
+        <field
+            name="title"
+            type="text"
+            label="COM_SEAICHAT_FIELD_TITLE"
+            required="true"
+            maxlength="255"
+            hint="e.g. Product Documentation, Site Articles, or FAQ"
+        />
+        <field
+            name="source_type"
+            type="list"
+            label="COM_SEAICHAT_FIELD_SOURCE_TYPE"
+            default="url"
+        >
+            <option value="url">COM_SEAICHAT_SOURCE_TYPE_URL</option>
+            <option value="text">COM_SEAICHAT_SOURCE_TYPE_TEXT</option>
+            <option value="articles">COM_SEAICHAT_SOURCE_TYPE_ARTICLES</option>
+            <option value="sppb">COM_SEAICHAT_SOURCE_TYPE_SPPB</option>
+        </field>
+        <field
+            name="url"
+            type="url"
+            label="COM_SEAICHAT_FIELD_URL"
+            description="COM_SEAICHAT_FIELD_URL_DESC"
+            maxlength="1000"
+            hint="https://docs.yoursite.com"
+            showon="source_type:url"
+        />
+        <field
+            name="content"
+            type="textarea"
+            label="COM_SEAICHAT_FIELD_KB_CONTENT"
+            description="COM_SEAICHAT_FIELD_KB_CONTENT_DESC"
+            rows="20"
+            cols="80"
+            filter="raw"
+            showon="source_type:text"
+        />
+        <field
+            name="categories"
+            type="text"
+            label="COM_SEAICHAT_FIELD_CATEGORIES"
+            description="COM_SEAICHAT_FIELD_CATEGORIES_DESC"
+            default=""
+            hint="Selected via the category picker below"
+            showon="source_type:articles"
+        />
+        <field
+            name="published"
+            type="list"
+            label="JSTATUS"
+            default="1"
+        >
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+        </field>
+        <field
+            name="ordering"
+            type="number"
+            label="JFIELD_ORDERING_LABEL"
+            default="0"
+            min="0"
+        />
+    </fieldset>
+</form>

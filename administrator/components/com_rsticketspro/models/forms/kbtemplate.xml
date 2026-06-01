@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<field name="kb_template_body" type="editor" class="inputbox" label="RST_KB_TEMPLATE_BODY" description="RST_KB_TEMPLATE_BODY_DESC" filter="raw" buttons="true" />
+	<field name="kb_template_ticket_body" type="editor" class="inputbox" label="RST_KB_TEMPLATE_TICKET_BODY" description="RST_KB_TEMPLATE_TICKET_BODY_DESC" filter="raw" buttons="true" />
+</form>

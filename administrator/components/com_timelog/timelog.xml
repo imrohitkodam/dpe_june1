@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+	<name>com_timelog</name>
+	<creationDate>2019-03-19</creationDate>
+	<copyright>Copyright (C) 2009 - 2019 Techjoomla. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>http://techjoomla.com</authorUrl>
+	<version>1.0.0</version>
+	<description>COM_TIMELOG_DESCRIPTION</description>
+
+	<install> <!-- Runs on install -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<update> <!-- Runs on update -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/update.mysql.utf8.sql</file>
+		</sql>
+	</update>
+	<uninstall> <!-- Runs on uninstall -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>timelog.php</filename>
+		<filename>controller.php</filename>
+		<filename>router.php</filename>
+		<folder>views</folder>
+		<folder>models</folder>
+		<folder>controllers</folder>
+		<folder>helpers</folder>
+	</files>
+	<media destination="com_timelog" folder="media">
+		<folder>js</folder>
+		<folder>css</folder>
+	</media>
+	<languages folder="site/languages">
+
+			<language tag="en-GB">en-GB/en-GB.com_timelog.ini</language>
+	</languages>
+	<administration>
+		<menu>COM_TIMELOG</menu>
+		<submenu>
+
+			<menu link="option=com_timelog&amp;view=activities" view="activities" alt="Timelog/Activities">COM_TIMELOG_TITLE_ACTIVITIES</menu>
+			<menu link="option=com_timelog&amp;view=activitytypes" view="activitytypes" alt="Timelog/Activitytypes">COM_TIMELOG_TITLE_ACTIVITYTYPES</menu>
+
+		</submenu>
+		<files folder="administrator">
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>timelog.php</filename>
+			<folder>controllers</folder>
+			<folder>assets</folder>
+			<folder>helpers</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+		<languages folder="administrator/languages">
+
+			<language tag="en-GB">en-GB/en-GB.com_timelog.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_timelog.sys.ini</language>
+		</languages>
+	</administration>
+	<config>
+		<fields name="params">
+			<fieldset name="component">
+				<field name="save_history" default="0" />
+			</fieldset>
+		</fields>
+	</config>
+	<plugins>
+		<plugin group="search" plugin="timelog"/>
+	</plugins>
+
+</extension>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field name="id" type="hidden" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC" filter="INT"/>
+    <field name="title" required="true" default="" label="COM_TIMELOG_FORM_LBL_ACTIVITYTYPE_TITLE" description="COM_TIMELOG_FORM_DESC_ACTIVITYTYPE_TITLE" hint="COM_TIMELOG_FORM_LBL_ACTIVITYTYPE_TITLE" filter="string"/>
+    <field name="description" type="editor" class="inputbox" filter="safehtml" label="COM_TIMELOG_FORM_LBL_ACTIVITYTYPE_DESCRIPTION" description="COM_TIMELOG_FORM_DESC_ACTIVITYTYPE_DESCRIPTION" hint="COM_TIMELOG_FORM_LBL_ACTIVITYTYPE_DESCRIPTION"/>
+    <field name="state" default="1" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1">
+      <option value="1">JPUBLISHED</option>
+      <option value="0">JUNPUBLISHED</option>
+      <option value="2">JARCHIVED</option>
+      <option value="-2">JTRASHED</option>
+    </field>
+  </fieldset>
+</form>

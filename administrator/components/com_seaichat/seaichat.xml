@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" method="upgrade">
+    <name>com_seaichat</name>
+    <author>SE Extensions</author>
+    <creationDate>2026-03-18</creationDate>
+    <copyright>(C) 2026 SE Extensions. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later</license>
+    <authorEmail>support@se-extensions.com</authorEmail>
+    <authorUrl>https://www.se-extensions.com</authorUrl>
+    <version>2.0.7</version>
+    <description>COM_SEAICHAT_DESCRIPTION</description>
+    <namespace path="src">SolarEclipse\Component\SeAiChat</namespace>
+    <scriptfile>script.php</scriptfile>
+    <filename>LICENSE.txt</filename>
+
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.sql</file>
+        </sql>
+    </uninstall>
+
+    <files folder="site">
+        <folder>language</folder>
+        <folder>services</folder>
+        <folder>src</folder>
+        <folder>tmpl</folder>
+    </files>
+
+    <media destination="com_seaichat" folder="media">
+        <folder>css</folder>
+        <folder>images</folder>
+        <folder>js</folder>
+    </media>
+
+    <administration>
+        <files folder="admin">
+            <filename>config.xml</filename>
+            <folder>forms</folder>
+            <folder>helpers</folder>
+            <folder>language</folder>
+            <folder>plugins</folder>
+            <folder>services</folder>
+            <folder>sql</folder>
+            <folder>src</folder>
+            <folder>tmpl</folder>
+        </files>
+        <menu img="class:comments">COM_SEAICHAT</menu>
+        <submenu>
+            <menu link="option=com_seaichat&amp;view=dashboard">COM_SEAICHAT_DASHBOARD</menu>
+            <menu link="option=com_seaichat&amp;view=knowledgebases">COM_SEAICHAT_KNOWLEDGE_BASE</menu>
+            <menu link="option=com_seaichat&amp;view=calltoactions">COM_SEAICHAT_CALL_TO_ACTIONS</menu>
+            <menu link="option=com_seaichat&amp;view=chatlogs">COM_SEAICHAT_CHAT_LOGS</menu>
+            <menu link="option=com_seaichat&amp;view=settings">COM_SEAICHAT_SETTINGS</menu>
+        </submenu>
+    </administration>
+</extension>

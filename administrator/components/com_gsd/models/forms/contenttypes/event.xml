@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="contenttype">
+        <fields name="event">
+            <field name="headline" type="map"
+                label="NR_TITLE"
+                description="GSD_EVENT_TITLE_DESC"
+                hint="Jan Lieberman Concert Series: Journey in Jazz"
+                custom_class="input-xlarge"
+                default="gsd.item.headline"
+                required="true"
+            />
+            <field name="description" type="map"
+                label="GSD_ITEM_DESC"
+                description="GSD_ITEM_DESC_DESC"
+                custom_class="input-xlarge"
+                rows="5"
+                default="gsd.item.description"
+                required="true"
+            />
+            <field name="image" type="mapimage"
+                label="NR_IMAGE"
+                description="GSD_IMAGE_OPTION_DESC"
+                default="gsd.item.image"
+            />
+            <field name="startDate" type="mapdate"
+                label="GSD_EVENT_START_DATE"
+                description="GSD_EVENT_START_DATE_DESC"
+                required="true"
+                default="gsd.item.startdate"
+            />
+            <field name="endDate" type="mapdate"
+                label="GSD_EVENT_END_DATE"
+                description="GSD_EVENT_END_DATE_DESC"
+                default="gsd.item.enddate"
+            />
+            <field type="spacer" name="label" label="GSD_LOCATION" />
+            <field name="locationName" type="map"
+                label="GSD_EVENT_LOCATION_NAME"
+                description="GSD_EVENT_LOCATION_NAME_DESC"
+                hint="Warner Theatre"
+                default="gsd.item.locationname"
+                required="true"
+            />
+            <field name="locationAddress" type="map"
+                label="GSD_EVENT_STREET_ADDRESS"
+                description="GSD_EVENT_STREET_ADDRESS_DESC"
+                hint="New York, NY, 12345, USA"
+                default="gsd.item.locationaddress"
+            />
+            <field name="addressCountry" type="map"
+                label="GSD_BUSINESSLISTING_ADDRESS_COUNTRY"
+                description="GSD_EVENT_ADDRESS_COUNTRY_DESC"
+                default="gsd.item.addressCountry"
+                hint="US">
+                <subform>
+                    <field name="fixed" type="NR_Geo"
+                        showon="option:fixed"
+                    />
+                </subform>
+            </field>
+            <field name="addressLocality" type="map"
+                label="GSD_BUSINESSLISTING_ADDRESS_LOCALITY"
+                description="GSD_EVENT_ADDRESS_LOCALITY_DESC"
+                hint="GSD_EVENT_ADDRESS_LOCALITY_HINT"
+                default="gsd.item.addressLocality"
+            />
+            <field name="addressRegion" type="map"
+                label="GSD_BUSINESSLISTING_ADDRESS_REGION"
+                description="GSD_EVENT_ADDRESS_REGION_DESC"
+                hint="GSD_EVENT_ADDRESS_REGION_HINT"
+                default="gsd.item.addressRegion"
+            />
+            <field name="postalCode" type="map"
+                label="GSD_BUSINESSLISTING_POSTAL_CODE"
+                description="GSD_EVENT_POSTAL_CODE_DESC"
+                hint="GSD_EVENT_POSTAL_CODE_HINT"
+                default="gsd.item.postalCode"
+            />
+            <field name="online_url" type="map"
+                label="GSD_EVENT_ONLINE_EVENT_URL"
+                description="GSD_EVENT_ONLINE_EVENT_URL_DESC"
+                hint="https://"
+            />
+            <field type="spacer" name="label2" label="GSD_PERFORMER" />
+            <field name="performerType" type="map"
+                label="GSD_EVENT_PERFORMER_TYPE"
+                description="GSD_EVENT_PERFORMER_TYPE_DESC">
+                <subform>
+                    <field name="fixed" type="list"
+                        hiddenLabel="true"
+                        showon="option:fixed">
+                        <option value="Person">GSD_PERSON</option> 
+                        <option value="PerformingGroup">GSD_EVENT_PERFORMING_GROUP</option>
+                        <option value="DanceGroup">GSD_EVENT_DANCE_GROUP</option>
+                        <option value="MusicGroup">GSD_EVENT_MUSIC_GROUP</option>
+                        <option value="TheaterGroup">GSD_EVENT_THEATER_GROUP</option>
+                    </field>
+                </subform>
+            </field>
+            <field name="performerName" type="map"
+                label="GSD_EVENT_PERFORMER_NAME"
+                description="GSD_EVENT_PERFORMER_NAME_DESC"
+                hint="John Doe"
+            />
+            <field name="performerURL" type="map"
+                label="GSD_EVENT_PERFORMER_URL"
+                description="GSD_EVENT_PERFORMER_URL_DESC"
+                hint="https://"
+            />
+            <field type="spacer" name="label4" label="GSD_EVENT_ORGANIZER" />
+            <field name="organizerType" type="map"
+                label="GSD_EVENT_ORGANIZER_TYPE"
+                description="GSD_EVENT_ORGANIZER_TYPE_DESC">
+                <subform>
+                    <field name="fixed" type="list"
+                        hiddenLabel="true"
+                        showon="option:fixed">
+                        <option value="Organization">GSD_ORGANIZATION</option>
+                        <option value="Person">GSD_PERSON</option> 
+                    </field>
+                </subform>
+            </field>
+            <field name="organizerName" type="map"
+                label="GSD_EVENT_ORGANIZER_NAME"
+                description="GSD_EVENT_ORGANIZER_NAME_DESC"
+                hint="John Doe"
+            />
+            <field name="organizerURL" type="map"
+                label="GSD_EVENT_ORGANIZER_URL"
+                description="GSD_EVENT_ORGANIZER_URL_DESC"
+                hint="https://"
+            />
+            <field type="spacer" name="label3" label="GSD_JOBPOSTING_OTHER" />
+            <field name="offerAvailability" type="map"
+                label="GSD_EVENT_AVAILABILITY"
+                description="GSD_EVENT_AVAILABILITY_DESC">
+                <subform>
+                    <field name="fixed" type="list"
+                        hiddenLabel="true"
+                        showon="option:fixed">
+                        <option value="http://schema.org/InStock">GSD_AVAILABILITY_IN_STOCK</option>
+                        <option value="http://schema.org/PreOrder">GSD_AVAILABILITY_PRE_ORDER</option>
+                        <option value="http://schema.org/SoldOut">GSD_AVAILABILITY_SOLDOUT</option>
+                    </field>
+                </subform>
+            </field>
+            <field name="eventAttendanceMode" type="map"
+                label="GSD_EVENT_ATTENDANCE_MODE"
+                description="GSD_EVENT_ATTENDANCE_MODE_DESC">
+                <subform>
+                    <field name="fixed" type="list"
+                        hiddenLabel="true"
+                        showon="option:fixed">
+                        <option value="https://schema.org/OnlineEventAttendanceMode">GSD_ONLINE</option>
+                        <option value="https://schema.org/OfflineEventAttendanceMode">GSD_OFFLINE</option>
+                        <option value="https://schema.org/MixedEventAttendanceMode">GSD_MIXED</option>
+                    </field>
+                </subform>
+            </field>
+            <field name="offerStartDate" type="mapdate"
+                label="GSD_EVENT_AVAILABILITY_START_DATE"
+                description="GSD_EVENT_AVAILABILITY_START_DATE_DESC"
+                default="gsd.item.offerstartdate"
+            />  
+            <field name="offerPrice" type="map"
+                label="GSD_EVENT_OFFER_PRICE"
+                description="GSD_EVENT_OFFER_PRICE_DESC"
+                default="gsd.item.offerprice"
+            />
+            <field name="offerCurrency" type="map"
+                label="GSD_PRODUCT_OFFER_CURRENCY"
+                description="GSD_PRODUCT_OFFER_CURRENCY_DESC"
+                hint="EUR"
+                default="gsd.item.offercurrency">
+                <subform>
+                    <field name="fixed" type="nr_currencies"
+                        showon="option:fixed"
+                        showselect="false"
+                    />
+                </subform>
+            </field>
+            <field name="offerInventoryLevel" type="map"
+                label="GSD_EVENT_INVENTORY_LEVEL"
+                description="GSD_EVENT_INVENTORY_LEVEL_DESC"
+                default="gsd.item.offerinventorylevel"
+            />
+        </fields>
+    </fieldset>
+</form>

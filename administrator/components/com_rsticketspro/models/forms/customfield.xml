@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="params">
+		<field name="department_id" required="true" please="true" type="departments" default="0" label="RST_CUSTOM_FIELD_DEPARTMENT" description="RST_CUSTOM_FIELD_DEPARTMENT_DESC" />
+		<field name="name" type="text" description="RST_CUSTOM_FIELD_DESC" label="RST_CUSTOM_FIELD" required="true" size="64" />
+		<field name="label" type="text" description="RST_LABEL_DESC" label="RST_LABEL" size="64" />
+		<field name="type" type="list" description="RST_TYPE_DESC" label="RST_TYPE">
+			<option value="freetext">RST_FREETEXT</option>
+			<option value="textbox">RST_TEXTBOX</option>
+			<option value="textarea">RST_TEXTAREA</option>
+			<option value="select">RST_SELECT</option>
+			<option value="multipleselect">RST_MULTIPLESELECT</option>
+			<option value="checkbox">RST_CHECKBOX</option>
+			<option value="radio">RST_RADIO</option>
+			<option value="calendar">RST_CALENDAR</option>
+			<option value="calendartime">RST_CALENDARTIME</option>
+		</field>
+		<field name="values" label="RST_VALUES" description="RST_VALUES_DESC" type="textarea" filter="raw" rows="5" cols="50" />
+		<field name="additional" label="RST_ADDITIONAL_ATTR" description="RST_ADDITIONAL_ATTR_DESC" type="textarea" filter="raw" rows="5" cols="50" showon="type!:freetext" />
+		<field name="required" type="radio" class="btn-group btn-group-yesno" label="RST_REQUIRED" description="RST_REQUIRED_DESC" size="1" default="0" showon="type!:freetext">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="validation" label="RST_VALIDATION" description="RST_VALIDATION_DESC" type="textarea" filter="raw" rows="5" cols="50" showon="type!:freetext" />
+		<field name="description" label="RST_CUSTOM_FIELD_DESCRIPTION" description="RST_CUSTOM_FIELD_DESCRIPTION_DESC" type="textarea" filter="raw" rows="5" cols="50" />
+		<field name="published" type="radio" class="btn-group btn-group-yesno" label="JPUBLISHED" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="id" type="hidden" />
+	</fieldset>
+</form>

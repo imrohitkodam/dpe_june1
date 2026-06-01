@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="params">
+		<field name="name" type="text" description="RST_STATUS_DESC" label="RST_STATUS" required="true" size="64" />
+		<field name="published" type="radio" class="btn-group btn-group-yesno" label="JPUBLISHED" size="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="id" type="hidden" />
+	</fieldset>
+</form>

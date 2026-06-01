@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+<fieldset addfieldpath="/administrator/components/com_tjcompetency/models/fields">
+	<fields name="filter">
+
+		<field
+			name="search"
+			type="text"
+			inputmode="search"
+			label="COM_COMPETENCY_COMPETENCY_SKILLCONTENTUSERMAP_FILTER_SEARCH_LABEL"
+			description="COM_COMPETENCY_COMPETENCY_SKILLCONTENTUSERMAP_FILTER_SEARCH_LABEL_DESC"
+			hint="JSEARCH_FILTER"
+		/>
+
+		<field
+			name="user_id"
+			type="CompetencyUsers"
+			label="COM_COMPETENCY_COMPETENCY_SKILLCONTENTUSERMAP_FILTER_USER_LABEL"
+			description="COM_COMPETENCY_COMPETENCY_SKILLCONTENTUSERMAP_FILTER_USER_DESC"
+			multiple="true"
+			class="multipleUsers"
+			onchange="this.form.submit();"
+			>
+			<!-- <option value="0">JNONE</option> -->
+		</field>
+
+		<field
+			name="skill_id"
+			type="skilledit"
+			label="COM_COMPETENCY_COMPETENCY_SKILLCONTENTUSERMAP_FILTER_SKILL_LABEL"
+			description="COM_COMPETENCY_COMPETENCY_SKILLCONTENTUSERMAP_FILTER_SKILL_DESC"
+			onchange="this.form.submit();"
+			multiple="true"
+			class="multipleSkills"
+			hide_root="true"
+		/>
+
+	</fields>
+
+	<fields name="list">
+
+		<field
+			name="fullordering"
+			type="list"
+			label="JGLOBAL_SORT_BY"
+			description="JGLOBAL_SORT_BY"
+			default="a.id ASC"
+			statuses="*,0,1,2,-2"
+			onchange="this.form.submit();"
+			validate="options"
+			>
+			<option value="">JGLOBAL_SORT_BY</option>
+		</field>
+
+		<field
+			name="limit"
+			type="limitbox"
+			class="input-mini"
+			default="25"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</fieldset>
+</form>

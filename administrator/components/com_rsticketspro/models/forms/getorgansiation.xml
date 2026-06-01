@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fieldset>
+	<field name="cluster_id" class="cluster-info" type="cluster" required="true" default="" label="COM_DPE_ORGANISATION" description="COM_DPE_ORGANISATION"  addfieldpath="administrator/components/com_tjfields/models/fields" filter="INT" onchange="getCCusers(this)"  onclick="getOrganisation(this)"/>
+
+		 
+        <field
+            name="clusterusers"
+            type="list"
+            label="COM_DPE_TICKET_CCUSERS"
+            multiple="true"
+        >           
+        </field>
+        <field
+            name="MultiOrgCustomer"
+            type="list"
+            label="COM_DPE_TICKET_CUSTOMER"
+        >
+            <option value="">Select Customer</option>
+            
+        </field>
+	</fieldset>
+</form>

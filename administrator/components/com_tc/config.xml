@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fieldset name="integration_settings" label="COM_TC_BASIC_CONFIG_SET" description="" addfieldpath="/administrator/components/com_tc/assets/elements">
+		<field name="date_format_show" type="dateformat" label="COM_TC_DATE_FORMAT_TO_SHOW" description="COM_TC_DATE_FORMAT_TO_SHOW_DESC" />
+		<field name="custom_format" class="inputbox" type="text" label="COM_TC_CUSTOM_DATE_FORMAT" showon="date_format_show:custom" description="COM_TC_CUSTOM_DATE_FORMAT_DESC" />
+	</fieldset>
+</config>

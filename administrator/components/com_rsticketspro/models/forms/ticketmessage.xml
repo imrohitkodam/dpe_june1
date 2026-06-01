@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="params">
+		<field name="message" type="rseditor" default="" rows="12" cols="80" label="RST_TICKET_MESSAGE" description="RST_TICKET_MESSAGE_DESC" required="true" filter="JComponentHelper::filterText" class="input-xxlarge" />
+		<field name="id" type="hidden" />
+	</fieldset>
+</form>

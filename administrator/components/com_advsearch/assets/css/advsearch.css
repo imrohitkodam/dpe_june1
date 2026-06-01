@@ -1,0 +1,89 @@
+/*.icon-48-searchindexer {
+      background-image: url(../images/l_searchindexer_large.jpg);
+      padding-left:60px!important;
+}
+
+.icon-48-createsearchindexer {
+      background-image: url(../images/l_searchindexer_large.jpg);
+      padding-left:60px!important;
+}
+
+.fixed-table-container {
+    background-color: white;
+    height: 300px;
+    margin: 10px auto;
+    padding-top: 30px;
+    position: relative;
+    width: 100%;
+}
+.fixed-table-container-inner
+{
+    height: 300px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.header-background
+{
+    background-color: #F0F0F0;
+    height: 30px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+table
+{
+    background-color: white;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+}
+.th-inner
+{
+	color:	#025A8D;
+    line-height: 30px;
+    margin-left: -5px;
+    padding-left: 5px;
+    position: absolute;
+    text-align: left;
+    top: 0;
+}
+.first .th-inner
+{
+    border-left: medium none;
+    padding-left: 6px;
+}
+.hidden-head
+{
+    min-width: 530px;
+}
+.hidden-header .th-inner
+{
+    height: 0;
+    overflow-y: hidden;
+    padding-right: 5px;
+    position: static;
+    white-space: nowrap;
+}
+
+*/
+
+.table th , .table-responsive.table-condensed td
+{
+	white-space:nowrap;
+	border:0px;
+}
+
+.table-responsive.table-condensed
+{
+	margin-top:15px;
+}
+
+.row-fluid
+{
+	overflow:hidden;
+}
+.container-main
+{
+	padding-right:0px!important;
+}

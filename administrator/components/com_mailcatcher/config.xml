@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <fieldset
+            name="basic"
+            label="COM_MAILCATCHER_DASHBOARD">
+        <field
+                name="download_id"
+                type="text"
+                label="COM_MAILCATCHER_DOWNLOAD_ID_LABEL"
+                description="COM_MAILCATCHER_DOWNLOAD_ID_DESC"/>
+        <field
+                name="chartType"
+                type="list"
+                label="COM_MAILCATCHER_CHART_TYPE"
+                default="line">
+            <option value="line">COM_MAILCATCHER_CHART_LINE</option>
+            <option value="bar">COM_MAILCATCHER_CHART_BAR</option>
+            <option value="horizontalBar">COM_MAILCATCHER_CHART_HORIZONTAL_BAR</option>
+            <option value="radar">COM_MAILCATCHER_CHART_RADAR</option>
+        </field>
+    </fieldset>
+    <fieldset
+            name="permissions"
+            label="JCONFIG_PERMISSIONS_LABEL"
+            description="JCONFIG_PERMISSIONS_DESC">
+        <field
+                name="rules"
+                type="rules"
+                label="JCONFIG_PERMISSIONS_LABEL"
+                filter="rules"
+                validate="rules"
+                component="com_mailcatcher"
+                section="component"/>
+    </fieldset>
+</config>

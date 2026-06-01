@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+        <field
+            name="search"
+            type="text"
+            label="COM_SEAICHAT_FILTER_SEARCH"
+            description="Search by user name, email or message content"
+            hint="JSEARCH_FILTER"
+        />
+    </fields>
+    <fields name="list">
+        <field
+            name="fullordering"
+            type="hidden"
+            default="cs.modified DESC"
+        />
+        <field
+            name="limit"
+            type="limitbox"
+            label="JGLOBAL_LIST_LIMIT"
+            default="25"
+        />
+    </fields>
+</form>

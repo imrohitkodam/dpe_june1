@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0.0" method="upgrade" overwrite="true">
+    <identifier>com:logman</identifier>
+    <name>com_logman</name>
+    <author>Joomlatools</author>
+    <creationDate>March 2025</creationDate>
+    <copyright>Copyright (C) 2011 Timble CVBA (http://www.timble.net)</copyright>
+    <license>GNU GPLv3 - http://www.gnu.org/licenses/gpl.html</license>
+    <authorEmail>support@joomlatools.com</authorEmail>
+    <authorUrl>www.joomlatools.com</authorUrl>
+    <version>6.0.0</version>
+    <description>User Activity Stream</description>
+
+    <media folder="media">
+        <folder>com_logman</folder>
+    </media>
+
+    <scriptfile>resources/install/script.php</scriptfile>
+
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">resources/install/install.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">resources/install/uninstall.sql</file>
+        </sql>
+    </uninstall>
+
+    <update>
+        <schemas>
+            <schemapath type="mysql">resources/updates</schemapath>
+        </schemas>
+    </update>
+
+    <updateservers>
+        <server type="extension" priority="1" name="LOGman">https://api.joomlatools.com/extension/logman-4.xml</server>
+    </updateservers>
+
+    <files folder="site/components/com_logman">
+        <filename>logman.php</filename>
+
+        <folder>controller</folder>
+        <folder>language</folder>
+        <folder>dispatcher</folder>
+        <folder>resources</folder>
+        <folder>template</folder>
+        <folder>views</folder>
+    </files>
+
+    <administration>
+        <menu view="activities">COM_LOGMAN</menu>
+
+        <files folder="administrator/components/com_logman">
+            <filename>access.xml</filename>
+            <filename>logman.php</filename>
+            <filename>version.php</filename>
+
+            <folder>activity</folder>
+            <folder>controller</folder>
+            <folder>database</folder>
+            <folder>dispatcher</folder>
+            <folder>forms</folder>
+            <folder>language</folder>
+            <folder>model</folder>
+            <folder>plugin</folder>
+            <folder>resources</folder>
+            <folder>template</folder>
+            <folder>views</folder>
+        </files>
+    </administration>
+
+    <dependencies>
+        <dependency type="module" element="mod_logman" client_id="1">ext/mod_logman_admin</dependency>
+        <dependency type="module" element="mod_logman" client_id="0">ext/mod_logman_site</dependency>
+        <dependency type="plugin" element="logman" folder="koowa">ext/plg_koowa_logman</dependency>
+        <dependency type="plugin" element="logmanlinker" folder="editors-xtd">ext/plg_editors-xtd_logmanlinker</dependency>
+        <dependency type="plugin" element="banners" folder="logman">ext/plg_logman_banners</dependency>
+        <dependency type="plugin" element="categories" folder="logman">ext/plg_logman_categories</dependency>
+        <dependency type="plugin" element="config" folder="logman">ext/plg_logman_config</dependency>
+        <dependency type="plugin" element="contact" folder="logman">ext/plg_logman_contact</dependency>
+        <dependency type="plugin" element="content" folder="logman">ext/plg_logman_content</dependency>
+        <dependency type="plugin" element="docman" folder="logman">ext/plg_logman_docman</dependency>
+        <dependency type="plugin" element="fileman" folder="logman">ext/plg_logman_fileman</dependency>
+        <dependency type="plugin" element="installer" folder="logman">ext/plg_logman_installer</dependency>
+        <dependency type="plugin" element="joomlaupdate" folder="logman">ext/plg_logman_joomlaupdate</dependency>
+        <dependency type="plugin" element="languages" folder="logman">ext/plg_logman_languages</dependency>
+        <dependency type="plugin" element="menus" folder="logman">ext/plg_logman_menus</dependency>
+        <dependency type="plugin" element="modules" folder="logman">ext/plg_logman_modules</dependency>
+        <dependency type="plugin" element="newsfeeds" folder="logman">ext/plg_logman_newsfeeds</dependency>
+        <dependency type="plugin" element="notifier" folder="logman">ext/plg_logman_notifier</dependency>
+        <dependency type="plugin" element="plugins" folder="logman">ext/plg_logman_plugins</dependency>
+        <dependency type="plugin" element="redirect" folder="logman">ext/plg_logman_redirect</dependency>
+        <dependency type="plugin" element="templates" folder="logman">ext/plg_logman_templates</dependency>
+        <dependency type="plugin" element="users" folder="logman">ext/plg_logman_users</dependency>
+        <dependency type="plugin" element="weblinks" folder="logman">ext/plg_logman_weblinks</dependency>
+        <dependency type="plugin" element="leadman" folder="logman">ext/plg_logman_leadman</dependency>
+        <dependency type="plugin" element="logmanresources" folder="content">ext/plg_content_logmanresources</dependency>
+        <dependency type="plugin" element="joomlatoolsupdater" folder="system" uninstall="false">extensions/plg_system_joomlatoolsupdater</dependency>
+    </dependencies>
+
+    <deleted>
+        <file>administrator/components/com_logman/com_logman.xml</file>
+        <file>administrator/components/com_logman/install/install.php</file>
+        <file>administrator/components/com_logman/install/uninstall.php</file>
+        <file>administrator/components/com_logman/aliases.php</file>
+
+        <folder>media/com_logman/bootstrap</folder>
+        <folder>media/com_logman/images</folder>
+
+        <file>media/com_logman/css/admin.css</file>
+
+        <file>administrator/components/com_logman/views/activities/tmpl/default.php</file>
+        <file>administrator/components/com_logman/views/activities/tmpl/export.php</file>
+        <file>administrator/components/com_logman/views/activities/tmpl/list.php</file>
+        <file>administrator/components/com_logman/views/activities/tmpl/purge.php</file>
+        <file>administrator/components/com_logman/views/activities/tmpl/rss.php</file>
+        <file>administrator/components/com_logman/views/activities/tmpl/sidebar.php</file>
+        <folder>administrator/components/com_logman/views/users</folder>
+
+        <folder>administrator/components/com_activities</folder>
+        <folder>components/com_activities</folder>
+
+        <file>administrator/language/en-GB/en-GB.com_logman.ini</file>
+        <file>administrator/language/en-GB/en-GB.com_logman.menu.ini</file>
+        <file>administrator/language/en-GB/en-GB.mod_logman.ini</file>
+        <file>administrator/language/en-GB/en-GB.mod_logman.sys.ini</file>
+    </deleted>
+
+</extension>

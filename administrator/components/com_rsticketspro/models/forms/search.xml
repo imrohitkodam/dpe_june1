@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="params">
+		<field name="filter_search" type="text" description="RST_SEARCH_TEXT_DESC" label="RST_SEARCH_TEXT" size="64" />
+		<field name="customer" type="text" description="RST_SEARCH_CUSTOMER_DESC" label="RST_SEARCH_CUSTOMER" size="64" />
+		<field name="staff" type="text" description="RST_SEARCH_STAFF_DESC" label="RST_SEARCH_STAFF" size="64" />
+		<field name="department_id" type="departments" default="0" published="true" label="RST_SEARCH_DEPARTMENTS" description="RST_SEARCH_DEPARTMENTS_DESC" multiple="multiple" />
+		<field name="priority_id" type="priorities" published="true" label="RST_SEARCH_PRIORITIES" description="RST_SEARCH_PRIORITIES_DESC" multiple="multiple" />
+		<field name="status_id" type="statuses" published="true" label="RST_SEARCH_STATUSES" description="RST_SEARCH_STATUSES_DESC" multiple="multiple" />
+		<field name="filter_order" type="list" label="JFIELD_ORDERING_LABEL" description="JFIELD_ORDERING_DESC">
+			<option value="date">RST_TICKET_DATE</option>
+			<option value="last_reply">RST_TICKET_LAST_REPLY</option>
+			<option value="code">RST_TICKET_CODE</option>
+			<option value="subject">RST_TICKET_SUBJECT</option>
+			<option value="status">RST_TICKET_STATUS</option>
+			<option value="priority">RST_TICKET_PRIORITY</option>
+		</field>
+		<field name="filter_order_Dir" type="list" label="">
+			<option value="ASC">JGLOBAL_ORDER_ASCENDING</option>
+			<option value="DESC">JGLOBAL_ORDER_DESCENDING</option>
+		</field>
+		<field name="flagged" type="radio" class="btn-group btn-group-yesno" label="RST_SEARCH_FLAGGED" size="1" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="from" type="calendar" label="COM_RSTICKETSPRO_FROM_DATE" format="%Y-%m-%d" filter="user_utc" />
+		<field name="to" type="calendar" label="COM_RSTICKETSPRO_TO_DATE" format="%Y-%m-%d" filter="user_utc" />
+	</fieldset>
+</form>

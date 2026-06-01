@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="id" type="hidden"/>
+		<field
+			name="sla_id"
+			required="true"
+			type="sql"
+			query="SELECT id,title FROM `#__tj_slas` WHERE state = '1' ORDER BY id DESC" key_field="id" value_field="title"
+			translate="false"
+			header="Select SLA"
+			filter="int"
+			label="COM_SLA_SLA_SERVICE_FORM_LBL_SLA"
+			description="COM_SLA_SLA_SERVICE_FORM_DESC_SLA"
+			/>
+
+		<field
+			name="sla_activity_type_id"
+			required="true"
+			type="sql"
+			query="SELECT id,title FROM `#__tj_sla_activity_types` WHERE state = '1' ORDER BY id DESC" key_field="id" value_field="title"
+			translate="false"
+			header="Select Activity Type"
+			filter="int"
+			label="COM_SLA_SLA_SERVICE_FORM_LBL_ACTIVITY_TYPE"
+			description="COM_SLA_SLA_SERVICE_FORM_DESC_ACTIVITY_TYPE"
+			/>
+
+		<field
+			name="title"
+			type="text"
+			required="true"
+			filter="string"
+			label="COM_SLA_SLA_SERVICE_FORM_LBL_TITLE"
+			description="COM_SLA_SLA_SERVICE_FORM_DESC_TITLE"/>
+
+		<field
+			name="description"
+			type="textarea"
+			label="COM_SLA_SLA_SERVICE_FORM_LBL_DESCRIPTION"
+			description="COM_SLA_SLA_SERVICE_FORM_DESC_DESCRIPTION"
+			rows="7"
+			cols="80"
+			/>
+
+		<field
+			name="params"
+			type="textarea"
+			label="COM_SLA_SLA_SERVICE_FORM_LBL_PARAMS"
+			description="COM_SLA_SLA_SERVICE_FORM_DESC_PRAMS"
+			rows="7"
+			cols="80"
+			/>
+
+		<field
+			name="ideal_time"
+			type="number"
+			class="inputbox"
+			label="COM_SLA_SLA_SERVICE_FORM_LBL_IDEAL_TIME"
+			description="COM_SLA_SLA_SERVICE_FORM_DESC_IDEAL_TIME"
+			filter="integer"
+			default="0"
+		/>
+
+		<field
+			name="state"
+			type="list"
+			filter="int"
+			label="JSTATUS"
+			description=""
+			default="1"
+			class="inputbox"
+			size="1">
+				<option value="1">JPUBLISHED</option>
+				<option value="0">JUNPUBLISHED</option>
+				<option value="2">JARCHIVED</option>
+				<option value="-2">JTRASHED</option>
+		</field>
+
+		<field
+			name="created_by"
+			type="hidden"
+			label="COM_SLA_SLA_SERVICE_FORM_LBL_CREATED_BY"/>
+
+		<field
+			name="modified_on"
+			type="hidden"/>
+
+		<field
+			name="modified_by"
+			type="hidden"
+		/>
+
+		<field
+			name="created_on"
+			type="hidden"/>
+
+		<field
+			name="ordering"
+			type="hidden"
+			filter="int"/>
+
+		<field
+			name="checked_out"
+			type="hidden"
+			filter="unset"/>
+
+		<field
+			name="checked_out_time"
+			type="hidden"
+			filter="unset"/>
+	</fieldset>
+</form>

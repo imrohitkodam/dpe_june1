@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fof>
+	<common>
+		<view name="cpanel">
+			<acl>
+				<task name="browse">core.edit.own</task>
+			</acl>
+		</view>
+		<view name="calendar">
+			<acl>
+				<task name="browse">core.edit.own</task>
+			</acl>
+		</view>
+		<view name="composer">
+			<acl>
+				<task name="add">core.edit.own</task>
+			</acl>
+		</view>
+		<view name="request">
+			<acl>
+				<task name="browse">core.edit.own</task>
+
+				<task name="batch">core.manage</task>
+				<task name="batchevergreen">core.manage</task>
+				<task name="publish">core.edit.state</task>
+				<task name="process">core.edit.state</task>
+
+				<task name="purge">core.manage</task>
+
+				<task name="applyAjaxPluginAction">core.edit.own</task>
+				<task name="applyAjaxOwnAction">core.edit.own</task>
+				<task name="routeAjaxItemId">core.edit.own</task>
+				<task name="publishAjaxAction">core.edit.state</task>
+				<task name="cancelAjaxAction">core.edit.state</task>
+				<task name="backtoQueueAjaxAction">core.edit.state</task>
+
+				<!--
+				<task name="readAjaxAction">core.edit.own</task>
+				 -->
+
+			</acl>
+		</view>
+
+		<view name="evergreen">
+			<acl>
+				<task name="browse">core.edit.own</task>
+
+				<task name="batch">core.manage</task>
+				<task name="batchevergreen">core.manage</task>
+				<task name="remove">core.manage</task>
+			</acl>
+		</view>
+
+		<view name="rule">
+			<acl>
+				<task name="purge">core.manage</task>
+			</acl>
+		</view>
+
+		<view name="post">
+			<acl>
+				<task name="browse">core.edit.own</task>
+				<task name="batch">core.manage</task>
+				<task name="purge">core.manage</task>
+			</acl>
+		</view>
+
+		<!-- Channel -->
+		<view name="channel">
+			<acl>
+				<task name="browse">core.edit.own</task>
+				<task name="getParamsForm">core.edit.own</task>
+				<task name="getFbValidation">core.edit.own</task>
+				<task name="getFbChValidation">core.edit.own</task>
+				<task name="getFbExtend">core.edit.own</task>
+				<task name="getTwValidation">core.edit.own</task>
+				<task name="getFbChannels">core.edit.own</task>
+			</acl>
+		</view>
+		<view name="vkchannel">
+			<acl>
+				<task name="callback">core.edit.own</task>
+				<task name="callbackStandalone">core.edit.own</task>
+			</acl>
+		</view>
+
+		<view name="feed">
+			<acl>
+				<task name="browse">core.edit.own</task>
+				<task name="import">core.manage</task>
+				<task name="getImportBegin">core.manage</task>
+				<task name="getImportStatus">core.manage</task>
+				<task name="getImportEnd">core.manage</task>
+			</acl>
+		</view>
+	</common>
+
+	<frontend>
+		<view name="mapis">
+			<acl>
+				<task name="run"></task>
+			</acl>
+		</view>
+		<view name="composerpost">
+			<acl>
+				<task name="browse"></task>
+
+				<task name="add">false</task>
+				<task name="cancel">false</task>
+				<task name="orderdown">false</task>
+				<task name="orderup">false</task>
+				<task name="publish">false</task>
+				<task name="remove">false</task>
+				<task name="save">false</task>
+				<task name="saveorder">false</task>
+				<task name="unpublish">false</task>
+			</acl>
+		</view>
+	</frontend>
+
+</fof>

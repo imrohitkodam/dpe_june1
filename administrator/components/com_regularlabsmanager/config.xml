@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config addfieldprefix="RegularLabs\Library\Form\Field">
+  <fieldset name="options" label="JOPTIONS">
+    <field name="@load_script_descriptions" type="LoadMedia" filetype="script" file="regularlabs.admin-form-descriptions"/>
+    <field name="@download_key__note" type="Note" description="RLEM_DOWNLOAD_KEY_DESC,&lt;a href=&quot;https://regularlabs.com/purchase&quot; target=&quot;_blank&quot;&gt;,&lt;/a&gt;,&lt;a href=&quot;https://regularlabs.com/downloads&quot; target=&quot;_blank&quot;&gt;,&lt;/a&gt;"/>
+    <field name="@download_key" type="DownloadKey" use-modal="false" label="RL_DOWNLOAD_KEY" description="RL_DOWNLOAD_KEY_DESC"/>
+    <field name="show_copyright" type="Radio" default="1" class="btn-group rl-btn-group btn-group-md btn-group-yesno" label="RL_SHOW_COPYRIGHT" description="RL_SHOW_COPYRIGHT_DESC">
+      <option value="0">JNO</option>
+      <option value="1">JYES</option>
+    </field>
+    <field name="updatesource" type="List" default="" label="RLEM_UPDATESOURCE" description="RLEM_UPDATESOURCE_DESC">
+      <option value="">RLEM_UPDATESOURCE_STABLE</option>
+      <option value="dev">RLEM_UPDATESOURCE_DEVELOPMENT</option>
+    </field>
+    <field name="@updatesource_dev" type="Note" class="rl-alert alert alert-warning rl-alert-light" text="RLEM_UPDATESOURCE_DEVELOPMENT_NOTE" showon="updatesource:dev"/>
+    <field name="timeout" type="Number" default="5" label="RLEM_TIMEOUT" description="RLEM_TIMEOUT_DESC"/>
+  </fieldset>
+  <fieldset name="action_logs" label="RL_USER_ACTION_LOGS">
+    <field name="enable_actionlog" type="Radio" default="1" class="btn-group rl-btn-group btn-group-md btn-group-yesno" label="RL_ENABLE_ACTIONLOG" description="RL_ENABLE_ACTIONLOG_DESC">
+      <option value="0">JNO</option>
+      <option value="1">JYES</option>
+    </field>
+    <field name="actionlog_events" type="Checkboxes" multiple="true" default="install,uninstall" checked="install,uninstall" class="rl-form-checkboxes-not-inline" label="RL_ACTIONLOG_EVENTS" description="RL_ACTIONLOG_EVENTS_DESC" showon="enable_actionlog:1">
+      <option value="install">RL_ACTION_INSTALL</option>
+      <option value="uninstall">RL_ACTION_UNINSTALL</option>
+    </field>
+  </fieldset>
+  <fieldset name="permissions" label="JCONFIG_PERMISSIONS_LABEL" description="JCONFIG_PERMISSIONS_DESC">
+    <field name="rules" type="Rules" label="JCONFIG_PERMISSIONS_LABEL" filter="rules" validate="rules" component="com_regularlabsmanager" section="component"/>
+  </fieldset>
+</config>

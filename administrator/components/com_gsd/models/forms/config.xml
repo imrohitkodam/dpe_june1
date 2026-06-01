@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="globaldata" label="GSD_KG">
+        <fields name="kg">
+            <field name="kgblockstart" type="nr_well"
+                label="GSD_KG"
+                description="GSD_KG_DESC"
+                url="https://www.tassos.gr/docs/google-structured-data/functionality/site-representation"
+            />
+            <field name="type" type="radio"
+                label="GSD_SITEREP_TYPE"
+                description="GSD_SITEREP_TYPE_DESC"
+                class="btn-group"
+                default="Organization">                >
+                <option value="Organization">GSD_ORGANIZATION</option>
+                <option value="Person">GSD_PERSON</option>
+            </field>
+            <field name="name" type="text" 
+                class="input-xxlarge"
+                label="GSD_SITENAME_NAME"
+                description="GSD_SITENAME_NAME_DESC"
+            />
+            <field name="alternateName" type="text" 
+                class="input-xxlarge"
+                label="GSD_SITENAME_NAME_ALT"
+                description="GSD_SITENAME_NAME_ALT_DESC"
+            />
+            <field name="description" type="text" 
+                class="input-xxlarge"
+                label="GSD_SITEREP_DESC"
+                description="GSD_SITEREP_DESC_DESC"
+            />
+            <field name="logo" type="media"
+                preview="tooltip"
+                label="GSD_LOGO"
+                description="GSD_ORGANIZATION_LOGO_DESC"
+            />
+            
+            <field name="email" type="email" 
+                class="input-xxlarge"
+                label="NR_EMAIL"
+                description="GSD_ORGANIZATION_EMAIL_DESC"
+                hint="info@example.com"
+            />
+            <field name="telephone" type="text" 
+                class="input-xxlarge"
+                label="GSD_PHONE_NUMBER"
+                description="GSD_ORGANIZATION_TELEPHONE_DESC"
+                hint="+1-234-567-890"
+            />
+            <field name="foundingDate" type="calendar" 
+                class="input-xxlarge"
+                label="GSD_FOUNDING_DATE"
+                description="GSD_ORGANIZATION_FOUNDING_DATE_DESC"
+                hint="YYYY-MM-DD"
+                showon="type:Organization"
+            />
+            
+            
+            <field name="kgblockend" type="nr_well" 
+                end="1"
+            />
+            <field name="kg_same_as_start" type="nr_well"
+                label="GSD_SOCIALPROFILES"
+                description="GSD_SOCIALPROFILES_DESC"
+                url="https://www.tassos.gr/docs/google-structured-data/functionality/site-representation"
+            />
+            <field name="sameAs" type="socialprofiles"
+                label="GSD_SOCIALPROFILES"
+                hiddenLabel="true"
+            />
+            <field name="kg_same_as_end" type="nr_well" 
+                end="1"
+            />
+            <field name="kg_address_start" type="nr_well"
+                label="GSD_ADDRESS"
+                description="GSD_SITEREP_ADDRESS_DESC"
+                url="https://www.tassos.gr/docs/google-structured-data/functionality/site-representation"
+            />
+            <field name="addressCountry" type="nr_geo"
+                label="NR_COUNTRY"
+                class="input-xxlarge"
+			    layout="joomla.form.field.list-fancy-select"
+            />
+            
+            <field name="addressLocality" type="text"
+                label="GSD_LOCALITY"
+                hint="New York"
+                class="input-xxlarge"
+            />
+            <field name="streetAddress" type="text"
+                label="GSD_STREET_ADDRESS"
+                hint="123 Main St."
+                class="input-xxlarge"
+            />
+            <field name="addressRegion" type="text"
+                label="NR_REGION"
+                hint="CA"
+                class="input-xxlarge"
+            />
+            <field name="postalCode" type="text"
+                label="NR_POSTAL_CODE"
+                hint="34528"
+                class="input-xxlarge"
+            />
+            
+            
+            <field name="kg_address_end" type="nr_well"
+                end="1"
+            />
+            <field name="kg_publish_start" type="nr_well"
+                label="GSD_KG_PUBLISH"
+                description="GSD_KG_PUBLISH_DESC"
+                url="https://www.tassos.gr/docs/google-structured-data/functionality/site-representation"
+            />
+            
+            <field name="publish" type="radio"
+                label="GSD_KG_PUBLISH_TO"
+                description="GSD_KG_PUBLISH_TO_DESC"
+                class="btn-group btn-group-yesno"
+                default="home">
+                <option value="home">NR_HOMEPAGE</option>
+                <option value="custom">GSD_SELECTED_PAGES</option>
+                <option value="0">GSD_NOWHERE</option>
+            </field>
+            <field name="publish_pages" type="nrmenuitems"
+                label="PLG_GSD_MENUS_ASSIGN_MENU_SELECTION_DESC" 
+                description="GSD_KG_PUBLISH_PAGES_DESC" 
+                multiple="true"
+                showon="publish:custom"
+            />
+            
+            
+            <field name="kg_publish_end" type="nr_well"
+                end="1"
+            />
+        </fields>    
+    </fieldset>
+    <fieldset name="breadcrumbs" label="GSD_BREADCRUMBS" description="GSD_BREADCRUMBS_DESC_2">
+        <field name="breadcrumbsstart" type="nr_well" 
+            description="GSD_BREADCRUMBS_DESC_2"
+            label="GSD_BREADCRUMBS"
+            url="https://www.tassos.gr/docs/google-structured-data/schemas/breadcrumbs"
+        />
+        <field name="breadcrumbs_enabled" type="nrtoggle"
+            label="JENABLED" 
+            description="GSD_BREADCRUMBS_DESC" 
+            checked="true"
+        />
+        <field name="include_home" type="nrtoggle"
+            label="GSD_BREADCRUMBS_INCLUDE_HOME" 
+            description="GSD_BREADCRUMBS_INCLUDE_HOME_DESC" 
+            checked="true"
+            showon="breadcrumbs_enabled:1"
+        />
+        <field name="breadcrumbs_home" type="text"
+            class="input-xxlarge"
+            showon="breadcrumbs_enabled:1[AND]include_home:1"
+            label="GSD_BREADCRUMBS_HOME_NAME"
+            description="GSD_BREADCRUMBS_HOME_NAME_DESC"
+            hint="Home"
+        />
+        <field name="remove_joomla_breadcrumb_schema" type="nrtoggle"
+            label="GSD_BREADCRUMBS_REMOVE_JOOMLA" 
+            description="GSD_BREADCRUMBS_REMOVE_JOOMLA_DESC" 
+            showon="breadcrumbs_enabled:1"
+        />
+        <field name="breadcrumbsend" type="nr_well" end="1"/>       
+    </fieldset>
+    <fieldset name="settings" label="NR_SETTINGS">
+        <field name="advancedStart" type="nr_well"
+            label="NR_SETTINGS"
+        />
+        <field name="preparecontent" type="nrtoggle"
+            label="GSD_PREPARE_CONTENT" 
+            description="GSD_PREPARE_CONTENT_DESC" 
+        />
+        <field name="minifyjson" type="nrtoggle"
+            label="GSD_MINIFY_JSON" 
+            description="GSD_MINIFY_JSON_DESC" 
+        />
+        <field name="wait_page_render" type="nrtoggle"
+            label="GSD_WAIT_PAGE_TO_RENDER" 
+            description="GSD_WAIT_PAGE_TO_RENDER_DESC" 
+        />
+        <field name="usage_tracking" type="nrtoggle"
+            label="NR_USAGE_TRACKING" 
+            description="NR_USAGE_TRACKING_DESC" 
+        />
+        <field name="debug" type="nrtoggle"
+            label="NR_DEBUG" 
+            description="GSD_DEBUG_DESC" 
+        />
+        <field name="advancedEnd" type="nr_well" 
+            end="true"
+        />
+        <field name="customCodeStart" type="nr_well" 
+            label="GSD_CUSTOM_CODE"
+            description="GSD_CUSTOM_CODE_GLOBAL_DESC"
+        />
+        <field name="customcode" type="textarea"
+            label="GSD_CUSTOM_CODE"
+            description="GSD_CUSTOM_CODE_GLOBAL_DESC"
+            class="span12 input-full"
+            filter="raw"
+            rows="15"
+            hint="&lt;script type='application/ld+json'&gt;&lt;/script&gt;"
+        />
+        <field name="customcode_disclaimer" type="note" 
+            class="alert alert-danger"
+            description="GSD_CUSTOM_CODE_DISCLAIMER"
+        />  
+        <field name="customCodeEnd" type="nr_well" 
+            end="true"
+        />
+    </fieldset>
+    <fieldset name="contenttypes" label="GSD_CONTENT_TYPES">
+        <field name="ctStart" type="nr_well"
+            label="GSD_CONTENT_TYPES"
+            description="GSD_CONTENT_TYPE_DESC"
+        />
+        <field name="contenttypes" type="addons"
+            xmlfile="contenttypes"
+            doc_url="https://www.tassos.gr/docs/google-structured-data/schemas/"
+            pluginmode="false"
+        />
+        <field name="ctEnd" type="nr_well" 
+            end="true"
+        />
+    </fieldset>
+    <fieldset name="integrations" label="GSD_INTEGRATIONS">
+        <field name="intStart" type="nr_well"
+            label="GSD_INTEGRATIONS"
+            description="GSD_INTEGRATIONS_DESC"
+        />
+        <field name="integrations" type="addons"
+            xmlfile="integrations"
+            doc_url="https://www.tassos.gr/docs/google-structured-data/integrations/"
+        />
+        <field name="intEnd" type="nr_well" 
+            end="true"
+        />
+    </fieldset>
+    <fieldset name="tools" label="Tools">
+        <field name="microdataStart" type="nr_well" 
+            label="GSD_REMOVE_MICRODATA"
+            description="GSD_REMOVE_MICRODATA_DESC"
+            url="https://www.tassos.gr/docs/google-structured-data/functionality/schema-cleaner"
+        />
+        
+        <field name="removemicrodata" type="schemacleaner"
+            label="GSD_REMOVE_MICRODATA_TYPES"
+            layout="joomla.form.field.subform.repeatable-table"
+            class="schemascleaner"
+            multiple="true"
+            default='{
+                "0": {
+                    "name":""
+                }
+            }'>
+            <form>
+                <field name="enabled" type="nrtoggle"
+                    label="JENABLED"
+                    hiddenLabel="true"
+                />
+                <field name="name" type="text"
+                    label="GSD_REMOVE_SCHEMA_NAME"
+                    hint="GSD_REMOVE_DUPLICATE_SCHEMA_HINT"
+                    hiddenLabel="true"
+                />
+            </form>
+        </field>
+        
+        
+        <field name="microdataEnd" type="nr_well" 
+            end="true"
+        />
+
+        <field name="schema_test_start" type="nr_well" 
+            label="GSD_SCHEMA_TEST"
+            description="GSD_SCHEMA_TEST_DESC"
+            url="https://www.tassos.gr/docs/google-structured-data/start/test-your-structured-data"
+        />
+        <field name="schematest" type="SchemaTest"/>
+        <field name="schema_test_end" type="nr_well" 
+            end="true"
+        />
+    </fieldset>
+    <fieldset name="services" label="Services">
+        <field 
+            name="services"
+            type="JoomlaDevelopmentServices"
+            hiddenLabel="true"
+        />
+    </fieldset>
+</form>

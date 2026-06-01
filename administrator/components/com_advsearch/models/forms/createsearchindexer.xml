@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+              <field name="id" type="text" default="0" label="COM_ADVSEARCH_FORM_LBL_CREATESEARCHINDEXER_ID"
+            readonly="true" class="readonly"
+            description="JGLOBAL_FIELD_ID_DESC" /> 
+
+       <field name="client" type="text" size="40" class="inputbox"
+        
+            label="COM_ADVSEARCH_FORM_LBL_CREATESEARCHINDEXER_CLIENT"
+            description="COM_ADVSEARCH_FORM_DESC_CREATESEARCHINDEXER_CLIENT" 
+        
+        
+        
+        filter="safehtml" /> 
+
+       <field name="content_type" type="text" size="40" class="inputbox"
+        
+            label="COM_ADVSEARCH_FORM_LBL_CREATESEARCHINDEXER_CONTENT_TYPE"
+            description="COM_ADVSEARCH_FORM_DESC_CREATESEARCHINDEXER_CONTENT_TYPE" 
+        
+        
+        
+        filter="safehtml" /> 
+
+       <field name="field_code" type="text" size="40" class="inputbox"
+        
+            label="COM_ADVSEARCH_FORM_LBL_CREATESEARCHINDEXER_FIELD_CODE"
+            description="COM_ADVSEARCH_FORM_DESC_CREATESEARCHINDEXER_FIELD_CODE" 
+        
+        
+        
+        filter="safehtml" /> 
+
+       <field name="field_type" type="text" size="40" class="inputbox"
+        
+            label="COM_ADVSEARCH_FORM_LBL_CREATESEARCHINDEXER_FIELD_TYPE"
+            description="COM_ADVSEARCH_FORM_DESC_CREATESEARCHINDEXER_FIELD_TYPE" 
+         default="0000-00-00 00:00:00" 
+        
+        
+        filter="safehtml" /> 
+
+       <field name="map_table" type="text" size="40" class="inputbox"
+        
+            label="COM_ADVSEARCH_FORM_LBL_CREATESEARCHINDEXER_MAP_TABLE"
+            description="COM_ADVSEARCH_FORM_DESC_CREATESEARCHINDEXER_MAP_TABLE" 
+        
+        
+        
+        filter="safehtml" /> 
+
+       <field name="mapping_field" type="text" size="40" class="inputbox"
+        
+            label="COM_ADVSEARCH_FORM_LBL_CREATESEARCHINDEXER_MAPPING_FIELD"
+            description="COM_ADVSEARCH_FORM_DESC_CREATESEARCHINDEXER_MAPPING_FIELD" 
+        
+        
+        
+        filter="safehtml" /> 
+
+       <field name="mapping_label" type="text" size="40" class="inputbox"
+        
+            label="COM_ADVSEARCH_FORM_LBL_CREATESEARCHINDEXER_MAPPING_LABEL"
+            description="COM_ADVSEARCH_FORM_DESC_CREATESEARCHINDEXER_MAPPING_LABEL" 
+        
+        
+        
+        filter="safehtml" /> 
+
+       <field name="options" type="text" size="40" class="inputbox"
+        
+            label="COM_ADVSEARCH_FORM_LBL_CREATESEARCHINDEXER_OPTIONS"
+            description="COM_ADVSEARCH_FORM_DESC_CREATESEARCHINDEXER_OPTIONS" 
+        
+        
+        
+        filter="safehtml" /> 
+
+       <field name="category" type="text" size="40" class="inputbox"
+        
+            label="COM_ADVSEARCH_FORM_LBL_CREATESEARCHINDEXER_CATEGORY"
+            description="COM_ADVSEARCH_FORM_DESC_CREATESEARCHINDEXER_CATEGORY" 
+        
+        
+        
+        filter="safehtml" /> 
+
+       <field name="published" type="text" size="40" class="inputbox"
+        
+            label="COM_ADVSEARCH_FORM_LBL_CREATESEARCHINDEXER_PUBLISHED"
+            description="COM_ADVSEARCH_FORM_DESC_CREATESEARCHINDEXER_PUBLISHED" 
+        
+        
+        
+        filter="safehtml" />
+
+	</fieldset>
+
+</form>

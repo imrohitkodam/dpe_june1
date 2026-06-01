@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="params" label="COM_TJFIELDS_FIELD_BASIC_LABEL">
+		
+		<fieldset name="calculationfield">
+			<field name="calculationfield" type="textarea" label="COM_TJFIELDS_NUMERICCALCULATION_FIELD_CONFIG" description="COM_TJFIELDS_NUMERICCALCULATION_FIELD_CONFIG" required="true"/>
+		</fieldset>
+		<fieldset name="colorcombination">		
+			<field name="colorcombination" type="textarea" cols="5" rows="5" label="COM_TJFIELDS_NUMERICCALCULATION_COLOR_CONFIGURATION" description="COM_TJFIELDS_NUMERICCALCULATION_COLOR_CONFIGURATION" hint="COM_TJFIELDS_NUMERICCALCULATION_COLOR_CONFIGURATION" required="true"  onchange="checkJson()"/>
+		</fieldset>
+	</fields>
+</form>
+

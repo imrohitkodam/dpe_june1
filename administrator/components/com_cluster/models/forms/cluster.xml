@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="id" type="hidden" />
+		<field name="name" type="text" required="true" filter="string" label="COM_CLUSTER_CLUSTER_FORM_LBL_NAME" description="COM_CLUSTER_CLUSTER_FORM_DESC_NAME" />
+		<field name="description" type="text" filter="SAFEHTML" label="COM_CLUSTER_CLUSTER_FORM_LBL_DESCRIPTION" description="COM_CLUSTER_CLUSTER_FORM_DESC_DESCRIPTION" />
+		<field name="params" type="textarea" filter="string" label="COM_CLUSTER_CLUSTER_FORM_LBL_PARAMS" description="COM_CLUSTER_CLUSTER_FORM_DESC_PARAMS" />
+		<field name="client" required="true" type="text" filter="string" label="COM_CLUSTER_CLUSTER_FORM_LBL_CLIENT" description="COM_CLUSTER_CLUSTER_FORM_DESC_CLIENT" />
+		<field name="client_id" required="true" type="text" filter="INT" default="0" label="COM_CLUSTER_CLUSTER_FORM_LBL_CLIENT_ID" description="COM_CLUSTER_CLUSTER_FORM_DESC_CLIENT_ID" size="10" />
+		<field name="state" type="list" filter="intval" label="JSTATUS" description="" default="1" class="inputbox" size="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+			<option value="2">JARCHIVED</option>
+			<option value="-2">JTRASHED</option>
+		</field>
+		<field name="created_by" type="hidden" />
+		<field name="modified_on" type="hidden" />
+		<field name="modified_by" type="hidden" />
+		<field name="created_on" type="hidden" />
+		<field name="ordering" type="hidden" filter="INT" />
+		<field name="checked_out" type="hidden" filter="unset" />
+		<field name="checked_out_time" type="hidden" filter="unset" />
+	</fieldset>
+</form>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_CLUSTER_CLUSTERS_VIEW_DEFAULT_TITLE" option="View">
+		<message><![CDATA[COM_CLUSTER_CLUSTERS_VIEW_DEFAULT_DESC]]></message>
+	</layout>
+</metadata>

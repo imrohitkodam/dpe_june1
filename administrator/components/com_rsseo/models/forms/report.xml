@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="cron" label="COM_RSSEO_REPORT_CRON_OPTIONS">
+		<field name="email_report" type="radio" class="btn-group btn-group-yesno" default="0" label="COM_RSSEO_REPORT_ENABLE_EMAIL_REPORT">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="mode" type="list" class="inputbox" label="COM_RSSEO_REPORT_FREQUENCY" description="COM_RSSEO_REPORT_FREQUENCY_DESC" size="1" default="weekly">
+			<option value="weekly">COM_RSSEO_REPORT_FREQUENCY_WEEKLY</option>
+			<option value="monthly">COM_RSSEO_REPORT_FREQUENCY_MONTHLY</option>
+		</field>
+		<field name="mode_days" showon="mode:weekly" type="list" class="inputbox" label="COM_RSSEO_REPORT_WEEK_DAY" description="COM_RSSEO_REPORT_WEEK_DAY_DESC" size="1" default="1">
+			<option value="1">COM_RSSEO_MONDAY</option>
+			<option value="2">COM_RSSEO_TUESDAY</option>
+			<option value="3">COM_RSSEO_WEDNESDAY</option>
+			<option value="4">COM_RSSEO_THURSDAY</option>
+			<option value="5">COM_RSSEO_FRIDAY</option>
+			<option value="6">COM_RSSEO_SATURDAY</option>
+			<option value="7">COM_RSSEO_SUNDAY</option>
+		</field>
+		<field name="mode_day" showon="mode:monthly" type="integer" label="COM_RSSEO_REPORT_MONTH_DAY" description="COM_RSSEO_REPORT_MONTH_DAY_DESC" first="1" last="31" step="1" default="1" />
+	</fieldset>
+	
+	<fieldset name="email" label="COM_RSSEO_REPORT_EMAIL_OPTIONS">
+		<field name="email" type="text" class="input-xxlarge" label="COM_RSSEO_REPORT_EMAIL" description="COM_RSSEO_REPORT_EMAIL_DESC" size="70" />
+		<field name="subject" type="text" class="input-xxlarge" label="COM_RSSEO_REPORT_EMAIL_SUBJECT" description="COM_RSSEO_REPORT_EMAIL_SUBJECT_DESC" size="70" />
+		<field name="message" type="editor" label="COM_RSSEO_REPORT_EMAIL_MESSAGE" description="COM_RSSEO_REPORT_EMAIL_MESSAGE_DESC" filter="\Joomla\CMS\Component\ComponentHelper::filterText" buttons="false" html_height="200px" rows="5" />
+	</fieldset>
+	
+	<fieldset name="pdf" addfieldpath="/administrator/components/com_rsseo/models/fields" label="COM_RSSEO_REPORT_PDF_OPTIONS">
+		<field name="font" type="font" default="times" label="COM_RSSEO_PDF_FONT" description="COM_RSSEO_PDF_FONT_DESC" />
+		<field name="orientation" type="list" default="portrait" label="COM_RSSEO_PDF_ORIENTATION" description="COM_RSSEO_PDF_ORIENTATION_DESC">
+			<option value="portrait">COM_RSSEO_PDF_ORIENTATION_PORTRAIT</option>
+			<option value="landscape">COM_RSSEO_PDF_ORIENTATION_LANDSCAPE</option>
+		</field>
+		<field name="paper" type="list" default="a4" label="COM_RSSEO_PDF_PAPER" description="COM_RSSEO_PDF_PAPER_DESC">
+			<option value="4a0">4a0</option>
+			<option value="2a0">2a0</option>
+			<option value="a0">a0</option>
+			<option value="a1">a1</option>
+			<option value="a2">a2</option>
+			<option value="a3">a3</option>
+			<option value="a4">a4</option>
+			<option value="a5">a5</option>
+			<option value="a6">a6</option>
+			<option value="a7">a7</option>
+			<option value="a8">a8</option>
+			<option value="a9">a9</option>
+			<option value="a10">a10</option>
+			<option value="b0">b0</option>
+			<option value="b1">b1</option>
+			<option value="b2">b2</option>
+			<option value="b3">b3</option>
+			<option value="b4">b4</option>
+			<option value="b5">b5</option>
+			<option value="b6">b6</option>
+			<option value="b7">b7</option>
+			<option value="b8">b8</option>
+			<option value="b9">b9</option>
+			<option value="b10">b10</option>
+			<option value="c0">c0</option>
+			<option value="c1">c1</option>
+			<option value="c2">c2</option>
+			<option value="c3">c3</option>
+			<option value="c4">c4</option>
+			<option value="c5">c5</option>
+			<option value="c6">c6</option>
+			<option value="c7">c7</option>
+			<option value="c8">c8</option>
+			<option value="c9">c9</option>
+			<option value="c10">c10</option>
+			<option value="ra0">ra0</option>
+			<option value="ra1">ra1</option>
+			<option value="ra2">ra2</option>
+			<option value="ra3">ra3</option>
+			<option value="ra4">ra4</option>
+			<option value="sra0">sra0</option>
+			<option value="sra1">sra1</option>
+			<option value="sra2">sra2</option>
+			<option value="sra3">sra3</option>
+			<option value="sra4">sra4</option>
+			<option value="letter">letter</option>
+			<option value="legal">legal</option>
+			<option value="ledger">ledger</option>
+			<option value="tabloid">tabloid</option>
+			<option value="executive">executive</option>
+			<option value="folio">folio</option>
+		</field>
+	</fieldset>
+	
+	<fieldset name="seo" label="COM_RSSEO_REPORT_SEO_REPORTS">
+		<field name="last_crawled" type="radio" class="btn-group btn-group-yesno" default="0" label="COM_RSSEO_REPORT_LAST_CRAWLED" description="COM_RSSEO_REPORT_LAST_CRAWLED_DESC">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		
+		<field name="most_visited" type="radio" class="btn-group btn-group-yesno" default="0" label="COM_RSSEO_REPORT_MOST_VISITED" description="COM_RSSEO_REPORT_MOST_VISITED_DESC">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		
+		<field name="error_links" type="radio" class="btn-group btn-group-yesno" default="0" label="COM_RSSEO_REPORT_ERROR_LINKS" description="COM_RSSEO_REPORT_ERROR_LINKS_DESC">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		
+		<field name="no_title" type="radio" class="btn-group btn-group-yesno" default="0" label="COM_RSSEO_REPORT_NO_TITLE" description="COM_RSSEO_REPORT_NO_TITLE_DESC">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		
+		<field name="no_desc" type="radio" class="btn-group btn-group-yesno" default="0" label="COM_RSSEO_REPORT_NO_DESC" description="COM_RSSEO_REPORT_NO_DESC_DESC">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		
+		<field name="limit" type="text" class="input-small" default="10" label="COM_RSSEO_REPORT_LIMIT" description="COM_RSSEO_REPORT_LIMIT_DESC" size="10" />
+	</fieldset>
+	
+	<fieldset name="gkeywords" label="COM_RSSEO_REPORT_GKEYWORDS">
+		<field name="enable_gkeywords" type="radio" class="btn-group btn-group-yesno" default="0" label="COM_RSSEO_REPORT_ENABLE_GKEYWORDS">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="keywords" type="gkeywords" label="COM_RSSEO_REPORT_G_KEYWORDS" multiple="true" class="advancedSelect" />
+	</fieldset>
+	
+</form>

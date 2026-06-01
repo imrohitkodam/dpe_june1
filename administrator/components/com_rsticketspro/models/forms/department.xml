@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="general" label="RST_GENERAL">
+		<field name="name" type="text" description="RST_DEPARTMENT_DESC" label="RST_DEPARTMENT" required="true" size="64" filter="trim" />
+		<field name="prefix" type="text" description="RST_PREFIX_DESC" label="RST_PREFIX" required="true" size="64" filter="trim" />
+		<field name="jgroups" type="usergrouplist" multiple="multiple" class="advancedSelect" label="COM_RSTICKETSPRO_EXCLUDE_DEPARTMENT_FROM_GROUP_LABEL" description="COM_RSTICKETSPRO_EXCLUDE_DEPARTMENT_FROM_GROUP_DESCRIPTION" />
+		<field name="published" type="radio" class="btn-group btn-group-yesno" label="JPUBLISHED" size="1">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="id" type="hidden" />
+	</fieldset>
+	<fieldset name="tickets" label="RST_DEPARTMENT_TICKETS">
+		<field name="assignment_type" type="list" description="RST_ASSIGNMENT_TYPE_DESC" label="RST_ASSIGNMENT_TYPE">
+			<option value="0">RST_STATIC</option>
+			<option value="1">RST_AUTOMATIC</option>
+		</field>
+		<field name="generation_rule" type="list" description="RST_GENERATION_RULE_DESC" label="RST_GENERATION_RULE">
+			<option value="0">RST_SEQUENTIAL</option>
+			<option value="1">RST_RANDOM</option>
+		</field>
+		<field name="priority_id" type="priorities" label="RST_PRIORITY" description="RST_PRIORITY_DESC" />
+		<field name="predefined_subjects" label="RST_PREDEFINED_SUBJECTS_ADD" description="RST_PREDEFINED_SUBJECTS_ADD_DESC" type="textarea" filter="raw" rows="5" cols="50" />
+	</fieldset>
+	<fieldset name="emails" label="RST_DEPARTMENT_EMAILS">
+		<field name="email_use_global" type="radio" class="btn-group btn-group-yesno" description="RST_EMAIL_USE_RSTICKETS_GLOBAL_DESC" label="RST_EMAIL_USE_RSTICKETS_GLOBAL">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="email_address" showon="email_use_global:0" type="text" description="RST_EMAIL_FROM_EMAIL_DESC" label="RST_EMAIL_FROM_EMAIL" size="64" />
+		<field name="email_address_fullname" showon="email_use_global:0" type="text" description="RST_EMAIL_FROM_FULLNAME_DESC" label="RST_EMAIL_FROM_FULLNAME" size="64" />
+		<field name="email_address_reply_to" showon="email_use_global:0" label="RST_EMAIL_REPLY_TO" description="RST_EMAIL_REPLY_TO_DESC" type="text" size="64"/>
+		<field name="email_address_reply_to_name" showon="email_use_global:0" label="RST_EMAIL_REPLY_TO_NAME" description="RST_EMAIL_REPLY_TO_NAME_DESC" type="text" size="64"/>
+		<field name="customer_send_email" type="radio" class="btn-group btn-group-yesno" description="RST_CUSTOMER_SEND_EMAIL_DESC" label="RST_CUSTOMER_SEND_EMAIL">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="customer_send_copy_email" type="radio" class="btn-group btn-group-yesno" description="RST_CUSTOMER_SEND_COPY_EMAIL_DESC" label="RST_CUSTOMER_SEND_COPY_EMAIL">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="customer_attach_email" type="radio" class="btn-group btn-group-yesno" description="RST_CUSTOMER_ATTACH_EMAIL_DESC" label="RST_CUSTOMER_ATTACH_EMAIL">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="staff_send_email" type="radio" class="btn-group btn-group-yesno" description="RST_STAFF_SEND_EMAIL_DESC" label="RST_STAFF_SEND_EMAIL">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="staff_attach_email" type="radio" class="btn-group btn-group-yesno" description="RST_STAFF_ATTACH_EMAIL_DESC" label="RST_STAFF_ATTACH_EMAIL">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="download_type" type="list" default="attachment" description="RST_DOWNLOAD_TYPE_DESC" label="RST_DOWNLOAD_TYPE_LABEL">
+			<option value="link">RST_LINK_FROM_SERVER</option>
+			<option value="attachment">RST_EMAIL_ATTACHMENT</option>
+		</field>
+		<field name="notify_new_tickets_to" label="RST_NOTIFY_NEW_TICKETS_TO" description="RST_NOTIFY_NEW_TICKETS_TO_DESC" type="textarea" filter="raw" rows="5" cols="50" />
+		<field name="cc" label="RST_DEPARTMENT_CC" description="RST_DEPARTMENT_CC_DESC" type="textarea" filter="raw" rows="5" cols="50" />
+		<field name="bcc" label="RST_DEPARTMENT_BCC" description="RST_DEPARTMENT_BCC_DESC" type="textarea" filter="raw" rows="5" cols="50" />
+		<field name="notify_assign" type="radio" class="btn-group btn-group-yesno" description="RST_NOTIFY_ASSIGN_DESC" label="RST_NOTIFY_ASSIGN">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+	</fieldset>
+	<fieldset name="uploads" label="RST_DEPARTMENT_UPLOADS">
+		<field name="upload" type="list" description="RST_UPLOAD_FOR_DESC" label="RST_UPLOAD_FOR">
+			<option value="1">RST_EVERYONE</option>
+			<option value="2">RST_REGISTERED</option>
+			<option value="0">RST_NOBODY</option>
+		</field>
+		<field name="upload_ticket_required" showon="upload:1,2" type="radio" class="btn-group btn-group-yesno" description="COM_RSTICKETSPRO_UPLOAD_TICKET_REQUIRED_DESC" label="COM_RSTICKETSPRO_UPLOAD_TICKET_REQUIRED" default="0">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="upload_extensions" showon="upload:1,2" label="RST_UPLOAD_EXTENSIONS" description="RST_UPLOAD_EXTENSIONS_DESC" type="textarea" filter="raw" rows="5" cols="50" />
+		<field name="upload_size" showon="upload:1,2" type="text" description="RST_UPLOAD_SIZE_DESC" label="RST_UPLOAD_SIZE" size="64" />
+		<field name="upload_files" showon="upload:1,2" type="text" description="RST_UPLOAD_FILES_DESC" label="RST_UPLOAD_FILES" size="64" />
+	</fieldset>
+</form>

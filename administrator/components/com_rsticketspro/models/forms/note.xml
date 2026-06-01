@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="params">
+		<field name="text" label="RST_TICKET_NOTE" required="true" description="RST_TICKET_NOTE_DESC" type="textarea" filter="raw" rows="12" cols="50" />
+		<field name="id" type="hidden" />
+		<field name="ticket_id" type="hidden" />
+	</fieldset>
+</form>

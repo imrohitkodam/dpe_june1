@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<access component="com_rsticketspro">
+	<section name="component">
+		<action name="core.admin" title="JACTION_ADMIN" description="JACTION_ADMIN_COMPONENT_DESC" />
+		<action name="core.manage" title="JACTION_MANAGE" description="JACTION_MANAGE_COMPONENT_DESC" />
+
+		<action name="department.create" title="COM_RSTICKETSPRO_ACTION_DEPARTMENT_CREATE" description="COM_RSTICKETSPRO_ACTION_DEPARTMENT_CREATE_DESC" />
+		<action name="department.delete" title="COM_RSTICKETSPRO_ACTION_DEPARTMENT_DELETE" description="COM_RSTICKETSPRO_ACTION_DEPARTMENT_DELETE_DESC" />
+		<action name="department.edit" title="COM_RSTICKETSPRO_ACTION_DEPARTMENT_EDIT" description="COM_RSTICKETSPRO_ACTION_DEPARTMENT_EDIT_DESC" />
+		<action name="department.edit.state" title="COM_RSTICKETSPRO_ACTION_DEPARTMENT_EDIT_STATE" description="COM_RSTICKETSPRO_ACTION_DEPARTMENT_EDIT_STATE_DESC" />
+
+		<action name="customfield.create" title="COM_RSTICKETSPRO_ACTION_CUSTOMFIELD_CREATE" description="COM_RSTICKETSPRO_ACTION_CUSTOMFIELD_CREATE_DESC" />
+		<action name="customfield.delete" title="COM_RSTICKETSPRO_ACTION_CUSTOMFIELD_DELETE" description="COM_RSTICKETSPRO_ACTION_CUSTOMFIELD_DELETE_DESC" />
+		<action name="customfield.edit" title="COM_RSTICKETSPRO_ACTION_CUSTOMFIELD_EDIT" description="COM_RSTICKETSPRO_ACTION_CUSTOMFIELD_EDIT_DESC" />
+		<action name="customfield.edit.state" title="COM_RSTICKETSPRO_ACTION_CUSTOMFIELD_EDIT_STATE" description="COM_RSTICKETSPRO_ACTION_CUSTOMFIELD_EDIT_STATE_DESC" />
+
+		<action name="group.create" title="COM_RSTICKETSPRO_ACTION_GROUP_CREATE" description="COM_RSTICKETSPRO_ACTION_GROUP_CREATE_DESC" />
+		<action name="group.delete" title="COM_RSTICKETSPRO_ACTION_GROUP_DELETE" description="COM_RSTICKETSPRO_ACTION_GROUP_DELETE_DESC" />
+		<action name="group.edit" title="COM_RSTICKETSPRO_ACTION_GROUP_EDIT" description="COM_RSTICKETSPRO_ACTION_GROUP_EDIT_DESC" />
+
+		<action name="staff.create" title="COM_RSTICKETSPRO_ACTION_STAFF_CREATE" description="COM_RSTICKETSPRO_ACTION_STAFF_CREATE_DESC" />
+		<action name="staff.delete" title="COM_RSTICKETSPRO_ACTION_STAFF_DELETE" description="COM_RSTICKETSPRO_ACTION_STAFF_DELETE_DESC" />
+		<action name="staff.edit" title="COM_RSTICKETSPRO_ACTION_STAFF_EDIT" description="COM_RSTICKETSPRO_ACTION_STAFF_EDIT_DESC" />
+
+		<action name="priority.create" title="COM_RSTICKETSPRO_ACTION_PRIORITY_CREATE" description="COM_RSTICKETSPRO_ACTION_PRIORITY_CREATE_DESC" />
+		<action name="priority.delete" title="COM_RSTICKETSPRO_ACTION_PRIORITY_DELETE" description="COM_RSTICKETSPRO_ACTION_PRIORITY_DELETE_DESC" />
+		<action name="priority.edit" title="COM_RSTICKETSPRO_ACTION_PRIORITY_EDIT" description="COM_RSTICKETSPRO_ACTION_PRIORITY_EDIT_DESC" />
+		<action name="priority.edit.state" title="COM_RSTICKETSPRO_ACTION_PRIORITY_EDIT_STATE" description="COM_RSTICKETSPRO_ACTION_PRIORITY_EDIT_STATE_DESC" />
+
+		<action name="status.create" title="COM_RSTICKETSPRO_ACTION_STATUS_CREATE" description="COM_RSTICKETSPRO_ACTION_STATUS_CREATE_DESC" />
+		<action name="status.delete" title="COM_RSTICKETSPRO_ACTION_STATUS_DELETE" description="COM_RSTICKETSPRO_ACTION_STATUS_DELETE_DESC" />
+		<action name="status.edit" title="COM_RSTICKETSPRO_ACTION_STATUS_EDIT" description="COM_RSTICKETSPRO_ACTION_STATUS_EDIT_DESC" />
+		<action name="status.edit.state" title="COM_RSTICKETSPRO_ACTION_STATUS_EDIT_STATE" description="COM_RSTICKETSPRO_ACTION_STATUS_EDIT_STATE_DESC" />
+
+		<action name="email.edit" title="COM_RSTICKETSPRO_ACTION_EMAIL_EDIT" description="COM_RSTICKETSPRO_ACTION_EMAIL_EDIT_DESC" />
+		<action name="email.edit.state" title="COM_RSTICKETSPRO_ACTION_EMAIL_EDIT_STATE" description="COM_RSTICKETSPRO_ACTION_EMAIL_EDIT_STATE_DESC" />
+
+		<action name="kbcategory.create" title="COM_RSTICKETSPRO_ACTION_KBCATEGORY_CREATE" description="COM_RSTICKETSPRO_ACTION_KBCATEGORY_CREATE_DESC" />
+		<action name="kbcategory.delete" title="COM_RSTICKETSPRO_ACTION_KBCATEGORY_DELETE" description="COM_RSTICKETSPRO_ACTION_KBCATEGORY_DELETE_DESC" />
+		<action name="kbcategory.edit" title="COM_RSTICKETSPRO_ACTION_KBCATEGORY_EDIT" description="COM_RSTICKETSPRO_ACTION_KBCATEGORY_EDIT_DESC" />
+		<action name="kbcategory.edit.state" title="COM_RSTICKETSPRO_ACTION_KBCATEGORY_EDIT_STATE" description="COM_RSTICKETSPRO_ACTION_KBCATEGORY_EDIT_STATE_DESC" />
+
+		<action name="kbarticle.create" title="COM_RSTICKETSPRO_ACTION_KBARTICLE_CREATE" description="COM_RSTICKETSPRO_ACTION_KBARTICLE_CREATE_DESC" />
+		<action name="kbarticle.delete" title="COM_RSTICKETSPRO_ACTION_KBARTICLE_DELETE" description="COM_RSTICKETSPRO_ACTION_KBARTICLE_DELETE_DESC" />
+		<action name="kbarticle.edit" title="COM_RSTICKETSPRO_ACTION_KBARTICLE_EDIT" description="COM_RSTICKETSPRO_ACTION_KBARTICLE_EDIT_DESC" />
+		<action name="kbarticle.edit.state" title="COM_RSTICKETSPRO_ACTION_KBARTICLE_EDIT_STATE" description="COM_RSTICKETSPRO_ACTION_KBARTICLE_EDIT_STATE_DESC" />
+
+		<action name="kbrule.create" title="COM_RSTICKETSPRO_ACTION_KBRULE_CREATE" description="COM_RSTICKETSPRO_ACTION_KBRULE_CREATE_DESC" />
+		<action name="kbrule.delete" title="COM_RSTICKETSPRO_ACTION_KBRULE_DELETE" description="COM_RSTICKETSPRO_ACTION_KBRULE_DELETE_DESC" />
+		<action name="kbrule.edit" title="COM_RSTICKETSPRO_ACTION_KBRULE_EDIT" description="COM_RSTICKETSPRO_ACTION_KBRULE_EDIT_DESC" />
+		<action name="kbrule.edit.state" title="COM_RSTICKETSPRO_ACTION_KBRULE_EDIT_STATE" description="COM_RSTICKETSPRO_ACTION_KBRULE_EDIT_STATE_DESC" />
+	</section>
+</access>

@@ -1,0 +1,55 @@
+.icon-48-organizations {
+      background-image: url(../images/l_organizations.png);
+      padding-left:60px!important;
+}
+
+.icon-48-organization {
+      background-image: url(../images/l_organizations.png);
+      padding-left:60px!important;
+}
+
+.icon-48-users {
+      background-image: url(../images/l_users.png);
+      padding-left:60px!important;
+}
+
+.icon-48-user {
+      background-image: url(../images/l_users.png);
+      padding-left:60px!important;
+}
+
+.icon-48-roles {
+      background-image: url(../images/l_roles.png);
+      padding-left:60px!important;
+}
+
+.icon-48-role {
+      background-image: url(../images/l_roles.png);
+      padding-left:60px!important;
+}
+
+.icon-48-actions {
+      background-image: url(../images/l_actions.png);
+      padding-left:60px!important;
+}
+
+.icon-48-action {
+      background-image: url(../images/l_actions.png);
+      padding-left:60px!important;
+}
+
+.icon-48-mappings {
+      background-image: url(../images/l_mappings.png);
+      padding-left:60px!important;
+}
+
+.icon-48-mapping {
+      background-image: url(../images/l_mappings.png);
+      padding-left:60px!important;
+}
+
+
+
+.other-filters{
+    padding: 0 14px;
+}

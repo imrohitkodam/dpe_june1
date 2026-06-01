@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+        <field
+                name="search"
+                type="text"
+                label="COM_RSTICKETSPRO_FILTER_SEARCH_LABEL"
+                description="COM_RSTICKETSPRO_SEARCH_FILTER_PLACEHOLDER"
+                hint="JSEARCH_FILTER"
+        />
+		<field
+				name="state"
+				type="list"
+				onchange="this.form.submit();"
+				default=""
+		>
+			<option value="">JOPTION_SELECT_PUBLISHED</option>
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+    </fields>
+
+    <fields name="list">
+        <field
+                name="fullordering"
+                type="list"
+                label="JGLOBAL_SORT_BY"
+                onchange="this.form.submit();"
+                default="FormId ASC"
+        >
+            <option value="">JGLOBAL_SORT_BY</option>
+			<option value="ordering ASC">COM_RSTICKETSPRO_ORDERING_ORDER_ASC</option>
+			<option value="ordering DESC">COM_RSTICKETSPRO_ORDERING_ORDER_DESC</option>
+			<option value="name ASC">COM_RSTICKETSPRO_SEARCH_ORDER_ASC</option>
+			<option value="name DESC">COM_RSTICKETSPRO_SEARCH_ORDER_DESC</option>
+			<option value="published ASC">COM_RSTICKETSPRO_STATE_ORDER_ASC</option>
+			<option value="published DESC">COM_RSTICKETSPRO_STATE_ORDER_DESC</option>
+			<option value="id ASC">COM_RSTICKETSPRO_ID_ORDER_ASC</option>
+			<option value="id DESC">COM_RSTICKETSPRO_ID_ORDER_DESC</option>
+        </field>
+
+        <field
+                name="limit"
+                type="limitbox"
+                label="JGLOBAL_LIST_LIMIT"
+                default="25"
+                onchange="this.form.submit();"
+        />
+    </fields>
+</form>

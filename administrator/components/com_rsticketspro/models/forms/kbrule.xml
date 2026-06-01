@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="params">
+		<field name="name" type="text" description="RST_KB_RULE_NAME_DESC" label="RST_KB_RULE_NAME" required="true" size="64" />
+		<field name="conditions" type="kbconditions" label="RST_KB_RULE_CONDITION" size="64" />
+		<field name="category_id" type="kbcategories" label="RST_KB_PUBLISH_TO_CATEGORY" description="RST_KB_PUBLISH_TO_CATEGORY_DESC" show_noparent="true" />
+		<field name="publish_article" type="radio" class="btn-group btn-group-yesno" label="RST_PUBLISH_ARTICLE" description="RST_PUBLISH_ARTICLE_DESC" size="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="private" type="radio" class="btn-group btn-group-yesno" label="RST_PRIVATE_ARTICLE" description="RST_PRIVATE_ARTICLE_DESC" size="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="published" type="radio" class="btn-group btn-group-yesno" label="JPUBLISHED" size="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="select_type" type="dummy" hidden="true" />
+		<field name="select_custom_field_value" type="dummy" hidden="true" />
+		<field name="select_condition" type="dummy" hidden="true" />
+		<field name="select_value" type="dummy" hidden="true" />
+		<field name="select_connector" type="dummy" hidden="true" />
+
+		<field name="id" type="hidden" />
+		<field name="from_ticket_id" type="hidden" />
+	</fieldset>
+</form>

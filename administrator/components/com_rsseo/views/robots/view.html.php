@@ -1,0 +1,36 @@
+<?php
+/**
+* @package RSSeo!
+* @copyright (C) 2016 www.rsjoomla.com
+* @license GPL, http://www.gnu.org/copyleft/gpl.html
+*/
+
+defined('_JEXEC') or die('Restricted access');
+
+use Joomla\CMS\MVC\View\HtmlView;
+use Joomla\CMS\Toolbar\ToolbarHelper;
+use Joomla\CMS\Language\Text;
+use Joomla\CMS\Factory;
+
+class rsseoViewRobots extends HtmlView
+{
+	public function display($tpl = null) {
+		$this->check 		= $this->get('IsFile');
+		$this->writtable	= $this->get('IsWrittable');
+		$this->contents		= $this->get('Contents');
+		
+		$this->addToolBar();
+		parent::display($tpl);
+	}
+	
+	protected function addToolBar() {
+		ToolBarHelper::title(Text::_('COM_RSSEO_ROBOTS'),'rsseo');
+		
+		if ($this->check && $this->writtable) {
+			ToolBarHelper::custom('saverobots', 'save', 'save', Text::_('COM_RSSEO_ROBOTS_SAVE'), false);
+		}
+		
+		if (Factory::getUser()->authorise('core.admin', 'com_rsseo'))
+			ToolBarHelper::preferences('com_rsseo');
+	}
+}

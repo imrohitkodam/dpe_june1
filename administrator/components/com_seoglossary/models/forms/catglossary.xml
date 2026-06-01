@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+              <field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL"
+                    readonly="true" class="readonly"
+                    description="JGLOBAL_FIELD_ID_DESC" /> 
+
+       <field name="name" type="text" size="40" class="inputbox"
+                 label="COM_SEOGLOSSARY_FORM_LBL_CATGLOSSARY_NAME" description="COM_SEOGLOSSARY_FORM_DESC_CATGLOSSARY_NAME" 
+                
+                 required="true" 
+                filter="safehtml" />
+       <field name="alias"
+			type="text"
+			label="JFIELD_ALIAS_LABEL"
+			description="JFIELD_ALIAS_DESC"
+			hint="JFIELD_ALIAS_PLACEHOLDER"
+			size="45"
+		/>
+				
+		<field name="alphabet" type="text" size="100" class="inputbox"
+                 label="COM_SEOGLOSSARY_LBL_ALPHABET" description="COM_SEOGLOSSARY_DESC_ALPHABET" 
+                 required="true" 
+                 filter="safehtml"
+				 default="A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z" /> 
+
+       <field name="description" type="editor"  class="inputbox"
+                 label="COM_SEOGLOSSARY_FORM_LBL_CATGLOSSARY_DESCRIPTION" description="COM_SEOGLOSSARY_FORM_DESC_CATGLOSSARY_DESCRIPTION" 
+                filter="safehtml" buttons="true"/> 
+
+       <field name="language" type="language" client="site" 
+                 label="COM_SEOGLOSSARY_FORM_LBL_CATGLOSSARY_LANGUAGE" description="COM_SEOGLOSSARY_FORM_DESC_CATGLOSSARY_LANGUAGE" 
+                filter="safehtml" >
+       <option value="*">JALL</option>
+        </field>
+	   <field
+			name="icon"
+			type="media"
+			label="COM_SEOGLOSSARY_FORM_ICON_LABEL"
+			description="COM_SEOGLOSSARY_FORM_ICON_DESC" />
+		
+         <field
+                name="state"
+                type="list"
+                label="JSTATUS"
+                description="JFIELD_PUBLISHED_DESC"
+                class="inputbox"
+                size="1"
+                default="1">
+                <option value="1">
+				JPUBLISHED</option>
+			<option value="0">
+				JUNPUBLISHED</option>
+			<option value="2">
+				JARCHIVED</option>
+			<option value="-2">
+				JTRASHED</option>
+            </field> 
+
+                        <field name="checked_out" type="hidden" filter="unset" />
+                <field name="checked_out_time" type="hidden" filter="unset" />
+				<field name="disable_menu"
+		type="menuitem"
+		label="COM_SEOGLOSSARY_COMPONENT_DISABLEMENU"
+		description="COM_SEOGLOSSARY_COMPONENT_DISABLEMENU_DESCRIPTION"
+		multiple="true">
+	   
+		</field>
+	
+	<field name="disable_component"
+		type="sql"
+		label="COM_SEOGLOSSARY_COMPONENT_DISABLECOMPONENT"
+		class="form-select-color-state"
+		description="COM_SEOGLOSSARY_COMPONENT_DISABLECOMPONENT_DESCRIPTION"
+		query="select name ,element  from #__extensions where type='component' AND enabled=1 AND client_id=1"
+		multiple="true"
+		size="35" key_field="element" value_field="name">
+		</field>
+	
+	<field name="disable_context"
+		type="textarea"
+		default=""
+		label="COM_SEOGLOSSARY_LBL_DISABLECONTEXT"
+		description="COM_SEOGLOSSARY_LBL_DISABLECONTEXT_DESC"
+		size="35" >
+		</field>
+	
+	<field name="disable_category" type="category" class="form-select-color-state"  extension="com_content" label="COM_SEOGLOSSARY_COMPONENT_DISABLECAT" description="COM_SEOGLOSSARY_COMPONENT_DISABLECAT_DESCRIPTION" multiple="true"/>
+	
+
+	</fieldset>
+
+</form>

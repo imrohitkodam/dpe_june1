@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="general">
+		<field name="website" type="text" class="input-xlarge" label="COM_RSSEO_SITEMAP_SITE_ROOT" description="COM_RSSEO_SITEMAP_SITE_ROOT_DESC" size="30" />
+		
+		<field name="modified_date" type="list" class="input-xlarge" label="COM_RSSEO_SITEMAP_LAST_MODIFIED_DATE" description="COM_RSSEO_SITEMAP_LAST_MODIFIED_DATE_DESC" default="1">
+			<option value="0">COM_RSSEO_SITEMAP_LAST_MODIFIED_DATE_PAGE_CRAWLED</option>
+			<option value="1">COM_RSSEO_SITEMAP_LAST_MODIFIED_DATE_MANUAL</option>
+		</field>
+		
+		<field name="modified" showon="modified_date:1" type="text" class="input-xlarge" label="COM_RSSEO_SITEMAP_LAST_MODIFIED_MANUAL" description="COM_RSSEO_SITEMAP_LAST_MODIFIED_MANUAL_DESC" size="30" />
+		
+		<field name="images" type="list" class="" label="COM_RSSEO_SITEMAP_INCLUDE_IMAGES" description="COM_RSSEO_SITEMAP_INCLUDE_IMAGES_DESC" default="0">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+	</fieldset>
+</form>

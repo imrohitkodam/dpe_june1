@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="id" type="hidden"/>
+		<field name="sla_id" type="hidden"/>
+		<field name="cluster_id" type="hidden"/>
+		<field name="license_id" type="hidden"/>
+		<field name="lead_consultant_id" type="hidden"/>
+		<field name="notify_dpe_admin" type="hidden"/>
+		<field name="dpeadmins" type="hidden"/>
+	</fieldset>
+</form>

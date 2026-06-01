@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="params">
+		<field name="signature" type="editor" required="true" label="RST_SIGNATURE" description="RST_YOUR_SIGNATURE_DESC" filter="html" buttons="true" width="70%" />
+	</fieldset>
+</form>

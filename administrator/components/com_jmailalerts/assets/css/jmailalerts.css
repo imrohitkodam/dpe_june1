@@ -1,0 +1,45 @@
+/**
+ * @package     JMailAlerts
+ * @subpackage  com_jmailalerts
+ *
+ * @author      Techjoomla <extensions@techjoomla.com>
+ * @copyright   Copyright (C) 2009 - 2022 Techjoomla. All rights reserved.
+ * @license     http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ */
+/*Icons*/
+.icon-48-frequencies{background-image: url(../images/l_frequencies.png); padding-left:60px!important;}
+.icon-48-frequency{background-image: url(../images/l_frequencies.png); padding-left:60px!important;}
+.icon-48-dashboard{background-image: url(../images/mail_alert48.png); padding-left:60px!important;}
+.icon-48-subscribers{background-image: url(../images/l_subscribers.png); padding-left:60px!important;}
+.icon-48-subscriber{background-image: url(../images/l_subscribers.png); padding-left:60px!important;}
+.icon-48-cp{background-image: url(../../com_jmailalerts/assets/images/mail_alert48.png) !important;}
+.icon-48-config{background-image: url(../../com_jmailalerts/assets/images/mail_alert_configure.png) !important;}
+.icon-48-mailqueue{background-image: url(../../com_jmailalerts/assets/images/mail_alert_mailqueue.png) !important;}
+.icon-48-sync{background-image: url(../../assets/images/mail_alert_synchronize.png) !important;}
+.icon-48-mailsimulate{background-image: url(../../assets/images/l_mailsimulate.png) !important;}
+.icon-48-alerts{background-image: url(../../assets/images/l_alerts.png) !important;}
+.icon-48-healthcheck{background-image: url(../../assets/images/l_healthcheck.png) !important;}
+.icon-48-manageuser{background-image: url(../../assets/images/icons/l_manageuser.png) !important;}
+.jma_div1{font-weight:bold; float: left; display:block;}
+span.latestbutton{border:1px solid; /*float:left;*/ padding: 5px; cursor: pointer;}
+/*Sync view*/
+.subscription_report{display:inline-block; width:30%; /*margin-left:30%;*/}
+/*Used for dashboard icons*/
+.jma_icon{margin:5px;padding:5px;}
+.icon-32-jmailalerts-unfeature {background: url(../../assets/images/unfeature.png) no-repeat;}
+.jma_width_90{width:90%;}
+.jma_latest_version_number{font-size:18px;}
+.jma-btn-wrapper{margin:5px !important;}
+/*Hack for component options form starts*/
+/*For J3x*/
+#component-form .control-label, #jmailalerts-sync .control-label {width: 250px !important;}
+/*Hack for component options form ends*/
+.jma-elements-legend-hint{clear:both; float:left; color:#000 !important; opacity: 0.65; font-size: 1.2em !important;}
+.jma-elements-legend{display: block; width: 100%; padding: 0; margin-bottom: 18px; font-size: 19.5px; line-height: 36px; color: #333; border: 0; border-bottom: 1px solid #e5e5e5;}
+/* END custom elements style*/
+.jma-green{color:green;}
+.jma-red{color:red;}
+
+.jmailalerts-wrapper th {
+    white-space: inherit !important;
+}

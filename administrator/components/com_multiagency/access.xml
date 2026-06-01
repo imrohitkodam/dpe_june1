@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<access component="com_multiagency">
+	<section name="component">
+		<action name="core.admin" title="JACTION_ADMIN" description="JACTION_ADMIN_COMPONENT_DESC" />
+		<action name="core.manage" title="JACTION_MANAGE" description="JACTION_MANAGE_COMPONENT_DESC" />
+		<action name="core.create" title="JACTION_CREATE" description="JACTION_CREATE_COMPONENT_DESC" />
+		<action name="core.delete" title="JACTION_DELETE" description="JACTION_DELETE_COMPONENT_DESC" />
+		<action name="core.edit" title="JACTION_EDIT" description="JACTION_EDIT_COMPONENT_DESC" />
+		<action name="core.edit.state" title="JACTION_EDITSTATE" description="JACTION_EDITSTATE_COMPONENT_DESC" />
+		<action name="core.edit.own" title="JACTION_EDITOWN" description="JACTION_EDITOWN_COMPONENT_DESC" />
+		<action name="core.view.all" title="JACTION_VIEW_ALL" description="JACTION_VIEW_ALL_COMPONENT_DESC" />
+		<action name="core.own.adduser" title="COM_MULTIAGENCY_ADD_OWN_AGENCY" description="COM_MULTIAGENCY_ADD_OWN_AGENCY_DESC" />
+		<action name="core.adduser" title="COM_MULTIAGENCY_ADD_ALL_AGENCY" description="COM_MULTIAGENCY_ADD_ALL_AGENCY_DESC" />
+		<action name="core.removeuser" title="COM_MULTIAGENCY_REMOVE_ALL_AGENCY" description="COM_MULTIAGENCY_REMOVE_ALL_AGENCY_DESC" />
+		<action name="core.own.removeuser" title="COM_MULTIAGENCY_REMOVE_AGENCY" description="COM_MULTIAGENCY_REMOVE_AGENCY_DESC" />
+		<action name="core.manageenrollment" title="COM_MULTIAGENCY_ENROLLMENT" description="COM_MULTIAGENCY_ENROLLMENT_DESC" />
+		<action name="core.own.edituser" title="COM_MULTIAGENCY_EDIT_USER" description="COM_MULTIAGENCY_EDIT_USER_DESC" />
+		<action name="core.edituser" title="COM_MULTIAGENCY_EDIT_ALL_USER" description="COM_MULTIAGENCY_EDIT_ALL_USER_DESC" />
+		<action name="core.edit.value" title="JACTION_EDITVALUE" description="JACTION_EDITVALUE_COMPONENT_DESC" />
+		<action name="core.manage.all.agency.user" title="COM_MULTIAGENCY_MANAGE_ALL_AGENCY_USERS" description="COM_MULTIAGENCY_MANAGE_ALL_AGENCY_USERS_DESC" />
+		<action name="core.manage.own.agency.user" title="COM_MULTIAGENCY_MANAGE_OWN_AGENCY_USERS" description="COM_MULTIAGENCY_MANAGE_OWN_AGENCY_USERS_DESC" />
+	</section>
+    <section name="multiagency">
+		<action name="core.create" title="JACTION_CREATE" description="JACTION_CREATE_COMPONENT_DESC" />
+		<action name="core.delete" title="JACTION_DELETE" description="JACTION_DELETE_COMPONENT_DESC" />
+		<action name="core.edit" title="JACTION_EDIT" description="JACTION_EDIT_COMPONENT_DESC" />
+		<action name="core.edit.state" title="JACTION_EDITSTATE" description="JACTION_EDITSTATE_COMPONENT_DESC" />
+	<action name="core.edit.own" title="JACTION_EDITOWN" description="JACTION_EDITOWN_COMPONENT_DESC" />
+	</section>
+    <section name="licence">
+		<action name="core.create" title="JACTION_CREATE" description="JACTION_CREATE_COMPONENT_DESC" />
+		<action name="core.delete" title="JACTION_DELETE" description="JACTION_DELETE_COMPONENT_DESC" />
+		<action name="core.edit" title="JACTION_EDIT" description="JACTION_EDIT_COMPONENT_DESC" />
+		<action name="core.edit.state" title="JACTION_EDITSTATE" description="JACTION_EDITSTATE_COMPONENT_DESC" />
+	<action name="core.edit.own" title="JACTION_EDITOWN" description="JACTION_EDITOWN_COMPONENT_DESC" />
+	</section>
+	<section name="fieldgroup">
+		<action name="core.create" title="JACTION_CREATE" description="COM_FIELDS_GROUP_PERMISSION_CREATE_DESC" />
+		<action name="core.delete" title="JACTION_DELETE" description="COM_FIELDS_GROUP_PERMISSION_DELETE_DESC" />
+		<action name="core.edit" title="JACTION_EDIT" description="COM_FIELDS_GROUP_PERMISSION_EDIT_DESC" />
+		<action name="core.edit.state" title="JACTION_EDITSTATE" description="COM_FIELDS_GROUP_PERMISSION_EDITSTATE_DESC" />
+		<action name="core.edit.own" title="JACTION_EDITOWN" description="COM_FIELDS_GROUP_PERMISSION_EDITOWN_DESC" />
+		<action name="core.edit.value" title="JACTION_EDITVALUE" description="COM_FIELDS_GROUP_PERMISSION_EDITVALUE_DESC" />
+	</section>
+	<section name="field">
+		<action name="core.delete" title="JACTION_DELETE" description="COM_FIELDS_FIELD_PERMISSION_DELETE_DESC" />
+		<action name="core.edit" title="JACTION_EDIT" description="COM_FIELDS_FIELD_PERMISSION_EDIT_DESC" />
+		<action name="core.edit.state" title="JACTION_EDITSTATE" description="COM_FIELDS_FIELD_PERMISSION_EDITSTATE_DESC" />
+		<action name="core.edit.value" title="JACTION_EDITVALUE" description="COM_FIELDS_FIELD_PERMISSION_EDITVALUE_DESC" />
+	</section>
+</access>

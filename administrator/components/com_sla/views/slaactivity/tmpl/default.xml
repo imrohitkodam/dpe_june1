@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="slaactivity" option="View">
+        <message>
+            <![CDATA[COM_SLA_SLA_ACTIVITY_TITLE_ITEM_VIEW_SLA_ACTIVITY_DESC]]>
+        </message>
+    </layout>
+    <fields name="params">
+        <fieldset
+            name="basic"
+            label="COM_SLA_SLA_ACTIVITY_FIELDSET_ITEM_ID_SELECT_LABEL">
+        </fieldset>
+    </fields>
+</metadata>

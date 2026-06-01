@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<access component="com_tjcompetency">
+	<section name="component">
+		<action name="core.admin" title="JACTION_ADMIN" description="JACTION_ADMIN_COMPONENT_DESC" />
+		<action name="core.manage" title="JACTION_MANAGE" description="JACTION_MANAGE_COMPONENT_DESC" />
+		<action name="core.create" title="JACTION_CREATE" description="JACTION_CREATE_COMPONENT_DESC" />
+		<action name="core.delete" title="JACTION_DELETE" description="JACTION_DELETE_COMPONENT_DESC" />
+		<action name="core.edit" title="JACTION_EDIT" description="JACTION_EDIT_COMPONENT_DESC" />
+		<action name="core.edit.state" title="JACTION_EDITSTATE" description="JACTION_EDITSTATE_COMPONENT_DESC" />
+		<action name="core.edit.own" title="JACTION_EDITOWN" description="JACTION_EDITOWN_COMPONENT_DESC" />
+		<action name="view.skills" title="COM_TJCOMPETENCY_PERMISSION_VIEW_SKILLS" description="COM_TJCOMPETENCY_PERMISSION_VIEW_SKILLS" />
+		<action name="view.own.skills" title="COM_TJCOMPETENCY_PERMISSION_VIEW_OWN_SKILLS" description="COM_TJCOMPETENCY_PERMISSION_VIEW_OWN_SKILLS" />
+		<action name="view.scales" title="COM_TJCOMPETENCY_PERMISSION_VIEW_SCALES" description="COM_TJCOMPETENCY_PERMISSION_VIEW_SCALES" />
+		<action name="view.own.scales" title="COM_TJCOMPETENCY_PERMISSION_VIEW_OWN_SCALES" description="COM_TJCOMPETENCY_PERMISSION_VIEW_OWN_SCALES" />
+	</section>
+</access>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="contenttype">
+        <fields name="organization">
+            <field name="type" type="list"
+                label="NR_TYPE"
+                description="GSD_ORGANIZATION_TYPE_DESC"
+                default="Organization"
+                required="true">
+                <option value="Organization">Organization</option>
+                <option value="Airline">Airline</option>
+                <option value="Consortium">Consortium</option>
+                <option value="Corporation">Corporation</option>
+                <option value="EducationalOrganization">Educational Organization</option>
+                <option value="FundingScheme">Funding Scheme</option>
+                <option value="GovernmentOrganization">Government Organization</option>
+                <option value="LibrarySystem">Library System</option>
+                <option value="MedicalOrganization">Medical Organization</option>
+                <option value="NGO">NGO</option>
+                <option value="NewsMediaOrganization">News Media Organization</option>
+                <option value="OnlineBusiness">Online Business</option>
+                <option value="PerformingGroup">Performing Group</option>
+                <option value="PoliticalParty">Political Party</option>
+                <option value="Project">Project</option>
+                <option value="ResearchOrganization">Research Organization</option>
+                <option value="SearchRescueOrganization">Search Rescue Organization</option>
+                <option value="SportsOrganization">Sports Organization</option>
+                <option value="WorkersUnion">Workers Union</option>
+            </field>
+            <field name="name" type="map"
+                label="NR_NAME"
+                description="GSD_ORGANIZATION_NAME_DESC"
+                hint="Name"
+                custom_class="input-xlarge"
+            />
+            <field name="logo" type="map"
+                label="GSD_LOGO"
+                description="GSD_ORGANIZATION_LOGO_DESC"
+                custom_class="input-xlarge">
+                <subform>
+                    <field name="fixed" type="media"
+                        showon="option:fixed"
+                        showselect="false"
+                    />
+                </subform>
+            </field>
+            <field name="description" type="map"
+                label="GSD_ITEM_DESC"
+                description="GSD_ORGANIZATION_DESC_DESC"
+                default="gsd.item.description"
+                custom_class="input-xlarge"
+            />
+            <field name="url" type="map"
+                label="GSD_WEBSITE_URL"
+                description="GSD_ORGANIZATION_URL_DESC"
+                custom_class="input-xlarge"
+            />
+            <field name="foundingDate" type="map"
+                label="GSD_FOUNDING_DATE"
+                description="GSD_ORGANIZATION_FOUNDING_DATE_DESC"
+                custom_class="input-xlarge">
+                <subform>
+                    <field name="custom" type="calendar"/>
+                </subform>
+            </field>
+            <field type="spacer" name="label1" label="GSD_ADDRESS_AND_CONTACT" />
+            <field name="addressCountry" type="map"
+                label="NR_COUNTRY"
+                description="GSD_ORGANIZATION_COUNTRY_DESC"
+                hint="US">
+                <subform>
+                    <field name="fixed" type="nr_geo"
+                        showon="option:fixed"
+                        showselect="false"
+                    />
+                </subform>
+            </field>
+            <field name="addressLocality" type="map"
+                label="GSD_LOCALITY"
+                description="GSD_ORGANIZATION_LOCALITY_DESC"
+                hint="New York"
+            />
+            <field name="streetAddress" type="map"
+                label="GSD_STREET_ADDRESS"
+                description="GSD_ORGANIZATION_STREET_ADDRESS_DESC"
+                hint="123 Main St."
+            />
+            <field name="addressRegion" type="map"
+                label="NR_REGION"
+                description="GSD_ORGANIZATION_REGION_DESC"
+                hint="CA"
+            />
+            <field name="postalCode" type="map"
+                label="NR_POSTAL_CODE"
+                description="GSD_ORGANIZATION_POSTALCODE_DESC"
+                hint="34528"
+            />
+            <field name="email" type="map"
+                label="NR_EMAIL"
+                description="GSD_ORGANIZATION_EMAIL_DESC"
+                custom_class="input-xlarge"
+            />
+            <field name="telephone" type="map"
+                label="GSD_PHONE_NUMBER"
+                description="GSD_ORGANIZATION_TELEPHONE_DESC"
+                custom_class="input-xlarge"
+            />
+            <field name="sameAs" type="map"
+                label="GSD_SOCIAL_PROFILES"
+                description="GSD_ORGANIZATION_SAME_AS_DESC"
+                subform_class="hide-custom-repeater-label subform-fullwidth">
+                <subform>
+                    <field name="custom" type="subform"
+                        layout="joomla.form.field.subform.repeatable-table"
+                        multiple="true"
+                        default='{"name":""}'>
+                        <form>
+                            <field name="name" type="text"
+                                hint="https://"
+                                label="NR_URL"
+                                class="input-xlarge"
+                            />
+                        </form>
+                    </field>
+                </subform>
+            </field>
+            <field type="spacer" name="label2" label="GSD_ORGANIZATION_IDENTIFIERS" />
+            <field name="vatID" type="map"
+                label="GSD_VAT_ID"
+                description="GSD_ORGANIZATION_VAT_ID_DESC"
+                custom_class="input-xlarge"
+            />
+            <field name="taxID" type="map"
+                label="GSD_TAX_ID"
+                description="GSD_ORGANIZATION_TAX_ID_DESC"
+                custom_class="input-xlarge"
+            />
+            <field name="iso6523Code" type="map"
+                label="GSD_ISO_6523"
+                description="GSD_ORGANIZATION_ISO_6523_DESC"
+                custom_class="input-xlarge"
+            />
+            <field name="duns" type="map"
+                label="GSD_DUNS"
+                description="GSD_ORGANIZATION_DUNS_DESC"
+                custom_class="input-xlarge"
+            />
+            <field name="leiCode" type="map"
+                label="GSD_LEI"
+                description="GSD_ORGANIZATION_LEI_DESC"
+                custom_class="input-xlarge"
+            />
+            <field name="naics" type="map"
+                label="GSD_NAICS"
+                description="GSD_ORGANIZATION_NAICS_DESC"
+                custom_class="input-xlarge"
+            />
+            <field type="spacer" name="label3" label="GSD_ADDITIONAL_INFORMATION" />
+            <field name="alternateName" type="map"
+                label="GSD_ALTERNATE_NAME"
+                description="GSD_ORGANIZATION_ALTERNATE_NAME_DESC"
+                hint="Alternate Name"
+                custom_class="input-xlarge"
+            />
+            <field name="legalName" type="map"
+                label="GSD_LEGAL_NAME"
+                description="GSD_ORGANIZATION_LEGAL_NAME_DESC"
+                hint="Legal Name"
+                custom_class="input-xlarge"
+            />
+            <field name="numberOfEmployees" type="map"
+                label="GSD_NUMBER_OF_EMPLOYEES"
+                description="GSD_ORGANIZATION_NUMBER_OF_EMPLOYEES_DESC"
+                custom_class="input-xlarge"
+            />
+            <field name="rating_value" type="map"
+                label="GSD_RATE_VALUE"
+                description="GSD_RATE_VALUE_DESC"
+                default="gsd.item.ratingValue">
+                <subform>
+                    <field name="custom" type="nr_rate"/>
+                </subform>
+            </field>
+            <field name="review_count" type="map"
+                label="GSD_REVIEW_COUNT"
+                description="GSD_REVIEW_COUNT_DESC"
+                default="gsd.item.reviewCount"
+                hint="5"
+            />
+        </fields>
+    </fieldset>
+</form>

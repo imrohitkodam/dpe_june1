@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+	<name>COM_SEOGLOSSARY</name>
+	<creationDate>2023-07-31 09:17:38</creationDate>
+	<copyright>(c) 2012 JoomUnited (http://www.joomunited.com). All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; http://www.gnu.org/licenses/gpl-2.0.html</license>
+    <author>JoomUnited</author>
+	<authorEmail>contact@joomunited.com</authorEmail>
+	<authorUrl>http://www.joomunited.com</authorUrl>
+	<version>3.2.5</version>
+	<description>SEO Glossary is a Joomla extension used to generate glossary, definitions of terms and also for SEO need with internal links.</description>
+	
+	<scriptfile>install.script.php</scriptfile>
+	
+	<install> <!-- Runs on install -->
+    	<sql>
+        	<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+  		</sql>
+    </install>
+
+    <uninstall> <!-- Runs on uninstall -->
+    	<sql>
+        	<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+  		</sql>
+   </uninstall>
+
+	<files folder="site">
+		<filename>controller.php</filename>
+		<filename>komento_plugin.php</filename>
+		<filename>index.html</filename>
+		<filename>router.php</filename>
+		<filename>seoglossary.php</filename>
+		<folder>assets</folder>
+		<folder>controllers</folder>
+		<folder>helpers</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+        <folder>templates</folder>
+	</files>
+	<administration>
+		<menu img="class:bookmark">COM_SEOGLOSSARY</menu>
+		<submenu>
+			<menu link="option=com_seoglossary&amp;view=catglossaries"  alt="Seoglossary/Glossaries">COM_SEOGLOSSARY_CATGLOSSARIES</menu>
+			<menu link="option=com_seoglossary&amp;view=glossaries"  alt="Seoglossary/Entries">COM_SEOGLOSSARY_GLOSSARIES</menu>
+			<menu link="option=com_seoglossary&amp;view=import" alt="Seoglossary/import">COM_SEOGLOSSARY_IMPORT</menu>
+			 <menu link="option=com_config&amp;view=component&amp;component=com_seoglossary" alt="Seoglossary/configuration">COM_SEOGLOSSARY_CONFIGURATION</menu>
+
+		</submenu>
+    
+		<files folder="administrator">
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>seoglossary.php</filename>
+			<folder>assets</folder>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>models</folder>
+			<folder>extensions</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>language</folder>
+			<folder>views</folder>
+		</files>
+	</administration>
+	<extensions>
+    <extension folder="mod_latestseoglossary" element="mod_latestseoglossary" group="" enable="false" type="module"/>
+     <extension folder="mod_searchseoglossary" group="" element="mod_searchseoglossary" enable="false" type="module"/>
+    <extension folder="plg_content_seoglossary" group="content" element="seoglossary" enable="true" type="plugin"/>
+    <extension folder="plg_search_seoglossary" group="search" element="seoglossary"  enable="true" type="plugin"/>
+	<extension folder="seoglossary" group="seoglossary" element="seoglossary"  enable="true" type="plugin"/>
+    <extension folder="plg_xmap_seoglossary" group="xmap" element="com_seoglossary"  enable="true" type="plugin"/>
+		<extension folder="plg_finder_seoglossary" group="finder" element="com_seoglossary"  enable="true" type="plugin"/>
+    <extension folder="seoglossary-juupdater" enable="true"/>
+  </extensions>
+	  <updateservers>
+    <server type="extension" priority="2" name="Linky Map Updates">https://www.joomunited.com/juupdater_files/seoglossary-update.xml</server>
+    </updateservers>
+</extension>
+

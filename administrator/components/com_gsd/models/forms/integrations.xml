@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<addons>
+    <addon name="content"
+        label="Joomla Content"
+        description="Add Structured Data to Joomla! Articles"
+        docalias="joomla-content"
+        proonly="false"
+    />
+    <addon name="k2"
+        label="K2"
+        description="Add Structured Data to K2 items."
+        docalias="k2"
+    />
+    <addon name="easyblog"
+        label="EasyBlog"
+        description="Add Structured Data to EasyBlog posts."
+        docalias="easyblog"
+    />
+    <addon name="rsblog"
+        label="RSBlog"
+        description="Add Structured Data to RSBlog posts."
+        docalias="rsblog"
+    />
+    <addon name="rseventspro"
+        label="RSEvents!Pro"
+        description="Add Structured Data to RSEvents!Pro events."
+        docalias="rseventspro"
+    />
+    <addon name="sppagebuilder"
+        label="SP Page Builder"
+        description="Add Structured Data to SP Page Builder pages."
+        docalias="sppagebuilder"
+    />
+    <addon name="j2store"
+        label="J2Store"
+        description="Add Structured Data to J2Store Products."
+        docalias="j2store"
+    />
+    <addon name="hikashop"
+        label="HikaShop"
+        description="Add Structured Data to HikaShop products."
+        docalias="hikashop"
+    />
+    <addon name="jshopping"
+        label="JoomShopping"
+        description="Add Structured Data to JShopping products."
+        docalias="jshopping"
+    />
+    <addon name="virtuemart"
+        label="VirtueMart"
+        description="Add Structured Data to VirtueMart products."
+        docalias="virtuemart"
+    />
+    <addon name="zoo"
+        label="Zoo"
+        description="Add Structured Data to Zoo items."
+        docalias="zoo"
+    />
+    <addon name="menus"
+        label="Menu Manager"
+        description="Add Structured Data to Menu Manager Items."
+        docalias="menu-manager"
+    />
+    <addon name="eventbooking"
+        label="Event Booking"
+        description="Add Structured Data to Event Booking items."
+        docalias="event-booking"
+    />
+    <addon name="eshop"
+        label="Eshop"
+        description="Add Structured Data to Eshop product pages."
+        docalias="eshop"
+    />
+    <addon name="djcatalog2"
+        label="DJ-Catalog2"
+        description="Add Structured Data to DJ-Catalog2 product pages."
+        docalias="djcatalog2"
+    />
+    <addon name="quix"
+        label="Quix Page Builder"
+        description="Add Structured Data to Quix Page Builder pages."
+        docalias="quix-page-builder"
+    />
+    <addon name="djclassifieds"
+        label="DJ Classifieds"
+        description="Add Structured Data to DJ Classifieds items."
+        docalias="djclassifieds"
+    />
+    <addon name="djevents"
+        label="DJ Events"
+        description="Add Structured Data to DJ Events items."
+        docalias="djevents"
+    />
+    <addon name="jevents"
+        label="JEvents"
+        description="Add Structured Data to JEvents items."
+        docalias="jevents"
+    />
+    <addon name="sobipro"
+        label="SobiPro"
+        description="Add Structured Data to SobiPro Entries."
+        docalias="sobipro"
+    />
+    <addon name="jcalpro"
+        label="JCal Pro"
+        description="Add Structured Data to JCal Pro items."
+        docalias="jcal-pro"
+    />
+    <addon name="gridbox"
+        label="Gridbox"
+        description="Add Structured Data to Gridbox pages."
+        docalias="gridbox"
+    />
+    <addon name="jbusinessdirectory"
+        label="J-BusinessDirectory"
+        description="Add Structured Data to J-BusinessDirectory businesses, events and offers."
+        docalias="jbusinessdirectory"
+    />
+    <addon name="icagenda"
+        label="iCagenda"
+        description="Add Structured Data to iCagenda events."
+        docalias="icagenda"
+    />
+    <addon name="dpcalendar"
+        label="DPCalendar"
+        description="Add Structured Data to DPCalendar events."
+        docalias="dpcalendar"
+    />
+    <addon name="jreviews"
+        label="JReviews"
+        description="Add Structured Data to JReviews listings."
+        docalias="jreviews"
+    />
+</addons>

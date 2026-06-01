@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field name="id" type="hidden" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC" filter="INT"/>
+
+    <field name="activity_type_id" type="activitytype" addfieldpath="/components/com_timelog/models/fields" required="true" label="COM_TIMELOG_FORM_LBL_ACTIVITY_ACTIVITY_TYPE_ID" description="COM_TIMELOG_FORM_DESC_ACTIVITY_ACTIVITY_TYPE_ID" hint="COM_TIMELOG_FORM_LBL_ACTIVITY_ACTIVITY_TYPE_ID" filter="INT">
+    </field>
+    <field name="client" label="COM_TIMELOG_FORM_LBL_ACTIVITY_CLIENT" description="COM_TIMELOG_FORM_DESC_ACTIVITY_CLIENT" hint="COM_TIMELOG_FORM_LBL_ACTIVITY_CLIENT"/>
+
+    <field name="client_id" type="activity" addfieldpath="/components/com_timelog/models/fields" required="true" default="" label="COM_TIMELOG_FORM_LBL_ACTIVITY_CLIENT_ID" description="COM_TIMELOG_FORM_DESC_ACTIVITY_CLIENT_ID" hint="COM_TIMELOG_FORM_LBL_ACTIVITY_CLIENT_ID" filter="INT"/>
+
+    <field name="activity_note" type="editor" class="inputbox" filter="safehtml" label="COM_TIMELOG_FORM_LBL_ACTIVITY_ACTIVITY_NOTE" description="COM_TIMELOG_FORM_DESC_ACTIVITY_ACTIVITY_NOTE" hint="COM_TIMELOG_FORM_LBL_ACTIVITY_ACTIVITY_NOTE"/>
+    <field name="created_date" default="0000-00-00 00:00:00" type="calendar" class="inputbox required validate-datetime" format="%Y-%m-%d %H:%M:%S" showtime="true" translateformat="true" required="true" label="COM_TIMELOG_FORM_LBL_ACTIVITY_LOG_DATE" description="COM_TIMELOG_FORM_DESC_ACTIVITY_LOG_DATE" hint="COM_TIMELOG_FORM_LBL_ACTIVITY_LOG_DATE"/>
+    <field name="spent_time" required="true" label="COM_TIMELOG_FORM_LBL_ACTIVITY_LOG_TIME" description="COM_TIMELOG_FORM_DESC_ACTIVITY_LOG_TIME" hint="COM_TIMELOG_FORM_LBL_ACTIVITY_LOG_TIME"/>
+    <field name="state" default="1" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1">
+      <option value="1">JPUBLISHED</option>
+      <option value="0">JUNPUBLISHED</option>
+      <option value="2">JARCHIVED</option>
+      <option value="-2">JTRASHED</option>
+    </field>
+    <field name="attachment" type="file" label="COM_TIMELOG_FORM_LBL_ACTIVITY_ATTACHMENT" description="COM_TIMELOG_FORM_DESC_ACTIVITY_ATTACHMENT" hint="COM_TIMELOG_FORM_LBL_ACTIVITY_ATTACHMENT"/>
+  </fieldset>
+</form>

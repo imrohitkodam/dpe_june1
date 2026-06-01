@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+		<field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL"
+			readonly="true" class="readonly"
+			description="JGLOBAL_FIELD_ID_DESC" 
+		/>
+		<field name="tterm" type="text" size="40" class="inputbox"
+			label="COM_SEOGLOSSARY_FORM_LBL_GLOSSARY_TTERM" description="COM_SEOGLOSSARY_FORM_DESC_GLOSSARY_TTERM"
+			required="true"
+			filter="safehtml" 
+		/>
+		<field name="alias"
+			type="text"
+			label="JFIELD_ALIAS_LABEL"
+			description="JFIELD_ALIAS_DESC"
+			hint="JFIELD_ALIAS_PLACEHOLDER"
+			size="45"
+		/>
+		
+	<field name="extlink"
+               type="radio"
+               default="0"
+               class="btn-group btn-group-yesno"
+            label="COM_SEOGLOSSARY_FORM_LBL_LINK"
+              description="COM_SEOGLOSSARY_FORM_DESC_LINK" >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+	 <field name="exturl" type="text"
+              label="COM_SEOGLOSSARY_FORM_LBL_EXTURL"
+              description="COM_SEOGLOSSARY_FORM_DESC_EXTURL" 
+              filter="raw" />
+	 
+        <field name="tsynonyms" type="text" size="40" class="inputbox"
+               label="COM_SEOGLOSSARY_FORM_LBL_GLOSSARY_TSYNONYMS" description="COM_SEOGLOSSARY_FORM_DESC_GLOSSARY_TSYNONYMS"
+               required="false"
+               filter="safehtml"
+                />
+		<field name="tfirst" type="text" size="40" class="inputbox"
+			label="COM_SEOGLOSSARY_FORM_LBL_GLOSSARY_TFIRST" description="COM_SEOGLOSSARY_FORM_DESC_GLOSSARY_TFIRST"
+			filter="safehtml" 
+		/>
+		<field name="tdefinition" type="editor" buttons="true" required="true"
+			class="inputbox"
+			filter="raw"
+			label="COM_SEOGLOSSARY_FORM_LBL_GLOSSARY_TDEFINITION" description="COM_SEOGLOSSARY_FORM_DESC_GLOSSARY_TDEFINITION"  
+		/>
+		<field name="tmore" type="editor" buttons="true" required="false"
+			class="inputbox"
+			filter="raw"
+			label="COM_SEOGLOSSARY_FORM_LBL_GLOSSARY_TMORE" description="COM_SEOGLOSSARY_FORM_DESC_GLOSSARY_TMORE"  
+		/>
+		<field name="tname" type="text" size="40" class="inputbox"
+			label="COM_SEOGLOSSARY_FORM_LBL_GLOSSARY_TNAME" description="COM_SEOGLOSSARY_FORM_DESC_GLOSSARY_TNAME"
+			filter="safehtml" 
+		/>
+		<field name="tmail" type="text" size="40" class="inputbox"
+			label="COM_SEOGLOSSARY_FORM_LBL_GLOSSARY_TMAIL" description="COM_SEOGLOSSARY_FORM_DESC_GLOSSARY_TMAIL" 
+			filter="safehtml" 
+		/>
+		<field name="tcomment" type="editor" buttons="true"
+			class="inputbox"
+			filter="safehtml"
+			label="COM_SEOGLOSSARY_FORM_LBL_GLOSSARY_TCOMMENT" description="COM_SEOGLOSSARY_FORM_DESC_GLOSSARY_TCOMMENT"  
+		/>
+		<field name="extlink"
+               type="radio"
+               default="0"
+               class="btn-group btn-group-yesno"
+            label="COM_SEOGLOSSARY_FORM_LBL_GLOSSARY_USECUSTOMLINK"
+              description="COM_SEOGLOSSARY_FORM_DESC_GLOSSARY_USECUSTOMLINK" >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+	 <field name="exturl" type="text"
+              label="COM_SEOGLOSSARY_FORM_LBL_GLOSSARY_CUSTOMLINK"
+              description="COM_SEOGLOSSARY_FORM_LBL_GLOSSARY_CUSTOMLINK" 
+              filter="raw" />
+	
+		<field name="tedit" type="text" size="40" class="inputbox"
+			label="COM_SEOGLOSSARY_FORM_LBL_GLOSSARY_TEDIT" description="COM_SEOGLOSSARY_FORM_DESC_GLOSSARY_TEDIT"
+			filter="safehtml" 
+		/>
+		<field name="catid" type="glossary"
+			label="COM_SEOGLOSSARY_FORM_LBL_GLOSSARY_CATID" description="COM_SEOGLOSSARY_FORM_DESC_GLOSSARY_CATID"
+		/>
+		<field
+			name="target"
+			type="list"
+			label="COM_SEOGLOSSARY_FORM_LBL_BROWSERNAV_LABEL"
+			description="COM_SEOGLOSSARY_FORM_DESC_BROWSERNAV_DESC"
+			default="0"
+			filter="options"
+			>
+			<option value="0">JBROWSERTARGET_PARENT</option>
+			<option value="1">JBROWSERTARGET_NEW</option>
+		</field>
+		<field name="nofollow"
+               type="radio"
+               default="0"
+               class="btn-group btn-group-yesno"
+            label="COM_SEOGLOSSARY_FORM_LBL_GLOSSARY_NOFOLLOW"
+              description="COM_SEOGLOSSARY_FORM_DESC_GLOSSARY_NOFOLLOW" >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+		
+		<field name="metakey"
+			type="textarea"
+			label="JFIELD_META_KEYWORDS_LABEL"
+			description="JFIELD_META_KEYWORDS_DESC"
+			rows="3"
+			cols="30"
+		 />
+
+		<field name="metadesc"
+			type="textarea"
+			label="JFIELD_META_DESCRIPTION_LABEL"
+			description="JFIELD_META_DESCRIPTION_DESC"
+			rows="3"
+			cols="30"
+		/>
+		
+		<field name="hits" type="text" label="JGLOBAL_HITS"
+			description="JGLOBAL_HITS" class="readonly" size="6"
+			readonly="true" filter="unset" />
+		<field name="tags" type="tag"
+			label="JTAG" description="JTAG_DESC"
+			class="inputbox span12 small" multiple="true"
+		>
+		</field>
+		
+		<field name="created_by" type="user"
+			label="JGRID_HEADING_CREATED_BY" description="JGRID_HEADING_CREATED_BY" />
+		
+		<field name="created" type="calendar" label="JGLOBAL_CREATED_DATE"
+			description="JGLOBAL_CREATED_DATE" size="22"
+			format="%Y-%m-%d %H:%M:%S" filter="user_utc" />
+			
+		<field name="publish_up" type="calendar"
+			label="JGLOBAL_FIELD_PUBLISH_UP_LABEL" description="JGLOBAL_FIELD_PUBLISH_UP_DESC"
+			format="%Y-%m-%d %H:%M:%S" size="22"
+			filter="user_utc" />
+
+		<field name="publish_down" type="calendar"
+			label="JGLOBAL_FIELD_PUBLISH_DOWN_LABEL" description="JGLOBAL_FIELD_PUBLISH_DOWN_DESC"
+			format="%Y-%m-%d %H:%M:%S" size="22"
+			filter="user_utc" />
+		
+		 <field
+			name="icon"
+			type="media"
+			label="COM_SEOGLOSSARY_FORM_ICON_LABEL"
+			description="COM_SEOGLOSSARY_FORM_ICON_DESC" />
+		
+		<field
+			name="state"
+			type="list"
+			label="JSTATUS"
+			description="JFIELD_PUBLISHED_DESC"
+			class="inputbox"
+			size="1"
+			default="1"
+		>
+			<option value="1">
+				JPUBLISHED</option>
+			<option value="0">
+				JUNPUBLISHED</option>
+			<option value="2">
+				JARCHIVED</option>
+			<option value="-2">
+				JTRASHED</option>
+		</field>
+		<field name="checked_out" type="hidden" filter="unset" />
+		<field name="checked_out_time" type="hidden" filter="unset" />
+	</fieldset>
+</form>

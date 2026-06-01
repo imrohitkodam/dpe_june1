@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter">
+		<field
+			name="search"
+			type="text"
+			hint="COM_JMAILALERTS_SUBSCRIBERS_FILTER_SEARCH_HINT"
+			label="COM_JMAILALERTS_SUBSCRIBERS_FILTER_SEARCH"
+			description="COM_JMAILALERTS_SUBSCRIBERS_FILTER_SEARCH_HINT"
+			class="js-stools-search-string" />
+
+		<field name="state" type="status" label="COM_JMAILALERTS_FILTER_STATE" description="COM_JMAILALERTS_FILTER_STATE_DESC" onchange="this.form.submit();">
+			<option value="">JOPTION_SELECT_PUBLISHED</option>
+		</field>
+
+		<field
+			name="alertdetails"
+			type="sql"
+			query="SELECT DISTINCT id, title FROM #__jma_alerts WHERE state='1'"
+			label="COM_JMAILALERTS_ALERTS_LIST"
+			description="COM_JMAILALERTS_ALERTS_LIST"
+			key_field = "id"
+			value_field="title"
+			filter=""
+			onchange="this.form.submit();">
+			<option value="">COM_JMAILALERTS_SUBSCRIBERS_ALERT_ID_FILTER</option>
+		</field>
+	</fields>
+
+	<fields name="list">
+		<field name="fullordering" type="list" label="COM_JMAILALERTS_LIST_FULL_ORDERING" description="COM_JMAILALERTS_LIST_FULL_ORDERING_DESC" onchange="this.form.submit();" default="a.id DESC">
+			<option value="">JGLOBAL_SORT_BY</option>
+			<option value="a.ordering ASC">COM_JMAILALERTS_SUBSCRIBERS_ORDERING_ASC</option>
+			<option value="a.ordering DESC">COM_JMAILALERTS_SUBSCRIBERS_ORDERING_DESC</option>
+			<option value="a.state ASC">COM_JMAILALERTS_FILTERS_STATUS_ASC</option>
+			<option value="a.state DESC">COM_JMAILALERTS_FILTERS_STATUS_DESC</option>
+			<option value="a.name ASC">COM_JMAILALERTS_SUBSCRIBERS_NAME_ASC</option>
+			<option value="a.name DESC">COM_JMAILALERTS_SUBSCRIBERS_NAME_DESC</option>
+			<option value="a.alert_id ASC">COM_JMAILALERTS_LIST_SUBSCRIBERS_ALERT_ASC</option>
+			<option value="a.alert_id DESC">COM_JMAILALERTS_LIST_SUBSCRIBERS_ALERT_NAME_DESC</option>
+			<option value="a.frequency ASC">COM_JMAILALERTS_LIST_SUBSCRIBERS_FREQ_ASC</option>
+			<option value="a.frequency DESC">COM_JMAILALERTS_LIST_SUBSCRIBERS_FREQ_DESC</option>
+            <option value="a.date ASC">COM_JMAILALERTS_SUBSCRIBERS_DATE_ASC</option>
+			<option value="a.date DESC">COM_JMAILALERTS_SUBSCRIBERS_DATE_DESC</option>
+			<option value="a.id ASC">COM_JMAILALERTS_SUBSCRIBERS_ID_ASC</option>
+			<option value="a.id DESC">COM_JMAILALERTS_SUBSCRIBERS_ID_DESC</option>
+		</field>
+
+		<field
+			name="limit"
+			type="limitbox"
+			class="input-mini"
+			default="25"
+			onchange="this.form.submit();" />
+	</fields>
+</form>
