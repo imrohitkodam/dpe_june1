@@ -1,0 +1,17 @@
+.making-round-form.ucmsubform{
+    .control-label,.controls{
+        width: 100%;
+    }
+}
+@media (min-width: 576px){
+    .making-round-form.ucmsubform{
+        .control-label{
+            width: 33.33333333%
+        }
+        .controls{
+            float: right;
+            width: 41.66666667%;
+        }
+       
+    }
+}

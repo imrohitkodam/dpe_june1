@@ -1,0 +1,449 @@
+.d-inline-table{
+  display: inline-table;
+}
+.text-info{
+  color: #17a2b8!important;
+}
+.mt-0{
+  margin-top: 0 !important;
+}
+.pt-0{
+  padding-top: 0 !important;
+}
+.pb-20{
+  padding-bottom: 20px !important;
+}
+.h-32{
+  height: 32px;
+}
+.line-height-18{
+  line-height: 18px;
+}
+.text-white{
+	color:$white-100;
+}
+.text-amber{
+	color:$primary-yellow-600;
+}
+.text-red-500{
+ color:$primary-red-500;
+}
+@include respond-above(sm) {
+  .md-w-220{
+    .chosen-container-single{
+      width: 220px !important;
+    }
+  }
+}
+.bg-none{
+  background: none;
+}
+.btn-primary{
+  &:focus{
+    outline: 0;
+  }
+}
+
+// Css added for Compliance Manager Assign and deassign form.
+.thead-fixed{
+  position: fixed;
+  z-index: 1;
+}
+.next-btn{
+  bottom: 0;
+  width: 100%;
+}
+.scroll-fix{
+  overflow: hidden;
+}
+.tbody-fixed{
+  position: absolute;
+  margin-top: 35px;
+  overflow-y: scroll;
+  height: 88%;
+}
+.tbody-height{
+  height:75%;
+}
+.tbody-height td{
+  padding: 14px 10px !important;
+}
+
+.assign-userfrm {
+	.tbody-fixed {
+		height: 75%;
+	}
+	.tbody-height {
+		height: 62%;
+  }
+  .assign-btn{
+    bottom: 0;
+    position: fixed;
+  }
+}
+/*
+@media (max-width: 767px){
+  .next-btn{
+    bottom: 48%;
+    width: 100%;
+  }
+}*/
+
+/*css added for UCM subform fields.*/
+.minicolors,.minicolors-focus{
+  z-index: 7;
+}
+.custom-calender {
+	input[type=text] {
+		height: 34px;
+	}
+}
+.custom-calender .js-editor-tinymce .mce-edit-area{
+  border-width: 1px 1px 0 0 !important;
+}
+.field-calendar .input-append{
+  position: relative;
+}
+
+/*css added for popup in site*/
+.height-100vh
+{
+ height: 100vh !important;
+}
+.height-vh{
+  height: 97%;
+}
+.overflow-y-auto
+{
+ overflow-y : auto;
+}
+
+.fileupload-new .input-append .btn-file
+{
+ border: 1px solid #CCC;
+}
+
+/*css added for description column of SLA-timelog report table.*/
+.manage-reports thead .report-row .description{
+  width: 20%;
+}
+
+/* css added for masterlist menu*/
+.masterlist-menu{
+  ul{
+    li{
+      z-index: 100;
+    }
+  }
+}
+
+/* css added for compliance manager assigned user btn*/
+#jlikeToolbar{
+  .toolbar_buttons.assignBtn{
+    background-color: #34b8f0 ;
+    color:#fff;
+  }
+}
+@media (max-width: 767px){
+  #jlikeToolbar{
+    .toolbar_buttons.assignBtn{
+      display: inherit;
+    }
+  }
+  .tjBs3{
+    .filter-search-btn{
+      display: flex !important;
+    }
+
+  }
+
+}
+
+/* css added for My-support ticket view */
+.my-support-view{
+  .bootstrap-tagsinput{
+    .badge{
+    border: 1px solid #aaa;
+    max-width: 100%;
+    border-radius: 3px;
+    background-color: #eeeeee;
+    background-image: linear-gradient(#f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+    background-size: 100% 19px;
+    background-repeat: repeat-x;
+    background-clip: padding-box;
+    box-shadow: 0 0 2px white inset, rgba(0,0,0,0.5);
+    color: #333;
+    line-height: 13px;
+    font-weight: normal;
+    text-shadow: none;
+    padding: 3px 20px 3px 5px;
+    }
+    .badge [data-role="remove"]:after{
+      background:none;
+      position:absolute;
+      font-size: 20px;
+    }
+  }
+}
+
+/* css added for timlog view */
+.timelog-activities-search{
+
+  .field-calendar{
+    .input-append{
+      margin-bottom: 0;
+      input[type="text"]{
+        height: 30px;
+        width: 100%;
+
+      }
+      .active{
+        background-color: transparent;
+        border-color: #CCC;
+      }
+      .btn{
+        background-image: none;
+        border-left: none;
+      }
+      button {
+        position: absolute;
+        right: 0;
+        left: inherit;
+        background-color: transparent;
+        box-shadow: none;
+    }
+    .btn-secondary{
+      top: 0;
+    }
+    }
+  }
+  .btn-primary{
+    border-color: #0faae4;
+    background-color: #22b8f0;
+    background-image: none;
+    &:hover{
+      border-color: #0d8ab9;
+    background-color: #0e9cd1;
+    }
+  }
+}
+
+/* css added for oraganization form */
+.ucm-form-styling{
+  .input-append{
+    input[type="text"].field-media-input{
+      width: 71% !important;
+    }
+  }
+}
+/* css added for report view */
+#adminForm.manage-reports.ucm-form-styling {
+  .btn.export {
+    color: #0e9cd1;
+  }
+	.chosen-container.chosen-container-single {
+		width: 200px !important;
+
+    input[type='text'] {
+      width: 100% !important;
+    }
+	}
+  .ordering-select  {
+    display: flex;
+    flex-wrap: wrap;;
+  }
+  .input-group {
+    width: auto;
+  }
+  .chosen-single {
+    line-height: 26px;
+    height: 34px;
+
+    b {
+      margin-top: 3px;
+    }
+  }
+  .icon-calendar:before {
+    content: "\f073";
+  }
+}
+@media (max-width: 767px){
+  #adminForm.manage-reports.ucm-form-styling {
+    .chosen-container.chosen-container-single {
+      width: 100% !important;
+    }
+  }
+}
+#adminForm.manage-reports.ucm-form-styling {
+  #reportPagination{
+    .chosen-container.chosen-container-single {
+      width: 60px !important;
+    }
+  }
+}
+.manage-reports.ucm-form-styling {
+
+    .filter-search{
+        .input-append{
+          #filters_enrolled_on_time_from,
+          #filters_enrolled_on_time_to,
+          #filters_timestart_from,#filters_timestart_to,
+          #filters_timeend_from,#filters_timeend_to {
+            width: 180px !important;
+          }
+          
+          #filters_enrolled_on_time_to_btn,
+          #filters_timestart_to_btn,
+          #filters_timeend_to_btn {
+            left:150px;
+          }
+          #filters_enrolled_on_time_from_btn, #filters_timestart_from_btn,#filters_timeend_from_btn{
+            left: 112px;
+          }
+        }
+
+    }
+  }
+
+/* css added for Tickets view */
+
+.note-view{
+  textarea{
+    height: auto;
+    width: 100%;
+  }
+}
+
+/* css added for multiagnecy address fild */
+#form-multiagency,#item-form,#adminForm
+{
+  .oneliner-textarea{
+  height: 34px;
+  }
+}
+
+/* css added for bye bye password popup */
+
+#sbox-window.login-without-password-popup {
+	width: 295px !important;
+	height: 380px !important;
+	left: 5% !important;
+}
+@media screen and (min-width:767px) {
+	#sbox-window.login-without-password-popup {
+		width: 480px !important;
+		height: 425px !important;
+		left: 35% !important;
+	}
+}
+.overflow-y{
+overflow-y:hidden;
+}
+
+.course-short-desc{
+min-height:100px;
+}
+
+.widget-boxes.assign-tools{
+	flex-wrap:wrap;
+	align-self:flex-start;
+	padding: 0px;
+}
+
+.pie-layout {
+    flex: 48%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    flex-grow: initial;
+}
+
+.dashboard-progress{
+    margin-top: 8px;
+}
+
+.tjlmspin .thumbnail:hover {
+    -webkit-box-shadow: 0 1px 4px;
+    -moz-box-shadow: 0 1px 4px;
+    box-shadow: 0 1px 4px;
+}
+
+.dashboard-overlay{
+	background-color: rgba(0,0,0,0.35);
+    z-index: 9999;
+    color: white;
+}
+
+.chosen-container .chosen-drop{
+z-index:999
+}
+
+.staff-link{
+    font-size: 14px;
+    font-weight: bolder;
+    color: inherit;
+    background-color: #f1f1f1;
+    box-shadow: 0 0 0 0 #ffffff;
+    border-width: 2px;
+    border-color: #22B8F0;
+    border-style: solid;
+    border-radius: 5px;
+    margin: 0px 0px 30px 0px;
+}
+
+#notificationlistwidget {
+  padding-top: 13px !important;
+  padding-bottom: 10px !important;
+  width: 48px;
+  height: 48px;
+
+  .todocommon {
+    margin-left: -45px;
+  }
+
+  p {
+    margin:0;
+  }
+}
+#notificationwidget {
+  padding-top: 13px !important;
+  padding-bottom: 10px !important;
+}
+.note-view {
+  .form-horizontal .control-label {
+    float: none;
+  }
+  .form-horizontal .controls {
+    margin: 0;
+  }
+}
+@include respond-above(sm) {
+  .note-view {
+    .form-horizontal .control-label {
+      float: left;
+    }
+    .form-horizontal .controls {
+      margin-left: 180px;
+    }
+  }
+}
+.chat-btn {
+  padding: 12px 30px 12px 30px;
+  font-size: 14px;
+  background: transparent;
+  color: white;
+  font-weight: 500;
+  border-color: #fff;
+  border-radius: 0;
+}
+
+.radio input[type="radio"] {
+  display: none;
+}
+.tj_btn_group, .tj_btn_group-vertical>.btn, .tj_btn_group>.btn {
+    position: relative;
+    float: left;
+}
+.text-lightblue{color:#B2EBF2}
+.feedbackDetailColor{
+  color: #0092BC; 
+}

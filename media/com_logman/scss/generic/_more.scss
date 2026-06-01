@@ -1,0 +1,15 @@
+.logman_more {
+  text-align: center;
+
+  &__button {
+    width: 95%;
+
+    &__--disabled {
+      display: none;
+    }
+  }
+
+  &__row, &__last, &__remaining {
+    display: none;
+  }
+}

@@ -1,0 +1,9 @@
+:root[data-color-scheme=light] .view-field.layout-default #content, :root[data-color-scheme=light] .view-fields.task-add #content,
+:root[data-color-scheme=light] .view-plugin.layout-default #content, :root[data-color-scheme=light] .view-theme.layout-default #content,
+:root[data-color-scheme=light] .view-discount.layout-default #content, :root[data-color-scheme=light] .view-discounts.task-add #content,
+:root[data-color-scheme=light] .view-coupon.layout-default #content, :root[data-color-scheme=light] .view-coupons.task-add #content,
+:root[data-color-scheme=light] .view-registrant.layout-default #content, :root[data-color-scheme=light] .view-registrants.task-add #content,
+:root[data-color-scheme=light] .view-location.layout-default #content, :root[data-color-scheme=light] .view-locations.task-add #content,
+:root[data-color-scheme=light] .view-coupon.layout-default #content, :root[data-color-scheme=light] .view-coupons.task-add #content, :root[data-color-scheme=light] .js-stools-container-filters-visible {
+    background-color: white;
+}

@@ -1,0 +1,44 @@
+/**
+* @package RSSeo!
+* @copyright (C) 2015 www.rsjoomla.com
+* @license GPL, http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+#rsseo-cookie-accept {
+	background-color: #000;
+	color: #fff;
+	font-size: 13px;
+	min-height: 30px;
+	left: 0;
+	padding-top: 3px;
+	position: fixed;
+	text-align: center;
+	width: 100%;
+	z-index: 556;
+	line-height: 2em;
+}
+
+#rsseo-cookie-accept a {
+	color: #fff;
+	text-decoration: underline;
+}
+
+#rsseo-cookie-accept button {
+	z-index:200000;
+	background:#fff;
+	border:1px solid #fff;
+	margin-left: 10px;
+	margin-bottom: 5px;
+	padding: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.rsseo-cookie-up {
+	top: 0;
+}
+
+.rsseo-cookie-down {
+	bottom: 0;
+}

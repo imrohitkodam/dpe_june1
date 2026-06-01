@@ -1,0 +1,78 @@
+.eb-categories-grid-items {
+  --eb-category-box-border-radius: 5px;
+  --eb-category-box-hover-bg-color: rgb(87, 88, 97);
+  --eb-category-box-hover-color: rgb(255, 255, 255);
+}
+.eb-categories-grid-items > div {
+  margin-bottom: 20px;
+}
+.eb-categories-grid-items .eb-category-item {
+  box-shadow: 0 20px 60px 0 rgba(6, 10, 20, 0.08);
+  border-radius: var(--eb-category-box-border-radius);
+}
+.eb-categories-grid-items .eb-category-thumb-link {
+  display: block;
+  text-align: center;
+}
+.eb-categories-grid-items .eb-category-link {
+  font-size: 24px;
+  font-weight: 700;
+}
+.eb-categories-grid-items .eb-category-information {
+  padding: 15px 10px;
+  text-align: center;
+}
+.eb-categories-grid-items .eb-category-description {
+  padding: 0 10px 10px;
+}
+.eb-categories-grid-items .eb-category-item-hover-effect:hover {
+  transform: translateY(-0.3rem);
+  color: var(--eb-category-box-hover-color);
+  border-color: transparent;
+  background-color: var(--eb-category-box-hover-bg-color);
+}
+.eb-categories-grid-items .eb-category-item-hover-effect:hover .eb-category-link, .eb-categories-grid-items .eb-category-item-hover-effect:hover .eb-category-description {
+  color: var(--eb-category-box-hover-color);
+}
+.eb-categories-grid-items .eb-category-item-hover-effect {
+  transition: all ease-out 0.4s;
+}
+
+.eb-category-item-grid-default .eb-category-thumb-link {
+  padding-top: 10px;
+}
+
+.eb-category-item-grid-image-top .eb-category-thumb {
+  width: 100%;
+  border-top-left-radius: var(--eb-category-box-border-radius);
+  border-top-right-radius: var(--eb-category-box-border-radius);
+}
+
+.eb-category-item-grid-image-bottom .eb-category-thumb {
+  width: 100%;
+  border-bottom-left-radius: var(--eb-category-box-border-radius);
+  border-bottom-right-radius: var(--eb-category-box-border-radius);
+}
+
+.eb-category-item-grid-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 0;
+  background: none;
+  padding: 0;
+  position: relative;
+}
+.eb-category-item-grid-overlay .eb-category-thumb {
+  width: 100%;
+}
+.eb-category-item-grid-overlay .eb-category-information {
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.eb-category-item-grid-overlay .eb-category-information a:link, .eb-category-item-grid-overlay .eb-category-information a:hover, .eb-category-item-grid-overlay .eb-category-information a:visited, .eb-category-item-grid-overlay .eb-category-information span {
+  color: #fff;
+}

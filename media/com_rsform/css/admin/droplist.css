@@ -1,0 +1,107 @@
+.dd-select {
+	background: #ffffff !important;
+	border-radius: 4px !important;
+	height: 40px;
+}
+.dd-selected {
+	color: #555;
+	padding: 4px !important;
+}
+.dd-selected:hover {
+	color: #555;
+	text-decoration: none;
+}
+.dd-selected > label {
+	line-height: 34px !important;
+}
+.dd-option {
+	border-bottom: none !important;
+}
+.dd-option:hover {
+	background: none repeat scroll 0 0 #eaeaea !important;
+	text-decoration: none;
+}
+.dd-options.dd-click-off-close {
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	overflow: visible;
+	padding: 10px 0 10px 10px !important;
+	z-index: 3;
+}
+.dd-options.dd-click-off-close > li {
+	display: inline-block;
+}
+.dd-option {
+	padding: 6px !important;
+}
+.dd-option > label {
+	display: none;
+	line-height: 16px !important;
+	min-width: 30%;
+	text-align: center;
+}
+.dd-option-selected, .dd-option-selected:hover {
+	background: none repeat scroll 0 0 #d8edce !important;
+}
+
+[class*="dd-color-"] {
+	position: relative;
+	height: 32px;
+	width: 32px;
+}
+
+.dd-option .custom-tooltip:before {
+	content: "";
+	width: 0; 
+	height: 0; 
+	border-top: 7px solid transparent;
+	border-bottom: 7px solid transparent; 
+	border-right: 7px solid #000000;
+	position: absolute;
+	top: 12px;
+	left: -7px;
+	filter: alpha(opacity=80);
+	opacity: .8;
+}
+.dd-option .custom-tooltip {
+	background-color: #000000;
+	border-radius: 4px;
+	color: #ffffff;
+	display: block;
+	font-size: 11px;
+	font-weight: 700;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 10px !important;
+	filter: alpha(opacity=80);
+	opacity: .8;
+	z-index: 4;
+}
+.dd-color-option {
+	margin-right: 0 !important;
+}
+
+/* Theme Colors */
+[class*="dd-color-"].amber { background-color: #ffbf00; }
+[class*="dd-color-"].azure { background-color: #0172ad; }
+[class*="dd-color-"].blue { background-color: #2060df; }
+[class*="dd-color-"].cyan { background-color: #047878; }
+[class*="dd-color-"].fuchsia { background-color: #c1208b; }
+[class*="dd-color-"].green { background-color: #398712; }
+[class*="dd-color-"].grey { background-color: #ababab; }
+[class*="dd-color-"].indigo { background-color: #524ed2; }
+[class*="dd-color-"].jade { background-color: #007a50; }
+[class*="dd-color-"].lime { background-color: #a5d601; }
+[class*="dd-color-"].orange { background-color: #d24317; }
+[class*="dd-color-"].pink { background-color: #d92662; }
+[class*="dd-color-"].pumpkin { background-color: #ff9500; }
+[class*="dd-color-"].purple { background-color: #9236a4; }
+[class*="dd-color-"].red { background-color: #c52f21; }
+[class*="dd-color-"].sand { background-color: #ccc6b4; }
+[class*="dd-color-"].slate { background-color: #525f7a; }
+[class*="dd-color-"].violet { background-color: #7540bf; }
+[class*="dd-color-"].yellow { background-color: #f2df0d; }
+[class*="dd-color-"].zinc { background-color: #646b79; }
+
+/* End Theme Colors */

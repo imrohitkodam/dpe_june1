@@ -1,0 +1,100 @@
+<div id="autotweet-advanced-attrs" class="tabbertab">
+	<h3 class="tabberheading"> <%= editorTitle %> </h3>
+
+	<fieldset class="panelform params_set">
+
+		<legend> <%= editorTitle %> </legend>
+
+		<label id="jform_description-lbl" for="jform_description"><img style="width: 0.8em" class="xticon-fa xticon-text-width" src="<%= autotweetUrlRoot %>media/com_autotweet/images/icons/solid/text-width.svg"> <%= descriptionLabel %></label>
+		<div class="container_fcfield">
+			<textarea name="jform[description]" id="autotweet-description" rows="2" class="readonly" readonly="readonly"><%= description %></textarea>
+		</div>
+		<div class="fcclear"></div>
+
+		<label id="jform_hashtags-lbl" for="jform_hashtags"><img style="width: 0.8em" class="xticon-fa xticon-tags" src="<%= autotweetUrlRoot %>media/com_autotweet/images/icons/solid/tags.svg"> <%= hashtagsLabel %></label>
+		<div class="container_fcfield">
+			<input type="text" name="jform[hashtags]" id="autotweet-hashtags" value="<%= hashtags %>" class="fcfield_textval readonly" readonly="readonly" size="30" />
+		</div>
+		<div class="fcclear"></div>
+
+		<label id="jform_fulltext-lbl" for="jform_fulltext"><img style="width: 0.8em" class="xticon-fa xticon-text-width" src="<%= autotweetUrlRoot %>media/com_autotweet/images/icons/solid/text-width.svg"> <%= fulltextLabel %></label>
+		<div class="container_fcfield">
+			<textarea name="jform[fulltext]" id="autotweet-fulltext" rows="2" class="readonly" readonly="readonly"><%= fulltext %></textarea>
+		</div>
+		<div class="fcclear"></div>
+
+		<label id="jform_postthis-lbl" for="jform_postthis"><img style="width: 0.8em" class="xticon-fa xticon-arrow-alt-circle-up" src="<%= autotweetUrlRoot %>media/com_autotweet/images/icons/regular/arrow-alt-circle-up.svg"> <%= postthisLabel %></label>
+		<div class="container_fcfield" style="background: url(<%= autotweetUrlRoot %>media/com_autotweet/images/autotweet-logo-24.png) 98% 0px no-repeat;">
+			<label><%=
+				(postthis == 1 ? postthisDefaultLabel :
+					(postthis == 2 ? postthisNoLabel :
+						(postthis == 3 ? postthisYesLabel :
+							(postthis == 4 ? postthisImmediatelyLabel :
+							  (postthis == 5 ? postthisOnlyOnceLabel :
+							    '??'
+						    )
+              )
+						)
+					)
+				)
+			 %></label>
+		</div>
+		<div class="fcclear"></div>
+
+		<label id="jform_evergreen-lbl" for="jform_evergreen"><img style="width: 0.8em" class="xticon-fa xticon-leaf" src="<%= autotweetUrlRoot %>media/com_autotweet/images/icons/solid/leaf.svg"> <%= evergreenLabel %></label>
+		<div class="container_fcfield">
+			<label><%=
+				(evergreen == 1 ? postthisDefaultLabel :
+					(evergreen == 2 ? postthisNoLabel :
+						(evergreen == 3 ? postthisYesLabel :
+							'??'
+						)
+					)
+				)
+			 %></label>
+		</div>
+		<div class="fcclear"></div>
+
+		<label id="jform_channels_text-lbl" for="jform_channels_text"><img style="width: 0.8em" class="xticon-fa xticon-bullhorn" src="<%= autotweetUrlRoot %>media/com_autotweet/images/icons/solid/bullhorn.svg"> <%= channelLabel %></label>
+		<div class="container_fcfield">
+			<input type="text" name="jform[channels_text]" id="autotweet-channels_text" value="<%= channels_text %>" class="fcfield_textval readonly" readonly="readonly" size="30" />
+		</div>
+		<div class="fcclear"></div>
+
+		<label id="jform_agenda-lbl" for="jform_agenda"><img style="width: 0.8em" class="xticon-fa xticon-calendar" src="<%= autotweetUrlRoot %>media/com_autotweet/images/icons/regular/calendar.svg"> <%= agendaLabel %></label>
+		<div class="container_fcfield">
+			<textarea name="autotweet-agenda" id="autotweet-agenda" cols="46" rows="3" class="fcfield_textareaval readonly" readonly="readonly"><%= agenda.join("\n") %></textarea>
+		</div>
+		<div class="fcclear"></div>
+
+		<label id="jform_unix_mhdmd-lbl" for="jform_unix_mhdmd"><img style="width: 0.8em" class="xticon-fa xticon-image" src="<%= autotweetUrlRoot %>media/com_autotweet/images/icons/solid/sync.svg"> <%= unix_mhdmdLabel %></label>
+		<div class="container_fcfield">
+			<input type="text" name="jform[unix_mhdmd]" id="autotweet-unix_mhdmd" value="<%= unix_mhdmd %>" class="fcfield_textval readonly" readonly="readonly" size="30" />
+		</div>
+		<div class="fcclear"></div>
+
+		<label id="jform_repeat_until-lbl" for="jform_repeat_until"><img style="width: 0.8em" class="xticon-fa xticon-image" src="<%= autotweetUrlRoot %>media/com_autotweet/images/icons/regular/calendar-alt.svg"> <%= repeat_untilLabel %></label>
+		<div class="container_fcfield">
+			<input type="text" name="jform[repeat_until]" id="autotweet-repeat_until" value="<%= repeat_until %>" class="fcfield_textval readonly" readonly="readonly" size="30" />
+		</div>
+		<div class="fcclear"></div>
+
+		<label id="jform_image-lbl" for="jform_image"><img style="width: 0.8em" class="xticon-fa xticon-image" src="<%= autotweetUrlRoot %>media/com_autotweet/images/icons/regular/image.svg"> <%= imageLabel %></label>
+		<div class="container_fcfield">
+			<input type="text" name="jform[image]" id="autotweet-image" value="<%= (image_url || image) %>" class="fcfield_textval readonly" readonly="readonly" size="30" />
+		</div>
+		<div class="fcclear"></div>
+
+		<label id="jform_image-lbl" for="jform_image"></label>
+		<div class="container_fcfield">
+			<img src="<%=
+
+						((image && image.indexOf('http') == 0) || (image_url && image_url.indexOf('http') == 0) ? '' : autotweetUrlRoot)
+
+			%><%= ((image && image.length && image != 'none') || (image_url && image_url.length) ? (image_url || image) : '../media/lib_perfect-publisher/images/Blank.gif') %>" style="max-width:240px;" class="img-polaroid">
+		</div>
+		<div class="fcclear"></div>
+
+	</fieldset>
+
+</div> <!-- end tab -->

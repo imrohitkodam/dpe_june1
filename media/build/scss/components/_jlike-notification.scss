@@ -1,0 +1,310 @@
+/* .jlike-timelog{
+    h2.activity-header{
+        border-bottom: none;
+    }
+} */
+.recommendation-form{
+    .control-group.reminder-field{
+        .subform-repeatable {
+            .btn-toolbar {
+                float: right;
+
+                &::after {
+                    clear: both;
+                }
+            }
+        }
+        .subform-repeatable-group {
+            width: 100%;
+            display: block;
+            float: left;
+
+            &::after {
+                clear: both;
+            }
+
+            .control-group {
+                float: left;
+                width: 50%;
+                clear: unset;
+                display: inline-block;
+                margin-bottom: 15px;
+
+                label {
+                    margin-left: 20px;
+                }
+                .chosen-single {
+                    margin-left: 20px;
+                    height: 34px;
+                }
+            }
+
+            .chosen-container-single .chosen-single {
+                height: 34px;
+                padding: 4px 12px;
+
+                b {
+                    margin-top: 5px;
+                }
+            }
+            .control-label {
+                display: none;
+            }
+        }
+
+        .subform-repeatable-group.subform-repeatable-group-sr-0 {
+            clear: both;
+        }
+        a.chosen-single{
+            width: 100%;
+        }
+        .chosen-drop{
+            margin-left: 20px;
+        }
+    }
+    .control-group.popup-action-btn{
+        width: 100%;
+        float: none;
+        clear: both;
+    }
+}
+.notification-add-form{
+    .jlike-timelog{
+        h2.activity-header{
+            border-bottom: 1px solid #ccc;
+        }
+    }
+    .btn{
+        padding: 4px 12px !important;
+        span{
+            &:before{
+                font-size: 14px;
+            }
+        }
+    }
+    .btn-success,.btn-danger{
+        background-image: none !important;
+        &:hover,&:focus{
+            background-image: none !important;
+        }
+    }
+    .btn-danger{
+        &:active,&:focus{
+            background-color: #fff !important;
+            background-color: #22b8f0 !important;
+        }
+    }
+    .btn-success{
+        &:hover,&:focus{
+            background-color: #22b8f0;
+            border: 1px solid #22b8f0;
+        }
+    }
+    .btn-primary, .sppb-btn-primary {
+        border-color: #0faae4;
+        background-color: #22b8f0;
+        background-image: none !important;
+
+        &:hover, &:focus {
+            border-color: #0d8ab9 !important;
+            background-color: #0e9cd1 !important;
+        }
+    }
+    .btn-default {
+        color: #333;
+        background-color: #fff;
+        border-color: #ccc;
+        background-image: none !important;
+    }
+
+}
+.recommendations-listview-popup{
+    .btn{
+        background-image: none;
+        border: none;
+        padding: 6px 12px;
+
+    }
+    a {
+        color: #22b8f0;
+        &:hover{
+            color: #22b8f0;
+        }
+    }
+    td{
+        .btn{
+            background-color: transparent;
+            box-shadow: none;
+            padding: 0;
+        }
+    }
+    .pagination {
+        >.active {
+            >a {
+                border-color: #22b8f0;
+                background-color: #22b8f0;
+                color: #fff;
+                &:focus {
+                    color: #fff;
+                }
+                &:hover {
+                    color: #fff;
+                }
+            }
+            >span {
+                border-color: #22b8f0;
+                background-color: #22b8f0;
+                color: #fff;
+                &:focus {
+                    color: #fff;
+                }
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+        >li {
+            >a {
+                color: #000000;
+            }
+            >span {
+                color: #000000;
+            }
+        }
+    }
+
+
+
+}
+.recommendation-form.notification-add-form{
+    .form-check-input {
+        margin-top: 10px;
+        margin-left: -12px;
+    }
+    .create-group {
+        margin-left: 10px;
+    }
+    .control-group {
+        width: 100%;
+        float: left;
+        text-align: left;
+        margin-bottom: 5px !important;
+    }
+    .controls {
+        margin: 0 15px 0 0 !important;
+    }
+    .reminder-field{
+        .btn-toolbar.text-right{
+            float: right;
+            //margin-top: 40px;
+        }
+        .control-group {
+            width: 40% !important;
+        }
+	   .chosen-single {
+				margin-left: 0px !important;
+			}
+        .chosen-drop{
+            margin-left: 0px !important;
+        }
+    }
+    textarea{
+        height: 40px;
+    }
+    .radio{
+        display: inline;
+    }
+}
+.complete-mark {
+	&:hover {
+		.fa-circle-o {
+			display: none;
+		}
+		.fa-check-circle {
+			display: inline;
+		}
+	}
+	.fa-check-circle {
+		display: none;
+	}
+}
+.incomplete-mark {
+	&:hover {
+		.fa-check-circle {
+			display: none;
+		}
+		.fa-times-circle {
+			display: inline;
+		}
+	}
+	.fa-times-circle {
+		display: none;
+	}
+}
+
+@media (min-width: 768px) {
+.timelog-activities-popup.todo-popup {
+	height: 91% !important;
+	}
+}
+
+//Responsive view changes for notification manager
+@media (max-width:768px){
+    .recommendation-form {
+        .control-group.popup-action-btn {
+           padding: 0 30px;
+        }
+    }
+    .btn-wrapper.input-append.dp-search-filter{
+        margin-bottom: 15px;
+    }
+}
+
+
+.add-todos {
+    .control-label {
+        width: 100%;
+    }
+    select,
+    textarea,
+    input[type="text"],
+    input[type="password"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="date"],
+    input[type="month"],
+    input[type="time"],
+    input[type="week"],
+    input[type="number"],
+    input[type="email"],
+    input[type="url"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="color"],
+    .uneditable-input {
+        width: 100%;
+    }
+    .reminder-field {
+        .subform-layout {
+            select {
+                width: 100% !important;
+            }
+        }
+    }
+}
+
+.recommendation-form.add-todos {
+    .control-label {
+        width: unset;
+    }
+}
+.searchtool-calendar.timelog-activities-search{
+    .js-stools-field-filter{
+        #filter_tags_chosen{
+            a{
+                padding: 0;
+                border: none;
+            }
+        }
+    }
+}

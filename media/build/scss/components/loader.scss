@@ -1,0 +1,40 @@
+.loader-spin-blue {
+  border: 5px solid $primary-blue-400;
+  border-radius: 50%;
+  border-top: 5px solid $primary-gray-400;
+  width: 35px;
+  height: 35px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+  position: absolute;
+  left: 40%;
+  top: 50%;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.btn-loading{
+  position: inherit;
+  padding: 7px 12px 7px 20px !important;
+  &::before{
+    font-family:FontAwesome;
+    content:"\f1ce";
+    -webkit-animation:fa-spin 2s infinite linear;
+    animation:fa-spin 2s infinite linear;
+    display:inline-block;
+    margin-right:5px;
+    position:absolute;
+    left:3px;
+    top:7px;
+    color:#fff;
+  }
+}

@@ -1,0 +1,181 @@
+@charset "UTF-8";
+
+/*
+// ==========================================================================
+// Joomla template specific styling / overrides
+// ==========================================================================
+//
+// We added this fallback css for navigation tabs since we render the form outside of Joomla and JCE editor relies on the default Joomla template's css to render the tabs
+*/
+
+.nav {
+    margin-left: 0;
+    margin-bottom: 18px;
+    list-style: none;
+}
+.nav > li > a {
+    display: block;
+}
+.nav > li > a:hover,
+.nav > li > a:focus {
+    text-decoration: none;
+    background-color: #eee;
+}
+.nav > li > a > img {
+    max-width: none;
+}
+.nav > .pull-right {
+    float: right;
+}
+.nav-header {
+    display: block;
+    padding: 3px 15px;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 18px;
+    color: #999;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+    text-transform: uppercase;
+}
+.nav li + .nav-header {
+    margin-top: 9px;
+}
+
+.nav-tabs {
+    *zoom: 1;
+}
+.nav-tabs:before,
+.nav-tabs:after {
+    display: table;
+    content: "";
+    line-height: 0;
+}
+.nav-tabs:after {
+    clear: both;
+}
+.nav-tabs > li {
+    float: left;
+}
+.nav-tabs > li > a {
+    padding-right: 12px;
+    padding-left: 12px;
+    margin-right: 2px;
+    line-height: 14px;
+}
+.nav-tabs {
+    border-bottom: 1px solid #ddd;
+}
+.nav-tabs > li {
+    margin-bottom: -1px;
+}
+.nav-tabs > li > a {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    line-height: 18px;
+    border: 1px solid transparent;
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+}
+.nav-tabs > li > a:hover,
+.nav-tabs > li > a:focus {
+    border-color: #eee #eee #ddd;
+}
+.nav-tabs > .active > a,
+.nav-tabs > .active > a:hover,
+.nav-tabs > .active > a:focus {
+    color: #555;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+    cursor: default;
+}
+
+.nav-tabs.nav-stacked {
+    border-bottom: 0;
+}
+.nav-tabs.nav-stacked > li > a {
+    border: 1px solid #ddd;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+.nav-tabs.nav-stacked > li:first-child > a {
+    -webkit-border-top-right-radius: 4px;
+    -moz-border-radius-topright: 4px;
+    border-top-right-radius: 4px;
+    -webkit-border-top-left-radius: 4px;
+    -moz-border-radius-topleft: 4px;
+    border-top-left-radius: 4px;
+}
+.nav-tabs.nav-stacked > li:last-child > a {
+    -webkit-border-bottom-right-radius: 4px;
+    -moz-border-radius-bottomright: 4px;
+    border-bottom-right-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    border-bottom-left-radius: 4px;
+}
+.nav-tabs.nav-stacked > li > a:hover,
+.nav-tabs.nav-stacked > li > a:focus {
+    border-color: #ddd;
+    z-index: 2;
+}
+
+.nav-tabs .dropdown-menu {
+    -webkit-border-radius: 0 0 6px 6px;
+    -moz-border-radius: 0 0 6px 6px;
+    border-radius: 0 0 6px 6px;
+}
+
+.nav-tabs .dropdown-toggle .caret {
+    margin-top: 8px;
+}
+
+.nav-tabs .active .dropdown-toggle .caret {
+    border-top-color: #555;
+    border-bottom-color: #555;
+}
+
+.nav-tabs .open .dropdown-toggle {
+    color: #fff;
+    background-color: #999;
+    border-color: #999;
+}
+
+.nav-tabs.nav-dark {
+    border-bottom: 1px solid #333;
+    text-shadow: 1px 1px 1px #000;
+}
+.nav-tabs.nav-dark > li > a {
+    color: #F8F8F8;
+}
+.nav-tabs.nav-dark > li > a:hover {
+    border-color: #333 #333 #111;
+    background-color: #777777;
+}
+.nav-tabs.nav-dark > .active > a,
+.nav-tabs.nav-dark > .active > a:hover {
+    color: #ffffff;
+    background-color: #555555;
+    border: 1px solid #222;
+    border-bottom-color: transparent;
+}
+
+.nav-tabs > li > span {
+    display: block;
+    margin-right: 2px;
+    padding-right: 12px;
+    padding-left: 12px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    line-height: 18px;
+    border: 1px solid transparent;
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+}
+
+.nav-tabs.nav-dark {
+    text-shadow: none;
+}

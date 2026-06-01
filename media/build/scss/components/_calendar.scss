@@ -1,0 +1,77 @@
+.js-calendar{
+	.buttons-wrapper{
+		padding: 0 5px;
+		.btn-clear,
+		.btn-today,
+		.btn-exit{
+			font-size: 12px;
+			margin:	2px 0;
+			padding: 2px 6px;
+			border-radius: 0 !important;
+		}
+	}
+	table{
+		tbody,tfoot,thead{
+			tr,th{
+				td{
+					padding: 2px;
+					&.today{
+						&:after{
+							height: 1px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.time{
+		&.time-hours, &.time-minutes{
+			padding: 2px 9px !important;
+			height: 25px !important;
+		}
+		td{
+			padding: 2px !important;;
+		}
+	}
+	.calendar-header{
+		.day-name{
+			font-size: 12px;
+		}
+		.title{
+			div{
+				font-size: 15px !important;
+			}
+		}
+	}
+	.calendar-head{
+		td{
+			padding: 2px 0 !important;
+		}
+	}
+}
+.field-calendar{
+	.btn {
+		color: #808080;
+
+		&:hover {
+			color: #333;
+		}
+	}
+}
+.timelog-add-form.activity-edit{
+	.field-calendar{
+		position: relative;
+
+		.js-calendar{
+			bottom: 100%;
+		}
+	}
+	.control-group-fwidth{
+		.subform-repeatable-group{
+			.control-group{
+				width: 100% !important;
+			}
+		}
+	}
+}
+

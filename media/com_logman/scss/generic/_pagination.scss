@@ -1,0 +1,149 @@
+/* To avoid ugly white borders due to background images expecting a white background */
+.pagination-legacy {
+  .button2-right div,
+  .button2-left div,
+  .button2-right,
+  .button2-left,
+  a {
+    border-radius: 5px;
+  }
+
+  .button2-right div {
+    border-radius: 5px;
+  }
+
+  .limit select {
+    vertical-align: 1%;
+    font-size: inherit;
+  }
+}
+
+.pagination-toolbar {
+  a {
+    color: $linkColor;
+    cursor: pointer;
+  }
+  //J!3.0 pagination fix
+  .page span,
+  a {
+    line-height: 20px;
+  }
+  .disabled {
+    @include opacity(100);
+
+    a {
+      color: #999;
+      background-color: white;
+    }
+  }
+  .limit {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 10px;
+
+    @include rtl {
+      float: right;
+    }
+
+    &.pull-right {
+      float: right;
+
+      @include rtl {
+        float: left;
+      }
+    }
+
+    select {
+      height: 28px;
+      margin: 1px 0;
+      @include box-sizing(border-box);
+    }
+  }
+}
+
+///* Missioncontrol pagination styling */
+#mc-component & .pagination {
+  div.limit {
+    float: left;
+    height: 22px;
+    margin: 0 5px;
+    color: hsl(0, 0%, 40%);
+    text-shadow: 1px 1px 0 white;
+    font-size: 12px;
+    line-height: 20px;
+
+    @include rtl {
+      float: right;
+    }
+
+    select {
+      height: 1.8em;
+      margin-top: 0.1em;
+      font-size: 1em;
+    }
+  }
+
+  .button2-left,
+  .button2-right {
+    float: left;
+    font-size: 12px;
+    margin-left: 2px;
+    margin-right: 0;
+
+    a,
+    span,
+    .page {
+      display: block;
+      float: left;
+      cursor: pointer;
+      height: auto;
+      padding: 3px 8px;
+      background: hsl(0, 0%, 36%);
+      color: white;
+      font-size: 12px;
+      line-height: 13px;
+      border-radius: 4px;
+    }
+
+    &.off {
+      opacity: 0.5;
+
+      a {
+        cursor: default;
+        text-decoration: none;
+      }
+    }
+
+    .page {
+      padding: 0 7px;
+      cursor: default;
+
+      a,
+      span {
+        background: none;
+        padding: 3px 7px;
+        margin: 0;
+      }
+
+      span {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  @include rtl {
+    .button2-left,
+    .button2-right {
+      float: right;
+      margin-left: 0;
+      margin-right: 2px;
+
+      a,
+      span,
+      .page {
+        float: right;
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+.icon-rsticketspro::before,
+.fa-rsticketspro::before {
+	content: "\f590";
+}
+
+.dashboard-button > a {
+	text-decoration: none;
+}
+
+.rst-dashboard-section:not(:first-of-type), .rst-kb-section {
+	margin-top: 3rem;
+}
+
+.pull-left {
+	float: left;
+}
+
+.pull-right {
+	float: right;
+}
+
+#ticket-info.card,
+#ticket-time.card,
+#ticket-submitter.card,
+#ticket-history.card {
+	margin-bottom: 2%;
+}
+
+.rst_button_delete_ticket {
+	text-decoration: none !important;
+}
+
+.rst-form-section:not(:first-of-type) {
+	margin-top: 2rem;
+}
+
+#rst-dashboard-kb-tabs-nav, #rst-kb-tabs-nav {
+	margin-bottom: 1rem;
+}
+
+.rst-dashboard-kb-row:not(:first-of-type),
+.rst-kb-row:not(:first-of-type),
+.rst-kb-column-results .row:not(:first-of-type) {
+	margin-top: 1rem;
+}
+.rst-dashboard-kb-row > [class*="col-"]:not(:first-of-type),
+.rst-kb-row > [class*="col-"]:not(:first-of-type),
+.rst-kb-column-results .row > [class*="col-"]:not(:first-of-type) {
+	margin-top: 1rem;
+}
+
+.rst_consent_container .control-label {
+	display: none;
+}
+
+.hidden {
+	display: none;
+	visibility: hidden;
+}
+
+.rst-kb-tag-sorting {
+	margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+	.rst-dashboard-kb-row > [class*="col-"]:not(:first-of-type),
+	.rst-kb-row > [class*="col-"]:not(:first-of-type),
+	.rst-kb-column-results .row > [class*="col-"]:not(:first-of-type) {
+		margin-top: 0;
+	}
+}

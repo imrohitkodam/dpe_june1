@@ -1,0 +1,369 @@
+/**
+* @package RSTickets! Pro
+* @copyright (C) 2010 www.rsjoomla.com
+* @license GPL, http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+.rst_files_container .rst_file_block {
+	display: block;
+}
+
+.rst_notify_ticket {
+	color: #ffa500;
+}
+
+.rst-dashboard-item [class^="rsticketsproicon-"] {
+	font-size: 2.5rem;
+	margin: 0 auto;
+}
+
+.rst-dashboard-item [class^="rsticketsproicon-"] + a {
+	display: block;
+}
+
+.rst-dashboard-item .rst-title, .rst-dashboard-item .rst-caption, .rst-dashboard-item .rst-caption .btn {
+	margin: 1rem 0 0 0;
+}
+
+.rst-dashboard-item .rst-caption p {
+	margin-bottom: 0;
+}
+
+.rst-dashboard-kb-item .rst-title img {
+	margin-right: 0.5rem;
+}
+
+#rsticketspro_searchinp {
+	margin-bottom: 0;
+}
+
+#bulk_actions th {
+	border-top: medium none;
+}
+
+/* media */
+
+.media,
+.media-body {
+	overflow: hidden;
+	*overflow: visible;
+	zoom: 1;
+}
+
+.media,
+.media .media {
+	margin-top: 15px;
+}
+
+.media:first-child {
+	margin-top: 0;
+}
+
+.media-object {
+	display: block;
+}
+
+.media-heading {
+	margin: 0 0 5px;
+}
+
+.media > .pull-left {
+	margin-right: 10px;
+}
+
+.media > .pull-right {
+	margin-left: 10px;
+}
+
+.media-list {
+	margin-left: 0;
+	list-style: none;
+}
+
+.com-rsticketspro-has-top-padding {
+	padding: 1em 0;
+}
+
+.com-rsticketspro-has-top-margin {
+	margin: 1em 0;
+}
+
+.com-rsticketspro-has-margin {
+	margin: 1em;
+}
+
+.com-rsticketspro-has-overflow {
+	overflow: hidden;
+}
+
+.com-rsticketspro-avatar {
+	margin: 0.5em;
+}
+
+.element-rsinvisible {
+	display: none;
+}
+
+.rst-magnific-popup {
+	background:#ffffff;
+	margin:20px auto;
+	padding:20px;
+	position:relative;
+	width:80%;
+}
+.rst-magnific-popup iframe {
+	width:100%;
+	border: 0px;
+}
+
+@media (max-width: 767px) {
+	.rst-magnific-popupp {
+		width: 70% !important;
+	}
+}
+
+@media (max-width: 480px) {
+	.rst-magnific-popup {
+		width: 85% !important;
+	}
+}
+
+@media (max-width: 320px) {
+	.rst-magnific-popup {
+		width: 95% !important;
+	}
+}
+
+#rsticketspro_remove_data_and_close_account {
+	display: none;
+}
+
+#rst-timer #timer .clock-wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+#rst-timer #timer .clock-wrapper span {
+	font-size: 30px;
+	font-weight: bold;
+	transition: all .2s ease;
+}
+
+/* outer */
+.com-rsticketspro-progress {
+	height: 20px;
+	margin-bottom: 20px;
+	overflow: hidden;
+	background-color: #f7f7f7;
+	background-image: -moz-linear-gradient(top, #f5f5f5, #f9f9f9);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f5f5f5), to(#f9f9f9));
+	background-image: -webkit-linear-gradient(top, #f5f5f5, #f9f9f9);
+	background-image: -o-linear-gradient(top, #f5f5f5, #f9f9f9);
+	background-image: linear-gradient(to bottom, #f5f5f5, #f9f9f9);
+	background-repeat: repeat-x;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#fff5f5f5', endColorstr='#fff9f9f9', GradientType=0);
+	-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* inner */
+.com-rsticketspro-progress .com-rsticketspro-bar {
+	line-height: 20px;
+	padding-right: 10px;
+	float: left;
+	width: 0;
+	height: 100%;
+	font-size: 12px;
+	color: #ffffff;
+	text-align: right;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	background-color: #0e90d2;
+	background-image: -moz-linear-gradient(top, #149bdf, #0480be);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#149bdf), to(#0480be));
+	background-image: -webkit-linear-gradient(top, #149bdf, #0480be);
+	background-image: -o-linear-gradient(top, #149bdf, #0480be);
+	background-image: linear-gradient(to bottom, #149bdf, #0480be);
+	background-repeat: repeat-x;
+	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff149bdf', endColorstr='#ff0480be', GradientType=0);
+	-webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+	box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: width 0.6s ease;
+	-moz-transition: width 0.6s ease;
+	-o-transition: width 0.6s ease;
+	transition: width 0.6s ease;
+}
+
+/* label fix, only for top level items */
+.com-rsticketspro-spacer label {
+	font-weight: bold;
+}
+
+.rsticketspro_clear
+{
+	display: block;
+	clear: both;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+/* standard form style table */
+textarea.hidden {
+	display: none;
+}
+
+#rst_loading { display: none; }
+
+/* new */
+
+.com-rsticketspro-has-top-padding {
+	padding: 1em 0;
+}
+
+.com-rsticketspro-has-top-margin {
+	margin: 1em 0;
+}
+
+.com-rsticketspro-has-margin {
+	margin: 1em;
+}
+
+.com-rsticketspro-has-overflow {
+	overflow: hidden;
+}
+
+.com-rsticketspro-avatar {
+	margin: 0.5em;
+}
+
+/* media */
+
+.media,
+.media-body {
+  overflow: hidden;
+  *overflow: visible;
+  zoom: 1;
+}
+
+.media,
+.media .media {
+  margin-top: 15px;
+}
+
+.media:first-child {
+  margin-top: 0;
+}
+
+.media-object {
+  display: block;
+}
+
+.media-heading {
+  margin: 0 0 5px;
+}
+
+.media > .pull-left {
+  margin-right: 10px;
+}
+
+.media > .pull-right {
+  margin-left: 10px;
+}
+
+.media-list {
+  margin-left: 0;
+  list-style: none;
+}
+
+.rst_text {
+	float: left;
+	clear: both;
+}
+
+#rst_conditions > p {
+    clear: both;
+    float: left;
+}
+
+.rst_condition_if {
+	float: left;
+    padding-right: 6px;
+    padding-top: 6px;
+}
+
+#rst_conditions {
+    width: 90%;
+}
+
+#jform_time_spent_unit_chzn {
+	margin-bottom: 60px;
+}
+
+.rst_custom_field_label {
+	font-weight: bold;
+}
+
+.rst_custom_field_value {
+	margin-bottom: 6px;
+}
+
+.rst_not_flagged > i {
+	color: #0303;
+}
+
+.rst_flagged > i {
+	color: #c35b5b;
+}
+
+.rst_button_spacer {
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+.rst-article-buttons {
+	margin: 1.5rem 0;
+}
+
+/* knowledgebase column layout */
+.rst-kb-article-item .rst-kb-item-title {
+	margin: 0;
+}
+.rst-kb-article-item .rst-kb-item-thumb + .rst-kb-item-title {
+	margin: 0.5rem 0 0 0;
+}
+
+/* article feedback section */
+.rst-kb-feedback {
+	margin-top: 2rem;
+}
+.rst-kb-feedback .rst-kb-helpful, .rst-kb-feedback .rst-kb-helpful-container {
+	border-top: 1px solid #eee;
+	padding: 1rem 0;
+}
+.rst-kb-feedback .rst-kb-helpful > p {
+	margin: 0;
+}
+.rst-kb-feedback .rst-kb-helpful-message {
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+.rst-kb-feedback .rst-kb-helpful-btn {
+	font-size: 1.5rem;
+	padding: 0.25rem;
+	color: green;
+}
+
+.rst-kb-category-thumb {
+	margin-right: 0.5rem;
+}
+.rst-kb-article-thumb {
+	max-height: 50px;
+	margin-right: 0.5rem;
+}

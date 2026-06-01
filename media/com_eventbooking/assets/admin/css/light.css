@@ -1,0 +1,11 @@
+@media (prefers-color-scheme: light) {
+    .view-field.layout-default #content, .view-fields.task-add #content,
+    .view-plugin.layout-default #content, .view-theme.layout-default #content,
+    .view-discount.layout-default #content, .view-discounts.task-add #content,
+    .view-coupon.layout-default #content, .view-coupons.task-add #content,
+    .view-registrant.layout-default #content, .view-registrants.task-add #content,
+    .view-location.layout-default #content, .view-locations.task-add #content,
+    .view-coupon.layout-default #content, .view-coupons.task-add #content, .js-stools-container-filters-visible {
+        background-color: white;
+    }
+}

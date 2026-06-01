@@ -1,0 +1,11 @@
+// Export modal box & Purge modal box
+.logman-export-modal .mfp-content,
+.logman-purge-modal .mfp-content {
+  max-width: 450px !important;
+  max-height: 350px !important;
+
+  .mfp-iframe-scaler {
+    padding: 0;
+    height: 350px;
+  }
+}

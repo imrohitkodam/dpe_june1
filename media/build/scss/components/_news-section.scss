@@ -1,0 +1,88 @@
+.blog-cover {
+    box-shadow: 0px 6px 9px 0px rgba(0,0,0,0.47);
+	width: 100%;
+
+	article.item {
+		padding-bottom: 50px;
+		position: relative;	
+	}
+	.entry-header{
+		margin-bottom: 20px;
+	}
+    .content-cover {
+		h2 a {
+			display: -webkit-box;
+			-webkit-line-clamp: 3;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			height: 85px;
+			font-weight: 500;
+			font-size: 20px;
+			line-height: 28px;
+		}
+
+		.introtext {
+			height: 125px;
+			overflow: hidden;
+			display: -webkit-box;
+			-webkit-line-clamp: 5;
+			-webkit-box-orient: vertical;
+			text-overflow: ellipsis;
+		}
+      
+      .readmore {
+          position: absolute;
+          bottom: 0;
+      }
+	}
+ }
+ .news-menu-module {
+	margin-top: 20px !important;
+}
+.news-menu-module.sp-module {
+	ul {
+		>li {
+			display: inline-block;
+			border-bottom: none;
+			>a {
+				margin: 0 25px 0 0;
+				&:before {
+					content: "";
+				}
+			}
+		}
+	}
+}
+.newsletters {
+	.archive_listing {
+		li {
+			margin-bottom: 25px !important;
+		}
+		a {
+			font-size: 16px !important;
+		}
+	}
+	#sp-component {
+		.archive_listing {
+			a {
+				&:hover {
+					color: #22b8f0 !important;
+				}
+			}
+		}
+		.newsletter_body {
+			#acym__wysid__template {
+				span {
+					font-size: 14px !important;
+					line-height: 20px;
+				}
+				p {
+					font-size: 14px !important;
+					line-height: 20px;
+				}
+			}
+		}
+	}
+}
+

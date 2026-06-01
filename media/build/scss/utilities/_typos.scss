@@ -1,0 +1,73 @@
+.fs-24{
+  font-size: 24px;
+}
+.fs-20{
+  font-size: 20px;
+}
+.fs-18{
+  font-size: 18px !important;
+}
+.fs-16{
+  font-size: 16px !important;
+}
+.fs-14{
+  font-size: 14px !important;
+}
+.fs-12{
+  font-size: 12px !important;
+}
+body{
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 300;
+
+}
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: inherit;
+  line-height: 1.1;
+  color: inherit;
+  text-rendering: optimizelegibility;
+
+}
+h1,h5,h6{
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 800;
+}
+h2{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+h3,h4{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+p {
+  margin: 0 0 10px;
+}
+
+.h1, .h2, .h3, h1, h2, h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.h2, h2 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.h4, h4 {
+  font-size: 18px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .h1, h1 {
+      font-size: 36px;
+  }
+}

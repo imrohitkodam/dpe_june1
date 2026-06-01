@@ -1,0 +1,51 @@
+/* This is only used for the 'No matching results' alert */
+.alert.alert-info > .sr-only {
+	display: none;
+}
+
+.icon-rsticketspro::before {
+	content: "\46";
+}
+
+#bulk_actions > div {
+	display: inline;
+}
+
+.rst-dashboard-section:not(:first-of-type), .rst-kb-section {
+	margin-top: 2rem;
+}
+
+.rst-dashboard-search .btn-group {
+	font-size: inherit;
+}
+
+.rst-dashboard-item.well {
+	margin-bottom: 0;
+}
+
+.bg-white {
+	background-color: #ffffff !important;
+}
+
+/* feedback section */
+.rst-kb-feedback .rst-kb-helpful-message {
+	font-size: 1.25rem;
+}
+.rst-kb-feedback .rst-kb-helpful-btn {
+	font-size: 1.25rem;
+}
+
+.rst-kb-tag-sorting {
+	margin-bottom: 1rem;
+}
+.rst-kb-tag-sorting .nav-pills .nav-link {
+	background-color: transparent;
+	box-shadow: none;
+	border: none;
+	border-radius: 4px;
+	padding: 8px 12px;
+}
+.rst-kb-tag-sorting .nav-pills .nav-link.active {
+	background-color: #002f8d;
+	color: #ffffff;
+}

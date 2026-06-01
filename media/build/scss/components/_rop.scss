@@ -1,0 +1,55 @@
+.ucm-loadmore-tab{
+  font-weight: 500;
+  color: $primary-blue-400;
+}
+.tj-ucm-document-container{
+  padding-top: 8px;
+  .sticky-btn-cover{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: #fff;
+    width: 100%;
+    padding-right: 5px;
+  }
+  .tj-ucm-document-download{
+    font-size: 18px;
+  }
+}
+.rop-inputs{
+  .chosen-container{
+    .chosen-choices{
+      li{
+         span{
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: inherit;
+          height: 15px;
+         }
+      }
+    }
+  }
+}
+  .bootstrap-tagsinput{
+    .label{
+      white-space: normal;
+      word-break:break-word;
+      padding: 0.2em 0.6em 0.3em;
+      font-size: 75%;
+      font-weight: 700;
+      line-height: 1;
+      color: #fff;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: baseline;
+      border-radius: 0.25em;
+    }
+
+    .label-info {
+      background-color: #5BC0DE;
+    }
+    input{
+      margin-top: 5px;
+    }
+  }

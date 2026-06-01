@@ -1,0 +1,384 @@
+[class^="icon-"],
+[class*=" icon-"] {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: .25em;
+  line-height: 14px;
+  background-image: none;
+}
+
+dd > span[class^="icon-"] + time,
+dd > span[class*=" icon-"] + time {
+  margin-left: -0.25em;
+}
+
+dl.article-info dd.hits span[class^="icon-"],
+dl.article-info dd.hits span[class*=" icon-"] {
+  margin-right: 0;
+}
+
+// [class^="icon-"]:before,
+// [class*=" icon-"]:before {
+//   font-family: 'IcoMoon';
+//   font-style: normal;
+//   speak: none;
+// }
+
+[class^="icon-"].disabled,
+[class*=" icon-"].disabled {
+  font-weight: normal;
+}
+
+.icon-search:before {
+  content: "\53";
+}
+
+.icon-new:before, 
+.icon-plus:before {
+  content: "\2a";
+}
+
+.icon-unblock:before,
+.icon-refresh:before,
+.icon-redo-2:before {
+  content: "\6c";
+}
+.icon-move:before {
+  content: "\7a";
+}
+.icon-expand:before {
+  content: "\66";
+}
+.icon-contract:before {
+  content: "\67";
+}
+.icon-expand-2:before {
+  content: "\68";
+}
+.icon-contract-2:before {
+  content: "\69";
+}
+.icon-previous:before,
+.icon-backward:before {
+  content: "\7c";
+}
+.icon-next:before,
+.icon-forward:before {
+  content: "\7b";
+}
+.icon-first:before {
+  content: "\7d";
+}
+.icon-zoom-in:before {
+  content: "\64";
+}
+.icon-zoom-out:before {
+  content: "\65";
+}
+.icon-apply:before,
+.icon-edit:before,
+.icon-pencil:before {
+  content: "\2b";
+}
+.icon-pencil-2:before {
+  content: "\2c";
+}
+.icon-brush:before {
+  content: "\3b";
+}
+.icon-save-new:before,
+.icon-plus-2:before {
+  content: "\5d";
+}
+.icon-ban-circle:before,
+.icon-minus-sign:before,
+.icon-minus-2:before {
+  content: "\5e";
+}
+.icon-delete:before,
+.icon-remove:before,
+.icon-cancel-2:before {
+  content: "\49";
+}
+.icon-publish:before,
+.icon-save:before,
+//.icon-ok:before,
+.icon-checkmark:before {
+  content: "\47";
+}
+.icon-minus:before,
+.icon-not-ok:before {
+  content: "\4b";
+}
+.icon-unpublish:before,
+.icon-cancel:before {
+  content: "\4a";
+}
+.icon-question:before,
+.icon-question-sign:before,
+.icon-help:before {
+  content: "\45";
+}
+.icon-pending:before,
+.icon-warning:before {
+  content: "\48";
+}
+.icon-checkbox-unchecked:before {
+  content: "\3d";
+}
+.icon-checkin:before,
+.icon-checkbox:before,
+.icon-checkbox-checked:before {
+  content: "\3e";
+}
+.icon-checkbox-partial:before {
+  content: "\3f";
+}
+.icon-grid:before,
+.icon-grid-view:before {
+  content: "\58";
+}
+.icon-grid-2:before,
+.icon-grid-view-2:before {
+  content: "\59";
+}
+.icon-menu:before {
+  content: "\5a";
+}
+.icon-list:before,
+.icon-list-view:before {
+  content: "\31";
+}
+.icon-folder-open:before,
+.icon-folder:before {
+  content: "\2d";
+}
+.icon-folder-close:before,
+.icon-folder-2:before {
+  content: "\2e";
+}
+.icon-file-add:before,
+.icon-file-plus:before {
+  content: "\29";
+}
+
+.icon-box-add:before {
+  content: "\51";
+}
+.icon-box-remove:before {
+  content: "\52";
+}
+
+.icon-home:before {
+  content: "\21";
+}
+
+.icon-picture:before,
+.icon-image:before {
+  content: "\2f";
+}
+.icon-pictures:before,
+.icon-images:before {
+  content: "\30";
+}
+.icon-palette:before,
+.icon-color-palette:before {
+  content: "\e014";
+}
+.icon-camera:before {
+  content: "\55";
+}
+
+.icon-play-2:before,
+.icon-video-2:before,
+.icon-youtube:before {
+  content: "\56";
+}
+.icon-music:before {
+  content: "\57";
+}
+.icon-user:before {
+  content: "\22";
+}
+
+.icon-vcard:before {
+  content: "\6d";
+}
+.icon-address:before {
+  content: "\70";
+}
+.icon-share-alt:before,
+.icon-out:before {
+  content: "\26";
+}
+
+.icon-comment:before,
+.icon-comments:before {
+  content: "\24";
+}
+.icon-comments-2:before {
+  content: "\25";
+}
+.icon-quote:before,
+.icon-quotes-left:before {
+  content: "\60";
+}
+.icon-quote-2:before,
+.icon-quotes-right:before {
+  content: "\61";
+}
+
+.icon-envelope:before,
+.icon-mail:before {
+  content: "\4d";
+}
+.icon-envelope-opened:before,
+.icon-mail-2:before {
+  content: "\4e";
+}
+.icon-unarchive:before,
+.icon-drawer:before {
+  content: "\4f";
+}
+.icon-archive:before,
+.icon-drawer-2:before {
+  content: "\50";
+}
+.icon-options:before,
+.icon-cog:before {
+  content: "\38";
+}
+.icon-cogs:before {
+  content: "\37";
+}
+.icon-screwdriver:before,
+.icon-tools:before {
+  content: "\36";
+}
+.icon-wrench:before {
+  content: "\3a";
+}
+.icon-equalizer:before {
+  content: "\39";
+}
+.icon-dashboard:before {
+  content: "\78";
+}
+
+.icon-filter:before {
+  content: "\54";
+}
+.icon-purge:before,
+.icon-trash:before {
+  content: "\4c";
+}
+.icon-checkedout:before,
+.icon-lock:before,
+.icon-locked:before {
+  content: "\23";
+}
+
+.icon-key:before {
+  content: "\5f";
+}
+.icon-support:before {
+  content: "\46";
+}
+.icon-database:before {
+  content: "\62";
+}
+
+.icon-health:before {
+  content: "\6a";
+}
+.icon-wand:before {
+  content: "\6b";
+}
+.icon-eye-open:before,
+.icon-eye:before {
+  content: "\3c";
+}
+
+.icon-clock:before {
+  content: "\6e";
+}
+.icon-compass:before {
+  content: "\6f";
+}
+
+.icon-lightning:before,
+.icon-flash:before {
+  content: "\79";
+}
+
+.icon-feed:before {
+  content: "\71";
+}
+.icon-calendar:before {
+  content: "\43";
+}
+.icon-calendar-2:before {
+  content: "\44";
+}
+
+.icon-pie:before {
+  content: "\77";
+}
+.icon-bars:before {
+  content: "\76";
+}
+.icon-chart:before {
+  content: "\75";
+}
+.icon-power-cord:before {
+  content: "\32";
+}
+.icon-cube:before {
+  content: "\33";
+}
+.icon-puzzle:before {
+  content: "\34";
+}
+.icon-attachment:before,
+.icon-paperclip:before,
+.icon-flag-2:before {
+  content: "\72";
+}
+.icon-lamp:before {
+  content: "\74";
+}
+.icon-pin:before,
+.icon-pushpin:before {
+  content: "\73";
+}
+.icon-location:before {
+  content: "\63";
+}
+
+.icon-flag:before {
+  content: "\35";
+}
+.icon-thumbs-up:before {
+  content: "\5b";
+}
+.icon-thumbs-down:before {
+  content: "\5c";
+}
+.icon-unfeatured:before,
+.icon-asterisk:before,
+.icon-star-empty:before {
+  content: "\40";
+}
+.icon-star-2:before {
+  content: "\41";
+}
+.icon-featured:before,
+.icon-default:before,
+.icon-star:before {
+  content: "\42";
+}
+
+.icon-expired:before {
+  content: "\4b";
+}

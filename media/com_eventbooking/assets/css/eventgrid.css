@@ -1,0 +1,61 @@
+.eb-events-grid-items {
+  --eb-grid-default-main-category-color: #25cd44;
+}
+
+.eb-event-item-grid-default-layout {
+  box-shadow: 0 20px 60px 0 rgba(6, 10, 20, 0.08);
+  padding: 0;
+  position: relative;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  transition: all 0.4s ease;
+}
+.eb-event-item-grid-default-layout:hover {
+  box-shadow: 0 25px 70px 0 rgba(6, 10, 20, 0.18);
+  /*background-color: #fff;*/
+}
+.eb-event-item-grid-default-layout > div:not(.eb-event-thumb-container) {
+  margin: 0 10px 8px;
+}
+.eb-event-item-grid-default-layout > div:last-child {
+  padding-bottom: 3px;
+}
+.eb-event-item-grid-default-layout .eb-event-thumb-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+}
+.eb-event-item-grid-default-layout .eb-event-thumb-container > a {
+  line-height: 0;
+  display: block;
+}
+.eb-event-item-grid-default-layout .eb-event-thumb-container img {
+  height: auto;
+  width: 100%;
+  border: none;
+  box-shadow: none;
+}
+.eb-event-item-grid-default-layout .eb-event-title-container {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}
+.eb-event-item-grid-default-layout .eb-event-date-time {
+  font-weight: 700;
+  color: var(--eb-grid-default-datetime-color, inherit);
+}
+.eb-event-item-grid-default-layout .eb-event-main-category {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: 1;
+  background-color: var(--eb-grid-default-main-category-color);
+  padding: 6px 10px;
+  color: #fff;
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 5px;
+}

@@ -1,0 +1,40 @@
+.accordian-faq {
+	.accordion-group.panel.rl_sliders-group.nn_sliders-group {
+		font-size: 18px;
+		letter-spacing: 0px;
+		font-weight: 400;
+		font-family: "Open-Sans_Bold";
+		text-align: left;
+		text-transform: none;
+		color: rgba(96, 95, 110, 1);
+		border: none;
+		a {
+			color: rgba(96, 95, 110, 1);
+			font-size: 18px;
+			letter-spacing: 0px;
+			font-weight: 400;
+		}
+	}
+	.accordion-toggle.rl_sliders-toggle.nn_sliders-toggle.collapsed {
+		&:before {
+			font-family: FontAwesome;
+			display: inline-block;
+			margin-right: 20px;
+			vertical-align: middle;
+			content: "\f0fe";
+			font-size: 32px;
+			color: rgba(34, 184, 240, 1);
+		}
+	}
+	.accordion-toggle.rl_sliders-toggle.nn_sliders-toggle {
+		&:before {
+			font-family: FontAwesome;
+			display: inline-block;
+			margin-right: 20px;
+			vertical-align: middle;
+			content: "\f146";
+			font-size: 32px;
+			color: rgba(34, 184, 240, 1);
+		}
+	}
+}

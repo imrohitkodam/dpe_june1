@@ -1,0 +1,47 @@
+/*Calendar view for css*/
+.regpro-calendarMonthHeader {
+  background-color: #D64F2A;
+}
+
+.regpro-calendarWeekDayHeader {
+  border-left: 1px solid #D64F2A;
+}
+
+.regpro-calendarDay {
+  color: #D64F2A;
+}
+.regpro-calendarDay .eb_event_link {
+  background: #D64F2A;
+}
+
+.eb-calendar ul.eb-weekdays {
+  background: #E74C3C;
+}
+
+.eb-topmenu-calendar ul li a {
+  color: #D64F2A;
+}
+.eb-topmenu-calendar ul li a:hover, .eb-topmenu-calendar ul li a.active {
+  background: #D64F2A;
+  color: #fff;
+}
+
+#extcalendar .currentmonth, #extcalendar .currentday, #extcalendar .currentweek, #extcalendar .previousday, #extcalendar .previousweek, #extcalendar .nextday, #extcalendar .nextweek {
+  background-color: #D64F2A;
+}
+#extcalendar .tableh2 {
+  background: #E74C3C;
+}
+
+/* mini calendar */
+.extcal_minical .extcal_navbar {
+  background: #D64F2A;
+}
+
+.mod_eb_mincalendar_td_dayname {
+  background: #E74C3C;
+}
+
+td.mod_eb_mincalendar_event {
+  background-color: #D64F2A;
+}

@@ -1,0 +1,168 @@
+#rst_files_container .rst_file_block {
+	display: block;
+}
+
+a.rst_flag {
+	background: url(../images/favorite.png) no-repeat;
+	display: block;
+	width: 16px;
+	height: 16px;
+	padding: 1px;
+	margin: 0 auto;
+}
+
+a.rst_flag:hover, a.rst_flag_active {
+	background: transparent url(../images/favoritehover.png) no-repeat !important;
+	text-decoration: none !important;
+}
+
+.rst_delete_ticket,
+.rst_notify_ticket {
+	margin: 0px !important;
+	padding: 0px !important;
+	background: none !important;
+	text-decoration: none !important;
+}
+
+.rst_categories {
+	list-style: none outside none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.rst_dashboard_items .thumbnail > a {
+    display: block;
+    text-align: center;
+}
+
+.rst_dashboard_items .caption > h3 {
+    text-align: center;
+}
+
+.rst_dashboard_items .thumbnail {
+	min-height: 200px;
+}
+
+.rst_center_block {
+	text-align: center;
+	display: block !important;
+}
+
+.rst_center_block ul {
+    text-align: left;
+}
+
+.rst_dashboard_center {
+	text-align: center;
+}
+
+.rst_dashboard_kb {
+    min-height: 250px !important;
+}
+
+#bulk_actions th {
+    border-top: medium none;
+}
+
+/* media */
+
+.media,
+.media-body {
+  overflow: hidden;
+  *overflow: visible;
+  zoom: 1;
+}
+
+.media,
+.media .media {
+  margin-top: 15px;
+}
+
+.media:first-child {
+  margin-top: 0;
+}
+
+.media-object {
+  display: block;
+}
+
+.media-heading {
+  margin: 0 0 5px;
+}
+
+.media > .pull-left {
+  margin-right: 10px;
+}
+
+.media > .pull-right {
+  margin-left: 10px;
+}
+
+.media-list {
+  margin-left: 0;
+  list-style: none;
+}
+
+.com-rsticketspro-has-top-padding {
+	padding: 1em 0;
+}
+
+.com-rsticketspro-has-top-margin {
+	margin: 1em 0;
+}
+
+.com-rsticketspro-has-margin {
+	margin: 1em;
+}
+
+.com-rsticketspro-has-overflow {
+	overflow: hidden;
+}
+
+.com-rsticketspro-avatar {
+	margin: 0.5em;
+}
+
+.element-rsinvisible {
+	display: none;
+}
+
+.rst_custom_field label {
+	float: none !important;
+	margin-right: 5px;
+	display: inline-block !important;
+}
+
+.rst-magnific-popup {
+	background:#ffffff;
+	margin:20px auto;
+	padding:20px;
+	position:relative;
+	width:80%;
+}
+.rst-magnific-popup iframe {
+	width:100%;
+	border: 0px;
+}
+
+@media (max-width: 767px) {
+	.rst-magnific-popupp {
+		width: 70% !important;
+	}
+}
+
+@media (max-width: 480px) {
+	.rst-magnific-popup {
+		width: 85% !important;
+	}
+}
+
+@media (max-width: 320px) {
+	.rst-magnific-popup {
+		width: 95% !important;
+	}
+}
+
+#rsticketspro_remove_data_and_close_account {
+	display: none;
+}

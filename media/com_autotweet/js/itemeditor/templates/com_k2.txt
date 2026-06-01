@@ -1,0 +1,169 @@
+<div id="autotweet-advanced-attrs">
+	<div class="xt-grid">
+		<div class="xt-col-span-2" style="max-width: 10%; background: #193867; height: 600px">
+			&nbsp;
+		</div>
+		<div class="xt-col-span-10">
+			<div style="padding: 20px;">
+				<h3>
+					<%= editorTitle %>
+					<img width="24" height="24"
+						src="<%= autotweetUrlRoot %>media/com_autotweet/images/perfectpub-logo.svg"
+						style="float:right;">
+				</h3>
+				<div>
+					<table class="table admintable">
+						<tr>
+							<td align="right" class="key">
+								<img style="width: 0.8em" class="xticon-fa xticon-text-width" src="<%= autotweetUrlRoot %>media/com_autotweet/images/icons/solid/text-width.svg">
+								<%= descriptionLabel %>
+							</td>
+							<td>
+								<textarea name="autotweet-description"
+									id="autotweet-description" rows="2"
+									class="readonly"
+									readonly="readonly"><%= description %></textarea>
+							</td>
+						</tr>
+
+						<tr>
+							<td align="right" class="key">
+								<img style="width: 0.8em" class="xticon-fa xticon-tags" src="<%= autotweetUrlRoot %>media/com_autotweet/images/icons/solid/tags.svg">
+								<%= hashtagsLabel %>
+							</td>
+							<td>
+								<input type="text"
+									name="autotweet-hashtags"
+									id="autotweet-hashtags"
+									value="<%= hashtags %>" size="30"
+									class="readonly"
+									readonly="readonly" />
+							</td>
+						</tr>
+
+						<tr>
+							<td align="right" class="key">
+								<img style="width: 0.8em" class="xticon-fa xticon-text-width" src="<%= autotweetUrlRoot %>media/com_autotweet/images/icons/solid/text-width.svg">
+								<%= fulltextLabel %>
+							</td>
+							<td>
+								<textarea name="autotweet-fulltext"
+									id="autotweet-fulltext" rows="2"
+									class="readonly"
+									readonly="readonly"><%= fulltext %></textarea>
+							</td>
+						</tr>
+
+						<tr>
+							<td align="right" class="key">
+								<img style="width: 0.8em" class="xticon-fa xticon-arrow-alt-circle-up" src="<%= autotweetUrlRoot %>media/com_autotweet/images/icons/regular/arrow-alt-circle-up.svg">
+								<%= postthisLabel %>
+							</td>
+							<td>
+								<%=
+				(postthis == 1 ? postthisDefaultLabel :
+					(postthis == 2 ? postthisNoLabel :
+						(postthis == 3 ? postthisYesLabel :
+							(postthis == 4 ? postthisImmediatelyLabel :
+							  (postthis == 5 ? postthisOnlyOnceLabel :
+							    '??'
+						    )
+              )
+						)
+					)
+				)
+				%>
+							</td>
+						</tr>
+						<tr>
+							<td align="right" class="key">
+								<img style="width: 0.8em" class="xticon-fa xticon-leaf" src="<%= autotweetUrlRoot %>media/com_autotweet/images/icons/solid/leaf.svg">
+								<%= evergreenLabel %>
+							</td>
+							<td>
+								<%=
+					(evergreen == 1 ? postthisDefaultLabel :
+					(evergreen == 2 ? postthisNoLabel :
+						(evergreen == 3 ? postthisYesLabel :
+						'??'
+						)
+					)
+					)
+				%>
+							</td>
+						</tr>
+						<tr>
+							<td align="right" class="key">
+								<img style="width: 0.8em" class="xticon-fa xticon-bullhorn" src="<%= autotweetUrlRoot %>media/com_autotweet/images/icons/solid/bullhorn.svg">
+								<%= channelLabel %>
+							</td>
+							<td>
+								<input type="text"
+									name="autotweet-channels_text"
+									id="autotweet-channels_text"
+									value="<%= channels_text %>"
+									size="30" class="readonly"
+									readonly="readonly" />
+							</td>
+						</tr>
+						<tr>
+							<td align="right" class="key">
+								<img style="width: 0.8em" class="xticon-fa xticon-calendar" src="<%= autotweetUrlRoot %>media/com_autotweet/images/icons/regular/calendar.svg">
+								<%= agendaLabel %>
+							</td>
+							<td>
+								<textarea name="autotweet-agenda"
+									id="autotweet-agenda" cols="30"
+									rows="3" class="readonly"
+									readonly="readonly"><%= agenda.join("\n") %></textarea>
+							</td>
+						</tr>
+            <tr>
+              <td align="right" class="key">
+                <img style="width: 0.8em" class="xticon-fa xticon-image" src="<%= autotweetUrlRoot %>media/com_autotweet/images/icons/solid/sync.svg"> <%= unix_mhdmdLabel %>
+              </td>
+              <td>
+                <input type="text" name="autotweet-unix_mhdmd" id="autotweet-unix_mhdmd" value="<%= unix_mhdmd %>" size="30" class="readonly" readonly="readonly"/>
+              </td>
+            </tr>
+            <tr>
+              <td align="right" class="key">
+                <img style="width: 0.8em" class="xticon-fa xticon-image" src="<%= autotweetUrlRoot %>media/com_autotweet/images/icons/regular/calendar-alt.svg"> <%= repeat_untilLabel %>
+              </td>
+              <td>
+                <input type="text" name="autotweet-repeat_until" id="autotweet-repeat_until" value="<%= repeat_until %>" size="30" class="readonly" readonly="readonly"/>
+              </td>
+            </tr>
+						<tr>
+							<td align="right" class="key">
+								<img style="width: 0.8em" class="xticon-fa xticon-image" src="<%= autotweetUrlRoot %>media/com_autotweet/images/icons/regular/image.svg">
+								<%= imageLabel %>
+							</td>
+							<td>
+								<input type="text"
+									name="autotweet-image"
+									id="autotweet-image"
+									value="<%= (image_url || image) %>"
+									size="30" class="readonly"
+									readonly="readonly" />
+							</td>
+						</tr>
+						<tr>
+							<td align="right" class="key">
+							</td>
+							<td>
+								<img src="<%=
+
+					((image && image.indexOf('http') == 0) || (image_url && image_url.indexOf('http') == 0) ? '' : autotweetUrlRoot)
+
+					%><%= ((image && image.length && image != 'none') || (image_url && image_url.length) ? (image_url || image) : '../media/lib_perfect-publisher/images/Blank.gif') %>"
+									style="max-width:240px;"
+									class="img-polaroid">
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

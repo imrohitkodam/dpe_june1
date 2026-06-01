@@ -1,0 +1,18 @@
+#ticket-global-message {
+	display: none;
+}
+
+#ticket-buttons {
+	display: none;
+}
+
+.btn {
+	display: none !important;
+}
+
+#ticket-left-column,
+#ticket-right-column {
+	width: 100%;
+	float: none;
+	display: block;
+}

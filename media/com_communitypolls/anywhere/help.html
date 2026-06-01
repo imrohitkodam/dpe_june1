@@ -1,0 +1,47 @@
+<!DOCTYPE script PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<title>Advanced Polls Anywhere Configuration</title>
+	</head>
+	<body>
+		<p><strong> Basic Steps:</strong></p>
+		<ol>
+			<li>
+				The first step to add a poll in your webpage is to include the Polls Anywhere script:<br />
+				<code>&lt;script type="text/javascript" src="http://dev-kb.dataprotection.education/media/com_communitypolls/anywhere/anywhere.js"&gt;&lt;/script&gt;</code><br /><br />
+				You can add the script to your website/blog either inline to your page or head section of the page.<br /><br />
+			</li>
+			<li>
+				Polls Anywhere execution starts by creating the Polls Anywhere engine constructor by passing the ID of the poll.<br />
+				<code>&lt;div class="cjpollsanywhere"&gt;&lt;input type="hidden" /&gt;&lt;/div&gt;</code><br />
+				<code>PollsAnywhere({id: 1, anywhere: true});</code><br /><br />
+			</li>
+			<li>
+				In the above code, cjpollsanywhere is the container name where the Polls Anywhere loads its content. The default container class name is cjpollsanywhere.<br />
+				<code>&lt;div class="cjpollsanywhere"&gt;&lt;input type="hidden" /&gt;&lt;/div&gt;</code>
+			</li>
+		</ol>
+		<p><strong>Advanced Steps: </strong>Loading multiple polls on same page</p>
+		<ol>
+			<li>
+				If you want to add more than one poll on same page, you must use different container with different class name for each poll. Ex:<br />
+				<code>&lt;div class="cjpollsanywhere1"&gt;&lt;input type="hidden" /&gt;&lt;/div&gt;</code><br />
+				<code>&lt;div class="cjpollsanywhere2"&gt;&lt;input type="hidden" /&gt;&lt;/div&gt;</code> <br /><br />
+			</li>
+			<li>
+				The polls must be loaded separately using different engine constructors.<br />
+				<code>PollsAnywhere({id: 1, container: 'cjpollsanywhere1'});</code><br />
+				<code>PollsAnywhere({id: 1, container: 'cjpollsanywhere2'});</code>
+			</li>
+		</ol>
+		<p><strong>Advanced Steps:</strong> Loading different charts</p>
+		<ol>
+			<li>
+				You can customize the chart type used to display the results.<br />
+				<code>PollsAnywhere({id: 1, chart: 'global', width: 300, height: 200});</code><br /><br />
+				Where CHART_TYPE is the chart type you would like to use. Default value is global as decided by site administrator.<br />
+				Possible poll types are bar, pie, sbar and gpie. Please contact administrator for supported chart types by the website.
+			</li>
+		</ol>
+	</body>
+</html>

@@ -1,0 +1,17 @@
+.rst-thumbnail .thumbnail, .rst-thumbnail .img-thumbnail {
+	max-height: 100px;
+	max-width: 150px;
+	margin: 0 0 2rem 0;
+}
+.rst-form-fields {
+	flex: 1 1 auto;
+}
+
+@media (min-width: 576px) {
+	.rst-d-flex {
+		display: flex;
+	}
+	.rst-thumbnail .thumbnail, .rst-thumbnail .img-thumbnail {
+		margin: 0 2rem 0 0;
+	}
+}

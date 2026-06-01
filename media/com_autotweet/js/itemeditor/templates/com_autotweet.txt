@@ -1,0 +1,131 @@
+<div id="autotweet-advanced-attrs" class="tab-pane">
+	<h3 class="title">
+	<%= editorTitle %>
+	</h3>
+
+	<div id="autotweet-advanced-text-attrs">
+		<div class="control-group">
+			<div class="control-label">
+				<img style="width: 0.8em" class="xticon-fa xticon-text-width" src="<%= autotweetUrlRoot %>media/com_autotweet/images/icons/solid/text-width.svg">
+				<%= descriptionLabel %>
+			</div>
+			<div class="controls">
+				<textarea name="autotweet-description" id="autotweet-description" rows="2" class="readonly" readonly="readonly"><%= description %></textarea>
+			</div>
+		</div>
+
+		<div class="control-group">
+			<div class="control-label">
+				<img style="width: 0.8em" class="xticon-fa xticon-tags" src="<%= autotweetUrlRoot %>media/com_autotweet/images/icons/solid/tags.svg">
+				<%= hashtagsLabel %>
+			</div>
+			<div class="controls">
+				<input type="text" name="autotweet-hashtags" id="autotweet-hashtags" value="<%= hashtags %>" class="readonly" readonly="readonly"/>
+			</div>
+		</div>
+
+		<div class="control-group">
+			<div class="control-label">
+				<img style="width: 0.8em" class="xticon-fa xticon-text-width" src="<%= autotweetUrlRoot %>media/com_autotweet/images/icons/solid/text-width.svg">
+				<%= fulltextLabel %>
+			</div>
+			<div class="controls">
+				<textarea name="autotweet-fulltext" id="autotweet-fulltext" rows="2" class="readonly" readonly="readonly"><%= fulltext %></textarea>
+			</div>
+		</div>
+	</div>
+
+	<div class="control-group">
+		<div class="control-label">
+			<img style="width: 0.8em" class="xticon-fa xticon-arrow-alt-circle-up" src="<%= autotweetUrlRoot %>media/com_autotweet/images/icons/regular/arrow-alt-circle-up.svg">
+			<%= postthisLabel %>
+		</div>
+		<div class="controls">
+			 <%=
+				(postthis == 1 ? postthisDefaultLabel :
+					(postthis == 2 ? postthisNoLabel :
+						(postthis == 3 ? postthisYesLabel :
+							(postthis == 4 ? postthisImmediatelyLabel :
+							  (postthis == 5 ? postthisOnlyOnceLabel :
+							    '??'
+						    )
+              )
+						)
+					)
+				)
+			 %>
+		</div>
+	</div>
+
+	<div class="control-group">
+		<div class="control-label">
+			<img style="width: 0.8em" class="xticon-fa xticon-leaf" src="<%= autotweetUrlRoot %>media/com_autotweet/images/icons/solid/leaf.svg">
+			<%= evergreenLabel %>
+		</div>
+		<div class="controls">
+			 <%=
+				(evergreen == 1 ? postthisDefaultLabel :
+					(evergreen == 2 ? postthisNoLabel :
+						(evergreen == 3 ? postthisYesLabel :
+							'??'
+						)
+					)
+				)
+			 %>
+		</div>
+	</div>
+
+	<div class="control-group">
+		<div class="control-label">
+			<img style="width: 0.8em" class="xticon-fa xticon-bullhorn" src="<%= autotweetUrlRoot %>media/com_autotweet/images/icons/solid/bullhorn.svg">
+			<%= channelLabel %>
+		</div>
+		<div class="controls">
+			<input type="text" name="autotweet-channels_text" id="autotweet-channels_text" value="<%= channels_text %>" class="readonly" readonly="readonly"/>
+		</div>
+	</div>
+
+	<div class="control-group">
+		<div class="control-label">
+			<img style="width: 0.8em" class="xticon-fa xticon-calendar" src="<%= autotweetUrlRoot %>media/com_autotweet/images/icons/regular/calendar.svg">
+			<%= agendaLabel %>
+		</div>
+		<div class="controls">
+			<textarea name="autotweet-agenda" id="autotweet-agenda" cols="30" rows="3" class="readonly" readonly="readonly"><%= agenda.join("\n") %></textarea>
+		</div>
+	</div>
+
+	<div class="control-group">
+		<div class="control-label">
+			<img style="width: 0.8em" class="xticon-fa xticon-image" src="<%= autotweetUrlRoot %>media/com_autotweet/images/icons/solid/sync.svg"> <%= unix_mhdmdLabel %>
+		</div>
+		<div class="controls">
+			<input type="text" name="autotweet-unix_mhdmd" id="autotweet-unix_mhdmd" value="<%= unix_mhdmd %>" class="readonly" readonly="readonly"/>
+		</div>
+	</div>
+
+	<div class="control-group">
+		<div class="control-label">
+			<img style="width: 0.8em" class="xticon-fa xticon-image" src="<%= autotweetUrlRoot %>media/com_autotweet/images/icons/regular/calendar-alt.svg"> <%= repeat_untilLabel %>
+		</div>
+		<div class="controls">
+			<input type="text" name="autotweet-repeat_until" id="autotweet-repeat_until" value="<%= repeat_until %>" class="readonly" readonly="readonly"/>
+		</div>
+	</div>
+
+	<div class="control-group">
+		<div class="control-label">
+			<img style="width: 0.8em" class="xticon-fa xticon-image" src="<%= autotweetUrlRoot %>media/com_autotweet/images/icons/regular/image.svg">
+			<%= imageLabel %>
+		</div>
+		<div class="controls">
+			<input type="text" name="autotweet-image" id="autotweet-image" value="<%= (image_url || image) %>" size="30" class="readonly" readonly="readonly"/>
+			<br/>
+			<img src="<%=
+
+				((image && image.indexOf('http') == 0) || (image_url && image_url.indexOf('http') == 0) ? '' : autotweetUrlRoot)
+
+			%><%= ((image && image.length && image != 'none') || (image_url && image_url.length) ? (image_url || image) : '../media/lib_perfect-publisher/images/Blank.gif') %>" style="max-width:240px;" class="img-polaroid">
+		</div>
+	</div>
+</div>

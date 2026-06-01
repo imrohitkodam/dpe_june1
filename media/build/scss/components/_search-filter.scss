@@ -1,0 +1,97 @@
+.view-reports{
+  button, a,input[type='button']{
+    &.btn{
+      border-radius: 4px !important;
+    }
+  }
+  .input-group-btn{
+    .close-icon{
+      height: 33px !important;
+      border-radius: 0 !important;
+    }
+  }
+}
+.md-w-200px{
+    .chosen-container-single {
+      width: 200px !important;
+  }
+}
+// Sla Activity filter //
+@media(min-width:768px){
+  .filter-search{
+  .chosen-container{
+	width: 197px !important;
+  }
+    .input-group-btn{
+      border: none;
+    }
+    &.input-group{
+      float: left;
+    }
+    .field-calendar{
+      input[type='text']{
+        width: 174px;
+      }
+    }
+  }
+}
+@media(min-width:968px){
+.filter-search{
+  .chosen-container{
+	width: 197px !important;
+	}
+  }
+}
+@media(max-width:767px){
+.filter-search{
+  width: 100%;
+  .input-group,
+   select{
+    width: 100%;
+  }
+  .input-append{
+    input[type='text']{
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .btn{
+      margin-bottom: 10px;
+    }
+  }
+  }
+}
+.btn-group{
+  .chosen-container-single-nosearch,
+  .chosen-container-single{
+      .chosen-single{
+        height: 34px !important;
+        line-height: 32px;
+        div{
+          top: 4px;
+        }
+      }
+  }
+}
+.input-mini{
+  padding: 6px 10px !important;
+}
+.view-reports{
+  .btn{
+    a{
+      height: inherit !important;
+    }
+  }
+}
+.sla-service-title,
+.activity-type-title,
+.created-by,
+.activity-title{
+  input[type='text']{
+    width: 180px;
+  }
+}
+.manage-reports{
+  .progress{
+    height: 36px !important;
+  }
+}

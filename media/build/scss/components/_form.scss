@@ -1,0 +1,318 @@
+.info-cover {
+	vertical-align: top;
+}
+/* For Sar and breach form */
+.ucm-form-styling{
+	input[aria-invalid='true'],
+	select.invalid {
+		border: 1px solid #ff0000;
+		.chosen-single{
+			border: 1px solid #ff0000;
+		}
+	}
+	input[type='text'],
+	input[type='number'],
+	input[type='password'],
+	input[type='email'],
+	.input-append,
+	#item-form .chosen-container,
+	textarea,
+	.chosen-search input[type='text']{
+		width: 100% !important;
+		border-radius: 4px !important;
+	}
+	.chosen-container-multi{
+		.search-field{
+			width:100%
+		}
+	}
+
+	input[type='checkbox']{
+		width: 1em !important;
+		height: 1em;
+		border-radius: 3px;
+	}
+	#item-form {
+		.radio {
+			input{
+				margin-left: 0 !important;
+			}
+		}
+	}
+	.field-calendar {
+		.input-append {
+			button{
+				right: 0px;
+				left: inherit;
+				color: rgb(128, 128, 128);
+				border: 0;
+
+				.icon-calendar-alt:before, 
+				.icon-calendar:before {
+					content: "\f073";
+				}
+			}
+		}
+	}
+	.chosen-choices{
+		background: none;
+		border: solid 1px $primary-gray-400;
+		border-radius: 4px;
+	}
+	textarea{
+		height: 100px;
+	}
+	.subform-repeatable-group {
+		.control-group{
+			margin-top: 10px;
+		}
+	}
+	.time select{
+		padding: 6px 9px !important;
+	}
+	.field-calendar {
+		.btn-secondary {
+			position: absolute;
+			top: 0;
+			background-color: transparent;
+		}
+	}
+	.ui-sortable>.btn-toolbar>.btn-group>.btn{
+		display: none;
+	}
+	.subform-repeatable.ui-sortable > .btn-toolbar{
+		display: none;
+	}
+	.control-group{
+		margin-bottom: 16px !important;
+		clear: both;
+	}
+	.subform-repeatable-group {
+		.control-group{
+			clear: none;
+		}
+		.controls{
+			//padding-left: 0 !important;
+			margin-left: 0 !important;
+		}
+	}
+	.btn-success{
+		background-color: $primary-blue-400;
+		border: 1px solid $primary-blue-400;
+	}
+	.subform-repeatable-group {
+		.btn-danger{
+			background-color: #fff;
+			border: 1px solid $primary-blue-400;
+			color: $primary-blue-400;
+		}
+	}
+	.active.btn-success{
+		background-color: #449d44;
+		border: 1px solid #449d44;
+	}
+	.data-subject-field.control-group {
+		margin-bottom: 10px;
+	}
+
+}
+.com-rsticketspro-submit-ticket{
+	.ucm-form-styling{
+		.chosen-container-single,
+		.chosen-container-multi	{
+			width: 100% !important;
+		}
+	}
+}
+#item-form.ucm-form-styling,#adminForm.ucm-form-styling,.create-group.ucm-form-styling,.create-campaign.ucm-form-styling{
+		.chosen-container.chosen-container-single,
+		.chosen-container.chosen-container-multi{
+			width: 100% !important;
+	}
+}
+.dp-form-styling{
+	input[aria-invalid='true'],
+	select.invalid {
+		border: 1px solid #ff0000;
+		.chosen-single{
+			border: 1px solid #ff0000;
+		}
+	}
+	textarea{
+		width: 100% !important;
+	}
+}
+
+
+select[multiple] {
+	overflow: scroll;
+}
+
+@include respond-above(sm) {
+	.ticketPopupForm{
+		.control-group{
+			width: 50%;
+			float: left;
+			text-align: left;
+		}
+		.control-label{
+			text-align: left !important;
+		}
+		.controls{
+			margin: 0 15px 0 0 !important;
+		}
+		.dpe-timelog-hours,
+		.dpe-timelog-min{
+			width: 48% !important;
+		}
+		.timelog-file{
+			padding-left: 5px;
+		}
+	}
+}
+.loginForm{
+	margin: auto;
+	max-width: 400px;
+	.form-links{
+		li{
+			font-size: 16px;
+		}
+	}
+}
+.timelog-add-form {
+	.dpe-timelog-hours,
+		.dpe-timelog-min{
+			width: 49% !important;
+		}
+}
+
+/* frontview-mediaupload */
+
+.frontview-mediaupload{
+	&+ .modal{
+		&.btn{
+			background: #22b8f0;
+			color: #fff;
+			z-index: 9;
+			position: relative;
+		}
+	}
+}
+.media-preview{
+	&.add-on{
+		height: 34px;
+		span{
+			line-height: 15px;
+    	vertical-align: middle;
+		}
+	}
+}
+.multiagency-edit{
+	.btn{
+		&.hasTooltip{
+			background: #d43f3a;
+			color: #fff;
+		}
+	}
+	.checkbox{
+		display: block !important;
+	}
+	input[type="checkbox"] {
+		width: 1em !important;
+		height: 1em;
+		border-radius: 3px;
+	}
+	fieldset{
+		padding: inherit !important;
+		// margin-left: 16px !important;
+	}
+	fieldset.radio{
+		margin-left: 0 !important;
+	}
+}
+.sar-breach-create-page,.form-validate{
+	.nav-tabs>li{
+		float: none;
+		display: inline-block;
+	}
+}
+
+/*css added for radio button converion into butoon */
+.ucm-form-styling,.multiagency-edit{
+	.radio{
+		input{
+			display: none;
+		}
+		label{
+			margin-right: 5px;
+			margin-bottom: 5px;
+			padding-left: 12px;
+		}
+		label.btn{
+			border-radius: 0;
+		}
+	}
+}
+/* css added for report view filter */
+.manage-reports.ucm-form-styling{
+	input[type='text']{
+		width: 200px !important;
+	}
+}
+
+.create-group {
+	.form-horizontal {
+		.controls {
+			.radio {
+				padding-left: 0;
+			}
+		}
+	}
+}
+@media screen and (max-width: 767px) {
+	.create-group {
+		.form-horizontal {
+			.controls {
+				margin: 0;
+				width: 100%;
+				select {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+.chosen-container-single .chosen-single{
+	height: 35px;
+	line-height: 20px !important;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-radius: 0;
+    box-shadow: none;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+	div {
+		top: 0 !important;
+	}
+
+	b {
+		margin-top: 5px;
+	}
+}
+#limit_chosen.chosen-container-single .chosen-single {
+	height: 35px !important;
+	line-height: unset;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-radius: 0;
+    box-shadow: none;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	b {
+		margin-top: 3px;
+	}
+}

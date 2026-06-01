@@ -1,0 +1,60 @@
+@font-face {
+  font-family: 'rsticketsproicon';
+  src: url('font/rsticketsproicon.eot?55378667');
+  src: url('font/rsticketsproicon.eot?55378667#iefix') format('embedded-opentype'),
+       url('font/rsticketsproicon.woff2?55378667') format('woff2'),
+       url('font/rsticketsproicon.woff?55378667') format('woff'),
+       url('font/rsticketsproicon.ttf?55378667') format('truetype'),
+       url('font/rsticketsproicon.svg?55378667#rsticketsproicon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="rsticketsproicon-"], [class*=" rsticketsproicon-"] {
+  display: inline-block;
+  text-align: center;
+  
+  line-height: 1.2em;
+  width: 1.2em;
+  margin-right: 0.2em;
+}
+[class^="rsticketsproicon-"]:before, [class*=" rsticketsproicon-"]:before {
+  font-family: "rsticketsproicon";
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-decoration: none;
+  text-transform: none;
+  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  display: block;
+}
+
+.rsticketsproicon-clipboard:before { content: '\e800'; } /* '' */
+.rsticketsproicon-folder:before { content: '\e801'; } /* '' */
+.rsticketsproicon-user:before { content: '\e802'; } /* '' */
+.rsticketsproicon-users:before { content: '\e803'; } /* '' */
+.rsticketsproicon-chart-bar:before { content: '\e804'; } /* '' */
+.rsticketsproicon-arrows-cw:before { content: '\e805'; } /* '' */
+.rsticketsproicon-cogs:before { content: '\e806'; } /* '' */
+.rsticketsproicon-briefcase:before { content: '\e807'; } /* '' */
+.rsticketsproicon-search:before, .rsticketsproicon-search-circled:before { content: '\e808'; } /* '' */
+.rsticketsproicon-chart-line:before { content: '\e809'; } /* '' */
+.rsticketsproicon-attach:before { content: '\e80a'; } /* '' */
+.rsticketsproicon-star-empty:before { content: '\e80b'; } /* '' */
+.rsticketsproicon-star:before { content: '\e80c'; } /* '' */
+.rsticketsproicon-attention:before { content: '\e80d'; } /* '' */
+.rsticketsproicon-edit:before { content: '\e80e'; } /* '' */
+.rsticketsproicon-arrow-right:before { content: '\e80f'; } /* '' */
+.rsticketsproicon-arrow-left:before { content: '\e810'; } /* '' */
+.rsticketsproicon-docs:before { content: '\f0c5'; } /* '' */
+.rsticketsproicon-magic:before { content: '\f0d0'; } /* '' */
+.rsticketsproicon-mail:before { content: '\f0e0'; } /* '' */
+.rsticketsproicon-doc-text:before { content: '\f0f6'; } /* '' */
+.rsticketsproicon-terminal:before { content: '\f120'; } /* '' */
+.rsticketsproicon-thumbs-up:before { content: '\f164'; } /* '' */
+.rsticketsproicon-lifebuoy:before { content: '\f1cd'; } /* '' */
+.rsticketsproicon-history:before { content: '\f1da'; } /* '' */

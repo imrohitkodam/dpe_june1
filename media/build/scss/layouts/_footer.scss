@@ -1,0 +1,40 @@
+.sp-bottom-dpe{
+  text-align: center;
+  padding: 3px 0 !important;
+  background: #22b8f0 !important;
+  margin-top: auto;
+  li{
+    display: inline-block !important;
+    border: none !important;
+
+  a{
+    color: $primary-white-600 !important;
+    padding: 0 !important;
+  }
+
+  a::before{
+    margin-right: 0 !important;
+    content: "\007C" !important;
+    font-family: inherit !important;
+    padding: 0 15px;
+  }
+
+   &:first-child a::before{
+    content: "" !important;
+    padding: 0 !important;
+   }
+  }
+}
+#sp-footer{
+  padding: 0;
+}
+
+@include respond-above(md) {
+  .sp-bottom-dpe{
+    text-align: unset;
+  }
+
+  #sp-bottom2 .sp-column {
+    text-align: right;
+  }
+}

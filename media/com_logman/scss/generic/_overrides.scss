@@ -1,0 +1,36 @@
+// Overrides for default backend template
+fieldset label {
+  float: none;
+  clear: none;
+  margin: 0;
+}
+
+input[type="checkbox"] {
+  margin: 0;
+  vertical-align: middle;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  content: none; // Use our own icons (glyphicons)
+}
+
+table .variable .text {
+  background-color: inherit; // Fix for module white background problem on parameter text
+}
+
+form {
+  margin-bottom: 0; // Bootstrap override
+}
+
+.table td {
+  vertical-align: middle; // Bootstrap override
+
+  // Override select boxes in tables
+  select {
+    width: auto;
+    line-height: 20px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+  }
+}

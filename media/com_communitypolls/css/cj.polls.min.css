@@ -1,0 +1,57 @@
+#cj-wrapper .poll-info {margin: 10px 0;}
+#cj-wrapper .poll-info .info-item {margin-right: 15px;}
+#cj-wrapper .listing-vote { min-width: 48px;}
+#cj-wrapper .listing-vote .listing-vote-num {font-weight: bold; font-size: 120%; text-align: center; padding: 5px 0;}
+#cj-wrapper .listing-vote .listing-vote-desc {margin: 0 5px; text-align: center; }
+#cj-wrapper .poll-listing-info {margin: 5px 0;}
+#cj-wrapper #poll-suggestions {margin: 0;}
+#cj-wrapper .suggestions {margin: 10px 0 0 0; padding: 0;}
+#cj-wrapper .suggestions table {margin-bottom: 0;}
+#cj-wrapper .suggestions .table tr:first-child, .suggestions .table tr:first-child td {border-top: none;}
+#cj-wrapper .margin-right-5 {margin-right: 5px;}
+#cj-wrapper input[type="text"] {height: auto;}
+#cj-wrapper .no-margin-top {margin-top: 0}
+#cj-wrapper .no-margin-bottom {margin-bottom: 0}
+#cj-wrapper .no-margin-left {margin-left: 0;}
+#cj-wrapper .no-margin-right {margin-right: 0;}
+#cj-wrapper .no-pad-left {padding-left: 0;}
+#cj-wrapper .no-pad-right {padding-right: 0;}
+#cj-wrapper .no-pad-top {padding-top: 0;}
+#cj-wrapper .no-pad-bottom {padding-bottom: 0;}
+#cj-wrapper .no-space-left {margin-left: 0; padding-left: 0;}
+#cj-wrapper .no-space-right {margin-right: 0; padding-right: 0;}
+#cj-wrapper .no-space-top {margin-top: 0; padding-top: 0;}
+#cj-wrapper .no-space-bottom {margin-bottom: 0; padding-bottom: 0;}
+#cj-wrapper .margin-top-20 {margin-top: 20px;}
+#cj-wrapper .margin-bottom-20 {margin-bottom: 20px;}
+#cj-wrapper .margin-right-20 {margin-right: 20px;}
+#cj-wrapper .margin-left-20 {margin-left: 20px;}
+#cj-wrapper .margin-top-10 {margin-top: 10px;}
+#cj-wrapper .margin-bottom-10 {margin-bottom: 10px;}
+#cj-wrapper .margin-right-10 {margin-right: 10px;}
+#cj-wrapper .margin-left-10 {margin-left: 10px;}
+#cj-wrapper .margin-right-5 {margin-right: 5px;}
+#cj-wrapper .margin-bottom-5 {margin-bottom: 5px;}
+#cj-wrapper .margin-top-5 {margin-top: 5px;}
+#cj-wrapper .pad-right-5 {padding-right: 5px;}
+#cj-wrapper .pad-left-10 {padding-left: 10px;}
+#cj-wrapper .user-rating {min-width: 48px;}
+#cj-wrapper .user-rating .user-rating-num {padding: 0; margin-bottom: 0;}
+#cj-wrapper .user-rating .user-rating-num h2 {margin: 0; padding: 3px 5px;}
+#cj-wrapper .user-rating .user-rating-num-readonly h2 {padding: 0 15px;}
+#cj-wrapper .user-rating .user-rating-controls {text-align: center; border-bottom: 0; border-left: 0; border-right: 0; webkit-box-shadow: none; box-shadow: none; border-radius: 0;}
+#cj-wrapper .item-count-box {min-width: 42px;}
+#cj-wrapper .item-count-box .item-count-num {font-weight: bold; font-size: 120%; text-align: center;}
+#cj-wrapper .item-count-box .item-count-caption {font-size: 90%; margin-top: 0;}
+#cj-wrapper .toolbar-btn {padding: 6px; }
+#cj-wrapper .leader-rank-box {padding: 0; margin: 0 10px 0 0;}
+#cj-wrapper .leader-rank-box .leader-rank {margin: 10px 0 5px 0;}
+#cj-wrapper #avatar-image {cursor: move;}
+#cj-wrapper #avatar-controls {padding: 10px; text-align: center; display: block;}
+#cj-wrapper #avatar-controls a {margin-right: 20px; font-size: large; color: #888;}
+#cj-wrapper #avatar-controls a:hover {color: #fff;}
+#cj-wrapper .reply-body {margin-bottom: 20px;}
+#cj-wrapper .forum-info, #cj-wrapper .forum-info > li:first-child {margin-left: 0; padding-left: 0;}
+#cj-wrapper .forum-info li {margin-right: 0; padding: 0;}
+#cj-wrapper .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;}
+#cj-wrapper .poll-action-buttons {margin-top: 20px;}

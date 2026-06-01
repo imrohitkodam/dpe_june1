@@ -1,0 +1,68 @@
+/*
+ * @version    SVN:<SVN_ID>
+ * @package    Com_Multiagency
+ * @author     Techjoomla <extensions@techjoomla.com>
+ * @copyright  Copyright (c) 2009-2017 TechJoomla. All rights reserved
+ * @license    GNU General Public License version 2, or later
+ */
+
+if(typeof(techjoomla) == 'undefined') {
+	var techjoomla = {};
+}
+
+if(typeof techjoomla.jQuery == "undefined")
+{
+	techjoomla.jQuery = jQuery;
+}
+
+var comMultiagency = {
+
+	multiagency:{
+
+		generateStoreState: function(admin)
+		{
+			country_id = techjoomla.jQuery('#jform_country_id').val();
+
+			if (admin == Number(1))
+			{
+				var url = "?option=com_multiagency&task=multiagency.getRegions&country_id="+country_id;
+			}
+			else
+			{
+				var url = "?option=com_multiagency&task=multiagencyForm.getRegions&country_id="+country_id;
+			}
+
+			techjoomla.jQuery.ajax({
+				type : "POST",
+				url : url,
+				success : function(response)
+				{
+					techjoomla.jQuery('#jform_state_id').html(response);
+				}
+			}).done(function (){
+				jQuery('#jform_state_id').trigger("liszt:updated");
+				});
+		},
+		addMultiagency: function(root_url)
+		{
+			var register = root_url+"index.php?option=com_multiagency&view=userform&tmpl=component&isMultiagencyUser=1";
+
+			if (window.innerWidth <= 468)
+			{
+				width = (window.innerWidth - 20);
+				height = (window.innerHeight - 20)
+			}
+			else
+			{
+				width = 600;
+				height = 300;
+			}
+
+			SqueezeBox.open(register ,{handler: 'iframe', size: {x: width, y: height}});
+		},
+		closeModal: function()
+		{
+			window.close();
+		}
+	}
+}

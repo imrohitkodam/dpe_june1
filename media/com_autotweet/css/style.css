@@ -1,0 +1,10 @@
+/*
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*/
+
+@import './css/xt-extension.css';
+@import './css/xt-components.css';
+@import './css/perfect-publisher-components.css';
+@import './css/legacy-style.css';

@@ -1,0 +1,41 @@
+// Core variables and mixins without output available outside .k-ui-namespace scope
+@import "../../../../../../tools/kodekit-ui/src/scss/sass-twitter-bootstrap/variables";
+@import "../../../../../../tools/kodekit-ui/src/scss/sass-twitter-bootstrap/mixins";
+
+// Custom variables
+@import "generic/variables";
+
+// Import koowa
+@import "../../../../../../tools/kodekit-ui/src/scss/site";
+
+// Import modal
+@import "../../../../../../tools/kodekit-ui/src/scss/admin/3rdparty/magnific";
+
+// Import buttons
+@import "../../../../../../tools/kodekit-ui/src/scss/admin/molecules/button";
+
+// k-ui-namespace Namespacing
+.k-ui-namespace {
+
+  // Sprites
+  @import "../../../../../../tools/kodekit-ui/src/scss/sass-twitter-bootstrap/sprites";
+
+  // Generic
+  @import "generic/overrides";
+  @import "generic/pagination";
+  @import "generic/more";
+  @import "generic/table";
+
+  @import "site/table";
+}
+
+.k-ui-j4-site, .k-ui-j5-site
+{
+
+  .k-ui-namespace {
+
+    @import "../../../../../joomlatools-framework/code/libraries/joomlatools/component/koowa/resources/assets/scss/export";
+
+  }
+
+}

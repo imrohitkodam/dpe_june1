@@ -1,0 +1,74 @@
+/* Red */
+
+.dpe-danger {
+	border-color: #e25c3a !important;
+  color: #e25c3a !important;
+  width: 65px;
+}
+.dpe-danger{
+  &:hover {
+    border-color: #e25c3a !important;
+  }
+}
+.checklistBtn{
+  padding: 6px 7px !important;
+  &.btn-success{
+    &.active{
+      background-color: #fff !important;
+    }
+  }
+  &.active{
+    box-shadow: none !important;
+  }
+  .btn{
+      &.focus{
+        outline: 0 !important;
+    }
+  }
+  &.focus{
+    outline: 0 !important;
+  }
+  &:before{
+    padding-right: 3px;
+  }
+}
+.danger {
+	background: #e25c3a !important;
+	color: white !important;
+	font-weight: bold !important;
+	border-color: #e25c3a !important;
+}
+/* Orange */
+
+.dpe-warning {
+	border-color: #f5a624 !important;
+  color: #f5a624 !important;
+  width: 92px;
+}
+.dpe-warning{
+  &:hover {
+    border-color: #f5a624 !important;
+  }
+}
+.warning {
+	background: #f5a624 !important;
+	color: white !important;
+	font-weight: bold !important;
+	border-color: #f5a624 !important;
+}
+.dpe-info {
+	border-color: #69D6BB !important;
+  color: #69D6BB !important;
+  width: 62px;
+}
+.dpe-info{
+  &:hover {
+    border-color: #69D6BB !important;
+  }
+}
+.info {
+	background: #50e3c1 !important;
+	color: white !important;
+	font-weight: bold !important;
+	border-color: #50e3c1 !important;
+}

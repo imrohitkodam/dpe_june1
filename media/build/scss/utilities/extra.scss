@@ -1,0 +1,29 @@
+.d-inline-table{
+  display: inline-table;
+}
+.text-info{
+  color: #17a2b8!important;
+}
+.mt-0{
+  margin-top: 0 !important;
+}
+.pt-0{
+  padding-top: 0 !important;
+}
+.pb-20{
+  padding-bottom: 20px !important;
+}
+.h-32{
+  height: 32px;
+}
+.line-height-18{
+  line-height: 18px;
+}
+@include respond-above(sm) {
+  .md-w-220{
+    .chzn-container-single{
+      width: 220px !important;
+    }
+  }
+}
+

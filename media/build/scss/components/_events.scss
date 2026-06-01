@@ -1,0 +1,80 @@
+#jtwrap.jt-custom-event{
+    .jt-event-view {
+        .input-append {
+            input[type="text"] {
+                width: 100%;
+            }
+            button {
+                position: absolute;
+                right: 0;
+                left: inherit;
+                background-color: transparent;
+                box-shadow: none;
+            }
+        }
+        .chosen-single {
+            line-height: inherit !important;
+        }
+        textarea {
+            height: auto;
+            width: 100%;
+        }
+    
+        .detail-info {
+            .editor-cover {
+                #editor-xtd-buttons {
+                    .modal-button {
+                        margin: 5px 5px 5px 0;
+                    }
+                }
+            }
+        }
+        .btn-toolbar.btn-group {
+            border: 1px solid #22b8f0;
+            border-radius: 4px;
+            .btn-success {
+                background-color: #22b8f0;
+                
+            }
+        }
+        .subform-layout{
+            .fa-plus{
+                color: #ffffff;
+            }
+            .fa-trash{
+                color: #22b8f0;
+            }
+        }
+        .btn-group-toggle{
+            .radio-inline.btn-default.active{
+                background-color: #449d44;
+                    border: 1px solid #449d44;
+                    color: #fff;
+            }
+            .radio-inline.btn-default.active.focus{
+                outline: none;
+            }
+            .radio-inline{
+                +.radio-inline{
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+    
+}
+@media screen and (min-width: 768px){
+    .event-category-list{
+        margin-top: 52px !important;
+    }
+}
+
+.flex-wrap{
+    flex-wrap: wrap;
+}
+.gallary__media.thumbnails.row{
+    iframe{
+        width: 100%;
+        height: 100% !important;
+    }
+}

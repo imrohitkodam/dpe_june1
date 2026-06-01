@@ -1,0 +1,84 @@
+#visualizationLoader {
+	border: 8px solid #22b8f0;
+	border-radius: 50%;
+	border-top: 8px solid #ccc;
+	width: 50px;
+	height: 50px;
+	animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.centerloader {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+* {
+	font-family: "Arial, Helvetica, sans-serif;";
+	line-height: 20px;
+	font-size: 15px;
+	text-align: left;
+}
+
+/* New classes */
+
+
+/*
+.inschool rect,circle,ellipse,polygon {
+  fill: #0000ff;
+  color: #FFF;
+}
+
+.outofschool rect,circle,ellipse,polygon {
+ fill: #ed7b39;
+  color: #FFF;
+}
+
+.otherschool rect,circle,ellipse,polygon {
+  fill: #eeaeca;
+  color: #FFF;
+}
+*/
+
+
+/*
+.securitynone rect,circle,ellipse,polygon {
+  stroke: #ed3939;
+  stroke-width: 3px;
+}
+
+.securityother rect,circle,ellipse,polygon {
+  stroke: #000;
+  stroke-width: 3px;
+}
+
+.securityother rect,circle,ellipse,polygon {
+  color: #FFF;
+  stroke: #000;
+  stroke-width: 3px;
+}
+*/
+
+.edgePath path {
+  stroke: #999;
+  fill: #999;
+  stroke-width: 1.5px;
+}
+
+.edgeLabel {
+  background-color: #cccccc;
+}
+
+.label foreignObject {
+    overflow: visible;
+    font-size: 14px;
+}

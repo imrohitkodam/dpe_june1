@@ -1,0 +1,66 @@
+.tjlms-lesson-player {
+	.bp-header-btns {
+		.bp-btn-print{
+			display:none;
+		}
+	}
+}
+
+.manage-lesson {
+	.fileupload {
+		.input-append {
+			width: 100%;
+		}
+		.uneditable-input {
+			width: calc(100% - 50px) !important;
+		}
+	}
+}
+
+#interactionForm {
+	.checkbox {
+		display: block;
+	}
+}
+@media (min-width: 768px){
+	.assigneddoc-popup{
+		.modal{
+			left: 50%;
+			background: none;
+			box-shadow: none;
+			border: none;
+			.modal-dialog{
+				width: auto;
+				transform: translate(-50%, 0) !important;
+				left: 50%;
+			}
+		}
+
+	}
+	.manage-lesson {
+		.fileupload {
+			.uneditable-input {
+				width: auto !important;
+			}
+		}
+	}
+}
+
+.view-courses .tjlms-wrapper .form-validate input[type=text] {
+    height: 35px;
+}
+
+.view-courses .tjlms-wrapper .form-validate button.btn, 
+.tjlms-wrapper .form-validate button {
+    height: 35px;
+}
+
+h4.tjlmspin__caption_title {
+	font-size: 18px;
+}
+
+.panel.tjlms-categories .panel-heading {
+    color: #333;
+    background-color: #f5f5f5;
+    border-color: #ddd;
+}

@@ -1,0 +1,86 @@
+.div-to-table{
+  .div-table{
+    width: 100%;
+    display: table;
+    .div-table-header{
+      display: table-header-group;
+      .div-table-header-cell{
+        display: table-cell;
+        padding: 10px;
+        border-bottom: 2px solid $primary-gray-200;
+        }
+      }
+      .div-table-body{
+        display: table-row-group;
+        .div-table-row{
+          display: table-row;
+          }
+          .div-table-body-cell{
+            display: table-cell;
+            padding: 5px;
+            line-height: 1.42857143;
+            vertical-align: top;
+          }
+        }
+    }
+}
+#sbox-window.tjucm-rop-doc{
+  .sbox-content-iframe{
+    iframe{
+      width:100% !important;
+      padding: 5px 10px 10px 10px;
+    }
+  }
+}
+
+/* changes done for remove word break as client suggestion*/
+.table {
+	>thead {
+		>tr {
+			>th {
+				text-align: left;
+				font-size: 12px;
+				word-break: normal !important;
+				padding: 5px;
+			}
+		}
+	}
+	>tbody {
+		>tr {
+			>td {
+				text-align: left;
+				font-size: 12px;
+				word-break: normal !important;
+				padding: 5px;
+			}
+		}
+	}
+}
+.tjucm-wrapper {
+	.tj-wordwrap {
+		word-break: normal !important;
+	}
+}
+
+.manage-reports {
+	.report-tbl {
+		tbody {
+			tr {
+				.enrolled_on_time,.timeend,.todo-due-date{
+           white-space: nowrap;
+        }
+			}
+		}
+	}
+}
+
+.manage-reports {
+	.report-tbl {
+		tbody {
+      td.todo_due_date,td.spentTime,td.timestart{
+        white-space: nowrap;
+
+      }
+		}
+	}
+}

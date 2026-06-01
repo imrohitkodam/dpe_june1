@@ -1,0 +1,36 @@
+.log-section{margin-bottom:20px}.table-chart-container{}table{width:70%;border-collapse:collapse}canvas{max-width:600px!important}.popup-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5)}.popup{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:300px;background:white;padding:20px;box-shadow:0 0 10px gray;text-align:center;border-radius:10px}.popup button{margin-top:10px;padding:10px;border:none;cursor:pointer;width:100%;border-radius:5px}.save-btn{background:blue;color:white}.close-btn{background:red;color:white;margin-top:5px}.annualth{background:#0e9cd1;color:white;padding:20px 5px 17px 7px;margin-bottom:-20px;font-size:16px}.orgth{background:#1291a0;text-align:center;font-size:14px;padding:26px;color:white}
+.custom-message,.info,.warning{color:#fff!important}#popup-container{position:fixed;background:#fff;padding:33px;z-index:1000;top:25%;left:33%;width:40%;box-shadow:0 0 15px rgba(0,0,0,.5)}#popup-container .close-button{position:absolute;top:10px;right:10px;background:0 0;border:none;font-size:24px;color:#333;cursor:pointer;z-index:10}.warning{background:#f5a624!important;width:50%;text-align:center}.info{background:#50e3c1!important;border-color:#50e3c1!important;width:50%;text-align:center}
+	.custom-message{background:#c3d61b!important;width:50%;text-align:center}.danger {
+    background: #e25c3a !important;color: #fff !important;width:50%;padding: 10px;text-align:center}.chart-size{float:right; width:50%;height:auto;}.nested-table{width:83%;margin-left:20%;}
+    @media (max-width:768px){table{width:100%!important;border-collapse:collapse}.chart-size{margin-bottom:100%;width:100%;height:automargin-top: -8px}.custom-message{background:#c3d61b!important;width:66%!important;text-align:center}.js-editor-tinymce{width:100%!important}.nested-table{width:45%;margin-left:0}}
+
+    @media (max-width: 991.98px) {
+        #jform_cluster_id_chosen {
+          width: 330px !important;
+        }
+        #filter_tags_chosen{
+          width: 330px !important;
+        }
+        .filter_org_date {
+            gap: 0px !important;
+        }
+        .allreport-btn{
+            padding-left: 0px !important;
+            padding-right: 0px !important;
+        }
+        .table-chart-container{
+            gap: 10px !important;
+        }
+        .checkreport-title{
+            margin-top: 0px !important;
+          }
+    }
+    
+    @media (max-width: 575.98px) {
+      .checkreport-title{
+        margin-top: 0px !important;
+      }
+    }
+    
+      
+>>>>>>> upstream/release-9.0.5
