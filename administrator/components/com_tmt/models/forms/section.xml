@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+		<field name="id" type="text" default="0" label="COM_TJLMS_FORM_LBL_TJMODULE_ID"
+			readonly="true" class="readonly"
+			description="JGLOBAL_FIELD_ID_DESC"
+			required="true"/>
+
+		<field name="title" type="text" class="inputbox"
+			label="COM_TJLMS_FORM_LBL_TJMODULE_NAME"
+			description="COM_TJLMS_FORM_DESC_TJMODULE_NAME"
+			required="true"  />
+
+		<field name="description" type="text" class="inputbox"
+			label="COM_TJLMS_FORM_LBL_TJMODULE_NAME"
+			description="COM_TJLMS_FORM_DESC_TJMODULE_NAME"
+			/>
+
+		<field name="test_id" type="text" size="40" class="inputbox"
+			label="COM_TJLMS_FORM_LBL_TJMODULE_COURSE_ID"
+			description="COM_TJLMS_FORM_DESC_TJMODULE_COURSE_ID"
+			filter="safehtml" />
+
+		<field name="min_questions" type="text" size="40" class="inputbox"
+			label="COM_TJLMS_FORM_LBL_TJMODULE_COURSE_ID"
+			description="COM_TJLMS_FORM_DESC_TJMODULE_COURSE_ID"
+			/>
+
+		<field name="max_questions" type="text" size="40" class="inputbox"
+			label="COM_TJLMS_FORM_LBL_TJMODULE_COURSE_ID"
+			description="COM_TJLMS_FORM_DESC_TJMODULE_COURSE_ID"
+			/>
+
+		<field name="state" type="radio" label="JSTATUS" description="JFIELD_PUBLISHED_DESC"
+			class="inputbox btn-group"
+			size="1"
+			default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+
+		<field name="checked_out" type="hidden" filter="unset" />
+		<field name="checked_out_time" type="hidden" filter="unset" />
+
+	</fieldset>
+
+</form>

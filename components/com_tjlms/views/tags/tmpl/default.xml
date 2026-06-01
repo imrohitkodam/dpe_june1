@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_TJLMS_TAGS">
+		<message>
+			<![CDATA[COM_TJLMS_TAGS]]>
+		</message>
+	</layout>
+	<fields name="request">
+		<fieldset name="request" label="COM_MENUS_LAYOUTs_FEATURED_OPTIONS">
+				<field
+				name="tagid"
+				type="tag"
+				label="JTAG"
+				description="JTAG_DESC"
+				custom="deny"
+				required="true"
+				multiple="true"
+				/>
+		</fieldset>
+	</fields>
+</metadata>

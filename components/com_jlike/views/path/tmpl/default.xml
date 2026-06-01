@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_JLIKE_PATH_TITLE" option="View">
+		<message>
+			<![CDATA[COM_JLIKE_PATH_TITLE_DESC]]>
+		</message>
+	</layout>
+	 <fields name="params">
+		<fieldset
+			name="basic"
+			label="Pathform config">
+			<field
+				name="item_id"
+				query="SELECT `id`, `path_title` AS title FROM #__jlike_paths ORDER BY `id`"
+				type="sql"
+				key_field="id"
+				value_field="title"
+				label="COM_JLIKE_PATH_MENU_PARAM_TITLE"
+				require="true"
+				description="JGLOBAL_SHOW_TITLE_DESC">
+			</field>
+		</fieldset>
+	</fields>
+</metadata>

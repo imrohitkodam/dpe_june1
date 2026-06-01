@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form addfieldpath="components/com_dpe/models/fields">
+    <fieldset name='lessonsform'>
+        <field name="lessonfilter" type="list"
+            label="COM_DPE_SELECT_DOCUMENT"
+            description="COM_DPE_SELECT_DOCUMENT"
+            class="courselist lessonlist"
+            >
+            <option value="">COM_DPE_SELECT_DOCUMENT</option>
+        </field>
+        <field name="lessonscompletionday" type="number"
+            label="COM_DPE_COURSE_COMPLITION_DAY_LABEL"
+            description="COM_DPE_COURSE_COMPLITION_DAY"
+            class="courseday onboardClass"
+            min="0"
+
+            >
+        </field>
+    </fieldset>
+
+</form>

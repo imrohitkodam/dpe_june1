@@ -1,0 +1,22 @@
+[
+	{
+		"element"	: "assigncourse",
+		"rule"		: "assign"
+	},
+	{
+		"element"	: "recommendcourse",
+		"rule"		: "recommend"
+	},
+	{
+		"element"	: "enrollcourse",
+		"rule"		: "selfenroll"
+	},
+	{
+		"element"	: "enrollapproval",
+		"rule"		: "approve"
+	},
+	{
+		"element"	: "coursecompletion",
+		"rule"		: "complete"
+	}
+]

@@ -1,0 +1,1842 @@
+{
+  "template1": {
+    "id": "",
+    "client": "com_tjlms",
+    "key": "courseEnroll",
+    "title": "Enrollment notification for course creator.",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "New Enrollment for your course '{{subject.title}}'",
+          "body": "<p>Hello {{course_author.name}}, <br /> <b>{{student.name}}</b> has enrolled to your course '{{course.title}}'.</p><p>This is a system generated email from {{global.sitename}}</p>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "Hi {{course_author.name}}, {{student.name}} has enrolled to your course '{{course.title}}'."
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "course_author.id",
+        "description": "Course author id"
+      },
+      {
+        "name": "course_author.name",
+        "description": "Course author name"
+      },
+      {
+        "name": "course_author.username",
+        "description": "Course author username"
+      },
+      {
+        "name": "course_author.email",
+        "description": "Course author email"
+      },
+      {
+        "name": "student.enrollment_id",
+        "description": "Student enrollment ID"
+      },
+      {
+        "name": "student.id",
+        "description": "Student id"
+      },
+      {
+        "name": "student.name",
+        "description": "Student name"
+      },
+      {
+        "name": "student.username",
+        "description": "Student username"
+      },
+      {
+        "name": "student.email",
+        "description": "Student email"
+      },
+      {
+        "name": "course.title",
+        "description": "Course title"
+      },
+      {
+        "name": "course.short_desc",
+        "description": "Course short description"
+      },
+      {
+        "name": "course.description",
+        "description": "Course description"
+      },
+      {
+        "name":"course.start_date",
+        "description": "Course start date"
+      },
+      {
+        "name":"course.end_date",
+        "description": "Course end date"
+      },
+      {
+        "name":"course.course_link",
+        "description": "Course link"
+      }
+    ]
+  },
+  "template2": {
+    "id": "",
+    "client": "com_tjlms",
+    "key": "enrollmentApprove",
+    "title": "Enrollment Approval notification for course creator.",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "A new enrollment for your course {{subject.title}} needs approval",
+          "body": "<p>Hello {{course_author.name}},</p><p>{{student.name}} has applied to enroll for your course {{course.title}}. You can process this request from the 'Manage Enrollments' menu..</p><p>This is a system generated email from {{global.sitename}}</p>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "Hi {{course_author.name}},\n{{student.name}} has applied to enroll for your course {{course.title}}. You can approve the same from 'Manage Enrollments' menu."
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "course_author.id",
+        "description": "Course author id"
+      },
+      {
+        "name": "course_author.name",
+        "description": "Course author name"
+      },
+      {
+        "name": "course_author.username",
+        "description": "Course author username"
+      },
+      {
+        "name": "course_author.email",
+        "description": "Course author email"
+      },
+      {
+        "name": "student.enrollment_id",
+        "description": "Student enrollment ID"
+      },
+      {
+        "name": "student.id",
+        "description": "Student id"
+      },
+      {
+        "name": "student.name",
+        "description": "Student name"
+      },
+      {
+        "name": "student.username",
+        "description": "Student username"
+      },
+      {
+        "name": "student.email",
+        "description": "Student email"
+      },
+      {
+        "name": "course.title",
+        "description": "Course title"
+      },
+      {
+        "name": "course.short_desc",
+        "description": "Course short description"
+      },
+      {
+        "name": "course.description",
+        "description": "Course description"
+      },
+      {
+        "name":"course.start_date",
+        "description": "Course start date"
+      },
+      {
+        "name":"course.end_date",
+        "description": "Course end date"
+      },
+      {
+        "name":"course.course_link",
+        "description": "Course link"
+      }
+    ]
+  },
+  "template3": {
+    "id": "",
+    "client": "com_tjlms",
+    "key": "userEnroll",
+    "title": "User Enrollment",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "You have enrolled for ‘{{subject.title}}’!",
+          "body": "<p>Hello {{student.name}},</p><p>You have enrolled for the course {{course.course_link}} on {{global.sitename}}.</p><p>Best wishes for your learning journey!</p><p>This is a system generated email from {{global.sitename}}</p>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "Hi {{student.name}},\nYou have enrolled for the course {{course.course_plain_link}} on {{global.sitename}}.\nBest wishes for your learning journey!"
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "student.enrollment_id",
+        "description": "Student enrollment ID"
+      },
+      {
+        "name": "student.id",
+        "description": "Student id"
+      },
+      {
+        "name": "student.name",
+        "description": "Student name"
+      },
+      {
+        "name": "student.username",
+        "description": "Student username"
+      },
+      {
+        "name": "student.email",
+        "description": "Student email"
+      },
+      {
+        "name": "course.title",
+        "description": "Course title"
+      },
+      {
+        "name": "course.short_desc",
+        "description": "Course short description"
+      },
+      {
+        "name": "course.description",
+        "description": "Course description"
+      },
+      {
+        "name":"course.start_date",
+        "description": "Course start date"
+      },
+      {
+        "name":"course.end_date",
+        "description": "Course end date"
+      },
+      {
+        "name":"course.course_link",
+        "description": "Course link (not recommended for SMS)"
+      },
+      {
+        "name":"course.course_plain_link",
+        "description": "Course plain link (recommended for SMS)"
+      }
+    ]
+  },
+  "template4": {
+    "id": "",
+    "client": "com_tjlms",
+    "key": "userEnrollApproved",
+    "title": "User Enrollment Approved",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "Congratulations! your enrollment for '{{subject.title}}' course is approved.",
+          "body": "<p>Hello {{student.name}},</p><p>Your enrollment for the course {{course.course_link}} is now approved and you can access the same.</p><p>Best wishes for your learning journey!</p><p>This is a system generated email from {{global.sitename}}</p>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "Hi {{student.name}},\nYour enrollment for the course {{course.course_plain_link}} is approved and you can access the same.\nBest wishes for your learning journey!"
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "student.enrollment_id",
+        "description": "Student enrollment ID"
+      },
+      {
+        "name": "student.id",
+        "description": "Student id"
+      },
+      {
+        "name": "student.name",
+        "description": "Student name"
+      },
+      {
+        "name": "student.username",
+        "description": "Student username"
+      },
+      {
+        "name": "student.email",
+        "description": "Student email"
+      },
+      {
+        "name": "course.title",
+        "description": "Course title"
+      },
+      {
+        "name": "course.short_desc",
+        "description": "Course short description"
+      },
+      {
+        "name": "course.description",
+        "description": "Course description"
+      },
+      {
+        "name":"course.start_date",
+        "description": "Course start date"
+      },
+      {
+        "name":"course.end_date",
+        "description": "Course end date"
+      },
+      {
+        "name":"course.course_link",
+        "description": "Course link (not recommended for SMS)"
+      },
+      {
+        "name":"course.course_plain_link",
+        "description": "Course plain link (recommended for SMS)"
+      }
+    ]
+  },
+  "template5": {
+    "id": "",
+    "client": "com_tjlms",
+    "key": "courseComplete",
+    "title": "Course Completion.",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "Congratulations! You have completed {{subject.title}}",
+          "body": "<p>Hello {{student.name}},</p><p>Congratulations.</p><p>You have just completed {{course.course_link}}!</p><p>Best wishes for your learning journey!</p><p>This is a system generated email from {{global.sitename}}</p>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "Hi {{student.name}},\nCongratulations!\nYou have just completed {{course.course_plain_link}}!"
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "student.enrollment_id",
+        "description": "Student enrollment ID"
+      },
+      {
+        "name": "student.id",
+        "description": "Student id"
+      },
+      {
+        "name": "student.name",
+        "description": "Student name"
+      },
+      {
+        "name": "student.username",
+        "description": "Student username"
+      },
+      {
+        "name": "student.email",
+        "description": "Student email"
+      },
+      {
+        "name": "course.title",
+        "description": "Course title"
+      },
+      {
+        "name": "course.short_desc",
+        "description": "Course short description"
+      },
+      {
+        "name": "course.description",
+        "description": "Course description"
+      },
+      {
+        "name":"course.start_date",
+        "description": "Course start date"
+      },
+      {
+        "name":"course.end_date",
+        "description": "Course end date"
+      },
+      {
+        "name":"course.course_link",
+        "description": "Course link (not recommended for SMS)"
+      },
+      {
+        "name":"course.course_plain_link",
+        "description": "Course plain link (recommended for SMS)"
+      }
+    ]
+  },
+  "template6": {
+    "id": "",
+    "client": "com_tjlms",
+    "key": "courseAssign",
+    "title": "Course Assignment",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "{{subject.assigner}} has assigned {{subject.title}} to you!",
+          "body": "<p>Hello {{student.name}}.</p><p>{{assigner.name}} has assigned the course “{{course.course_link}}” to you.</p><p>You need to complete it by {{assignment.end_date}}</p><p>Best wishes for your learning journey!</p><p>This is a system generated email from {{global.sitename}}</p>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "Hi {{student.name}}.\n{{assigner.name}} has assigned the course “{{course.course_plain_link}}” to you.\nYou need to complete it by {{assignment.end_date}}\nBest wishes!"
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "assigner.id",
+        "description": "Course assigner id"
+      },
+      {
+        "name": "assigner.name",
+        "description": "Course assigner name"
+      },
+      {
+        "name": "assigner.username",
+        "description": "Course assigner username"
+      },
+      {
+        "name": "assigner.email",
+        "description": "Course assigner email"
+      },
+      {
+        "name": "student.id",
+        "description": "Student id"
+      },
+      {
+        "name": "student.name",
+        "description": "Student name"
+      },
+      {
+        "name": "student.username",
+        "description": "Student username"
+      },
+      {
+        "name": "student.email",
+        "description": "Student email"
+      },
+      {
+        "name": "course.title",
+        "description": "Course title"
+      },
+      {
+        "name": "course.short_desc",
+        "description": "Course short description"
+      },
+      {
+        "name": "course.description",
+        "description": "Course description"
+      },
+      {
+        "name":"course.start_date",
+        "description": "Course start date"
+      },
+      {
+        "name":"course.end_date",
+        "description": "Course end date"
+      },
+      {
+        "name":"course.course_link",
+        "description": "Course link (not recommended for SMS)"
+      },
+      {
+        "name":"course.course_plain_link",
+        "description": "Course plain link (recommended for SMS)"
+      }
+    ]
+  },
+  "template7": {
+    "id": "",
+    "client": "com_tjlms",
+    "key": "courseRecommed",
+    "title": "Course Recommendation",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "{{subject.recommedBy}} has recommended {{subject.title}} to you!",
+          "body": "<p>Hello {{recommendedTo.name}},</p><p><b>{{recommendedBy.name}}</b> has recommended that you enroll for the course {{course.course_link}}.</p><p>We hope you enjoy the course!</p><p>This is a system generated email from {{global.sitename}}</p>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "Hi {{recommendedTo.name}},\n{{recommendedBy.name}} has recommended that you enroll for the course {{course.course_plain_link}}.\nWe hope you enjoy the course!"
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "recommendedTo.id",
+        "description": "Course recommended to user id"
+      },
+      {
+        "name": "recommendedTo.name",
+        "description": "Course recommended to user name"
+      },
+      {
+        "name": "recommendedTo.username",
+        "description": "Course recommended to user username"
+      },
+      {
+        "name": "recommendedTo.email",
+        "description": "Course recommended to user email"
+      },
+      {
+        "name": "recommendedBy.id",
+        "description": "Recommended by user id"
+      },
+      {
+        "name": "recommendedBy.name",
+        "description": "Recommended by user name"
+      },
+      {
+        "name": "recommendedBy.username",
+        "description": "Recommended by user username"
+      },
+      {
+        "name": "recommendedBy.email",
+        "description": "Recommended by user email"
+      },
+      {
+        "name": "course.title",
+        "description": "Course title"
+      },
+      {
+        "name": "course.short_desc",
+        "description": "Course short description"
+      },
+      {
+        "name": "course.description",
+        "description": "Course description"
+      },
+      {
+        "name":"course.start_date",
+        "description": "Course start date"
+      },
+      {
+        "name":"course.end_date",
+        "description": "Course end date"
+      },
+      {
+        "name":"course.course_link",
+        "description": "Course link (not recommended for SMS)"
+      },
+      {
+        "name":"course.course_plain_link",
+        "description": "Course plain link (recommended for SMS)"
+      }
+    ]
+  },
+  "template8": {
+    "id": "",
+    "client": "com_tjlms",
+    "key": "courseSubscriptionExpired",
+    "title": "Course Subscription Expired",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "Your subscription for the course ‘{{subject.title}}’ has expired",
+          "body": "<p>Hello {{student.name}},</p><p>Your subscription for the course {{course.course_link}} has been expired.</p><p>In order to retain access, you need to buy a subscription once again.</p><p>Best wishes for your learning journey!</p><p>This is a system generated email from {{global.sitename}}</p>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "Hi {{student.name}},\nYour subscription for the course {{course.course_plain_link}} has been expired.\nIn order to retain access, you need to buy a subscription once again."
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "student.enrollment_id",
+        "description": "Student enrollment ID"
+      },
+      {
+        "name": "student.id",
+        "description": "Student id"
+      },
+      {
+        "name": "student.name",
+        "description": "Student name"
+      },
+      {
+        "name": "student.username",
+        "description": "Student username"
+      },
+      {
+        "name": "student.email",
+        "description": "Student email"
+      },
+      {
+        "name": "student.end_time",
+        "description": "Student enrollment end date"
+      },
+      {
+        "name": "course.title",
+        "description": "Course title"
+      },
+      {
+        "name": "course.short_desc",
+        "description": "Course short description"
+      },
+      {
+        "name": "course.description",
+        "description": "Course description"
+      },
+      {
+        "name":"course.start_date",
+        "description": "Course start date"
+      },
+      {
+        "name":"course.end_date",
+        "description": "Course end date"
+      },
+      {
+        "name":"course.course_link",
+        "description": "Course link (not recommended for SMS)"
+      },
+      {
+        "name":"course.course_plain_link",
+        "description": "Course plain link (recommended for SMS)"
+      }
+    ]
+  },
+  "template9": {
+    "id": "",
+    "client": "com_tjlms",
+    "key": "courseSubscriptionReminder",
+    "title": "Reminder For Course Subscription expiry",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "Your course subscription is about to expire",
+          "body": "<p>Hello {{student.name}},</p><p>Your subscription for the course {{course.title}} is expiring very soon. You will have to access and complete the course before the expiry.</p><p>Best wishes for your learning journey!</p><p>This is a system generated email from {{global.sitename}}</p>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "Hi {{student.name}},\nYour subscription for the course {{course.title}} is expiring very soon. Please complete it before expiry"
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "student.enrollment_id",
+        "description": "Student enrollment ID"
+      },
+      {
+        "name": "student.id",
+        "description": "Student id"
+      },
+      {
+        "name": "student.name",
+        "description": "Student name"
+      },
+      {
+        "name": "student.username",
+        "description": "Student username"
+      },
+      {
+        "name": "student.email",
+        "description": "Student email"
+      },
+      {
+        "name": "student.end_time",
+        "description": "Student enrollment end date"
+      },
+      {
+        "name": "course.title",
+        "description": "Course title"
+      },
+      {
+        "name": "course.short_desc",
+        "description": "Course short description"
+      },
+      {
+        "name": "course.description",
+        "description": "Course description"
+      },
+      {
+        "name":"course.start_date",
+        "description": "Course start date"
+      },
+      {
+        "name":"course.end_date",
+        "description": "Course end date"
+      },
+      {
+        "name":"course.course_link",
+        "description": "Course link (not recommended for SMS)"
+      },
+      {
+        "name":"course.course_plain_link",
+        "description": "Course plain link (recommended for SMS)"
+      }
+    ]
+  },
+  "template10": {
+    "id": "",
+    "client": "com_tjlms",
+    "key": "courseOrder",
+    "title": "Order Placed",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "Your order on {{subject.sitename}} for {{subject.title}} ",
+          "body": "<div class=''><div>Hi {{buyer.name}}, <br /><br />Thank you for placing an order for the course '{{course.title}}' .</div><div>Details of your order are as below :<br /><br /></div><div class='row-fluid'><hr class='hr hr-condensed' /><!--SHOW COMAPNY DETAILS ON LEFT SIDE--><div class='col-md-8'><div class='col-md-3'><img class='img-polaroid com_tjlms_image_w98pc' src='{{course.image}}' /></div><div class='col-md-9'><a href='{{course.course_link}}'>{{course.title}}</a></div></div><div><div class='col-md-1'><br /><div>{{company.name}}</div><div>{{company.address}}</div><div>{{company.vat_number}}</div></div><div class='pull-right col-md-5'><div><strong>Order ID:</strong> {{order.orderSuffix}}</div><!--SHOW ORDER STATUS--><div class='row-fluid'><strong>Payment status: </strong>{{order.status}}</div><!--SHOW ORDER STATUS--><div><strong>Order Date: </strong>{{order.created_date}}</div></div></div><!--COMPANY DETAILS ENDS--> <!--USER BILLING INFO STRAT--><div class='col-md-12'><hr class='hr hr-condensed' /><div class='pull-left'><div>To</div><div>{{buyer.firstname}} {{buyer.lastname}}</div><div>{{buyer.vat_number}}</div><div>{{buyer.phone}}</div><div>{{buyer.email}}</div><div>{{buyer.address}} {{buyer.city}}</div><div>{{buyer.zipcode}} {{buyer.state_code}} {{buyer.country_code}}</div></div></div><!--USER INFO ENDS--></div><!--ROWFLUID ENDS--> <!--SUBSCRIPTON PLANS DETAILS START HERE--><div class='row-fluid'><hr class='hr hr-condensed' /><div class='col-md-12 '><!-- plan detail start --> Selected plan for {{course.title}}<div class='table-responsive'><table class='table'><tbody><tr><th align='left'>Subscription Plan Name</th><th align='left'>Plan Price</th><th align='left'>Total Price</th></tr><tr class='row'><td>{{subscription.name}}</td><td>{{subscription.price}}</td><td>{{subscription.total_price}}</td></tr><tr><td colspan='3'></td></tr><tr><td colspan='1'></td><td align='left'><strong> Sub Total </strong></td><td>{{subscription.total_price}}</td></tr><!--discount price --><tr><td colspan='1'></td><td align='left'><strong> Coupon Discount </strong></td><td>{{subscription.discount}}</td></tr><!-- total amt after Discount row--><tr><td colspan='1'></td><td align='left'><strong> Amount After Discount </strong></td><td>{{subscription.amt_after_discount}}</td></tr><tr><td colspan='1'></td><td align='left'><strong>Tax amount: {{subscription.tax_percent}}</strong></td><td>{{subscription.order_tax}}</td></tr><tr><td colspan='1'></td><td align='left'><strong> Order Total </strong></td><td><strong>{{subscription.final_amt}}</strong></td></tr></tbody></table></div></div></div><div class=''><div><br />Here is the link to print your invoice-</div><div><a href='{{order.order_link}}'>Click here</a></div><div></div><div>This is a system generated email from {{global.sitename}}</div></div></div>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "Hi, Thanks for placing order for {{course.title}},\nSubscription Plan Name: {{subscription.name}}\nOrder Total: {{subscription.final_amt}}"
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "buyer.name",
+        "description": "Buyer name"
+      },
+      {
+        "name": "buyer.firstname",
+        "description": "Buyer firstname"
+      },
+      {
+        "name": "buyer.lastname",
+        "description": "Buyer lastname"
+      },
+      {
+        "name": "buyer.phone",
+        "description": "Buyer phone"
+      },
+      {
+        "name": "buyer.email",
+        "description": "Buyer email"
+      },
+      {
+        "name": "buyer.address",
+        "description": "Buyer address"
+      },
+      {
+        "name": "buyer.city",
+        "description": "Buyer city"
+      },
+      {
+        "name": "buyer.zipcode",
+        "description": "Buyer zipcode"
+      },
+      {
+        "name": "buyer.state_code",
+        "description": "Buyer state name"
+      },
+      {
+        "name": "buyer.country_code",
+        "description": "Buyer country name"
+      },
+      {
+        "name": "company.name",
+        "description": "Company name"
+      },
+      {
+        "name": "company.vat_number",
+        "description": "Company vat number"
+      },
+      {
+        "name": "company.address",
+        "description": "Company address"
+      },
+      {
+        "name": "course.title",
+        "description": "Course title"
+      },
+      {
+        "name": "course.short_desc",
+        "description": "Course short description"
+      },
+      {
+        "name": "course.description",
+        "description": "Course description"
+      },
+      {
+        "name":"course.start_date",
+        "description": "Course start date"
+      },
+      {
+        "name":"course.end_date",
+        "description": "Course end date"
+      },
+      {
+        "name":"course.course_link",
+        "description": "Course link (not recommended for SMS)"
+      },
+      {
+        "name":"course.course_plain_link",
+        "description": "Course plain link (recommended for SMS)"
+      },
+      {
+        "name": "subscription.name",
+        "description": "Subscription name"
+      },
+      {
+        "name": "subscription.price",
+        "description": "Subscription price"
+      },
+      {
+        "name": "subscription.total_price",
+        "description": "Subscription total price"
+      },
+      {
+        "name": "subscription.discount",
+        "description": "Subscription discount"
+      },
+      {
+        "name": "subscription.amt_after_discount",
+        "description": "Subscription amount after discount"
+      },
+      {
+        "name":"subscription.tax_percent",
+        "description": "Subscription tax percent"
+      },
+      {
+        "name":"subscription.order_tax",
+        "description": "Subscription order tax"
+      },
+      {
+        "name":"subscription.final_amt",
+        "description": "Subscription final amount"
+      }
+    ]
+  },
+  "template11": {
+    "id": "",
+    "client": "com_tjlms",
+    "key": "courseInvoice",
+    "title": "Course invoice",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "Your order on {{subject.sitename}} for {{subject.title}} ",
+          "body": "<div class=''><div>Hi {{buyer.name}}, <br /><br />Thank you for purchasing</span> '{{course.title}}' course. Details are given below:<br /><br /></div><div class='row-fluid'><hr class='hr hr-condensed' /><!--SHOW COMAPNY DETAILS ON LEFT SIDE--><div class='col-md-8'><div class='col-md-3'><img class='img-polaroid com_tjlms_image_w98pc' src='{{course.image}}' /></div><div class='col-md-9'><a href='{{course.course_link}}'>{{course.title}}</a></div></div><div><div class='col-md-1'><br /><div>{{company.name}}</div><div>{{company.address}}</div><div>{{company.vat_number}}</div></div><div class='pull-right col-md-5'><div><strong>Order ID:</strong> {{order.orderSuffix}}</div><!--SHOW ORDER STATUS--><div class='row-fluid'><strong>Payment status: </strong>{{order.status}}</div><!--SHOW ORDER STATUS--><div><strong>Order Date: </strong>{{order.created_date}}</div></div></div><!--COMPANY DETAILS ENDS--> <!--USER BILLING INFO STRAT--><div class='col-md-12'><hr class='hr hr-condensed' /><div class='pull-left'><div>To</div><div>{{buyer.firstname}} {{buyer.lastname}}</div><div>{{buyer.vat_number}}</div><div>{{buyer.phone}}</div><div>{{buyer.email}}</div><div>{{buyer.address}} {{buyer.city}}</div><div>{{buyer.zipcode}} {{buyer.state_code}} {{buyer.country_code}}</div></div></div><!--USER INFO ENDS--></div><!--ROWFLUID ENDS--> <!--SUBSCRIPTON PLANS DETAILS START HERE--><div class='row-fluid'><hr class='hr hr-condensed' /><div class='col-md-12 '><!-- plan detail start --> Selected plan for {{course.title}}<div class='table-responsive'><table class='table'><tbody><tr><th align='left'>Subscription Plan Name</th><th align='left'>Plan Price</th><th align='left'>Total Price</th></tr><tr class='row'><td>{{subscription.name}}</td><td>{{subscription.price}}</td><td>{{subscription.total_price}}</td></tr><tr><td colspan='3'></td></tr><tr><td colspan='1'></td><td align='left'><strong> Sub Total </strong></td><td>{{subscription.total_price}}</td></tr><!--discount price --><tr><td colspan='1'></td><td align='left'><strong> Coupon Discount </strong></td><td>{{subscription.discount}}</td></tr><!-- total amt after Discount row--><tr><td colspan='1'></td><td align='left'><strong> Amount After Discount </strong></td><td>{{subscription.amt_after_discount}}</td></tr><tr><td colspan='1'></td><td align='left'><strong>Tax amount: {{subscription.tax_percent}}</strong></td><td>{{subscription.order_tax}}</td></tr><tr><td colspan='1'></td><td align='left'><strong> Order Total </strong></td><td><strong>{{subscription.final_amt}}</strong></td></tr></tbody></table></div></div></div><div class=''><div><br />Here is the link to print your invoice-</div><div><a href='{{order.order_link}}'>Click here</a></div><div></div><div>This is a system generated email from {{global.sitename}}</div></div></div>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "Thanks for purchasing '{{course.title}}'\nPayment status:{{order.status}}\nPlan Name:{{subscription.name}}\nTotal:{{subscription.final_amt}}"
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "buyer.name",
+        "description": "Buyer name"
+      },
+      {
+        "name": "buyer.firstname",
+        "description": "Buyer firstname"
+      },
+      {
+        "name": "buyer.lastname",
+        "description": "Buyer lastname"
+      },
+      {
+        "name": "buyer.phone",
+        "description": "Buyer phone"
+      },
+      {
+        "name": "buyer.email",
+        "description": "Buyer email"
+      },
+      {
+        "name": "buyer.address",
+        "description": "Buyer address"
+      },
+      {
+        "name": "buyer.city",
+        "description": "Buyer city"
+      },
+      {
+        "name": "buyer.zipcode",
+        "description": "Buyer zipcode"
+      },
+      {
+        "name": "buyer.state_code",
+        "description": "Buyer state name"
+      },
+      {
+        "name": "buyer.country_code",
+        "description": "Buyer country name"
+      },
+      {
+        "name": "company.name",
+        "description": "Company name"
+      },
+      {
+        "name": "company.vat_number",
+        "description": "Company vat number"
+      },
+      {
+        "name": "company.address",
+        "description": "Company address"
+      },
+      {
+        "name": "course.title",
+        "description": "Course title"
+      },
+      {
+        "name": "course.short_desc",
+        "description": "Course short description"
+      },
+      {
+        "name": "course.description",
+        "description": "Course description"
+      },
+      {
+        "name":"course.start_date",
+        "description": "Course start date"
+      },
+      {
+        "name":"course.end_date",
+        "description": "Course end date"
+      },
+      {
+        "name":"course.course_link",
+        "description": "Course link"
+      },
+      {
+        "name": "subscription.name",
+        "description": "Subscription name"
+      },
+      {
+        "name": "subscription.price",
+        "description": "Subscription price"
+      },
+      {
+        "name": "subscription.total_price",
+        "description": "Subscription total price"
+      },
+      {
+        "name": "subscription.discount",
+        "description": "Subscription discount"
+      },
+      {
+        "name": "subscription.amt_after_discount",
+        "description": "Subscription amount after discount"
+      },
+      {
+        "name":"subscription.tax_percent",
+        "description": "Subscription tax percent"
+      },
+      {
+        "name":"subscription.order_tax",
+        "description": "Subscription order tax"
+      },
+      {
+        "name":"subscription.final_amt",
+        "description": "Subscription final amount"
+      }
+    ]
+  },
+  "template12": {
+    "id": "",
+    "client": "com_tjlms",
+    "key": "userExercise",
+    "title": "User Exercise",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "Thank you for submitting the exercise {{subject.title}} at “{{subject.sitename}}”",
+          "body": "<p>Hello {{student.name}},</p><p><span style='font-size: 12.16px;'>Thank you for submitting an exercise at {{global.sitename}}. Here are the details of the exercise you submitted:</span></p><p><span style='font-size: 12.16px;'>Exercise name - {{exercise.title}}</span></p><p><span style='font-size: 12.16px;'>Marks Scored - {{student.score}} / {{exercise.total_marks}}</span></p><p><span style='font-size: 12.16px;'>Passing marks -{{exercise.passing_marks}} / {{exercise.total_marks}}</span></p><p><span style='font-size: 12.16px;'>Time taken - {{student.time_taken}}</span></p><p><span style='font-size: 12.16px;'> Exercise result - {{exercise.result}}</span></p><p><span style='font-size: 12.16px;'> Click here ( {{exercise.assessmentUrl}}) to view the assessment</span></p><p>-----------------------------------------------------------------------</p><p>This is a system generated email from {{global.sitename}}</p>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "Hi {{student.name}},\nThanks for submitting exercise {{exercise.title}}\nMarks scored - {{student.score}} / {{exercise.total_marks}}\nResult - {{exercise.result}}"
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "student.id",
+        "description": "Student id"
+      },
+      {
+        "name": "student.name",
+        "description": "Student name"
+      },
+      {
+        "name": "student.username",
+        "description": "Student username"
+      },
+      {
+        "name": "student.email",
+        "description": "Student email"
+      },
+      {
+        "name": "student.time_taken",
+        "description": "Student time taken for exercise"
+      },
+      {
+        "name": "student.score",
+        "description": "Student score of exercise"
+      },
+      {
+        "name": "student.attempt_status",
+        "description": "Student attempt status of exercise"
+      },
+      {
+        "name": "student.test_id",
+        "description": "Student exercise test id"
+      },
+      {
+        "name": "exercise.title",
+        "description": "Exercise title"
+      },
+      {
+        "name": "exercise.id",
+        "description": "exercise id"
+      },
+      {
+        "name": "exercise.passing_marks",
+        "description": "Exercise passing marks"
+      },
+      {
+        "name":"exercise.total_marks",
+        "description": "Exercise total marks"
+      },
+      {
+        "name":"exercise.result",
+        "description": "Exercise result"
+      },
+      {
+        "name":"exercise.assessmentUrl",
+        "description": "View assessment"
+      }
+    ]
+  },
+  "template13": {
+    "id": "",
+    "client": "com_tjlms",
+    "key": "quizResult",
+    "title": "Quiz Result",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "Result for your Quiz in {{subject.title}}",
+          "body": "<p>Hello {{student.name}},</p><p>Thank you for submitting a quiz at {{global.sitename}}. Here the details of the quiz:</p><p>Quiz name - {{quiz.title}}</p><p>Marks Scored - {{student.score}} / {{quiz.total_marks}}</p><p>Passing marks - {{quiz.passing_marks}} / {{quiz.total_marks}}</p><p>Time taken - {{student.time_taken}}</p><p>Quiz result - {{quiz.result}}</p><p>-----------------------------------------------------------------------</p><p>This is a system generated email from {{global.sitename}}</p>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "Hi {{student.name}},\nThanks for submitting exercise {{quiz.title}}\nThanks for submitting exercise {{quiz.title}}\nMarks scored - {{student.score}} / {{quiz.total_marks}}\nResult - {{quiz.result}}"
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "student.id",
+        "description": "Student id"
+      },
+      {
+        "name": "student.name",
+        "description": "Student name"
+      },
+      {
+        "name": "student.username",
+        "description": "Student username"
+      },
+      {
+        "name": "student.email",
+        "description": "Student email"
+      },
+      {
+        "name": "student.time_taken",
+        "description": "Student time taken for quiz"
+      },
+      {
+        "name": "student.score",
+        "description": "Student score of quiz"
+      },
+      {
+        "name": "student.attempt_status",
+        "description": "Student attempt status of quiz"
+      },
+      {
+        "name": "student.test_id",
+        "description": "Student quiz test id"
+      },
+      {
+        "name": "quiz.title",
+        "description": "Quiz title"
+      },
+      {
+        "name": "quiz.id",
+        "description": "Quiz id"
+      },
+      {
+        "name": "quiz.passing_marks",
+        "description": "Quiz passing marks"
+      },
+      {
+        "name":"quiz.total_marks",
+        "description": "Quiz total marks"
+      },
+      {
+        "name":"quiz.result",
+        "description": "Quiz result"
+      }
+    ]
+  },
+  "template14": {
+    "id": "",
+    "client": "com_tjlms",
+    "key": "userFeedback",
+    "title": "User Feedback",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "Thank you for your Feedback",
+          "body": "<p>Hello {{student.name}},</p><p>Thank you for Providing your Feedback for “{{feedback.title}}”</p><p>This is a system generated email from {{global.sitename}}</p>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "Hi {{student.name}}, \nThank you for Providing your Feedback for “{{feedback.title}}”"
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "student.id",
+        "description": "Student id"
+      },
+      {
+        "name": "student.name",
+        "description": "Student name"
+      },
+      {
+        "name": "student.username",
+        "description": "Student username"
+      },
+      {
+        "name": "student.email",
+        "description": "Student email"
+      },
+      {
+        "name": "feedback.title",
+        "description": "Feedback title"
+      }
+    ]
+  },
+  "template15": {
+    "id": "",
+    "client": "com_tjlms",
+    "key": "pendingAssessment",
+    "title": "Assessment Pending",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "A new {{subject.format}} needs your assessment at “{{subject.sitename}}”",
+          "body": "<p>Hello {{assessment.creator}}, <br /> A new {{assessment.format}} assessment is pending for review at {{global.sitename}}<br /> ------------------------------------------------- <br /> Details <br />{{assessment.format}} name - {{assessment.title}}<br /> Candidate name - {{student.name}}<br /> ------------------------------------------------- <br /> View pending assessment {{assessment.link}}</p><p>This is a system generated email from {{global.sitename}}</p>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "Hi {{assessment.creator}},\nA new {{assessment.format}} assessment is pending for review at {{global.sitename}}\nView pending assessment {{assessment.plain_link}}"
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "student.id",
+        "description": "Student id"
+      },
+      {
+        "name": "student.name",
+        "description": "Student name"
+      },
+      {
+        "name": "student.username",
+        "description": "Student username"
+      },
+      {
+        "name": "student.email",
+        "description": "Student email"
+      },
+      {
+        "name": "assessment.title",
+        "description": "Assessment title"
+      },
+      {
+        "name": "assessment.creator",
+        "description": "Assessment creator"
+      },
+      {
+        "name": "assessment.link",
+        "description": "Assessment link (not recommended for SMS)"
+      },
+      {
+        "name": "assessment.plain_link",
+        "description": "Assessment plain link (recommended for SMS)"
+      },
+      {
+        "name":"assessment.format",
+        "description": "Assessment format"
+      }
+    ]
+  },
+  "template16": {
+    "id": "",
+    "client": "com_tjlms",
+    "key": "courseOrderComfirmationCreator",
+    "title": "On after order complete notification to course creator",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "New purchase for {{subject.title}} ",
+          "body": "<p>Hi {{course_author.name}},</p><p>A new course subscription has been purchased at {{global.sitename}}. Details of the purchase below</p><p><strong>Course</strong> <br />{{course.title}}, {{subscription.name}}<br />Bought by {{buyer.firstname}} {{buyer.lastname}}<br />Purchased On {{order.created_date}}<br />Expires {{subscription.name}}</p><p><strong>Payment</strong><br />Net Amount Paid {{subscription.final_amt}} (includes tax if any)<br />Discount code used {{subscription.discount}}<br />Order ID {{order.orderSuffix}}</p><p><br />You are receiving this email since you are the course creator</p>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "Hi,\nThere is a new purchase for your {{course.title}} at {{global.sitename}}."
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "buyer.name",
+        "description": "Buyer name"
+      },
+      {
+        "name": "buyer.firstname",
+        "description": "Buyer firstname"
+      },
+      {
+        "name": "buyer.lastname",
+        "description": "Buyer lastname"
+      },
+      {
+        "name": "buyer.phone",
+        "description": "Buyer phone"
+      },
+      {
+        "name": "buyer.email",
+        "description": "Buyer email"
+      },
+      {
+        "name": "buyer.address",
+        "description": "Buyer address"
+      },
+      {
+        "name": "buyer.city",
+        "description": "Buyer city"
+      },
+      {
+        "name": "buyer.zipcode",
+        "description": "Buyer zipcode"
+      },
+      {
+        "name": "buyer.state_code",
+        "description": "Buyer state name"
+      },
+      {
+        "name": "buyer.country_code",
+        "description": "Buyer country name"
+      },
+      {
+        "name": "company.name",
+        "description": "Company name"
+      },
+      {
+        "name": "company.vat_number",
+        "description": "Company vat number"
+      },
+      {
+        "name": "company.address",
+        "description": "Company address"
+      },
+      {
+        "name": "course.title",
+        "description": "Course title"
+      },
+      {
+        "name": "course.short_desc",
+        "description": "Course short description"
+      },
+      {
+        "name": "course.description",
+        "description": "Course description"
+      },
+      {
+        "name":"course.start_date",
+        "description": "Course start date"
+      },
+      {
+        "name":"course.end_date",
+        "description": "Course end date"
+      },
+      {
+        "name":"course.course_link",
+        "description": "Course link"
+      },
+      {
+        "name": "subscription.name",
+        "description": "Subscription name"
+      },
+      {
+        "name": "subscription.price",
+        "description": "Subscription price"
+      },
+      {
+        "name": "subscription.total_price",
+        "description": "Subscription total price"
+      },
+      {
+        "name": "subscription.discount",
+        "description": "Subscription discount"
+      },
+      {
+        "name": "subscription.amt_after_discount",
+        "description": "Subscription amount after discount"
+      },
+      {
+        "name":"subscription.tax_percent",
+        "description": "Subscription tax percent"
+      },
+      {
+        "name":"subscription.order_tax",
+        "description": "Subscription order tax"
+      },
+      {
+        "name":"subscription.final_amt",
+        "description": "Subscription final amount"
+      }
+    ]
+  },
+  "template17": {
+    "id": "",
+    "client": "com_tjlms",
+    "key": "courseOrderComfirmationAdmin",
+    "title": "On after order complete notification to admin",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "New purchase for {{subject.title}} ",
+          "body": "<p>Hi Admin,</p><p>A new course subscription has been purchased at {{global.sitename}}. Details of the purchase below</p><p><strong>Course</strong><br />{{course.title}}, {{subscription.name}}<br />Bought by {{buyer.firstname}} {{buyer.lastname}}<br />Purchased On {{order.created_date}}<br />Expires {{subscription.name}}</p><p><strong>Payment</strong><br />Net Amount Paid {{subscription.final_amt}} (includes tax if any)<br />Discount code used {{subscription.discount}}<br />Order ID {{order.orderSuffix}}</p><p>This is a system generated email from {{global.sitename}}</p>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "Hi,\nA new subscription has been purchased for {{course.title}} at {{global.sitename}}."
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "buyer.name",
+        "description": "Buyer name"
+      },
+      {
+        "name": "buyer.firstname",
+        "description": "Buyer firstname"
+      },
+      {
+        "name": "buyer.lastname",
+        "description": "Buyer lastname"
+      },
+      {
+        "name": "buyer.phone",
+        "description": "Buyer phone"
+      },
+      {
+        "name": "buyer.email",
+        "description": "Buyer email"
+      },
+      {
+        "name": "buyer.address",
+        "description": "Buyer address"
+      },
+      {
+        "name": "buyer.city",
+        "description": "Buyer city"
+      },
+      {
+        "name": "buyer.zipcode",
+        "description": "Buyer zipcode"
+      },
+      {
+        "name": "buyer.state_code",
+        "description": "Buyer state name"
+      },
+      {
+        "name": "buyer.country_code",
+        "description": "Buyer country name"
+      },
+      {
+        "name": "company.name",
+        "description": "Company name"
+      },
+      {
+        "name": "company.vat_number",
+        "description": "Company vat number"
+      },
+      {
+        "name": "company.address",
+        "description": "Company address"
+      },
+      {
+        "name": "course.title",
+        "description": "Course title"
+      },
+      {
+        "name": "course.short_desc",
+        "description": "Course short description"
+      },
+      {
+        "name": "course.description",
+        "description": "Course description"
+      },
+      {
+        "name":"course.start_date",
+        "description": "Course start date"
+      },
+      {
+        "name":"course.end_date",
+        "description": "Course end date"
+      },
+      {
+        "name":"course.course_link",
+        "description": "Course link"
+      },
+      {
+        "name": "subscription.name",
+        "description": "Subscription name"
+      },
+      {
+        "name": "subscription.price",
+        "description": "Subscription price"
+      },
+      {
+        "name": "subscription.total_price",
+        "description": "Subscription total price"
+      },
+      {
+        "name": "subscription.discount",
+        "description": "Subscription discount"
+      },
+      {
+        "name": "subscription.amt_after_discount",
+        "description": "Subscription amount after discount"
+      },
+      {
+        "name":"subscription.tax_percent",
+        "description": "Subscription tax percent"
+      },
+      {
+        "name":"subscription.order_tax",
+        "description": "Subscription order tax"
+      },
+      {
+        "name":"subscription.final_amt",
+        "description": "Subscription final amount"
+      }
+    ]
+  },
+  "template18": {
+    "id": "",
+    "client": "com_tjlms",
+    "key": "attemptsExhaustedAndFailedAdmin",
+    "title": "On after Attempts Exhausted and Failed notification to admin",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "{{subject.name}} could not pass the lesson",
+          "body": "<p>Hello,</p><p>{{student.name}} has exhausted the number of attempts to pass the lesson <b>{{lesson.title}}</b>.</p>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "Hi,\n{{student.name}} has exhausted the number of attempts to pass the lesson {{lesson.title}}."
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "student.name",
+        "description": "Student name"
+      },
+      {
+        "name": "student.username",
+        "description": "Student username"
+      },
+      {
+        "name": "student.email",
+        "description": "Student email"
+      },
+      {
+        "name": "lesson.title",
+        "description": "Lesson title"
+      },
+      {
+        "name": "lesson.description",
+        "description": "Lesson description"
+      }
+    ]
+  },
+  "template19": {
+    "id": "",
+    "client": "com_tjlms",
+    "key": "certificateExpired",
+    "title": "Certificate Expired",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "Your certificate is now expired for the course ‘{{subject.title}}’!",
+          "body": "<p>Hello {{student.name}},</p><p>Your certificate is now expired for the course {{course.course_link}} on {{global.sitename}}.</p><p>If you wish to renew the expired certificate, then you need retake the course again.</p><p>Best wishes for your learning journey!</p><p>This is a system generated email from {{global.sitename}}</p>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "Hi {{student.name}},\nYour certificate is now expired for the course {{course.course_plain_link}} on {{global.sitename}}.\nIf you wish to renew the expired certificate, then you need retake the course again.\nBest wishes for your learning journey!"
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "student.enrollment_id",
+        "description": "Student enrollment ID"
+      },
+      {
+        "name": "student.id",
+        "description": "Student id"
+      },
+      {
+        "name": "student.name",
+        "description": "Student name"
+      },
+      {
+        "name": "student.username",
+        "description": "Student username"
+      },
+      {
+        "name": "student.email",
+        "description": "Student email"
+      },
+      {
+        "name": "course.title",
+        "description": "Course title"
+      },
+      {
+        "name": "course.short_desc",
+        "description": "Course short description"
+      },
+      {
+        "name": "course.description",
+        "description": "Course description"
+      },
+      {
+        "name":"course.start_date",
+        "description": "Course start date"
+      },
+      {
+        "name":"course.end_date",
+        "description": "Course end date"
+      },
+      {
+        "name":"course.course_link",
+        "description": "Course link (not recommended for SMS)"
+      },
+      {
+        "name":"course.course_plain_link",
+        "description": "Course plain link (recommended for SMS)"
+      }
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="administrator" method="upgrade">
+	<identifier>mod://admin/logman</identifier>
+	<name>MOD_LOGMAN</name>
+ 	<author>Joomlatools</author>
+    <creationDate>March 2025</creationDate>
+    <copyright>Copyright (C) 2011 Timble CVBA (http://www.timble.net)</copyright>
+    <license>GNU GPLv3 - http://www.gnu.org/licenses/gpl.html</license>
+    <authorEmail>support@joomlatools.com</authorEmail>
+    <authorUrl>www.joomlatools.com</authorUrl>
+	<version>6.0.0</version>
+	<description>MOD_LOGMAN_DESCRIPTION</description>
+
+	<files>
+		<filename module="mod_logman">mod_logman.php</filename>
+        <filename>html.php</filename>
+		<filename>mod_logman.xml</filename>
+        <folder>language</folder>
+	</files>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="limit" type="text" default="10" label="LIST_COUNT" description="LIST_COUNT_DESCRIPTION" />
+				<field name="direction" type="list" default="desc" label="LIST_ORDERING" description="LIST_ORDERING_DESCRIPTION">
+					<option value="desc">DESC</option>
+					<option value="asc">ASC</option>
+				</field>
+                <field name="user_filter" type="radio" class="btn-group" default="0" label="LOGGED_IN_USER_ONLY" description="LOGGED_IN_USER_ONLY_DESCRIPTION">
+                    <option value="1">MOD_LOGMAN_YES</option>
+                    <option value="0">MOD_LOGMAN_NO</option>
+                </field>
+				<field name="impression_filter" type="list" default="all" label="IMPRESSION_FILTERING" description="IMPRESSION_FILTERING_DESCRIPTION">
+					<option value="all">IMPRESSION_FILTERING_ALL</option>
+					<option value="ignore_impressions">IMPRESSION_FILTERING_NONE_IMPRESSIONS</option>
+					<option value="impressions">IMPRESSION_FILTERING_IMPRESSIONS_ONLY</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

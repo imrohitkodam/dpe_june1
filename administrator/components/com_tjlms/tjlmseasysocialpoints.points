@@ -1,0 +1,38 @@
+[
+	{
+		"title"         : "Enrolled to a course",
+		"alias"         : "onAfterCourseEnrol",
+		"description"   : "Earn points on enrolling a course",
+		"command"       : "onAftercourseEnrol",
+		"extension"     : "com_tjlms",
+		"state"         : true,
+		"points"        : 7
+	},
+	{
+		"title"         : "Completed a lesson",
+		"alias"         : "onAfterLessonAttemptEnd",
+		"description"   : "Earn points on completing a lessons",
+		"command"       : "onAfterLessonattemptend",
+		"extension"     : "com_tjlms",
+		"state"         : true,
+		"points"        : 6
+	},
+	{
+		"title"         : "Create a course",
+		"alias"         : "onAfterCourseCreation",
+		"description"   : "Earn points on creating a course",
+		"command"       : "onAfterCourseCreation",
+		"extension"     : "com_tjlms",
+		"state"         : true,
+		"points"        : 8
+	},
+	{
+		"title"         : "Complete a course",
+		"alias"         : "onAfterCourseCompletion",
+		"description"   : "Earn points on completing a course",
+		"command"       : "onAfterCourseCompletion",
+		"extension"     : "com_tjlms",
+		"state"         : true,
+		"points"        : 9
+	}
+]

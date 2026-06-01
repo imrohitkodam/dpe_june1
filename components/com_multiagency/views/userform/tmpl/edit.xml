@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_MULTIAGENCY_TITLE_FORM_VIEW_USER" option="View">
+        <message>
+                        <![CDATA[COM_MULTIAGENCY_TITLE_FORM_VIEW_USER_DESC]]>
+        </message>
+    </layout>
+</metadata>

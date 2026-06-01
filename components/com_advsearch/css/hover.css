@@ -1,0 +1,90 @@
+@font-face {
+	font-family: Book Antiqua;
+	src: url('../font/ANTQUAB.TTF');
+	/*font-weight:400px!important;*/
+	font-weight: normal;
+    font-style: normal;	
+}
+
+@font-face {
+	font-family: Book Antiqua-normal;
+	src: url('../font/BKANT.TTF');
+	/*font-weight:400px!important;*/
+	font-weight: normal;
+    font-style: normal;
+	
+}
+
+
+.photos .photo {
+  width: 150px;
+  margin: 5px;
+  float: left;
+}
+
+.photos .photo img {
+  display: block;
+  width: 100%;
+}
+
+
+#mydiv{
+    position:absolute;
+    overflow-y:none;
+    /*background:url(../images/blank.png) repeat;*/
+    /*border:1px solid #dbdbdb;*/
+    z-index:1001;
+    /*padding:0px 0px 32px 0px; */
+   /* -webkit-box-shadow: 5px 0px 30px #000;
+    -moz-box-shadow: 5px 0px 30px #000;
+   	 box-shadow:5px 0px 30px #000;*/
+	 border:3px solid #838383!important;
+	 /*border-bottom:0px!important;*/
+	 margin-left:-1px;
+	 margin-top:-3px;
+	 z-index:0;
+}
+
+.imagetitle{
+/*background:#838383;*/
+z-index:9999;
+/*position:relative;*/
+line-height:13px;
+/*min-height:30px;
+max-height:30px;*/
+padding:2px 0px 4px 0px !important;
+text-align:left !important;
+}
+
+.rectitle{
+color:#f1a601;
+min-height:20px;
+max-height:100px;
+font-size:8px;
+font-weight:bold;
+margin-bottom:10px;
+text-decoration:none !important;
+line-height:normal;
+}
+#mydiv img{
+    /*border:1px solid #dbdbdb;*/
+}
+#mydiv br{
+    clear:both;
+}
+#recordtitle a{ min-height:20px; max-height:70px; font-size:11px!important; text-decoration:none; font-family: Book Antiqua; color:#f1a601!important;}
+#recordtitle a:hover{ text-decoration:none;}
+#mydiv-loader img{ height:50px!important; width:50px!important; position:fixed!important; top:33%; left:32%; border:none!important;}
+
+#mydiv{ top:0;/*-webkit-transform: rotate(-0deg) scale(1.5);-moz-transform: rotate(-0deg) scale(1.5);-o-transform: rotate(-0deg) scale(1.5);transform: rotate(-0deg) scale(1.5);*//*-webkit-transition: all 0.2s ease-in-out;
+-moz-transition: all 0.1s ease-in-out;
+-o-transition: all 0.1s ease-in-out;
+-ms-transition: all 0.1s ease-in-out;*/ margin-bottom:5px;}
+
+.mozila #mydiv a{ font-size:9px;}
+#mydiv:hover{/*-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;*/
+	text-decoration: none;}
+	

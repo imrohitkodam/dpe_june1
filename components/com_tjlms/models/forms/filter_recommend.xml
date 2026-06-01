@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset addfieldpath="/administrator/components/com_tjlms/models/fields">
+		<fields name="filter">
+ 			<field
+				name="search"
+				type="text"
+				label="COM_TJLMS_SEARCH_FILTER"
+				description="COM_TJLMS_SEARCH_FILTER"
+				hint="JSEARCH_FILTER"
+				onchange="this.form.submit();"
+			/>
+			<field
+				name="groups"
+				type="usergrouplist"
+				multiple="multiple"
+				label="COM_TJLMS_FILTER_SUBUSERFILTER"
+				description="COM_TJLMS_FILTER_SUBUSERFILTER_DESC"
+				onchange="this.form.submit();"
+			/>
+			<field
+				name="subuserfilter"
+				type="subuserfilter"
+				class="input"
+				label="COM_TJLMS_FILTER_SUBUSERFILTER"
+				description="COM_TJLMS_FILTER_SUBUSERFILTER_DESC"
+				onchange="this.form.submit();"
+			/>
+		</fields>
+		<fields name="list">
+			<field
+				name="limit"
+				type="limitbox"
+				class="input-mini"
+				default="20"
+				label="COM_TJLMST_LIST_LIMIT"
+				description="COM_TJLMST_LIST_LIMIT_DESC"
+				onchange="this.form.submit();"
+			/>
+		</fields>
+	</fieldset>
+</form>

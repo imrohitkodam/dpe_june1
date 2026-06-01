@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+        <field name="search" type="text" hint="COM_MULTIAGENCY_SEARCH_FILTER_SUBMIT"
+               label="COM_MULTIAGENCY_FILTER_SEARCH_DESC"
+               class="js-stools-search-string" />
+        <field name="role_id" type="roles"
+			label="COM_MULTIAGENCY_FORM_DESC_ROLE_LIST"
+			onchange="this.form.submit();"
+		/>
+		<field name="agencies" type="cluster"
+			label="COM_MULTIAGENCY_FORM_LBL_LICENCE_MULTIAGENCY_ID,COM_MULTIAGENCY_ORGANISATION"
+			addfieldpath="/administrator/components/com_tjfields/models/fields"
+			onchange="this.form.submit();"
+		/>
+		<!--DPE Hack union is done to add select tag in first option of the list-->
+		<field
+			name="tags"
+			type="sql"
+			query="SELECT DISTINCT tags.title ,tags.id
+					FROM `#__tags` as tags INNER JOIN  `#__contentitem_tag_map` as tagMap  ON tags.id=tagMap.tag_id where type_alias='com_multiagency.multiagency' ORDER BY tags.title ASC;"
+			key_field="id"
+			value_field="title"
+			translate="false"
+			label="COM_DPE_FORM_LBL_TAG"
+			description="COM_DPE_FORM_LBL_TAG_DESC"
+			onchange="this.form.submit();"
+			filter="INT"
+			multiple="multiple"
+		/>
+
+		<!--DPE Hack add select Active and inactive for export users list-->
+		<field name="sla_filter" type="list"
+			label="COM_MULTIAGENCY_SLA_FILTER_SCOPE"
+			onchange="this.form.submit();"
+		>
+			<option value="all">COM_MULTIAGENCY_ALL_USERS</option>
+			<option value="active">COM_MULTIAGENCY_ACTIVE_SLA_USERS</option>
+			<option value="inactive">COM_MULTIAGENCY_INACTIVE_SLA_USERS</option>
+		</field>
+    </fields>
+</form>

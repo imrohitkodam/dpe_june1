@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<form addfieldpath="components/com_multiagency/models/fields">
+		<field
+			name="license_id"
+			label="COM_SLA_SLA_ACTIVITY_FORM_LBL_LICENSE_ID,COM_SLA_ORGANISATION"
+			description="COM_SLA_SLA_ACTIVITY_FORM_DESC_LICENSE_ID,COM_SLA_ORGANISATION"
+			type="licenses"
+			translate="false"
+			header="Select School"
+			required="true"
+			filter="int"
+			class="cluster-client"
+			/>
+		<field
+			name="lead_consultant_id"
+			label="COM_SLA_SLA_ACTIVITY_FORM_LBL_LEAD_CONSULTANT"
+			description="COM_SLA_SLA_ACTIVITY_FORM_DESC_LEAD_CONSULTANT"
+			type="list"
+			required="true"
+			class="lead_consultant_id"
+		/>
+		</form>
+
+		<field name="cluster_user"
+			type="list"
+			default=""
+			class="cluster_user"
+			label="COM_SLA_SCHOOL_MEMBERS,COM_SLA_ORGANISATION"
+			description="">
+		</field>
+
+		<field
+			name="sla_activity_type_id"
+			required="true"
+			type="sql"
+			query="SELECT id,title FROM `#__tj_sla_activity_types` WHERE state = '1' ORDER BY title asc" key_field="id" value_field="title"
+			translate="false"
+			header="Select Activity Type"
+			filter="int"
+			label="COM_SLA_SLA_ACTIVITY_FORM_LBL_ACTIVITY_TYPE"
+			description="COM_SLA_SLA_ACTIVITY_FORM_DESC_ACTIVITY_TYPE"
+			/>
+
+		<field
+			name="activity_name"
+			type="text"
+			filter="string"
+			label="COM_SLA_SLA_ACTIVITY_FORM_LBL_TITLE"
+			description="COM_SLA_SLA_ACTIVITY_FORM_DESC_TITLE"
+			required="true"
+			/>
+
+		<field
+			name="activity_desc"
+			type="textarea"
+			filter="string"
+			label="COM_SLA_SLA_ACTIVITY_FORM_LBL_DESC"
+			description="COM_SLA_SLA_ACTIVITY_FORM_DESC_DESC"
+			rows="7"
+			cols="80"
+			/>
+
+		<field
+			name="ideal_time"
+			type="number"
+			filter="int"
+			label="COM_SLA_SLA_ACTIVITY_FORM_LBL_IDEAL_TIME"
+			description="COM_SLA_SLA_ACTIVITY_FORM_DESC_IDEAL_TIME"
+			min="0"
+			/>
+
+		<field
+			name="start_date"
+			type="calendar"
+			default=""
+			translateformat="true"
+			singleheader="true"
+			filltable="true"
+			label="COM_SLA_SLA_ACTIVITY_FORM_LBL_START_DATE"
+			description="COM_SLA_SLA_ACTIVITY_FORM_DESC_START_DATE"
+			showtime="true"
+			/>
+
+		<field
+			name="due_date"
+			type="calendar"
+			default=""
+			translateformat="false"
+			format="%d-%m-%Y %H:%M"
+			singleheader="true"
+			filltable="true"
+			label="COM_SLA_SLA_ACTIVITY_FORM_LBL_DUE_DATE"
+			description="COM_SLA_SLA_ACTIVITY_FORM_DESC_DUE_DATE"
+			showtime="true"
+			filter="user_utc"
+			/>
+
+		<field
+			name="todo_id"
+			type="hidden"
+			label=""
+			description=""
+			class="readonly"
+			default="0"
+			readonly="true"
+		/>
+
+		<field
+			name="id"
+			type="number"
+			label="JGLOBAL_FIELD_ID_LABEL"
+			description="JGLOBAL_FIELD_ID_DESC"
+			class="readonly"
+			default="0"
+			readonly="true"
+		/>
+	</fieldset>
+</form>

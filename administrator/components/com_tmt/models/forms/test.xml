@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="quizDetails" label="COM_TMT_CONFIG_PARAMETER">
+		<field name="id" type="text"
+		label="COM_TMT_FORM_LBL_TEST_ID"
+		description="JGLOBAL_FIELD_ID_DESC"
+		class="readonly"
+		default="0"
+		readonly="true" />
+
+		<field name="title" type="text"
+		label="COM_TMT_FORM_LBL_TEST_TITLE"
+		description="COM_TMT_FORM_DESC_TEST_TITLE"
+		maxlength="255"
+		required="true"
+		class="quiztitle"
+		/>
+
+		<field name="alias" type="text"
+		label="COM_TMT_QUIZ_ALIAS"
+		description="COM_TMT_QUIZ_ALIAS_DESC"
+		filter="alias" />
+
+		<field name="description" type="textarea"
+		label="COM_TMT_FORM_LBL_TEST_DESCRIPTION"
+		description="COM_TMT_FORM_DESC_TEST_DESCRIPTION"
+		cols="100"
+		rows="10"
+		/>
+
+		<field name="start_date" type="calendar" class="inputbox lesson_start_date validate-datetime"
+			label="COM_TJLMS_FORM_LBL_STARTDATE" filter="user_utc"
+			description="COM_TJLMS_FORM_LBL_STARTDATE_DESC" format="%Y-%m-%d %H:%M:%S" size="22"
+			/>
+
+		<field name="end_date" type="calendar" class="inputbox lesson_end_date validate-datetime"
+			label="COM_TJLMS_FORM_LBL_ENDDATE" filter="user_utc"
+			description="COM_TJLMS_FORM_LBL_ENDDATE_DESC" format="%Y-%m-%d %H:%M:%S" size="22"
+			/>
+		<field name="created_by" type="createdby" default=""
+			label="COM_TJLMS_FORM_LBL_LESSON_CREATED_BY"
+			description="COM_TJLMS_FORM_DESC_LESSON_CREATED_BY"  />
+
+		<field name="termscondi" type="radio" class="btn-group"
+			label="COM_TMT_FORM_LBL_ENABLE_TERMS_CONDI"
+			description="COM_TMT_FORM_DESC_ENABLE_TERMS_CONDI"
+			default="0"	>
+				<option value="1">COM_TMT_FORM_JYES</option>
+				<option value="0">COM_TMT_FORM_JNO</option>
+		</field>
+
+		<field name="answer_sheet" type="radio" class="btn-group"
+			label="COM_TMT_FORM_LBL_ALLOW_REVIEW_ANSPAPER"
+			description="COM_TMT_FORM_DESC_ALLOW_REVIEW_ANSPAPER"
+			default="1"	>
+				<option value="1">COM_TMT_FORM_JYES</option>
+				<option value="0">COM_TMT_FORM_JNO</option>
+		</field>
+
+		<field name="show_correct_answer" type="radio" class="btn-group"
+			label="COM_TMT_FORM_LBL_SHOW_CORRECT_ANSWERS"
+			description="COM_TMT_FORM_DESC_SHOW_CORRECT_ANSWERS"
+			default="1"
+			showon="answer_sheet:1">
+				<option value="1">COM_TMT_FORM_JYES</option>
+				<option value="0">COM_TMT_FORM_JNO</option>
+		</field>
+
+		<field name="print_answersheet" type="radio" class="btn-group"
+			label="COM_TMT_FORM_LBL_SHOW_PRINT_BUTTON"
+			description="COM_TMT_FORM_DESC_SHOW_PRINT_BUTTON"
+			default="1"	showon="answer_sheet:1">
+				<option value="1">COM_TMT_FORM_JYES</option>
+				<option value="0">COM_TMT_FORM_JNO</option>
+		</field>
+
+		<field name="questions_shuffle" type="radio" class="btn-group"
+		label="COM_TMT_FORM_LBL_TEST_QUESTIONS_SHUFFLE"
+		description="COM_TMT_FORM_DESC_TEST_QUESTIONS_SHUFFLE"
+		default="0">
+			<option value="1" >COM_TMT_FORM_JYES</option>
+			<option value="0" >COM_TMT_FORM_JNO</option>
+		</field>
+
+		<field name="answers_shuffle" type="radio" class="btn-group"
+		label="COM_TMT_FORM_LBL_TEST_ANSWERS_SHUFFLE"
+		description="COM_TMT_FORM_DESC_TEST_ANSWERS_SHUFFLE"
+		default="0">
+			<option value="1" >COM_TMT_FORM_JYES</option>
+			<option value="0" >COM_TMT_FORM_JNO</option>
+		</field>
+
+		<field name="show_all_questions" type="radio" class="btn-group"
+			label="COM_TMT_FORM_LBL_TEST_SHOW_ALL_QUESTIONS"
+			description="COM_TMT_FORM_DESC_TEST_SHOW_ALL_QUESTIONS"
+			default="0">
+			<option value="1">COM_TMT_FORM_JYES</option>
+			<option value="0">COM_TMT_FORM_JNO</option>
+		</field>
+
+		<field name="pagination_limit"
+			class="btn-group validate-natural-number"
+			label="COM_TMT_FORM_LBL_TEST_QUESTIONS_PER_PAGE"
+			description="COM_TMT_FORM_DESC_TEST_QUESTIONS_PER_PAGE"
+			type="number"
+			showon="show_all_questions:0"
+			min="1"
+			max="9999"
+			default="5"
+		/>
+
+		<field name="show_questions_overview" type="radio" class="btn-group"
+			label="COM_TMT_FORM_LBL_TEST_SHOW_QUESTIONS_OVERVIEW"
+			description="COM_TMT_FORM_DESC_TEST_SHOW_QUESTIONS_OVERVIEW"
+			default="0"
+			showon="show_all_questions:1">
+			<option value="1">COM_TMT_FORM_JYES</option>
+			<option value="0">COM_TMT_FORM_JNO</option>
+		</field>
+
+		<field name="show_thankyou_page" type="radio" class="btn-group"
+		label="COM_TMT_FORM_LBL_TEST_SHOW_THANKYOU_PAGE"
+		description="COM_TMT_FORM_DESC_TEST_SHOW_THANKYOU_PAGE"
+		default="1">
+		       <option value="1">COM_TMT_FORM_JYES</option>
+		       <option value="0">COM_TMT_FORM_JNO</option>
+		</field>
+	</fieldset>
+
+	<fieldset name="scoreandresult" label="COM_TMT_CONFIG_PARAMETER" >
+
+		<field name="total_marks" type="text"
+		label="COM_TMT_FORM_LBL_TEST_TOTAL_MARKS"
+		description="COM_TMT_FORM_DESC_TEST_TOTAL_MARKS"
+		class="inputbox validate-natural-number"
+		required="true"
+		size="40"/>
+
+		<field name="passing_marks" type="text"
+		label="COM_TMT_FORM_LBL_TEST_PASSING_MARKS"
+		description="COM_TMT_FORM_DESC_TEST_PASSING_MARKS"
+		class="inputbox validate-natural-number"
+		required="true"
+		size="40"/>
+	</fieldset>
+	<fieldset name="time" label="COM_TMT_CONFIG_PARAMETER" >
+
+		<field name="time_duration" type="text"
+		label="COM_TMT_FORM_LBL_TEST_TIME_DURATION"
+		description="COM_TMT_FORM_DESC_TEST_TIME_DURATION"
+		class="inputbox validate-whole-number"
+		size="40" />
+
+		<field name="show_time" type="radio" class="btn-group"
+		label="COM_TMT_FORM_LBL_TEST_SHOW_TIME"
+		description="COM_TMT_FORM_DESC_TEST_SHOW_TIME"
+		default="1" >
+			<option value="1" >COM_TMT_FORM_JYES</option>
+			<option value="0" >COM_TMT_FORM_JNO</option>
+		</field>
+
+		<field name="show_time_finished" type="radio" class="btn-group"
+		label="COM_TMT_FORM_LBL_TEST_SHOW_TIME_FINISHED"
+		description="COM_TMT_FORM_DESC_TEST_SHOW_TIME_FINISHED"
+		default="0">
+			<option value="1">COM_TMT_FORM_JYES</option>
+			<option value="0">COM_TMT_FORM_JNO</option>
+		</field>
+
+		<field name="time_finished_duration" type="text"
+		label="COM_TMT_FORM_LBL_TEST_TIME_FINISHED_DURATION"
+		description="COM_TMT_FORM_DESC_TEST_TIME_FINISHED_DURATION"
+		class="inputbox validate-whole-number"
+		size="40" />
+	</fieldset>
+
+	<fieldset name="questions">
+		<field name="type" type="radio"
+			label="COM_TMT_FORM_LBL_QUIZ_TYPE"
+			description="COM_TMT_FORM_DESC_QUIZ_TYPE"
+			default="plain" class="btn-group">
+			<option value="set" >COM_TMT_FORM_JYES</option>
+			<option value="plain" >COM_TMT_FORM_JNO</option>
+		</field>
+
+		<field name="nums_of_sets" type="text"
+			label="COM_TMT_FORM_LBL_NUMS_OF_SETS"
+			description="COM_TMT_FORM_DESC_NUMS_OF_SETS"
+			class="inputbox validate-natural-number"
+			size="40"
+		/>
+
+		<field name="gradingtype" type="list"
+			label="COM_TMT_QUIZ_TYPE_LBL"
+			description="COM_TMT_QUIZ_TYPE_DESC"
+			required="true"
+			multiple="false" onchange="changeQzType(this.value);">
+				<option value="">COM_TMT_QUIZ_TYPE_DESC</option>
+				<option value="quiz">COM_TMT_QUIZ_AS_QUIZ</option>
+				<option value="exercise">COM_TMT_QUIZ_AS_EXERCISE</option>
+				<option value="feedback">COM_TMT_QUIZ_AS_FEEDBACK</option>
+		</field>
+	</fieldset>
+	<fieldset name="extra">
+		<field name="reviewers" type="tmtreviewers"
+		label="COM_TMT_FORM_LBL_TEST_REVIEWERS"
+		description="COM_TMT_FORM_DESC_TEST_REVIEWERS"
+		multiple="true"
+		default=""
+		/>
+	</fieldset>
+</form>

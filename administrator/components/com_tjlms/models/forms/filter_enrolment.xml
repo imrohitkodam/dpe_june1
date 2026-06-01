@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fields name="filter">
+		<field name="search" type="text" label="COM_TJLMST_FILTER_SEARCH_DESC_ENROLLMENT"
+			hint="COM_TJLMST_FILTER_SEARCH_DESC_ENROLLMENT_NAME"
+			description="COM_TJLMST_FILTER_SEARCH_DESC_ENROLLMENT"
+		/>
+		<field name="groupfilter" type="usergroupbyaccess"
+			label="COM_USERS_CONFIG_FIELD_GUEST_USER_GROUP_LABEL"
+			description="COM_USERS_CONFIG_FIELD_GUEST_USER_GROUP_DESC" onchange="this.form.submit();"
+			>
+			<option value="">COM_TJLMS_ENROLLED_USER_ACCESS</option>
+		</field>
+		<field name="subuserfilter" type="subuserfilter" class="input"
+			label="COM_TJLMS_FILTER_SUBUSERFILTER" description="COM_TJLMS_FILTER_SUBUSERFILTER_DESC"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+	<fields name="list">
+		<field name="limit" type="limitbox" class="input-mini"
+			default="25" label="COM_TJLMST_LIST_LIMIT"
+			description="COM_TJLMST_LIST_LIMIT_DESC"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</form>

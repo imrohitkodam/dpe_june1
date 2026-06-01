@@ -1,0 +1,913 @@
+/*SCROLL BAR*/
+/*
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+    width: 6px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+    background-color: #ccc;
+    border: 2px solid #555555;
+}
+*/
+/*SCORLL BAR ENDS*/
+@media only screen and (max-width: 800px) {
+    #jlikeToolbar #jlike-container {
+        width:50%;
+    }
+
+    #tmt_test #jlikeToolbar_bottom:after {
+        clear: both;
+    }
+
+	.sub-textarea
+	{
+		width:75%;
+	}
+	.progress,.process{
+		position:relative;
+		height: 25px !important;
+		margin-bottom: 18px;
+	}
+	.progress .progress_bar_text , .process .process_bar_text{
+		position: absolute;
+		top: 0;
+		padding: 0 10px;
+		z-index: 1;
+		color: #444;
+		line-height: 28px;
+		font-size: 11px;
+		font-weight: bold;
+		text-transform: uppercase;
+		display: inline-block;
+	}
+	.progress-bar-uploading{
+		background: url(//s.ytimg.com/yts/img/upload/upload-bar-fill-pattern-vflmbnziW.png) repeat;
+		border: 1px solid #d3e9fb;
+		height: 23px !important;
+	}
+	.progress-bar-processing{
+		border: 1px solid #d3e9fb;
+		height: 23px !important;
+		background: #d3e9fb;
+	}
+	.progress-bar-text, .process-bar-text{
+		position: absolute;
+		top: 0;
+		padding: 0 10px;
+		z-index: 1;
+		color: #444;
+		line-height: 28px;
+		font-size: 11px;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+	.lesson-associatefile-form .statusbar
+	{
+		margin-top:0px;
+	}
+
+	.statusbar
+	{
+		min-height:25px;
+		width:100%;
+		vertical-align:top;
+		margin-top:10px;
+		position: relative;
+	}
+
+	.statusbar .abort{
+		position: absolute;
+		right: 6px;
+		bottom: 3px;
+		background-color: #15497c;
+		color: #fff;
+		cursor: pointer;
+		border-radius: 4px;
+		border-color: #15497c #15497c #0a223b;
+		background-image: -webkit-linear-gradient(top,#2384d3,#15497c);
+	}
+
+	.statusbar .abort span{
+	   padding: 4px;
+	}
+
+    #jlikeToolbar_content, #jlikeToolbar, #jlikeToolbar_bottom {
+        margin-right: 0px;
+    }
+
+    #tmt_test .test_controls {
+        float: left;
+    }
+
+    #tmt_test .test_controls_container .span9 {
+        width: 50%;
+        text-align: left;
+    }
+
+    #tmt_test .test_controls_container .span3 {
+        width: 45%;
+    }
+
+    #tmt_test #jlikeToolbar_bottom .test_page_container {
+        width: 50%;
+    }
+
+    #tmt_test #jlikeToolbar_bottom .test_nav_container {
+        width: 50%;
+    }
+
+    #tmt_test #jlikeToolbar_bottom .test_nav_container .test_nav_container_controls {
+        float: left;
+    }
+
+    #tmt_test #jlikeToolbar_bottom .test_nav_container .span12 {
+        width: 100%;
+    }
+
+    #tmt_test #jlikeToolbar_bottom .test_nav_container .span3 {
+        width: 30%;
+    }
+
+    #tmt_test #jlikeToolbar_bottom .test_nav_container .span9 {
+        width: 70%;
+    }
+}
+
+.quiz-pageno-string {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* toolbar start*/
+#jlikeToolbar_bottom {
+    color: white;
+    background: #4E4E4E;
+    border: 1px solid #BCBCBC;
+    bottom: 0px;
+}
+
+#tmt_test .jlike-btn-green {
+    background-color: #FFF;
+    color: #778e0b;
+    border: 1px solid #778e0b;
+    height: 30px;
+    padding: 4px 12px;
+}
+
+#tmt_test #jlikeToolbar_bottom .test_controls, #tmt_test #jlikeToolbar .test_controls {
+    margin: 5px 0px;
+    vertical-align: top;
+}
+
+#tmt_test #jlikeToolbar_bottom .btn, #tmt_test #jlikeToolbar .btn {
+    /*
+padding: 4px 12px;
+height: 30px;
+*/
+    padding: 5px 7px !important;
+    /*
+  height: 20px !important;
+*/
+    background: royalblue !important;
+    color: #fff !important;
+}
+
+#tmt_test .test_timer {
+    margin-right: 0px !important;
+    margin-bottom: 0px !important;
+    margin-top: 0px !important;
+}
+
+.tmt_modalClose {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 111111;
+}
+
+/*#jlikeToolbar_bottom
+{
+padding-top: 5px;
+}*/
+#jlikeToolbar:hover {
+    /*background: #4E4E4E;*/
+    display: inline-block;
+}
+
+/*
+	#jlikeToolbar_content,#jlikeToolbar ,#jlikeToolbar_bottom
+	{
+	margin-right: 30px;
+	}
+*/
+.tj_textpullright {
+    text-align: right;
+}
+
+.progress .progress_bar_text , .process .process_bar_text {
+    position: static;
+    top: 0px;
+    padding: 0 10px;
+    z-index: 1;
+    color: #444;
+    font-size: 12px;
+    display: inline-block;
+}
+
+.bar[aria-valuenow="0"] {
+    color: #777 !important;
+    background-color: transparent;
+    background-image: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.tjprogressbar {
+    margin-top: 2px;
+    margin-left: 5px;
+    position: relative;
+    margin-bottom: initial !important;
+    line-height: 3px;
+}
+
+/**File upload**/
+.fileupload-new .input-append .btn-file {
+    -webkit-border-radius: 0 3px 3px 0;
+    -moz-border-radius: 0 3px 3px 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.fileupload-new .input-append .btn {
+    border: 1px solid #CCC !important;
+}
+
+.fileupload-new .btn-file {
+    position: relative;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.fileupload .uneditable-input {
+    display: inline-block;    margin-bottom: 0;
+    vertical-align: middle;
+    cursor: text;
+    color: black;
+}
+
+.btn-file > input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    cursor: pointer;
+    border: solid transparent;
+    border-width: 0 0 100px 200px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -moz-transform: translate(-300px, 0) scale(4);
+    direction: ltr;
+}
+
+.fileupload input {
+    position: absolute !important;
+    top: 0;
+    right: 0;
+    margin: 0;
+    opacity: 0;
+    font-size: 23px;
+    direction: ltr;
+   cursor: pointer;
+}
+/* FIle upload ends*/
+
+.progress .bar .bar_noprogress {
+    min-width: 30px;
+    color: #777;
+    background-color: transparent;
+    background-image: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+/* toolbar ends*/
+/* Buttons */
+.com_tmt_button {
+    margin: 5px !important;
+}
+
+.com_tmt_width1 {
+    width: 1%;
+}
+
+.com_tmt_width5 {
+    width: 5%;
+}
+
+.com_tmt_width10 {
+    width: 10%;
+}
+
+.com_tmt_width15 {
+    width: 15%;
+}
+
+.com_tmt_width20 {
+    width: 20%;
+}
+
+/*start JUGAD @TODO styling for TJLMS*/
+.tjlms_add_quiz_form fieldset legend h2 {
+    color: #414d5a;
+    font-weight: 100;
+}
+
+.tjlms_add_quiz_form fieldset {
+    padding: 0 10px;
+}
+
+.tjlms_add_quiz_form fieldset legend {
+    padding: 10px 0 0 0;
+    border-bottom: 0px;
+}
+
+.tjlms_add_quiz_form .nav-tabs[id^="myTabTabs"] li.active, .lesson_edit_li .nav-tabs[id^="myTabTabs"] li.active {
+    background-color: #15497c;
+    color: #FFF;
+    position: relative;
+}
+
+.tjlms_add_quiz_form .nav-tabs[id^="myTabTabs"] li.active a, .lesson_edit_li .nav-tabs[id^="myTabTabs"] li.active a {
+    color: #FFF;
+    background-color: transparent;
+    border: none;
+}
+
+.tjlms_add_quiz_form .nav-tabs[id^="myTabTabs"] li a, .lesson_edit_li .nav-tabs[id^="myTabTabs"] li a {
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    color: #bbbbbb;
+}
+
+.tjlms_add_quiz_form .nav-tabs[id^="myTabTabs"], .lesson_edit_li .nav-tabs[id^="myTabTabs"] {
+    border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
+}
+
+.tjlms_add_quiz_form .nav-tabs[id^="myTabTabs"] li.active:after, .lesson_edit_li .nav-tabs[id^="myTabTabs"] li.active:after {
+    content: ' ';
+    height: 0;
+    width: 0;
+    position: absolute;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 9px solid #15497c;
+    left: 35%;
+}
+
+.tjlms_add_quiz_form .form-actions, .lesson_edit_li .form-actions {
+    text-align: right;
+}
+
+.tmt_form_errors {
+    display: none;
+}
+
+/*end JUGAD @TODO styling for TJLMS*/
+#system-message > div {
+    padding-left: 13px !important;
+}
+
+#window-mainbody .btn.btn-primary {
+    text-transform: capitalize;
+}
+
+.btn-medium {
+    height: 30px !important
+}
+
+.tmt_nw-btn {
+    border: none !important;
+    margin: 0px 1px -38px 0px !important;
+}
+
+.tmt_nw {
+    border: 1px solid #ccc !important;
+    background: whitesmoke !important;
+    padding-bottom: 20px !important;
+    margin-left: 1px !important;
+}
+
+.tmt_top {
+    margin-top: -30px !important;
+}
+
+.tmt_top1 {
+    margin-top: -30px !important;
+    margin-bottom: -10px !important;
+}
+
+.tmt-sidebar-nav-fixed {
+    position: fixed;
+    top: 50%;
+    right: 0;
+}
+
+/*Quiz Page*/
+.tjlms-wrapper #contentarea {
+    border: none;
+}
+
+#contentarea [class^="icon-"], #contentarea [class*=" icon-"] {
+    height: 25px;
+    width: 25px;
+    margin: 10px;
+}
+
+#contentarea .label {
+    font-size: 16px;
+    background-color: #EEE;
+    padding: 5px 20px;
+    color: #333;
+    margin-top: 20px;
+    text-align: left;
+    font-weight: 300 !important;
+    min-width: 100%;
+}
+
+/*Added by komal*/
+#tmt_testpremise .tmt-quiz-desc .label {
+    white-space: normal !important;
+    line-height: 1.5;
+    display: block;
+    text-align: justify;
+    max-height: 200px;
+    overflow-y: scroll;
+}
+
+#tmt_testpremise .tmt-alert-msg {
+    white-space: normal !important;
+    padding: 20px !important;
+    line-height: 28px;
+}
+
+#tmt_testpremise .btn-toolbar {
+    margin-top: 0px !important;
+}
+
+.tmt-questions {
+    padding: 20px !important;
+    background-position: 0px 0px;
+    background-size: 25px 25px;
+    vertical-align: middle;
+}
+
+.tmt-duration {
+    padding: 20px !important;
+    background-position: 0px 0px;
+    background-size: 25px 25px;
+    vertical-align: middle;
+}
+
+.tmt-totalmarks {
+    padding: 20px !important;
+    background-position: 0px 0px;
+    background-size: 25px 25px;
+    vertical-align: middle;
+}
+
+.tmt-passingmarks {
+    padding: 20px !important;
+    background-position: 0px 0px;
+    background-size: 25px 25px;
+    vertical-align: middle;
+}
+
+#countdown_timer .icon-time {
+    background-size: 25px 25px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.tmt-resume {
+    padding: 5px 20px;
+    margin: 20px;
+    background-color: transparent !important;
+    color: #555 !important;
+    font-size: 16px;
+    font-weight: normal !important;
+    text-transform: uppercase;
+    padding-left: 0px;
+}
+
+.tmt-quiz-box {
+    background-color: #EEE;
+    color: #333;
+    margin-top: 20px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+h2.componentheading {
+    display: inline-block;
+    font-size: 24px;
+    margin: 10px 20px;
+}
+
+/*.tmt-cross, .tmt-cross:hover, .tmt-cross:active {
+	background: #3d4045!important;
+	border-color: #3d4045!important;
+	color:#fff!important;
+}*/
+.test-cross {
+    height: 25px;
+    width: 25px;
+}
+
+.questions_container .well {
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.questions_container .hr {
+    border: none;
+}
+
+.questions_container .tj_textpullright {
+    border: 1px solid #555;
+    padding: 5px;
+    border-radius: 2px;
+    text-align: center;
+    color: #555;
+    float: right;
+}
+
+#jlikeToolbar_content {
+    line-height: 1;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%
+}
+
+#jlikeToolbar_content .container {
+    background-color: #eee;
+    padding: 0px;
+    width: 100% !important;
+    max-width: initial !important;
+}
+
+/*
+#jlikeToolbar_content [class^="icon-"],  #jlikeToolbar_content [class*=" icon-"] {
+    width: 30px;
+     height: 30px;
+    margin-top: 0px;
+}
+*/
+.tmt-qno {
+    color: #555;
+    font-weight: bold;
+    background-color: #eee;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+.tmt-qno span {
+	margin-right:5px;
+}
+
+.tmt-qtext span {
+	margin-left:5px;
+}
+
+.ques-no-span {
+    height: 40px;
+    line-height: 40px;
+}
+
+.tmt-qdata {
+    margin-bottom: 10px;
+}
+
+#jlikeToolbar_bottom {
+    background: transparent;
+    border: none;
+    padding-left: 0px;
+    color: #666;
+    bottom: 0px;
+}
+
+/*#jlikeToolbar_content .toolbar_heading {
+    font-weight: bold;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+*/
+#jlikeToolbar_bottom #jlikeToolbar_content {
+    max-width: initial !important;
+}
+
+#tmt_test .test_timer {
+    margin-top: 15px !important;
+    color: #555;
+}
+
+/* #tmt_test #jlikeToolbar .test_controls  {
+    margin: 5px 0px 5px -20px;
+}*/
+.text-error {
+    color: #555;
+}
+
+.com-tmt-paper-div {
+    padding-left: 10px;
+}
+
+#tmt_test .text-error {
+    color: #FF0000 !important;
+}
+
+/*.tmt-cross-container {
+    display: inline-block;
+    float: right;
+    background: #ccc;
+    padding: 12px;
+}*/
+
+.tmt-cross-container .fa-close {
+    font-size: 2em;
+}
+
+.tmt-cross-container .tmt-cross {
+    cursor: pointer;
+}
+
+.com-tmt-paper-div label.radio, .com-tmt-paper-div label.checkbox {
+    font-weight: normal;
+}
+
+#jlikeToolbar_bottom .container {
+    background: #eee;
+    margin-right: auto;
+}
+
+#jlikeToolbar_bottom .progress_bar_text {
+    position: absolute;
+    left: 20px;
+}
+
+.span5.test_controls.test_page_container.center {
+    padding-top: 8px;
+}
+
+.icon-chevron-right {
+    background-image: url('../images/tmt-right.png');
+    background-position: 0px 0px;
+}
+
+.icon-chevron-left {
+    background-image: url('../images/tmt-left.png');
+    background-position: 0px 0px;
+}
+
+#tmt_test #jlikeToolbar_bottom .btn, #tmt_test #jlikeToolbar_bottom .btn:hover, #tmt_test #jlikeToolbar_bottom .btn:active, #tmt_test #jlikeToolbar_bottom .btn:focus {
+    background: transparent !important;
+    border: none !important;
+}
+
+.final-submit {
+    margin-top: 5px;
+    padding: 5px 10px !important;
+    border: 1px solid #555 !important;
+    border-radius: 2px;
+    color: #555 !important;
+    background-color: transparent !important;
+}
+
+.result-box {
+    border: none;
+    background: transparent;
+    margin: 0px;
+}
+
+.thankyou-heading {
+    font-size: 24px;
+}
+
+.brown-text {
+    color: #555;
+}
+
+.result-block {
+    background-color: #eee;
+    padding: 10px 40px;
+}
+
+.result-block .span6 {
+    padding: 10px 20px;
+}
+
+.result-right-block {
+    border-left: 1px solid #ccc;
+}
+
+.result-block .span12 {
+    margin-left: 0px;
+}
+
+.tmt-quest-desc {
+    padding-left: 45px;
+    margin-bottom: 10px;
+}
+
+.tmt-alert .alert-info {
+    background: none;
+    border: none;
+    color: #555;
+    padding-left: 20px;
+}
+
+#window-mainbody .btn.btn-primary {
+    text-transform: uppercase;
+}
+
+.tmt-cross-container .tmt_modalClose {
+    position: static;
+    padding: 0px;
+}
+
+.result-box {
+    margin: 0px !important;
+}
+
+.tmt-quest {
+	display: table-row;
+	width: 100%;
+}
+.tmt-quest .tmt-qno-container, .tmt-quest .tmt-qtext {
+	display: table-cell;
+}
+
+.tmt-quest .tmt-qtext {
+	vertical-align : middle;
+	padding-left: 5px;
+}
+
+.tjprogressbar {
+    margin-top: 5px;
+}
+
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: none;
+}
+
+.quiz-navigate-btn {
+    padding: 0px;
+    border: none;
+    background: transparent;
+    color: #0358af;
+    height: 30px;
+    line-height: 30px;
+    vertical-align: middle;
+    margin: 0px 5px;
+}
+
+.view-right {
+    text-align: right;
+}
+
+.view-left {
+    text-align: left;
+}
+
+.view-center {
+    text-align: center;
+}
+
+.sidebar-nav- {
+    position: fixed;
+    top: 50%;
+    right: 0;
+}
+
+/*Automatic sumbmit quiz message*/
+span.automatic-submit-msg {
+    display: none;
+}
+
+.automatic-on button.finish-test[disabled] {
+    color: #575757 !important;
+    border: 1px solid #939393 !important;
+    display: none;
+}
+
+.automatic-on span.automatic-submit-msg {
+    display: block;
+    color: #720201 !important;
+}
+
+.final-submit[disabled] {
+    color: #434343 !important;
+    border: 1px solid gray !important;
+    opacity: 0.5;
+}
+
+span.tmt-cross.disabled {
+	cursor: initial;
+}
+
+span.tmt-cross.disabled i.fa.fa-close:before {
+    color: #575757;
+}
+
+.float-left-prev button.jlike-btn-green.final-submit {
+    float: left;
+}
+
+/*tmt start*/
+.tmt_testpremise .tmt {
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.tmt_testpremise  .tmt-start,
+.questions_container .review-block {
+
+    border-color: #ccc;
+    -webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+}
+.tmt-start p{
+  font-size: 18px;
+  line-height: 35px;
+
+}
+@media (min-width: 1200px) {
+    .automatic-on span.automatic-submit-msg {
+        height: 30px;
+        padding: 10px 0;
+        white-space: nowrap;
+    }
+}
+@media (max-width: 900px) {
+    .left_table th, .left_table td {
+        text-align: left !important;
+    }
+
+    .hidebtn {
+        display: none;
+    }
+
+    .top-heading {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        background: white;
+    }
+
+    .table-containing-table {
+        margin-top: 145px;
+    }
+
+    div.answer-template-radio,
+    div.answer-template-checkbox {
+        margin-top: 8px;
+    }
+
+    .top-heading .add-ques-btn-div {
+        margin-top: 18px;
+    }
+
+    .top-heading .btn-wrapper {
+        padding-top: 20px !important;
+    }
+}
+.pick-questions-modal .js-stools-field-filter #filter_gradingtype_chzn {
+        display: none;
+}
+
+#tmt_testpremise .tmt-quiz-desc .long_desc_extend_more
+{
+    display: none;
+    overflow-y: scroll;
+    max-height: 200px;
+}

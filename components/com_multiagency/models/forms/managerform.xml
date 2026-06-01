@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="su_id" type="hidden" />
+		<field name="manager_id" type="sql" style="width: 100%;" default="10" class="userIds col-xs-12 col-sm-7 col-md-7" label="COM_MULTIAGENCY_FORM_LBL_MULTIAGENCY_ASSIGN_MANGER_FIELD,COM_MULTIAGENCY_ORGANISATION" query="SELECT id, CONCAT(`name`, ' (', `email`, ')') as name FROM #__users where block = 0 ORDER BY name ASC" key_field="id" value_field="name" required="true" onchange="mangerAssign(this);" >
+			<option value="0">COM_MULTIAGENCY_FORM_LBL_MULTIAGENCY_CREATE_NEW</option>
+		</field>
+		<field name="first_name" type="text" label="COM_MULTIAGENCY_FORM_LBL_USER_FIRST_NAME" class='extravalue' required="true" />
+		<field name="email" type="email" label="COM_MULTIAGENCY_USERS_EMAIL" class='extravalue emailIds'  required="true" />
+	</fieldset>
+</form>

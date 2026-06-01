@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Glossaries">
+		<message>Display a glossary with Defination</message>
+	</layout>
+        <fields name="request">
+            <fieldset name="request"
+			addfieldpath="/administrator/components/com_seoglossary/models/fields"
+		 >
+			<field
+				name="catid"
+				type="glossary" 
+				label="COM_SEOGLOSSARY_FORM_SELECT_GLOSSARY"
+				description="COM_SEOGLOSSARY_DESC_SELECT_GLOSSARY"
+			>
+			</field>
+		</fieldset>
+		<fieldset name="advanced">
+			<field name="ordering"
+               type="list"
+               default="tterm"
+               label="JFIELD_ORDERING_LABEL"
+               description="JFIELD_ORDERING_DESC"
+			   showon="theme:table,grid,flat,responsive"
+			   >
+            <option value="id" >JGLOBAL_MOST_RECENT_FIRST</option>
+            <option value="tterm">JGLOBAL_TITLE_ALPHABETICAL</option>
+            <option value="rand()">JGLOBAL_RANDOM_ORDER</option>
+			<option value="order">JGLOBAL_ORDERING</option>
+	    </field>
+        		<field name="direction"
+               type="list"
+               default="desc"
+               label="JGLOBAL_ORDER_DIRECTION_LABEL"
+               description="JGLOBAL_ORDER_DIRECTION_DESC" showon="theme:table,grid,flat,responsive">
+          <option value="asc" >JGLOBAL_ORDER_ASCENDING</option>
+            <option value="desc">JGLOBAL_ORDER_DESCENDING</option>
+        </field>
+		<field name="theme"
+               type="list"
+               default="table"
+               label="COM_SEOGLOSSARY_FORM_SELECT_THEME"
+               description="COM_SEOGLOSSARY_DESC_SELECT_THEME">
+        <option value="table">COM_SEOGLOSSARY_TABLE</option>
+        <option value="grid">COM_SEOGLOSSARY_MASONARY</option>
+		<option value="alpha">COM_SEOGLOSSARY_ALPHABETICAL</option>
+		<option value="flat">COM_SEOGLOSSARY_FLAT</option>
+        <option value="responsive">COM_SEOGLOSSARY_RESPONSIVE</option>
+        </field>
+		<field name="show_grid_image"
+             type="radio"
+			 class="btn-group"
+             default="1"
+             label="COM_SEOGLOSSARY_FORM_SELECT_USENETRY"
+			 description="COM_SEOGLOSSARY_DESC_SELECT_USENETRY">
+                 <option value="0">JNO</option>
+                 <option value="1">JYES</option>
+			</field>
+		</fieldset>
+				
+	</fields>
+</metadata>
+

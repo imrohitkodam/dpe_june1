@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_TMT_TITLE_FORM_VIEW_QUESTION" option="View">
+        <message>
+                        <![CDATA[COM_TMT_TITLE_FORM_VIEW_QUESTION_DESC]]>
+        </message>
+    </layout>
+    <fields name="params">
+        <fieldset 
+            name="basic"
+            label="COM_TMT_FIELDSET_ITEM_ID_SELECT_LABEL">
+            <field
+                name="item_id"
+                query="SELECT 0 as `id` UNION SELECT `id` FROM #__tmt_questions ORDER BY `id`"
+                type="sql"
+                key_field="id" 
+                value_field="id"
+                label="COM_TMT_ITEM_ID_SELECT_LABEL_FORM"
+                require="true"
+                description="JGLOBAL_SHOW_TITLE_DESC">
+            </field>
+        </fieldset>
+    </fields>
+</metadata>

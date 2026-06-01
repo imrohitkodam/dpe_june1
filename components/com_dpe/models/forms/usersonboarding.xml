@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+
+        <field name="elearning_subform"
+            label="COM_DPE_FORM_LBL_ELEARNING"
+            description="COM_DPE_FORM_LBL_ELEARNING_DESC"
+            type="subform"
+            formsource="components/com_dpe/models/forms/elearning.xml"
+            multiple="true"
+            buttons="add,remove"
+            layout="joomla.form.field.subform.repeatable-table"
+            groupByFieldset="true"
+            min="1"/>
+            <field name="document_subform"
+            label="COM_DPE_FORM_LBL_LESSON"
+            description="COM_DPE_FORM_LBL_LESSONS_DESC"
+            type="subform"
+            formsource="components/com_dpe/models/forms/dpelessons.xml"
+            multiple="true"
+            buttons="add,remove"
+            layout="joomla.form.field.subform.repeatable-table"
+            groupByFieldset="true"
+            min="1"/>
+            <field name="todo_subform"
+            label="COM_DPE_FORM_LBL_TODO"
+            description="COM_DPE_FORM_LBL_TODO_DESC"
+            type="subform"
+            formsource="components/com_dpe/models/forms/dpetodo.xml"
+            multiple="true"
+            buttons="add,remove"
+            layout="joomla.form.field.subform.repeatable-table"
+            groupByFieldset="true"
+            min="1"/>
+            <field type="list" default="1" name="userassignmentstatus" label="Select action for user assignment" description="">
+                    <option value="allusers">COM_DPE_ASSIGNTO_ALL_USERS</option>
+                    <option value="specificusers">COM_DPE_ASSIGNTO_SPECIFIC_USERS</option>
+                     <option value="nousers">COM_DPE_ASSIGNTO_NO_USERS</option>
+            </field>
+             <field type="list" default="1" name="selectuseforonboarding" label="COM_DPE_SELECT_USERS" description="" multiple='true' showon="userassignmentstatus:specificusers">
+                    <option value="allusers">COM_DPE_SELECT_USERS</option>
+            </field>
+            <field
+                name="onboardtitle"
+                type="text"
+                label="COM_DPE_ONBOARDTITLE_LBL_TODO"
+                description="COM_DPE_ONBOARDTITLE_LBL_TODO"
+        />
+                <field 
+            name="start_date" 
+            type="calendar" 
+            label="COM_DPE_DEFAULT_SET_START_DATE" 
+            description="COM_DPE_DEFAULT_SET_START_DATE" 
+           format="%d-%m-%Y %H:%M:%S"
+            showtime="false" 
+            timeformat="24" 
+            filter="user_utc" 
+            class='hide'
+            />
+
+</form>

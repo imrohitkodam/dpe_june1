@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter" >
+		<field
+			name="search"
+			type="text"
+			label=""
+			hint="COM_DPE_FILTER_SEARCH_DESC_LESSONS"
+			description="COM_DPE_FILTER_SEARCH_DESC_LESSONS"
+		/>
+
+<!--
+	<form addfieldpath="components/com_multiagency/models/fields">
+		<field name="agencies" type="agency"
+			label=""
+		 class="agencylist"
+		 onchange="this.form.submit();"
+		 />
+	</form>
+-->
+	<field name="rolelist"
+			class="rolelist"
+			type="sql"
+			label="COM_MULTIAGENCY_FORM_DESC_ROLE_LIST"
+			query="SELECT role.id, role.name FROM (SELECT id, name FROM #__tjsu_roles where state = 1 AND client='com_multiagency' UNION ALL SELECT '', 'Select Role' ) as role order by role.id ASC"
+			key_field="id"
+			value_field="name"
+			onchange="this.form.submit();"
+			 />
+	</fields>
+<!--
+	<fields name="list">
+		<field
+			name="limit"
+			type="limitbox"
+			class="input-mini"
+			default="25"
+			label="COM_JTICKETING_LIST_LIMIT"
+			description="COM_JTICKETING_LIST_LIMIT_DESC"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+-->
+</form>

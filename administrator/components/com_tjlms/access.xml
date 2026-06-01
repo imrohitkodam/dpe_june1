@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<access component="com_tjlms">
+	<section name="component">
+		<action name="core.admin" title="JACTION_ADMIN" description="JACTION_ADMIN_COMPONENT_DESC" />
+		<action name="core.manage" title="JACTION_MANAGE" description="JACTION_MANAGE_COMPONENT_DESC" />
+		<action name="core.create" title="JACTION_CREATE" description="JACTION_CREATE_COMPONENT_DESC" />
+		<action name="core.delete" title="JACTION_DELETE" description="JACTION_DELETE_COMPONENT_DESC" />
+		<action name="core.edit" title="JACTION_EDIT" description="JACTION_EDIT_COMPONENT_DESC" />
+		<action name="core.edit.state" title="JACTION_EDITSTATE" description="JACTION_EDITSTATE_COMPONENT_DESC" />
+		<action name="core.manage.material" title="COM_TJLMS_JMANAGE_MATERIALS" description="COM_TJLMS_JMANAGE_MATERIALS_DESC" />
+		<action name="view.coursecategories" title="COM_TJLMS_JVIEW_COURSECATEGORIES" description="COM_TJLMS_JVIEW_COURSECATEGORIES_DESC" />
+		<action name="view.questioncategories" title="COM_TJLMS_JVIEW_QUESTIONCATEGORIES" description="COM_TJLMS_JVIEW_QUESTIONCATEGORIES_DESC" />
+		<action name="core.all.questionbank" title="COM_TJLMS_MANAGE_ALL_QUESTIONS" description="COM_TJLMS_MANAGE_ALL_QUESTIONS_DESC" />
+		<action name="core.own.questionbank" title="COM_TJLMS_MANAGE_OWN_QUESTIONS" description="COM_TJLMS_MANAGE_OWN_QUESTIONS_DESC" />
+		<action name="view.manageenrollment" title="COM_TJLMS_JVIEW_MANAGEENROLLMENT" description="COM_TJLMS_JVIEW_MANAGEENROLLMENT_DESC" />
+		<action name="view.own.manageenrollment" title="COM_TJLMS_JVIEW_OWN_MANAGEENROLLMENT" description="COM_TJLMS_JVIEW_OWN_MANAGEENROLLMENT_DESC" />
+		<action name="view.certificatetemplate" title="JVIEW_CERTIFICATETEMPLATE" description="COM_TJLMS_JVIEW_CERTIFICATETEMPLATE_DESC" />
+		<action name="create.coupons" title="COM_TJLMS_JCREATE_COUPONS" description="COM_TJLMS_JCREATE_COUPONS_DESC" />
+		<action name="view.coupons" title="COM_TJLMS_JVIEW_COUPONS" description="COM_TJLMS_JVIEW_COUPONS_DESC" />
+		<action name="view.reminder" title="COM_TJLMS_JVIEW_REMINDERS" description="COM_TJLMS_JVIEW_REMINDERS_DESC" />
+		<action name="view.orders" title="COM_TJLMS_JVIEW_ORDERS" description="COM_TJLMS_JVIEW_ORDERS_DESC" />
+		<action name="view.activities" title="COM_TJLMS_JVIEW_ACTIVITIES" description="COM_TJLMS_JVIEW_ACTIVITIES_DESC" />
+		<action name="view.reports" title="COM_TJLMS_JVIEW_REPORTS" description="COM_TJLMS_JVIEW_REPORTS_DESC" />
+		<action name="core.enroll" title="COM_TJLMS_JVIEW_ENROLL" description="COM_TJLMS_JVIEW_ENROLL_DESC" />
+		<action name="core.assessment" title="COM_TJLMS_DO_ASSESSMENT" description="COM_TJLMS_DO_ASSESSMENT_DESC" />
+		<action name="core.assessment.editown" title="COM_TJLMS_DO_EDIT_OWN_ASSESSMENT" description="COM_TJLMS_DO_EDIT_OWN_ASSESSMENT_DESC" />
+		<action name="core.assessment.editall" title="COM_TJLMS_DO_EDIT_ALL_ASSESSMENT" description="COM_TJLMS_DO_EDIT_ALL_ASSESSMENT_DESC" />
+	</section>
+    <section name="course">
+		<action name="core.edit" title="COM_TJLMS_JACTION_EDIT_COURSE" description="COM_TJLMS_JACTION_EDIT_COURSE_DESC" />
+		<action name="core.manage.material" title="COM_TJLMS_JMANAGE_COURSE_MATERIALS" description="COM_TJLMS_JMANAGE_COURSE_MATERIALS_DESC" />
+		<action name="view.manageenrollment" title="COM_TJLMS_JVIEW_COURSE_MANAGEENROLLMENT" description="COM_TJLMS_JVIEW_COURSE_MANAGEENROLLMENT_DESC" />
+		<action name="view.reports" title="COM_TJLMS_JVIEW_REPORTS" description="COM_TJLMS_JVIEW_REPORTS_DESC" />
+		<action name="core.delete" title="JACTION_DELETE" description="JACTION_DELETE_COMPONENT_DESC" />
+		<action name="core.edit.state" title="JACTION_EDITSTATE" description="JACTION_EDITSTATE_COMPONENT_DESC" />
+		<action name="core.enroll" title="COM_TJLMS_JVIEW_ENROLL" description="COM_TJLMS_JVIEW_ENROLL_DESC" />
+		<action name="core.assessment" title="COM_TJLMS_DO_ASSESSMENT" description="COM_TJLMS_DO_ASSESSMENT_DESC" />
+		<action name="core.assessment.editown" title="COM_TJLMS_DO_EDIT_OWN_ASSESSMENT" description="COM_TJLMS_DO_EDIT_OWN_ASSESSMENT_DESC" />
+		<action name="core.assessment.editall" title="COM_TJLMS_DO_EDIT_ALL_ASSESSMENT" description="COM_TJLMS_DO_EDIT_ALL_ASSESSMENT_DESC" />
+	</section>
+	<section name="category">
+		<action name="core.create" title="JACTION_CREATE" description="COM_CATEGORIES_ACCESS_CREATE_DESC" />
+		<action name="core.delete" title="JACTION_DELETE" description="COM_CATEGORIES_ACCESS_DELETE_DESC" />
+		<action name="core.edit" title="JACTION_EDIT" description="COM_CATEGORIES_ACCESS_EDIT_DESC" />
+		<action name="core.edit.state" title="JACTION_EDITSTATE" description="COM_CATEGORIES_ACCESS_EDITSTATE_DESC" />
+	</section>
+
+	<section name="fieldgroup">
+		<action name="core.create" title="JACTION_CREATE" description="COM_FIELDS_GROUP_PERMISSION_CREATE_DESC" />
+		<action name="core.delete" title="JACTION_DELETE" description="COM_FIELDS_GROUP_PERMISSION_DELETE_DESC" />
+		<action name="core.edit" title="JACTION_EDIT" description="COM_FIELDS_GROUP_PERMISSION_EDIT_DESC" />
+		<action name="core.edit.state" title="JACTION_EDITSTATE" description="COM_FIELDS_GROUP_PERMISSION_EDITSTATE_DESC" />
+		<action name="core.edit.own" title="JACTION_EDITOWN" description="COM_FIELDS_GROUP_PERMISSION_EDITOWN_DESC" />
+		<action name="core.edit.value" title="JACTION_EDITVALUE" description="COM_FIELDS_GROUP_PERMISSION_EDITVALUE_DESC" />
+	</section>
+	<section name="field">
+		<action name="core.delete" title="JACTION_DELETE" description="COM_FIELDS_FIELD_PERMISSION_DELETE_DESC" />
+		<action name="core.edit" title="JACTION_EDIT" description="COM_FIELDS_FIELD_PERMISSION_EDIT_DESC" />
+		<action name="core.edit.state" title="JACTION_EDITSTATE" description="COM_FIELDS_FIELD_PERMISSION_EDITSTATE_DESC" />
+		<action name="core.edit.value" title="JACTION_EDITVALUE" description="COM_FIELDS_FIELD_PERMISSION_EDITVALUE_DESC" />
+	</section>
+
+</access>

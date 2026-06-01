@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+              <field name="id" type="text" default="0" label="COM_TMT_FORM_LBL_QUESTION_ID"
+            readonly="true" class="readonly"
+            description="JGLOBAL_FIELD_ID_DESC" /> 
+
+       <field name="created_on" type="calendar" class="inputbox"
+        
+        
+         default="0000-00-00 00:00:00" 
+        
+            label="COM_TMT_FORM_LBL_QUESTION_CREATED_ON"
+            description="COM_TMT_FORM_DESC_QUESTION_CREATED_ON" 
+        filter="safehtml" /> 
+
+       <field name="title" type="text"
+                
+            label="COM_TMT_FORM_LBL_QUESTION_TITLE"
+            description="COM_TMT_FORM_DESC_QUESTION_TITLE" 
+                
+                
+                 required="true" 
+            filter="raw"
+            maxlength="255" /> 
+
+       <field name="description" type="text"
+                
+            label="COM_TMT_FORM_LBL_QUESTION_DESCRIPTION"
+            description="COM_TMT_FORM_DESC_QUESTION_DESCRIPTION" 
+                
+                
+                
+            filter="raw"
+            maxlength="255" /> 
+
+       <field name="type" type="list"
+                
+            label="COM_TMT_FORM_LBL_QUESTION_TYPE"
+            description="COM_TMT_FORM_DESC_QUESTION_TYPE" 
+                
+                
+                 required="true" 
+            filter="raw"
+            multiple="false">
+                <option value="radio">MCQ - Single Correct Answer</option>
+                <option value="checkbox">MCQ - Multiple Correct Answers</option>
+                <option value="text">Subjective - Text</option>
+                <option value="textarea">Subjective - Textarea</option>
+        </field> 
+
+ 
+		<field name="filter_type" type="list" onchange="this.form.submit();">
+			<option value="">COM_TMT_QUESTIONS_TYPE_FILTER</option>
+			<option value="radio">MCQ - Single Correct Answer</option>
+			<option value="checkbox">MCQ - Multiple Correct Answers</option>
+			<option value="text">Subjective - Text</option>
+			<option value="textarea">Subjective - Textarea</option>
+		</field> 
+
+       <field name="level" type="list"
+                
+            label="COM_TMT_FORM_LBL_QUESTION_LEVEL"
+            description="COM_TMT_FORM_DESC_QUESTION_LEVEL" 
+                
+                
+                 required="true" 
+            filter="raw"
+            multiple="false">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+        </field> 
+
+ 
+		<field name="filter_level" type="list" onchange="this.form.submit();">
+			<option value="">COM_TMT_QUESTIONS_LEVEL_FILTER</option>
+			<option value="easy">Easy</option>
+			<option value="medium">Medium</option>
+			<option value="hard">Hard</option>
+		</field> 
+
+       <field name="marks" type="text" size="40" class="inputbox"
+        
+            label="COM_TMT_FORM_LBL_QUESTION_MARKS"
+            description="COM_TMT_FORM_DESC_QUESTION_MARKS" 
+        
+        
+         required="true" 
+        filter="safehtml" /> 
+
+       <field name="ideal_time" type="text" size="40" class="inputbox"
+        
+            label="COM_TMT_FORM_LBL_QUESTION_IDEAL_TIME"
+            description="COM_TMT_FORM_DESC_QUESTION_IDEAL_TIME" 
+        
+        
+        
+        filter="safehtml" /> 
+
+       <field name="category_id" type="sql" class="inputbox"
+        
+            label="COM_TMT_FORM_LBL_QUESTION_CATEGORY_ID"
+            description="COM_TMT_FORM_DESC_QUESTION_CATEGORY_ID" 
+        
+        
+        
+         required="true" 
+        query="SELECT 0 AS `id`, '- Please select -' AS `title` UNION SELECT `id`, `title` FROM `#__tmt_questions`" key_field="id" value_field="title"
+         /> 
+
+       <field name="filter_category_id" type="sql" class="inputbox"
+            onchange="this.form.submit();"
+            query="SELECT 0 AS `id`, '- Please select category_id -' AS `title` UNION SELECT `id`, `title` FROM `#__tmt_questions`" key_field="id" value_field="title"
+             /> 
+
+       <field name="created_by" type="createdby" default="" 
+            label="COM_TMT_FORM_LBL_QUESTION_CREATED_BY"
+            description="COM_TMT_FORM_DESC_QUESTION_CREATED_BY"  /> 
+
+         <field
+        name="state"
+        type="list"
+        label="JSTATUS"
+        description="JFIELD_PUBLISHED_DESC"
+        class="inputbox"
+        size="1"
+        default="1">
+        <option value="1">JPUBLISHED</option>
+        <option value="0">JUNPUBLISHED</option>
+    </field> 
+
+                        <field name="checked_out" type="hidden" filter="unset" />
+        <field name="checked_out_time" type="hidden" filter="unset" />
+
+	</fieldset>
+
+</form>

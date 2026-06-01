@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_DPE_USERDOCUMENTS_VIEW_DEFAULT_TITLE" option="view">
+		<message>
+			<![CDATA[COM_DPE_USERDOCUMENTS_VIEW_DEFAULT_DESC]]>
+		</message>
+	</layout>
+</metadata>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+              <field name="id" type="text" default="0" label="COM_TMT_FORM_LBL_TEST_ID"
+            readonly="true" class="readonly"
+            description="JGLOBAL_FIELD_ID_DESC" /> 
+
+       <field name="created_by" type="createdby" default="" 
+            label="COM_TMT_FORM_LBL_TEST_CREATED_BY"
+            description="COM_TMT_FORM_DESC_TEST_CREATED_BY"  /> 
+
+       <field name="title" type="text"
+                
+            label="COM_TMT_FORM_LBL_TEST_TITLE"
+            description="COM_TMT_FORM_DESC_TEST_TITLE" 
+                
+                
+                 required="true" 
+            filter="safehtml"
+            maxlength="255" /> 
+
+       <field name="description" type="textarea"
+                
+            label="COM_TMT_FORM_LBL_TEST_DESCRIPTION"
+            description="COM_TMT_FORM_DESC_TEST_DESCRIPTION" 
+                
+                
+                
+            cols="100"
+            rows="8"
+            filter="safehtml" /> 
+
+       <field name="job_id" type="sql" class="inputbox"
+        
+            label="COM_TMT_FORM_LBL_TEST_JOB_ID"
+            description="COM_TMT_FORM_DESC_TEST_JOB_ID" 
+        
+        
+        
+        
+        query="SELECT 0 AS `id`, '- Please select -' AS `title` UNION SELECT `id`, `title` FROM `#__tmt_jobs`" key_field="id" value_field="title"
+         /> 
+
+       <field name="company_id" type="text" size="40" class="inputbox"
+        
+            label="COM_TMT_FORM_LBL_TEST_COMPANY_ID"
+            description="COM_TMT_FORM_DESC_TEST_COMPANY_ID" 
+        
+        
+        
+        filter="safehtml" /> 
+
+       <field name="reviewers" type="sql" class="inputbox"
+        
+            label="COM_TMT_FORM_LBL_TEST_REVIEWERS"
+            description="COM_TMT_FORM_DESC_TEST_REVIEWERS" 
+        
+        multiple="multiple"
+        
+        
+        query="SELECT 0 AS `id`, '- Please select -' AS `title` UNION SELECT `id`, `title` FROM `#__tmt_companies`" key_field="id" value_field="title"
+         /> 
+
+       <field name="show_time" type="radio"
+                
+            label="COM_TMT_FORM_LBL_TEST_SHOW_TIME"
+            description="COM_TMT_FORM_DESC_TEST_SHOW_TIME" 
+                 default="1" 
+                
+                 required="true" >
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+        </field> 
+
+       <field name="time_duration" type="text" size="40" class="inputbox"
+        
+            label="COM_TMT_FORM_LBL_TEST_TIME_DURATION"
+            description="COM_TMT_FORM_DESC_TEST_TIME_DURATION" 
+        
+        
+         required="true" 
+        filter="safehtml" /> 
+
+       <field name="show_time_finished" type="radio"
+                
+            label="COM_TMT_FORM_LBL_TEST_SHOW_TIME_FINISHED"
+            description="COM_TMT_FORM_DESC_TEST_SHOW_TIME_FINISHED" 
+                 default="1" 
+                
+                 required="true" 
+            filter="raw">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+        </field> 
+
+       <field name="time_finished_duration" type="text" size="40" class="inputbox"
+        
+            label="COM_TMT_FORM_LBL_TEST_TIME_FINISHED_DURATION"
+            description="COM_TMT_FORM_DESC_TEST_TIME_FINISHED_DURATION" 
+        
+        
+         required="true" 
+        filter="safehtml" /> 
+
+       <field name="total_marks" type="text" size="40" class="inputbox"
+        
+            label="COM_TMT_FORM_LBL_TEST_TOTAL_MARKS"
+            description="COM_TMT_FORM_DESC_TEST_TOTAL_MARKS" 
+        
+        
+         required="true" 
+        filter="safehtml" /> 
+
+       <field name="passing_marks" type="text" size="40" class="inputbox"
+        
+            label="COM_TMT_FORM_LBL_TEST_PASSING_MARKS"
+            description="COM_TMT_FORM_DESC_TEST_PASSING_MARKS" 
+        
+        
+         required="true" 
+        filter="safehtml" /> 
+
+       <field name="notify_candidate_passed" type="text" size="40" class="inputbox"
+        
+            label="COM_TMT_FORM_LBL_TEST_NOTIFY_CANDIDATE_PASSED"
+            description="COM_TMT_FORM_DESC_TEST_NOTIFY_CANDIDATE_PASSED" 
+        
+        
+        
+        filter="safehtml" /> 
+
+       <field name="notify_candidate_failed" type="text" size="40" class="inputbox"
+        
+            label="COM_TMT_FORM_LBL_TEST_NOTIFY_CANDIDATE_FAILED"
+            description="COM_TMT_FORM_DESC_TEST_NOTIFY_CANDIDATE_FAILED" 
+        
+        
+        
+        filter="safehtml" /> 
+
+         <field
+        name="state"
+        type="list"
+        label="JSTATUS"
+        description="JFIELD_PUBLISHED_DESC"
+        class="inputbox"
+        size="1"
+        default="1">
+        <option value="1">JPUBLISHED</option>
+        <option value="0">JUNPUBLISHED</option>
+    </field> 
+
+                        <field name="checked_out" type="hidden" filter="unset" />
+        <field name="checked_out_time" type="hidden" filter="unset" />
+
+	</fieldset>
+
+</form>

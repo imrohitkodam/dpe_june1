@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="assesment" addfieldpath="/administrator/components/com_tjlms/models/fields">
+
+		<field name="id" id="id" type="text" default="0" />
+
+		<field name="add_assessment" type="radio" class="btn-group"
+			label="COM_TJLMS_FORM_LBL_ASSESSMENT_ADD_ASSESSMENT"
+			description="COM_TJLMS_FORM_DESC_ASSESSMENT_ADD_ASSESSMENT"
+			default="0"	>
+				<option value="1">COM_TJLMS_YES</option>
+				<option value="0">COM_TJLMS_NO</option>
+		</field>
+
+		<field name="assessment_title" type="text"
+		label="COM_TJLMS_FORM_LBL_ASSESSMENT_TITLE"
+		description="COM_TJLMS_FORM_DESC_ASSESSMENT_TITLE_DESC"
+		/>
+
+		<field name="assessment_attempts" type="text" class="assessment-param-required"
+			label="COM_TJLMS_FORM_LBL_ASSESSMENT_MIN_NOOF_ASSESSOR"
+			description="COM_TJLMS_FORM_DESC_ASSESSMENT_MIN_NOOF_ASSESSOR"
+			hint="Value"
+			default="1"/>
+
+		<field name="assessment_attempts_grade" type="list" class="assessment-param-required required"
+			label="COM_TJLMS_FORM_LBL_ASSESSMENT_ATTEMPTS_GRADE"
+			description="COM_TJLMS_FORM_DESC_ASSESSMENT_ATTEMPTS_GRADE"
+			default="0">
+				<option value="0">COM_TJLMS_FORM_ASSESSMENT_GRADE_HIGHEST</option>
+				<option value="1">COM_TJLMS_FORM_ASSESSMENT_GRADE_AVG</option>
+				<option value="2">COM_TJLMS_FORM_ASSESSMENT_GRADE_FIRST</option>
+				<option value="3">COM_TJLMS_FORM_ASSESSMENT_GRADE_LAST</option>
+		</field>
+
+		<field name="assessment_student_name" type="radio" class="btn-group"
+		label="COM_TJLMS_FORM_LBL_ASSESSMENT_SHOW_STUDENT_NAME"
+		description="COM_TJLMS_FORM_DESC_ASSESSMENT_SHOW_STUDENT_NAME"
+		default="1">
+			<option value="1">COM_TJLMS_YES</option>
+			<option value="0">COM_TJLMS_NO</option>
+		</field>
+
+		<field name="assessment_answersheet" type="radio" class="btn-group"
+		label="COM_TJLMS_FORM_LBL_ASSESSMENT_ALLOW_STUDENT_TO_REVIEW"
+		description="COM_TJLMS_FORM_DESC_ASSESSMENT_ALLOW_STUDENT_TO_REVIEW"
+		default="0">
+			<option value="1">COM_TJLMS_YES</option>
+			<option value="0">COM_TJLMS_NO</option>
+		</field>
+
+		<field name="answersheet_options"
+			label="COM_TJLMS_ASSESSMNET_FORM_LBL_ANSWERSHEET_OPTIONS_TITLE"
+			description="COM_TJLMS_ASSESSMNET_FORM_LBL_ANSWERSHEET_OPTIONS_TITLE"
+			type="subform"
+			formsource="administrator/components/com_tjlms/models/forms/answersheet_options.xml"
+		/>
+
+		<!--field name="allow_attachments" type="radio" class="btn-group"
+			label="COM_TJLMS_FORM_LBL_ASSESSMENT_ALLOW_ASSESSOR_ATTACHMENTS"
+			description="COM_TJLMS_FORM_DESC_ASSESSMENT_ALLOW_ASSESSOR_ATTACHMENTS"
+			default="1"	>
+				<option value="1">COM_TJLMS_YES</option>
+				<option value="0">COM_TJLMS_NO</option>
+		</field-->
+
+		<field name="assessment_params"
+			label="COM_TJLMS_FORM_LBL_ASSESSMENT_PARAMS"
+			description="COM_TJLMS_FORM_DESC_ASSESSMENT_PARAMS"
+			type="subform"
+			formsource="administrator/components/com_tjlms/models/forms/assessment_params.xml"
+			multiple="true"
+			buttons="add,remove,move"
+			layout="joomla.form.field.subform.repeatable-table"
+			groupByFieldset="true"
+			min="1"/>
+
+	</fieldset>
+
+</form>

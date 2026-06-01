@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field
+			name="catid"
+			type="hidden"
+			default=""
+		/>
+	</fieldset>
+</form>

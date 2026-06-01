@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE jomsocial>
+<jomsocial>
+	<component>com_tjlms</component>
+	<rules>
+		<rule>
+				<name>Course Enrollment</name>
+				<description>Give point when student enrolled to a course.</description>
+				<action_string>com_tjlms.onAfterCourseEnrol.points</action_string>
+				<publish>true</publish>
+				<points>7</points>
+				<access_level>0</access_level>
+		</rule>
+
+		<rule>
+				<name>Lesson Completion</name>
+				<description>Give point when student complete a lesson.</description>
+				<action_string>com_tjlms.onAfterLessonAttemptEnd.points</action_string>
+				<publish>true</publish>
+				<points>7</points>
+				<access_level>0</access_level>
+		</rule>
+
+		<rule>
+				<name>Create a course</name>
+				<description>Earn points on creating a course</description>
+				<action_string>com_tjlms.onAfterCourseCreation.points</action_string>
+				<publish>true</publish>
+				<points>7</points>
+				<access_level>0</access_level>
+		</rule>
+
+		<rule>
+				<name>Complete a course</name>
+				<description>Earn points on completing a course</description>
+				<action_string>com_tjlms.onAfterCourseCompletion.points</action_string>
+				<publish>true</publish>
+				<points>7</points>
+				<access_level>0</access_level>
+		</rule>
+	</rules>
+</jomsocial>

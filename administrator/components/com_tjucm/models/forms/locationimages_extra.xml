@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<form><fieldset name="hidden" addrulepath="administrator/components/com_tjfields/models/rules" addfieldpath="administrator/components/com_tjfields/models/fields"><field name="com_tjucm_locationimages_contentid" type="hidden" label="contentid" description="" class=""/><field name="com_tjucm_locationimages_Imageupload" type="captureimage" label="Image upload" description="" class="" uploadpath="/home/qa-kb-dpe/public_html/media/com_tjucm/com_tjucm_locationsandobservations/" height="480" width="640" renderer="preview"/></fieldset></form>

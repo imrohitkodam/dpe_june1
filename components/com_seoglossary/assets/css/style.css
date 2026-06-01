@@ -1,0 +1,670 @@
+/**
+ * Styles for site part of component
+ * 
+ * We developed this code with our hearts and passion.
+ * We hope you found it useful, easy to understand and change.
+ * Otherwise, please feel free to contact us at contact@joomunited.com
+ *
+ * @package 	SEO Glossary
+ * @copyright 	Copyright (C) 2012 JoomUnited (http://www.joomunited.com). All rights reserved.
+ * @license 	GNU General Public License version 2 or later; http://www.gnu.org/licenses/gpl-2.0.html
+ */
+
+input#filter_search_module
+{
+    width: 165px;
+}
+
+.glossary ul.adminformlist, ul.adminformlist li {
+    list-style: none outside none !important;
+    margin: 0;
+    padding: 0;
+}
+
+#seog-top-pagination ul li {
+    list-style: none outside none !important;
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+div.toolbar-list li
+{
+	list-style: none outside none !important;
+	float:left;
+
+}
+
+
+div.glossaryalphabet {
+	font-size: 14px;
+	font-weight: bold;
+	padding-bottom:15px;
+    padding-top:15px;
+	clear: left;
+	text-align: center;
+}
+
+#com_glossary .seopagination-list .glossletselect {
+background: #f4f3f4;
+display: block;
+width: 40px;
+height: 40px;
+text-align: center;
+line-height: 40px;
+color:#2b2a29;
+padding: 0;
+-webkit-border-radius: 50px !important;
+-moz-border-radius: 50px !important;
+border-radius: 50px !important;
+}
+
+div#glossarysearch {
+	padding: 5px;
+	margin: 10px 0;
+}
+
+div#glossarysearch input {
+	margin: 5px 0;
+}
+
+div#glossarysearchmethod input {
+	margin: 5px;	
+}
+
+.glossaryalphabet a
+{
+padding:2px;
+}
+/*.container  {
+    clear: both;
+    text-align: center;
+    text-decoration: none;
+}
+.pagination {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 0;
+}
+.pagination div.limit {
+    float: left;
+    height: 22px;
+    line-height: 22px;
+    margin: 0 10px;
+}
+.counter
+{
+    float:right;
+}*/
+
+.glossary-group-items
+{
+    padding: 5px 0px 5px 0px;
+}
+div#com_glossary .container
+{
+	padding: 5px 0;
+}
+div#com_glossary .authorblock
+{
+     background:none;
+}
+
+/*css for jquery */
+
+/* get rid of those system borders being generated for A tags */
+/*a:active {
+  outline:none;
+}
+
+:focus {
+  -moz-outline-style:none;
+}*/
+
+/* links */
+
+span.mytool a {
+	border-bottom:1px dashed;
+}
+
+span.mytool a:hover {
+	border-bottom:1px dashed;
+	text-decoration:none;
+}
+
+div.listitem_socialmediashares {
+	margin: 10px;
+      float:left;
+    width:100%;
+}
+
+div.term_socialmediashares {
+	margin: 10px;
+    float:left;
+    width:100%;
+}
+
+div.socialmediabutton {
+	float: left;
+	overflow: visible;
+}
+
+.seogl-definition {
+	text-align: justify;
+	min-height:800px;
+}
+
+a.seoglGlossaryLink {
+}
+
+a.seoglGlossaryCurrentLink {
+	font-weight: bold;
+}
+
+div.seogl-termdefinition {
+	
+}
+
+div.seogl-termdefinition-more {
+	
+}
+
+h1.seogl-term-title {
+	
+}
+
+div.seogl-newterm {
+	clear:both;
+	margin: 10px;
+}
+
+#com_glossary .seopagination-list > li {
+    display: inline;
+    margin:0px;
+    list-style-type: none;
+}
+
+#com_glossary .seopagination ul {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+#com_glossary .seopagination ul > li > a,#com_glossary .seopagination ul > li > span{
+    padding: 4px;
+     -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #dddddd;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px 1px 1px 0;
+    float: left;
+    line-height: 20px;
+    text-decoration: none;
+}
+#com_glossary .seopagination ul > li:first-child > a, #com_glossary .seopagination ul > li:first-child > span
+{
+    border-bottom-left-radius: 4px;
+    border-left-width: 1px;
+    border-top-left-radius: 4px;
+}
+#com_glossary .seopagination ul > li:last-child > a, #com_glossary .seopagination ul > li:last-child > span
+{
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+}
+@media  only screen and (max-width: 760px),(min-device-width: 768px) and (max-device-width: 1024px) {
+#glossarylist thead
+{
+    display: none;
+}
+#glossarylist table,#glossarylist thead,#glossarylist tbody, #glossarylist th,#glossarylist td, #glossarylist tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	#glossarylist thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	#glossarylist td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+}
+
+.glossary-group-title {
+    background: #f5f5f5 none repeat scroll 0 0;
+    color: #344150;
+    font-size: 44px;
+    font-weight: 600;
+    margin: 0 0 24px;
+    padding: 10px 15px;
+    
+}
+.glossary-group-items ul > li > a {
+    color: #67707c;
+    font-size: 18px;
+}
+.glossary-group-items ul > .col-xs-12.col-sm-6.col-md-4.span3
+{
+    margin-left:0px;
+}
+#glossarysearchmethod
+{
+    width: 100%;
+float: left;
+}
+div#glossarysearchmethod input
+{
+    float: none;
+}
+div#com_glossary div#glossarysearch form#searchForm div.input-append input#filter_search,
+div#com_glossary div#glossarysearch form#searchForm div.input-append input.button.btn,
+input#filter_search_module {
+    border: 1px solid #e9e9e9;
+    height: 40px;
+    outline: none;
+    margin: 0;
+    
+}
+div#com_glossary div#glossarysearch form#searchForm div.input-append input#filter_search {background: #f4f3f4;padding:0px 45px 0px 20px; width: 100%}
+div#com_glossary div#glossarysearch form#searchForm div.input-append input.button.btn {background: #fff;  cursor: pointer;}
+input#filter_search_module {background: #fff; padding: 5px 15px; width: 100%;text-transform: capitalize;}
+
+.srch-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    margin-left: -40px;
+    vertical-align: middle;
+    z-index:11;
+}
+.srch-btn button {
+    font-size: 0 !important;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    cursor: pointer;
+    background: #00b4f2 url(../images/srchIcn.png) center center no-repeat !important;
+   background-size: 17px auto !important;
+    
+}
+.srch-btn-inpt {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+
+div#com_glossary div#glossarysearch form#searchForm div.input-append input#filter_search,
+div#com_glossary div#glossarysearch form#searchForm div.input-append input.button.btn,
+.srch-btn button, #com_glossary .seopagination ul > li.active > a, 
+#com_glossary .seopagination ul>li.active>span,
+input#filter_search_module,.input-append button, .custom-select select {
+    -webkit-border-radius: 50px !important;
+    -moz-border-radius: 50px !important;
+      border-radius: 50px !important;
+}
+
+.seopagination { text-align: left !important}
+#com_glossary .seopagination-list>li { margin: 0px; vertical-align: middle; display: inline-block;}
+#com_glossary .seopagination ul > li > a, #com_glossary .seopagination ul>li>span { border: 0;color: #2b2a29; padding: 8px; }
+#com_glossary .seopagination ul > li.active > a, #com_glossary .seopagination ul>li.active>span {
+    background: #f4f3f4;
+    display: block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    padding: 0;
+    color:#00b4f2;
+}
+.glossaryclear thead th {
+    background: #f4f3f4;
+    color:#2b2a29;
+    font-weight: bold;
+}
+table#glossarylist tbody th, table#glossarylist tbody td, table#glossarylist tbody th a, table#glossarylist tbody td a,table#glossarylist tbody td em {
+    color: #2b2a29;
+}
+table#glossarylist {
+    border-collapse: collapse !important;
+}
+table#glossarylist thead th, table#glossarylist thead td { border: 1px solid #e9e9e9 !important;color:#2b2a29;}
+table#glossarylist tr.row0,table#glossarylist tr.row1 {border: 1px solid #e9e9e9 !important;}
+.input-append .srchbtn button {
+    background: #00b4f2 url(../images/srchIcn.png) 12px center no-repeat;
+    border: 1px solid #fff;
+    color: #fff;
+}
+.srch-btn .input-append button {
+    padding: 5px 5px 5px 15px;
+    cursor: pointer;
+    display: block;
+}
+.srch-btn .input-append button.clear-btn {
+    border: 1px solid #e9e9e9;
+    background: #fff url(../images/cross.png) 10px center no-repeat;
+}
+.dbl-btns { margin: 5px -2px 0;}
+.sngl-btn { float: left; width: 50%; padding: 0 2px}
+
+.sngl-btn button {background-size: 15px auto !important; width: 100%; }
+input, button, a { outline: none !important }
+#com_glossary .custom-select select.seoselect,.custom-select select.seoselect {
+    background: #fff url(../images/dropIcn.png) 93% center no-repeat;
+    background-size: 15px auto;
+    padding: 5px 15px;
+    border: 1px solid #e9e9e9;
+    height: 40px;
+    width: 100%;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    max-width: 250px;
+    min-width: 130px;
+}
+#com_glossary .input-append, .input-prepend
+{
+    margin-bottom:0px;
+}
+.clearfix:after, .clearfix:before { content: ''; display: table; clear: both; }
+.custom-select { margin-top: 0px;}
+#com_glossary .custom-select.bigselect { max-width: 280px; padding:0;background:transparent;border:none;box-shadow:none;}
+.tm-wrapper { max-width: 1600px}
+#glossarysearchmoduleheading { margin-bottom: 20px;}
+#glossarysearchheading { margin-bottom: 10px;}
+.srch-btn-inpt { max-width: 100%;margin-right:10px;}
+
+.glossaryclear .glossaryclear tr, 
+.glossaryclear .glossaryclear {
+    background-color: transparent !important;
+}
+.tipthemeflatdarklight {
+    background: #2b2a29;
+}
+.tipthemeflatdarklight p { margin: 0 }
+.authorblock em, .hits em { font-weight: normal;color: #6a6c6f;font-style: normal;}
+.authorblock,.hits { font-weight: 600;}
+.glossaryclear { width: 100% !important }
+
+.glossary-items .nav-pills >li>a {
+    background: #2b2a29;
+    color: #fff;
+    border-radius: 40px;
+    padding: 10px 20px;
+    font-weight: normal;
+    text-transform: capitalize;
+    letter-spacing: .2px;
+}
+.glossary-items .nav>li>a:hover,.glossary-items .nav>li>a:focus { background-color: #4a4a49}
+.masonary_seo {
+    background: #f4f3f4;
+    border: 0;
+    padding-bottom: 10px;
+}
+.masonary_seo .view {
+    margin: 0 0 15px;
+    width: 100%;
+    line-height: 200px;
+}
+.masonary_seo .title span {
+    font-size: 20px;
+}
+.masonary_seo .title a { color: #2b2a29;}
+.masonary_seo .title a:hover { text-decoration: none;color: #00a7fa;}
+.masonary_seo .date {margin-top: 5px; color: #2b2a29;}
+.glossary-group-items ul > li > a { color: #fff;}
+
+div.socialmediabutton
+{
+        display: block;
+    width: 70px;
+    line-height: 0px;
+    border-bottom: 2px solid #f5f5f5;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px;
+}
+@media screen and (min-width: 1460px)
+{
+    .grid-item { max-width:  33%; } 
+}
+@media screen and (max-width: 1460px) and (min-width: 768px) {
+   .sngl-btn { width: 100% }
+   .sngl-btn + .sngl-btn { margin-top: 5px }
+   .input-append button.clear-btn,
+   .input-append .srchbtn button { background-position: 22% center;}
+    .grid-item { max-width:  33%; }
+
+}
+@media screen and (max-width: 991px) {
+   .masonry-wrap .col-md-6 { width: 50% }
+
+}
+
+@media screen and (max-width: 767px) {
+   .input-append button.clear-btn,
+   .input-append .srchbtn button { background-position:30% center;}
+   .glossaryclear td,#glossarylist td { padding: 10px 20px;}
+   .grid-item { max-width:  49%; }
+
+}
+
+
+@media screen and (max-width: 560px) {
+   .input-append button.clear-btn,
+   .input-append .srchbtn button { background-position: 20% center;}
+
+   .srch-btn-inpt { width: 100%;}
+   div#com_glossary div#glossarysearch form#searchForm div.input-append input.button.btn { margin-top: 10px }
+   .grid-item { max-width:  100%; }
+
+}
+
+ #com_glossary #glossarylist td, #com_glossary #glossarylist th {
+    padding: 20px 30px;
+}
+#com_glossary  .glossary25
+{
+    min-width:30%;
+}
+ #com_glossary #glossarylist td
+ {
+    color: #2b2a29;    
+ }
+.masonary_seo .glossaryclear tr td { padding: 0 !important }
+.masonary_seo .glossaryclear tr.row1, .masonary_seo .glossaryclear,
+.masonary_seo table#glossarylist tbody tr.row1:hover td {background-color: transparent !important;}
+.masonary_seo .glossaryclear tr td {
+    font-size: 16px;
+    line-height: 1.65 !important;
+}
+#com_glossary .tags  a.label {
+    border: 0;
+    background: #cacac9;
+    display: inline-block;
+    padding: 2px 10px;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 20px;
+    margin-right: 3px;
+    margin-bottom: 4px;
+    text-transform: lowercase;
+}
+#com_glossary .tags  a.label:hover {background: #2b2a29; text-decoration: none;}
+.nav-pills li {
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+.nav-pills>li>a { display: block; text-decoration: none;}
+
+}
+.flat.glossaryclear {
+    font-family: sans-serif;
+    -webkit-font-smoothing: antialiased;
+    width: auto;
+    overflow: auto;
+    display: block;
+}
+
+table#glossarylist.flat.glossaryclear thead  th {
+    background-color: #0096FD;
+    font-weight: normal;
+    color: white;
+    padding: 20px 30px;
+    text-align: center;
+    color:#FFF;
+}
+
+
+
+.flat tr.header-seoglossary {
+    font-size:115%;
+}
+
+.flat.glossaryclear td {
+    padding: 20px 30px;
+    color: rgb(111, 111, 111);
+}
+
+.flat th.glossary25 {
+    min-width:160px;
+    max-width:230px;
+}
+
+.flat th.glossary72 {
+    min-width:200px;
+    max-width:800px;
+    width:100%;
+}
+
+.flat.glossaryclear tr.row0 {
+    background-color: #f5f5f5;
+}
+
+.flat.glossaryclear tr.row1 {
+    background-color:#eee;
+}
+
+
+
+table.flat#glossarylist {
+    border: 0px !important;
+    border-collapse: separate !important;
+    border-spacing: 2px !important;
+}
+
+table.flat#glossarylist th, table#glossarylist td {
+    border: 0px !important;
+
+}
+table.res#glossarylist {
+    width: 100%;
+    border-collapse: collapse !important;
+    border: 0px !important;
+}
+/* Zebra striping */
+table.res#glossarylist * tr:nth-of-type(odd) {
+    background: #eee;
+}
+table.res#glossarylist * th {
+    background: #333;
+    color: white;
+    font-weight: bold;
+}
+table.res#glossarylist * tr, table.res#glossarylist * td {
+    border-collapse: collapse !important;
+    border: 0px !important;
+}
+table.res#glossarylist * td, table.res#glossarylist * th {
+    padding: 6px;
+    text-align: left;
+}
+
+table.res#glossarylist tbody tr td.seoglossary-term {
+    font-weight:bold;
+}
+
+
+
+/*
+Max width before this PARTICULAR table.res gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+    /* Force table.res to not be like table.ress anymore */
+    table.res,.res  thead,.res  tbody,.res  th,.res  td,.res  tr {
+        display: block;
+    }
+
+    /* Hide table.res headers (but not display: none;, for accessibility) */
+    table.res#glossarylist thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    table.res#glossarylist * tr { border: 1px solid #ccc; }
+
+    table.res#glossarylist * td {
+        /* Behave  like a "row" */
+        border: none;
+        /*border-bottom: 1px solid #eee;*/
+        position: relative;
+    }
+
+    table.res#glossarylist * td:before {
+        /* Now like a table.res header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+    
+        
+
+
+}
+.theme-responsive .srch-btn button
+{
+    background-color:#2b2a29 !important;
+}
+#com_glossary.theme-responsive .tags a.label
+{
+    background-color:#2b2a29 !important;    
+}
+#com_glossary .tags ul
+{
+  margin: 0px ;
+list-style: none;
+}
+#com_glossary .tags ul li
+{
+    margin: 0px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+

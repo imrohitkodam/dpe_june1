@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset addfieldpath ="/administrator/components/com_tjlms/models/fields">
+		<field
+			name="id"
+			type="hidden"
+			/>
+		<field
+			name="title"
+			type="text"
+			class="planName"
+			label="COM_TJLMS_SUBSCRIPTION_PLAN_TITLE"
+			placeholder="COM_TJLMS_SUBSCRIPTION_PLAN_TITLE"
+			size="40"
+			/>
+		<field
+			name="duration"
+			type="text"
+			label="COM_TJLMS_DURATION"
+			placeholder="COM_TJLMS_DURATION"
+			class="inputbox subs_plan_duration"
+			showon="time_measure!:unlimited"
+			size="20"
+			default="0"
+			/>
+
+		<field name="time_measure" type="list" label="COM_TJLMS_TIME_MEASURE" class="timeMeasure" default="day" onchange="checkForUnlimited(this.value,this.id)">
+			<option value="day">COM_TJLMS_DAYS</option>
+			<option value="week">COM_TJLMS_WEEK</option>
+			<option value="month">COM_TJLMS_MONTH</option>
+			<option value="year">COM_TJLMS_YEAR</option>
+			<option value="unlimited">COM_TJLMS_UNLIMITED</option>
+		</field>
+
+		<field
+			name="price"
+			type="price"
+			label="COM_TJLMS_SUB_PLAN_PRICE"
+			placeholder="COM_TJLMS_PRICE"
+			size="12"
+			class="inputbox validate-positive-number input-append subs_plan_price"
+			filter="string">
+		</field>
+
+		<field
+			name="access"
+			type="accesslevel"
+			label="JFIELD_ACCESS_LABEL"
+			description="JFIELD_ACCESS_DESC"
+			size="1" />
+	</fieldset>
+</form>

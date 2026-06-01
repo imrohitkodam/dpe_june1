@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_TEST123_TITLE_ITEM_VIEW_TESTT" option="View">
+		<message>
+			<![CDATA[COM_TEST123_TITLE_ITEM_VIEW_TESTT_DESC]]>
+		</message>
+	</layout>
+</metadata>
+

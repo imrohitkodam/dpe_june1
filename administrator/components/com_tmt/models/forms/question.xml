@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<form>
+		<fieldset>
+
+			<!-- Fields visible on form -->
+			<field name="type" type="list"
+			label="COM_TMT_FORM_LBL_QUESTION_TYPE"
+			description="COM_TMT_FORM_DESC_QUESTION_TYPE"
+			required="true"
+			multiple="false"
+			filter="word">
+				<option value="">COM_TMT_SELECT_QTYPE</option>
+				<option value="radio">COM_TMT_QTYPE_MCQ_SINGLE</option>
+				<option value="checkbox">COM_TMT_QTYPE_MCQ_MULTIPLE</option>
+				<option value="file_upload">COM_TMT_QTYPE_ONLY_QUESTION</option>
+				<option value="text">COM_TMT_QTYPE_SUB_TEXT</option>
+				<option value="textarea">COM_TMT_QTYPE_SUB_TEXTAREA</option>
+				<option value="objtext">COM_TMT_QTYPE_OBJ_TEXT</option>
+				<option value="rating">COM_TMT_QTYPE_RATING</option>
+			</field>
+
+			<field name="gradingtype" type="list"
+			label="COM_TMT_QUIZ_TYPE_LBL"
+			description="COM_TMT_QUIZ_TYPE_DESC"
+			required="true" filter="word"
+			multiple="false">
+				<option value="">COM_TMT_QUIZ_TYPE_DESC</option>
+				<option value="quiz">COM_TMT_QUIZ_AS_QUIZ</option>
+				<option value="exercise">COM_TMT_QUIZ_AS_EXERCISE</option>
+				<option value="feedback">COM_TMT_QUIZ_AS_FEEDBACK</option>
+			</field>
+
+			<field name="title" type="textarea"
+			label="COM_TMT_FORM_LBL_QUESTION_TITLE"
+			description="COM_TMT_FORM_DESC_QUESTION_TITLE"
+			required="true" filter="safehtml"
+			class="quiztitle"/>
+
+			<field name="media_type" type="list" label="COM_TMT_FORM_LBL_QUESTION_MEDIA_TYPE"
+			description="COM_TMT_FORM_DESC_QUESTION_MEDIA_TYPE"
+			class="inputbox"
+			size="1"
+			default="">
+				<option value="">COM_TMT_FORM_OPTION_QUESTION_MEDIA_TYPE_SELECT</option>
+				<option value="image">COM_TMT_FORM_OPTION_QUESTION_MEDIA_TYPE_IMAGE</option>
+				<option value="video">COM_TMT_FORM_OPTION_QUESTION_MEDIA_TYPE_VIDEO</option>
+				<option value="audio">COM_TMT_FORM_OPTION_QUESTION_MEDIA_TYPE_AUDIO</option>
+				<option value="file">COM_TMT_FORM_OPTION_QUESTION_MEDIA_TYPE_FILE</option>
+			</field>
+
+			<field name="media_file" type="file"
+			label="COM_TMT_FORM_LBL_QUESTION_MEDIA_FILE"
+			description="COM_TMT_FORM_DESC_QUESTION_MEDIA_FILE"
+			accept=".xlsx,.xls,.doc,.docx,.ppt,.pptx,.txt,.pdf,.zip" showon="media_type:file" />
+			<field name="fileNote" type="note" class="alert alert-info" label="COM_TMT_MEDIA_FILE_SUPPORTED_NOTE" heading="h6" showon="media_type:file"/>
+
+			<field name="media_image" type="file"
+			label="COM_TMT_FORM_LBL_QUESTION_MEDIA_IMAGE"
+			description="COM_TMT_FORM_DESC_QUESTION_MEDIA_IMAGE"
+			accept="image/*"
+			showon="media_type:image" />
+			<field name="imageNote" type="note" class="alert alert-info" label="COM_TMT_MEDIA_IMAGE_SUPPORTED_NOTE" heading="h6" showon="media_type:image"/>
+
+			<field name="media_audio" type="file"
+			label="COM_TMT_FORM_LBL_QUESTION_MEDIA_AUDIO"
+			description="COM_TMT_FORM_DESC_QUESTION_MEDIA_AUDIO"
+			accept=".mp3,.aac,.wav,.m4a"
+			showon="media_type:audio" />
+			<field name="audioNote" type="note" class="alert alert-info" label="COM_TMT_MEDIA_AUDIO_SUPPORTED_NOTE" heading="h6" showon="media_type:audio"/>
+
+			<field name="media_url" type="text"
+			label="COM_TMT_FORM_LBL_QUESTION_MEDIA_VIDEO"
+			description="COM_TMT_FORM_DESC_QUESTION_MEDIA_VIDEO"
+			showon="media_type:video" />
+			<field name="videoNote" type="note" class="alert alert-info" label="COM_TMT_MEDIA_VIDEO_SUPPORTED_NOTE" heading="h6" showon="media_type:video"/>
+
+			<field
+			name="alias"
+			type="text"
+			label="COM_TMT_FORM_LBL_QUESTION_ALIAS"
+			description="COM_TMT_FORM_DESC_QUESTION_ALIAS"
+			size="40"
+			/>
+
+			<field name="description" type="textarea"
+			label="COM_TMT_FORM_LBL_QUESTION_DESCRIPTION"
+			description="COM_TMT_FORM_DESC_QUESTION_DESCRIPTION"
+			cols="100"
+			rows="5"
+			filter="safehtml"
+			/>
+
+			<field name="ideal_time" type="text" size="40"
+			class="inputbox validate-whole-number"
+			label="COM_TMT_FORM_LBL_QUESTION_IDEAL_TIME"
+			description="COM_TMT_FORM_DESC_QUESTION_IDEAL_TIME"
+			/>
+
+			<field name="category_id" type="category"
+			extension="com_tmt.questions"
+			label="COM_TMT_FORM_LBL_QUESTION_CATEGORY_ID"
+			description="COM_TMT_FORM_DESC_QUESTION_CATEGORY_ID"
+			required="true"
+			class="inputbox"
+			/>
+
+			<field name="level" type="tmtdifficultylevels"
+			label="COM_TMT_FORM_LBL_QUESTION_LEVEL"
+			description="COM_TMT_FORM_DESC_QUESTION_LEVEL"
+			required="true"
+			multiple="false"
+			default ="medium">
+			</field>
+
+			<field name="marks" type="text" size="40"
+			class="inputbox validate-positive-number"
+			label="COM_TMT_FORM_LBL_QUESTION_MARKS"
+			default="0"
+			description="COM_TMT_FORM_DESC_QUESTION_MARKS"
+			required="true"
+			maxlength="2"
+			/>
+			<fields name="params" label="COM_TMT_FIELD_BASIC_LABEL">
+				<field name="rating_label" type="textarea"
+				label="COM_TMT_FORM_RATING_LABEL"
+				description="COM_TMT_FORM_RATING_LABEL_DESC"
+				/>
+			</fields>
+
+
+			<!-- Other (hidden) fields -->
+			<field name="id" type="text" default="0"
+			label="COM_TMT_FORM_LBL_QUESTION_ID"
+			description="JGLOBAL_FIELD_ID_DESC"
+			readonly="true"
+			class="readonly" />
+
+			<field name="created_on" type="calendar" class="inputbox" default="0000-00-00 00:00:00"
+			label="COM_TMT_FORM_LBL_QUESTION_CREATED_ON"
+			description="COM_TMT_FORM_DESC_QUESTION_CREATED_ON"
+			 filter="user_utc" />
+
+			<field name="created_by" type="createdby" default=""
+			label="COM_TMT_FORM_LBL_QUESTION_CREATED_BY"
+			description="COM_TMT_FORM_DESC_QUESTION_CREATED_BY"  />
+
+			<field name="checked_out" type="hidden" filter="unset" />
+
+			<field name="checked_out_time" type="hidden" filter="unset" />
+
+			<field
+			name="state"
+			type="list"
+			label="JSTATUS"
+			description="JFIELD_PUBLISHED_DESC"
+			class="inputbox"
+			size="1"
+			default="1">
+				<option value="1">JPUBLISHED</option>
+				<option value="0">JUNPUBLISHED</option>
+			</field>
+
+		</fieldset>
+
+	</form>

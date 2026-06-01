@@ -1,0 +1,13 @@
+{{#section}}
+	<div class="clearfix center">
+		<strong>{{title}}</strong>
+	</div>
+	{{#questions}}
+		<a href="javascript:void(0);" onclick="document.getElementById('question-{{question_id}}').scrollIntoView({block: 'center'});">
+			<div id="question{{question_id}}" class="tmt-circle tmt-circle--margin pull-left {{attemptedClass}}">
+				<span class="tmt-circle--flag {{#flagged}}fa fa-flag{{/flagged}}">&nbsp;</span>
+				{{paletteIndex}}
+			</div>
+		</a>
+	{{/questions}}
+{{/section}}

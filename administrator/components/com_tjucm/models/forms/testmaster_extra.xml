@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<form><fieldset name="One" addrulepath="administrator/components/com_tjfields/models/rules" addfieldpath="administrator/components/com_tjfields/models/fields"><field name="com_tjucm_testmaster_text" type="text" label="Text" description="" class=""/></fieldset></form>

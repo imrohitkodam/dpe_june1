@@ -1,0 +1,26 @@
+{
+    "name": "anibalsanchez/extlyframework6",
+    "description": "Extly Framework for AutoTweet.",
+    "authors": [
+        {
+            "name": "Extly CB",
+            "email": "team@extly.com"
+        }
+    ],
+    "license": "GPL-3.0-or-later",
+    "require": {
+        "php": ">=5.6"
+    },
+    "autoload": {
+        "classmap": [
+            "lib_extly"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

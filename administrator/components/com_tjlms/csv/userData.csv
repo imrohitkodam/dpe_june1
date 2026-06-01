@@ -1,0 +1,3 @@
+user_match_key,id,firstname,lastname,password,username,email,disable_user?,timezone,add_courses,remove_courses,assignment_start(yyyy-mm-dd),assignment_due(yyyy-mm-dd),add_groups,remove_groups,course_status,course_start_date(yyyy-mm-dd),course_end_date(yyyy-mm-dd),subscription_end_date(yyyy-mm-dd)
+email,,Dummy,lastDUmmy,,dummy,dummy@mailinator.com,0,America/Costa_Rica,,,2018-06-20,2018-06-22,1|2,1,I,2018-06-20,2018-06-22,2018-06-22
+,,Dummy2,lastDUmmy,,dummy2,dummy2@mailinator.com,0,,,,2018-06-20,2018-06-22,1|2,1,C,2018-06-20,2018-06-22,2018-06-22

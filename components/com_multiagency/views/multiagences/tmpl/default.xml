@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_MULTIAGENCY_TITLE_LIST_VIEW_MULTIAGENCES,COM_MULTIAGENCY_ORGANISATIONS" option="View">
+        <message>
+                        <![CDATA[COM_MULTIAGENCY_TITLE_LIST_VIEW_MULTIAGENCES_DESC]]>
+        </message>
+	</layout>
+</metadata>

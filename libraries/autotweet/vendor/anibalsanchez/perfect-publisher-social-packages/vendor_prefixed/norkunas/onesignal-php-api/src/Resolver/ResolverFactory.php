@@ -1,0 +1,61 @@
+<?php
+/* This file has been prefixed by <PHP-Prefixer> for "XT Social Libraries" */
+
+namespace XTS_BUILD\OneSignal\Resolver;
+
+use XTS_BUILD\OneSignal\Config;
+
+class ResolverFactory
+{
+    private $config;
+
+    public function __construct(Config $config)
+    {
+        $this->config = $config;
+    }
+
+    public function createAppResolver()
+    {
+        return new AppResolver();
+    }
+
+    public function createSegmentResolver()
+    {
+        return new SegmentResolver();
+    }
+
+    public function createDeviceSessionResolver()
+    {
+        return new DeviceSessionResolver();
+    }
+
+    public function createDevicePurchaseResolver()
+    {
+        return new DevicePurchaseResolver();
+    }
+
+    public function createDeviceFocusResolver()
+    {
+        return new DeviceFocusResolver();
+    }
+
+    public function createNewDeviceResolver()
+    {
+        return new DeviceResolver($this->config, true);
+    }
+
+    public function createExistingDeviceResolver()
+    {
+        return new DeviceResolver($this->config, false);
+    }
+
+    public function createNotificationResolver()
+    {
+        return new NotificationResolver($this->config);
+    }
+
+    public function createNotificationHistoryResolver()
+    {
+        return new NotificationHistoryResolver();
+    }
+}

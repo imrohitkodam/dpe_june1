@@ -1,0 +1,82 @@
+/* CSS for Glossary component */
+
+div#com_glossary {
+    text-align: left;
+    padding-bottom: 20px;
+}
+
+#com_glossary h2 {
+    font-size: 200%;
+    font-weight: bold;
+}
+
+div.glossformdiv {
+    clear: left;
+    padding: 3px 0;
+}
+
+#com_glossary label {
+    width: 25%;
+    display: block;
+    padding-top: 5px;
+    float: left;
+}
+
+#com_glossary input.inputbox, #glossary textarea {
+    width: 70%;
+    display: block;
+    float: left;
+}
+
+#com_glossary .clear {
+    clear: left;
+}
+
+.glossaryclear {
+    clear: both;
+}
+
+.glossary25, .glossary72 {
+    font-weight: bold;
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+.glossary25 {
+    width: 25%;
+}
+
+.glossary72 {
+    width: 72%
+}
+
+table#glossarylist thead{
+    text-align: center;
+}
+
+#glossarylist thead {
+    border-bottom: 1px solid #bbb;
+}
+
+table#glossarylist {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#glossarylist td {
+    padding: 5px;
+    vertical-align: baseline;
+}
+
+.row1 {
+    background-color:none;
+}
+
+div#glossaryglossarylist {
+    padding: 5px;
+    background: #dedede;
+}
+#glossarylist td img
+{
+    max-width:100%;
+}

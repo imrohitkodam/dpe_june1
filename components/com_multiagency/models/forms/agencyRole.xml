@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+		<field name="client_id" type="agency"
+			label="COM_MULTIAGENCY_SELECT_AGENCY_ID,COM_MULTIAGENCY_ORGANISATION"
+			description="COM_MULTIAGENCY_FORM_DESC_SELECT_AGENCY_ID"
+			required="true" onchange="getRole(this); getRelatedRoles(this); getRelatedJobTitles(this);" class="agencylist"/>
+		
+		<field name="jobtitle" class="rolelist" type="list" label="COM_MULTIAGENCY_FORM_DESC_TITLE_LIST" required="" onchange="">
+			<option value="0">COM_MULTIAGENCY_SELECT_TITLE_OPTION</option>
+		</field>	
+		<field name="rolelist" class="rolelist" type="roles" label="COM_MULTIAGENCY_FORM_DESC_ROLE_LIST" required="true" >
+			<option value="0">COM_MULTIAGENCY_SELECT_ROLE_OPTION</option>
+		</field>
+		<!-- Added Hardcoded showon attribute-->
+		<field name="relatedrole" addfieldpath="plugins/system/dpe/fields" class="relatedrole" type="relatedrole" label="COM_MULTIAGENCY_FORM_RELATED_ROLE" multiple="true" showon="rolelist:3,8">
+		</field>
+		<field name="dpelead" type="radio" default="0" label="COM_MULTIAGENCY_FORM_DPELEAD" description="COM_MULTIAGENCY_FORM_DPELEAD" class='btn-group radio-red' showon="rolelist:4">
+	  <option value="1">JYES</option>
+	  <option value="0">JNO</option>
+	</field>
+
+</form>

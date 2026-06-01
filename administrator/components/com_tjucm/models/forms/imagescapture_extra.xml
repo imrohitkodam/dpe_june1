@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<form><fieldset name="hidden" addrulepath="administrator/components/com_tjfields/models/rules" addfieldpath="administrator/components/com_tjfields/models/fields"><field name="com_tjucm_imagescapture_contentid" type="hidden" label="contentid" description="" class=""/></fieldset></form>

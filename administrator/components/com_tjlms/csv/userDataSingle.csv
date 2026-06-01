@@ -1,0 +1,8 @@
+Id,FirstName,LastName,email,TimeZone,StartDate,DueDate,course1
+1,Sanjivani,Patil,sanjivani_patil@malinator.com,,2018-06-10,2018-06-11,1
+3,Deepali,Madane,deepali_madane@malinator.com,,,,1
+4,Amol,Patil,amol_patil@mailinator.com,America/Costa_Rica,2018-06-10,2018-06-11,1
+5,Sneha,Kahane,sneha_kahane@gmail.com,,2018-06-10,2018-06-11,1
+6,Sushan,Gosavi,sushan_gosavi@mailinator.com,Asia/Aden,,,1
+7,Pankaj,Pallewar,pankaj_pallewar@gmail.com,,2018-06-10,2018-06-11,1
+8,Sagar,Chinchvade,sagar_chinchvade@mailinator.com,,2018-06-10,2018-06-11,1

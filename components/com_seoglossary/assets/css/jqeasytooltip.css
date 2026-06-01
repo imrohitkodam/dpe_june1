@@ -1,0 +1,540 @@
+/*                  		JQEASYTOOLTIP
+/*                              =====
+/*                      By j3dlab.com - 2014
+/*==========================================================================
+
+						 __________________
+						|				   |
+						|   Hello World!   |
+						|_________ ________|
+								  V
+
+CSS CONTENTS
+
+1. 	Imports Fonts
+2. 	General Styles
+3. 	Tooltip Possitions
+4. 	Theme Square
+5. 	Theme Solid
+6. 	Theme Comic
+7. 	Theme Flat
+8. 	Theme Default
+9. 	swingX animation
+10. swingY animation
+11. swingZ animation
+12. glow animation
+13. Default animation
+14. Font Awesome
+
+========================================================================== */
+
+
+
+/*==========================================================================
+1. Imports Fonts
+========================================================================== */
+
+
+/*==========================================================================
+2. General Styles
+========================================================================== */
+
+.jqeasytooltip{ cursor: pointer; }
+
+
+
+.jqeasytooltip-loading{position:absolute; left: 50%; top: 50%; z-index: 9999; margin:-9px 0 0 -9px; width:10px; height:10px; border-top:3px solid #fff; border-bottom:3px solid #fff; border-left:3px solid #fff; border-right:3px solid #000;
+     -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -ms-border-radius:10px;
+    -o-border-radius:10px;
+    border-radius:10px;
+    -moz-animation-name:ball_moveG;
+    -moz-animation-duration:1.3s;
+    -moz-animation-iteration-count:infinite;
+    -moz-animation-timing-function:linear;
+    -webkit-animation-name:ball_moveG;
+    -webkit-animation-duration:1.3s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-timing-function:linear;
+    -ms-animation-name:ball_moveG;
+    -ms-animation-duration:1.3s;
+    -ms-animation-iteration-count:infinite;
+    -ms-animation-timing-function:linear;
+    -o-animation-name:ball_moveG;
+    -o-animation-duration:1.3s;
+    -o-animation-iteration-count:infinite;
+    -o-animation-timing-function:linear;
+    animation-name:ball_moveG;
+    animation-duration:1.3s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+ }
+
+  @-moz-keyframes ball_moveG{
+    0%{ -moz-transform:rotate(0deg)}
+    100%{ -moz-transform:rotate(360deg)}
+  }
+
+  @-webkit-keyframes ball_moveG{
+    0%{ -webkit-transform:rotate(0deg)}
+    100%{ -webkit-transform:rotate(360deg)}
+  }
+
+  @-ms-keyframes ball_moveG{
+    0%{ -ms-transform:rotate(0deg)}
+    100%{-ms-transform:rotate(360deg)}
+  }
+
+  @-o-keyframes ball_moveG{
+    0%{  -o-transform:rotate(0deg)}
+    100%{  -o-transform:rotate(360deg)}
+  }
+
+  @keyframes ball_moveG{
+    0%{  transform:rotate(0deg)}
+    100%{  transform:rotate(360deg)}
+  }
+
+
+
+/*==========================================================================
+3. Tooltip Possitions
+========================================================================== */
+
+*[class*="tiptheme"]{  color:#000; font-size: 13px; text-shadow:1px 1px 0 #ccc;  box-shadow: 0 0 5px rgba(0,0,0,0.5), 0 1px 0 #ededed inset;   padding:15px; border-radius: 5px;  display: inline-block; position: absolute; z-index: 9999;}
+*[class*="tiptheme"] h1{ font-size:19px ;}
+
+
+
+/*==========================================================================
+4. Theme Square
+========================================================================== */
+
+
+*[class*="tipthemesquare"]{  box-shadow: none !important; text-shadow:none !important; border-radius: 0 !important; }
+.tipthemesquareblack{color:#fff !important; background: #333; border:1px solid #fff;}
+.tipthemesquareblack:before{border-color: #fff !important; }
+.tipthemesquareblack:after{border-color: #333 !important; }
+.tipthemesquarewhite{color:#000 !important;  background: #fff; border:1px solid #000;}
+.tipthemesquarewhite:before{border-color: #000 !important; }
+.tipthemesquarewhite:after{border-color: #fff !important; }
+.tipthemesquaregreen{color:#000 !important;  background: #22E087; border:1px solid #000;}
+.tipthemesquaregreen:before{border-color: #000 !important; }
+.tipthemesquaregreen:after{border-color: #22E087 !important; }
+.tipthemesquarered{color:#fff !important;  background: #F62550; border:1px solid #000;}
+.tipthemesquarered:before{border-color: #000 !important; }
+.tipthemesquarered:after{border-color: #F62550 !important; }
+.tipthemesquareblue{color:#fff !important;  background: #2294E0; border:1px solid #000;}
+.tipthemesquareblue:before{border-color: #000 !important; }
+.tipthemesquareblue:after{border-color: #2294E0 !important; }
+.tipthemesquareorange{color:#000 !important;  background: #FF9127; border:1px solid #000;}
+.tipthemesquareorange:before{border-color: #000 !important; }
+.tipthemesquareorange:after{border-color: #FF9127 !important; }
+.tipthemesquareyellow{color:#000 !important;  background: #FFE727; border:1px solid #000;}
+.tipthemesquareyellow:before{border-color: #000 !important; }
+.tipthemesquareyellow:after{border-color: #FFE727 !important; }
+.tipthemesquarepurple{color:#fff !important;  background: #D321CE; border:1px solid #000;}
+.tipthemesquarepurple:before{border-color: #000 !important; }
+.tipthemesquarepurple:after{border-color: #D321CE !important; }
+
+
+
+/*==========================================================================
+5. Theme Solid
+========================================================================== */
+
+.thipthemeblue,.tipthemeorange,.tipthemered,.tipthemeblue,.tipthemepurple{color:#fff !important;text-shadow:1px 1px 0 #666 !important; }
+.tipthemegreen{ background: #8CC354; border: 1px solid #4B7026;}
+.tipthemegreen:before{border-color: #4B7026 !important; }
+.tipthemegreen:after{border-color: #8CC354 !important; }
+.tipthemeyellow{ background: #C8CF59; border: 1px solid #737829;}
+.tipthemeyellow:before{border-color: #737829 !important; }
+.tipthemeyellow:after{border-color: #C8CF59 !important; }
+.tipthemeblue{ background: #506ABB; border: 1px solid #24346A;}
+.tipthemeblue:before{border-color: #24346A !important; }
+.tipthemeblue:after{border-color: #506ABB !important; }
+.tipthemeorange{ background: #D3915A; border: 1px solid #7A4F29;}
+.tipthemeorange:before{border-color: #7A4F29 !important;}
+.tipthemeorange:after{border-color: #D3915A !important;}
+.tipthemepurple{ background: #7050BB; border: 1px solid #3B246A;}
+.tipthemepurple:before{border-color: #3B246A !important;}
+.tipthemepurple:after{border-color: #7050BB !important;}
+.tipthemered{ background: #D3675A; border: 1px solid #7A3429;}
+.tipthemered:before{border-color: #7A3429 !important;}
+.tipthemered:after{border-color: #D3675A !important;}
+.tipthemeblack{ background: #333333; border: 1px solid #000000; color: #fff !important; text-shadow:1px 1px 0 #000 !important;}
+.tipthemeblack:before{border-color: #000000 !important;}
+.tipthemeblack:after{border-color: #333333 !important;}
+.tipthemewhite{ background: #fff; border: 1px solid #000;}
+.tipthemewhite:before{border-color: #000 !important; }
+.tipthemewhite:after{border-color: #fff !important; }
+
+
+
+/*==========================================================================
+6. Theme Comic
+========================================================================== */
+
+.tipthemecomicwhite{ font-style: italic; border-radius: 100% / 99%; padding: 15px;  background: #fff; border: 4px solid #000; box-shadow: -10px -10px 10px #ccc inset, 0 0 5px rgba(0,0,0,0.5);}
+.tipthemecomicwhite:before{border-color: #000 !important; border-width: 10px !important; }
+.tipthemecomicblue{ color:#fff !important; text-shadow:1px 1px 0 #000 !important;  border-radius: 100% / 99%; padding: 15px;  background: #3674FF; border: 4px solid #fff; box-shadow: -10px -10px 10px #2756BA inset, 0 0 5px rgba(0,0,0,0.5);}
+.tipthemecomicblue:before{border-color: #fff !important;}
+.tipthemecomicyellow{ color:#000 !important;   border-radius: 100% / 99%; padding: 15px;  background: #F1F489; border: 4px solid #fff; box-shadow: -10px -10px 10px #D6D979 inset, 0 0 5px rgba(0,0,0,0.5);}
+.tipthemecomicyellow:before{border-color: #fff !important;}
+
+
+
+/*==========================================================================
+7. Theme Flat
+========================================================================== */
+
+*[class*="tipthemeflat"]{ }
+*[class*="tipthemeflat"] *:not(i){}
+
+*[class*="tipthemeflat"]{border-radius:2px; box-shadow: 0px 0px 0px rgba(0,0,0,0.1); padding: 10px 20px !important;  text-shadow:0px 0px 0 rgba(0,0,0,0.1) !important; color:#fff !important;}
+.tipthemeflatorange   {background:#ed6821;}
+.tipthemeflataqua     {background:#106859;}
+.tipthemeflatyellow   {background:#daaf08;}
+.tipthemeflatblue     {background:#4e5c76;}
+.tipthemeflatpink     {background:#FF0276;}
+.tipthemeflatgreen    {background:#98c105;}
+.tipthemeflatdark     {background:#1B1B1C;}
+.tipthemeflatred      {background:#C73435;}
+.tipthemeflatbrown    {background:#6D5D52;}
+.tipthemeflatdarklight{background:#646468;}
+
+*[class*="tipthemeflat"]:after, *[class*="tipthemeflat"]:before{ border-width: 0px !important; }
+
+
+
+/*==========================================================================
+8. Theme Default
+========================================================================== */
+
+.tiptheme{ color:#fff !important; text-shadow:1px 1px 0 #666 !important; border: 1px solid #000; border-radius: 0; background: #29A9FF; box-shadow: none !important;}
+.tiptheme:before{border-color: #000 !important; }
+.tiptheme:after{border-color: #29A9FF !important; }
+
+/*tip arrows*/
+.tiptop:before, .tiptop:after { content: ''; border-width: 10px; display: inline-block; border-style: solid; border-color:inherit; border-right-color: transparent !important; border-bottom-color: transparent !important; border-left-color: transparent !important; position: absolute; right: 50%;transform:translateX(10px); -webkit-transform:translateX(10px); top:100%; margin-left: 20px;}
+.tiptop:after{ margin-top: -1px;}
+.tipright:before, .tipright:after 	{ content: ''; border-width: 10px; display: inline-block; border-style: solid; border-color:inherit; border-top-color: transparent !important; border-bottom-color: transparent !important; border-left-color: transparent !important; position: absolute; right: 100%; bottom: 50%; transform:translateY(10px); -webkit-transform:translateY(10px);}
+.tipright:after{ margin-right: -1px; }
+.tipbottom:before, .tipbottom:after 	{ content: ''; border-width: 10px; display: inline-block; border-style: solid; border-color:inherit; border-top-color: transparent !important; border-right-color: transparent !important; border-left-color: transparent !important; position: absolute; right: 50%; transform:translateX(10px); -webkit-transform:translateX(10px); bottom: 100%; margin-left: 20px;}
+.tipbottom:after{ margin-bottom: -1px;}
+.tipleft:before, .tipleft:after 		{ content: ''; border-width: 10px; display: inline-block; border-style: solid; border-color:inherit; border-top-color: transparent !important; border-right-color: transparent !important; border-bottom-color: transparent !important; position: absolute; left: 100%; bottom: 50%; transform:translateY(10px); -webkit-transform:translateY(10px);}
+.tipleft:after{ margin-left: -1px; }
+
+
+
+
+/*==========================================================================
+9. swingX animation
+========================================================================== */
+
+/*tipopen,tipclose|swingX,swingXclose|swingY,swingYclose|glow,glowclose|swingZ,swingZclose*/
+/*OPEN*/
+
+.swingX{animation:swingX 0.8s; opacity:1; -webkit-animation:swingX 0.8s; opacity:1; }
+@keyframes swingX{
+	0%{ transform: perspective(4000px) rotateX(-80deg); }
+	40%{ transform: perspective(4000px) rotateX(80deg); }
+	60%{ transform: perspective(4000px) rotateX(-45deg); }
+	85%{ transform: perspective(4000px) rotateX(25deg); }
+	100%{ transform: perspective(4000px) rotateX(0deg); }
+}
+@-webkit-keyframes swingX{
+	0%{ -webkit-transform: perspective(4000px) rotateX(-80deg); }
+	40%{ -webkit-transform: perspective(4000px) rotateX(80deg); }
+	60%{ -webkit-transform: perspective(4000px) rotateX(-45deg); }
+	85%{ -webkit-transform: perspective(4000px) rotateX(25deg); }
+	100%{ -webkit-transform: perspective(4000px) rotateX(0deg); }
+}
+
+
+/*CLOSE*/
+
+.swingXclose{animation:swingXclose 0.5s; opacity:0; -webkit-animation:swingXclose 0.5s; opacity:0;}
+@keyframes swingXclose{
+	0%{ transform: perspective(4000px) rotateX(0deg);opacity:1;  }
+	100%{ transform: perspective(4000px) rotateX(80deg); }
+}
+@-webkit-keyframes swingXclose{
+	0%{ -webkit-transform: perspective(4000px) rotateX(0deg);opacity:1;  }
+	100%{ -webkit-transform: perspective(4000px) rotateX(80deg); }
+}
+
+
+/*ORIGINS*/
+
+.tiptop.swingX, .tiptop.swingXclose{ transform-origin:50% 100%; -webkit-transform-origin:50% 100%;}
+.tipbottom.swingX, .tipbottom.swingXclose{ transform-origin:50% 0%; -webkit-transform-origin:50% 0%;}
+
+
+
+/*==========================================================================
+10. swingY animation
+========================================================================== */
+
+/*OPEN*/
+
+.swingY{animation:swingY 0.8s; opacity:1; -webkit-animation:swingY 0.8s; opacity:1; }
+@keyframes swingY{
+	0%{ transform: perspective(4000px) rotateY(-80deg); }
+	40%{ transform: perspective(4000px) rotateY(80deg); }
+	60%{ transform: perspective(4000px) rotateY(-45deg); }
+	85%{ transform: perspective(4000px) rotateY(25deg); }
+	100%{ transform: perspective(4000px) rotateY(0deg); }
+}
+@-webkit-keyframes swingY{
+	0%{ -webkit-transform: perspective(4000px) rotateY(-80deg); }
+	40%{ -webkit-transform: perspective(4000px) rotateY(80deg); }
+	60%{ -webkit-transform: perspective(4000px) rotateY(-45deg); }
+	85%{ -webkit-transform: perspective(4000px) rotateY(25deg); }
+	100%{ -webkit-transform: perspective(4000px) rotateY(0deg); }
+}
+
+
+/*CLOSE*/
+
+.swingYclose{animation:swingYclose 0.5s; opacity:0; -webkit-animation:swingYclose 0.5s; opacity:0;}
+@keyframes swingYclose{
+	0%{ transform: perspective(4000px) rotateY(0deg);opacity:1;  }
+	100%{ transform: perspective(4000px) rotateY(80deg); }
+}
+@-webkit-keyframes swingYclose{
+	0%{ -webkit-transform: perspective(4000px) rotateY(0deg); opacity:1;  }
+	100%{ -webkit-transform: perspective(4000px) rotateY(80deg); }
+}
+
+/*ORIGINS*/
+
+.tiptop.swingX, .tiptop.swingXclose{ transform-origin:50% 100%; -webkit-transform-origin:50% 100%;}
+.tipbottom.swingX, .tipbottom.swingXclose{ transform-origin:50% 0%; -webkit-transform-origin:50% 0%;}
+.tipright.swingY, .tipright.swingYclose{ transform-origin:0% 50%; -webkit-transform-origin:0% 50%;}
+.tipleft.swingY, .tipleft.swingYclose{ transform-origin:100% 50%; -webkit-transform-origin:100% 50%;}
+
+
+
+/*==========================================================================
+11. swingZ animation
+========================================================================== */
+
+/* OPEN*/
+
+.swingZ{ animation:swingZ 0.8s; opacity: 1; -webkit-animation:swingZ 0.8s; }
+@keyframes swingZ{
+	0%{ opacity: 0;  transform: scale(0.8,0.8) rotateZ(-45deg); opacity: 0.5; }
+	60%{ opacity: 1; transform: scale(1,1) rotateZ(20deg); }
+	80%{ opacity: 1; transform: scale(1,1) rotateZ(-20deg); }
+	100%{ opacity: 1; transform: scale(1,1) rotateZ(10deg); }
+}
+@-webkit-keyframes swingZ{
+	0%{ opacity: 0;  -webkit-transform: scale(0.8,0.8) rotateZ(-45deg); opacity: 0.5; }
+	60%{ opacity: 1; -webkit-transform: scale(1,1) rotateZ(20deg); }
+	80%{ opacity: 1; -webkit-transform: scale(1,1) rotateZ(-20deg); }
+	100%{ opacity: 1; -webkit-transform: scale(1,1) rotateZ(10deg); }
+}
+
+
+/*CLOSE*/
+
+.swingZclose{ animation:swingZclose 0.8s; opacity: 0; -webkit-animation:swingZclose 0.8s;  }
+@keyframes swingZclose{
+	0%{ opacity: 1;  transform: scale(1,1) rotateZ(0deg); }
+	60%{ opacity: 1; transform: scale(1,1) rotateZ(-20deg); }
+	100%{ opacity: 0; transform: scale(0.8,0.8)rotateZ(45deg);  }
+}
+@-webkit-keyframes swingZclose{
+	0%{ opacity: 1;  -webkit-transform: scale(1,1) rotateZ(0deg); }
+	60%{ opacity: 1; -webkit-transform: scale(1,1) rotateZ(-20deg); }
+	100%{ opacity: 0; -webkit-transform: scale(0.8,0.8) rotateZ(45deg);  }
+}
+
+/* ORIGINS*/
+.tiptop.swingZ, .tiptop.swingZclose{ transform-origin:50% 105%; -webkit-transform-origin:50% 105%;}
+.tipright.swingZ, .tipright.swingZclose{ transform-origin:-5% 50%; -webkit-transform-origin:-5% 50%;}
+.tipbottom.swingZ, .tipbottom.swingZclose{ transform-origin:50% -5%; -webkit-origin:50% -5%;}
+.tipleft.swingZ, .tipleft.swingZclose{ transform-origin:105% 50%; -webkit-transform-origin:105% 50%;}
+
+
+
+/*==========================================================================
+12. glow animation
+========================================================================== */
+
+/*OPEN*/
+
+.glow{ animation:glow 0.5s; opacity:1;  -webkit-animation:glow 0.5s;}
+@keyframes glow{
+	0%{ transform:scale(0.3,0.3); opacity:0;}
+	50%{ transform:scale(0.95,0.95); }
+	75%{ transform:scale(0.90,0.90); }
+	100%{transform:scale(1.0,1.0);  opacity:1;}
+}
+@-webkit-keyframes glow{
+	0%{-webkit-transform:scale(0.3,0.3); opacity:0;}
+	50%{ -webkit-transform:scale(0.95,0.95); }
+	75%{ -webkit-transform:scale(0.90,0.90); }
+	100%{-webkit-transform:scale(1.0,1.0);  opacity:1;}
+}
+
+
+/*CLOSE*/
+
+.glowclose{ animation:glowclose 0.3s; opacity:0;-webkit-animation:glowclose 0.3s;}
+@keyframes glowclose{
+	0%{transform:scale(1,1);opacity:1; }
+	50%{ transform:scale(1.1,1.1); opacity:1; }
+	100%{transform:scale(0.5,0.5);opacity:0; }
+}
+@-webkit-keyframes glowclose{
+	0%{-webkit-transform:scale(1,1);opacity:1; }
+	50%{ -webkit-transform:scale(1.1,1.1); opacity:1; }
+	100%{-webkit-transform:scale(0.5,0.5);opacity:0; }
+}
+
+
+/*==========================================================================
+13. Default animation
+========================================================================== */
+
+/*OPEN*/
+.tipopen{-webkit-animation:appear 0.5s; animation:appear 0.5s;}
+@keyframes appear{
+	0%{ opacity: 0; transform-origin:50% 100%; transform: scale(0.5,0.5) perspective(4000px) rotateX(90deg);}
+	100%{ opacity: 1; transform: scale(1,1) perspective(4000px) rotateX(0deg);}
+}
+@-webkit-keyframes appear{
+	0%{ opacity: 0; -webkit-transform: scale(0,0);}
+	100%{ opacity: 1; -webkit-transform: scale(1,1);}
+}
+
+/*CLOSE*/
+.tipclose{-webkit-animation:disappear 0.5s; animation:disappear 0.5s; opacity: 0;}
+@keyframes disappear{
+	0%{ opacity: 1;  transform: scale(1,1) }
+	100%{ opacity: 0; transform: scale(0,0) }
+}
+@-webkit-keyframes disappear{
+	0%{ opacity: 1; -webkit-transform: scale(1,1);}
+	100%{  opacity: 0; -webkit-transform: scale(0,0);}
+}
+
+
+/*==========================================================================
+13. Special animation + Theme - CURTAIN  . Note - needs tiptheme tipthemecurtain
+========================================================================== */
+
+	*[class*="tipthemecurtain"]{ }
+	*[class*="tipthemecurtain"] *:not(i){}
+
+	*[class*="tipthemecurtain"]{ opacity: 0;padding:0 !important; box-shadow: 0 0 0px rgba(0,0,0,0), 0 0px 0 #ededed inset;
+		 transition:all 0.3s 1.2s;
+		  -webkit-transition:all 0.3s 1.2s;
+	}
+	*[class*="tipthemecurtain"] > *{ padding: 10px 15px; text-shadow:0px 0px 0; color:#fff;
+	  	transform-origin:50% 100%;
+	  	-webkit-transform-origin:50% 100%;
+	  	transform:perspective(500px) rotateX(90deg);
+	  	-webkit-transform:perspective(500px) rotateX(90deg);
+	 }
+	*[class*="tipthemecurtain"] > *:nth-child(even){ transform:perspective(500px) rotateX(-90deg); -webkit-transform:perspective(500px) rotateX(-90deg);}
+	*[class*="tipthemecurtain"] > *:nth-child(1){ transition:all 0.3s 0.3s; -webkit-transition:all 0.3s 0.3s;}
+	*[class*="tipthemecurtain"] > *:nth-child(2){ transition:all 0.3s 0.6s; -webkit-transition:all 0.3s 0.6s;}
+	*[class*="tipthemecurtain"] > *:nth-child(3){ transition:all 0.3s 0.9s; -webkit-transition:all 0.3s 0.9s;}
+	*[class*="tipthemecurtain"] > *:nth-child(4){ transition:all 0.3s 1.2s; -webkit-transition:all 0.3s 1.2s;}
+	.tipthemecurtainorange  > * {background:#ed6821;}
+	.tipthemecurtainorange > *:nth-child(even){ background:#873c13}
+	.tipthemecurtainaqua   > *  {background:#106859; }
+	.tipthemecurtainaqua > *:nth-child(even){background:#072e27;}
+	.tipthemecurtainyellow > *  {background:#daaf08;}
+	.tipthemecurtainyellow > *:nth-child(even){background:#594804;}
+	.tipthemecurtainblue   > *  {background:#4e5c76;}
+	.tipthemecurtainblue > *:nth-child(even){background:#1e242e;}
+	.tipthemecurtainpink   > *  {background:#FF0276;}
+	.tipthemecurtainpink > *:nth-child(even){background:#660130;}
+	.tipthemecurtaingreen  > *  {background:#98c105;}
+	.tipthemecurtaingreen > *:nth-child(even){background:#3c4d02;}
+	.tipthemecurtaindark   > *  {background:#1B1B1C;}
+	.tipthemecurtaindark > *:nth-child(even){background:#95959c;}
+	.tipthemecurtainred    > *  {background:#C73435;}
+	.tipthemecurtainred > *:nth-child(even){background:#471313;}
+	.tipthemecurtainbrown  > *  {background:#6D5D52;}
+	.tipthemecurtainbrown > *:nth-child(even){background:#302924;}
+	.tipthemecurtaindarklight > * {background:#646468;}
+	.tipthemecurtaindarklight > *:nth-child(even){background:#252526;}
+
+
+	/*EFECT*/
+	*[class*="tipthemecurtain"].curtain{ opacity: 1;
+		transition:all 0.3s 0s;
+		-webkit-transition:all 0.3s 0s;
+	}
+	*[class*="tipthemecurtain"].curtain > *{ transform:none; background:#106859; -webkit-transform:none; background:#106859;}
+	*[class*="tipthemecurtain"].curtain > *:nth-child(1){ transition:all 0.3s 0.9s;-webkit-transition:all 0.3s 0.9s;}
+	*[class*="tipthemecurtain"].curtain > *:nth-child(2){ transition:all 0.3s 0.6s;-webkit-transition:all 0.3s 0.6s;}
+	*[class*="tipthemecurtain"].curtain > *:nth-child(3){ transition:all 0.3s 0.3s;-webkit-transition:all 0.3s 0.3s;}
+	*[class*="tipthemecurtain"].curtain > *:nth-child(4){ transition:all 0.3s 0s;-webkit-transition:all 0.3s 0s;}
+	.tipthemecurtainorange.curtain > *{ background:#ed6821;}
+	.tipthemecurtainaqua.curtain > *{ background:#106859;}
+	.tipthemecurtainyellow.curtain > *{ background:#daaf08;}
+	.tipthemecurtainblue.curtain > *{ background:#4e5c76;}
+	.tipthemecurtainpink.curtain > *{ background:#FF0276;}
+	.tipthemecurtaingreen.curtain > *{ background:#98c105;}
+	.tipthemecurtaindark.curtain > *{ background:#1B1B1C;}
+	.tipthemecurtainred.curtain > *{ background:#C73435;}
+	.tipthemecurtainbrown.curtain > *{background:#6D5D52;}
+	.tipthemecurtaindarklight.curtain > *{ background:#646468;}
+
+
+	*[class*="tipthemecurtain"] > *{ border: 1px solid #999; border-top: 0; border-bottom: 0; }
+	*[class*="tipthemecurtain"] > *:first-child{ border-radius: 5px 5px 0 0; border-top:1px solid #999;}
+	*[class*="tipthemecurtain"] > *:last-child{ border-radius: 0 0 5px 5px; border-bottom:1px solid #999;}
+
+	*[class*="tipthemecurtain"]:before, *[class*="tipthemecurtain"]:after { content: ''; border-width: 10px; display: inline-block; border-style: solid; border-color:#999; border-right-color: transparent !important; border-bottom-color: transparent !important; border-left-color: transparent !important; position: absolute; right: 50%;  top:100%; margin-left: 20px;
+		transform:translateX(10px);
+		-webkit-transform:translateX(10px);
+	}
+	*[class*="tipthemecurtain"]:after{ margin-top: -1px;}
+	.tipthemecurtainorange:after{border-color:#ed6821;}
+	.tipthemecurtainaqua:after{border-color:#106859;}
+	.tipthemecurtainyellow:after{border-color:#daaf08;}
+	.tipthemecurtainblue:after{border-color:#4e5c76;}
+	.tipthemecurtainpink:after{border-color:#FF0276;}
+	.tipthemecurtaingreen:after{border-color:#98c105;}
+	.tipthemecurtaindark:after{border-color:#1B1B1C;}
+	.tipthemecurtainred:after{border-color:#C73435;}
+	.tipthemecurtainbrown:after{border-color:#6D5D52;}
+	.tipthemecurtaindarklight:after{border-color:#646468;}
+
+
+
+/*==========================================================================
+14. Font Awesome
+========================================================================== */
+
+*[class*="tipicon"] i{margin:0 15px 0px 0;vertical-align: middle;position: relative;}
+
+
+@media (max-width: 768px) {
+.tipopen,.tipopen *
+{
+  max-width: 85% !important;
+}
+}
+
+@media (min-width: 768px)AND (max-width: 1024px) {
+.tipopen,.tipopen *
+{
+  max-width: 700px !important;
+}
+}
+
+@media (min-width: 1024px) {
+.tipopen,.tipopen *
+{
+  max-width: 700px !important;
+}
+}

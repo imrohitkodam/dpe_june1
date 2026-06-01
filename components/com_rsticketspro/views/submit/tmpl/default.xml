@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="RST_SUBMIT_TICKETS_LAYOUT">
+		<message>
+			<![CDATA[RST_SUBMIT_TICKETS_MENU_DESC]]>
+		</message>
+	</layout>
+	<config>
+		<fields name="params" addfieldpath="/administrator/components/com_rsticketspro/models/fields">
+			<fieldset name="basic">
+				<field name="department_id" type="departments" please="true" default="0" label="RST_DEPARTMENT_ID" description="RST_DEPARTMENT_ID_DESC" />
+				<field name="message" type="textarea" filter="raw" rows="12" cols="50" default="" label="COM_RSTICKETSPRO_DEFAULT_MESSAGE" description="COM_RSTICKETSPRO_DEFAULT_MESSAGE_DESC" />
+				<field name="show_form_headings"
+					   type="radio"
+					   class="btn-group btn-group-yesno"
+					   default="0"
+					   label="RST_SHOW_SUBMIT_FORM_HEADINGS"
+					   description="RST_SHOW_SUBMIT_FORM_HEADINGS_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</metadata>

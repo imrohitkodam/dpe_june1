@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="package" version="3.0" method="upgrade">
+	<name>JMailAlerts Package</name>
+
+	<packagename>jmailalerts</packagename>
+	<packager>Techjoomla</packager>
+	<packagerurl>https://techjoomla.com</packagerurl>
+
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>Copyright (C) 2009 - 2022 Techjoomla. All rights reserved.</copyright>
+	<description>JMailAlerts - A complete 'Digest Email' solution for Joomla!</description>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+
+	<creationDate>24th Mar 2022</creationDate>
+	<version>3.0.0</version>
+
+	<scriptfile>script.pkg_jmailalerts.php</scriptfile>
+
+	<blockChildUninstall>true</blockChildUninstall>
+
+	<files>
+		<!-- Component -->
+		<file type="component" id="com_jmailalerts">components/com_jmailalerts.zip</file>
+
+		<!-- Plugins -->
+		<file type="plugin" id="jmailalerts"        group="actionlog">plugins/actionlog/jmailalerts.zip</file>
+		<file type="plugin" id="jmailalerts"        group="privacy"  >plugins/privacy/jmailalerts.zip</file>
+		<file type="plugin" id="plug_usr_mailalert" group="user"     >plugins/user/plug_usr_mailalert.zip</file>
+	</files>
+
+	<updateservers>
+		<server type="collection" priority="1" name="JMailAlerts"><![CDATA[https://techjoomla.com/updates/stream/jmailalerts.xml?format=xml]]></server>
+	</updateservers>
+</extension>

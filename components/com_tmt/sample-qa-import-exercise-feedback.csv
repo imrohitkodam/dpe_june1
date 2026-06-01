@@ -1,0 +1,13 @@
+id,Unique Id,Grading Type,Question type,Question Title,Question Description,Ideal time,Category id,Marks Difficulty Level (easy|medium|hard),published,answer1/rating(Answer/lower-range|marks for question|1(correct)/0(incorrect)|comments),answer2/rating(Answer/upper-range|marks for question|1(correct)/0(incorrect)|comments)
+,,exercise,mcq,What is LMS,What is full form of LMS,1,8,easy,1,LMS is Learning Management System|0|1|comments,Local Management System0||0|comments
+,,exercise,mrq,Open source testing tool,Which of the following is an opensource testing tool,1,8,easy,1,Selenium|1|1|comments,QC|0|0|comments
+,,exercise,Subjective,What is Hardware?Explain,What is Hardware?Explain,1,8,easy,1,Describe your answer,
+,,exercise,Subjective_Text,Who is father of modern computers?,Who is father of modern computers?,1,8,easy,1,Charles Babbage|0|1,
+,,exercise,File_Upload,Explain Database?,,1,8,easy,1,,
+,,exercise,Rating,Rate yourself in LMS knowledge ?,,1,8,easy,1,1,10
+,,feedback,mcq,What is LMS,,1,8,easy,1,LMS is Learning Management System|0|0|comments,Local Management System|0|0|comments
+,,feedback,mrq,Open source testing tool,,1,5,easy,1,Selenium|0|0|comment,QC|0|0|comments
+,,feedback,Subjective,What is Hardware?Explain,What is Hardware?Explain,1,5,easy,1,,
+,,feedback,Subjective_Text,Who is father of modern computers?,Who is father of modern computers?,1,5,easy,1,,
+,,feedback,File_Upload,Explain Database?,,1,5,easy,1,,
+,,feedback,Rating,Rate your LMS ?,,,5,easy,1,1,5

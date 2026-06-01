@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<form><fieldset name="Role" addrulepath="administrator/components/com_tjfields/models/rules" addfieldpath="administrator/components/com_tjfields/models/fields"><field name="com_tjucm_role_clusterclusterid" type="cluster" label="Organisation" description="" required="true" class="" validate="cluster"/><field name="com_tjucm_role_name" type="text" label="Job title" description="" required="true" class=""/></fieldset></form>

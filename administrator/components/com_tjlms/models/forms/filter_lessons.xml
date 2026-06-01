@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<fields name="filter">
+			<field
+				name="search"
+				type="text"
+				label="JSEARCH_FILTER_SUBMIT"
+				hint="COM_TJLMS_SEARCH_BY_LESSON_NAME"
+				description="JSEARCH_FILTER_SUBMIT"
+			/>
+			<field
+				name="format"
+				type="list"
+				label="COM_TJLMST_FILTER_PUBLISHED"
+				description="COM_TJLMST_FILTER_PUBLISHED_DESC"
+				onchange="this.form.submit();"
+				>
+				<option value="">COM_TJLMS_FILTER_SELECT_LESSON_FORMAT</option>
+				<option value="scorm">COM_TJLMS_FILTER_SELECT_LESSON_FORMAT_SCORM</option>
+				<option value="htmlzips">COM_TJLMS_FILTER_SELECT_LESSON_FORMAT_HTML</option>
+				<option value="video">COM_TJLMS_FILTER_SELECT_LESSON_FORMAT_VIDEO</option>
+				<option value="document">COM_TJLMS_FILTER_SELECT_LESSON_FORMAT_DOCUMENT</option>
+				<option value="textmedia">COM_TJLMS_FILTER_SELECT_LESSON_FORMAT_TEXTMEDIA</option>
+				<option value="event">COM_TJLMS_FILTER_SELECT_LESSON_FORMAT_EVENT</option>
+			</field>
+			<field
+				name="catid"
+				type="category"
+				label="COM_TJLMS_MENU_SELECT_CAT"
+				description="COM_TJLMS_MENU_SELECT_CAT_DESC"
+				extension="com_tjlms.lessons"
+				published="1"
+				onchange="this.form.submit();"
+				>
+				<option value=''>COM_TJLMS_MENU_FIELD_OPTION_SELECT_CAT</option>
+			</field>
+			<field
+				name="in_lib"
+				type="list"
+				label="COM_TJLMS_FILTER_SHOW_IN_LIBRARY"
+				description="COM_TJLMS_FILTER_SHOW_IN_LIBRARY_DESC"
+				onchange="this.form.submit();"
+				>
+				<option value="">COM_TJLMS_FILTER_SELECT_SHOW_IN_LIBRARY</option>
+				<option value="1">COM_TJLMS_FILTER_SELECT_SHOW_IN_LIBRARY_YES</option>
+				<option value="0">COM_TJLMS_FILTER_SELECT_SHOW_IN_LIBRARY_NO</option>
+			</field>
+			<field
+				name="state"
+				type="status"
+				label="COM_TJLMS_FILTER_PUBLISHED"
+				description="COM_TJLMS_FILTER_PUBLISHED_DESC"
+				onchange="this.form.submit();"
+				>
+				<option value="">JOPTION_SELECT_PUBLISHED</option>
+			</field>
+
+			<field
+				name="created_by"
+				type="lessonauthor"
+				label="COM_TJLMS_FILTER_AUTHOR"
+				description="COM_TJLMS_FILTER_AUTHOR_DESC"
+				multiple="true"
+				class="multipleAuthors"
+				onchange="this.form.submit();"
+				>
+				<option value="0">JNONE</option>
+			</field>
+		</fields>
+
+		<fields name="list">
+			<field
+				name="fullordering"
+				type="list"
+				label="COM_TJLMS_LIST_FULL_ORDERING"
+				description="COM_TJLMS_LIST_FULL_ORDERING_DESC"
+				onchange="this.form.submit();"
+				default="a.id DESC"
+				validate="options"
+				>
+				<option value="">JGLOBAL_SORT_BY</option>
+				<option value="a.ordering ASC">JGRID_HEADING_ORDERING_ASC</option>
+				<option value="a.ordering DESC">JGRID_HEADING_ORDERING_DESC</option>
+				<option value="a.state ASC">JSTATUS_ASC</option>
+				<option value="a.state DESC">JSTATUS_DESC</option>
+				<option value="a.title ASC">JGLOBAL_TITLE_ASC</option>
+				<option value="a.title DESC">JGLOBAL_TITLE_DESC</option>
+				<option value="a.created_by ASC">JAUTHOR_ASC</option>
+				<option value="a.created_by DESC">JAUTHOR_DESC</option>
+				<option value="a.start_date ASC">COM_TJLMS_LIST_FULL_ORDERING_START_DATE_ASC</option>
+				<option value="a.start_date DESC">COM_TJLMS_LIST_FULL_ORDERING_START_DATE_DESC</option>
+				<option value="a.end_date ASC">COM_TJLMS_LIST_FULL_ORDERING_END_DATE_ASC</option>
+				<option value="a.end_date DESC">COM_TJLMS_LIST_FULL_ORDERING_END_DATE_DESC</option>
+				<option value="a.format ASC">COM_TJLMS_LIST_FULL_ORDERING_FORMAT_ASC</option>
+				<option value="a.format DESC">COM_TJLMS_LIST_FULL_ORDERING_FORMAT_DESC</option>
+				<option value="a.id ASC">JGRID_HEADING_ID_ASC</option>
+				<option value="a.id DESC">JGRID_HEADING_ID_DESC</option>
+			</field>
+
+			<field
+				name="limit"
+				type="limitbox"
+				class="input-mini"
+				default="25"
+				label="COM_TJLMST_LIST_LIMIT"
+				description="COM_TJLMST_LIST_LIMIT_DESC"
+				onchange="this.form.submit();"
+			/>
+		</fields>
+	</fieldset>
+</form>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+		<field name="id" type="text" default="0" label="COM_TJLMS_FORM_LBL_TJMODULE_ID"
+			readonly="true" class="readonly"
+			description="JGLOBAL_FIELD_ID_DESC"
+			required="true"/>
+
+		<field name="created_by" type="createdby" default=""
+			label="COM_TJLMS_FORM_LBL_TJMODULE_CREATED_BY"
+			description="COM_TJLMS_FORM_DESC_TJMODULE_CREATED_BY"  />
+
+		<field name="name" type="text" class="inputbox"
+			label="COM_TJLMS_FORM_LBL_TJMODULE_NAME"
+			description="COM_TJLMS_FORM_DESC_TJMODULE_NAME"
+			required="true"  />
+
+		<field name="course_id" type="text" size="40" class="inputbox"
+			label="COM_TJLMS_FORM_LBL_TJMODULE_COURSE_ID"
+			description="COM_TJLMS_FORM_DESC_TJMODULE_COURSE_ID"
+			filter="safehtml" />
+
+		<field name="state" type="radio" label="JSTATUS" description="JFIELD_PUBLISHED_DESC"
+			class="inputbox btn-group"
+			size="1"
+			default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+
+		<field	name="description"
+			type="editor"
+			filter="JComponentHelper::filterText"
+			buttons="true"
+			label="COM_TJLMS_FORM_LBL_TJMODULE_DESCRIPTION"
+			description="COM_TJLMS_FORM_DESC_TJMODULE_DESCRIPTION"
+			cols="100"
+			rows="8"
+		/>
+
+		<field
+			name="image"
+			type="file"
+			label="COM_TJLMS_FORM_LBL_TJMODULE_IMAGE"
+			description="COM_TJLMS_FORM_DESC_TJMODULE_IMAGE"
+			filter="raw"
+			accept="image/*"
+		/>
+		<field name="checked_out" type="hidden" filter="unset" />
+		<field name="checked_out_time" type="hidden" filter="unset" />
+
+	</fieldset>
+
+</form>

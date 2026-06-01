@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter" >
+		<field
+			name="search"
+			type="text"
+			label="COM_TJLMST_FILTER_SEARCH_DESC_MENROLLMENT"
+			hint="COM_TJLMST_FILTER_SEARCH_DESC_NAME"
+			description="COM_TJLMST_FILTER_SEARCH_DESC_MENROLLMENT"
+		/>
+		<field
+			name="userfilter"
+			type="users"
+			label="COM_TJLMST_FILTER_SELECT_USER"
+			description="COM_TJLMST_FILTER_SELECT_USER_DESC"
+			onchange="this.form.submit();"
+			>
+			<option value="">COM_TJLMS_FILTER_SELECT_USER</option>
+		</field>
+		<field
+			name="coursefilter"
+			type="courses"
+			label="COM_TJLMS_FILTER_SELECT_COURSE"
+			description="COM_TJLMS_FILTER_SELECT_COURSE"
+			onchange="this.form.submit();"
+			>
+			<option value="">COM_TJLMS_FILTER_SELECT_COURSE</option>
+		</field>
+		<field
+			name="lesonformat"
+			type="list"
+			label="COM_TJLMS_FILTER_SELECT_LESSON_FORMAT"
+			description="COM_TJLMS_FILTER_SELECT_LESSON_FORMAT"
+			onchange="this.form.submit();"
+			>
+			<option value="">COM_TJLMS_FILTER_SELECT_LESSON_FORMAT</option>
+			<option value="tmtQuiz">COM_TJLMS_QUIZ</option>
+			<option value="textmedia">COM_TJLMS_TEXT_N_MEDIA_LESSON</option>
+			<option value="scorm">COM_TJLMS_SCROM_LESSON</option>
+			<option value="video">COM_TJLMS_VIDEO_LESSON</option>
+			<option value="document">COM_TJLMS_DOCUMENT_LESSON</option>
+			<option value="htmlzips">COM_TJLMS_HTMLZIPS_LESSON</option>
+			<option value="externaltool">COM_TJLMS_EXTERNALTOOL_LESSON</option>
+			<option value="event">COM_TJLMS_EVENT_LESSON</option>
+		</field>
+
+	</fields>
+
+	<fields name="list">
+		<field
+			name="limit"
+			type="limitbox"
+			class="input-mini"
+			default="25"
+			label="COM_TJLMST_LIST_LIMIT"
+			description="COM_TJLMST_LIST_LIMIT_DESC"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</form>

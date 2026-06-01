@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_SEAICHAT_CHAT_VIEW" option="COM_SEAICHAT_CHAT_VIEW_DESC">
+        <message><![CDATA[COM_SEAICHAT_CHAT_VIEW_DESC]]></message>
+    </layout>
+</metadata>

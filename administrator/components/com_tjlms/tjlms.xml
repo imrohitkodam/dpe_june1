@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+	<name>com_tjlms</name>
+	<creationDate>13th Jul 2023</creationDate>
+	<copyright>Copyright (C) 2014 - 2023 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<version>4.0.5</version>
+	<description>Shika - LMS for Joomla!</description>
+
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+
+	<scriptfile>script.tjlms.php</scriptfile>
+
+	<files folder="site">
+		<filename>controller.php</filename>
+		<filename>dashboard.json</filename>
+		<filename>defines.php</filename>
+		<filename>index.html</filename>
+		<filename>jomsocial_rule.xml</filename>
+		<filename>router.php</filename>
+		<filename>tjlms.php</filename>
+		<folder>alphapoints</folder>
+		<folder>altapoints</folder>
+		<folder>assets</folder>
+		<folder>controllers</folder>
+		<folder>helpers</folder>
+		<folder>libraries</folder>
+		<folder>models</folder>
+		<folder>layouts</folder>
+		<folder>views</folder>
+	</files>
+
+	<languages folder="site">
+			<language tag="en-GB">language/en-GB/en-GB.com_tjlms.ini</language>
+	</languages>
+
+	<!-- Media files -->
+	<media destination="com_tjlms" folder="media">
+		<folder>font-awesome</folder>
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>vendors</folder>
+		<folder>js</folder>
+		<folder>lessons</folder>
+		<folder>certificate-templates</folder>
+	</media>
+
+	<administration>
+		<menu img="components/com_tjlms/assets/images/s_com_tjlms.png" >COM_TJLMS</menu>
+		<submenu>
+			<menu link="option=com_tjlms&amp;view=dashboard" view="dashboard">COM_TJLMS_DASHBOARD</menu>
+			<menu link="option=com_tjdashboard&amp;view=dashboard&amp;layout=default&amp;client=com_tjlms&amp;dashboard_id=1" view="dashboard">COM_TJLMS_ADD_TJDASHBOARD_MENUE</menu>
+			<menu link="option=com_categories&amp;extension=com_tjlms" view="categories">COM_TJLMS_COURSE_CAT</menu>
+			<menu link="option=com_tjlms&amp;view=courses" view="courses">COM_TJLMS_TITLE_COURSES</menu>
+			<menu link="option=com_fields&amp;view=groups&amp;context=com_tjlms.course" view="groups">COM_TJLMS_TITLE_COURSES_FIELD_GROUPS</menu>
+			<menu link="option=com_fields&amp;view=fields&amp;context=com_tjlms.course" view="fields">COM_TJLMS_TITLE_COURSES_FIELDS</menu>
+			<menu link="option=com_categories&amp;view=categories&amp;extension=com_tmt.questions" view="categories">COM_TJLMS_QUES_CAT</menu>
+			<menu link="option=com_tmt&amp;view=questions" view="questions">COM_TJLMS_QUESTIONBANCK</menu>
+			<menu link="option=com_categories&amp;view=categories&amp;extension=com_tjlms.lessons" view="categories">COM_TJLMS_SUBMENU_LESSON_CATEGORIES</menu>
+			<menu link="option=com_tjlms&amp;view=lessons" view="lessons">COM_TJLMS_MANAGE_LESSONS</menu>
+			<menu link="option=com_tjlms&amp;view=manageenrollments" view="manageenrollments">COM_TJLMS_MANAGEENROLMENTS</menu>
+			<menu link="option=com_fields&amp;view=groups&amp;context=com_tjlms.manageenrollment" view="groups">COM_TJLMS_TITLE_MANAGEENROLLMENT_FIELD_GROUPS</menu>
+			<menu link="option=com_fields&amp;view=fields&amp;context=com_tjlms.manageenrollment" view="fields">COM_TJLMS_TITLE_MANAGEENROLLMENT_FIELDS</menu>
+			<menu link="option=com_tjcertificate&amp;extension=com_tjlms.course" view="templates">COM_TJLMS_CERTIFICATE</menu>
+			<menu link="option=com_tjcertificate&amp;view=certificates&amp;extension=com_tjlms.course" view="certificates">COM_TJLMS_CERTIFICATE_ISSUED</menu>
+			<menu link="option=com_tjlms&amp;view=coupons" view="coupons">COM_TJLMS_COUPONS</menu>
+			<menu link="option=com_tjlms&amp;view=orders" view="orders">COM_TJLMS_ORDERS</menu>
+			<menu link="option=com_tjnotifications&amp;extension=com_tjlms" view="notifications">COM_TJLMS_NOTIFICATION_TEMPLATES</menu>
+			<menu link="option=com_tjnotifications&amp;view=subscriptions&amp;extension=com_tjlms" view="subscriptions">COM_TJLMS_NOTIFICATIONS_SUBSCRIPTIONS</menu>
+			<menu link="option=com_jlike&amp;view=reminders&amp;extension=com_tjlms" view="reminders">COM_TJLMS_TITLE_REMINDERS</menu>
+			<!-- <menu link="option=com_tjlms&amp;view=activities" view="activities">COM_TJLMS_ACTIVITIES</menu> -->
+			<menu link="option=com_tjlms&amp;view=attemptreport" view="attemptreport">COM_TJLMS_TITLE_ATTEMPTS</menu>
+			<menu link="option=com_tjreports&amp;client=com_tjlms&amp;task=reports.defaultReport" view="reports">COM_TJLMS_TITLE_REPORT</menu>
+			<menu link="option=com_tjlms&amp;view=tools" view="tools">COM_TJLMS_TOOLS</menu>
+			<menu link="option=com_tjlms&amp;view=filedownloadstats" view="filedownloadstats">COM_TJLMS_FILE_DOWNLAOD_STATUS</menu>
+			<menu link="option=com_tjlms&amp;view=help" view="help">COM_TJLMS_TITLE_HELP</menu>
+		</submenu>
+
+		<files folder="admin">
+			<filename>access.xml</filename>
+			<filename>certificate_default.php</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>deletelist.php</filename>
+			<filename>js_defines.php</filename>
+			<filename>index.html</filename>
+			<filename>tjlms.php</filename>
+			<filename>tjlmseasysocialpoints.points</filename>
+			<filename>tjlmsnotification.alert</filename>
+			<filename>tjlmsbadge.badge</filename>
+			<filename>shikaTemplate.json</filename>
+			<filename>html5-sample-1.zip</filename>
+			<filename>html5-sample-2.zip</filename>
+			<folder>assets</folder>
+			<folder>csv</folder>
+			<folder>controllers</folder>
+			<folder>elements</folder>
+			<folder>helpers</folder>
+			<folder>layouts</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+			<folder>includes</folder>
+			<folder>tjcertificates</folder>
+			<folder>houseKeeping</folder>
+		</files>
+
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB/en-GB.com_tjlms.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_tjlms.sys.ini</language>
+		</languages>
+	</administration>
+
+	<!-- default component params values backend -->
+	<config>
+		<fields>
+			<fieldset>
+				<!--general_settings-->
+				<field name="load_bootstrap" default="1" />
+				<field name="show_user_or_username" default="name" />
+				<field name="date_format_show" default="Y-m-d H:i:s" />
+
+				<!--course_settings-->
+				<field name="allow_char_desc" default="150" />
+
+				<field name="admin_approval" default="0" />
+				<field name="paid_course_admin_approval" default="0" />
+				<field name="allow_creator" default="0" />
+				<field name="auto_enroll" default="0" />
+
+				<field name="orientation" default="1" />
+				<field name="certificate_date_format" default="j F Y" />
+
+				<field name="enable_tags" default="0" />
+
+				<field name="social_sharing" default="1" />
+				<field name="social_sharing_type" default="native" />
+				<field name="addthis_publishid" default="" />
+
+				<!--lesson_settings-->
+				<field name="allow_associate_files" default="1" />
+				<field name="lesson_upload_size" default="10" />
+
+				<field name="launch_full_screen" default="window" />
+				<field name="tjlms_toolbar_option" default="1" />
+				<field name="tjlms_lesson_playlist" default="0" />
+
+				<field name="admin_key_review_answersheet" default="abcd1234" />
+
+				<!--social integration-->
+				<field name="social_integration" default="joomla" />
+
+				<field name="pt_option" default="none" />
+				<field name="onAfterCourseEnrolAupPoints" default="5" />
+				<field name="onAfterLessonattemptendAupPoints" default="5" />
+
+				<!-- Media settings -->
+				<field name="course_image_upload_path"  default="/media/com_tjlms/images/courses/" />
+				<field name="lesson_image_upload_path"  default="/media/com_tjlms/images/lessons/" />
+
+				<field name="max_size" default="1024"/>
+				<field name="small_width" default="128"/>
+				<field name="small_height" default="128"/>
+				<field name="medium_width" default="240"/>
+				<field name="medium_height" default="240"/>
+				<field name="large_width" default="400"/>
+				<field name="large_height" default="400"/>
+
+				<!--
+				<field name="pin_width" default="230" />
+				<field name="pin_padding" default="10" />
+				<field name="filter_alignment" default="right" />
+				-->
+
+				<!-- Storage settings -->
+				<field name="course_images_storage" default="local" />
+				<field name="lesson_files_stores" default="local" />
+				<field name="lesson_image_storage" default="local" />
+				<field name="lesson_ass_files_storage" default="local" />
+
+				<!--payment_settings-->
+				<field name="allow_paid_courses" default="0" />
+				<field name="gateways" default="" />
+				<field name="allow_taxation" default="0" />
+				<field name="enable_bill_vat" default="0" />
+				<field name="currency" default="USD" />
+				<field name="currency_symbol" type="text" default="$"/>
+				<field name="currency_display_format" default="{CURRENCY_SYMBOL}{AMOUNT}"/>
+				<field name="amount_separator" default="."/>
+				<field name="terms_condition" default="0" />
+				<field name="tnc_article" default="0" />
+
+				<!--order_settings-->
+				<field name="order_prefix" default="SHOID" />
+				<field name="separator" default="-" />
+				<field name="random_orderid" default="0" />
+				<field name="padding_count" default="3" />
+				<field name="ga_ec_analytics" default="0" />
+				<field name="track_attendee_step" default="0" />
+				<field name="ga_product_type_dimension" default="course" />
+				<field name="send_ga_data" default="course" />
+
+				<!--emails settings-->
+				<field name="after_course_enroll_admin" default="1" />
+				<field name="after_course_enroll_user" default="1" />
+				<field name="after_course_enroll_approve" default="1" />
+				<field name="after_recommend" default="1" />
+				<field name="after_course_complition" default="1" />
+				<field name="after_course_assign" default="1" />
+				<field name="after_subscription_expired" default="1" />
+				<field name="after_subscription_about_to_expired" default="1" />
+				<field name="after_quiz_complition_email" default="1" />
+				<field name="mail_on_new_order" default="0" />
+
+				<!--
+				<field name="mail_recipients_new_order" default="donor" />
+				<field name="send_mail_order_status_change" default="1" />
+				<field name="mail_recipients_order_status_change" default="donor" />
+				-->
+
+				<!--cron settings-->
+				<field name="private_key_storage_cron" default="abcd1234" />
+				<field name="before_subscription_expired" default="1" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

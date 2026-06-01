@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="3.0" method="upgrade">
+	<name>Mail Catcher Full Package</name>
+    <copyright>Copyright (C) 2013 Solidres. All rights reserved.</copyright>
+	<packagename>mailcatcher</packagename>
+	<license>GNU General Public License version 3, or later</license>
+    <creationDate>Oct 2022</creationDate>
+	<version>1.2.0</version>
+	<url>https://www.solidres.com</url>
+	<packager>Solidres Team</packager>
+	<packagerurl>https://www.solidres.com</packagerurl>
+    <author>Solidres Team</author>
+    <authorEmail>contact@solidres.com</authorEmail>
+    <authorUrl>https://www.solidres.com</authorUrl>
+	<description>Mail Catcher Installer Package.</description>
+
+    <scriptfile>mailcatcher.scriptfile.php</scriptfile>
+
+    <updateservers>
+        <server type="extension" priority="1" name="Mail Catcher Update Server">https://www.solidres.com/index.php?option=com_ars&amp;view=update&amp;task=stream&amp;format=xml&amp;id=4</server>
+    </updateservers>
+
+	<files>
+		<file type="component" 	id="com_mailcatcher" >com_mailcatcher.zip</file>
+        <file type="plugin"		id="mailcatcher" group="system">plg_system_mailcatcher.zip</file>
+   	</files>
+</extension>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="media_file"  onchange="timeLog.validateFile(this);" type="file"  label="COM_TIMELOG_FORM_LBL_ACTIVITY_ATTACHMENT" class='timelog-file'/>
+	</fieldset>
+</form>

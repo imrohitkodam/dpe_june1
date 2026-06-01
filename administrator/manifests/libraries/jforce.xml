@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="library" method="upgrade">
+	<name>JForce Library</name>
+	<libraryname>jforce</libraryname>
+	<author>JoomlaForce Team</author>
+	<creationDate>February 2014</creationDate>
+	<copyright>Copyright (C) 2014 JoomlaForce Team. All rights reserved.</copyright>
+	<license>GNU General Public License version 3 or later</license>
+	<authorEmail>support@joomlaforce.com</authorEmail>
+	<authorUrl>JoomlaForce.com</authorUrl>
+	<version>1.1.8</version>
+	<description>Library needed for Joomla Force extensions</description> 
+	<media folder="media" destination="jforce">
+		<filename>index.html</filename>
+		<folder>js</folder>
+		<folder>img</folder>
+	</media>
+	<files>
+		<folder>elements</folder>
+		<folder>helpers</folder>
+		<filename>index.html</filename>
+		<filename>libraries.php</filename>
+		<filename>version.php</filename>
+	</files>
+	<languages>		
+		<language tag="en-GB">language/en-GB/en-GB.lib_jforce.sys.ini</language>
+	</languages>
+</extension>

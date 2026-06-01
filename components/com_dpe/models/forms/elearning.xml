@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form addfieldpath="components/com_dpe/models/fields">
+    <fieldset name='elearningform'>
+        <field name="coursefilter" type="dpecourses"
+            label="COM_DPE_SELECT_COURSE_LABEL"
+            description="COM_DPE_SELECT_COURSE"
+            class="courselist"
+            >
+            <option value="">COM_DPE_SELECT_COURSE</option>
+        </field>
+        <field name="coursecompletionday" type="number"
+            label="COM_DPE_COURSE_COMPLITION_DAY_LABEL"
+            description="COM_DPE_COURSE_COMPLITION_DAY"
+            class="onboardClass courseday "
+            min="0"
+            >
+        </field>
+    </fieldset>
+
+</form>

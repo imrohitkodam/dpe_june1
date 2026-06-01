@@ -1,0 +1,20 @@
+{
+  "name": "anibalsanchez/xt-api-services-mybusiness",
+  "description": "PHP library for Google My Business API v4.",
+  "version": "1.0.3",
+  "require": {
+    "google/apiclient": "^2.2"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true
+  },
+  "autoload": {
+    "classmap": [
+      "mybusiness/MyBusiness.php"
+    ]
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

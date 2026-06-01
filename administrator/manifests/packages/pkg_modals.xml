@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="package" method="upgrade">
+  <packagename>modals</packagename>
+  <name>PKG_MODALS</name>
+  <version>12.3.5PRO</version>
+  <creationDate>May 2023</creationDate>
+  <author>Regular Labs (Peter van Westen)</author>
+  <authorEmail>info@regularlabs.com</authorEmail>
+  <authorUrl>https://regularlabs.com</authorUrl>
+  <copyright>Copyright © 2023 Regular Labs - All Rights Reserved</copyright>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <scriptfile>script.install.php</scriptfile>
+  <blockChildUninstall>true</blockChildUninstall>
+  <files folder="packages/j4">
+    
+    <file type="plugin" group="system" id="modals">plg_system_modals</file>
+    <file type="plugin" group="editors-xtd" id="modals">plg_editors-xtd_modals</file>
+  </files>
+  
+  
+  <languages folder="language">
+    <language tag="en-GB">en-GB/en-GB.pkg_modals.sys.ini</language>
+  </languages>
+  <updateservers>
+    <server type="extension" priority="1" name="Modals [PRO]">https://download.regularlabs.com/updates.xml?e=modals&amp;pro=1&amp;type=.xml</server>
+  </updateservers>
+</extension>

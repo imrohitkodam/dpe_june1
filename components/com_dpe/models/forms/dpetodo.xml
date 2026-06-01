@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form addfieldpath="components/com_dpe/models/fields">
+    <fieldset name='todoform'>
+        <field name="todotitle" type="text"
+            label="COM_DPE_TODO_TITLE_LABEL"
+            description="COM_DPE_TODO_TITLE_DESC"
+            class="titletodo"
+            >
+        </field>
+         <field name="tododescription" type="text"
+            label="COM_DPE_TODO_DESCRIPTION_LABEL"
+            description="COM_DPE_TODO_DESCRIPTION_DESC"
+            class="onboardClass descriptiontodo float-end "
+            >
+        </field>
+         <field name="todocompletionday" type="number"
+            label="COM_DPE_TODO_COMPLITION_DAY_LABEL"
+            description="COM_DPE_TODO_COMPLITION_DAY_DESC"
+            class="completiondaytodo"
+             min="0"
+            >
+        </field>
+         <field name="todoreminderday" type="number"
+            label="COM_DPE_TODOREMINDER_DAY_LABEL"
+            description="COM_DPE_TODOREMINDER_DAY_DESC"
+            class="onboardClass reminderday float-end "
+            min="0"
+            >
+        </field>
+    </fieldset>
+</form>

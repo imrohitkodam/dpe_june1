@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter" >
+		<field
+			name="search"
+			type="text"
+			label="COM_TJLMST_FILTER_SEARCH_DESC_MENROLLMENT"
+			hint="COM_TJLMST_FILTER_SEARCH_DESC_NAME"
+			description="COM_TJLMST_FILTER_SEARCH_DESC_MENROLLMENT"
+		/>
+
+		<field
+			name="actionfilter"
+			type="list"
+			label="COM_TJLMST_FILTER_SELECT_STATUS"
+			description="COM_TJLMST_FILTER_SELECT_STATUS_DESC"
+			onchange="this.form.submit();"
+			>
+			<option value="">COM_TJLMS_SELONE_ACTION</option>
+			<option value="LOGIN">COM_TJLMS_ACTION_LOGIN</option>
+			<option value="LOGOUT">COM_TJLMS_ACTION_LOGOUT</option>
+			<option value="ENROLL">COM_TJLMS_ACTION_ENROLL</option>
+			<option value="ATTEMPT">COM_TJLMS_ACTION_ATTEMPT</option>
+			<option value="ATTEMPT_END">COM_TJLMS_ACTION_ATTEMPT_END</option>
+			<option value="COURSE_CREATED">COM_TJLMS_ACTION_COURSE_CREATED</option>
+			<option value="RECOMMENDED">COM_TJLMS_ACTION_COURSE_RECOMMENDED</option>
+			<option value="COURSE_COMPLETED">COM_TJLMS_ACTION_COURSE_COURSE_COMPLETED</option>
+			<option value="CERTIFICATE_EXPIRED">COM_TJLMS_ACTION_COURSE_CERTIFICATE_EXPIRED</option>
+		</field>
+
+		<field
+			name="userfilter"
+			type="users"
+			label="COM_TJLMST_FILTER_SELECT_USER"
+			description="COM_TJLMST_FILTER_SELECT_USER_DESC"
+			onchange="this.form.submit();"
+			>
+			<option value="">COM_TJLMS_FILTER_SELECT_USER</option>
+		</field>
+
+
+	</fields>
+
+	<fields name="list">
+		<field
+			name="limit"
+			type="limitbox"
+			class="input-mini"
+			default="25"
+			label="COM_TJLMST_LIST_LIMIT"
+			description="COM_TJLMST_LIST_LIMIT_DESC"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</form>

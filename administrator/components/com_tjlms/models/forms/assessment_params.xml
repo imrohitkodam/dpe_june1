@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fieldset name="idtitle" label="COM_TJLMS_FORM_LBL_ASSESSMENT_PARAM_TITLE">
+		<field name="id"
+			 type="hidden"/>
+		<field name="title"
+			 type="text"
+			 class="assessment-param-required input-medium required validate-blankspace"
+			 label="COM_TJLMS_FORM_LBL_ASSESSMENT_PARAM_TITLE" />
+	</fieldset>
+	<fieldset name="type" label="COM_TJLMS_FORM_LBL_ASSESSMENT_PARAM_TYPE">
+	   <field name="type"
+			 type="list"
+			 class="input-medium"
+			 label="COM_TJLMS_FORM_LBL_ASSESSMENT_PARAM_TYPE">
+			<option value="star">Star</option>
+			<option value="yesno">Yes No</option>
+			<option value="textinput">Text input</option>
+			<option value="checkbox">Checkbox</option>
+			<option value="dropdown">Dropdown</option>
+		</field>
+	</fieldset>
+	<fieldset name="value" label="COM_TJLMS_FORM_LBL_ASSESSMENT_PARAM_VAL">
+		<field name="value"
+			type="text"
+			class="param_value assessment-param-required input-mini required validate-whole-number"
+			label="COM_TJLMS_FORM_LBL_ASSESSMENT_PARAM_VAL" />
+	</fieldset>
+	<fieldset name="weightage" label="COM_TJLMS_FORM_LBL_ASSESSMENT_PARAM_WEIGHTAGE">
+		<field name="weightage"
+			class="param_weightage assessment-param-required input-mini required"
+			 type="text"
+			default="1"
+			 label="COM_TJLMS_FORM_LBL_ASSESSMENT_PARAM_WEIGHTAGE" />
+	</fieldset>
+	<fieldset name="description" label="COM_TJLMS_FORM_LBL_ASSESSMENT_PARAM_DESC">
+		<field name="description"
+			class="input-medium"
+			type="text"
+			label="COM_TJLMS_FORM_LBL_ASSESSMENT_PARAM_DESC" />
+	</fieldset>
+	<fieldset name="allow_comment" label="COM_TJLMS_FORM_LBL_ASSESSMENT_PARAM_CMT_ALLOW">
+		<field name="allow_comment"
+			type="radio"
+			default="0"
+			label="COM_TJLMS_FORM_LBL_ASSESSMENT_PARAM_CMT_ALLOW">
+			<option value="1">COM_TJLMS_YES</option>
+			<option value="0">COM_TJLMS_NO</option>
+		</field>
+	</fieldset>
+</form>

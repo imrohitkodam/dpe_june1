@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="id"
+			type="text"
+			readonly="true"
+			class="readonly"
+			default="0"
+			description="JGLOBAL_FIELD_ID_DESC" />
+
+		<field name="ordering" />
+
+		<field name="state"
+			default="1"
+			type="list"
+			label="JSTATUS"
+			description="JFIELD_PUBLISHED_DESC"
+			class="inputbox"
+			size="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+			<option value="2">JARCHIVED</option>
+			<option value="-2">JTRASHED</option>
+		</field>
+
+		<field name="checked_out"
+			type="hidden"
+			filter="unset"
+		/>
+
+		<field name="checked_out_time"
+			default="0000-00-00 00:00:00"
+			type="hidden"
+			filter="unset"
+		/>
+
+		<field name="multiagency_id"
+			required="true"
+			type="sql"
+			query="select id, CONCAT(UCASE(LEFT(title, 1)),SUBSTRING(title, 2)) as value from z467w_tjmultiagency_multiagency WHERE `state` = 1 order by title asc"
+			key_field="id"
+			value_field="value"
+			onchange="checkExistingCourse(),licence.checkExistingLicence(this)"
+			label="COM_MULTIAGENCY_FORM_LBL_LICENCE_MULTIAGENCY_ID,COM_MULTIAGENCY_ORGANISATION"
+			description="COM_MULTIAGENCY_FORM_DESC_LICENCE_MULTIAGENCY_ID,COM_MULTIAGENCY_ORGANISATION">
+			<option value="">COM_MULTIAGENCY_SELECT,COM_MULTIAGENCY_ORGANISATION</option>
+		</field>
+
+
+		<field name="licence_type"
+			default="all"
+			type="list"
+			label="COM_MULTIAGENCY_LICENCE_TYPE_LABEL"
+			description="COM_MULTIAGENCY_LICENCE_TYPE_DESC"
+			class="inputbox"
+			size="1"
+            onchange="setCourses()">
+			<option value="all">COM_MULTIAGENCY_LICENCE_TYPE_ALL</option>
+			<option value="per">COM_MULTIAGENCY_LICENCE_TYPE</option>
+		</field>
+
+		<field name="course_id"
+			required="true"
+			type="courses"
+			onchange="checkExistingCourse()"
+			label="COM_MULTIAGENCY_FORM_LBL_LICENCE_COURSE_ID"
+			description="COM_MULTIAGENCY_FORM_DESC_LICENCE_COURSE_ID"
+			hint="COM_MULTIAGENCY_FORM_LBL_LICENCE_COURSE_ID"
+		/>
+
+		<field name="total_seats"
+			type="number"
+			onchange="setSeats()"
+			min="0"
+			required="true"
+			label="COM_MULTIAGENCY_FORM_LBL_LICENCE_TOTAL_LIECENCES"
+			description="COM_MULTIAGENCY_FORM_DESC_LICENCE_TOTAL_LICENCES"
+			hint="COM_MULTIAGENCY_FORM_LBL_LICENCE_TOTAL_LIECENCES"
+		/>
+
+		<field name="used_seats"
+			type="number"
+			class="validate-integer-positive"
+			readonly="true"
+			default="0"
+			label="COM_MULTIAGENCY_LICENCES_USED_LICENCES"
+			description="COM_MULTIAGENCY_FORM_DESC_LICENCE_USED_LICENCES"
+			hint="COM_MULTIAGENCY_LICENCES_USED_LICENCES"
+		/>
+
+		<field name="start_date"
+			required="true"
+			type="calendar"
+			class="inputbox validate-dd-mm-yyyy"
+			filter="safehtml"
+			default="NOW"
+			onchange="setStartDate()"
+			format="%d-%m-%Y"
+			label="COM_MULTIAGENCY_FORM_LBL_LICENCE_START_DATE"
+			description="COM_MULTIAGENCY_FORM_DESC_LICENCE_START_DATE"
+			hint="COM_MULTIAGENCY_FORM_LBL_LICENCE_START_DATE"
+		/>
+
+		<field name="end_date"
+			required="true"
+			type="calendar"
+			class="inputbox validate-yyyy/mm/dd"
+			filter="safehtml"
+			default="NOW"
+			onchange="setEndDate()"
+			format="%d-%m-%Y"
+			label="COM_MULTIAGENCY_FORM_LBL_LICENCE_END_DATE"
+			description="COM_MULTIAGENCY_FORM_DESC_LICENCE_END_DATE"
+			hint="COM_MULTIAGENCY_FORM_LBL_LICENCE_END_DATE"
+		/>
+
+		<field name="comment" type="textarea"
+			label="COM_MULTIAGENCY_FORM_LBL_LICENCE_COMMENT"
+			description="COM_MULTIAGENCY_FORM_DESC_LICENCE_COMMENT"
+			hint="COM_MULTIAGENCY_FORM_LBL_LICENCE_COMMENT"
+		/>
+	</fieldset>
+</form>

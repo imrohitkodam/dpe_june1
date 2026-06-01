@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<form><fieldset name="Test1" addrulepath="administrator/components/com_tjfields/models/rules" addfieldpath="administrator/components/com_tjfields/models/fields"><field name="com_tjucm_latest-checklist_Testlatest" type="dpechecklist" label="Test latest" description="" class="" addfieldpath="/administrator/components/com_tjfields/models/fields"/></fieldset></form>

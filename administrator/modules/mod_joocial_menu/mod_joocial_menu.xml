@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="administrator" method="upgrade">
+	<name>mod_joocial_menu</name>
+  <version>9.6.1</version>
+  <creationDate>2022-02-11</creationDate>
+
+	<author>Extly, CB</author>
+	<authorEmail>team@extly.com</authorEmail>
+	<authorUrl>https://www.extly.com</authorUrl>
+	<copyright>Copyright (c)2012-2022 Extly, CB All rights reserved.</copyright>
+	<license>GNU/GPLv3 www.gnu.org/licenses/gpl-3.0.html</license>
+
+	<description>MOD_JOOCIAL_MENU_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_joocial_menu">mod_joocial_menu.php</filename>
+    <folder>tmpl</folder>
+  </files>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_joocial_menu.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_joocial_menu.sys.ini</language>
+	</languages>
+
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_ADMIN_LATEST" />
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+			</fieldset>
+
+			<fieldset name="advanced">
+				<field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field name="automatic_title" type="radio" class="btn-group btn-group-yesno" default="0"
+					label="COM_MODULES_FIELD_AUTOMATIC_TITLE_LABEL" description="COM_MODULES_FIELD_AUTOMATIC_TITLE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field name="moduleclass_sfx" type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field name="cache" type="list" default="0"
+					label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+
+				<field
+					name="cachemode"
+					label="Cache Mode"
+					type="list"
+					default="static">
+					<option value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

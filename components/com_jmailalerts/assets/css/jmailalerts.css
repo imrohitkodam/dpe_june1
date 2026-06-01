@@ -1,0 +1,146 @@
+/**
+ * @package     JMailAlerts
+ * @subpackage  com_jmailalerts
+ *
+ * @author      Techjoomla <extensions@techjoomla.com>
+ * @copyright   Copyright (C) 2009 - 2022 Techjoomla. All rights reserved.
+ * @license     http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ */
+
+#community-wrap {
+  min-width: 500px !important;
+  min-height: 45px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#community-wrap ul {
+  margin: 0;
+  padding: 0;
+}
+
+#jmailalerts-emails input[type="radio"],
+#jmailalerts-emails input[type="checkbox"] {
+  margin: 0 !important;
+}
+
+.alert_frequncy {
+  float: left;
+  width: 500px;
+  margin: 5px;
+}
+
+.clear { clear: both; }
+
+.jma_alert_desc { margin: 5px; }
+
+.jma_email_intro { padding-top: 7px; }
+
+.jma_plugin_background { background-color: #fff !important; }
+
+.jma_table {
+  width: 100%;
+  border: 0;
+}
+
+.jma_table tr,
+td { border: 0 !important; }
+
+.main { padding: 5px; }
+
+.sub_status_msg { font-size: 10px; }
+
+.subscribed_alert { color: green; }
+
+.unsubscribed_alert { color: #135cae; }
+
+div.box-container-t {
+  position: relative;
+  padding: 0 10px;
+}
+
+div.box-tl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background: transparent url(../images/module_rounded_tl.png) no-repeat scroll 0 0;
+}
+
+div.box-tr {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  background: transparent url(../images/module_rounded_tr.png) no-repeat	scroll 0 0;
+}
+
+div.box-t {
+  height: 9px;
+  background: #fff none repeat scroll 0 0;
+  border-top: 1px solid #dcdcdc;
+}
+
+div.content_cover {
+  padding: 0 10px;
+  overflow: hidden;
+  background: #f0f0f0 url(../images/module_rounded_bg.png) repeat-x scroll 0 0;
+  border-right: 1px solid #dcdcdc;
+  border-left: 1px solid #dcdcdc;
+}
+
+div.content_cover div.header {
+  margin: 0 0 5px;
+  font-weight: bold;
+  font-size: 150%;
+  letter-spacing: -1px;
+}
+
+div.content_bottom {
+  position: relative;
+  padding: 0 10px;
+}
+
+div.content_bottom div.box-b {
+  height: 9px;
+  background: #f0f0f0 none repeat scroll 0 0;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+div.content_bottom div.box-bl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background: transparent url(../images/module_rounded_bl.png) no-repeat	scroll 0 0;
+}
+
+div.content_bottom div.box-br {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  background: transparent url(../images/module_rounded_br.png) no-repeat scroll 0 0;
+}
+
+div.inner_left img {
+  padding: 3px;
+  border: solid 1px #dcdcdc;
+}
+
+div.jmail-blocks {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+div.jmail-blocks h4.jma_alert {
+  margin: 0;
+}
+
+div.jmail-expands {
+  padding: 0;
+}

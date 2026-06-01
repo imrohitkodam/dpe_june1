@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fieldset label="COM_TJLMS_ASSESSMNET_FORM_LBL_ANSWERSHEET_OPTIONS_TITLE">
+		<field name="assessments"
+			 type="list"
+			 label="COM_TJLMS_ASSESSMENT_FORM_LBL_ANSWERSHEET_ASSESSMENTS">
+			<option value="1">COM_TJLMS_YES</option>
+			<option value="0">COM_TJLMS_NO</option>
+		</field>
+		<field name="param_marks"
+			 type="list"
+			 label="COM_TJLMS_ASSESSMENT_FORM_LBL_ANSWERSHEET_PARAM_MARKS">
+			<option value="1">COM_TJLMS_YES</option>
+			<option value="0">COM_TJLMS_NO</option>
+		</field>
+	  
+		<field name="param_comments"
+			type="list"
+			label="COM_TJLMS_ASSESSMENT_FORM_LBL_ANSWERSHEET_PARAM_COMMENTS">
+			<option value="1">COM_TJLMS_YES</option>
+			<option value="0">COM_TJLMS_NO</option>
+		</field>
+		<field name="feedback"
+			type="list"
+			default="1"
+			label="COM_TJLMS_ASSESSMENT_FORM_LBL_ANSWERSHEET_ASSESSOR_FEEDBACK">
+			<option value="1">COM_TJLMS_YES</option>
+			<option value="0">COM_TJLMS_NO</option>
+		</field>
+	</fieldset>
+</form>

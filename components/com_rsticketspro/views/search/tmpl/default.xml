@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="RST_SEARCH_DEFAULT_LAYOUT">
+		<message>
+			<![CDATA[RST_SEARCH_TICKETS_MENU_DESC]]>
+		</message>
+	</layout>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="staff_itemid" type="text" default="" label="RST_STAFF_ITEMID" description="RST_STAFF_ITEMID_DESC"></field>
+				<field name="customer_itemid" type="text" default="" label="RST_CUSTOMER_ITEMID" description="RST_CUSTOMER_ITEMID_DESC"></field>
+			</fieldset>
+		</fields>
+	</config>
+</metadata>

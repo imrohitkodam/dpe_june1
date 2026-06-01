@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="package" method="upgrade">
+  <packagename>betterpreview</packagename>
+  <name>PKG_BETTERPREVIEW</name>
+  <version>6.7.1PRO</version>
+  <creationDate>September 2022</creationDate>
+  <author>Regular Labs (Peter van Westen)</author>
+  <authorEmail>info@regularlabs.com</authorEmail>
+  <authorUrl>https://regularlabs.com</authorUrl>
+  <copyright>Copyright © 2022 Regular Labs - All Rights Reserved</copyright>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <scriptfile>script.install.php</scriptfile>
+  <blockChildUninstall>true</blockChildUninstall>
+  <files folder="packages/j3">
+    
+    <file type="plugin" group="system" id="betterpreview">plg_system_betterpreview</file>
+    <file type="plugin" group="editors-xtd" id="betterpreview">plg_editors-xtd_betterpreview</file>
+  </files>
+  
+  
+  <languages folder="language">
+    <language tag="en-GB">en-GB/en-GB.pkg_betterpreview.sys.ini</language>
+  </languages>
+  <updateservers>
+    <server type="extension" priority="1" name="Better Preview [PRO]">https://download.regularlabs.com/updates.xml?e=betterpreview&amp;pro=1&amp;type=.xml</server>
+  </updateservers>
+</extension>

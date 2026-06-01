@@ -1,0 +1,667 @@
+/*#jlikeToolbar:hover,
+.tmt_modalClose {
+    display: inline-block
+}
+*/
+#window-mainbody .btn.btn-primary,
+.tmt-resume {
+    text-transform: uppercase
+}
+
+@media only screen and (max-width:800px) {
+    /*#tmt_test #jlikeToolbar_bottom .test_nav_container .test_nav_container_controls,
+    #tmt_test .test_controls {
+        float: left
+    }*/
+    #jlikeToolbar #jlike-container {
+        width: 50%
+    }
+    #tmt_test #jlikeToolbar_bottom:after {
+        clear: both
+    }
+    #jlikeToolbar,
+    #jlikeToolbar_bottom,
+    #jlikeToolbar_content {
+        margin-right: 0
+    }
+    #tmt_test .test_controls_container .span9 {
+        width: 50%;
+        text-align: left
+    }
+    #tmt_test .test_controls_container .span3 {
+        width: 45%
+    }
+    /*#tmt_test #jlikeToolbar_bottom .test_nav_container,
+    #tmt_test #jlikeToolbar_bottom .test_page_container {
+        width: 50%
+    }*/
+    #tmt_test #jlikeToolbar_bottom .test_nav_container .span12 {
+        width: 100%
+    }
+    #tmt_test #jlikeToolbar_bottom .test_nav_container .span3 {
+        width: 30%
+    }
+    #tmt_test #jlikeToolbar_bottom .test_nav_container .span9 {
+        width: 70%
+    }
+}
+
+.lesson_edit_li .form-actions,
+.tj_textpullright,
+.tjlms_add_quiz_form .form-actions {
+    text-align: right
+}
+
+.quiz-pageno-string {
+    padding-left: 15px;
+    padding-right: 15px
+}
+/*
+#jlikeToolbar {
+    background-color: #fff;
+    top: 0
+}
+
+#jlikeToolbar,
+#jlikeToolbar_bottom {
+    height: 45px;
+    position: fixed;
+    min-height: 20px;
+    width: 100%;
+    left: 0;
+    z-index: 111111;
+    background-color: #eee;
+}
+*/
+#tmt_test .jlike-btn-green {
+    background-color: #FFF;
+    color: #778e0b;
+    border: 1px solid #778e0b;
+    height: 30px;
+    padding: 4px 12px
+}
+/*
+#tmt_test #jlikeToolbar .test_controls,
+#tmt_test #jlikeToolbar_bottom .test_controls {
+    margin: 5px 0;
+    vertical-align: top*/
+}
+
+/*
+#tmt_test #jlikeToolbar .btn,
+#tmt_test #jlikeToolbar_bottom .btn {
+    padding: 5px 7px!important;
+    background: #4169e1!important;
+    color: #fff!important
+}*/
+
+#tmt_test .test_timer {
+    margin-right: 0!important;
+    margin-bottom: 0!important
+}
+
+.tmt_modalClose {
+    padding: 10px 20px;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 111111
+}
+
+/*
+.process .process_bar_text,
+.progress .progress_bar_text {
+    color: #444;
+    font-size: 12px;
+}*/
+
+.bar[aria-valuenow="0"] {
+    color: #777!important;
+    background-color: transparent;
+    background-image: none;
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+
+.tjprogressbar {
+    margin-left: 5px;
+    position: relative;
+    /*line-height: 3px*/
+}
+
+.progress .bar .bar_noprogress {
+    min-width: 30px;
+    color: #777;
+    background-color: transparent;
+    background-image: none;
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+
+.com_tmt_button {
+    margin: 5px!important
+}
+
+.com_tmt_width1 {
+    width: 1%
+}
+
+.com_tmt_width5 {
+    width: 5%
+}
+
+.com_tmt_width10 {
+    width: 10%
+}
+
+.com_tmt_width15 {
+    width: 15%
+}
+
+.com_tmt_width20 {
+    width: 20%
+}
+
+.tjlms_add_quiz_form fieldset legend h2 {
+    color: #414d5a;
+    font-weight: 100
+}
+
+.tjlms_add_quiz_form fieldset {
+    padding: 0 10px
+}
+
+.tjlms_add_quiz_form fieldset legend {
+    padding: 10px 0 0;
+    border-bottom: 0
+}
+
+.lesson_edit_li .nav-tabs[id^=myTabTabs] li.active,
+.tjlms_add_quiz_form .nav-tabs[id^=myTabTabs] li.active {
+    background-color: #15497c;
+    color: #FFF;
+    position: relative
+}
+
+.lesson_edit_li .nav-tabs[id^=myTabTabs] li.active a,
+.tjlms_add_quiz_form .nav-tabs[id^=myTabTabs] li.active a {
+    color: #FFF;
+    background-color: transparent;
+    border: none
+}
+
+.lesson_edit_li .nav-tabs[id^=myTabTabs] li a,
+.tjlms_add_quiz_form .nav-tabs[id^=myTabTabs] li a {
+    background-color: transparent;
+    border: none;
+    font-weight: 700;
+    color: #bbb
+}
+
+.lesson_edit_li .nav-tabs[id^=myTabTabs],
+.tjlms_add_quiz_form .nav-tabs[id^=myTabTabs] {
+    border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee
+}
+
+.lesson_edit_li .nav-tabs[id^=myTabTabs] li.active:after,
+.tjlms_add_quiz_form .nav-tabs[id^=myTabTabs] li.active:after {
+    content: ' ';
+    height: 0;
+    width: 0;
+    position: absolute;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 9px solid #15497c;
+    left: 35%
+}
+
+.tmt_form_errors {
+    display: none
+}
+
+#system-message>div {
+    padding-left: 13px!important
+}
+
+.btn-medium {
+    height: 30px!important
+}
+
+.tmt_nw-btn {
+    border: none!important;
+    margin: 0 1px -38px 0!important
+}
+
+.tmt_top,
+.tmt_top1 {
+    margin-top: -30px!important
+}
+
+.tmt_nw {
+    border: 1px solid #ccc!important;
+    background: #f5f5f5!important;
+    padding-bottom: 20px!important;
+    margin-left: 1px!important
+}
+
+#bgrp,
+.tjlms-wrapper #contentarea {
+    border: none
+}
+
+.tmt_top1 {
+    margin-bottom: -10px!important
+}
+
+.tmt-sidebar-nav-fixed {
+    position: fixed;
+    top: 50%;
+    right: 0
+}
+
+#contentarea [class*=" icon-"],
+#contentarea [class^=icon-] {
+    height: 25px;
+    width: 25px;
+    margin: 10px
+}
+
+#contentarea .label {
+    font-size: 16px;
+    background-color: #EEE;
+    padding: 5px 20px;
+    color: #333;
+    margin-top: 20px;
+    text-align: left;
+    font-weight: 300!important;
+    min-width: 100%
+}
+
+#tmt_testpremise .tmt-quiz-desc .label {
+    white-space: normal!important;
+    line-height: 1.5;
+    display: block;
+    text-align: justify;
+    max-height: 200px;
+    overflow-y: scroll
+}
+
+#tmt_testpremise .tmt-alert-msg {
+    white-space: normal!important;
+    padding: 20px!important;
+    line-height: 28px
+}
+
+#tmt_testpremise .btn-toolbar {
+    margin-top: 0!important
+}
+
+.tmt-duration,
+.tmt-passingmarks,
+.tmt-questions,
+.tmt-totalmarks {
+    padding: 20px!important;
+    background-position: 0 0;
+    background-size: 25px 25px;
+    vertical-align: middle
+}
+
+#countdown_timer .icon-time {
+    background-size: 25px 25px;
+    vertical-align: middle;
+    margin-right: 10px
+}
+
+.tmt-resume {
+    padding: 5px 20px 5px 0;
+    margin: 20px;
+    background-color: transparent!important;
+    color: #555!important;
+    font-size: 16px;
+    font-weight: 400!important
+}
+
+.tmt-quiz-box {
+    background-color: #EEE;
+    color: #333;
+    margin-top: 20px;
+    text-align: left;
+    margin-bottom: 20px
+}
+
+h2.componentheading {
+    display: inline-block;
+    font-size: 24px;
+    margin: 10px 20px
+}
+
+.tmt-qdata,
+.tmt-quest-desc {
+    margin-bottom: 10px
+}
+
+#bgrp {
+    background-color: transparent
+}
+
+.tmt-start-quiz,
+.tmt-start-quiz:active,
+.tmt-start-quiz:focus,
+.tmt-start-quiz:hover {
+    border-radius: 0!important;
+    background: 0 0!important;
+    border-color: #555!important;
+    color: #555!important
+}
+
+.test-cross {
+    height: 25px;
+    width: 25px
+}
+
+/*.questions_container .forquestion {
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+    -webkit-box-shadow: none;
+    box-shadow: none
+}*/
+
+.questions_container .hr {
+    border: none
+}
+
+.questions_container .tj_textpullright {
+    border: 1px solid #555;
+    padding: 5px;
+    border-radius: 2px;
+    text-align: center;
+    color: #555;
+    float: right
+}
+#jlikeToolbar_content .container {
+    background-color: #eee;
+    width: 100%!important;
+    max-width: initial!important
+}
+
+#jlikeToolbar_bottom {
+    /*background: 0 0;*/
+    border: none;
+    padding-left: 0;
+    color: #666;
+    bottom: 0
+}
+#jlikeToolbar #jlikeToolbar_content,
+#jlikeToolbar_bottom #jlikeToolbar_content {
+    max-width: initial!important;
+	/*padding: 9px 6px;*/
+}
+
+#jlikeToolbar_bottom #jlikeToolbar_content {
+	padding: 9px 6px;
+}
+
+#tmt_test .test_timer {
+   /* margin-top: 15px!important;*/
+    color: #555
+}
+
+.text-error {
+    color: #555
+}
+
+.com-tmt-paper-div {
+    padding-left: 10px
+}
+
+#tmt_test .text-error {
+    color: red!important
+}
+
+/*.tmt-cross-container {
+    display: inline-block;
+    float: right;
+    padding: 12px
+}
+
+.tmt-cross-container .fa-close {
+    font-size: 2em
+}
+
+.tmt-cross-container .tmt-cross {
+    cursor: pointer
+}*/
+
+.com-tmt-paper-div label.checkbox,
+.com-tmt-paper-div label.radio {
+    font-weight: 400
+}
+
+#jlikeToolbar_bottom .container {
+    background: #eee;
+    margin-right: auto
+}
+
+#jlikeToolbar_bottom .progress_bar_text {
+    position: absolute;
+    color: #aaa;
+}
+
+.span5.test_controls.test_page_container.center {
+    padding-top: 8px
+}
+
+.icon-chevron-right {
+    background-image: url(../images/tmt-right.png);
+    background-position: 0 0
+}
+
+.icon-chevron-left {
+    background-image: url(../images/tmt-left.png);
+    background-position: 0 0
+}
+
+/*#tmt_test #jlikeToolbar_bottom .btn,
+#tmt_test #jlikeToolbar_bottom .btn:active,
+#tmt_test #jlikeToolbar_bottom .btn:focus,
+#tmt_test #jlikeToolbar_bottom .btn:hover {
+    background: 0 0!important;
+    border: none!important
+}*/
+
+/*.final-submit {
+    padding: 5px 10px!important;
+    border: 1px solid #555!important;
+    border-radius: 2px;
+    color: #555!important;
+    background-color: transparent!important
+}*/
+
+/*.result-box {
+    border: none;
+    background: 0 0
+}*/
+
+
+.brown-text {
+    color: #555
+}
+
+/*.tmt-quest-desc {
+    padding-left: 45px
+}*/
+
+.tmt-alert .alert-info {
+    background: 0 0;
+    border: none;
+    color: #555;
+    padding-left: 20px
+}
+
+.tmt-cross-container .tmt_modalClose {
+    position: static;
+    padding: 0
+}
+
+.review-block .result-top {
+    background: #eee;
+}
+
+
+.tmt-quest {
+    display: table-row;
+    width: 100%
+}
+/*
+.tmt-quest .tmt-qno-container,
+.tmt-quest .tmt-qtext {
+    display: table-cell
+}
+
+.tmt-quest .tmt-qtext {
+    vertical-align: middle;
+    padding-left: 5px
+}
+*/
+.tjprogressbar {
+    margin-top: 5px
+}
+
+.btn.active:focus,
+.btn:active:focus,
+.btn:focus {
+    outline: 0
+}
+
+.quiz-navigate-btn {
+    padding: 0;
+    border: none;
+    background: 0 0;
+    color: #0358af;
+    height: 30px;
+    line-height: 30px;
+    vertical-align: middle;
+    margin: 0 5px
+}
+
+.view-right {
+    text-align: right
+}
+
+.view-left {
+    text-align: left
+}
+
+.view-center {
+    text-align: center
+}
+
+.sidebar-nav- {
+    position: fixed;
+    top: 50%;
+    right: 0
+}
+
+span.automatic-submit-msg {
+    display: none
+}
+
+.automatic-on button.finish-test[disabled] {
+    color: #575757!important;
+    border: 1px solid #939393!important;
+    display: none
+}
+
+.automatic-on span.automatic-submit-msg {
+    display: block;
+    color: #720201!important
+}
+
+.final-submit[disabled] {
+    color: #434343!important;
+    border: 1px solid gray!important;
+    opacity: .5
+}
+
+span.tmt-cross.disabled {
+    cursor: initial
+}
+
+span.tmt-cross.disabled i.fa.fa-close:before {
+    color: #575757
+}
+
+.float-left-prev button.jlike-btn-green.final-submit {
+    float: left
+}
+
+@media (min-width:1200px) {
+    .automatic-on span.automatic-submit-msg {
+        height: 30px;
+        padding: 10px 0;
+        white-space: nowrap
+    }
+}
+
+/*.questions_container {
+    margin-bottom: 70px!important
+}
+*/
+@media (max-width:900px) { 
+   .questions_container {
+        margin-bottom: 50px!important
+    }
+    .left_table td,
+    .left_table th {
+        text-align: left!important
+    }
+    .hidebtn {
+        display: none
+    }
+    .top-heading {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        background: #fff
+    }
+    .table-containing-table {
+        margin-top: 145px
+    }
+    div.answer-template-radio {
+        margin-top: 8px
+    }
+    .top-heading .add-ques-btn-div {
+        margin-top: 18px
+    }
+    .top-heading .btn-wrapper {
+        padding-top: 20px !important
+    }
+}
+
+
+.d-table-row {
+	display: table-row;
+}
+.forquestion .tmt-que-marks {
+	border: 1px solid #555;
+}
+
+.test_controls.test_nav_container {
+	float: right;
+}
+@media (min-width:768px) {
+	.forquestion .tmt-que-marks {
+		float: right;
+	}
+}
+@media (max-width:767px) {
+	#tmt_test #jlikeToolbar .test_controls,
+	#tmt_test #jlikeToolbar_bottom .test_controls {
+		display : inline-block;
+	}
+}

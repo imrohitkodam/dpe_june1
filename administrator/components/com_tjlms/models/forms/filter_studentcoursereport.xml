@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter" >
+		<field
+			name="search"
+			type="text"
+			label="COM_TJLMST_FILTER_SEARCH_DESC_MENROLLMENT"
+			hint="COM_TJLMST_FILTER_SEARCH_DESC_NAME"
+			description="COM_TJLMST_FILTER_SEARCH_DESC_MENROLLMENT"
+		/>
+		<field
+			name="coursefilter"
+			type="courses"
+			label="COM_TJLMS_FILTER_SELECT_COURSE"
+			description="COM_TJLMS_FILTER_SELECT_COURSE"
+			onchange="this.form.submit();"
+			>
+			<option value="">COM_TJLMS_FILTER_SELECT_COURSE</option>
+		</field>
+
+		<field
+			name="categoryfilter"
+			type="lmscategories"
+			label="COM_TJLMS_FILTER_SELECT_COURSE_CATEGORY"
+			description="COM_TJLMS_FILTER_SELECT_COURSE_CATEGORY_DESC"
+			onchange="this.form.submit();"
+			>
+			<option value="">COM_TJLMS_FILTER_SELECT_COURSE_CATEGORY</option>
+		</field>
+
+		<field
+			name="accessfilter"
+			type="lmsaccess"
+			label="COM_TJLMS_FILTER_SELECT_ACCESSLEVEL"
+			description="COM_TJLMS_FILTER_SELECT_ACCESSLEVEL_DESC"
+			onchange="this.form.submit();"
+			>
+			<option value="">COM_TJLMS_FILTER_SELECT_ACCESSLEVEL</option>
+		</field>
+
+		<field
+			name="userfilter"
+			type="users"
+			label="COM_TJLMST_FILTER_SELECT_USER"
+			description="COM_TJLMST_FILTER_SELECT_USER_DESC"
+			onchange="this.form.submit();"
+			>
+			<option value="">COM_TJLMS_FILTER_SELECT_USER</option>
+		</field>
+	</fields>
+
+	<fields name="list">
+		<field
+			name="limit"
+			type="limitbox"
+			class="input-mini"
+			default="25"
+			label="COM_TJLMST_LIST_LIMIT"
+			description="COM_TJLMST_LIST_LIMIT_DESC"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</form>

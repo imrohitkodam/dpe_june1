@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="id" type="text" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC" />
+		<field name="title" type="text" maxlength="255" filter="raw" required="true" label="COM_TJUCM_FORM_LBL_DOCUMENT_TITLE" description="COM_TJUCM_FORM_LBL_DOCUMENT_TITLE_DESC" hint="COM_TJUCM_FORM_LBL_TYPE_TITLE" />
+		<field name="ucm_type" 
+			type="sql" 
+			default="10" 
+			label="COM_TJUCM_FORM_LBL_TYPE" 
+			required="true" 
+			query="SELECT id, title FROM #__tj_ucm_types WHERE state=1" 
+			key_field="id" 
+			value_field="title">
+			<option value="">COM_TJUCM_SELECT_TYPE_OPTION</option>
+		</field>
+		<field name="description" type="textarea" cols="5" rows="5" label="COM_TJUCM_FORM_LBL_DOCUMENT_DESCRIPTION" description="COM_TJUCM_FORM_LBL_DOCUMENT_DESCRIPTION_DESC" hint="COM_TJUCM_FORM_LBL_TYPE_TYPE_DESCRIPTION" />
+		<field name="document_body" type="editor" label="COM_TJUCM_FORM_LBL_DOCUMENT_TEXT" description="COM_TJUCM_FORM_LBL_DOCUMENT_TEXT" validation="required" filter="safehtml"/>
+		<field name="params" type="textarea" label="COM_TJUCM_FORM_LBL_TYPE_PARAMS" description="COM_TJUCM_FORM_DESC_TYPE_PARAMS" hint="COM_TJUCM_FORM_LBL_TYPE_PARAMS"/>
+		<field name="state" default="1" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+	</fieldset>
+	<fieldset name="accesscontrol">
+		<field name="asset_id" type="hidden" filter="unset" />
+		<field name="rules" type="rules" label="JFIELD_RULES_LABEL" translate_label="false" filter="rules" validate="rules" class="inputbox" component="com_tjucm" section="document" />
+	</fieldset>
+</form>

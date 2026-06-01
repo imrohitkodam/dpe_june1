@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" version="3.8.0" method="upgrade">
+	<name>Perfect Publisher - Command-Line (CLI)</name>
+  <version>9.6.1</version>
+  <creationDate>2022-02-11</creationDate>
+
+	<author>Extly, CB</author>
+	<authorEmail>team@extly.com</authorEmail>
+	<authorUrl>https://www.extly.com</authorUrl>
+	<copyright>Copyright (c)2012-2022 Extly, CB All rights reserved.</copyright>
+	<license>GNU/GPLv3 www.gnu.org/licenses/gpl-3.0.html</license>
+
+  <description>
+    <![CDATA[
+Publish your content easily and engage your audience.
+  ]]>
+  </description>
+
+  <!-- Fileset definition -->
+  <fileset>
+    <files target="cli">
+      <filename>autotweetstartcronjob.php</filename>
+      <filename>perfect-publisher-cronjob.php</filename>
+      <filename>perfect-publisher-cronjob-for-joomla-4.php</filename>
+    </files>
+  </fileset>
+
+</extension>

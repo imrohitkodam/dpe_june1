@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<form><fieldset name="Section1"><field name="com_tjucm_Demo-Checklist_Demofield" type="dpechecklist" label="Events" description="" class="" addfieldpath="/administrator/components/com_tjfields/models/fields"/></fieldset><fieldset name="Section2"><field name="com_tjucm_Demo-Checklist_comtjucmwebinars" type="dpechecklist" label="Webinars" description="" class="" addfieldpath="/administrator/components/com_tjfields/models/fields"/></fieldset></form>

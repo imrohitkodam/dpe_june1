@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+<fieldset addfieldpath="/administrator/components/com_tjcompetency/models/fields">
+	<fields name="filter">
+
+		<field
+			name="search"
+			type="text"
+			inputmode="search"
+			label="COM_COMPETENCY_COMPETENCY_SKILL_FILTER_SEARCH_LABEL"
+			description="COM_COMPETENCY_COMPETENCY_SKILL_FILTER_SEARCH_LABEL_DESC"
+			hint="JSEARCH_FILTER"
+		/>
+
+		<field
+			name="framework_id"
+			type="competencyframeworks"
+			label="COM_COMPETENCY_COMPETENCY_SKILL_FILTER_FRAMEWORK_LABEL"
+			description="COM_COMPETENCY_COMPETENCY_SKILL_FILTER_FRAMEWORK_DESC"
+			onchange="this.form.submit();"
+			multiple="true"
+			class="multipleFrameworks"
+		/>
+
+	</fields>
+
+	<fields name="list">
+
+		<field
+			name="limit"
+			type="limitbox"
+			class="input-mini"
+			default="25"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</fieldset>
+</form>

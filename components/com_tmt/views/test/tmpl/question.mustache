@@ -1,0 +1,439 @@
+{{#section}}
+	<div class="tjlms-test-page" id="testPage{{pageNo}}">
+		<!-- Section -->
+		<div class='tjlms-test-section'>
+			<h3 class="tjlms-test-section__title">
+				{{title}}
+			</h3>
+		</div>
+
+		{{#questions}}
+		<!-- Questions -->
+		<div class="test-question pb-10" data-js-id="test-question"	data-js-type="{{type}}" data-js-itemid="{{question_id}}" data-js-compulsory="{{is_compulsory}}" id="question-{{question_id}}">
+			<div>
+				<a name="question-{{question_id}}"></a>
+			</div>
+
+			<!-- Render Question -->
+			<div class="row">
+				<div class="test-question__header mb-10 col-xs-12">
+					<div class="{{#isQuiz}}col-xs-12 col-sm-11{{/isQuiz}}">
+						<div class="test-question__header_title">
+							<div class="tmt-qno-container col-xs-12 col-sm-1">
+								<div class="tmt-qno center text-center font-700 mr-5 pull-left">
+									<span class="ques-no">
+										{{index}}
+									</span>
+								</div>
+							</div>
+
+							{{#media_id}}
+								<div class='tmt-qtext valign-middle pl-5 col-xs-12 col-sm-3'>
+									{{#imageMedia}}
+										<div class="media_image">
+											<a href='{{tjMediaPath}}{{source}}'
+												class="tjmodal"
+												rel="{handler:'image'}"
+												data-js-role='tjmodal'
+												data-js-link='{{tjMediaPath}}{{source}}'>
+												<img src='{{tjMediaPath}}S_{{source}}'>
+											</a>
+										</div>
+									{{/imageMedia}}
+
+									{{#videoMedia}}
+										<div class="media_video">
+											{{#youtubeMedia}}
+												<iframe width='300' height='200' src='{{source}}' frameborder="0" allowfullscreen=""></iframe>
+											{{/youtubeMedia}}
+
+											{{#vimeoMedia}}
+												<iframe src='{{source}}' width='400' height='200' frameborder="0" allowfullscreen=""></iframe>
+											{{/vimeoMedia}}
+										</div>
+									{{/videoMedia}}
+
+									{{#audioMedia}}
+										<div class="media_audio">
+											<audio controls>
+											  <source src='{{tjMediaPath}}{{source}}'>
+											  Your browser does not support the audio element.
+											</audio>
+										</div>
+									{{/audioMedia}}
+
+									{{#fileMedia}}
+										<div class="media_file">
+											<label>
+												<a href='{{tjMediaPath}}{{source}}' target="_blank">
+												{{original_filename}}
+												</a>
+											</label>
+										</div>
+									{{/fileMedia}}
+								</div>
+							{{/media_id}}
+
+							<div class="col-xs-12 col-sm-8">
+								<h4 class="font-600">
+									{{{title}}}
+
+									{{#is_compulsory}}
+										<span class="star">*</span>
+									{{/is_compulsory}}
+								</h4>
+								<div class="test-question__header_desc pl-45">
+									<em>{{{description}}}</em>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					{{#isQuiz}}
+						<div class="col-sm-1 col-xs-12 text-center mb-20">
+							<div class="tmt-que-marks p-5 center pull-right">
+								{{#marksGreaterThanOne}}
+									{{marks}} Marks
+								{{/marksGreaterThanOne}}
+
+								{{^marksGreaterThanOne}}
+									{{marks}} Mark
+								{{/marksGreaterThanOne}}
+							</div>
+						</div>
+					{{/isQuiz}}
+
+				</div>
+			</div>
+
+			<!-- Render Answer -->
+			<div class="row test-question__answers">
+				<div class="col-xs-12 col-sm-11 col-sm-offset-1 test-question__answers-options">
+
+					<!-- Since file type question doesn't have answers array, we had to keep its html before  #answers conditions-->
+					{{#type_file_upload}}
+						<div class="col-sm-12">
+							<div class="fileupload fileupload-new form-inline">
+								<div class="input-group">
+									<div class="uneditable-input d-inline-block mb-0 br-0 p-5">
+										<span class="fileupload-preview">
+											Use file no larger than {{uploadFileSizeLimit}} MB.
+										</span>
+
+										{{#q_params.file_count}}
+											<span class="fileupload-preview">
+												Max {{q_params.file_count}} file's allow.
+											</span>
+										{{/q_params.file_count}}
+
+										{{#q_params.file_format}}
+											<span class="fileupload-preview">
+												Format(s) allowed ({{q_params.file_format}}).
+											</span>
+										{{/q_params.file_format}}
+
+									</div>
+
+									<div class="input-group-btn d-inline-block">
+										<span class="btn btn-file btn-default">
+											<span class="fileupload-new">{{fileBrowseLang}}</span>
+											<input type="file" id="lesson_files_{{question_id}}"
+												name="questions[upload][{{question_id}}]" {{#q_params.file_format}}accept="{{q_params.file_format}}"{{/q_params.file_format}} />
+
+											<input type="hidden" name="testqparam[{{question_id}}][file_format]" value="{{q_params.file_format}}" />
+											<input type="hidden" name="testqparam[{{question_id}}][file_size]" value="{{uploadFileSizeLimit}}" />
+											<input type="hidden" name="testqparam[{{question_id}}][file_count]" value="{{q_params.file_count}}" />
+										</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="clearfix"></div>
+							<div id='msg_{{question_id}}'></div>
+
+							<div class="container-fluid">
+								<div class="row font-600 pt-5 pb-5 {{dNoneClass}}" data-js-id="uploaded-file-list-header">
+									Already uploaded file(s)
+								</div>
+								<div class="row" data-js-id="uploaded-file-list">
+									{{#userAnswer}}
+										<div class="col-sm-6"
+											data-js-id="each-file"
+											data-js-itemid="{{media_id}}"
+											data-js-answerid="{{userAnswerId}}">
+											<a class="mr-5" href="{{path}}" target="_blank">
+												{{org_filename}}
+											</a>
+
+											<a href="javascript:void(0)" data-js-id="delete" title="Delete">
+												<i class="fa fa-trash" aria-hidden="true"></i>
+											</a>
+										</div>
+
+										<input type="hidden"
+											name="questions[upload][{{question_id}}][]"
+											value="{{media_id}}"/>
+									{{/userAnswer}}
+								</div>
+							</div>
+						</div>
+					{{/type_file_upload}}
+
+					{{#answers}}
+
+						{{#type_radio}}
+							<div class="col-md-6 col-xs-12">
+								<label class="radio font-normal input-label">
+									<input type="radio"
+										name="questions[mcqs][{{question_id}}][]"
+										id="questions{{question_id}}"
+										value="{{id}}"
+										{{checked}} />
+										{{{answer}}}
+									<span class="radiobtn"></span>
+								</label>
+
+								{{#media_id}}
+									{{#a_imageMedia}}
+										<div class="media_image">
+											<a href='{{tjMediaPath}}{{source}}'
+												class="tjmodal"
+												rel="{handler:'image'}"
+												data-js-role='tjmodal'
+												data-js-link='{{tjMediaPath}}{{source}}'>
+												<img src='{{tjMediaPath}}S_{{source}}'>
+											</a>
+										</div>
+									{{/a_imageMedia}}
+
+									{{#a_videoMedia}}
+										<div class="media_video">
+											{{#a_youtubeMedia}}
+												<iframe width='300' height='200' src='{{source}}' frameborder="0" allowfullscreen=""></iframe>
+											{{/a_youtubeMedia}}
+
+											{{#a_vimeoMedia}}
+												<iframe src='{{source}}' width='400' height='200' frameborder="0" allowfullscreen=""></iframe>
+											{{/a_vimeoMedia}}
+										</div>
+									{{/a_videoMedia}}
+
+									{{#a_audioMedia}}
+										<div class="media_audio">
+											<audio controls>
+											  <source src='{{tjMediaPath}}{{source}}'>
+											  Your browser does not support the audio element.
+											</audio>
+										</div>
+									{{/a_audioMedia}}
+
+									{{#a_fileMedia}}
+										<div class="media_file">
+											<label>
+												<a href='{{tjMediaPath}}{{source}}' target="_blank">
+												{{original_filename}}
+												</a>
+											</label>
+										</div>
+									{{/a_fileMedia}}
+							{{/media_id}}
+							</div>
+						{{/type_radio}}
+
+						{{#type_checkbox}}
+							<div class="col-md-6 col-xs-12">
+								<label class="checkbox font-normal input-label">
+									<input type="checkbox"
+										onclick="TMT.UI.TestUI.validateCheckBox('{{correct_answer}}', '{{question_id}}', '{{id}}', '{{gradingtype}}')"
+										name="questions[mcqs][{{question_id}}][]"
+										id="questions{{question_id}}"
+										value="{{id}}" {{checked}} />
+										{{{answer}}}
+									<span class="checkmark"></span>
+								</label>
+
+								{{#media_id}}
+									{{#a_imageMedia}}
+										<div class="media_image">
+											<a href='{{tjMediaPath}}{{source}}'
+												class="tjmodal"
+												rel="{handler:'image'}"
+												data-js-role='tjmodal'
+												data-js-link='{{tjMediaPath}}{{source}}'>
+												<img src='{{tjMediaPath}}S_{{source}}'>
+											</a>
+										</div>
+									{{/a_imageMedia}}
+
+									{{#a_videoMedia}}
+										<div class="media_video">
+											{{#a_youtubeMedia}}
+												<iframe width='300' height='200' src='{{source}}' frameborder="0" allowfullscreen=""></iframe>
+											{{/a_youtubeMedia}}
+
+											{{#a_vimeoMedia}}
+												<iframe src='{{source}}' width='400' height='200' frameborder="0" allowfullscreen=""></iframe>
+											{{/a_vimeoMedia}}
+										</div>
+									{{/a_videoMedia}}
+
+									{{#a_audioMedia}}
+										<div class="media_audio">
+											<audio controls>
+											  <source src='{{tjMediaPath}}{{source}}'>
+											  Your browser does not support the audio element.
+											</audio>
+										</div>
+									{{/a_audioMedia}}
+
+									{{#a_fileMedia}}
+										<div class="media_file">
+											<label>
+												<a href='{{tjMediaPath}}{{source}}' target="_blank">
+												{{original_filename}}
+												</a>
+											</label>
+										</div>
+									{{/a_fileMedia}}
+								{{/media_id}}
+							</div>
+						{{/type_checkbox}}
+
+						{{#type_text}}
+							<div class="col-sm-8">
+								<input type="text"
+								name="questions[subjective][{{question_id}}]"
+								id="questions{{question_id}}"
+								class="inputbox form-control"
+								size="50"
+								value="{{userAnswer}}"/>
+							</div>
+						{{/type_text}}
+
+						{{#type_textarea}}
+							<div class="col-sm-8">
+								<textarea type="text"
+									name="questions[subjective][{{question_id}}]"
+									id="questions{{question_id}}"
+									class="inputbox form-control"
+									rows="10" cols="50"
+									{{#q_params.maxlength}}maxlength="{{q_params.maxlength}}"{{/q_params.maxlength}}
+									{{#q_params.minlength}}minlength="{{q_params.minlength}}"{{/q_params.minlength}}>{{userAnswer}}</textarea>
+
+								<span class="charscontainer pull-right">
+									{{#q_params.minlength}}
+										Min characters allowed
+										<span class="charscontainer_minlength">
+											{{q_params.minlength}}.
+										</span>
+									{{/q_params.minlength}}
+
+									{{#q_params.maxlength}}
+										Max characters allowed
+										<span class="charscontainer_maxlength">
+											{{q_params.maxlength}}.
+										</span>
+
+										Remaining:
+										<span class="charscontainer_remaining">
+											{{q_params.maxlength}}
+										</span>
+									{{/q_params.maxlength}}
+								</span>
+							</div>
+						{{/type_textarea}}
+
+						{{#type_objtext}}
+							<div class="col-sm-8">
+								<input type="text"
+								name="questions[objective][{{question_id}}]"
+								id="questions{{question_id}}"
+								class="inputbox form-control"
+								size="50"
+								value="{{userAnswer}}"/>
+							</div>
+						{{/type_objtext}}
+
+						{{#type_rating}}
+							<div class="clearfix table-responsive pb-10">
+								<table class="table">
+									<thead>
+										<tr>
+											{{#ratingLabel}}
+												<th class="center">
+													{{.}}
+												</th>
+											{{/ratingLabel}}
+
+											{{^ratingLabel}}
+												{{#ratingRange}}
+													<th class="center">
+														{{value}}
+													</th>
+												{{/ratingRange}}
+											{{/ratingLabel}}
+										</tr>
+									</thead>
+
+									<tbody>
+										<tr>
+											{{#ratingRange}}
+											<td class="center">
+												<label class="input-label">
+													<input type="radio"
+														name="questions[rating][{{question_id}}]"
+														id="questions{{question_id}}"
+														value="{{value}}"
+														{{isChecked}}
+													/>
+													<span class="radiobtn"></span>
+												</label>
+											</td>
+											{{/ratingRange}}
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						{{/type_rating}}
+
+					{{/answers}}
+
+				</div>
+			</div>
+
+		<div class="clearfix row">
+			<div class="col-xs-12 col-sm-11 col-sm-offset-1">
+				<div class="clearfix">&nbsp;</div>
+				{{^type_file_upload}}
+
+					<button type="button" class="btn btn-sm" data-js-skip data-js-question="{{question_id}}" data-js-type="{{type}}">{{#testData.show_questions_overview}}Skip{{/testData.show_questions_overview}}{{^testData.show_questions_overview}}Clear{{/testData.show_questions_overview}}</button>
+					&nbsp;
+
+				{{/type_file_upload}}
+
+				{{#testData.show_questions_overview}}
+					<button type="button" class="btn btn-sm" data-js-flag data-js-question="{{question_id}}">
+						{{#flagged}}
+							Unflag
+						{{/flagged}}
+
+						{{^flagged}}
+							Flag
+						{{/flagged}}
+					</button>
+				{{/testData.show_questions_overview}}
+			</div>
+		</div>
+
+		<div class="row d-none" data-js-id="test-question-msg">
+			<div class="col-sm-9 col-sm-offset-1">
+				<div class="alert">
+				</div>
+			</div>
+		</div>
+
+		</div>
+		{{/questions}}
+	</div>
+{{/section}}
+{{resetIndex}}

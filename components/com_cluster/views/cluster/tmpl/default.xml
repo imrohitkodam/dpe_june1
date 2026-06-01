@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="cluster" option="View">
+		<message><![CDATA[COM_CLUSTER_TITLE_ITEM_VIEW_CLUSTER_DESC]]></message>
+	</layout>
+	<fields name="params" />
+</metadata>

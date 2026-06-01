@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter">
+		<fieldset name="general" addfieldpath="/administrator/components/com_tjgophish/models/fields">
+			<field name="search" type="text" label="COM_TJGOPHISH_SEARCH_IN_GROUP_TITLE" hint="JSEARCH_FILTER" class="js-stools-search-string" />
+			<field name="cluster_id" type="cluster" label="COM_TJGOPHISH_FILTER_BY_GROUP_CLUSTER" description="COM_TJGOPHISH_FILTER_BY_GROUP_CLUSTER_DESC" onchange="this.form.submit();"/>
+			<!--DPE Hack union is done to add select tag in first option of the list-->
+			<field
+			name="tags"
+			type="sql"
+			query="SELECT DISTINCT tags.title ,tags.id
+					FROM `#__tags` as tags INNER JOIN  `#__contentitem_tag_map` as tagMap  ON tags.id=tagMap.tag_id where type_alias='com_multiagency.multiagency' ORDER BY tags.title ASC;"
+			key_field="id"
+			value_field="title"
+			translate="false"
+			label="COM_DPE_FORM_LBL_TAG"
+			description="COM_DPE_FORM_LBL_TAG_DESC"
+			onchange="this.form.submit();"
+			filter="INT"
+			multiple="multiple"
+		/>
+		</fieldset>
+
+	</fields>
+	<fields name="list">
+		<field name="limit" type="limitbox" label="COM_CONTENT_LIST_LIMIT" description="COM_CONTENT_LIST_LIMIT_DESC" class="input-mini" default="25" onchange="this.form.submit();" />
+	</fields>
+</form>

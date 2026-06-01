@@ -1,0 +1,146 @@
+.techjoomla-bootstrap .tjlms_steps_parent .wizard{
+	border:0px !important;
+	border-radius:0px !important;
+	box-shadow: none;
+	-webkit-box-shadow:none;
+	background: #fff;
+
+}
+.techjoomla-bootstrap .tjlms_steps_parent .tjlms-steps-ol{
+	list-style: none;
+	margin:0px;
+	padding:0px;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+.techjoomla-bootstrap .tjlms_steps_parent .tjlms-steps-ol li{
+	list-style: none;
+	display: table-cell;
+	position: relative;
+	text-align:center;
+	padding-top:10px !important;
+	padding-bottom:10px !important;
+}
+.techjoomla-bootstrap .tjlms_steps_parent .tjlms-steps-ol li .badge + span{
+	display: block;
+}
+.techjoomla-bootstrap .tjlms_steps_parent .tjlms-steps-ol li.active{
+	background: #D6F2FF;
+	position: relative;
+	border-top:1px solid #D6F2FF;
+	border-bottom:1px solid #D6F2FF;
+}
+.techjoomla-bootstrap .tjlms_steps_parent .tjlms-steps-ol li.active:after{
+	content: ' ';
+	height: 0;
+	width: 0;
+	position: absolute;
+	border-left: 9px solid transparent;
+	border-right: 9px solid transparent;
+	border-top: 9px solid #D6F2FF;
+	left: 45%;
+	bottom: -10px !important;
+}
+/*.techjoomla-bootstrap .tjlms_steps_parent .tjlms-steps-ol {
+	margin: 0 !important;
+	padding: 0 !important;
+	display: inline-block;
+	font-weight: bold;
+	font-size: 12px;
+	background: #fff;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.techjoomla-bootstrap .tjlms_steps_parent .tjlms-steps-ol li:first-child {
+	-moz-border-radius: 4px 0 0 4px;
+	-webkit-border-radius: 4px 0 0 4px;
+	border-radius: 4px 0 0 4px;
+	padding-left: 12px;
+}
+
+.techjoomla-bootstrap .tjlms_steps_parent .tjlms-steps-ol li {
+	display: inline-block;
+	position: relative;
+	margin: 0px !important;
+	line-height: 18px;
+	list-style: none;
+	padding: 12px 17px 10px 30px !important;
+	background: #dddee4;
+	zoom: 1;
+}
+
+.techjoomla-bootstrap .tjlms_steps_parent .tjlms-steps-ol li:first-child:before {
+	border: none;
+}
+
+.techjoomla-bootstrap .tjlms_steps_parent .tjlms-steps-ol li:before {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 0;
+	width: 0;
+	border-bottom: 20px inset transparent;
+	border-left: 20px solid #fff;
+	border-top: 20px inset transparent;
+	content: "";
+}
+
+.techjoomla-bootstrap .tjlms_steps_parent .tjlms-steps-ol li:after {
+	position: absolute;
+	right: -20px;
+	top: 0;
+	height: 0;
+	width: 0;
+	border-bottom: 20px inset transparent;
+	border-left: 20px solid #dddee4;
+	border-top: 20px inset transparent;
+	content: "";
+	z-index: 2;
+}
+
+.techjoomla-bootstrap .tjlms_steps_parent .tjlms-steps-ol .complete  {
+	color: darkgreen;
+	background: #f3f4f5;
+	cursor:pointer;
+}
+.techjoomla-bootstrap .tjlms_steps_parent .tjlms-steps-ol .complete:after {
+	border-left-color: #f3f4f5;
+}
+
+.techjoomla-bootstrap .tjlms_steps_parent .tjlms-steps-ol .active {
+	color: #3a87ad;
+	background: #f3f4f5;
+}
+
+.techjoomla-bootstrap .tjlms_steps_parent .tjlms-steps-ol .active:after {
+	border-left-color: #f3f4f5;
+}
+
+.techjoomla-bootstrap .tjlms_steps_parent{
+	/*background-color: #f9f9f9;
+	border: 1px solid #d4d4d4;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+	*/ /*^+manoj*/
+}
+/*
+.techjoomla-bootstrap .tjlms_steps_parent .tjlms-steps-ol .badge{
+	background-image: none;
+	background-color: #3a87ad;
+	height: auto;
+	width: auto;
+	position:static;
+}
+*/
+
+
+@media (max-width: 480px){
+	.techjoomla-bootstrap .tjlms_steps_parent .tjlms-steps-ol li {
+		padding: 12px 0px 10px 25px !important;
+	}
+}

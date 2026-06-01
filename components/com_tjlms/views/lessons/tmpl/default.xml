@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_TJLMS_LIBRARY_LESSONS">
+		<message>
+			<![CDATA[COM_TJLMS_LIBRARY_LESSONS_DESC]]>
+		</message>
+	</layout>
+	<!-- Add fields to the parameters object for the layout. -->
+	<fields name="params">
+		<fieldset name="advanced" label="COM_MENUS_LAYOUT_FEATURED_OPTIONS">
+			<field name="catid" type="category"
+				label="COM_TJLMS_MENU_SELECT_CAT"
+				description="COM_TJLMS_MENU_SELECT_CAT_DESC"
+				extension="com_tjlms.lesson"
+				>
+					<option value=''>COM_TJLMS_MENU_FIELD_OPTION_SELECT_CAT</option>
+			</field>
+
+			<field name="showSubcatLessons" showon="catid!:" type="list"
+				label="COM_TJLMS_MENU_SHOW_SUBCATS_TITLE"
+				description="COM_TJLMS_MENU_SHOW_SUBCATS_DESC"
+				default="0"
+				>
+					<option value='1'>JYES</option>
+					<option value='0'>JNO</option>
+			</field>
+
+			<!-- If layout to show is fixed height pin -->
+			<field name="large_device_pin_class" type="list" default="col-lg-3" label="COM_TJLMS_MENU_LARGE_NO_OF_PINS" description="COM_TJLMS_MENU_LARGE_NO_OF_PINS_DESC">
+				<option value="col-lg-12">1</option>
+				<option value="col-lg-6">2</option>
+				<option value="col-lg-4">3</option>
+				<option value="col-lg-3">4</option>
+				<option value="col-lg-2">6</option>
+				<option value="col-lg-1">12</option>
+			</field>
+
+
+			<field name="medium_device_pin_class" type="list" default="col-md-3" label="COM_TJLMS_MENU_MEDIUM_NO_OF_PINS" description="COM_TJLMS_MENU_MEDIUM_NO_OF_PINS_DESC">
+				<option value="col-md-12">1</option>
+				<option value="col-md-6">2</option>
+				<option value="col-md-4">3</option>
+				<option value="col-md-3">4</option>
+				<option value="col-md-2">6</option>
+				<option value="col-md-1">12</option>
+			</field>
+
+			<field name="small_device_pin_class" type="list" default="col-sm-4" label="COM_TJLMS_MENU_SMALL_NO_OF_PINS" description="COM_TJLMS_MENU_SMALL_NO_OF_PINS_DESC">
+				<option value="col-sm-12">1</option>
+				<option value="col-sm-6">2</option>
+				<option value="col-sm-4">3</option>
+				<option value="col-sm-3">4</option>
+				<option value="col-sm-2">6</option>
+				<option value="col-sm-1">12</option>
+			</field>
+
+			<field name="xsmall_device_pin_class" type="list" default="col-xs-12" label="COM_TJLMS_MENU_XSMALL_NO_OF_PINS" description="COM_TJLMS_MENU_XSMALL_NO_OF_PINS_DESC">
+				<option value="col-xs-12">1</option>
+				<option value="col-xs-6">2</option>
+				<option value="col-xs-4">3</option>
+				<option value="col-xs-3">4</option>
+				<option value="col-xs-2">6</option>
+				<option value="col-xs-1">12</option>
+			</field>
+
+			<field name="lesson_images_size" type="list" label="COM_TJLMS_MENU_IMAGE_LABEL" description="COM_TJLMS_MENU_IMAGE_DESC" class="btn-group" default="S_">
+				<option value="media_s">COM_TJLMS_COURSE_IMAGES_SIZE_SMALL</option>
+				<option value="media_m">COM_TJLMS_COURSE_IMAGES_SIZE_MEDIUM</option>
+				<option value="media_l">COM_TJLMS_COURSE_IMAGES_SIZE_LARGE</option>
+			</field>
+
+			<field name="pin_desc_char" type="text" default="100" label="COM_TJLMS_MENU_PIN_SHORT_DESC_CHAR" description="COM_TJLMS_MENU_PIN_SHORT_DESC_CHAR_DESC" />
+		</fieldset>
+	</fields>
+</metadata>

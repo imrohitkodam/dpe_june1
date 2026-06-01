@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+              <field name="id" type="text" default="0" label="COM_TMT_FORM_LBL_ANSWER_ID"
+            readonly="true" class="readonly"
+            description="JGLOBAL_FIELD_ID_DESC" /> 
+
+       <field name="question_id" type="text" size="40" class="inputbox"
+        
+            label="COM_TMT_FORM_LBL_ANSWER_QUESTION_ID"
+            description="COM_TMT_FORM_DESC_ANSWER_QUESTION_ID" 
+        
+        
+        
+        filter="safehtml" /> 
+
+       <field name="answer" type="text"
+                
+            label="COM_TMT_FORM_LBL_ANSWER_ANSWER"
+            description="COM_TMT_FORM_DESC_ANSWER_ANSWER" 
+                
+                
+                 /> 
+
+       <field name="marks" type="text" size="40" class="inputbox"
+        
+            label="COM_TMT_FORM_LBL_ANSWER_MARKS"
+            description="COM_TMT_FORM_DESC_ANSWER_MARKS" 
+        
+        
+        
+        filter="safehtml" /> 
+
+       <field name="is_correct" type="text" size="40" class="inputbox"
+        
+            label="COM_TMT_FORM_LBL_ANSWER_IS_CORRECT"
+            description="COM_TMT_FORM_DESC_ANSWER_IS_CORRECT" 
+         default="0" 
+        
+        
+        filter="safehtml" /> 
+
+       <field name="order" type="text" size="40" class="inputbox"
+        
+            label="COM_TMT_FORM_LBL_ANSWER_ORDER"
+            description="COM_TMT_FORM_DESC_ANSWER_ORDER" 
+        
+        
+        
+        filter="safehtml" />
+
+	</fieldset>
+
+</form>

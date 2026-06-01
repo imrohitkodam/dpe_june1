@@ -1,0 +1,275 @@
+[{
+        "title": "Admin Dashboard",
+        "alias": "admin-dashboard",
+        "description": "Default admin dashboard.<\/p>",
+        "state": 1,
+        "access": 1,
+        "context": "",
+        "parent": 0,
+        "widgets": [{
+                "title": "Active Courses",
+                "data_plugin": "tjlms.totalcoursescount",
+                "renderer_plugin": "numbercardbox.tjdashnumbercardbox",
+                "size": 6,
+                "autorefresh": 1,
+                "state": 1,
+                "params": "{\"color\":\"panel-info\",\"primary_text\":\"\",\"link\":\"index.php?option=com_tjlms&view=courses&filter[state]=1\",\"icon\":\"\"}",
+                "ordering": "",
+                "core":1
+            },
+            {
+                "title": "Students Enrolled",
+                "data_plugin": "tjlms.totalstudentsenrolled",
+                "renderer_plugin": "numbercardbox.tjdashnumbercardbox",
+                "size": 6,
+                "autorefresh": 1,
+                "state": 1,
+                "params": "{\"color\":\"panel-info\",\"primary_text\":\"\",\"link\":\"index.php?option=com_tjlms&view=manageenrollments&filter[state]=1\"}",
+                "ordering": "",
+                "core":1
+            },
+            {
+                "title": "Paid Courses",
+                "data_plugin": "tjlms.paidcourses",
+                "renderer_plugin": "numbercardbox.tjdashnumbercardbox",
+                "size": 3,
+                "autorefresh": 1,
+                "state": 1,
+                "params": "{\"color\":\"panel-info\",\"primary_text\":\"\",\"link\":\"index.php?option=com_tjlms&view=courses&filter[type]=1&filter[state]=1\"}",
+                "ordering": "",
+                "core":1
+            },
+            {
+                "title": "Free Courses",
+                "data_plugin": "tjlms.freecoursescount",
+                "renderer_plugin": "numbercardbox.tjdashnumbercardbox",
+                "size": 3,
+                "autorefresh": 1,
+                "state": 1,
+                "params": "{\"color\":\"panel-info\",\"primary_text\":\"\",\"link\":\"index.php?option=com_tjlms&view=courses&filter[type]=0&filter[state]=1\"}",
+                "ordering": "",
+                "core":1
+            },
+            {
+                "title": "Orders",
+                "data_plugin": "tjlms.totalorderscount",
+                "renderer_plugin": "numbercardbox.tjdashnumbercardbox",
+                "size": 3,
+                "autorefresh": 1,
+                "state": 1,
+                "params": "{\"color\":\"panel-info\",\"primary_text\":\"\",\"link\":\"index.php?option=com_tjlms&view=orders&filter[statusfilter]=C\"}",
+                "ordering": "",
+                "core":1
+            },
+            {
+                "title": "Revenue",
+                "data_plugin": "tjlms.totalrevenuecount",
+                "renderer_plugin": "numbercardbox.tjdashnumbercardbox",
+                "size": 3,
+                "autorefresh": 1,
+                "state": 1,
+                "params": "{\"color\":\"panel-info\",\"primary_text\":\"\",\"link\":\"index.php?option=com_tjlms&view=orders\"}",
+                "ordering": "",
+                "core":1
+            },
+            {
+                "title": "Activities",
+                "data_plugin": "tjlms.activities",
+                "renderer_plugin": "chartjs.tjdashgraph",
+                "size": 6,
+                "autorefresh": 1,
+                "state": 1,
+                "params": "",
+                "ordering": "",
+                "core":1
+            },
+            {
+                "title": "Sales Dashboard",
+                "data_plugin": "tjlms.saleschart",
+                "renderer_plugin": "chartjs.tjdashgraph",
+                "size": 6,
+                "autorefresh": 1,
+                "state": 1,
+                "params": "",
+                "ordering": "",
+                "core":1
+            },
+            {
+                "title": "Most Popular Courses",
+                "data_plugin": "tjlms.popularcourses",
+                "renderer_plugin": "tabulator.tjdashtable",
+                "size": 6,
+                "autorefresh": 1,
+                "state": 1,
+                "params": "",
+                "ordering": "",
+                "core":1
+            },
+            {
+                "title": "Most Active Students",
+                "data_plugin": "tjlms.popularstudents",
+                "renderer_plugin": "tabulator.tjdashtable",
+                "size": 6,
+                "autorefresh": 1,
+                "state": 1,
+                "params": "",
+                "ordering": "",
+                "core":1
+            }
+        ]
+    },
+    {
+        "title": "My Dashboard",
+        "alias": "user-dashboard",
+        "description": "Default user dashboard.<\/p>",
+        "state": 1,
+        "access": 1,
+        "context": "",
+        "parent": 0,
+        "widgets": [
+            {
+                "title": "Enrolled Courses",
+                "data_plugin": "tjlms.enrolledcoursescount",
+                "renderer_plugin": "countbox.tjdashcount",
+                "size": 3,
+                "autorefresh": 1,
+                "state": 1,
+                "params": "",
+                "ordering": "",
+                "core":1
+            },
+            {
+                "title": "Pending Enrollment Courses",
+                "data_plugin": "tjlms.pendingenrolledcount",
+                "renderer_plugin": "countbox.tjdashcount",
+                "size": 3,
+                "autorefresh": 1,
+                "state": 1,
+                "params": "",
+                "ordering": "",
+                "core":1
+            },
+            {
+                "title": "Incomplete Courses",
+                "data_plugin": "tjlms.inprogresscoursescount",
+                "renderer_plugin": "countbox.tjdashcount",
+                "size": 3,
+                "autorefresh": 1,
+                "state": 1,
+                "params": "",
+                "ordering": "",
+                "core":1
+            },
+            {
+                "title": "Completed Courses",
+                "data_plugin": "tjlms.completedcoursescount",
+                "renderer_plugin": "countbox.tjdashcount",
+                "size": 3,
+                "autorefresh": 1,
+                "state": 1,
+                "params": "",
+                "ordering": "",
+                "core":1
+            },
+            {
+                "title": "Total Time Spent",
+                "data_plugin": "tjlms.totaltimespent",
+                "renderer_plugin": "countbox.tjdashcount",
+                "size": 3,
+                "autorefresh": 1,
+                "state": 1,
+                "params": "",
+                "ordering": "",
+                "core":1
+            },
+            {
+                "title": "Total Ideal Time",
+                "data_plugin": "tjlms.totalidealtime",
+                "renderer_plugin": "countbox.tjdashcount",
+                "size": 3,
+                "autorefresh": 1,
+                "state": 1,
+                "params": "",
+                "ordering": "",
+                "core":1
+            },
+            {
+                "title": "Enrolled/Assigned Courses",
+                "data_plugin": "tjlms.enrolledcourses",
+                "renderer_plugin": "tabulator.tjdashtable",
+                "size": 12,
+                "autorefresh": 1,
+                "state": 1,
+                "params":"{\"icon\":\"fa fa-graduation-cap\"}",
+                "ordering": "",
+                "core":1
+            },
+            {
+                "title": "My Liked Courses",
+                "data_plugin": "tjlms.likedcourses",
+                "renderer_plugin": "tabulator.tjdashtable",
+                "size": 6,
+                "autorefresh": 1,
+                "state": 1,
+                "params":"{\"icon\":\"fa fa-thumbs-o-up\"}",
+                "ordering": "",
+                "core":1
+            },
+            {
+                "title": "My Recommended Courses",
+                "data_plugin": "tjlms.recommendedcourses",
+                "renderer_plugin": "tabulator.tjdashtable",
+                "size": 6,
+                "autorefresh": 1,
+                "state": 1,
+                "params":"{\"icon\":\"fa fa-graduation-cap\"}",
+                "ordering": "",
+                "core":1
+            },
+            {
+                "title": "My Liked Lessons",
+                "data_plugin": "tjlms.likedlesson",
+                "renderer_plugin": "tabulator.tjdashtable",
+                "size": 6,
+                "autorefresh": 1,
+                "state": 1,
+                "params":"{\"icon\":\"fa fa-thumbs-o-up\"}",
+                "ordering": "",
+                "core":1
+            },
+            {
+                "title": "My Discussions",
+                "data_plugin": "tjlms.mydiscussions",
+                "renderer_plugin": "tabulator.tjdashtable",
+                "size": 6,
+                "autorefresh": 1,
+                "state": 1,
+                "params":"{\"icon\":\"fa fa-graduation-cap\"}",
+                "ordering": "",
+                "core":1
+            },
+            {
+                "title": "My Activities",
+                "data_plugin": "tjlms.myactivities",
+                "renderer_plugin": "tabulator.tjdashtable",
+                "size": 6,
+                "autorefresh": 1,
+                "state": 1,
+                "params":"{\"icon\":\"fa fa-clock-o\"}",
+                "ordering": "",
+                "core":1
+            },
+            {
+                "title": "Activity Graph",
+                "data_plugin": "tjlms.activitygraph",
+                "renderer_plugin": "chartjs.tjdashgraph",
+                "size": 12,
+                "autorefresh": 1,
+                "state": 1,
+                 "params":"{\"icon\":\"fa fa-line-chart\"}",
+                "ordering": "",
+                "core":1
+            }
+        ]
+    }
+]

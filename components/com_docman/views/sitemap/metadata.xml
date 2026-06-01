@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<view title="COM_DOCMAN_VIEW_SITEMAP">
+		<message><![CDATA[COM_DOCMAN_VIEW_SITEMAP_DESCRIPTION]]></message>
+		<options var="layout">
+			<default name="COM_DOCMAN_VIEW_SITEMAP" msg="COM_DOCMAN_VIEW_SITEMAP_DESCRIPTION">default</default>
+		</options>
+	</view>
+</metadata>

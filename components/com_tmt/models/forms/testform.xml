@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+		<field name="id" type="text"
+		label="COM_TMT_FORM_LBL_TEST_ID"
+		description="JGLOBAL_FIELD_ID_DESC"
+		class="readonly"
+		default="0"
+		readonly="true" />
+
+		<field name="title" type="text"
+		label="COM_TMT_FORM_LBL_TEST_TITLE"
+		description="COM_TMT_FORM_DESC_TEST_TITLE"
+		filter="safehtml"
+		maxlength="255"
+		required="true" />
+
+		<field name="description" type="textarea"
+		label="COM_TMT_FORM_LBL_TEST_DESCRIPTION"
+		description="COM_TMT_FORM_DESC_TEST_DESCRIPTION"
+		cols="100"
+		filter="safehtml"
+		rows="8" />
+
+		<field name="reviewers" type="tmtreviewers"
+		label="COM_TMT_FORM_LBL_TEST_REVIEWERS"
+		description="COM_TMT_FORM_DESC_TEST_REVIEWERS"
+		filter="raw"
+		multiple="true"
+		required="true" />
+
+		<field name="show_time" type="radio"
+		label="COM_TMT_FORM_LBL_TEST_SHOW_TIME"
+		description="COM_TMT_FORM_DESC_TEST_SHOW_TIME"
+		default="1"
+		required="true" >
+			<option value="1">COM_TMT_YES</option>
+			<option value="0">COM_TMT_NO</option>
+		</field>
+
+		<field name="time_duration" type="text"
+		label="COM_TMT_FORM_LBL_TEST_TIME_DURATION"
+		description="COM_TMT_FORM_DESC_TEST_TIME_DURATION"
+		class="inputbox validate-numeric"
+		filter="safehtml"
+		onchange="javascript:calculateAlertTime();"
+		required="true"
+		size="40" />
+
+		<field name="show_time_finished" type="radio"
+		label="COM_TMT_FORM_LBL_TEST_SHOW_TIME_FINISHED"
+		description="COM_TMT_FORM_DESC_TEST_SHOW_TIME_FINISHED"
+		default="1"
+		filter="raw"
+		required="true" >
+			<option value="1">COM_TMT_YES</option>
+			<option value="0">COM_TMT_NO</option>
+		</field>
+
+		<field name="time_finished_duration" type="text"
+		label="COM_TMT_FORM_LBL_TEST_TIME_FINISHED_DURATION"
+		description="COM_TMT_FORM_DESC_TEST_TIME_FINISHED_DURATION"
+		class="inputbox validate-numeric"
+		filter="safehtml"
+		required="true"
+		onchange="javascript:calculateAlertTime();"
+		size="40" />
+
+		<field name="total_marks" type="text"
+		label="COM_TMT_FORM_LBL_TEST_TOTAL_MARKS"
+		description="COM_TMT_FORM_DESC_TEST_TOTAL_MARKS"
+		class="inputbox validate-numeric"
+		filter="safehtml"
+		required="true"
+		size="40" />
+
+		<field name="passing_marks" type="text"
+		label="COM_TMT_FORM_LBL_TEST_PASSING_MARKS"
+		description="COM_TMT_FORM_DESC_TEST_PASSING_MARKS"
+		class="inputbox validate-numeric"
+		filter="safehtml"
+		required="true"
+		size="40" />
+
+		<field name="add_questions_method" type="radio"
+		label="COM_TMT_FORM_TEST_SELECT_METHOD"
+		description="COM_TMT_FORM_TEST_SELECT_METHOD_DESC"
+		default="manual"
+		filter="raw">
+			<option value="manual" onclick="hideRules();">COM_TMT_FORM_TEST_MAUANL_ADD_Q</option>
+			<option value="auto" onclick="showRules();">COM_TMT_FORM_TEST_AUTO_GENERATE_QP</option>
+		</field>
+
+		<field name="notify_candidate_passed" type="checkbox"
+		label="COM_TMT_FORM_LBL_TEST_NOTIFY_CANDIDATE_PASSED"
+		description="COM_TMT_FORM_DESC_TEST_NOTIFY_CANDIDATE_PASSED"
+		class="clearfix pull-left"
+		default=""
+		filter="raw"/>
+
+		<field name="notify_candidate_failed" type="checkbox"
+		label="COM_TMT_FORM_LBL_TEST_NOTIFY_CANDIDATE_FAILED"
+		description="COM_TMT_FORM_DESC_TEST_NOTIFY_CANDIDATE_FAILED"
+		class="clearfix pull-left"
+		default=""
+		filter="raw"/>
+
+		<field name="notify_admin" type="checkbox"
+		label="COM_TMT_FORM_LBL_TEST_NOTIFY_TO_ADMIN"
+		description="COM_TMT_FORM_DESC_TEST_NOTIFY_TO_ADMIN"
+		class="clearfix pull-left"
+		default=""
+		filter="raw"/>
+
+		<field name="state" type="list"
+		label="JSTATUS"
+		description="JFIELD_PUBLISHED_DESC"
+		class="inputbox"
+		default="1"
+		size="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+
+		<field name="created_by" type="createdby"
+		label="COM_TMT_FORM_LBL_TEST_CREATED_BY"
+		description="COM_TMT_FORM_DESC_TEST_CREATED_BY"
+		default="" />
+
+		<field name="checked_out" type="hidden" filter="unset" />
+
+		<field name="checked_out_time" type="hidden" filter="unset" />
+
+	</fieldset>
+</form>

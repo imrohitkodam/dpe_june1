@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fieldset>
+		<field name="cluster_id" class="cluster-info" type="cluster" required="true" default="" label="COM_DPE_ASSIGNED_SCHOOLS_ROP,COM_DPE_ORGANISATION" description="COM_DPE_ASSIGNED_SCHOOLS_ROP_DESC,COM_DPE_ORGANISATION" addfieldpath="administrator/components/com_tjfields/models/fields"  />
+		<field
+			name="tags"
+			type="sql"
+			query="SELECT DISTINCT tags.title ,tags.id
+					FROM `#__tags` as tags INNER JOIN  `#__contentitem_tag_map` as tagMap  ON tags.id=tagMap.tag_id where type_alias='com_multiagency.multiagency' ORDER BY tags.title ASC;"
+			key_field="id"
+			value_field="title"
+			translate="false"
+			label="COM_DPE_FORM_ANNUALREPORT_LBL_TAG"
+			description="COM_DPE_FORM_LBL_TAG_DESC"
+			filter="INT"
+			multiple="true"
+			class="multipletags"
+		/>
+		<field name="start_date" type="calendar" label="COM_DPE_ANNUAL_REPORT_START_DATE" description="Select start date" format="%d-%m-%Y" onchange="resetDateRange()"/>
+		<field name="end_date" type="calendar" label="COM_DPE_ANNUAL_REPORT_END_DATE" description="Select end date" format="%d-%m-%Y" onchange="resetDateRange()"/>
+		 <field name="date_range" type="list" label="COM_DPE_ANNUAL_REPORT_DATE_RANGE_FORM" description="Select a date range" onchange="getDateRange()">
+		    <option value="">Select Date Range</option>
+		    <option value="1">COM_DPE_ANNUAL_REPORT_DATE_RANGE_1MONTH</option>
+		    <option value="3">COM_DPE_ANNUAL_REPORT_DATE_RANGE_3MONTHS</option>
+		    <option value="6">COM_DPE_ANNUAL_REPORT_DATE_RANGE_6MONTHS</option>
+		    <option value="12">COM_DPE_ANNUAL_REPORT_DATE_RANGE_12MONTHS</option>
+		</field>
+	</fieldset>
+</form>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="package" method="upgrade">
+  <packagename>articlesanywhere</packagename>
+  <name>PKG_ARTICLESANYWHERE</name>
+  <version>17.2.10PRO</version>
+  <creationDate>November 2025</creationDate>
+  <author>Regular Labs (Peter van Westen)</author>
+  <authorEmail>info@regularlabs.com</authorEmail>
+  <authorUrl>https://regularlabs.com</authorUrl>
+  <copyright>Copyright © 2025 Regular Labs - All Rights Reserved</copyright>
+  <license>GNU General Public License version 2 or later</license>
+  <scriptfile>script.install.php</scriptfile>
+  <blockChildUninstall>true</blockChildUninstall>
+  <files folder="packages/j4">
+    
+    
+    <file id="articlesanywhere" type="plugin" group="system" required="true">plg_system_articlesanywhere</file>
+    <file id="articlesanywhere" type="plugin" group="editors-xtd" required="true">plg_editors-xtd_articlesanywhere</file>
+  </files>
+  
+  <languages folder="language">
+    <language tag="en-GB">en-GB/en-GB.pkg_articlesanywhere.sys.ini</language>
+  </languages>
+  <updateservers>
+    <server type="extension" priority="1" name="Articles Anywhere [PRO]">https://download.regularlabs.com/updates.xml?e=articlesanywhere&amp;pro=1&amp;type=.xml</server>
+  </updateservers>
+</extension>

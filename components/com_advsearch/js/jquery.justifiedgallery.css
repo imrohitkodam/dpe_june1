@@ -1,0 +1,191 @@
+/* 
+Justified Gallery
+Version: 1.0.2
+Author: Miro Mannino
+Author URI: http://miromannino.it
+
+Copyright 2012 Miro Mannino (miro.mannino@gmail.com)
+
+This file is part of Justified Gallery.
+
+This work is licensed under the Creative Commons Attribution 3.0 Unported License. 
+
+To view a copy of this license, visit http://creativecommons.org/licenses/by/3.0/ 
+or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+*/
+
+html { overflow-y: scroll; } /*to prevent the loop when the scrollbar appear and disappear*/
+
+.justifiedGallery { width: 100%; margin-bottom: 10px; }
+.justifiedGallery .jg-image {
+    position: absolute;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 0px;
+}
+.justifiedGallery .border1{
+	border-radius:5px;
+    overflow:hidden;
+}
+.justifiedGallery .border1 img, .justifiedGallery .border1 a {
+    border-radius:5px 5px 0px 0px ;
+    overflow:hidden;
+}
+.justifiedGallery .jg-image img {
+    border: none;
+    /*display: none;*/
+    /*opacity:0;*/
+}
+.jg-image{
+	background-color:gray;
+}
+
+.justifiedGallery .jg-image a { text-decoration: none; }
+.justifiedGallery .jg-image-label {
+    white-space: normal;
+    /*font: normal 12px arial;*/
+    font-weight:normal;
+    font-size:13px;
+    background: #FFF;
+    color: #6B6B6B;
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 5px 5px 10px 8px;
+    text-align: left;
+    opacity: 1;
+    filter:alpha(opacity=0); /* IE8 or Earlier */
+}
+.justifiedGallery .jg-loading-img{
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    background:url(../img/loading.gif) no-repeat center center;
+}
+.justifiedGallery .jg-loading{
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.justifiedGallery .jg-row {
+    position: relative;
+    white-space: nowrap;    
+    overflow:hidden;
+    margin-bottom: 4px;
+}
+.border1 {
+    border: 1px solid #DBDBDB !important;
+   /* box-shadow: 4px 4px 3px 0 #CCCCCC;*/
+    /*padding:5px;*/
+    overflow:hidden;
+    background-color:white!important;
+    
+    -webkit-box-shadow: 1px 2px 5px 0 #919191 !important;
+	 -moz-box-shadow: 1px 2px 5px 0 #919191 !important;
+	 box-shadow: 1px 2px 5px 0 #919191 !important;
+}
+.border1 a{
+	background-color:gray !important;
+}
+
+.loading{
+	position:relative !important;
+	visibility: visible !important;
+	top:45px !important;	
+}
+#mydiv{
+	position:absolute;
+	top:3px;
+	border:"3px solid #838383!important";
+}
+.imgLink{
+	z-index:99999;
+}
+.notToDisplay {
+    opacity: 0;
+    position: fixed !important;
+    top: 0  !important;
+	margin-bottom:0px !important;
+}
+
+
+/*-- new added --*/
+.pictures {
+    margin: 10px auto;
+    width: <?php echo $row_max_width; ?>px;
+}
+.clear {
+    clear: both;
+}
+.pictures div img {
+	max-width: 100%;
+	margin:0;
+}
+.pictures div img.gp-gallery-picture-zoom{max-width: 1000% !important;}
+
+.hi:hover{
+	/*background:#000;*/
+}
+
+.nottodisplay{
+	opacity: 0.0;
+	visibility:hidden;
+}
+
+#btnNorecordFound{
+  display:none;
+  clear:both;
+  text-align:center;
+  padding-top:25px;
+}
+
+
+#bload{
+text-align:center; 
+/*padding-top:25px;*/
+display:none;
+clear:both;
+}
+
+.gp-gallery-picture-zoom {
+	border: 1px solid #bbb;
+    margin: -6px 0 0 -6px;
+    position: absolute;
+    z-index: 100;
+    padding: 5px;
+    background: white;
+    box-shadow: 0 0 10px #999;
+}
+.gp-gallery-picture-hover {
+    box-shadow: 1px 1px 5px #333;
+}
+.hi{
+	text-align:center !important;
+}
+.jg-image-label{
+	bottom: 0;
+    height: 49px !important;
+    line-height: 19px !important;
+}
+.bloadCont{
+	height:700px;
+	display:block;
+}
+.clrwhite a{
+	background-color:#FFF !important;
+}
+.clrwhite img, .clrwhite a{
+	border-radius: 0 !important;
+}
+/* ----- to avoid image get cut at right side -----
+.justifiedGallery{
+	width:98%;
+}
+.justifiedGallery .jg-row{
+	width:102%;
+}
+/* ------ ********************** -------  */

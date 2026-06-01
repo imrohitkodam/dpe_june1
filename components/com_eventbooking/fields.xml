@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <fields name="params">
+        <fieldset name="basic" label="Basic Options">
+
+            <field name="field_subheadingforlist" 
+                   type="text" 
+                   label="Sub Heading For Event List" 
+                   size="50" 
+                   description="" />
+
+            <field name="field_hours" 
+                   type="text" 
+                   label="Number of Hours" 
+                   size="50" 
+                   description="" />
+
+            <field name="field_extralocation" 
+                   type="text" 
+                   label="Sub Location Details" 
+                   size="100" 
+                   description="" />
+
+            <field name="field_extrafooter" 
+                   type="text" 
+                   label="Footer Description" 
+                   size="100" 
+                   description="" />
+
+            <field name="field_extraheading" 
+                   type="text" 
+                   label="Sub Heading" 
+                   size="100" 
+                   description="" />
+
+            <!-- Short Description Section -->
+          <field name="layout_type"
+       type="list"
+       label="Layout Type"
+       description="Select the layout type"
+       default="default">
+    <option value="default">Default Layout</option>
+    <option value="webinar">Custom Webinar Layout</option>
+</field>
+
+<!-- Fields visible only when 'webinar' is selected -->
+<field name="field_shortdescription_heading"
+       type="textarea"
+       label="Short Description Heading"
+       description="Enter the short description heading"
+       cols="60"
+       rows="5"
+       showon="layout_type:webinar" />
+
+<field name="field_shortdescription_subheading"
+       type="textarea"
+       label="Short Description content"
+       description="Enter the short description "
+       cols="60"
+       rows="5"
+       showon="layout_type:webinar" />
+
+<field name="field_shortdescription_image"
+       type="media"
+       label="Short Description Image"
+       description="Upload or select an image"
+       directory="images"
+       preview="true"
+       showon="layout_type:webinar" />
+
+<!-- Detailed Description Section -->
+<field name="field_description_heading"
+       type="textarea"
+       label="Description Heading"
+       description="Enter the detailed description heading"
+       cols="60"
+       rows="5"
+       showon="layout_type:webinar" />
+
+<field name="field_description_subheading"
+       type="textarea"
+       label="Description Subheading"
+       description="Enter the detailed description subheading"
+       cols="60"
+       rows="5"
+       showon="layout_type:webinar" />
+<field name="field_description_content"
+       type="textarea"
+       label="Description Content"
+       description="Enter the detailed Content"
+       cols="60"
+       rows="5"
+       showon="layout_type:webinar" />
+
+<field name="field_description_image"
+       type="media"
+       label="Description Image"
+       description="Upload or select an image"
+       directory="images"
+       preview="true"
+       showon="layout_type:webinar" />
+
+
+
+        </fieldset>			
+    </fields>	
+</config>

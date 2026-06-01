@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="package" method="upgrade">
+  <packagename>regularlabsmanager</packagename>
+  <name>PKG_REGULARLABSMANAGER</name>
+  <version>9.2.5</version>
+  <creationDate>October 2025</creationDate>
+  <author>Regular Labs (Peter van Westen)</author>
+  <authorEmail>info@regularlabs.com</authorEmail>
+  <authorUrl>https://regularlabs.com</authorUrl>
+  <copyright>Copyright © 2025 Regular Labs - All Rights Reserved</copyright>
+  <license>GNU General Public License version 2 or later</license>
+  <scriptfile>script.install.php</scriptfile>
+  <blockChildUninstall>true</blockChildUninstall>
+  <files folder="packages/j4">
+    
+    
+    <file id="com_regularlabsmanager" type="component" required="true">com_regularlabsmanager</file>
+    <file id="regularlabsmanager" type="plugin" group="actionlog" required="true">plg_actionlog_regularlabsmanager</file>
+  </files>
+  
+  <languages folder="language">
+    <language tag="en-GB">en-GB/en-GB.pkg_regularlabsmanager.sys.ini</language>
+  </languages>
+  <updateservers>
+    <server type="extension" priority="1" name="Regular Labs Extension Manager">https://download.regularlabs.com/updates.xml?e=extensionmanager&amp;type=.xml</server>
+  </updateservers>
+</extension>

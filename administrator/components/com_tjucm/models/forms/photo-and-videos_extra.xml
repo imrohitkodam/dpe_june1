@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<form><fieldset name="Section 1"><field name="com_tjucm_photo-and-videos_Photoandvideosq1section1" type="dpechecklist" label="Photo and videos q1 section 1" description="" class="" addfieldpath="/administrator/components/com_tjfields/models/fields"/></fieldset><fieldset name="Section 2"><field name="com_tjucm_photo-and-videos_Photoandvideosq1section2" type="dpechecklist" label="Photo and videos q1 section 2" description="" class="" addfieldpath="/administrator/components/com_tjfields/models/fields"/></fieldset></form>

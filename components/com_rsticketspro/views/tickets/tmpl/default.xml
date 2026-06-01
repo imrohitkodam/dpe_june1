@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="RST_TICKETS_DEFAULT_LAYOUT">
+		<message>
+			<![CDATA[RST_TICKETS_MENU_DESC]]>
+		</message>
+	</layout>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_rsticketspro/models/fields">
+				<field name="show_filter" type="list" default="" label="RST_FILTER" description="RST_FILTER">
+					<option value="">RST_NO_FILTER</option>
+					<option value="show_unassigned">RST_FILTER_UNASSIGNED</option>
+					<option value="show_submitted">RST_FILTER_SUBMITTED</option>
+					<option value="show_assigned">RST_FILTER_ASSIGNED</option>
+					<option value="show_both">RST_FILTER_BOTH</option>
+				</field>
+				
+				<field name="default_priority" type="priorities" default="" multiple="multiple" label="RST_PRIORITY" description="RST_PRIORITY" />
+				<field name="default_status" type="statuses" default="" multiple="multiple" label="RST_STATUS" description="RST_STATUS" />
+
+				<field name="show_headings" type="radio" class="btn-group btn-group-yesno" default="1" label="RST_SHOW_TABLE_HEADINGS" description="RST_SHOW_TABLE_HEADINGS_DESC">
+					<option value="1">RST_SHOW</option>
+					<option value="0">RST_HIDE</option>
+				</field>
+				<field name="orderby" type="list" default="" label="RST_ORDER" description="RST_ORDER_DESC">
+					<option value="date">RST_TICKET_DATE</option>
+					<option value="last_reply">RST_TICKET_LAST_REPLY</option>
+					<option value="flagged">RST_TICKET_FLAGGED</option>
+					<option value="code">RST_TICKET_CODE</option>
+					<option value="subject">RST_TICKET_SUBJECT</option>
+					<option value="customer">RST_TICKET_CUSTOMER</option>
+					<option value="priority">RST_TICKET_PRIORITY</option>
+					<option value="status">RST_TICKET_STATUS</option>
+					<option value="staff">RST_TICKET_STAFF</option>
+					<option value="time_spent">RST_TIME_SPENT</option>
+				</field>
+				<field name="direction" type="list" default="desc" label="RST_DIRECTION" description="RST_DIRECTION_DESC">
+					<option value="asc">RST_ASC</option>
+					<option value="desc">RST_DESC</option>
+				</field>
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="show_offset" type="radio" class="btn-group btn-group-yesno" default="1" label="RST_TICKET_OFFSET" description="RST_SHOW_HIDE_COLUMN_DESC">
+					<option value="1">RST_SHOW</option>
+					<option value="0">RST_HIDE</option>
+				</field>
+				<field name="show_date" type="radio" class="btn-group btn-group-yesno" default="1" label="RST_TICKET_DATE" description="RST_SHOW_HIDE_COLUMN_DESC">
+					<option value="1">RST_SHOW</option>
+					<option value="0">RST_HIDE</option>
+				</field>
+				<field name="show_last_reply" type="radio" class="btn-group btn-group-yesno" default="1" label="RST_TICKET_LAST_REPLY" description="RST_SHOW_HIDE_COLUMN_DESC">
+					<option value="1">RST_SHOW</option>
+					<option value="0">RST_HIDE</option>
+				</field>
+				<field name="show_code" type="radio" class="btn-group btn-group-yesno" default="1" label="RST_TICKET_CODE" description="RST_SHOW_HIDE_COLUMN_DESC">
+					<option value="1">RST_SHOW</option>
+					<option value="0">RST_HIDE</option>
+				</field>
+				<field name="show_replies" type="radio" class="btn-group btn-group-yesno" default="1" label="RST_TICKET_REPLIES" description="RST_SHOW_HIDE_COLUMN_DESC">
+					<option value="1">RST_SHOW</option>
+					<option value="0">RST_HIDE</option>
+				</field>
+				<field name="show_customer" type="radio" class="btn-group btn-group-yesno" default="1" label="RST_TICKET_CUSTOMER" description="RST_SHOW_HIDE_COLUMN_DESC">
+					<option value="1">RST_SHOW</option>
+					<option value="0">RST_HIDE</option>
+				</field>
+				<field name="show_priority" type="radio" class="btn-group btn-group-yesno" default="1" label="RST_TICKET_PRIORITY" description="RST_SHOW_HIDE_COLUMN_DESC">
+					<option value="1">RST_SHOW</option>
+					<option value="0">RST_HIDE</option>
+				</field>
+				<field name="show_status" type="radio" class="btn-group btn-group-yesno" default="1" label="RST_TICKET_STATUS" description="RST_SHOW_HIDE_COLUMN_DESC">
+					<option value="1">RST_SHOW</option>
+					<option value="0">RST_HIDE</option>
+				</field>
+				<field name="show_staff" type="radio" class="btn-group btn-group-yesno" default="1" label="RST_TICKET_STAFF" description="RST_SHOW_HIDE_COLUMN_DESC">
+					<option value="1">RST_SHOW</option>
+					<option value="0">RST_HIDE</option>
+				</field>
+				<field name="show_time_spent" type="radio" class="btn-group btn-group-yesno" default="0" label="RST_TIME_SPENT" description="RST_SHOW_HIDE_COLUMN_DESC">
+					<option value="1">RST_SHOW</option>
+					<option value="0">RST_HIDE</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+	
+</metadata>

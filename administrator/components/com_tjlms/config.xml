@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fieldset name="component" label="COM_TJLMS_GENEARAL_SETINGS" description="" >
+		<field name="load_bootstrap" type="radio" default="1" label="COM_TJLMS_LOAD_BOOTSTRAP" description="COM_TJLMS_LOAD_BOOTSTRAP_DESC"  class="btn-group">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field name="show_user_or_username" class="btn-group" type="radio" default="name" label="COM_TJLMS_SHOW_USER_OR_USERNAME" description="COM_TJLMS_SHOW_USER_OR_USERNAME_DESC" >
+			<option value="name">COM_TJLMS_ENROLMENT_USER_NAME</option>
+			<option value="username">COM_TJLMS_ENROLMENT_USER_USERNAME</option>
+		</field>
+
+		<field name="date_format_show" class="btn-group" default="Y-m-d H:i:s" type="inputbox" label="COM_TJLMS_DATE_FORMAT_TO_SHOW" description="COM_TJLMS_DATE_FORMAT_TO_SHOW_DESC">
+		</field>
+	</fieldset>
+
+	<fieldset name="course_settings" label="COM_TJLMS_COURSE_SETTING" description="" >
+		<field menu="hide" type="legend" id="tjlms-course-settings" name="tjlms-course-settings" label="" default="COM_TJLMS_ADMIN_COURSE_SETTINGS" hint="" />
+
+		<field name="allow_char_desc" type="text"  class="validate-numeric" default="150" description="COM_TJLMS_ALLOW_CHARACTOR_DESC" label="COM_TJLMS_ALLOW_CHARACTOR" />
+
+		<field name="course_layout" type="componentlayout" label="COM_TJLMS_COURSE_LAYOUT" class="form-select"
+		description="COM_TJLMS_COURSE_LAYOUT_DESC" useglobal="true" extension="com_tjlms" view="course" />
+
+		<field menu="hide" type="legend" id="tjlms-course-enrollment-settings" name="tjlms-course-enrollment-settings" label="" default="COM_TJLMS_COURSE_ENROLMENT_SETTINGS" hint="" />
+
+		<field name="admin_approval" class="btn-group" type="radio"  default="0" description="COM_TJLMS_ENROL_OPTION_DESC" label="COM_TJLMS_ENROL_OPTION" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field name="auto_enroll" class="btn-group" type="autoenroll" showon="admin_approval:0" default="0" description="COM_TJLMS_AUTO_ENROLL_DESC" label="COM_TJLMS_AUTO_ENROLL" >
+		</field>
+
+		<field name="paid_course_admin_approval" class="btn-group" type="radio"  default="0" description="COM_TJLMS_ENROL_OPTION_FOR_PAID_COURSE_DESC" label="COM_TJLMS_ENROL_OPTION_FOR_PAID_COURSE" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field name="allow_creator" class="btn-group" type="radio"  default="0" description="COM_TJLMS_ALLOW_CREATOR_TO_VIEW_DESC" label="COM_TJLMS_ALLOW_CREATOR_TO_VIEW" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field menu="hide" type="legend" id="tjlms-certifictate-settings" name="tjlms-certifictate-settings" label="" default="COM_TJLMS_CERTIFICATE_SETTING" hint="" />
+
+		<field name="certificate_prefix" type="text"
+			default="" label="COM_TJLMS_CERTIFICATE_PREFIX_LABEL"
+			description="COM_TJLMS_CERTIFICATE_PREFIX_DESC"
+		/>
+
+		<field name="certificate_date_format" class="btn-group" default="j F Y" type="inputbox" label="COM_TJLMS_CERT_DATE_FORMAT_TO_SHOW" description="COM_TJLMS_CERT_DATE_FORMAT_TO_SHOW_DESC">
+		</field>
+
+		<field menu="hide" type="legend" id="tjlms-tags-settings" name="tjlms-tags-settings" label="" default="COM_TJLMS_TAGS_SETTINGS" hint="" />
+
+		<field name="enable_tags" class="btn-group" type="radio"  default="1" description="COM_TJLMS_ENABLE_TAGS_DESC" label="COM_TJLMS_ENABLE_TAGS" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field menu="hide" type="legend" id="tjlms-social-sharing-settings" name="tjlms-social-sharing-settings" label="" default="COM_TJLMS_SETTINGS_SOCIAL_SHARING" hint="" />
+
+		<field name="social_sharing" class="btn-group" type="radio" default="0" label="COM_TJLMS_ENABLE_SOCIAL_SHARING" description="COM_TJLMS_NO_ENABLE_SOCIAL_SHARING_DESC" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field name="social_sharing_type" class="btn-group" type="radio" default="native" label="COM_TJLMS_SOCIAL_SHARING_TYPE" description="COM_TJLMS_NO_SOCIAL_SHARING_TYPE_DESC" >
+			<option value="addthis">COM_TJLMS_ADDTHIS_SOCIAL</option>
+			<option value="native">COM_TJLMS_NATIVE_NATIVE</option>
+		</field>
+
+		<field name="addthis_publishid" type="text" default="" label="COM_TJLMS_SELECT_ADDTHIS_PUBLISHED_ID" showon="social_sharing_type:addthis" description="COM_TJLMS_SELECT_ADDTHIS_PUBLISHED_ID_DES" />
+
+		<field menu="hide" type="legend" id="tjlms-course-tools-settings" name="tjlms-course-tools-settings" label="" default="COM_TJLMS_SETTINGS_COURSE_TOOLS" hint="" />
+
+		<field name="notify_certificate_expiry" class="btn-group" type="radio" default="0" label="COM_TJLMS_SETTINGS_COURSE_TOOLS_NOTIFY_CERTIFICATE_EXPIRY" description="COM_TJLMS_SETTINGS_COURSE_TOOLS_NOTIFY_CERTIFICATE_EXPIRY_DESC" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field name="batch_size" type="text"  class="validate-numeric" default="10" description="COM_TJLMS_SETTINGS_COURSE_TOOLS_DESC" label="COM_TJLMS_SETTINGS_COURSE_TOOLS" />
+
+	</fieldset>
+
+	<fieldset name="lesson_settings" label="COM_TJLMS_LESSON_SETTING" description="" >
+		<field menu="hide" type="legend" id="tjlms-admin-lesson-settings" name="tjlms-admin-lesson-settings" label="" default="COM_TJLMS_ADMIN_LESSON_SETTINGS" hint="" />
+
+		<field name="lesson_upload_size"  type="text" class="validate-numeric" default="10" description="COM_TJLMS_LESSON_FILE_SIZE_DESC" label="COM_TJLMS_LESSON_FILE_SIZE" />
+
+		<field name="allow_associate_files" class="btn-group" type="radio"  default="0" description="COM_TJLMS_ALLOW_ASSOCIATE_FILES_FOR_LESSONS_DESC" label="COM_TJLMS_ALLOW_ASSOCIATE_FILES_FOR_LESSONS" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field menu="hide" type="legend" id="tjlms-user-lesson-settings" name="tjlms-user-lesson-settings" label="" default="COM_TJLMS_USER_LESSON_SETTINGS" hint="" />
+
+		<field name="launch_full_screen" class="btn-group" type="radio" default="window" description="COM_TJLMS_LESSON_LAUNCH_IN_POPUP_DESC" label="COM_TJLMS_LESSON_LAUNCH_IN_POPUP">
+			<option value="window">COM_TJLMS_CONFIG_LESSON_SCREEN_PARENT</option>
+			<option value="tab">COM_TJLMS_CONFIG_LESSON_SCREEN_ANOTHER</option>
+		</field>
+
+		<field name="tjlms_toolbar_option" class="btn-group" type="radio" default="1" description="COM_TJLMS_TOOLBAR_POSITION_DESC" label="COM_TJLMS_TOOLBAR_POSITION">
+			<option value="1">COM_TJLMS_TOP</option>
+			<option value="0">COM_TJLMS_BOTTOM</option>
+		</field>
+
+		<field name="tjlms_lesson_playlist" class="btn-group" type="radio" default="0" description="COM_TJLMS_SHOW_LESSON_PLAYLIST_DESC" label="COM_TJLMS_SHOW_LESSON_PLAYLIST">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field menu="hide" type="legend" id="tjlms-admin-quiz-settings" name="tjlms-admin-quiz-settings" label="" default="COM_TJLMS_ADMIN_QUIZ_SETTINGS" hint="" />
+
+		<field name="quiz_articleId" type="text" default="" label="COM_TJLMS_SELECT_QUIZ_ARTICLE_ID" description="COM_TJLMS_SELECT_QUIZ_ARTICLE_ID_DES" />
+
+		<field name="admin_key_review_answersheet"
+			 type="text"
+			 default="abcd1234"
+			 class="required"
+			 label="COM_TMT_TEST_REVIEW_ANSWERSHEET_KEY"
+			 description="COM_TMT_TEST_REVIEW_ANSWERSHEET_KEY_DESC" />
+	</fieldset>
+
+	<fieldset name="soical_integration" description="" label="COM_TJLMS_SOCIAL_INTEGRATION">
+		<field name="social_integration" class="btn-group" default="joomla" type="integration" label="COM_TJLMS_INTERATION" description="COM_TJLMS_INTERATION_DESC">
+		</field>
+
+		<field name="" type="pointsheader" class="show_notes show_point_notes" default="" label="" description="" />
+
+		<field name="pt_option" class="btn-group" default="none" type="pointintegrations" label="COM_TJLMS_INTEGRATION_PT" description="INTEGRATION_PT_DESC">
+		</field>
+
+		<field name="tjlms-alphauserpoints" menu="hide" id="tjlms-alphauserpoints" type="legend" label="" default="COM_TJLMS_ALPHA_USERPOINTS">
+		</field>
+		<field name="onAfterCourseEnrolAupPoints" class="validate-numeric" default="5" type="text" label="COM_TJLMS_COURSE_ENROLLMENT_POINTS" description="COM_TJLMS_COURSE_ENROLLMENT_POINTS_DESC"/>
+
+		<field name="onAfterLessonAttemptEndAupPoints" class="validate-numeric" default="5" type="text" label="COM_TJLMS_LESSON_COMPLETION_POINTS" description="COM_TJLMS_LESSON_COMPLETION_POINTS_DESC"/>
+
+		<field menu="hide" type="legend" id="tjlms-activity-settings" name="tjlms-activity-settings" label="" default="COM_TJLMS_ADMIN_ACTIVITY_STREAM_SETTING" hint="" />
+
+		<field name="activityStreamToAllow" default="" multiple="multiple" type="activitystream" label="COM_TJLMS_ALLOW_ACTIVITY_STREAM" description="COM_TJLMS_ALLOW_ACTIVITY_STREAM_DESC" />
+	</fieldset>
+
+	<!-- Media setting  -->
+	<fieldset name="image_sets" label="COM_COM_TJLMS_IMG_SETS" description="">
+		<field
+			name="tjlms_image_mime_type"
+			type="textarea"
+			default="image/jpeg,image/gif,image/png"
+			description="COM_TJLMS_IMAGE_MIME_TYPE_DESC"
+			label="COM_TJLMS_IMAGE_MIME_TYPE"
+			rows="5"
+			cols="30"
+		/>
+
+		<field
+			name="tjlms_image_extension"
+			type="text"
+			default="jpg,jpeg,gif,png"
+			description="COM_TJLMS_IMAGE_EXTENSIONS_DESC"
+			label="COM_TJLMS_IMAGE_EXTENSIONS"
+		/>
+
+		<field name="tjlms_image_size" type="number"
+			default="2"
+			description="COM_TJLMS_IMAGE_SIZE_DESC"
+			label="COM_TJLMS_IMAGE_SIZE" />
+
+		<field name="course_detail_view_image_size" type="list" default="S_"
+			description="COM_TJLMS_COURSE_DETAIL_VIEW_IMAGE_DESC"
+			label="COM_TJLMS_COURSE_DETAIL_VIEW_IMAGE">
+			<option value="S_">COM_TJLMS_COURSE_IMAGES_SIZE_SMALL</option>
+			<option value="M_">COM_TJLMS_COURSE_IMAGES_SIZE_MEDIUM</option>
+			<option value="L_">COM_TJLMS_COURSE_IMAGES_SIZE_LARGE</option>
+		</field>
+
+		<field menu="hide" type="legend" id="tjlms-image-path-settings" name="tjlms-image-path-settings" label="" default="COM_TJLMS_IMAGE_PATH_SETTINGS" hint="" />
+
+		<field name="course_image_upload_path"  type="text" default="media/com_tjlms/images/courses/" description="COM_TJLMS_COURSE_IMG_PATH_DESC" label="COM_TJLMS_COURSE_IMG_PATH" />
+		<field name="lesson_image_upload_path"  type="text" default="media/com_tjlms/images/lessons/" description="COM_TJLMS_LESSON_IMG_PATH_DESC" label="COM_TJLMS_LESSON_IMG_PATH" />
+		<field name="module_image_upload_path"  type="text" default="media/com_tjlms/images/modules/" description="COM_TJLMS_MODULE_IMG_PATH_DESC" label="COM_TJLMS_MODULE_IMG_PATH" />
+
+		<field menu="hide" type="legend" id="tjlms-image-resize-settings" name="tjlms-image-resize-settings" label="" default="COM_TJLMS_IMAGE_RESIZE_SETTINGS" hint="" />
+
+		<field name="max_size" type="text" class="validate-numeric" default="1024" label="COM_TJLMS_MAX_SIZE" description="COM_TJLMS_MAX_SIZE_DESC" />
+		<field name="small_width" type="text" class="validate-numeric" default="270" label="COM_TJLMS_SMALL_WIDTH" description="COM_TJLMS_SMALL_WIDTH_DESC" />
+		<field name="small_height" type="text" class="validate-numeric" default="152" label="COM_TJLMS_SMALL_HT" description="COM_TJLMS_SMALL_HT_DESC" />
+		<field name="medium_width" type="text" class="validate-numeric" default="240" label="COM_TJLMS_MED_WIDTH" description="COM_TJLMS_MED_WIDTH_DESC" />
+		<field name="medium_height" type="text" class="validate-numeric" default="240" label="COM_TJLMS_MED_HT" description="COM_TJLMS_MED_HT_DESC" />
+		<field name="large_width" type="text" class="validate-numeric" default="480" label="COM_TJLMS_LARG_WIDTH" description="COM_TJLMS_LARG_WIDTH_DESC" />
+		<field name="large_height" type="text" class="validate-numeric" default="270" label="COM_TJLMS_LARG_HT" description="COM_TJLMS_LARG_HT_DESC" />
+	</fieldset>
+
+	<fieldset name="remote_storage_settings" label="COM_TJLMS_REMOTE_STORAGE_SETTING" description="" addfieldpath="/administrator/components/com_tjlms/elements" >
+		<field menu="hide" type="legend" id="tjlms-amazon-settings" name="tjlms-amazon-settings" label="" default="COM_TJLMS_AMAZONS3_SETTINGS" hint="" />
+
+		<field name="storages3bucket" type="text" default="" label="COM_TJLMS_S3_BUCKET" description="COM_TJLMS_S3_BUCKET_DESC" />
+
+		<field name="storages3accesskey" type="text" default="" label="COM_TJLMS_S3_ACCESS_KEY" description="COM_TJLMS_S3_ACCESS_KEY_DESC" />
+
+		<field name="storages3secretkey" type="text" default="" label="COM_TJLMS_S3_SECRET_KEY" description="COM_TJLMS_S3_SECRET_KEY_DESC" />
+
+		<field name="storages3lifetime" type="text" default="" label="COM_TJLMS_S3_LIFETIME" description="COM_TJLMS_S3_LIFETIME_DESC" />
+
+		<field menu="hide" type="legend" id="tjlms-storage-settings" name="tjlms-storage-settings" label="" default="COM_TJLMS_STORAGE_METHODS" hint="" />
+
+		<field name="course_images_storage" class="btn-group" type="list"  default="0" description="COM_TJLMS_IMAGE_STORE_DESC" label="COM_TJLMS_IMAGE_STORE" >
+			<option value="local">COM_TJLMS_LOCAL_STORAGE</option>
+			<option value="s3">COM_TJLMS_AMAZONS3_STORAGE</option>
+		</field>
+
+		<field name="lesson_files_stores" class="btn-group" type="list"  default="0" description="COM_TJLMS_LESSON_FILES_STORE_DESC" label="COM_TJLMS_LESSON_FILES_STORE" >
+			<option value="local">COM_TJLMS_LOCAL_STORAGE</option>
+			<option value="s3">COM_TJLMS_AMAZONS3_STORAGE</option>
+		</field>
+
+		<field name="lesson_image_storage" class="btn-group" type="list"  default="0" description="COM_TJLMS_LESSON_IMAGE_STORE_DESC" label="COM_TJLMS_LESSON_IMAGE_STORE" >
+			<option value="local">COM_TJLMS_LOCAL_STORAGE</option>
+			<option value="s3">COM_TJLMS_AMAZONS3_STORAGE</option>
+		</field>
+
+		<field name="lesson_ass_files_storage" class="btn-group" type="list"  default="0" description="COM_TJLMS_LESSON_ASSO_FILES_STORE_DESC" label="COM_TJLMS_LESSON_ASSO_FILES_STORE" >
+			<option value="local">COM_TJLMS_LOCAL_STORAGE</option>
+			<option value="s3">COM_TJLMS_AMAZONS3_STORAGE</option>
+		</field>
+
+		<field name="module_images_storage" class="btn-group" type="list"  default="local" description="COM_TJLMS_MODULE_IMAGE_STORE_DESC" label="COM_TJLMS_MODULE_IMAGE_STORE" >
+			<option value="local">COM_TJLMS_LOCAL_STORAGE</option>
+			<option value="s3">COM_TJLMS_AMAZONS3_STORAGE</option>
+		</field>
+	</fieldset>
+
+	<fieldset name="payment_settings" label="COM_TJLMS_PAYMENT_SETTINGS" description="" addfieldpath="/administrator/components/com_tjlms/elements" >
+
+		<field name="allow_paid_courses" class="btn-group" type="radio"  default="0" description="COM_TJLMS_ALLOW_TO_CREATE_PAID_COURSES_DESC" label="COM_TJLMS_ALLOW_TO_CREATE_PAID_COURSES">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="allow_flexi_enrolments" class="btn-group" type="radio" default="0" description="COM_TJLMS_ALLOW_TO_CREATE_FLEXI_ENROLMENTS_DESC" label="COM_TJLMS_ALLOW_TO_CREATE_FLEXI_ENROLMENTS">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field name="gateways" type="gatewayplg" multiple="multiple" label="COM_TJLMS_SELECT_GATEWAY" description="COM_TJLMS_SELECT_GATEWAY_DESC" />
+
+		<field name="allow_taxation" class="btn-group" type="radio"  default="1" description="COM_TJLMS_ALLOW_TAX_DESC" label="COM_TJLMS_ALLOW_TAX" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field name="enable_bill_vat" class="btn-group" type="radio" default="0" label="COM_TJLMS_BILL_VAT_NUM" description="COM_TJLMS_BILL_VAT_NUM_DESC" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field name="currency" type="text" default="USD" label="COM_TJLMS_CURRENCY" description="COM_TJLMS_CURRENCY_DES" />
+
+		<field name="currency_symbol" type="text" default="$" label="COM_TJLMS_CURRENCY_SYMBOL" description="COM_TJLMS_CURRENCY_SYMBOL_DEC" />
+
+		<field name="currency_display_format" type="text" default="{AMOUNT} {CURRENCY_SYMBOL} " label="COM_TJLMS_CURRENCY_DISPLAY_FORMAT" description="COM_TJLMS_CURRENCY_DISPLAY_FORMAT_DESC" />
+
+		<field name="default_country_mobile_code" type="number" default="0" label="COM_TJLMS_SELECT_DEFAULT_COUNTRY_MOBILE" description="COM_TJLMS_SELECT_DEFAULT_COUNTRY_MOBILE_DESC" />
+
+		<field name="terms_condition" class="radio btn-group" type="radio" default="0" label="COM_TJLMS_TC" description="COM_TJLMS_TC_DES" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field name="tnc_article" type="getarticles" class="validate-numeric" default="" label="COM_TJLMS_TC_ARTICLE" description="COM_TJLMS_TC_ARTICLE_DESC"
+			showon="terms_condition:1" >
+			<option value="">COM_TJLMS_JOPTION_SELECT_DEFAULT</option>
+		</field>
+
+		<field menu="hide" type="legend" id="tjlms-course-order_settings"
+			name="tjlms-course-order_settings" label="" default="COM_TJLMS_ORDER_SETTINGS" hint="" />
+
+		<field name="order_prefix" type="text" default="SHOID" maxlength="5" label="COM_TJLMS_ORDER_PREFIX" description="COM_TJLMS_ORDER_PREFIX_DESC" />
+
+		<field name="separator" type="text" default="-" maxlength="1" label="COM_TJLMS_SEPARATOR" description="COM_TJLMS_SEPARATOR_DESC" />
+
+		<field name="random_orderid" class="radio btn-group"  type="radio" default="0" label="COM_TJLMS_RANDOM_OREDRID" description="COM_TJLMS_RANDOM_OREDRID_DESC" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field name="padding_count" type="text" default="3" class="validate-numeric" label="COM_TJLMS_PADDING_COUNT" description="COM_TJLMS_PADDING_COUNT_DESC" />
+		<!--Google Analytics Setting-->
+		<field menu="hide" type="legend" id="tjlms_google_analytics_set" name="tjlms_google_analytics_set" label="" default="COM_TJLMS_ECOMMERECE_ANALYTICS_TRACKING" hint="" />
+		<field name="ga_ec_analytics" class="radio btn-group" type="radio" default="0"  label="COM_TJLMS_ENABLE_ENHANCE_ECOMMERECE_GOOGLE_ANALYTICS_TRACKING" description="COM_TJLMS_ENABLE_ENHANCE_ECOMMERECE_GOOGLE_ANALYTICS_TRACKING_DESC">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="track_attendee_step" class="radio btn-group" type="radio" default="0" showon="ga_ec_analytics:1" label="COM_TJLMS_TRACK_JTICKETING_AND_ATTENDEE_FORM_FILL" description="COM_TJLMS_TRACK_JTICKETING_AND_ATTENDEE_FORM_FILL_DESC">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="ga_product_type_dimension" type="text" default="event" showon="ga_ec_analytics:1" label="COM_TJLMS_GA_PRODUCT_TYPE_DIMESION_VALUE" description="COM_TJLMS_GA_PRODUCT_TYPE_DIMESION_VALUE_DESC"/>
+		<field name="send_ga_data" type="radio" class="btn-group"
+			label="PLG_SYSTEM_TJANALYTICS_ORDER_STATUS"
+			description="PLG_SYSTEM_TJANALYTICS_ORDER_STATUS_DESC"
+			default="1"	>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+	</fieldset>
+
+	<fieldset name="company_details"  label="COM_TJLMS_COMPANY_DETAILS" description="" addfieldpath="/administrator/components/com_tjlms/assets/elements" >
+		<field name="company_name" type="text" default=""  label="COM_TJLMS_COMPANY_NAME" description="COM_TJLMS_COMPANY_NAME" />
+
+		<field name="company_address" type="text" default=""  label="COM_TJLMS_COMPANY_ADDRESS" description="COM_TJLMS_COMPANY_ADDRESS" />
+
+		<field name="company_vat_no" type="text" default=""  label="COM_TJLMS_COMPANY_VAT_NO" description="COM_TJLMS_COMPANY_VAT_NO" />
+	</fieldset>
+
+<fieldset name="question_media_settings"
+		label="COM_TJLMS_MEDIA_SETTINGS"
+		description="COM_TJLMS_MEDIA_SETTINGS_DESC">
+
+	<field
+		name="tjlms_media_mime_type"
+		type="textarea"
+		default="image/jpeg,image/gif,image/png,image/bmp,image/x-ms-bmp,application/msword,application/excel,application/pdf,application/powerpoint,application/vnd.ms-powerpoint,text/plain,application/x-zip,application/zip,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,audio/wav,audio/aac,audio/mp3,audio/x-m4a,audio/mpeg,audio/x-hx-aac-adts,audio/mp4,audio/x-wav"
+		description="COM_TJLMS_MEDIA_MIME_TYPE"
+		label="COM_TJLMS_MEDIA_MIME_TYPE"
+		rows="5"
+		cols="30"
+	/>
+
+	<field
+		name="tjlms_media_extension"
+		type="text"
+		default="jpg,jpeg,gif,png,bmp,doc,docx,xls,xlsx,ppt,pptx,pdf,txt,zip,wav,aac,mp3,m4a"
+		description="COM_TJLMS_MEDIA_FILE_TYPE_DESC"
+		label="COM_TJLMS_MEDIA_FILE_TYPE"
+	/>
+
+	<field name="tjlms_media_size" type="number"
+		default="2"
+		description="COM_TJLMS_MEDIA_SIZE_DESC"
+		label="COM_TJLMS_MEDIA_SIZE" />
+
+	<field name="image_extensions" type="text"
+		default="bmp,gif,jpg,png"
+		description="COM_TJLMS_MEDIA_IMAGE_LEGAL_TYPE_DESC"
+		label="COM_TJLMS_MEDIA_IMAGE_LEGAL_TYPE" />
+
+	<field menu="hide" type="legend" id="tjlms-file-preview-settings" name="tjlms-file-preview-settings" label="" default="COM_TJLMS_FILE_PREVIEW_SETTING" hint="" />
+
+	<field name="media_viewer" type="list" default="google" label="COM_TJLMS_FILE_PREVIEW_ENGINE" description="COM_TJLMS_FILE_PREVIEW_ENGINE_DESC"  class="btn-group">
+		<option value="google">COM_TJLMS_MEDIA_VIEWER_GOOGLE</option>
+		<option value="microsoft">COM_TJLMS_MEDIA_VIEWER_MICROSOFT</option>
+	</field>
+
+</fieldset>
+
+
+	<fieldset name="Cron-setting" label="COM_TJLMS_CRON_LBL">
+		<field menu="hide" type="legend" id="tjlms-amazon_cron_settings"
+			name="tjlms-amazon_cron_settings" label="" default="COM_TJLMS_CRON_SETTINGS" hint=""
+		/>
+
+		<field name="private_key_storage_cron" default="abcd1234"
+			type="text" label="COM_TJLMS_PRIVATE_KEY_STORAGECRON" description="COM_TJLMS_PRIVATE_KEY_STORAGECRON_DESC"
+		/>
+
+		<field name="storage_cron" type="cron" label="COM_TJLMS_STORAGECRON" description="COM_TJLMS_STORAGECRON_DESC" />
+
+		<field menu="hide" type="legend" id="tjlms-subs-expiration_cron_settings"
+			name="tjlms_subs_expiration_cron_settings" label="" default="COM_TJLMS_SUBS_EXPIRATION_CRON_SETTINGS" hint=""
+		/>
+
+		<field name="subs_expiration_cron" type="subsexpirationcron"
+			label="COM_TJLMS_SUBS_EXPIRATION_CRON_LABEL" description="COM_TJLMS_SUBS_EXPIRATION_CRON_DESC"
+		/>
+
+		<field name="before_subscription_expired" type="number" default="1" validate="number" min="1"
+				description="COM_TJLMS_SUBS_EXPIRATION_BEFORE_DAYS_DESC" label="COM_TJLMS_SUBS_EXPIRATION_BEFORE_DAYS_LABEL"/>
+
+		<field menu="hide" type="legend" id="tjlms-reminder_cron_settings"
+			name="tjlms-reminder_cron_settings" label="" default="COM_TJLMS_REMINDER_CRON_SETTINGS" hint=""
+		/>
+		<field name="reminder_cron" type="remindercron"
+			label="COM_TJLMS_REMINDERCRON_LABEL" description="COM_TJLMS_REMINDERCRON_DESC"
+		/>
+	</fieldset>
+
+	<fieldset name="updates" label="COM_TJLMS_OPTIONS_UPDATES_LBL">
+		<field name="downloadid" type="text" default="" size="30" label="COM_TJLMS_OPTIONS_DOWNLOADID_LBL" description="COM_TJLMS_OPTIONS_DOWNLOADID_DESC" />
+	</fieldset>
+
+	<fieldset name="permissions" description="JCONFIG_PERMISSIONS_DESC" label="JCONFIG_PERMISSIONS_LABEL" >
+		<field name="rules" type="rules" component="com_tjlms" class="inputbox" filter="rules"
+			validate="rules"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			section="component"
+		/>
+	</fieldset>
+</config>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+        <field name="id"
+			type="hidden"
+			default="0" />
+
+		<field name="created_by"
+			type="hidden" />
+
+		<field name="modified_by"
+			type="hidden" />
+
+		<field name="ordering"
+			type="hidden" />
+
+		<field name="title"
+			type="text"
+			size="40"
+			class="inputbox"
+			label="COM_TJLMS_FORM_LBL_CERTIFICATETEMPLATE_TITLE"
+			description="COM_TJLMS_FORM_DESC_CERTIFICATETEMPLATE_TITLE"
+			hint="COM_TJLMS_FORM_LBL_CERTIFICATETEMPLATE_TITLE"
+			required="true"
+			filter="safehtml" />
+
+		<field
+			name="certificatetemplate"
+			type="certificatetemplate"
+			id="certificatetemplate"
+			label="COM_TJLMS_FORM_LBL_CERTIFICATETEMPLATE_TEMPLATE"
+			description="COM_TJLMS_FORM_DESC_CERTIFICATETEMPLATE_TEMPLATE"
+			size="1"
+			>
+		</field>
+
+		<field name="body"
+			type="editor"
+			label="COM_TJLMS_FORM_LBL_CERTIFICATETEMPLATE_BODY"
+			description="COM_TJLMS_FORM_DESC_CERTIFICATETEMPLATE_BODY"
+			hint="COM_TJLMS_FORM_LBL_CERTIFICATETEMPLATE_BODY"
+			required="true"
+			menu_published="0"
+			filter="raw"
+			directory_stripext="true"
+			directory_hidenode="true"
+			directory_hidedefault="true"
+			heading="h4"
+			close="true"
+			option_on="Yes"
+			option_off="Yes"
+			toggle_default_value="0" />
+
+		<field name="access"
+			type="radio"
+			label="COM_TJLMS_FORM_LBL_CERTIFICATETEMPLATE_ACCESS"
+			description="COM_TJLMS_FORM_DESC_CERTIFICATETEMPLATE_ACCESS"
+			hint="COM_TJLMS_FORM_LBL_CERTIFICATETEMPLATE_ACCESS"
+			option_on="Yes"
+			option_off="Yes">
+				<option value="0">Private</option>
+				<option value="1">Public</option>
+		</field>
+
+		<field name="created_date"
+			type="hidden"
+			filter="safehtml" />
+
+		<field name="modified_date"
+			type="hidden"
+			filter="safehtml" />
+
+		<field name="state"
+			type="hidden"
+			default="1">
+		</field>
+
+		<field name="checked_out"
+			type="hidden"
+			filter="unset" />
+
+		<field name="checked_out_time"
+			type="hidden"
+			filter="unset" />
+
+		<field name="template_css"
+			type="textarea"
+			class="template_css_width"
+			cols="45"
+			rows="10" />
+	</fieldset>
+	<fields name="params" label="COM_TJLMS_FIELD_BASIC_LABEL">
+		<fieldset name="basic">
+
+			<field name="certificate_font" type="list" default="DeJaVu Sans"
+				label="COM_TJLMS_CERTIFICATE_PDF_FONT_LABEL" description="COM_TJLMS_CERTIFICATE_PDF_FONT_DESC">
+				<option value="Courier">COM_TJLMS_CERTIFICATE_PDF_FONT_COURIER</option>
+				<option value="DeJaVu Sans">COM_TJLMS_CERTIFICATE_PDF_FONT_DEJAVUSANS</option>
+				<option value="Helvetica">COM_TJLMS_CERTIFICATE_PDF_FONT_HELVETICA</option>
+				<option value="Times new roman">COM_TJLMS_CERTIFICATE_PDF_FONT_TIMES</option>
+				<option value="custom">COM_TJLMS_CERTIFICATE_PDF_FONT_CUSTOM</option>
+			</field>
+
+			<field name="certificate_custom_font" type="text" default="DeJaVu Sans" label="COM_TJLMS_CERTIFICATE_PDF_CUSTOMFONT_LABEL"
+				showon="certificate_font:custom" description="COM_TJLMS_CERTIFICATE_PDF_CUSTOMFONT_DESC" />
+
+			<field name="certifcate_page_size" type="list" default="A4"
+				description="COM_TJLMS_CERTIFICATE_PDF_SIZE_DESC"
+				label="COM_TJLMS_CERTIFICATE_PDF_SIZE">
+				<option value="A1">COM_TJLMS_CERTIFICATE_PDF_SIZE_A1</option>
+				<option value="A2">COM_TJLMS_CERTIFICATE_PDF_SIZE_A2</option>
+				<option value="A3">COM_TJLMS_CERTIFICATE_PDF_SIZE_A3</option>
+				<option value="A4">COM_TJLMS_CERTIFICATE_PDF_SIZE_A4</option>
+				<option value="A5">COM_TJLMS_CERTIFICATE_PDF_SIZE_A5</option>
+				<option value="A6">COM_TJLMS_CERTIFICATE_PDF_SIZE_A6</option>
+				<option value="Legal">COM_TJLMS_CERTIFICATE_PDF_SIZE_LEGAL</option>
+				<option value="Letter">COM_TJLMS_CERTIFICATE_PDF_SIZE_LETTER</option>
+				<option value="custom">COM_TJLMS_CERTIFICATE_PDF_SIZE_CUSTOME</option>
+			</field>
+
+			<field name="certificate_pdf_width" class="validate-numeric" type="text" default="80" label="COM_TJLMS_CERTIFICATE_PDF_WIDTH"
+				showon="certifcate_page_size:custom" description="COM_TJLMS_CERTIFICATE_PDF_WIDTH_DESC" />
+			<field name="certificate_pdf_height" class="validate-numeric" type="text" default="80" label="COM_TJLMS_CERTIFICATE_PDF_HEIGHT"
+				showon="certifcate_page_size:custom" description="COM_TJLMS_CERTIFICATE_PDF_HEIGHT_DESC" />
+
+			<field name="orientation" class="btn-group" type="radio"  default="portrait" description="COM_TJLMS_CERTIFICATE_ORIENTATION_OPTION_DESC" label="COM_TJLMS_CERTIFICATE_ORIENTATION_OPTION" >
+				<option value="portrait">COM_TJLMS_CERTIFICATE_PORTRAIT</option>
+				<option value="landscape">COM_TJLMS_CERTIFICATE_LANDSCAPE</option>
+			</field>
+
+		</fieldset>
+	</fields>
+</form>

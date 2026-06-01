@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fieldset>
+-               <field name="cluster_id" class="cluster-info" type="cluster" required="true" default="" label="COM_DPE_ASSIGNED_SCHOOLS_ROP,COM_DPE_ORGANISATION" description="COM_DPE_ASSIGNED_SCHOOLS_ROP_DESC,COM_DPE_ORGANISATION" addfieldpath="administrator/components/com_tjfields/models/fields" filter="INT"/>
+
+		<field name="cluster_ids" class="cluster-info" type="cluster" required="true" default="" multiple="true" label="COM_DPE_ASSIGNED_SCHOOLS_ROP,COM_DPE_SELECT_ORGANISATIONS" description="COM_DPE_ASSIGNED_SCHOOLS_ROP_DESC,COM_DPE_ORGANISATION" addfieldpath="administrator/components/com_tjfields/models/fields" filter="INT"/>
+	</fieldset>
+</form>

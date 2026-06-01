@@ -1,0 +1,37 @@
+/**
+ * @package     JMailAlerts
+ * @subpackage  com_jmailalerts
+ *
+ * @author      Techjoomla <extensions@techjoomla.com>
+ * @copyright   Copyright (C) 2009 - 2022 Techjoomla. All rights reserved.
+ * @license     http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ */
+
+/* Needed for plugins in Email */
+ .product-table {
+	display: block;
+	border: 1px dotted #ddd;
+	border-left: 0;
+	border-right: 0;
+	margin: 15px 0;
+	padding-bottom: 15px;
+}
+
+/* Commomn CSS for plugins*/
+.jma_user_nam {
+	margin: 0px;
+	padding: 0px 0px 10px;
+	font-family: Helvetica;
+	font-size: 11px;
+	color: #5858FA;
+}
+
+.jma_user_img {
+	margin: 0px;
+	padding: 0px 3px 10px 0px;
+	font-family: Helvetica;
+}
+
+.jma_prefspan {
+	font-size: 11px;
+}

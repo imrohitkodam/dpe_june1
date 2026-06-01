@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.6" type="package" method="upgrade">
+  <packagename>autotweet</packagename>
+  <packager>Extly, CB</packager>
+  <packagerurl>https://www.extly.com</packagerurl>
+  <name>Perfect Publisher</name>
+  <description>
+    <![CDATA[
+    <h1>Perfect Publisher</h1>
+    <p class="lead">Publish your content easily and engage your
+        audience.</p>
+
+    <div class="xt-alert xt-alert-info">
+        <ul class="unstyled">
+            <li>
+                <svg class="svg-inline--fa fa-desktop fa-w-18 xticon"
+                    height="11" aria-hidden="true" focusable="false"
+                    data-prefix="fas" data-icon="desktop" role="img"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 576 512" data-fa-i2svg="">
+                    <path fill="currentColor"
+                        d="M528 0H48C21.5 0 0 21.5 0 48v320c0 26.5 21.5 48 48 48h192l-16 48h-72c-13.3 0-24 10.7-24 24s10.7 24 24 24h272c13.3 0 24-10.7 24-24s-10.7-24-24-24h-72l-16-48h192c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zm-16 352H64V64h448v288z">
+                    </path>
+                </svg><!-- <i class="xticon fas fa-desktop"></i> -->
+                Tutorials:
+                <a href="https://www.extly.com/docs/perfect_publisher/user_guide/tutorials/"
+                    > How to publish from
+                    Joomla</a>
+            </li>
+            <li>
+                <svg class="svg-inline--fa fa-info fa-w-6 xticon"
+                    height="11" aria-hidden="true" focusable="false"
+                    data-prefix="fas" data-icon="info" role="img"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 192 512" data-fa-i2svg="">
+                    <path fill="currentColor"
+                        d="M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z">
+                    </path>
+                </svg><!-- <i class="xticon fas fa-info"></i> --> For
+                more
+                information: <a
+                    href="https://www.extly.com/docs/perfect_publisher/"
+                    >Documentation</a>
+            </li>
+            <li>
+                <svg class="svg-inline--fa fa-question-circle fa-w-16 xticon"
+                    height="11" aria-hidden="true" focusable="false"
+                    data-prefix="far" data-icon="question-circle"
+                    role="img" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512" data-fa-i2svg="">
+                    <path fill="currentColor"
+                        d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 448c-110.532 0-200-89.431-200-200 0-110.495 89.472-200 200-200 110.491 0 200 89.471 200 200 0 110.53-89.431 200-200 200zm107.244-255.2c0 67.052-72.421 68.084-72.421 92.863V300c0 6.627-5.373 12-12 12h-45.647c-6.627 0-12-5.373-12-12v-8.659c0-35.745 27.1-50.034 47.579-61.516 17.561-9.845 28.324-16.541 28.324-29.579 0-17.246-21.999-28.693-39.784-28.693-23.189 0-33.894 10.977-48.942 29.969-4.057 5.12-11.46 6.071-16.666 2.124l-27.824-21.098c-5.107-3.872-6.251-11.066-2.644-16.363C184.846 131.491 214.94 112 261.794 112c49.071 0 101.45 38.304 101.45 88.8zM298 368c0 23.159-18.841 42-42 42s-42-18.841-42-42 18.841-42 42-42 42 18.841 42 42z">
+                    </path>
+                </svg>
+                <!-- <i class="xticon far fa-question-circle"></i> -->
+                Extly Tech Support
+                <a href="https://support.extly.com"
+                    >https://support.extly.com</a>
+            </li>
+        </ul>
+    </div>
+
+    <p>&nbsp;</p>
+    <p class="customsocialicons">
+        Follow us:
+
+        <a href="https://www.facebook.com/extly"><svg
+                class="svg-inline--fa fa-facebook-f fa-w-10 xticon"
+                height="11" aria-hidden="true" focusable="false"
+                data-prefix="fab" data-icon="facebook-f" role="img"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
+                data-fa-i2svg="">
+                <path fill="currentColor"
+                    d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+                </path>
+            </svg>
+            <!-- <i class="xticon fab fa-facebook-f"></i> -->
+        </a>
+
+        <a href="https://twitter.com/extly"><svg
+                class="svg-inline--fa fa-twitter fa-w-16 xticon"
+                height="11" aria-hidden="true" focusable="false"
+                data-prefix="fab" data-icon="twitter" role="img"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                data-fa-i2svg="">
+                <path fill="currentColor"
+                    d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
+                </path>
+            </svg><!-- <i class="xticon fab fa-twitter"></i> -->
+        </a>
+
+        <a
+            href="https://www.linkedin.com/company/extly-com---joomla-extensions?trk=hb_tab_compy_id_2890809"><svg
+                class="svg-inline--fa fa-linkedin-in fa-w-14 xticon"
+                height="11" aria-hidden="true" focusable="false"
+                data-prefix="fab" data-icon="linkedin-in" role="img"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+                data-fa-i2svg="">
+                <path fill="currentColor"
+                    d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+                </path>
+            </svg>
+            <!-- <i class="xticon fab fa-linkedin-in"></i> -->
+        </a>
+
+        <a
+            href="https://www.instagram.com/extlyextensions"><svg
+                class="svg-inline--fa fa-instagram fa-w-14 xticon"
+                height="11" aria-hidden="true" focusable="false"
+                data-prefix="fab" data-icon="instagram" role="img"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+                data-fa-i2svg="">
+                <path fill="currentColor"
+                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+                </path>
+            </svg>
+            <!-- <i class="xticon fab fa-instagram"></i> -->
+        </a>
+
+        <a href="https://extly.tumblr.com/"><svg
+                class="svg-inline--fa fa-tumblr fa-w-10 xticon"
+                height="11" aria-hidden="true" focusable="false"
+                data-prefix="fab" data-icon="tumblr" role="img"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
+                data-fa-i2svg="">
+                <path fill="currentColor"
+                    d="M309.8 480.3c-13.6 14.5-50 31.7-97.4 31.7-120.8 0-147-88.8-147-140.6v-144H17.9c-5.5 0-10-4.5-10-10v-68c0-7.2 4.5-13.6 11.3-16 62-21.8 81.5-76 84.3-117.1.8-11 6.5-16.3 16.1-16.3h70.9c5.5 0 10 4.5 10 10v115.2h83c5.5 0 10 4.4 10 9.9v81.7c0 5.5-4.5 10-10 10h-83.4V360c0 34.2 23.7 53.6 68 35.8 4.8-1.9 9-3.2 12.7-2.2 3.5.9 5.8 3.4 7.4 7.9l22 64.3c1.8 5 3.3 10.6-.4 14.5z">
+                </path>
+            </svg><!-- <i class="xticon fab fa-tumblr"></i> -->
+        </a>
+
+        <a href="https://github.com/anibalsanchez"> <svg
+                class="svg-inline--fa fa-github fa-w-16 xticon"
+                height="11" aria-hidden="true" focusable="false"
+                data-prefix="fab" data-icon="github" role="img"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"
+                data-fa-i2svg="">
+                <path fill="currentColor"
+                    d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
+                </path>
+            </svg><!-- <i class="xticon fab fa-github"></i> -->
+        </a>
+    </p>
+    <p>
+      A PHP project built with <a href="https://php-prefixer.com" rel="noopener noreferrer">PHP-Prefixer</a>.
+    </p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+  ]]>
+  </description>
+  <version>9.6.1</version>
+  <creationDate>2022-02-11</creationDate>
+
+	<author>Extly, CB</author>
+	<authorEmail>team@extly.com</authorEmail>
+	<authorUrl>https://www.extly.com</authorUrl>
+	<copyright>Copyright (c)2012-2022 Extly, CB All rights reserved.</copyright>
+	<license>GNU/GPLv3 www.gnu.org/licenses/gpl-3.0.html</license>
+
+  <!-- List of extensions to install -->
+  <files>
+    <!-- Component -->
+    <file type="component" id="com_autotweet">component</file>
+
+    <!-- CLI scripts -->
+    <file type="file" id="autotweet">file</file>
+
+    <!-- Modules -->
+    <file type="module" client="administrator" id="mod_joocial_menu">mod_joocial_menu</file>
+    <file type="module" client="site" id="mod_light_rss">mod_light_rss</file>
+    <file type="module" client="site" id="mod_twfollow">mod_twfollow</file>
+
+    <!-- Library -->
+    <file type="library" id="autotweet">library</file>
+    <file type="library">platform</file>
+
+    <!-- Plugins: autotweet  -->
+    <file type="plugin" group="ajax" id="joocialwebpushmanifest">plg_joocialwebpushmanifest</file>
+    <file type="plugin" group="autotweet" id="autotweetpost">plg_autotweetpost</file>
+    <file type="plugin" group="content" id="autotweetopengraph">plg_autotweet_opengraph</file>
+    <file type="plugin" group="content" id="autotweettwittercard">plg_autotweet_twittercard</file>
+    <file type="plugin" group="editors-xtd" id="joocialeditor">plg_joocialeditor</file>
+    <file type="plugin" group="system" id="autotweetautomator">plg_autotweetautomator</file>
+    <file type="plugin" group="system" id="autotweetcontent">plg_autotweetcontent</file>
+    <file type="plugin" group="system" id="autotweetsocialprofile">plg_autotweetsocialprofile</file>
+    <file type="plugin" group="system" id="joocialwebpush">plg_joocialwebpush</file>
+  </files>
+  <!-- Installation script -->
+  <scriptfile>script.autotweet.php</scriptfile>
+  <!-- Update servers -->
+  <updateservers>
+    <server type="extension" priority="1" name="Perfect Publisher PRO">http://cdn.extly.com/update-perfect-publisher-pro.xml</server>
+  </updateservers>
+</extension>

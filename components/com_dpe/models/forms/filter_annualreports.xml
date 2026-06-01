@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fields name="filter">
+			
+		<field name="cluster_id" type="cluster"
+			label="COM_DPE_MY_TICKETS_FILTER_SELECT_AGENCY"
+			description="COM_DPE_MY_TICKETS_FILTER_SELECT_AGENCY"
+			addfieldpath="/administrator/components/com_tjfields/models/fields"
+			onchange="this.form.submit();"
+			>
+		</field>
+		
+		<!-- DPE Hack  to get the tag filter with select tag options-->
+		<!-- <field
+			name="tags"
+			type="sql"
+			query="SELECT DISTINCT tags.title ,tags.id
+					FROM `#__tags` as tags INNER JOIN  `#__contentitem_tag_map` as tagMap  ON tags.id=tagMap.tag_id where type_alias='com_multiagency.multiagency' ORDER BY tags.title ASC;"
+			key_field="id"
+			value_field="title"
+			translate="false"
+			label="COM_DPE_FORM_LBL_TAG"
+			description="COM_DPE_FORM_LBL_TAG_DESC"
+			onchange="this.form.submit();"
+			filter="INT"
+			multiple="true"
+			class="multipletags"
+		/> -->
+	</fields>
+
+	<fields name="list">
+		
+		<field
+			name="limit"
+			type="limitbox"
+			label="COM_CONTENT_LIST_LIMIT"
+			description="COM_CONTENT_LIST_LIMIT_DESC"
+			class="inputbox input-mini"
+			default=""
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</form>

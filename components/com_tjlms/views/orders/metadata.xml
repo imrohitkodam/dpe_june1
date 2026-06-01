@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<view title="Order">
+		<message>
+			<![CDATA[
+				Order view
+			]]>
+		</message>
+		<options var="layout">
+			<option value="my" name="COMTJLMS_MENUS_MY_ORDERS" msg="COMTJLMS_MENUS_MY_ORDERS" />
+		</options>
+	</view>
+	<!--
+	<state>
+		<name>Campaigns Layout</name>
+		<description>Layouts related to a campaigns</description>
+	</state>
+	-->
+</metadata>

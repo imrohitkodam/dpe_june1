@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<menu name="COM_RSSEO_MENU_CREATE_SITEMAP" message="COM_RSSEO_MENU_CREATE_SITEMAP_DESC" options="none"></menu>
+	
+	<fields name="params">
+		<fieldset name="basic">
+			<field name="columns" type="list" label="COM_RSSEO_MENU_COLUMNS" description="COM_RSSEO_MENU_COLUMNS_DESC">
+				<option value="1">COM_RSSEO_MENU_COLUMNS_1</option>
+				<option value="2">COM_RSSEO_MENU_COLUMNS_2</option>
+				<option value="3">COM_RSSEO_MENU_COLUMNS_3</option>
+				<option value="4">COM_RSSEO_MENU_COLUMNS_4</option>
+			</field>
+		</fieldset>
+	</fields>
+</metadata>

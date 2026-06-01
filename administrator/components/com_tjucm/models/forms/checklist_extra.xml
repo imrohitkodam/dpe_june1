@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<form><fieldset name="Checklist"><field name="com_tjucm_checklist_q1_73" type="radio" label="Question1" description="" class=""><option value="todo">todo</option><option value="inprogress">inprogress</option><option value="done">done</option></field><field name="com_tjucm_checklist_q2" type="radio" label="Question2" description="" class=""><option value="todo">todo</option><option value="inprogress">inprogress</option><option value="done">done</option></field></fieldset></form>

@@ -1,0 +1,25 @@
+/**
+ * @package     JMailAlerts
+ * @subpackage  com_jmailalerts
+ *
+ * @author      Techjoomla <extensions@techjoomla.com>
+ * @copyright   Copyright (C) 2009 - 2022 Techjoomla. All rights reserved.
+ * @license     http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ */
+
+#content .subTitle { font-size: 13px; }
+
+.rounded {
+  margin: 0;
+  padding: 0;
+  line-height: 8px;
+}
+
+a,
+a:link,
+a:visited {
+  font-weight: normal;
+  text-decoration: underline;
+}
+
+body { background-color: #626262; }

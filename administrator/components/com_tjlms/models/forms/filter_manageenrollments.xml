@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fields name="filter">
+		<field name="search" type="text"
+			label="COM_TJLMST_FILTER_SEARCH_DESC_ENROLLMENT"
+			hint="COM_TJLMST_FILTER_SEARCH_DESC_ENROLLMENT_NAME"
+			description="COM_TJLMST_FILTER_SEARCH_DESC_ENROLLMENT"
+		/>
+		<field name="coursefilter" type="courses"
+			label="COM_TJLMST_FILTER_SELECT_COURSE"
+			description="COM_TJLMST_FILTER_SELECT_COURSE_DESC"
+			onchange="this.form.submit();"
+			>
+			<option value="">COM_TJLMS_FILTER_SELECT_COURSE</option>
+		</field>
+		<field name="state" type="list"
+			label="COM_TJLMST_FILTER_PUBLISHED"
+			description="COM_TJLMST_FILTER_PUBLISHED_DESC"
+			onchange="this.form.submit();"
+			>
+			<option value="">JOPTION_SELECT_PUBLISHED</option>
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+		<field name="enroll_starts" class="input-medium"
+			label="COM_TJLMST_FILTER_ASSIGN_STARTS"
+			hint="COM_TJLMS_ENROLMENT_START_DATE_TITLE"
+			type="calendar" description="COM_TJLMS_ENROLMENT_START_DATE_TITLE"
+			format="%Y-%m-%d" onchange="submitFromCalendar(this);"
+		/>
+		<field name="enroll_ends" class="input-medium"
+			hint="COM_TJLMS_ENROLMENT_DUE_DATE_TITLE"
+			label="COM_TJLMS_ENROLMENT_DUE_DATE_TITLE" type="calendar"
+			description="COM_TJLMS_ENROLMENT_DUE_DATE_TITLE" format="%Y-%m-%d"
+			onchange="submitFromCalendar(this);"
+		/>
+		<field name="subuserfilter" type="subuserfilter"
+			class="input" label="COM_TJLMS_FILTER_SUBUSERFILTER"
+			description="COM_TJLMS_FILTER_SUBUSERFILTER_DESC"
+			onchange="this.form.submit();"
+		/>
+		<field
+			name="type"
+			type="list"
+			label="COM_TJLMST_FILTER_SELECT_TYPE"
+			description="COM_TJLMST_FILTER_SELECT_TYPE_DESC"
+			onchange="this.form.submit();"
+			>
+			<option value="">COM_TJLMS_FILTER_SELECT_TYPE</option>
+			<option value="0">COM_TJLMS_FREE</option>
+			<option value="1">COM_TJLMS_PAID</option>
+		</field>
+	</fields>
+	<fields name="list">
+		<field
+			name="fullordering"
+			type="list"
+			onchange="this.form.submit();"
+			default="b.id DESC"
+			>
+			<option value="">JGLOBAL_SORT_BY</option>
+			<option value="a.state ASC">JSTATUS_ASC</option>
+			<option value="a.state DESC">JSTATUS_DESC</option>
+			<option value="uc.name ASC">COM_TJLMS_ENROLMENT_USER_NAME_ASC</option>
+			<option value="uc.name DESC">COM_TJLMS_ENROLMENT_USER_NAME_DESC</option>
+			<option value="co.title ASC">COM_TJLMS_ENROLMENT_COURSE_TITLE_ASC</option>
+			<option value="co.title DESC">COM_TJLMS_ENROLMENT_COURSE_TITLE_DESC</option>
+			<option value="uc.username ASC">COM_TJLMS_ENROLMENT_USER_USERNAME_ASC</option>
+			<option value="uc.username DESC">COM_TJLMS_ENROLMENT_USER_USERNAME_DESC</option>
+			<option value="a.start_date ASC">COM_TJLMS_ENROLMENT_START_DATE_ASC</option>
+			<option value="a.start_date DESC">COM_TJLMS_ENROLMENT_START_DATE_DESC</option>
+			<option value="a.due_date ASC">COM_TJLMS_ENROLMENT_DUE_DATE_ASC</option>
+			<option value="a.due_date DESC">COM_TJLMS_ENROLMENT_DUE_DATE_DESC</option>
+			<option value="b.id ASC">JGRID_HEADING_ID_ASC</option>
+			<option value="b.id DESC">JGRID_HEADING_ID_DESC</option>
+		</field>
+		<field name="limit" type="limitbox"
+			class="input-mini" default="25"
+			label="COM_TJLMST_LIST_LIMIT" description="COM_TJLMST_LIST_LIMIT_DESC"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</form>

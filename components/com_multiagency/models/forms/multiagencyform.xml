@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="id" type="hidden"/>
+		<field name="ordering" />
+		<field name="state" default="1" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+			<option value="2">JARCHIVED</option>
+			<option value="-2">JTRASHED</option>
+		</field>
+		<field name="checked_out" type="hidden" filter="unset" />
+		<field name="checked_out_time" default="0000-00-00 00:00:00" type="hidden" filter="unset" />
+		<field name="title" type="text" required="true" label="COM_MULTIAGENCY_FORM_LBL_MULTIAGENCY_TITLE,COM_MULTIAGENCY_ORGANISATION" description="COM_MULTIAGENCY_FORM_DESC_MULTIAGENCY_TITLE,COM_MULTIAGENCY_ORGANISATION" hint="COM_MULTIAGENCY_FORM_LBL_MULTIAGENCY_TITLE,COM_MULTIAGENCY_ORGANISATION" />
+		<field name="phone_no" class="validate-numeric" type="text" label="COM_MULTIAGENCY_FORM_LBL_MULTIAGENCY_PHONE_NO" description="COM_MULTIAGENCY_FORM_DESC_MULTIAGENCY_PHONE_NO" hint="COM_MULTIAGENCY_FORM_LBL_MULTIAGENCY_PHONE_NO" />
+		<field name="country_id" type="list"  multiple="false" label="COM_MULTIAGENCY_FORM_LBL_MULTIAGENCY_COUNTRY_ID" description="COM_MULTIAGENCY_FORM_DESC_MULTIAGENCY_COUNTRY_ID" hint="COM_MULTIAGENCY_FORM_LBL_MULTIAGENCY_COUNTRY_ID" />
+		<!--DPE Hack-->
+		<field name="tags" type="tag" label="JTAG" description="JTAG_DESC" mode="ajax" class="inputbox" multiple="multiple"></field><field name="lead_consultant_id"
+			type="leadconsultants"
+			label="COM_MULTIAGENCY_FORM_LBL_LEAD_CONSULTANT"
+			description="COM_MULTIAGENCY_FORM_DESC_LEAD_CONSULTANT"
+			client="com_multiagency"
+			action="core.dpe.staff"
+			required='true'
+		/>
+		
+	</fieldset>
+</form>

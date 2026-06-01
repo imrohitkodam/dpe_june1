@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<form><fieldset name="train"><field name="com_tjucm_train-review_test" type="textarea" label="test" description="" class=""/><field name="com_tjucm_train-review_clusterclusterid" type="cluster" label="Organisation Name" description="" class="" addfieldpath="/administrator/components/com_tjfields/models/fields"/></fieldset></form>

@@ -1,0 +1,9 @@
+{
+    "name": "anibalsanchez/no-monolog",
+    "description": "Simple monolog nulled replacement.",
+      "autoload": {
+    "psr-4": {
+      "Monolog\\": "src/"
+    }
+  }
+}

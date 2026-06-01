@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fields name="filter">
+		<field name="search" type="text"
+			label="COM_DPE_MY_TICKETS_FILTER_SEARCH"
+			hint="COM_DPE_MY_TICKETS_FILTER_SEARCH_DESC,COM_DPE_ORGANISATION"
+			description="COM_DPE_MY_TICKETS_FILTER_SEARCH_DESC,COM_DPE_ORGANISATION"
+		/>
+
+		<field name="ticketPriority"
+			type="priorities"
+			label="COM_DPE_MY_TICKETS_FILTER_PRIORITY_DEFAULT"
+			description="COM_DPE_MY_TICKETS_FILTER_PRIORITY_DEFAULT"
+			addfieldpath="/administrator/components/com_rsticketspro/models/fields"
+			onchange="this.form.submit();"
+			please="true"
+			>
+		</field>
+		<field name="ticketStatus"
+			type="rsticketstatus"
+			label="COM_DPE_MY_TICKETS_FILTER_STATUS_DEFAULT"
+			description="COM_DPE_MY_TICKETS_FILTER_STATUS_DEFAULT"
+			onchange="this.form.submit();"
+			multiple='true'
+			class="multiplestatus"
+			>
+		</field>
+		<field name="agencies" type="cluster"
+			label="COM_DPE_MY_TICKETS_FILTER_SELECT_AGENCY"
+			description="COM_DPE_MY_TICKETS_FILTER_SELECT_AGENCY"
+			addfieldpath="/administrator/components/com_tjfields/models/fields"
+			onchange="this.form.submit();"
+			>
+		</field>
+		<field name="assigned_to"
+			type="staff"
+			addfieldpath="/administrator/components/com_dpe/models/fields"
+			onchange="this.form.submit();"
+			>
+		</field>
+		<!-- DPE Hack  to get the tag filter with select tag options-->
+		<field
+			name="tags"
+			type="sql"
+			query="SELECT DISTINCT tags.title ,tags.id
+					FROM `#__tags` as tags INNER JOIN  `#__contentitem_tag_map` as tagMap  ON tags.id=tagMap.tag_id where type_alias='com_multiagency.multiagency' ORDER BY tags.title ASC;"
+			key_field="id"
+			value_field="title"
+			translate="false"
+			label="COM_DPE_FORM_LBL_TAG"
+			description="COM_DPE_FORM_LBL_TAG_DESC"
+			onchange="this.form.submit();"
+			filter="INT"
+			multiple="true"
+			class="multipletags"
+		/>
+	</fields>
+
+	<fields name="list">
+		<field
+			name="fullordering"
+			type="list"
+			label=">COM_DPE_LIST_FULL_ORDERING"
+			description=">COM_DPE_LIST_FULL_ORDERING_DESC"
+			onchange="this.form.submit();"
+			default="a.id DESC"
+			class="dpe-ticket-full-ordering"
+			>
+			<option value="">COM_DPE_MY_TICKETS_SORT_BY</option>
+			<option value="a.id ASC">COM_DPE_MY_TICKETS_ID_ASC</option>
+			<option value="a.id DESC">COM_DPE_MY_TICKETS_ID_DESC</option>
+			<option value="cluster.name ASC">COM_DPE_MY_TICKETS_ORG_NAME_ASC</option>
+			<option value="cluster.name DESC">COM_DPE_MY_TICKETS_ORG_NAME_DESC</option>
+			<option value="a.subject ASC">COM_DPE_MY_TICKETS_SUBJECT_ASC</option>
+			<option value="a.subject DESC">COM_DPE_MY_TICKETS_SUBJECT_DESC</option>
+			<option value="c.name ASC">COM_DPE_MY_TICKETS_CUSTOMER_NAME_ASC</option>
+			<option value="c.name DESC">COM_DPE_MY_TICKETS_CUSTOMER_NAME_DESC</option>
+			<option value="s.name ASC">COM_DPE_MY_TICKETS_STAFF_ASC</option>
+			<option value="s.name DESC">COM_DPE_MY_TICKETS_STAFF_DESC</option>
+			<option value="pr.name ASC">COM_DPE_MY_TICKETS_PRIORITY_ASC</option>
+			<option value="pr.name DESC">COM_DPE_MY_TICKETS_PRIORITY_DESC</option>
+			<option value="st.name ASC">COM_DPE_MY_TICKETS_STATUS_ASC</option>
+			<option value="st.name DESC">COM_DPE_MY_TICKETS_STATUS_DESC</option>
+			<option value="a.date ASC">COM_DPE_MY_TICKETS_DATE_ASC</option>
+			<option value="a.date DESC">COM_DPE_MY_TICKETS_DATE_DESC</option>
+			<option value="a.last_reply ASC">COM_DPE_MY_TICKETS_LAST_REPLY_ASC</option>
+			<option value="a.last_reply DESC">COM_DPE_MY_TICKETS_LAST_REPLY_DESC</option>
+		</field>
+		<field
+			name="limit"
+			type="limitbox"
+			label="COM_CONTENT_LIST_LIMIT"
+			description="COM_CONTENT_LIST_LIMIT_DESC"
+			class="inputbox input-mini"
+			default=""
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</form>

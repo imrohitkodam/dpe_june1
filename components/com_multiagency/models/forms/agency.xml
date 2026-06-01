@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form addfieldpath="components/com_multiagency/models/fields">
+		<field name="client_id" type="agency"
+			label=""
+			 class="agencylist"/>
+</form>

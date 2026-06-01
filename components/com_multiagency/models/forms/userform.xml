@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="id" type="text" filter=" " default="0"
+			label="COM_MULTIAGENCY_FORM_LBL_USER_ID"
+			readonly="true" class="readonly"
+			description="JGLOBAL_FIELD_ID_DESC" />
+
+		<field name="user_id" type="text" size="40"
+			label="COM_MULTIAGENCY_FORM_LBL_USER_USER_ID"
+			description="COM_MULTIAGENCY_FORM_DESC_USER_USER_ID"
+			menu_published="0"
+			filter="raw"
+			directory_stripext="true"
+			directory_hidenode="true"
+			directory_hidedefault="true"
+			alias_generator="2191784"
+			heading="h4"
+			close="true"
+			option_on="Yes"
+			option_off="Yes">
+			<group label="">
+				<option value=""></option>
+			</group>
+		</field>
+
+		<field name="name" type="text" size="40" class="inputbox validate-blank-space"
+			label="COM_MULTIAGENCY_FORM_LBL_USER_NAME"
+			description="COM_MULTIAGENCY_FORM_DESC_NAME"
+			hint="COM_MULTIAGENCY_FORM_DESC_NAME"
+			filter="text"
+			required="true" />
+
+		<field name="username" type="text" size="40" class="inputbox validate-blank-space"
+			label="COM_MULTIAGENCY_FORM_LBL_USER_USERNAME"
+			description="COM_MULTIAGENCY_FORM_DESC_USER_USERNAME"
+			hint="COM_MULTIAGENCY_FORM_DESC_USER_USERNAME"
+			filter="safehtml" />
+
+		<field name="client" type="text" size="40" class="inputbox"
+			label="COM_MULTIAGENCY_FORM_LBL_USER_CLIENT"
+			description="COM_MULTIAGENCY_FORM_DESC_USER_CLIENT"
+			filter="safehtml" />
+
+		<field name="email" type="text" size="40" class="inputbox validate-email"
+			label="COM_MULTIAGENCY_FORM_LBL_USER_EMAIL"
+			description="COM_MULTIAGENCY_FORM_DESC_USER_EMAIL"
+			hint="COM_MULTIAGENCY_FORM_DESC_USER_EMAIL"
+			required="true"
+			filter="safehtml" />
+		<field name="reset_password" type="checkbox" label="COM_MULTIAGENCY_FORM_LBL_RESET_PASSWORD" description="COM_MULTIAGENCY_FORM_DESC_RESET_PASSWORD"/>
+		<field name="random_password" type="checkbox" label="COM_MULTIAGENCY_FORM_LBL_RANDOM_PASSWORD" description="COM_MULTIAGENCY_FORM_DESC_RANDOM_PASSWORD"  value="1" showon="reset_password:1"/>
+
+		<field
+			name="password"
+			type="password"
+			label="COM_MULTIAGENCY_FORM_LBL_PASSWORD"
+			description="COM_MULTIAGENCY_FORM_DESC_PASSWORD"
+			autocomplete="off"
+			class="validate-password"
+			filter="raw"
+			validate="password"
+			size="30"
+			showon="reset_password:1[AND]random_password:1"
+		/>
+
+		<field
+			name="confirmPassword"
+			type="password"
+			label="COM_MULTIAGENCY_FORM_LBL_PASSWORD2"
+			description="COM_MULTIAGENCY_FORM_DESC_PASSWORD2"
+			autocomplete="off"
+			class="validate-password"
+			filter="raw"
+			size="30"
+			showon="reset_password:1[AND]random_password:1"
+		/>
+
+		<!-- DPE HACK start -->
+		<field name="user_created" type="checkbox" label="COM_MULTIAGENCY_FORM_LBL_USER_CREATED" description="COM_MULTIAGENCY_FORM_DESC_USER_CREATED"/>
+
+		<field 
+			name="use_tags" 
+			type="radio" 
+			label="COM_MULTIAGENCY_SELECT_TAGS" 
+			class=""
+			default="1"
+        	layout="joomla.form.field.radio.switcher"
+		>
+			<option value="1">No</option>
+			<option value="0">Yes</option>
+		</field>
+
+		<field name="tags"
+			addfieldpath="components/com_tjucm/models/fields"
+			type="DpeTags"
+			label="COM_DPE_FORM_ANNUALREPORT_LBL_TAG"
+			description="COM_DPE_FORM_ANNUALREPORT_LBL_TAG"
+			class="inputbox"
+			multiple="true"
+			required="true"
+		/> 
+		
+		<field name="jobtitle" class="rolelist" type="list" label="COM_MULTIAGENCY_FORM_DESC_TITLE_LIST" required="" onchange="">
+			<option value="0">COM_MULTIAGENCY_SELECT_TITLE_OPTION</option>
+		</field>	
+
+		<field name="rolelist" class="rolelist" type="roles" label="COM_MULTIAGENCY_FORM_DESC_ROLE_LIST" required="true" >
+			<option value="0">COM_MULTIAGENCY_SELECT_ROLE_OPTION</option>
+		</field>
+
+		<field name="relatedrole" addfieldpath="plugins/system/dpe/fields" class="relatedrole" type="relatedrole" label="COM_MULTIAGENCY_FORM_RELATED_ROLE" multiple="true" showon="rolelist:3,8">
+		</field>
+
+		<field name="dpelead" type="radio" default="0" label="COM_MULTIAGENCY_FORM_DPELEAD" description="COM_MULTIAGENCY_FORM_DPELEAD" class='btn-group radio-red' showon="rolelist:4">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<!-- DPE HACK end -->
+
+		<field name="agency_role_map"
+			description= "COM_MULTIAGENCY_FORM_DESC_MULTIAGENCY_ASSIGN_AGENCY_ROLE,COM_MULTIAGENCY_ORGANISATION"
+			type= "subform"
+			label= "COM_MULTIAGENCY_FORM_LBL_MULTIAGENCY_ASSIGN_AGENCY_ROLE,COM_MULTIAGENCY_ORGANISATION"
+			required= "true"
+			min="1"
+			formsource= "components/com_multiagency/models/forms/agencyRole.xml"
+			multiple= "true"
+			buttons= "add,remove"
+			layout="joomla.form.field.subform.repeatable"
+			groupByFieldset="false"  />
+			
+		<field name="created_by" type="createdby" default=""
+			label="COM_MULTIAGENCY_FORM_LBL_USER_CREATED_BY"
+			description="COM_MULTIAGENCY_FORM_DESC_USER_CREATED_BY"  />
+
+		<field name="state" type="list" label="JSTATUS"
+			description="JFIELD_PUBLISHED_DESC"
+			class="inputbox"
+			size="1"
+			default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+			<option value="2">JARCHIVED</option>
+			<option value="-2">JTRASHED</option>
+		</field>
+
+		<field name="checked_out" type="hidden" filter="unset" />
+		<field name="checked_out_time" type="hidden" filter="unset" />
+
+	</fieldset>
+</form>

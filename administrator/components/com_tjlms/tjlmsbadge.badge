@@ -1,0 +1,12 @@
+[
+	{
+		"title" 		: "Trainer",
+		"alias"			: "trainer",
+		"description"	: "Badge is for the trainer on this site.",
+		"howto" 		: "complete a course yo become a trainner",
+		"command"		: "course.complete",
+		"extension"		: "com_tjlms",
+		"avatar"		: "media/com_easysocial/badges/socializer.png",
+		"frequency"		: 1
+	}
+]

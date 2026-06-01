@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="RST_DASHBOARD_DEFAULT_LAYOUT">
+		<message>
+			<![CDATA[RST_DASHBOARD_DESC]]>
+		</message>
+	</layout>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="show_search" type="list" default="1" label="RST_DASHBOARD_SHOW_SEARCH" description="RST_DASHBOARD_SHOW_SEARCH_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="db_thumb_type"
+					   type="radio"
+					   default="icons"
+					   class="btn-group"
+					   label="RST_DASHBOARD_THUMBS_TYPE"
+					   description="RST_DASHBOARD_THUMBS_TYPE_DESC">
+					<option value="icons">RST_DASHBOARD_ICONS</option>
+					<option value="images">RST_DASHBOARD_IMAGES</option>
+				</field>
+				<field name="db_submit_ticket_thumb" type="media" types="images" preview="false" showon="db_thumb_type:images" label="RST_DASHBOARD_SUBMIT_TICKET_IMAGE" description="RST_DASHBOARD_SUBMIT_TICKET_IMAGE_DESC" />
+				<field filter="raw" name="submit_ticket_desc" rows="7" cols="45" type="textarea" translate_default="true" default="RST_SUBMIT_TICKET_DEFAULTTEXT" label="RST_SUBMIT_TICKET_SMALLTEXT" description="RST_SUBMIT_TICKET_SMALLTEXT_DESC" />
+				<field name="db_view_tickets_thumb" type="media" types="images" preview="false" showon="db_thumb_type:images" label="RST_DASHBOARD_VIEW_TICKETS_IMAGE" description="RST_DASHBOARD_VIEW_TICKETS_IMAGE_DESC" />
+				<field filter="raw" name="view_tickets_desc" rows="7" cols="45" type="textarea" translate_default="true" default="RST_VIEW_TICKETS_DEFAULTTEXT" label="RST_VIEW_TICKETS_SMALLTEXT" description="RST_VIEW_TICKETS_SMALLTEXT_DESC" />
+				<field name="db_search_tickets_thumb" type="media" types="images" preview="false" showon="db_thumb_type:images" label="RST_DASHBOARD_SEARCH_TICKETS_IMAGE" description="RST_DASHBOARD_SEARCH_TICKETS_IMAGE_DESC" />
+				<field filter="raw" name="search_tickets_desc" rows="7" cols="45" type="textarea" translate_default="true" default="RST_SEARCH_TICKETS_DEFAULTTEXT" label="RST_SEARCH_TICKETS_SMALLTEXT" description="RST_SEARCH_TICKETS_SMALLTEXT_DESC" />
+				<field name="kb_itemid" type="text" default="" label="RST_DASHBOARD_KB_ITEMID" description="RST_DASHBOARD_KB_ITEMID_DESC" />
+				<field name="show_kb" type="list" default="1" label="RST_SHOW_KB_DASHBOARD" description="RST_SHOW_KB_DASHBOARD_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="kb_subcategories_list" type="list" default="-1" label="RST_SHOW_KB_SUBCATEGORIES_LIST" description="RST_SHOW_KB_SUBCATEGORIES_LIST_DESC">
+					<option value="-1">JNONE</option>
+					<option value="1">J1</option>
+					<option value="2">J2</option>
+					<option value="3">J3</option>
+					<option value="4">J4</option>
+					<option value="5">J5</option>
+					<option value="6">J6</option>
+					<option value="7">J7</option>
+					<option value="8">J8</option>
+					<option value="9">J9</option>
+					<option value="10">J10</option>
+					<option value="0">JALL</option>
+				</field>
+				<field name="split_kb_to_tabs" type="list" default="0" label="RST_DASHBOARD_SPLIT_KB_TO_TABS" description="RST_DASHBOARD_SPLIT_KB_TO_TABS_DESC" showon="show_kb:1">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="top_category_id" type="kbcategories" label="RST_DASHBOARD_KB_TOP_CATEGORY" description="RST_DASHBOARD_KB_TOP_CATEGORY_DESC" show_noparent="true" showon="show_kb:1[AND]split_kb_to_tabs:1" />
+				<field name="show_tickets" type="list" default="1" label="RST_SHOW_TICKETS_DASHBOARD" description="RST_SHOW_TICKETS_DASHBOARD_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="tickets_limit" type="text" default="3" label="RST_DASHBOARD_TICKETS_LIMIT" description="RST_DASHBOARD_TICKETS_LIMIT_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</metadata>

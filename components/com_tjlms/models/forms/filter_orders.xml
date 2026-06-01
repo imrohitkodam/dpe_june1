@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter">
+		<field
+			name="search"
+			type="text"
+			label="JSEARCH_FILTER_ORDERID"
+			hint="JSEARCH_FILTER_ORDERID"
+			description="JSEARCH_FILTER_ORDERID"
+		/>
+		<field
+			name="selectgateway"
+			type="list"
+			class="input-medium"
+			label="COM_TJLMST_FILTER_SELECT_STATUS"
+			description="COM_TJLMST_FILTER_SELECT_STATUS_DESC"
+			onchange="this.form.submit();"
+			>
+			<option value="0">COM_TJLMS_PSTATUS_SELECT</option>
+			<option value="P">COM_TJLMS_PSTATUS_PENDING</option>
+			<option value="C">COM_TJLMS_PSTATUS_COMPLETED</option>
+			<option value="D">COM_TJLMS_PSTATUS_DECLINED</option>
+			<option value="E">COM_TJLMS_PSTATUS_FAILED</option>
+			<option value="UR">COM_TJLMS_PSTATUS_UNDERREVIW</option>
+			<option value="RF">COM_TJLMS_PSTATUS_REFUNDED</option>
+			<option value="CRV">COM_TJLMS_PSTATUS_CANCEL_REVERSED</option>
+			<option value="RV">COM_TJLMS_PSTATUS_REVERSED</option>
+		</field>
+
+		<!-- <field
+			name="coursefilter"
+			type="courses"
+			class="input-medium"
+			label="COM_TJLMST_FILTER_SELECT_COURSE"
+			description="COM_TJLMST_FILTER_SELECT_COURSE_DESC"
+			onchange="this.form.submit();"
+			>
+		</field> -->
+	</fields>
+
+	<fields name="list">
+		<field
+			name="limit"
+			type="limitbox"
+			class="input-mini pull-left hidden-xs"
+			default="25"
+			label="COM_TJLMST_LIST_LIMIT"
+			description="COM_TJLMST_LIST_LIMIT_DESC"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</form>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_TMT_TITLE_LIST_VIEW_QUESTIONS" option="View">
+        <message>
+                        <![CDATA[COM_TMT_TITLE_LIST_VIEW_QUESTIONS_DESC]]>
+        </message>
+	</layout>
+</metadata>

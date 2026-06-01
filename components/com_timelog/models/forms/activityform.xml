@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addrulepath="/administrator/components/com_timelog/models/activity">
+	<fieldset>
+		<field name="id" type="hidden" readonly="true" class="readonly" default="" description="JGLOBAL_FIELD_ID_DESC" filter="INT"/>
+
+	<!--
+		<field name="activity_type_id" type="activitytype" required="true" label="COM_TIMELOG_FORM_LBL_ACTIVITY_ACTIVITY_TYPE_ID" description="COM_TIMELOG_FORM_DESC_ACTIVITY_ACTIVITY_TYPE_ID" hint="COM_TIMELOG_FORM_LBL_ACTIVITY_ACTIVITY_TYPE_ID" filter="INT">
+		</field>
+	-->
+
+		<field
+			name="license_id"
+			type="licenses"
+			label="COM_TIMELOG_FORM_LICENSE_LABEL,COM_TIMELOG_ORGANISATION"
+			description="COM_TIMELOG_FORM__LICENSE_DESC"
+			multiple="false"
+			class="timelogwidgetlicense"
+			required="true"
+			addfieldpath="/components/com_multiagency/models/fields"
+		/>
+
+
+		<field name="client" label="COM_TIMELOG_FORM_LBL_ACTIVITY_CLIENT" description="COM_TIMELOG_FORM_DESC_ACTIVITY_CLIENT" hint="COM_TIMELOG_FORM_LBL_ACTIVITY_CLIENT" default="com_multiagency"/>
+
+		<field
+			name="client_id"
+			type="activity"
+			required="true"
+			default=""
+			label="COM_TIMELOG_FORM_LBL_ACTIVITY_CLIENT_ID"
+			description="COM_TIMELOG_FORM_DESC_ACTIVITY_CLIENT_ID"
+			hint="COM_TIMELOG_FORM_LBL_ACTIVITY_CLIENT_ID"
+			filter="INT"
+			class="timelogwidgetactivity"
+		/>
+
+		<field name="activity_note" type="textarea" class="inputbox" filter="text" label="COM_TIMELOG_FORM_LBL_ACTIVITY_ACTIVITY_NOTE" description="COM_TIMELOG_FORM_DESC_ACTIVITY_ACTIVITY_NOTE" hint="COM_TIMELOG_FORM_LBL_ACTIVITY_ACTIVITY_NOTE"/>
+		<field name="created_date" default="NOW" type="calendar" class="inputbox" format="%d-%m-%Y" translateformat="false" required="true" label="COM_TIMELOG_FORM_LBL_ACTIVITY_LOG_DATE" description="COM_TIMELOG_FORM_DESC_ACTIVITY_LOG_DATE" hint="COM_TIMELOG_FORM_LBL_ACTIVITY_LOG_DATE" filter="user_utc"/>
+		<field name="spent_time"  label="COM_TIMELOG_FORM_LBL_ACTIVITY_LOG_TIME" description="COM_TIMELOG_FORM_DESC_ACTIVITY_LOG_TIME_DESC" hint="COM_TIMELOG_FORM_LBL_ACTIVITY_LOG_TIME_HINT" />
+		<field name="hours" type="number" default="0" label="COM_TIMELOG_FORM_HOUR_LBL" hint="COM_TIMELOG_FORM_HOUR_HINT" class="dpe-timelog-hours validate-positivenumber" required ="true" description="" max="23" step="1" size="2"/>
+		<field name="min" type="number" default="0" label="COM_TIMELOG_FORM_MINUTES_LBL" hint="COM_TIMELOG_FORM_MINUTES_HINT" class="dpe-timelog-min validate-positivenumber" required ="true"  description="" max="59" step="1" size="2"/>
+		<field name="timelog" type="hidden"/>
+		<field name="state" default="1" type="hidden" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1"></field>
+		<field name= "attachment"
+			description= "COM_TIMELOG_FORM_DESC_ACTIVITY_ATTACHMENT"
+			type= "subform"
+			label= ""
+			min= "1"
+			max= "1"
+			formsource= "components/com_timelog/models/forms/fileupload.xml"
+			multiple= "true"
+			buttons= "add,remove"
+			layout="joomla.form.field.subform.repeatable"
+			groupByFieldset="false" />
+	</fieldset>
+</form>

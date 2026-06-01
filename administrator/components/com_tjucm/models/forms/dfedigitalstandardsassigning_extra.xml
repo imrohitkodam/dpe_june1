@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<form><fieldset name="Overview" addrulepath="administrator/components/com_tjfields/models/rules" addfieldpath="administrator/components/com_tjfields/models/fields"><field name="com_tjucm_dfedigitalstandardsassigning_Date" type="calendar" label="Date" description="" class="" format="%Y-%m-%d" showtime="false" translateformat="true" weeknumbers="false" size="22" filter="user_utc"/></fieldset></form>

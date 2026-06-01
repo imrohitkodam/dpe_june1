@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+		<field name="id" type="text" default="0" label="COM_TJLMS_FORM_LBL_COUPON_ID"
+			readonly="true" class="readonly"
+			description="JGLOBAL_FIELD_ID_DESC" />
+
+		<field	name="state" type="radio" 	label="JSTATUS"
+			description="JFIELD_PUBLISHED_DESC"
+			class="inputbox btn-group" size="1" default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+
+			<field name="online_provider" default=""
+			type="getcoursedetail"
+			label="COM_JTICKETING_ONLINE_EVENTS_PROVIDER"
+			description="COM_JTICKETING_ONLINE_EVENTS_PROVIDER_DESC">
+		</field>
+
+		<field name="course_id" default="0" type="courses"
+			label="COM_TJLMS_COUPON_COURSE"
+			description="COM_TJLMS_COUPON_COURSE_DESC"
+			multiple="true"
+			class="coupon-courses"/>
+
+		<field name="subscription_id" type="subscription"
+			label="COM_TJLMS_COUPON_COURSE_SUBSCRIPTION"
+			description="COM_TJLMS_COUPON_COURSE_SUBSCRIPTION_DESC"
+			multiple="true"
+			default="0">
+		</field>
+
+		<field name="created_by" type="createdby" default=""
+			label="COM_TJLMS_FORM_LBL_COUPON_CREATED_BY"
+			description="COM_TJLMS_FORM_DESC_COUPON_CREATED_BY"  />
+
+		<field name="name" type="text"
+			label="COM_TJLMS_FORM_LBL_COUPON_NAME"
+			description="COM_TJLMS_FORM_DESC_COUPON_NAME"
+			required="true"
+			/>
+
+		<field name="code" type="code"
+			label="COM_TJLMS_FORM_LBL_COUPON_CODE"
+			description="COM_TJLMS_FORM_DESC_COUPON_CODE"
+			required="true"   onchange="validatecodes(this);"/>
+
+		<field name="value" type="text"
+			label="COM_TJLMS_FORM_LBL_COUPON_VALUE"
+			description="COM_TJLMS_FORM_DESC_COUPON_VALUE"
+			required="true"
+			class="validate-natural-number"
+			filter="int" />
+
+		<field name="val_type" type="radio" class="inputbox btn-group"
+			label="COM_TJLMS_FORM_LBL_COUPON_VAL_TYPE"
+			description="COM_TJLMS_FORM_DESC_COUPON_VAL_TYPE"
+			default="0"
+			menu_published="0"
+			filter="int">
+			<option value="0">COM_TJLMS_FORM_FLAT_RATE</option>
+			<option value="1">COM_TJLMS_FORM_PERCENTAGE</option>
+		</field>
+
+		<field name="filter_val_type" type="list" onchange="this.form.submit();">
+			<option value="">COM_TJLMS_COUPONS_VAL_TYPE_FILTER</option>
+			<option value="0">Flat rate</option>
+			<option value="1">Percentage</option>
+		</field>
+
+		<field name="max_use" type="text"
+			label="COM_TJLMS_FORM_LBL_COUPON_MAX_USE"
+			description="COM_TJLMS_FORM_DESC_COUPON_MAX_USE"
+			class="validate-natural-number"
+			 />
+
+		<field name="max_per_user" type="text"
+			label="COM_TJLMS_FORM_LBL_COUPON_MAX_PER_USER"
+			description="COM_TJLMS_FORM_DESC_COUPON_MAX_PER_USER"
+			class="validate-natural-number"
+			 />
+
+		<field name="description" type="textarea"
+			label="COM_TJLMS_FORM_LBL_COUPON_DESCRIPTION"
+			description="COM_TJLMS_FORM_DESC_COUPON_DESCRIPTION"
+			cols="50"
+			rows="4" />
+
+		<field name="couponParams" type="textarea"
+			label="COM_TJLMS_FORM_LBL_COUPON_PARAMS"
+			description="COM_TJLMS_FORM_DESC_COUPON_PARAMS"
+			cols="50"
+			rows="4" />
+
+		<field name="from_date" type="calendar" class="validate-datetime"
+			label="COM_TJLMS_FORM_LBL_COUPON_FROM_DATE"
+			description="COM_TJLMS_FORM_DESC_COUPON_FROM_DATE"
+			menu_published="0"
+			format="%Y-%m-%d %H:%M:%S"
+			filter="user_utc"
+			/>
+
+		<field name="exp_date" type="calendar" class="validate-datetime"
+			label="COM_TJLMS_FORM_LBL_COUPON_EXP_DATE"
+			description="COM_TJLMS_FORM_DESC_COUPON_EXP_DATE"
+			format="%Y-%m-%d %H:%M:%S"
+			filter="user_utc"
+			/>
+
+		<field name="checked_out" type="hidden" filter="unset" />
+		<field name="privacy" type="hidden" default="0" />
+		<field name="checked_out_time" type="hidden" filter="unset" />
+
+	</fieldset>
+
+	<fieldset
+		name="accesscontrol">
+			<field name="asset_id" type="hidden" filter="unset" />
+			<field name="rules"
+				type="rules"
+				label="JFIELD_RULES_LABEL"
+				translate_label="false"
+				filter="rules"
+				validate="rules"
+				class="inputbox"
+				component="com_tjlms"
+				section="coupon" />
+	</fieldset>
+</form>

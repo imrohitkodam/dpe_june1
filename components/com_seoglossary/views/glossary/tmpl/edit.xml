@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Defination Submission">
+		<message>Submit a Defination(if allowed)</message>
+	</layout>
+        <fields name="request">
+            <fieldset name="request"
+			addfieldpath="/administrator/components/com_seoglossary/models/fields"
+		 >
+			<field
+				name="catid"
+				type="glossary" 
+				label="COM_SEOGLOSSARY_LBL_SELECTGLOSSARY"
+				description="COM_SEOGLOSSARY_DESC_SELECTGLOSSARY"
+			>
+			
+			</field>
+		</fieldset>
+	</fields>
+</metadata>
+

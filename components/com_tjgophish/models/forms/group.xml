@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="general" addrulepath="administrator/components/com_tjgophish/models/rules" addfieldpath="/administrator/components/com_tjgophish/models/fields">
+		<field name="gophish_group_title" type="text" required="true" class="input-large" label="COM_TJGOPHISH_GROUP_TITLE_LBL" description="COM_TJGOPHISH_GROUP_TITLE_DESC" />
+		<field name="gophish_group_id" type="hidden" />
+		<field name="cluster_id" type="cluster" validate="cluster" required="true" label="COM_TJGOPHISH_GROUP_CLUSTER_LBL" description="COM_TJGOPHISH_GROUP_CLUSTER_DESC" />
+		<field name="all_cluster_users" type="radio" required="true" default="0" label="COM_TJGOPHISH_GROUP_SELECT_ALL_LBL" description="COM_TJGOPHISH_GROUP_SELECT_ALL_DESC" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="targets" type="userslist" clusterAware="true" clusterField="cluster_id" showon="all_cluster_users:0" multiple="true" label="COM_TJGOPHISH_GROUP_TARGETS_LBL" description="COM_TJGOPHISH_GROUP_TARGETS_DESC" />
+		<field name="id" type="hidden" class="readonly" size="11" readonly="true" />
+		<field name="checked_out" type="hidden" filter="unset" />
+		<field name="checked_out_time" type="hidden" filter="unset" />
+		<field name="created_by" type="hidden" filter="unset" />
+		<field name="created_date" type="hidden" filter="unset" />
+		<field name="modified_by" type="hidden" filter="unset" />
+		<field name="modified_date" type="hidden" filter="unset" />
+	</fieldset>
+</form>

@@ -1,0 +1,5 @@
+data_type,id,course_id,email,status,score,timestart,timeend,attempt
+lesson,12,22,martin.gomez@mailinator.com,Completed,,2021-10-20 ,2021-11-20,1
+lesson,13,22,martin.gomez@mailinator.com,Passed,22,2021-10-20 ,2021-12-20,1
+lesson,12,22,vinod.kumar@mailinator.com,Completed,,2021-10-20 ,2021-11-20,1
+lesson,13,22,vinod.kumar@mailinator.com ,Failed,5,2021-10-20 ,2021-12-20,1

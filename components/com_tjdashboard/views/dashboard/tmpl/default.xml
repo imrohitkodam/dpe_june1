@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="dashboard" option="View">
+        <message>
+                        <![CDATA[COM_TJDASHBOARD_TITLE_ITEM_VIEW_DASHBOARD_DESC]]>
+        </message>
+    </layout>
+
+    <!-- Add fields to the request variables for the layout. -->
+    <fields name="request">
+        <fieldset name="request"
+            addfieldpath="/administrator/components/com_tjdashboard/models/fields"
+        >
+            <field
+                name="id"
+                type="modaldashboard"
+                label="COM_TJDASHBOARD_FIELDSET_ITEM_ID_SELECT_LABEL"
+                description="COM_TJDASHBOARD_FIELDSET_ITEM_ID_SELECT_LABEL"
+                required="true"
+                select="true"
+                new="true"
+                edit="true"
+                clear="true"
+            />
+        </fieldset>
+    </fields>
+    <fields name="params">
+
+    </fields>
+</metadata>

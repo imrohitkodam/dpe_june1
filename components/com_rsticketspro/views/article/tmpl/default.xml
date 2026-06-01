@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="RST_KB_ARTICLE_DEFAULT_LAYOUT">
+		<message>
+			<![CDATA[RST_KB_ARTICLE_MENU_DESC]]>
+		</message>
+	</layout>
+	<config>
+		<fields name="request">
+			<fieldset name="request" addfieldpath="/administrator/components/com_rsticketspro/models/fields">
+				<field name="cid" type="kbarticle" default="" label="RST_KB_SELECT_ARTICLE" description="RST_KB_SELECT_ARTICLE" required="true" />
+			</fieldset>
+		</fields>
+	</config>
+</metadata>

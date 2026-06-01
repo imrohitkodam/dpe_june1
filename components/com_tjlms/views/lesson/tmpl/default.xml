@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_TJLMS_SINGLE_LESSSON_VIEW_DEFAULT_TITLE" option="default">
+		<help
+			key = "Single lesson"
+		/>
+		<message>
+			<![CDATA[COM_TJLMS_SINGLE_LESSSON_VIEW_DEFAULT_DESC]]>
+		</message>
+	</layout>
+
+	<!-- Add fields to the request variables for the layout. -->
+	<fields name="request">
+		<fieldset name="request" addfieldpath="/administrator/components/com_tjlms/models/fields">
+			<field name="lesson_id" type="lessonlist"
+				label="COM_TJLMS_FIELD_SELECT_LESSON_LABEL"
+				required="true"
+				edit="true"
+				clear="false"
+				listFilter="lib"
+				description="COM_TJLMS_FIELD_SELECT_LESSON_DESC"
+			/>
+		</fieldset>
+	</fields>
+</metadata>

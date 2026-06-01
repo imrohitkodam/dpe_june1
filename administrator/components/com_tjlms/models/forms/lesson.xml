@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="basicDetails" addfieldpath="/administrator/components/com_tjlms/models/fields">
+		<field name="id" type="text" default="0" label="COM_TJLMS_FORM_LBL_LESSON_ID"
+			readonly="true" class="readonly"
+			description="JGLOBAL_FIELD_ID_DESC" />
+
+		<field name="created_by" type="createdby" default=""
+			label="COM_TJLMS_FORM_LBL_LESSON_CREATED_BY"
+			description="COM_TJLMS_FORM_DESC_LESSON_CREATED_BY"  />
+
+		<field name="title" type="text" class="required input-block-level validate-blankspace"
+			label="COM_TJLMS_FORM_LBL_LESSON_NAME"
+			description="COM_TJLMS_FORM_DESC_LESSON_NAME"
+			required="required"
+			filter="TRIM"
+			menu_published="0"
+			maxlength="250" />
+
+		<field name="alias" type="text"
+			label="COM_TJLMS_LESSONS_ALIAS"
+			description="COM_TJLMS_LESSONS_ALIAS_DESC"
+			filter="alias" />
+
+		<field
+			name="catid"
+			type="category"
+			label="COM_TJLMS_FORM_LBL_COURSE_CAT_ID"
+			description="COM_TJLMS_FORM_DESC_COURSE_CAT_ID"
+			extension="com_tjlms.lessons"
+			required="true"
+			default=""
+			published="1"
+		/>
+
+		<field name="course_id" type="text" size="40" class="inputbox"
+			label="COM_TJLMS_FORM_LBL_LESSON_COURSE_ID"
+			description="COM_TJLMS_FORM_DESC_LESSON_COURSE_ID"
+			filter="safehtml" />
+
+		<field name="mod_id" type="text" size="40" class="inputbox"
+			label="COM_TJLMS_FORM_LBL_LESSON_MOD_ID"
+			description="COM_TJLMS_FORM_DESC_LESSON_MOD_ID"
+			filter="safehtml" />
+
+		<field name="description" type="textarea" class="input-block-level"
+			label="COM_TJLMS_FORM_LBL_LESSON_DESPCRIPTION"
+			description="COM_TJLMS_FORM_DESC_LESSON_DESPCRIPTION"
+			cols="100"
+			rows="8"
+			filter="safehtml"
+			/>
+
+		<field name="start_date" type="calendar" class="inputbox lesson_start_date validate validate-datetime"
+			label="COM_TJLMS_FORM_LBL_STARTDATE" filter= "user_utc"
+			description="COM_TJLMS_FORM_LBL_STARTDATE_DESC" format="%Y-%m-%d %H:%M:%S" size="22"
+			/>
+
+		<field name="end_date" type="calendar" class="inputbox lesson_end_date validate-datetime"
+			label="COM_TJLMS_FORM_LBL_ENDDATE" filter="user_utc"
+			description="COM_TJLMS_FORM_LBL_ENDDATE_DESC" format="%Y-%m-%d %H:%M:%S" size="22"
+			/>
+
+		<field name="image" type="file"
+			label="COM_TJLMS_FORM_LBL_LESSON_IMG"
+			filter="raw"
+			description="COM_TJLMS_FORM_DESC_LESSON_IMG"
+			accept="image/jpeg,image/png,image/jpg"
+			class="validate-imagetype"
+		/>
+
+		<field name="free_lesson" type="radio" class="btn-group"
+			label="COM_TJLMS_FORM_LBL_LESSON_FREE_LESSON"
+			description="COM_TJLMS_FORM_DESC_LESSON_FREE_LESSON"
+			default="0"	>
+				<option value="1">COM_TJLMS_YES</option>
+				<option value="0">COM_TJLMS_NO</option>
+		</field>
+		<field name="grademethod" type="list" class=""
+			label="COM_TJLMS_FORM_LBL_LESSON_GRADE_METHOD"
+			description="COM_TJLMS_FORM_DESC_LESSON_GRADE_METHOD"
+			default="0"	>
+			<option value="0">SELECT</option>
+			<option value="1">COM_TJLMS_NO_COMPLETED_OBJECT</option>
+			<option value="2">COM_TJLMS_NO_HIGHEST_SCORE_OBJECT</option>
+			<option value="3">COM_TJLMS_NO_AVERAGE_SUM_OBJECT</option>
+			<option value="4">COM_TJLMS_NO_SUM_OF_ALL_OBJECT</option>
+		</field>
+
+		<field name="total_marks" type="text"
+			label="COM_TJLMS_FORM_LBL_LESSON_TOTAL_MARKS"
+			description="COM_TJLMS_FORM_DESC_LESSON_TOTAL_MARKS"
+			filter="int"
+			class="validate-whole-number"
+			default="0"/>
+
+		<field name="passing_marks" type="text"
+			label="COM_TJLMS_FORM_LBL_LESSON_PASSING_MARKS"
+			description="COM_TJLMS_FORM_DESC_LESSON_PASSING_MARKS"
+			filter="int"
+			class="validate-whole-number"
+			default="0"/>
+
+		<field name="no_of_attempts" type="attempt" default="0"
+			label="COM_TJLMS_FORM_LBL_LESSON_NO_OF_ATTEMPTS"
+			description="COM_TJLMS_FORM_DESC_LESSON_NO_OF_ATTEMPTS"
+			filter="int" />
+
+		<field name="attempts_grade" type="list" class="required"
+			label="COM_TJLMS_FORM_LBL_LESSON_ATTEMPTS_GRADE"
+			description="COM_TJLMS_FORM_DESC_LESSON_ATTEMPTS_GRADE"
+			default="3"
+			required="required" >
+				<option value="0">COM_TJLMS_HIGHEST_ATTEMPT</option>
+				<option value="1">COM_TJLMS_AVERAGE_ATTEMPT</option>
+				<option value="2">COM_TJLMS_FIRST_ATTEMPT</option>
+				<option value="3">COM_TJLMS_LAST_COMPLETED_ATTEMPT</option>
+		</field>
+
+		<field name="consider_marks" type="radio" class="btn-group"
+			label="COM_TJLMS_FORM_LBL_LESSON_CONSIDER_MARKS"
+			description="COM_TJLMS_FORM_DESC_LESSON_CONSIDER_MARKS"
+			default="1"	>
+				<option value="1">COM_TJLMS_YES</option>
+				<option value="0">COM_TJLMS_NO</option>
+		</field>
+
+		<field name="eligibility_criteria" type="eligibilitycriteria"
+			label="COM_TJLMS_FORM_LBL_LESSON_ELIGIBILITY_CRITERIA"
+			description="COM_TJLMS_FORM_DESC_LESSON_ELIGIBILITY_CRITERIA"
+			multiple="true"/>
+
+		<field name="ideal_time" type="text"
+			label="COM_TJLMS_FORM_LBL_LESSON_IDEAL_TIME"
+			description="COM_TJLMS_FORM_DESC_LESSON_IDEAL_TIME"
+			class="inputbox validate-whole-number"
+			default="0"/>
+
+		<field	name="state" type="radio" label="JSTATUS" description="JFIELD_PUBLISHED_DESC"
+			class="btn-group"
+			size="1"
+			default="1">
+				<option value="1">JPUBLISHED</option>
+				<option value="0">JUNPUBLISHED</option>
+		</field>
+
+		<field name="resume" type="radio" class="btn-group"
+			label="COM_TMT_FORM_LBL_ENABLE_RESUME"
+			description="COM_TMT_FORM_DESC_ENABLE_RESUME"
+			default="0"	>
+				<option value="1">COM_TMT_FORM_JYES</option>
+				<option value="0">COM_TMT_FORM_JNO</option>
+		</field>
+
+		<field name="in_lib" type="radio" class="btn-group"
+			label="COM_TJLMS_FORM_LBL_IN_LIB"
+			description="COM_TJLMS_FORM_DESC_IN_LIB"
+			default="0">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+		</field>
+
+		<field name="format" type="hidden"/>
+		<field name="checked_out" type="hidden" filter="unset" />
+		<field name="checked_out_time" type="hidden" filter="unset" />
+
+	</fieldset>
+
+	<fields name="params" label="COM_TJLMS_FIELD_BASIC_LABEL">
+		<field name="lesson_layout" type="componentlayout"
+		label="COM_TJLMS_FORM_LBL_LESSON_LAYOUT"
+		description="COM_TJLMS_FORM_DESC_LESSON_LAYOUT"
+		class="form-select"
+		useglobal="true"
+		extension="com_tjlms" view="lesson"
+		/>
+	</fields>
+</form>

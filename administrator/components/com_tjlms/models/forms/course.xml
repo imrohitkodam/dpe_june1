@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset addfieldprefix="Joomla\Component\Content\Administrator\Field">
+		<field name="id" type="text" default="0" label="COM_TJLMS_FORM_LBL_COURSE_ID"
+		readonly="true" class="readonly"
+		description="JGLOBAL_FIELD_ID_DESC" />
+
+		<field name="created_by" type="user" default=""
+		label="COM_TJLMS_FORM_LBL_COURSE_CREATED_BY"
+		description="COM_TJLMS_FORM_DESC_COURSE_CREATED_BY"  />
+
+		<field
+			name="catid"
+			type="categoryedit"
+			label="COM_TJLMS_FORM_LBL_COURSE_CAT_ID"
+			description="COM_TJLMS_FORM_DESC_COURSE_CAT_ID"
+			addfieldprefix="Joomla\Component\Categories\Administrator\Field"
+			extension="com_tjlms"
+			required="true"
+			default=""
+		/>
+
+		<field
+			name="access"
+			type="accesslevel"
+			label="JFIELD_ACCESS_LABEL"
+			filter="UINT"
+			validate="options"
+		/>
+
+		<field name="filter_cat_id" type="list" onchange="this.form.submit();">
+			<option value="">COM_TJLMS_COURSES_CAT_ID_FILTER</option>
+			<option value="0">Cat 1</option>
+		</field>
+
+		<field name="title" type="text"
+		label="COM_TJLMS_FORM_LBL_COURSE_TITLE"
+		description="COM_TJLMS_FORM_DESC_COURSE_TITLE"
+		required="required"
+		class="required"
+		menu_published="0"
+		/>
+
+		<field name="alias" type="text"
+		label="COM_TJLMS_FORM_LBL_COURSE_ALIAS"
+		description="COM_TJLMS_FORM_DESC_COURSE_ALIAS"
+		filter="alias" />
+
+		<field name="image" type="file"
+		label="COM_TJLMS_FORM_LBL_COURSE_IMG"
+		description="COM_TJLMS_FORM_DESC_COURSE_IMG"
+		filter="raw" accept="image/jpeg,image/png,image/jpg"
+		/>
+
+		<field name="short_desc" type="textarea" class="required"
+		label="COM_TJLMS_FORM_LBL_COURSE_SHORT_DESC"
+		description="COM_TJLMS_FORM_DESC_COURSE_SHORT_DESC"
+		required="required"
+		cols="100"
+		rows="8" />
+
+		<field name="metadesc" type="textarea" class=""
+		label="COM_TJLMS_FORM_LBL_META_DESC"
+		description="COM_TJLMS_FORM_DESC_META_DESC"
+		cols="30"
+		rows="3" />
+
+		<field name="metakey" type="textarea" class=""
+		label="COM_TJLMS_FORM_LBL_METAKEY_DESC"
+		description="COM_TJLMS_FORM_DESC_METAKEY_DESC"
+		cols="30"
+		rows="3" />
+
+		<field name="description" type="editor"
+		filter="JComponentHelper::filterText"
+		buttons="true"
+		label="COM_TJLMS_FORM_LBL_COURSE_DESCRIPTION"
+		description="COM_TJLMS_FORM_DESC_COURSE_DESCRIPTION"
+		cols="100"
+		rows="8" />
+
+		<field name="start_date" type="calendar"
+		default="0000-00-00 00:00:00"
+		label="COM_TJLMS_FORM_LBL_COURSE_START_DATE"
+		description="COM_TJLMS_FORM_DESC_COURSE_START_DATE"
+		format="%Y-%m-%d %H:%M:%S"
+		class="required validate-datetime"
+		required="required"
+		filter= "user_utc" />
+
+		<field name="certificate_term" type="list"
+		label="COM_TJLMS_FORM_LBL_COURSE_CERTIFICATE_TERM"
+		description="COM_TJLMS_FORM_DESC_COURSE_CERTIFICATE_TERM"
+		multiple="false">
+			<option value="0">COM_TJLMS_FORM_OPT_COURSE_CERTIFICATE_TERM_NOCERTI</option>
+			<option value="1">COM_TJLMS_FORM_OPT_COURSE_CERTIFICATE_TERM_COMPALL</option>
+			<option value="2">COM_TJLMS_FORM_OPT_COURSE_CERTIFICATE_TERM_PASSALL</option>
+		</field>
+
+		<field name="type" type="radio" class="btn-group lms_course_type"
+		label="COM_TJLMS_FORM_LBL_COURSE_TYPE"
+		description="COM_TJLMS_FORM_DESC_COURSE_TYPE"
+		default="0">
+			<option value="0">COM_TJLMS_FORM_OPT_COURSE_TYPE_FREE</option>
+			<option value="1">COM_TJLMS_FORM_OPT_COURSE_TYPE_PAID</option>
+		</field>
+
+		<field name="filter_type" type="list" onchange="this.form.submit();">
+			<option value="">COM_TJLMS_COURSES_TYPE_FILTER</option>
+			<option value="0">COM_TJLMS_COURSES_TYPE_FILTER_FREE</option>
+			<option value="1">COM_TJLMS_COURSES_TYPE_FILTER_PAID</option>
+		</field>
+
+		<field
+			name="subsplans"
+			description= "COM_TJLMS_FORM_DESC_COURSE_SUBS_PLANS"
+			type="subform"
+			label="COM_TJLMS_FORM_LBL_COURSE_SUBS_PLANS"
+			min="1"
+			formsource="/administrator/components/com_tjlms/models/forms/subplans.xml"
+			multiple="true"
+			buttons="add,remove"
+			layout="joomla.form.field.subform.repeatable"
+			groupByFieldset="false"
+			showon="type:1"/>
+
+		<field name="esbadges" type="lmsesbadges"
+		label="COM_TJLMS_FORM_LBL_COURSE_ESBADGES"
+		description="COM_TJLMS_FORM_DESC_COURSE_ESBADGES" />
+
+		<field	name="state" type="radio" label="JSTATUS"
+		description="JFIELD_PUBLISHED_DESC"	class="btn-group"
+		size="1" default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+
+		<field name="featured" type="radio"
+			class="btn-group"
+			label="JFEATURED"
+			description="COM_TJLMS_FIELD_FEATURED_DESC"
+			default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field name="checked_out" type="hidden" filter="unset" />
+		<field name="checked_out_time" type="hidden" filter="unset" />
+		<field name="group_id" type="hidden" />
+
+		<field name="tags"
+			type="tag"
+			label="JTAG"
+			description="JTAG_DESC"
+			class="inputbox span4"
+			multiple="true">
+		</field>
+
+		<field name="certificate_id" type="certificatetemplates"
+			label="COM_TJLMS_FORM_LBL_COURSE_CERTIFICATE_LABEL"
+			client="com_tjlms.course"
+			description="COM_TJLMS_FORM_LBL_COURSE_CERTIFICATE_DESC"
+			class="inputbox chzn-done"
+			filter="int"
+			addfieldpath="/administrator/components/com_tjcertificate/models/fields"
+			showon="certificate_term:1[OR]certificate_term:2"
+		/>
+
+		<field name="expiry" type="text" default="0"
+		label="COM_TJLMS_FORM_LBL_COURSE_CERTIFICATE_EXPIRY_LABEL"
+		description="COM_TJLMS_FORM_LBL_COURSE_CERTIFICATE_EXPIRY_DESC"
+		filter="int"
+		showon="certificate_id!:"
+		class="validate-whole-number"
+		/>
+
+		<field name="asset_id" type="text" filter="unset" />
+		<field name="rules" type="rules"
+		label="JFIELD_RULES_LABEL" translate_label="false"
+		filter="rules" 	validate="rules"
+		class="inputbox" component="com_tjlms"
+		section="course" />
+	</fieldset>
+
+	<fields name="params" label="COM_TJLMS_FIELD_BASIC_LABEL">
+		<field name="course_layout" type="componentlayout"
+		label="COM_TJLMS_FORM_LBL_COURSE_LAYOUT"
+		description="COM_TJLMS_FORM_DESC_COURSE_LAYOUT"
+		useglobal="true"
+		class="form-select"
+		extension="com_tjlms" view="course"
+		/>
+	</fields>
+
+</form>

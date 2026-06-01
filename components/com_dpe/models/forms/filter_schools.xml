@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter">
+		<field
+			name="search"
+			type="text"
+			label=""
+			hint="COM_DPE_SCHOOL_SEARCH_FILTER,COM_DPE_ORGANISATION"
+			description="COM_DPE_SCHOOL_SEARCH_FILTER,COM_DPE_ORGANISATION"
+		/>
+		<field
+			addfieldpath="administrator/components/com_tjfields/models/fields"
+			name="cluster_id"
+			class="cluster-info"
+			type="cluster"
+			onchange="this.form.submit();"
+			filter="STRING"
+		/>
+		<field
+			name="sla_id"
+			type="sql"
+			query="SELECT 0 as id, 'COM_DPE_FORM_LBL_SLA' AS title UNION SELECT id, title FROM #__tj_slas"
+			key_field="id"
+			value_field="title"
+			translate="false"
+			label="COM_DPE_FORM_LBL_SLA"
+			description="COM_DPE_FORM_LBL_SLA_DESC"
+			onchange="this.form.submit();"
+			filter="INT"
+		/>
+		<field
+			name="lead_consultant_id"
+			label="COM_DPE_SLA_ACTIVITY_FORM_LBL_LEAD_CONSULTANT"
+			description="COM_DPE_SLA_ACTIVITY_FORM_DESC_LEAD_CONSULTANT"
+			type="leadconsultants"
+			client="com_multiagency"
+			addfieldpath="/components/com_multiagency/models/fields"
+			action="core.dpe.staff"
+			onchange="this.form.submit();"
+			filter="INT"
+		/>
+
+		<field
+			name="agencyFilter"
+			type="agencyfilter"
+			addfieldpath="/components/com_dpe/models/fields"
+			onchange="this.form.submit();"
+			filter="INT"
+		/>
+
+		<field
+			name="licenceStatus"
+			type="genericstatus"
+			addfieldpath="/components/com_dpe/models/fields"
+			onchange="this.form.submit();"
+		/>
+
+		<field
+			name="symbolfilter"
+			type="list"
+		>
+			<option value="">COM_DPE_SELECT_OPTION</option>
+			<option value="lt">COM_DPE_USERS_LESS_THAN_OPTION</option>
+			<option value=">">COM_DPE_USERS_GREATER_THAN_OPTION</option>
+			<option value="=">COM_DPE_USERS_EQUAL_TO_OPTION</option>
+		</field>
+
+		<field
+			name="users_count"
+			type="number"
+			hint="COM_DPE_USER_COUNT_HINT"
+			min="1"
+			onchange="this.form.submit();"
+			showon="symbolfilter:lt,>,="
+		/>
+		<!--DPE Hack union is done to add select tag in first option of the list-->
+		<field
+			name="tags"
+			type="sql"
+			query="SELECT DISTINCT tags.title ,tags.id
+					FROM `#__tags` as tags INNER JOIN  `#__contentitem_tag_map` as tagMap  ON tags.id=tagMap.tag_id where type_alias='com_multiagency.multiagency' ORDER BY tags.title ASC;"
+			key_field="id"
+			value_field="title"
+			translate="false"
+			label="COM_DPE_FORM_LBL_TAG"
+			description="COM_DPE_FORM_LBL_TAG_DESC"
+			onchange="this.form.submit();"
+			filter="INT"
+			multiple="multiple"
+		/>
+	</fields>
+	<fields name="list">
+		<field
+			name="limit"
+			type="limitbox"
+			label="COM_CONTENT_LIST_LIMIT"
+			description="COM_CONTENT_LIST_LIMIT_DESC"
+			class="inputbox input-mini pull-right"
+			default=""
+			onchange="this.form.submit();"
+		/>
+	</fields>
+
+</form>

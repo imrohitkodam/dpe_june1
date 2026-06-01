@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_LOGMAN_VIEW_ACTIVITIES">
+        <message>
+            <![CDATA[COM_LOGMAN_VIEW_ACTIVITIES_DESCRIPTION]]>
+        </message>
+    </layout>
+    <fields name="params" addfieldpath="/administrator/components/com_logman/forms/fields">
+        <fieldset name="filters" label="FILTERS">
+            <field name="show_own_activities" type="radio" class="btn-group" default="0" label="SHOW_OWN_ACTIVITIES"
+                   description="SHOW_OWN_ACTIVITIES_DESC">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="usergroup" type="logmanusergroups" label="SHOW_FROM_USERGROUPS"
+                   description="SHOW_FROM_USERGROUPS_DESC" deselect="true" multiple="true"
+                    placeholder="ALL_USERGROUPS">
+            </field>
+            <field name="packages_actions" type="logmanpackagesactions" class="btn-group" label="SHOW_FROM_PACKAGE"
+                    description="SHOW_FROM_PACKAGE_DESC" deselect="true">
+            </field>
+            <field name="limit" type="logmanlimit" default="20" label="LIMIT" description="LIMIT_DESCRIPTION"></field>
+            <field name="impression_filter" type="list" default="all" label="IMPRESSION_FILTERING" description="IMPRESSION_FILTERING_DESCRIPTION">
+                <option value="all">IMPRESSION_FILTERING_ALL</option>
+                <option value="ignore_impressions">IMPRESSION_FILTERING_NONE_IMPRESSIONS</option>
+                <option value="impressions">IMPRESSION_FILTERING_IMPRESSIONS_ONLY</option>
+            </field>
+        </fieldset>
+        <fieldset name="layout" label="LAYOUT">
+            <field name="show_date" type="radio" default="1" class="btn-group"
+                   label="SHOW_DATE" description="SHOW_DATE_DESC">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="show_time" type="radio" default="1" class="btn-group"
+                   label="SHOW_TIME" description="SHOW_TIME_DESC">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="show_icons" type="radio" default="1" class="btn-group"
+                   label="SHOW_ICONS" description="SHOW_ICONS_DESC">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+        </fieldset>
+    </fields>
+</metadata>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<view title="Order">
+		<message>
+			<![CDATA[
+				Activities
+			]]>
+		</message>
+		<options var="layout">
+			<default name="My Activities" msg="View my activities" />
+		</options>
+	</view>
+	<!--
+	<state>
+		<name>Campaigns Layout</name>
+		<description>Layouts related to a campaigns</description>
+	</state>
+	-->
+</metadata>

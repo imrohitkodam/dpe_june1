@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field
+			name="id"
+			type="text"
+			default="0"
+			label="COM_TJLMS_FORM_LBL_MANAGEENROLLMENT_ID"
+			readonly="true"
+			class="readonly"
+			description="JGLOBAL_FIELD_ID_DESC"
+		/>
+		<field
+			name="course_id"
+			type="courses"
+			label="COM_TJLMS_FORM_LBL_MANAGEENROLLMENT_COURSE_ID"
+			description="COM_TJLMS_FORM_DESC_MANAGEENROLLMENT_COURSE_ID"
+			required="true"
+			readonly="true"
+			default=""
+		/>
+		<field
+			name="user_id"
+			type="user"
+			label="COM_TJLMS_FORM_LBL_MANAGEENROLLMENT_USER_ID"
+			description="COM_TJLMS_FORM_DESC_MANAGEENROLLMENT_USER_ID"
+			required="true"
+			readonly="true"
+			default=""
+		/>
+		<field
+			name="state"
+			type="radio"
+			label="JSTATUS"
+			description="JFIELD_PUBLISHED_DESC"	class="btn-group"
+			size="1"
+			default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+		<field
+			name="end_time"
+			type="calendar"
+			label="COM_TJLMS_FORM_LBL_ENROLLMENT_END_TIME"
+			description="COM_TJLMS_FORM_DESC_ENROLLMENT_END_TIME"
+			format="%Y-%m-%d %H:%M:%S"
+			class="validate-datetime"
+			filter="user_utc"
+		/>
+		<fields name="params" label="COM_TJLMS_FIELD_BASIC_LABEL">
+		</fields>
+	</fieldset>
+</form>

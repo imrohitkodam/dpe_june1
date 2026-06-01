@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="package" version="3.0" method="upgrade">
+	<name>TJUCM Package</name>
+	<author>Techjoomla</author>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<description>TJUCM - Universal Content Manager Package</description>
+	<copyright>Copyright (c) 2009-2019 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<creationDate>2nd Dec 2019</creationDate>
+	<packagename>ucm</packagename>
+	<version>1.2.3</version>
+	<packager>Techjoomla Team</packager>
+	<scriptfile>script.pkg_tjucm.php</scriptfile>
+	<files>
+		<file type="component" id="com_tjucm">components/com_tjucm.zip</file>
+		<file type="component" id="com_tjfields">components/com_tjfields.zip</file>
+		<file type="plugin" id="tjucm">plugins/actionlog/tjucm.zip</file>
+	</files>
+</extension>

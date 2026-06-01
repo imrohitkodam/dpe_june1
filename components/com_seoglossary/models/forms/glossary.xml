@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+              <field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL"
+                    readonly="true" class="readonly"
+                    description="JGLOBAL_FIELD_ID_DESC" /> 
+
+       <field name="tterm" type="text" size="40" class="inputbox"
+                 label="COM_SEOGLOSSARY_FORM_LBL_GLOSSARY_TTERM"
+                
+                 required="true" 
+                filter="safehtml" />
+
+       <field name="tsynonyms" type="text" size="40" class="inputbox"
+               label="COM_SEOGLOSSARY_FORM_LBL_GLOSSARY_TSYNONYMS"
+
+               required="false"
+               filter="safehtml" />
+
+        <field name="tfirst" type="text" size="40" class="inputbox"
+                 label="COM_SEOGLOSSARY_FORM_LBL_GLOSSARY_TFIRST"
+                
+                
+                filter="safehtml" /> 
+
+       <field name="tdefinition" type="editor" buttons="false" required="true" 
+                class="inputbox"
+                filter="safehtml"
+                 label="COM_SEOGLOSSARY_FORM_LBL_GLOSSARY_TDEFINITION" /> 
+				 
+       <field name="tmore" type="editor" buttons="false" required="false" 
+                class="inputbox"
+                filter="safehtml"
+                 label="COM_SEOGLOSSARY_FORM_LBL_GLOSSARY_TMORE" /> 
+
+       <field name="tname" type="text" size="40" class="inputbox"
+                 label="COM_SEOGLOSSARY_FORM_LBL_GLOSSARY_TNAME" 
+                
+                
+                filter="safehtml" /> 
+
+       <field name="tmail" type="email" size="40" class="inputbox"
+                 label="COM_SEOGLOSSARY_FORM_LBL_GLOSSARY_TMAIL"
+                filter="safehtml" validate="email"  required="true"  /> 
+
+       <field name="tcomment" type="editor" buttons="true"
+                class="inputbox"
+                filter="safehtml"
+                
+                
+                 label="COM_SEOGLOSSARY_FORM_LBL_GLOSSARY_TCOMMENT"  /> 
+
+       <field name="tedit" type="text" size="40" class="inputbox"
+                 label="COM_SEOGLOSSARY_FORM_LBL_GLOSSARY_TEDIT"
+                
+                
+                filter="safehtml" /> 
+
+       <field name="catid" type="glossary" 
+                 label="COM_SEOGLOSSARY_FORM_LBL_GLOSSARY_CATID"
+                 /> 
+
+         <field
+                name="state"
+                type="list"
+                label="JSTATUS"
+                description="JFIELD_PUBLISHED_DESC"
+                class="inputbox"
+                size="1"
+                default="1">
+                <option value="1">JPUBLISHED</option>
+                <option value="0">JUNPUBLISHED</option>
+            </field> 
+
+                        <field name="checked_out" type="hidden" filter="unset" />
+                <field name="checked_out_time" type="hidden" filter="unset" />
+
+	</fieldset>
+
+</form>

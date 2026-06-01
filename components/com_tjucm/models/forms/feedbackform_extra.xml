@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<form><fieldset name="feedback"><field name="com_tjucm_feedback_acccessright" type="calendar" label="calender" description="" required="true" class="" format="%Y-%m-%d"/></fieldset></form>

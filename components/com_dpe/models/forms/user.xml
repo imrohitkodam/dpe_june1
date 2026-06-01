@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form addfieldpath="components/com_dpe/models/fields">
+		<field name="staff_users" type="users"
+			label="Staff member responsible"
+			 class="staffUsers" required="true"/>
+</form>

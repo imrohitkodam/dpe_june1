@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+		<field name="search" type="text" hint="JSEARCH_FILTER"
+               label="JSEARCH_FILTER"
+               class="js-stools-search-string form-control" />
+	</fields>
+</form>

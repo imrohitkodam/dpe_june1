@@ -1,0 +1,22 @@
+<?php
+/* This file has been prefixed by <PHP-Prefixer> for "XT Social Libraries" */
+
+namespace XTS_BUILD\Illuminate\Support\Facades;
+
+use XTS_BUILD\Illuminate\Contracts\Broadcasting\Factory as BroadcastingFactoryContract;
+
+/**
+ * @see \Illuminate\Contracts\Broadcasting\Factory
+ */
+class Broadcast extends Facade
+{
+    /**
+     * Get the registered name of the component.
+     *
+     * @return string
+     */
+    protected static function getFacadeAccessor()
+    {
+        return BroadcastingFactoryContract::class;
+    }
+}

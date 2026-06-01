@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<form><fieldset name="OverView" addrulepath="administrator/components/com_tjfields/models/rules" addfieldpath="administrator/components/com_tjfields/models/fields"><field name="com_tjucm_socialmarketingmedia_Tittle" type="text" label="Tittle" description="" class=""/><field name="com_tjucm_socialmarketingmedia_Images" type="image" label="Images" description="" class="" size="1" height="200" width="200" accept=".jpg,.jpeg,.png"/></fieldset></form>

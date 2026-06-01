@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fields name="filter">
+		<!-- 	
+		<field name="expiry_date"
+       type="calendar"
+       label="COM_DPE_MY_TICKETS_FILTER_SELECT_DATE"
+       description="COM_DPE_MY_TICKETS_FILTER_SELECT_DATE"
+       format="%Y-%m-%d"
+       onchange="this.form.submit();"
+       showtime="false"
+       todaybutton="true"
+       /> -->
+
+		<field name="cluster_id" class="cluster-info" type="cluster" required="true" default="" label="COM_DPE_ASSIGNED_SCHOOLS_ROP,COM_DPE_ORGANISATION" description="COM_DPE_ASSIGNED_SCHOOLS_ROP_DESC,COM_DPE_ORGANISATION" addfieldpath="administrator/components/com_tjfields/models/fields"  onchange="this.form.submit();"/>
+		<!-- DPE Hack  to get the tag filter with select tag options-->
+		
+	</fields>
+
+	<fields name="list">
+		<field
+			name="limit"
+			type="limitbox"
+			label="COM_CONTENT_LIST_LIMIT"
+			description="COM_CONTENT_LIST_LIMIT_DESC"
+			class="inputbox input-mini"
+			default=""
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</form>

@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<form><fieldset name="hidden" addrulepath="administrator/components/com_tjfields/models/rules" addfieldpath="administrator/components/com_tjfields/models/fields"><field name="com_tjucm_dpeucmsub_contentid" type="hidden" label="contentid" description="" class=""/><field name="com_tjucm_dpeucmsub_SubText" type="text" label="Sub Text" description="" class=""/></fieldset></form>

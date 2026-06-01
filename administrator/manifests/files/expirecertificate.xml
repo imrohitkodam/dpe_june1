@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension version="3.9" type="file" method="upgrade">
+	<name>com_tjlms</name>
+	<creationDate>13th Jul 2023</creationDate>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<version>4.0.5</version>
+	<description></description>
+	<fileset>
+		<files target="cli">
+			<file>expirecertificate.php</file>
+		</files>
+	</fileset>
+</extension>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<extension method="upgrade" type="library" version="1.0">
+  <name>Extly Platform v2 Library</name>
+  <libraryname>xtplatform2</libraryname>
+  <version>2.21.0</version>
+  <creationDate>2022-01-27</creationDate>
+
+	<author>Extly, CB</author>
+	<authorEmail>team@extly.com</authorEmail>
+	<authorUrl>https://www.extly.com</authorUrl>
+	<copyright>Copyright (c)2012-2022 Extly, CB All rights reserved.</copyright>
+	<license>GNU/GPLv3 www.gnu.org/licenses/gpl-3.0.html</license>
+
+  <description>
+    <![CDATA[
+XT-Platform Library for Joomla.
+  ]]>
+  </description>
+  <files>
+    <folder>src</folder>
+    <folder>vendor_prefixed</folder>
+    <folder>vendor</folder>
+    <filename>lib_xtplatform2.xml</filename>
+  </files>
+</extension>

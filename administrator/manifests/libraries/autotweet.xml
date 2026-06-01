@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<extension method="upgrade" type="library" version="1.0">
+  <name>Perfect Publisher</name>
+  <libraryname>autotweet</libraryname>
+  <description>Publish your content easily and engage your audience.</description>
+  <version>9.6.1</version>
+  <creationDate>2022-02-11</creationDate>
+
+	<author>Extly, CB</author>
+	<authorEmail>team@extly.com</authorEmail>
+	<authorUrl>https://www.extly.com</authorUrl>
+	<copyright>Copyright (c)2012-2022 Extly, CB All rights reserved.</copyright>
+	<license>GNU/GPLv3 www.gnu.org/licenses/gpl-3.0.html</license>
+
+  <files>
+    <folder>src</folder>
+    <folder>vendor</folder>
+  </files>
+
+  <!-- Media files -->
+  <media destination="lib_perfect-publisher" folder="vendor/anibalsanchez/extlyframework6/lib_extly/media">
+    <folder>css</folder>
+    <folder>images</folder>
+    <folder>js</folder>
+  </media>
+</extension>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+	<extension type="package" version="3.0" method="upgrade">
+	<name>Shika Package</name>
+	<author>Techjoomla</author>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>Copyright (C) 2014 - 2021 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<creationDate>27th Sep 2021</creationDate>
+	<packagename>shika</packagename>
+	<version>1.5.0</version>
+	<packager>Techjoomla Team</packager>
+	<description></description>
+	<scriptfile>script.pkg_shika.php</scriptfile>
+
+	<files folder="packages">
+		<file type="component" id="com_tjnotifications">com_tjnotifications.zip</file>
+		<file type="component" id="com_tjcertificate">com_tjcertificate.zip</file>
+		<file type="component" id="com_tjlms">com_tjlms.zip</file>
+		<file type="component" id="com_tjfields">com_tjfields.zip</file>
+		<file type="component" id="com_tmt">com_tmt.zip</file>
+		<file type="component" id="com_jlike">com_jlike.zip</file>
+		<file type="component" id="com_hierarchy">com_hierarchy.zip</file>
+		<file type="component" id="com_tjreports">com_tjreports.zip</file>
+		<file type="package" id="pkg_tjdashboard">com_tjdashboard.zip</file>
+		<file type="component" id="com_tjprivacy">com_tjprivacy.zip</file>
+		<file type="file" id="com_tjlms_cli">cli.zip</file>
+	</files>
+
+	<updateservers>
+		<server type="collection" priority="1" name="Shika Package"><![CDATA[https://techjoomla.com/updates/stream/tjlms.xml?format=xml]]></server>
+	</updateservers>
+
+</extension>

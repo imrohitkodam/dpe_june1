@@ -1,0 +1,32 @@
+<?php
+/* This file has been prefixed by <PHP-Prefixer> for "XT Social Libraries" */
+
+namespace XTS_BUILD\Illuminate\Support\Facades;
+
+use XTS_BUILD\Illuminate\Support\Testing\Fakes\MailFake;
+
+/**
+ * @see \Illuminate\Mail\Mailer
+ */
+class Mail extends Facade
+{
+    /**
+     * Replace the bound instance with a fake.
+     *
+     * @return void
+     */
+    public static function fake()
+    {
+        static::swap(new MailFake);
+    }
+
+    /**
+     * Get the registered name of the component.
+     *
+     * @return string
+     */
+    protected static function getFacadeAccessor()
+    {
+        return 'mailer';
+    }
+}

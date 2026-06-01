@@ -1,0 +1,51 @@
+<?php
+/* This file has been prefixed by <PHP-Prefixer> for "XT Social Libraries" */
+
+namespace XTS_BUILD\Happyr\LinkedIn;
+
+use XTS_BUILD\Happyr\LinkedIn\Exception\LinkedInException;
+use XTS_BUILD\Happyr\LinkedIn\Http\LinkedInUrlGeneratorInterface;
+use XTS_BUILD\Happyr\LinkedIn\Storage\DataStorageInterface;
+
+/**
+ * This interface is responsible for the authentication process with LinkedIn.
+ *
+ * @author Tobias Nyholm <tobias.nyholm@gmail.com>
+ */
+interface AuthenticatorInterface
+{
+    /**
+     * Tries to get a new access token from data storage or code. If it fails, it will return null.
+     *
+     * @param LinkedInUrlGeneratorInterface $urlGenerator
+     *
+     * @return AccessToken|null A valid user access token, or null if one could not be fetched.
+     *
+     * @throws LinkedInException
+     */
+    public function fetchNewAccessToken(LinkedInUrlGeneratorInterface $urlGenerator);
+
+    /**
+     * Generate a login url.
+     *
+     * @param LinkedInUrlGeneratorInterface $urlGenerator
+     * @param array                         $options
+     *
+     * @return string
+     */
+    public function getLoginUrl(LinkedInUrlGeneratorInterface $urlGenerator, $options = []);
+
+    /**
+     * Clear the storage.
+     *
+     * @return $this
+     */
+    public function clearStorage();
+
+    /**
+     * @param DataStorageInterface $storage
+     *
+     * @return $this
+     */
+    public function setStorage(DataStorageInterface $storage);
+}

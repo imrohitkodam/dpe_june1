@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_TJGOPHISH_TITLE_CREATE_VIEW_CAMPAIGN" option="View">
+		<message><![CDATA[COM_TJGOPHISH_TITLE_CREATE_VIEW_CAMPAIGN_DESC]]></message>
+	</layout>
+</metadata>

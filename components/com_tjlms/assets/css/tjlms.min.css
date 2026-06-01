@@ -1,0 +1,287 @@
+body.com_tjlms #sbox-window{box-sizing:content-box}
+div.tjlms-wrapper.tjlms_menu_items{display:none;position:absolute;right:0;z-index:1;background:#eaeaea}.fixedHeightPinLayout.title_fixed_width
+{overflow:hidden;position:relative}.tjlms_lesson_status.attempt_report
+{vertical-align:middle}.fixedHeightPinLayout.fader
+{position:absolute;background:linear-gradient(to bottom,rgba(255,255,255,0)70%,rgba(255,255,255,1)95%);text-align:center;float:left;width:100%;height:100%;top:0px;left:0px;margin-top:2px}.fixedHeightPinLayout.tjlms_pin_desc
+{margin-top:10px;min-height:75px;overflow:hidden;position:relative}.tjlms-toggle-box p{margin:0;padding:0}.tjlms-toggle-title{width:100%;margin-bottom:10px;padding:8px;background:#EDE9E3;border:1px solid #45536C;cursor:pointer;-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:2px}.tjlms-toggle-title:hover,.tjlms-toggle-title:active{background:lightgrey;color:#000}.activelesson{color:white;margin-top:0px;margin-left:0px}.activelesson.tutorial-nav-node
+{background-color:#BDBDBD!important}.tjlms-toggle-title a{color:#111}.tjlms-toggle-content{padding-bottom:0px}.tjlms-courses-cat{margin-left:280px!important}.cat-layout{position:absolute;height:100%;background:#ccc;margin-right:-20px;padding-left:20px;padding-top:10px}.tjlms-st1{font-weight:bold;font-size:20px;color:#000}.tjlms-st2{padding-top:4px}.tjlms-toggle-content{margin-top:20px}.layout{position:relative}.tjlms-submenu-indicator{float:right;font-weight:bold}.tjlms-inner{padding:10px;border:1px solid grey}.layout{border:none!important}.tjlms-icon-wd{width:7.591837%!important}.tjlms-pad{padding:10.4px 6px!important}.tjlms-text-right{text-align:right!important}
+@media(min-width:320px)and(max-width:767px){.viewer_controls select{width:80px!important}}.com_tjlms_course_content.tags{margin-bottom:20px}.com_tjlms_content.tags a{color:#fff!important}.com_tjlms_course_content.tags span a.label{padding:2px 4px}.tags span a.label,.tags span a{background:#03a9f4!important}.tjlms-course-header-child.tags li{padding-top:5px}.com_tjlms_course_content #course_description{position:relative}.com_tjlms_course_content #course_description.collapse-icon-containner{position:absolute;top:50%;right:10px}.com_tjlms_course_content.course-info{margin-bottom:10px;padding-left:9px;padding-right:9px;border:1px solid #ccc;background:#ffffff}.com_tjlms_course_content #info-container{margin-top:20px;background:#F1F3F2}.com_tjlms_course_content.tjlms-course-header.tjlms-course-header-child{word-wrap:break-word}.com_tjlms_course_content.tjlms-course-header.course-img{float:left;margin:0 5px 5px 0px}.com_tjlms_course_content.tjlms-course-header.course-right-block{margin-left:5px}.com_tjlms_course_content.tjlms_section_title.collapse-icon{display:inline-block;width:0;height:0;vertical-align:top;border-left:8px solid #4C4B4B;border-top:6px solid transparent;border-bottom:6px solid transparent}.com_tjlms_course_content.tjlms_section_title.open.collapse-icon
+{display:inline-block;width:0;height:0;vertical-align:top;border-top:6px solid #4C4B4B;border-right:6px solid transparent;border-left:6px solid transparent}
+div.com_tjlms_course_content.tjlms_course_toc.tjlms_course_toc_listing{border-collapse:inherit;background:none repeat scroll 0 0 #FFFFFF;table-layout:fixed}
+div.com_tjlms_course_content.tjlms_course_toc.tjlms_course_toc_listing td{word-wrap:break-word}.tjlms_course_toc_listing.tjlms_lesson.tjlms-toc-content
+{background-color:#FFF;padding:10px}.tjlms_course_toc_listing.tjlms_lesson.tjlms-toc-popover{display:block;width:200px;height:auto;background-color:#DDD}.tjlms_course_toc_listing.tjlms_lesson[rel="popover"]{position:relative;margin-left:0px!important}
+div.com_tjlms_course_content.tjlms_course_toc.tjlms_course_toc_listing.tjlms_section_title{background-color:#F0F0F0;padding:2px 10 0!important;cursor:pointer;position:relative}
+div.com_tjlms_course_content.tjlms_course_toc.tjlms_course_toc_listing.tjlms_section_title.tjlms_section_title_container{padding:4px 4px 4px 10px;position:relative}
+div.com_tjlms_content.tjlms_section_title h5{font-weight:400;margin:10px 15px}
+div.com_tjlms_course_content.tjlms_lesson.lesson-progress-container{background:none repeat scroll 0 0 #FFFFFF;display:inline-block;text-align:center}
+div.com_tjlms_course_content.tjlms_lesson.lesson-progress-mask{display:inline-block;overflow:hidden}
+div.com_tjlms_course_content.tjlms_lesson.lesson-progress-container.lesson-complete.icon-ok{color:#51d466!important}
+div.com_tjlms_course_content.tjlms_lesson.lesson-progress-container.lesson-failed.icon-remove{color:#f75353!important}
+div.com_tjlms_course_content.tjlms_lesson.lesson-progress-container.lesson-complete:before
+{background:none repeat scroll 0 0 #5CB85C}
+div.com_tjlms_course_content.tjlms_lesson.lesson-progress-container.lesson-failed:before
+{background:none repeat scroll 0 0 #da4f49}
+div.com_tjlms_course_content.tjlms_lesson.lesson-progress-container.lesson-progress-mask:before{float:left;height:16px;width:16px}
+div.com_tjlms_course_content.tjlms_lesson.tjlms_lesson_status,div.com_tjlms_course_content.tjlms_lesson.tjlms_lesson_score{padding:9px}
+div.com_tjlms_course_content.tjlms_lesson.tjlms_lesson_status,div.com_tjlms_course_content.tjlms_lesson.tjlms_lesson_score{padding:9px}
+div.com_tjlms_course_content.tjlms_lesson.tjlms_lesson-title{position:relative;padding:9px}
+div.com_tjlms_course_content.tjlms_lesson.tjlms_lesson-title a{}
+div.com_tjlms_course_content.tjlms_lesson.tjlms_lesson_attempts{padding:9px;border-right:1px solid #cccccc}
+div.com_tjlms_course_content.tjlms_lesson.lesson_define_action{padding-top:9px;text-align:center;padding-right:2px}
+div.com_tjlms_course_content.tjlms_lesson.tjlms_lesson-title a.lesson_title+.popover{width:300px!important}
+div.com_tjlms_course_content.tjlms_course_plan{margin-bottom:10px}
+div.com_tjlms_course_content.tjlms_course_plan td{border-top:0px;padding:9px}
+div.com_tjlms_course_content.tjlms_course_plan table{background-color:#FFF;margin-bottom:5px}
+div.com_tjlms_course_content.tjlms-course-info.table-condensed td{padding:10px 5px 4px 15px}.fb-like span{vertical-align:top!important}.fb-like iframe{max-width:inherit!important}.recommendThisCourse
+{border:2px solid #ccc;padding:15px}.tjlms-wrapper.inactiveLink{pointer-events:none!important;cursor:default!important}
+@media(min-width:320px)and(max-width:480px)
+{.tjlms_list_item.tjlms_list_info.tjlms_pin_course_price{display:inline}}
+@media(min-width:320px)and(max-width:480px){.tjlms_list_item.tjlms_list_info.tjlms_list_course_rating{display:inline}}
+@media(min-width:320px)and(max-width:480px){.tjlms_list_item.tjlms_list_info.tjlms_list_course_users{display:inline}}
+@media(min-width:768px)and(max-width:1024px)
+{.tjlms_list_item.tjlms_list_info.tjlms_pin_course_price{display:inline}}
+@media(min-width:768px)and(max-width:1024px){.tjlms_list_item.tjlms_list_info.tjlms_list_course_rating{display:inline}}
+@media(min-width:768px)and(max-width:1024px){.tjlms_list_item.tjlms_list_info.tjlms_list_course_users{display:inline}}.com_tjlms_content.lesson_info{margin:5px}.com_tjlms_content.lesson_info.lesson_info_details{border-top:1px solid #eee}.com_tjlms_content.lesson_info.lesson_info_details:first-child{border-top:0px}.com_tjlms_content.lesson_info.lesson_info_details div{padding:5px}.sbox-loading #sbox-content,.tjlms-loading{background-color:#fff!important;background-image:url(../images/ajax.gif)!important;background-repeat:no-repeat;background-position:center}.tjlms_lesson_screen #sbox-btn-close{display:none}
+div.tjlms-lesson-content.container-top{margin-bottom:45px}
+div.tjlms-lesson-content.container-bottom{margin-top:48px}
+div.tjlms-lesson-content.resumeWindowPage
+{margin-bottom:0px;margin-top:0px}.tjlms-lesson-content #resumeWindow
+{position:relative;border-radius:4px}.tjlms-lesson-content #resumeWindow input
+{white-space:normal}.resumebtncolor
+{background-color:#4E4E4E!important;line-height:0px}.resumebtncolor:hover
+{background-color:#EBEBEB!important}.resumewindowclose
+{cursor:pointer}
+div.tjlms-lesson-content.tjlms-lesson-player{padding:0;position:relative;overflow-y:auto}
+div.tjlms-lesson-content.tjlms-lesson-extra{padding:5px}.tjlms-lesson-content #askforattempt{position:absolute;top:35%;left:15%;right:15%;border-color:#aaa;border-radius:0;text-align:center}.tjlms-lesson-content.tjlms_lesson_screen{left:0px!important;right:0px!important;margin-left:auto!important;margin-right:auto!important;position:fixed!important;width:100%!important;height:100%!important;top:0!important;padding:0px!important}.tjlms-lesson-content.lesson-right-panel{border-top:none;border-left:1px solid #BCBCBC;box-shadow:-2px 0px 5px #ccc;-moz-box-shadow:-2px 0px 5px #ccc;-webkit-box-shadow:-2px 0px 5px #ccc;-o-box-shadow:-2px 0px 5px #ccc;height:100%;position:fixed;right:0px;display:block;overflow:auto;z-index:1}.lesson-right-panel hr{margin:10px 0px}.tjlms-lesson-content.lesson-right-panel,.tjlms-lesson-content.lesson-right-panel.tjlmsLessonhelptext{padding:10px 10px 0px 10px}
+#askforattempt.help-block{color:#626262}.tjlms_playlist_mod_title.open.collapse-icon-containner.collapse-icon
+{display:inline-block;width:0;height:0;vertical-align:top;border-top:7px solid #FFF;border-right:6px solid transparent;border-left:6px solid transparent}.lesson_margin{margin-bottom:7px!important}.tjlms_playlist_mod_title.collapse-icon-containner.collapse-icon{display:inline-block;width:0;height:0;vertical-align:top;border-left:8px solid #FFF;border-top:6px solid transparent;border-bottom:6px solid transparent}
+div.lesson-left-panel.tjlms_lesson{position:relative;transition:background 0.1s ease 0s;line-height:20px!important}
+div.lesson-left-panel.tjlms_lesson{background-color:#D8D8D8}.playlist.progress-pie-chart
+{background-color:#D8D8D8}.playlist.pcc-percents-wrapper span
+{color:#848484}.playlist.ppc-progress.ppc-progress-fill
+{background-color:#848484}.playlist div.tjlms_module{margin-top:5px}
+div.lesson-left-panel.progressDiv{background-color:#D8D8D8}.playlist.playlist-module-name
+{background-color:#848484;border-left:3px solid #33868a;cursor:pointer;position:relative;color:#fff}.playlist.collapse-icon-containner
+{position:absolute;top:40%;right:10px}.playlist.collapse-icon
+{display:inline-block;width:0;height:0;vertical-align:top;border-top:6px solid #999;border-right:6px solid transparent;border-left:6px solid transparent}.playlist.playlist-module-name
+{padding:7px}.playlist.tjlms_lesson
+{padding:7px}.playlist.playlist-lesson
+{cursor:pointer}.subway-icon{display:block;position:absolute;width:40px;height:100%;top:0}.subway-icon.pipe{background-color:#cdcdcd;height:100%;padding-top:2px;position:absolute;top:-1px;right:auto;bottom:auto;left:18px;width:4px;z-index:10}.subway-icon.icons{background-color:#cdcdcd}.tutorial-nav-node{background-image:url(/media/com_tjlms/images/subway-sprites-video-science.svg)}
+tutorial-nav-node clearfix progress-container tjlms-filter-toggle.active{background:green;color:#000}.subway-icon.status{height:25px;width:25px;background-size:25px 75px;overflow:hidden;position:absolute;top:50%;right:auto;bottom:auto;left:8px;margin-top:-12px;z-index:20}.subway-icon+.progress-title{-moz-box-sizing:border-box;box-sizing:border-box;min-height:40px;padding:10px;padding-left:50px;vertical-align:middle}.tutorial-nav-node:hover
+{background:#BDBDBD;cursor:pointer}.subway-icon+.progress-title{-moz-box-sizing:border-box;box-sizing:border-box;min-height:40px;padding:13px;padding-left:8px;vertical-align:middle}.progress-container.progress-title{display:table-cell;line-height:15px}.playlist.tjlms_lesson
+{background:#F5F5F5}.tjlms-lesson-content.playlist-container
+{background-color:darkgrey;position:relative;padding-top:28px;padding-bottom:10px;overflow:auto}.tjlms-lesson-content #playlist-container.playlist-hidden{width:2%}.tjlms-lesson-content #playlist-container.playlist-hidden.playlist{display:none}.tjlms-lesson-content #lesson-main-container.expanded{margin-left:0px}.tjlms-lesson-content.lesson-left-panel+#lesson-main-container.expanded{width:98%}.tjlms-lesson-content #playlist-container.double-left{display:block!important}.tjlms-lesson-content #playlist-container.playlist-hidden.double-right{display:block!important}.tjlms-lesson-content #playlist-container.playlist-hidden.double-left{display:none!important}.tjlms-lesson-content #playlist-container.playlist-hidden.double-left{display:none}.tjlms-wrapper #lesson-main-container{padding-right:0px!important}.tjlms-wrapper #playlist-container{padding-right:0px!important}.tjlms-lesson-content.playlist-toggle-sidebar-button
+{font-size:16px;text-decoration:none;cursor:pointer}.tjlms-lesson-content.playlist-toggle-button-wrapper.playlist-toggle-visible
+{right:7px}.tjlms-lesson-content.playlist-toggle-button-wrapper
+{position:absolute;display:block;top:7px;padding:0}.tjlms-lesson-content.lesson-toggle-main
+{position:relative}.tjlms-lesson-content.lesson-left-panel-header
+{position:fixed}.tjlms-lesson-content.lesson-left-panel-header
+{width:2%}.tjlms-lesson-content.right-panel-hidden
+{display:none!important}.lesson-right-panel
+{position:absolute!important}.lesson-left-panel-header.fa,.playlist-toggle-sidebar-button.fa
+{color:white}.lesson-left-panel-header
+{background-color:grey;text-align:center;cursor:pointer}
+@media only screen and(max-width:700px){.tjlms-lesson-content.lesson-right-panel{position:inherit!important}}
+@media(min-width:768px)and(max-width:1024px){.lesson_attempt_action
+{padding-right:0px;padding-left:0px}}.techjoomla-bootstrap.tjlms_toc_player.tjlms_scorm_toc{border:1px solid;margin:0px!important;border-color:rgb(238,238,238);border-right-width:5px;border-right-style:solid;height:700px}.com_tjlms_content.tjlms_scorm_toc.tjlms_node_header i{padding:0 9px 0 0px}.techjoomla-bootstrap.tjlms_toc_player.tjlms_scorm_toc_title{height:48%}.techjoomla-bootstrap.tjlms_toc_player.tjlms_scorm_toc_tool{height:13%}.techjoomla-bootstrap.tjlms_scom_player{height:600px;border:1px solid;border-color:rgb(238,238,238);border-width:2px 2px 2px 2px}.techjoomla-bootstrap.tjlms_scom_player #scorm_object
+{width:100%;height:100%;overflow:auto}.tjlms_scorm_toc.tjlms_scorm_toc_title{text-align:center;border-bottom:1px solid;font-size:9px}.tjlms_scorm_toc.tjlms_scorm_toc_title h2{line-height:100%;margin:5px!important}.toc-panel-header{color:#434343;font-weight:bold;font-size:11px;font-family:verdana,tahoma,sans-serif;border-color:#d0d0d0;background:url("../images/toc_tool_back.gif");overflow:hidden;zoom:1;padding:5px 3px 4px 5px;height:auto}
+ul.tjlms_toctree.toc-tree-node-icon
+{background-repeat:no-repeat;background:url("../images/application_go.png");border:0 none;vertical-align:middle;width:16px;height:17px;display:inline-block}.tjcollapse.toggle{background:url("../images/arrows.gif")transparent no-repeat-16px 0;background-repeat:no-repeat;vertical-align:middle}.tjexpand.toggle{background:url("../images/arrows.gif")transparent no-repeat;background-repeat:no-repeat;vertical-align:middle}
+ul.tjlms_toctree.toggle{height:18px;width:16px;display:inline-block}
+ul.tjlms_toctree,ul.tjlms_toctree li{list-style-type:none;line-height:35px}
+ul.tjlms_toctree img{vertical-align:middle}
+ul.tjlms_toctree.tjlms_node_header{background-color:#eeeeee}.tjlms_scorm_toc ul.tjlms_toctree ul{margin-left:0!important}.techjoomla-bootstrap.tjlms_toc_player.toc-tool-collapse{background-position:0-180px}.techjoomla-bootstrap.tjlms_toc_player.toc-tool-expand{background-position:0-165px}.techjoomla-bootstrap.tjlms_toc_player.toc-tool{background-image:url(https:overflow:hidden;width:15px;height:15px;float:right;cursor:pointer;margin-left:2px}.techjoomla-bootstrap.tjlms_toc_player.tjlms_tocpanel-collapsed{display:block;width:20px;height:99%;visibility:visible;z-index:20;background-color:#dfdfdf;padding:3px;border:1px solid #BCBCBC}.tjlms_scorm_toc ul.tjlms_toctree{margin:0px!important;padding:0px!important}.tjlms_scorm_toc.tjlms-toc-toolbar{border-style:solid;border-width:0 0 1px;border-color:#d0d0d0;background-color:#ededed;background-image:url("../images/bg.gif")}.tjlms_scorm_toc.tjlms-toc-toolbar.tjlms-toc-toolbar_btn{margin:5px!important;background-image:url("../images/toolbar_icons.png");padding:3px 12px!important;background-color:#f5f5f5!important;border:1px solid #bbb!important;border-radius:4px}.tjlms_scorm_toc.tjlms-toc-toolbar.tjlms-toc-toolbar_next{background-position:-25px 0px!important;float:right!important}.tjlms_scorm_toc.tjlms-toc-toolbar.tjlms-toc-toolbar_back{background-position:0px 0px!important}
+#jlikeToolbar
+{position:fixed;height:45px;width:100%;left:0px;z-index:111111;border-top:1px solid #BCBCBC;border-bottom:1px solid #BCBCBC;background-color:#fff!important;box-shadow:0px 3px 5px #ccc;-moz-box-shadow:0px 3px 5px #ccc;-webkit-box-shadow:0px 3px 5px #ccc}
+#jlikeToolbar.jliketoolbartop
+{top:0px;bottom:inherit!important}
+#jlikeToolbar.jliketoolbarBottom
+{bottom:0px}.likes.pwltcb{margin-left:0px!important;display:inline-block!important}.jlike-form-actions.labels-space.dropdown-toggle
+{padding-top:7px;padding-bottom:9px}.add-note.note-header
+{padding:10px;border:1px solid #cccccc;min-height:14px!important}.add-note.note-header.note-header-title
+{min-height:14px!important}.note-header.icon-file{min-height:14px!important}
+form#jlike_comments{margin:0px!important}
+#jlike-container.like-snippet a{cursor:pointer}.com_tjlms_content.tjlms-table th{background-color:#fff!important;text-align:center!important}.com_tjlms_content.tjlms-table.greyish a{color:#315264}.user-labels.checkbox input{margin-top:5px}
+#jlikeToolbar.fa{font-size:18px;line-height:27px}
+#jlikeToolbar.toolbar_buttons.active{background-color:#9bb387}
+#jlikeToolbar.toolbar-expanded.toolbar_buttons,#jlikeToolbar.toolbar-expanded.toolbar_content{display:inline-block}
+#jlikeToolbar.jlike-btn
+{background-color:#fff!important;color:#ccc;border:1px solid #ccc}
+#jlikeToolbar.toolbar_buttons,#jlikeToolbar #toolbar_expander{background-color:transparent;!important;color:#315264;padding:9px 15px;cursor:pointer;margin-left:-4px;display:inline-block}
+#jlikeToolbar.toolbar_buttons{border-right:1px solid #ccc}
+#jlikeToolbar #toolbar_expander{display:none;border-top:0px;border-bottom:0px;border-left:1px solid #315264}.toolbar-expanded #toolbar_expander
+{border-right:1px solid #315264}
+#jlikeToolbar.toolbar_buttons img{height:30px}
+#jlikeToolbar.noteCommentDiv
+{text-align:right;padding-right:10px}
+#jlikeToolbar.noteDiv,#jlikeToolbar.commentDiv{display:inline-block;vertical-align:top;position:relative}.notesDiv
+{border-top:none;border:1px solid #BCBCBC;display:none}.assocfilecontainer
+{padding:10px 10px 0px 10px}.commentsDiv
+{border-top:none;border:1px solid #BCBCBC;display:none}
+#jlikeToolbar.popUpcloseBtn
+{margin-left:0px!important}.noteCommentTab li
+{cursor:pointer}.annotation-snippet textarea{width:95%;line-height:200%;color:#555;resize:vertical}
+#jlikeToolbar.toolbar_buttons.closeBtn{color:#720201}.courseComment.jlike_add_comment img
+{margin-top:15px}.courseComment.jlike_add_comment.jlike_display_block
+{float:none}
+div.tjlms-wrapper.jlikecheckbox input{margin-top:3px}.tjcourse-likes #annotation-snippet.innerdiv
+{z-index:99999}
+@media(max-width:480px){#jlikeToolbar #toolbar_expander{display:inline-block}
+#jlikeToolbar.toolbar_content{display:none}
+#jlikeToolbar.toolbar-expanded #jlike-container
+{display:none}}.jlike_comments_container.jlike_cancel_btn{margin-right:5px}.lms-btn-wrapper select
+{width:auto!important}.tjlms-act{padding:5px!important}.tjlms-activity{float:left!important;width:90%!important}.tjlms-activity-nw{float:left!important;width:10%!important}.tjlms-filter-toggle{height:30px!important}.checkout-heading{border-left:3px solid #3a87ad;border-bottom:1px solid #eee;color:#555555;font-size:13px;font-weight:bold;margin-bottom:15px;padding-left:10px}.redColor
+{color:red}.checkout-content hr
+{margin:5px!important}.course-info-checkout,.subplan-info-checkout
+{padding-left:20px}
+div.com_tjlms_content #step_select_subsplan.lms_subs_plan{margin-bottom:0px}
+div.com_tjlms_content #step_select_subsplan.lms_subs_plan_price{padding:4px}
+#subsplan-info.alignLeft{text-align:left}
+#subsplan-info.checkout-selectsubsplans{padding-top:15px;border-left:5px solid red;padding-left:10px}
+#subsplan-info #cooupon_troption{padding:15px 0px 0px 10px;border-left:5px solid green}
+input-style{height:27px!important;width:250px!important}.input-style-text{width:255px!important;height:80px!important}.tjlms_head_title{padding-top:2px}
+#tjlms-payHtmlDiv.tjlms-confirm-payment-div
+{padding-left:20px}.paymentHTMLWrapper textarea{resize:none}.tjlms_steps_parent.fa-arrow-circle-o-left{margin-right:5px}.tjlms-checkout-steps.lms_select{padding-top:2px!important}
+#tjlms-payHtmlDiv.control-label{padding-top:0px!important}
+#coupon_code{width:35%!important}
+#coupon_plan_div{margin-top:-5px}.tjlmsNoModal
+{position:relative!important;z-index:0!important}
+div#filter-bar>div
+{display:inline-block}.orderCourseTitle h2
+{margin-top:0px!important}.order-details{padding-right:25px}.order_course{font-weight:600;font-size:large;margin-top:70px;text-transform:uppercase;margin-left:10px}.order_print{padding-top:10px;padding-right:10px}.order-plan{font-size:x-large;font-weight:500}.orderalign{margin-top:10px}
+div.tjlms-wrapper.row-fluid{margin-left:0px!important;margin-right:0px!important}
+div.tjlms-wrapper form{margin-bottom:0px;!important}.com_tjlms_content.tjlms-btn-small{padding:1px 3px;font-size:small;border-radius:0px;margin-left:0px!important}.com_tjlms_content.btn-yelloish-green,.com_tjlms_content.btn-yelloish-green:hover{background-color:#FFF;border-color:#15497c #15497c #0a223b;color:#778e0b;padding:1px 3px;border-radius:0px;border:1px solid #778e0b}
+div.com_tjlms_content.tjlms-color-white{color:#FFFFFF!important}.com_tjlms_content.help-block
+{margin:5px 10px}.techjoomla-bootstrap.well
+{margin-bottom:10px!important}.tjlms-wrapper.tjlmscenter{text-align:center!important}.tjlms-dotted-rightborder{border-right:1px dotted #cccccc}.tjlms-rightborder{border-right:1px solid #cccccc}.tjlms_hr_dashboard{margin:5px 0px!important;border-top:1px solid #ccc!important}.your_each_group{padding:6px 10px}.com_tjlms_content.greyish{color:#315264}.com_tjlms_content.btn-blue{background-color:#1d6cb0;border-color:#15497c #15497c #0a223b;color:#FFF;padding:1px 3px;border-radius:0px}.com_tjlms_content.btn-blue:hover{background-color:#277D8F}.com_tjlms_content.btn-disabled{background-color:#FFF!important;color:#aaa!important;padding:1px 3px;border-radius:0px!important;border:1px solid #aaa!important}
+div.tjlms-wrapper.panel-heading{background-color:#F5F5F5;color:#333333;padding:10px 15px;border:1px solid #DDD;width:auto}.com_tjlms_content.panel-content
+{border:1px solid #ccc;border-top:none;padding:10px 0px 10px 0px;width:auto;display:block;line-height:15px}.panel-content.enrolledUsers{margin-bottom:5px}.com_tjlms_content.modal.hide.in{top:0!important;display:block!important;width:100%;left:0;margin-left:0;bottom:0}
+#tjlms-assign.modal-body{max-height:100%;padding:15px}.com_tjlms_content #modal-tjlms-recommend iframe{width:100%;border:none}
+div.com_tjlms_content.arrow-up{width:0;height:0!important;border-left:5px solid transparent;border-right:5px solid transparent;border-bottom:5px solid black;min-height:14px!important;margin-top:6px}
+div.com_tjlms_content.arrow-down{width:0;height:0!important;border-left:5px solid transparent;border-right:5px solid transparent;border-top:5px solid black;min-height:14px!important;margin-top:6px}
+div.com_tjlms_content.tjlms_display_none
+{display:none}
+div.com_tjlms_content.tjlms_display_block
+{display:block}
+div.com_tjlms_content.clearfix
+{clear:both}
+div.checkout-content.clearfix
+{clear:both}
+div.com_tjlms_content.center{text-align:center}
+div.com_tjlms_content.textleft{text-align:left}
+div.com_tjlms_content.textright{text-align:right}
+div.com_tjlms_content.green{color:#5CB85C}
+div.com_tjlms_content.tjlms-bold-text{font-weight:bold}
+div.com_tjlms_content.notop-border{border-top:0px!important}
+div.com_tjlms_content.noleft-border{border-left:0px!important}
+div.com_tjlms_content.top-border{border-top:1px solid #ccc}
+div.com_tjlms_content.tjlms-no-border{border:0 none!important}
+div.com_tjlms_content.solid-border{border:1px solid #ccc}
+div.com_tjlms_content.right-border{border-right:1px solid #eee}
+div.com_tjlms_content.no-margin{margin:0px!important}
+div.com_tjlms_content.no-padding{padding:0px!important}
+div.com_tjlms_content.unstyled_list{list-style-type:none!important}
+div.com_tjlms_content.maroon{color:#D94D38}
+div.com_tjlms_content.white{color:#FFF}
+div.com_tjlms_content.gray{color:#9B9B9B}.tjlms_bluish_green{background:#336666!important}.com_tjlms_content.no-top-border{border-top:0px;border-bottom:1px;border-left:1px;border-right:1px}.com_tjlms_content.grey_border_class{border-color:#ccc;border-style:solid}.com_tjlms_content.tjlms-table.border-top-blue{border-top:3px solid #32c8de!important}.com_tjlms_content.tjlms-table.border-top-red{border-top:3px solid #f75353!important}.com_tjlms_content.tjlms-table.border-top-green{border-top:3px solid #51d466!important}.tjlms-wrapper #contentarea{border:10px solid #4e4e4e;padding:20px;width:auto}.com_tjlms_content.jlike-btn-green{background-color:#FFF!important;color:#778e0b!important;border:1px solid #778e0b;height:30px;padding:4px 12px;border-radius:4px}.com_tjlms_content.tjlms-btn{color:#FFF!important;height:35px;padding:0px 12px;border-radius:0px;margin-right:10px}
+#contentarea.row
+{margin-left:0px!important}.img-circle{width:40px}.tjlms-wrapper.modal
+{display:inline-block!important}.form-horizontal.control-label{width:160px!important}.tbl-align{padding:10px!important}.no-left-margin{margin-left:0px!important}
+#bgrp.btn-group>.btn:last-child,.btn-group>.dropdown-toggle{border-top-right-radius:0px!important;border-bottom-right-radius:0px!important}
+#bgrp.btn-group>.btn:first-child{margin-left:0;-webkit-border-bottom-left-radius:0px!important;border-bottom-left-radius:0px!important;-webkit-border-top-left-radius:0px!important;border-top-left-radius:0px!important}.filter_search tjlms_filter_margin.btn{border:1px solid #ccc!important}
+div.tjlms-wrapper div#filter-bar.btn-toolbar
+{margin-left:0px}
+div.tjlms-wrapper.tjlms-filters select,div.tjlms-wrapper.tjlms-filters input,div.tjlms-wrapper.tjlms-filters button{height:35px;padding-top:6px;padding-bottom:6px;line-height:24px;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}
+div.paymentHTMLWrapper select,div.paymentHTMLWrapper input,div.paymentHTMLWrapper button
+{height:auto!important;padding-top:auto;padding-bottom:auto;line-height:auto}
+div.tjlms-wrapper.chzn-container>a{background-color:#fff;background:transparent;border-radius:0;box-shadow:none;line-height:24px;height:35px;border-radius:3px}
+div.tjlms-wrapper.chzn-container-single.chzn-single span{padding:6px 0px}
+div.tjlms-wrapper.chzn-container-single.chzn-single div b
+{background-position-y:6px}
+div.tjlms-wrapper.input-append input[type="text"],div.tjlms-wrapper.input-append button{display:inline-block}
+div.tjlms-wrapper.tjlms-coupon-view.input-append input[type="text"],div.tjlms-wrapper.tjlms-coupon-view.input-append button{height:35px}
+div.tjlms-wrapper.input-append button{padding-right:12px;padding-left:12px}.assignUser{margin-left:5px!important}.fixedWidthImage{width:50px}.com_tjlms_content.course_block_title{margin-left:6px;color:#315264;font-weight:bold}
+div.com_tjlms_course_content.collapse-icon-containner{position:absolute;bottom:0;right:10px}.com_tjlms_content ul.com_tjlms_list{padding:0px!important;list-style-type:none!important}.com_tjlms_content ul.com_tjlms_list li{border-bottom:1px solid #CCCCCC;cursor:pointer;padding:5px 5px 5px 10px!important}.com_tjlms_content ul.com_tjlms_list li>a{display:block;padding:2px 0px 2px 6px}.com_tjlms_content ul.com_tjlms_list li>a.catvisited,.com_tjlms_content ul.com_tjlms_list li>a:focus,.com_tjlms_content ul.com_tjlms_list li>a:hover{background:transparent!important;color:#315264!important;text-decoration:none!important;font-weight:bold!important}.com_tjlms_content ul.com_tjlms_list li>a span{display:block}.com_tjlms_content div.tjlms-categories,.com_tjlms_content div.tjlms-courses{padding:10px 8px}.com_tjlms_content.r-more,.com_tjlms_content.r-less{cursor:pointer}
+div.com_tjlms_content.tjlms_courses_head
+{padding:10px 5px;font-weight:bold}
+div.com_tjlms_content.tjlms_courses_head.tjlms_head_title
+{font-weight:bold;word-wrap:break-word}
+div.com_tjlms_content.tjlms_courses_head.navbar-toggle{border:1px solid #ddd;border-radius:4px 0px 0px 4px;height:auto;line-height:inherit;padding:3px}
+div.com_tjlms_content.tjlms_courses_head.navbar-toggle.active{background:#315264}
+div.com_tjlms_content.tjlms_courses_head.tjlms-filter-toggle{border:1px solid #ddd;border-radius:0px 4px 4px 0px;height:34px;line-height:22px;padding:6px 12px;margin-left:-1px}
+div.com_tjlms_content.tjlms_courses_head.tjlms-filter-toggle.active{background:#315264}
+div.com_tjlms_content.tjlms_courses_head.tjlms-filter-toggle.active.caret{border-top:4px solid #fff}
+div.com_tjlms_content.tjlms_courses_head.navbar-toggle{border:1px solid #ddd;border-radius:4px 0px 0px 4px;height:auto;line-height:inherit;padding:3px}
+div.com_tjlms_content.tjlms_courses_head.tjlms_menu
+{margin:0px 0px 0px 5px}
+div.com_tjlms_content.tjlms_courses_head.tjlms_courses_layouttoggle{margin-top:5px}
+div.com_tjlms_content.tjlms_courses_head.tjlms_courses_layouttoggle.btn{border:1px solid #ddd}
+div.com_tjlms_content.tjlms_pin_item.tjlms_pin_layout_element{border-radius:6px;-webkit-border-radius:6px}
+div.com_tjlms_content.tjlms_pin_item.tjlms_pin_image img{width:240px;height:135px}
+div.com_tjlms_content.tjlms_pin_item.tjlms_pin_info{margin-top:10px;margin-bottom:10px;color:#315264}
+div.com_tjlms_content.tjlms_pin_item.tjlms_pin_info.tjlms_pin_course_rating,div.com_tjlms_content.tjlms_pin_item.tjlms_pin_info.tjlms_pin_course_users
+{word-wrap:break-word;width:50%}
+div.com_tjlms_content.tjlms_pin_item.tjlms_pin_caption,div.com_tjlms_content.tjlms_list_item.tjlms_list_caption{overflow:hidden;text-overflow:ellipsis;font-weight:bold}
+div.com_tjlms_content.tjlms_pin_item.tjlms_pin_desc
+{padding:0px 11px 5px 11px;overflow:hidden}
+div.com_tjlms_content.tjlms_pin_item.tjlms_pin_info span>span{display:inline-block}
+div.com_tjlms_content.tjlms_list_item{margin-bottom:20px}
+div.Bloglayout label{margin-top:10px}
+div.tjlms_list_image{margin-right:5px}.tjlms_list_layout_element{width:100%}.tjlms_list_layout_element img{max-width:100%}
+div.Bloglayout{margin:10px}
+div.com_tjlms_content.long_desc,div.com_tjlms_content.long_desc_extend{padding:1px}.top-heading.btn-wrapper{padding-top:20px!important}.courseProgress.modal
+{display:block!important}.tjlms_filter_margin.filterActive
+{border:2px solid #2384D3}
+@media only screen and(max-width:767px){div.tjlms-lesson-content.tjlms-lesson-container.open.tjlms-lesson-player
+{display:none}.tjlms-lesson-player.viewer_toolbar:after{clear:both}.tjlms-lesson-player.viewer_toolbar.viewer_controls{float:left}.tjlms-lesson-player.viewer_toolbar.viewer_layouts_container{width:25%}.tjlms-lesson-player.viewer_toolbar.viewer_nav_conatainer{width:45%}.tjlms-lesson-player.viewer_toolbar.viewer_zoom_conatainer{width:30%}
+#jlikeToolbar_content,#jlikeToolbar,#jlikeToolbar_bottom{margin-right:0px}
+#no-more-tables table,#no-more-tables thead,#no-more-tables tbody,#no-more-tables th,#no-more-tables td,#no-more-tables tr{display:block}
+#no-more-tables thead tr{position:absolute;top:-9999px;left:-9999px}
+#no-more-tables tr{border:1px solid #ccc}
+#no-more-tables td{border:none;border-bottom:1px solid #eee;position:relative;white-space:normal;text-align:left}
+#no-more-tables td.with-data-title{padding-left:50%}
+#no-more-tables td:before{position:absolute;top:6px;left:6px;width:45%;padding-right:10px;white-space:nowrap;text-align:left;font-weight:bold}
+#no-more-tables td:before{content:attr(data-title)}.tjlms-lesson-content #resumeWindow
+{width:100%;left:0px}
+div.com_tjlms_course_content.tjlms_course_toc.tjlms_course_toc_listing caption{display:block}.filter_search{float:none}}.window body{height:100%!important}.window.window-mainbody{padding:0px!important}
+#window-mainbody.btn:hover,#window-mainbody.btn:focus,#window-mainbody.btn:active{border-color:grey!important;color:#333}.techjoomla-bootstrap.mod_outer.ui-state-default
+{border:0px solid #D3D3D3!important}.techjoomla-bootstrap.mod_outer.ui-widget-content
+{background:url("images/ui-bg_flat_75_ffffff_40x100.png")repeat-x scroll 50%50%!important;border:0px solid #D3D3D3!important}.techjoomla-bootstrap.mod_outer.ui-widget-content.ui-state-default
+{background:url(images/ui-bg_glass_75_e6e6e6_1x400.png)50%50%repeat-x!important}.ui-accordion.ui-accordion-content{padding:0em 0em!important;margin-top:2px!important;margin-bottom:-10px!important}.ui-icon
+{display:none!important}.mod_outer ul
+{height:auto!important}.tj-dashboard.navbar-inner{-moz-box-shadow:0 0 0 0;-webkit-box-shadow:0 0 0 0;box-shadow:0 0 0 0}.tj-dashboard.parent-statbox-value
+{text-align:right}.tj-dashboard.navbar-inner{background:hsl(0,0%,98%)}.tj-dashboard[class^="icon-"],[class*=" icon-"]{vertical-align:inherit}.tj-dashboard.statbox-icons{font-size:25px;color:white;width:35px}.tj-dashboard.collapse-icon{display:inline-block;width:0;height:0;vertical-align:top;border-top:8px solid #000;border-right:8px solid transparent;border-left:8px solid transparent}.tj-dashboard.stat-block{border:1px solid #ccc;background:white;margin:1em 0em;border-top:none}.tj-dashboard.stat-block-content{margin:1em;min-height:.25em}.tj-dashboard.stat-block-header{margin-bottom:0px;border-right:none;border-left:none;-webkit-border-radius:0px;-moz-border-radius:0px;border-radius:0px}.tj-dashboard.stat-block-header div{padding-top:10px}.inline-block-class
+{display:inline-block}.tj-dashboard.chart_legends{float:right}.tj-dashboard.chart_legends.legend_color{border:1px solid;width:14px;height:14px;display:inline-block}.tj-dashboard.chart_legends.legend_title{vertical-align:text-bottom}.tj-dashboard.chart_legends.activities_legend{margin-right:10px;display:inline-block}.tj-dashboard.chart_legends.sessions_legend{display:inline-block}.tj-dashboard.chart_legends.activities_legend.legend_color{background:#FFA500}.tj-dashboard.chart_legends.sessions_legend.legend_color{background:#3EA99F}.tj-dashboard.dashboard_block
+{padding-top:20px}.tj-dashboard.dashboard_block.side_padding
+{padding:10px 10px 0px 10px}.tj-dashboard.liked_course_content
+{padding-top:10px}.tj-dashboard>div,.tj-dashboard.show-grid>div
+{margin-top:10px}.user-labels.checkbox input{margin-top:-6px}.user-labels.checkbox input{margin-top:-6px}
+@media(max-width:1024px){div.com_tjlms_content.tjlms_pin_item.tjlms_pin_caption,div.com_tjlms_content.tjlms_list_item.tjlms_list_caption{display:inline-block}}
+@media(max-width:1024px){div.com_tjlms_content.tjlms_list_item.tjlms_list_layout_element_details
+{margin-left:0px}}
+@media(max-width:768px){.com_tjlms_content.statbox
+{margin-top:12px}}
+@media(min-width:768px)and(max-width:1024px){.tjlms-table.btn-primary{margin-left:-10%!important}}
+@media(min-width:800px)and(max-width:600px){.tjlms-table.btn-primary{margin-left:-7%!important}}
+@media print{a[href]:after{content:none!important}}
+#no-more-tables.tjlms-table td{vertical-align:middle!important}.term-condition a{border:none;box-shadow:none;margin-top:5px!important}.Order-popup #printDiv{width:97%}.tjlms_list_image.img-responsive{width:100%;height:auto;display:block}.tjlms_pin_image{max-width:100%;height:auto;display:block}
+a.modal.btn.btn-large.btn-block.btn-success.tjlms-btn-flat.setgoal{width:100%!important}.tjlms_course_plan.control-group,.tjlms_course_plan.center{margin-left:auto;margin-right:auto}.checkout-first-step-billing-info input[type="text"]{width:100%;height:30px}.tj_sub_alert{margin-bottom:0px!important;margin-top:10px!important}
+table#couponList span.icon-ok{background-image:none!important;color:#378137}
+table#couponList span.icon-cancel{background-image:none!important;color:#942a25}.tjlms-wrapper.tjlms-tbl{overflow-x:auto!important;overflow-y:auto!important}
+#tmt_test{padding-top:2%}.fileinput-button{position:relative;overflow:hidden;vertical-align:middle}.fileupload input{position:absolute!important;top:0;right:0;margin:0;opacity:0;font-size:23px;direction:ltr;cursor:pointer}.fileupload{margin-right:10px;position:relative}.rating{border:none;float:left}.rating>input{display:none!important}.rating>label:before{margin:5px;font-size:1.25em;font-family:FontAwesome;display:inline-block;content:"\f005"}.rating>.half:before{content:"\f089";position:absolute}.rating>label{color:#ddd;float:right;position:relative}.rating>input:checked~label,form#assessment-form:not(.save).rating:not(:checked)>label:hover,form#assessment-form:not(.save).rating:not(:checked)>label:hover~label{color:#FFD700}
+form#assessment-form:not(.save).rating>input:checked+label:hover,form#assessment-form:not(.save).rating>input:checked~label:hover,form#assessment-form:not(.save).rating>label:hover~input:checked~label,form#assessment-form:not(.save).rating>input:checked~label:hover~label{color:#FFED85}
+form#assessment-form.save.rating label{cursor:default}.assessment_field.form-block{display:block;width:100%;clear:both}.assessment_field{margin-bottom:10px;border-bottom:2px solid #ccc;padding-bottom:10px;width:90%}.assessment_field:last-child{border-bottom:none}.assessment_field label.custom-control.custom-radio{display:inline-block;margin-right:10px}.assessment_field.description.form-block.form-control{margin:5px 0}.assessment_field input{margin-top:0}
+div#assessment-form-container{height:100%;overflow-y:scroll}
+div#assessment-form-container.form-inline{display:inline-block;float:left;margin:5px 5px 5px 0}
+#assessment-form.msg{display:none;color:red}
+#assessment-form.save.button{display:none}
+div.assesslesson.close{padding:15px}
+div.assesslesson div#tjlms-lesson-content{margin-top:0}.quiz_content div#assessment-not-found{margin-left:0}
+#review_answer.test_controls{margin:15px 0px!important}
+#review_answer i.fa.fa-close{line-height:inherit;margin:0 10px!important}
+div#com_tjlms_course_content.tjlms_course_toc_listing.tjlms_lesson-title img,div#com_tjlms_course_content.couserBlock img{display:inline-block!important}
+div#com_tjlms_course_content.couserBlock.panel-content div.center{margin-bottom:5px;margin-left:5px!important}
+#tjlms-assign{height:100vh!important;overflow:hidden}.tjlms_enrolUsers #myTabContent{overflow-y:scroll}
+#tjlms-assign.modal-footer{position:absolute;bottom:0;width:calc(100%-40px)}.import-messages.alert{margin-bottom:5px}
+@media only screen and(max-width:375px){.tj-dashboard.chart_legends{float:initial}}
+@media(max-width:1024px){.tjlms_head_title h3{margin:0}.com_tjlms_content.tjlms-icon-wd{width:auto!important}}.tjlms-lesson-player iframe{height:calc(100vh-60px)!important}.tjlms-wrapper.row-fluid.com_tjlms_content div.popup-close{min-height:1px}
