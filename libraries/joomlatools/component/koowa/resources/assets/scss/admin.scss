@@ -1,0 +1,102 @@
+// ==========================================================================
+// Kodekit UI
+// ==========================================================================
+
+$k-icon-path: '../../framework/fonts' !default;
+$k-atom-html: false;
+$k-atom-body: false;
+
+@import "../../../../../../../../../../tools/kodekit-ui/src/scss/admin-ui";
+
+.k-ui-joomla {
+  @include k-html;
+  @include k-body;
+}
+
+.k-ui-page {
+  @include k-html;
+
+  body {
+    @include k-body;
+  }
+}
+
+// ==========================================================================
+// Joomla styling
+// ==========================================================================
+
+.k-ui-j4-administrator {
+
+  @import "joomla4/admin";
+  @import "export";
+
+}
+
+.k-ui-j5-administrator {
+
+  @import "joomla5/admin";
+  @import "export";
+
+}
+
+.k-ui-j4-form {
+
+  .k-ui-namespace {
+
+    .fade.show {
+      opacity: 1;
+    }
+
+    @import "joomla4/form";
+    @import "styles";
+
+  }
+
+  .k-editor-modal .mfp-content {
+    width: 80vw;
+    height: 70vh;
+  }
+}
+
+.k-ui-j5-form {
+
+  .fade.show {
+    opacity: 1;
+  }
+
+  @import "joomla5/form";
+  @import "styles";
+
+}
+
+.k-ui-j3-form {
+
+  .k-ui-namespace {
+
+    @import "joomla3/form";
+    @import "styles";
+
+  }
+}
+
+@import "joomla3/icons";
+@import "joomla4/icons";
+@import "joomla5/icons";
+
+.k-ui-namespace {
+
+  .k-tabs-container__scrollable {
+
+    overflow: auto !important;
+
+  }
+  
+  // Fix Joomla 4 and above CSS styles automatically appending an icon to external links
+  a[target=_blank]:before {
+    content:none;
+  }
+}
+
+$k-ui-context: "administrator";
+
+@import "activities";

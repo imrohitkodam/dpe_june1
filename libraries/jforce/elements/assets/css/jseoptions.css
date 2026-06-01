@@ -1,0 +1,29 @@
+/**
+ * @version     1.0.0
+ * @package     mod_cookienotificationsbuilder
+ * @copyright   Copyright (C) 2014. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ * @author      JoomlaForce Team <support@joomlaforce.com> - http://www.joomlaforce.com
+ */
+ 
+ .megamenu-content {
+	float: left;
+	max-width: 520px;
+}
+
+.megamenu-content h3 {
+	margin-bottom: 10px;
+}
+
+.megamenu-content ul {
+	list-style-image: url(../images/tick.png);
+	margin-bottom: 20px;
+}
+
+.megamenu-content li {
+	margin-bottom: 12px;
+}
+
+.megamenu-content strong {
+	color: #E24932;
+}

@@ -1,0 +1,154 @@
+/**
+ * @copyright	Copyright (C) 2014 JoomlaForceTeam. All rights reserved.
+ * @license		GNU General Public License version 3 or later; see LICENSE.txt
+ */
+	
+
+ 
+/* bootstrap override */
+#jfsteplist .chzn-container {
+    display: none !important;
+}
+
+#jfsteplist select {
+    display: inline-block !important;
+}
+
+.modal.fade.in{ top:70% !important;}
+/* fin override */
+
+#options-styles {position:relative;}
+ 
+#jfaddsteps {
+	padding: 5px;
+	color: 333;
+	text-decoration: none;
+	font-weight: normal;
+	text-align: center;
+	background: linear-gradient(top, #fff, #eee);
+	background: -moz-linear-gradient(top, #fff, #eee);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #777), color-stop(.5, #555), color-stop(.5, #333), to(#000)); 
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+	cursor: pointer;
+	background: #f4f4f4 url(add.png) left center no-repeat;
+	text-indent: 30px;
+	height: 35px;
+}
+
+#jfaddsteps:hover {
+	background-color: #eee;
+}
+
+.jfaccordioncontent {
+    /*overflow: visible !important;*/
+}
+
+.jfsteplist {
+	margin: 5px 0 !important;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	border: #ccc 1px solid;
+	clear: both;
+	/*min-height: 60px;*/
+    list-style: none;
+    max-width: 650px;
+}
+
+.jfsteplist input, .jfsteplist select, .jfsteplist textarea{
+	clear: both;
+	float: none;
+	border-radius: 2px;
+	-moz-border-radius: 5px;
+	padding: 5px;
+	margin:15px;
+}
+
+.jfstepcontainer {
+	border-left: 1px solid #CCCCCC;
+    float: left;
+    margin-top: -10px;
+    padding-left: 6%;
+    position: relative;
+}
+
+.jfsteptop {
+	color: #f7f7f7;
+	text-shadow: 1px 1px #fff;
+	font-size: 20px;
+	background: #eee;
+	height: 33px;
+	border-bottom: 3px solid #ccc;
+	width: 100%;
+	
+}
+
+.jfstephandle {
+	background: url("move_vertical.gif") no-repeat scroll center 6px rgba(0, 0, 0, 0);
+    border-radius: 5px 0 0 5px;
+    cursor: move;
+    min-height: 35px;
+	float: left;
+    min-height: 35px;
+    width: 4%;
+}
+
+.jfstepnumber {
+	color: #373737;
+	/*text-align: center;*/
+	text-shadow: 1px 1px #fff;
+	font-size: 20px;
+	padding-top: 5px;
+	width:80%;
+	float:left;
+}
+
+.jfsteprow {
+	clear: both;
+	margin-top:-7px !important;
+}
+
+
+
+.jfstepdelete:hover {
+	background: url(delete_hover.png) center center no-repeat;
+	border:none !important;
+}
+
+.jfstepdelete {
+/*	float: right !important;*/
+        position: absolute;
+        display: block;
+        width: 16px !important;
+        height: 16px;
+        background: url(delete.png) center center no-repeat;
+        border:none !important;
+		float:left;
+		margin-left:30px !important;
+}
+.jfstepedit:hover {
+	background: url(edit_hover.png) center center no-repeat;
+	border:none !important;
+}
+
+.jfstepedit {
+	background: url("edit.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    display: block;
+    height: 16px;
+    position: absolute;
+    width: 16px !important;
+	float:left;
+	top: 20px;
+	margin-right:40px !important;
+}
+
+.jfsteplabel {
+	margin: 5px;
+	width: 10%;
+	display: inline-block;
+}
+
+

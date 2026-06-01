@@ -1,0 +1,81 @@
+<?php
+/**
+ * @package     XT Transitional Package from FrameworkOnFramework
+ * @subpackage  model
+ *  @copyright   Copyright (c)2012-2020 Extly, CB. All rights reserved. / Based on FrameworkOnFramework of Akeeba
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ */
+// Protect from unauthorized access
+defined('XTF0F_INCLUDED') or die;
+
+/**
+ * FrameworkOnFramework model behavior class to filter front-end access to items
+ * based on the viewing access levels.
+ *
+ * @package  FrameworkOnFramework
+ * @since    2.1
+ */
+class XTF0FModelBehaviorAccess extends XTF0FModelBehavior
+{
+	/**
+	 * This event runs after we have built the query used to fetch a record
+	 * list in a model. It is used to apply automatic query filters.
+	 *
+	 * @param   XTF0FModel        &$model  The model which calls this event
+	 * @param   XTF0FDatabaseQuery  &$query  The model which calls this event
+	 *
+	 * @return  void
+	 */
+	public function onAfterBuildQuery(&$model, &$query)
+	{
+		// This behavior only applies to the front-end.
+		if (!XTF0FPlatform::getInstance()->isFrontend())
+		{
+			return;
+		}
+
+		// Get the name of the access field
+		$table       = $model->getTable();
+		$accessField = $table->getColumnAlias('access');
+
+		// Make sure the field actually exists
+		if (!in_array($accessField, $table->getKnownFields()))
+		{
+			return;
+		}
+
+		$model->applyAccessFiltering(null);
+	}
+
+	/**
+	 * The event runs after XTF0FModel has called XTF0FTable and retrieved a single
+	 * item from the database. It is used to apply automatic filters.
+	 *
+	 * @param   XTF0FModel  &$model   The model which was called
+	 * @param   XTF0FTable  &$record  The record loaded from the databae
+	 *
+	 * @return  void
+	 */
+	public function onAfterGetItem(&$model, &$record)
+	{
+		if ($record instanceof XTF0FTable)
+		{
+			$fieldName = $record->getColumnAlias('access');
+
+			// Make sure the field actually exists
+			if (!in_array($fieldName, $record->getKnownFields()))
+			{
+				return;
+			}
+
+			// Get the user
+			$user = XTF0FPlatform::getInstance()->getUser();
+
+			// Filter by authorised access levels
+			if (!in_array($record->$fieldName, $user->getAuthorisedViewLevels()))
+			{
+				$record = null;
+			}
+		}
+	}
+}
