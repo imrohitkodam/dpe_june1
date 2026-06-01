@@ -1,0 +1,47 @@
+# Joomla Core configuration files (contain passwords and secrets)
+/configuration.php
+/configuration.bak.php
+/configuration_back.php
+/configuration_back1.php
+/configuration.php.bak
+
+# Temp, Logs, and Cache directories
+/cache/*
+/administrator/cache/*
+/tmp/*
+/logs/*
+/administrator/logs/*
+
+# Media, Uploads, and Database Backups (User Content)
+/images/*
+/files/*
+/joomlatools-files/*
+/safedb/*
+
+# OS and Editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.swe
+*.swf
+*.swg
+*.swh
+*.swi
+*.swj
+*.swk
+*.swl
+*.swm
+*.swn
+.vscode/
+.idea/
+
+# Large Archives and Backups
+*.tar.xz
+*.zip
+*.jpa
+*.tar.gz
+*.sql
+*.php?.php
+errorlog.php
+mail.log
