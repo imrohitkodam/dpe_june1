@@ -1,0 +1,15 @@
+/**
+ * @package     JMailAlerts
+ * @subpackage  jma_latest_docs_docman
+ *
+ * @author      Techjoomla <extensions@techjoomla.com>
+ * @copyright   Copyright (C) 2009 - 2021 Techjoomla. All rights reserved.
+ * @license     GNU General Public License version 2 or later
+ */
+
+.jma_docs_dm{font-family: Helvetica; text-align:left; border-spacing:2px; margin-top: 5px; width: 100%; min-height: 82px; font-size:12px; padding-top:5px; vertical-align:top;}
+.jma_docs_dm_date{width:25%;}
+.jma_docs_dm_links{width:25%;}
+.jma_docs_dm_td{padding-top:7px; color:#323232; font-weight:bold;}
+.jma_docs_dm_th{text-align:left; color: #333333;}
+.jma_docs_dm_title{width:50%; padding-top:5px;}

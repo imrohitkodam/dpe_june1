@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="jma_latestnews_js" addfieldpath="/plugins/emailalerts/jma_latestnews_js/jma_latestnews_js/fields">
+		<fieldset name="legacy">
+			<field name="user_categories_method" type="radio" default="only_selected_categories" class="radio" label="JMA_LATESTNEWS_CHOOSE_CATEGORIES_METHOD_USER_LBL" description="JMA_LATESTNEWS_CHOOSE_CATEGORIES_METHOD_USER_DESC">
+				<option value="all_categories">JMA_LATESTNEWS_CATEGORIES_USERS_ALL</option>
+				<option value="only_selected_categories">JMA_LATESTNEWS_CATEGORIES_USERS_ONLY_SELECTED</option>
+			</field>
+			<field name="catid" type="jmacategoriesusers" default="1" label="JMA_LATESTNEWS_LBL_CATEGORY" element="jma_latestnews_js" multiple="multiple" description="JMA_LATESTNEWS_DESC_CATEGORY" key_field='id' value_field='title' showon="user_categories_method:only_selected_categories" />
+			<!--  DPE HACK for Disable the Author and count of article <field name="author_id" type="list" default="0" label="JMA_LATESTNEWS_AUTHORS" description="JMA_LATESTNEWS_DESC_AUTHORS">
+				<option value="0">JMA_LATESTNEWS_AUTHOR_ANY</option>
+				<option value="by_me">JMA_LATESTNEWS_AUTHOR_ADD_MOD_ME</option>
+				<option value="not_me">JMA_LATESTNEWS_AUTHOR_ADD_MOD_NOT_ME</option>
+			</field>
+			<field name="count" type="text" default="5" label="JMA_LATESTNEWS_COUNT" class="required validate-numeric input" description="JMA_LATESTNEWS_DESC_COUNT" /> -->
+		</fieldset>
+	</fields>
+</form>

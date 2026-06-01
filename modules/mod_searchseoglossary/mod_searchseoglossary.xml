@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" method="upgrade" client="site">
+	<name>Search Module SEOGlossary</name>
+	<author>JoomUnited</author>
+	<authorEmail>contact@joomunited.com</authorEmail>
+	<authorUrl>http://www.joomunited.com</authorUrl>
+	<creationDate>2023-07-31 09:17:38</creationDate>
+	<copyright>(c) 2015 JoomUnited (http://www.joomunited.com). All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; http://www.gnu.org/licenses/gpl-2.0.html</license>
+	<version>3.2.5</version>
+	<description>Module to show a search box for SEO Glossary</description>
+	<files>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename module="mod_searchseoglossary">mod_searchseoglossary.php</filename>
+		<filename>mod_searchseoglossary.xml</filename>
+		<folder>tmpl</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_seoglossary/models/fields">
+				 <field name="lang" type="lang"   description="" />
+				<field name="catid" type="sql" default="JSELECT" label="COM_SEOGLOSSARY_DESC_SELECTGLOSSARY" query="SELECT id, name FROM #__seoglossaries where state=1" key_field="id" value_field="name" description="COM_SEOGLOSSARY_DESC_SELECTGLOSSARY" required="true"/>
+
+                <field name="search_options"
+                       type="radio"
+                       class="btn-group"
+                       default="1"
+                       label="COM_SEOGLOSSARY_COMPONENT_SEARCHOPTION"
+                       description="COM_SEOGLOSSARY_COMPONENT_SEARCHOPTION_DESCRIPTION">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+
+                <field name="sound_like"
+                       type="radio"
+                       class="btn-group"
+                       default="1"
+                       label="COM_SEOGLOSSARY_SHOW_SOUND_LIKE"
+                       description="COM_SEOGLOSSARY_SHOW_SOUND_LIKE_HELP">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+
+                <field
+                        id="default_search_mode"
+                        name="default_search_mode"
+                        type="list"
+                        label="COM_SEOGLOSSARY_COMPONENT_SEARCHMODE_DESCRIPTION"
+                        description="COM_SEOGLOSSARY_COMPONENT_SEARCHMODE_DESCRIPTION"
+                        default="1"
+                        class="inputbox">
+                    <option value="1">COM_SEOGLOSSARY_SEARCH_BEGIN</option>
+                    <option value="2">COM_SEOGLOSSARY_SEARCH_CONTAINS</option>
+                    <option value="3">COM_SEOGLOSSARY_SEARCH_EXACT</option>
+                    <option value="4">COM_SEOGLOSSARY_SEARCH_LIKE</option>
+                </field>
+			</fieldset>
+            <fieldset name="advanced">
+                <field
+                        name="layout"
+                        type="modulelayout"
+                        label="JFIELD_ALT_LAYOUT_LABEL"
+                        description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+                <field
+                        name="moduleclass_sfx"
+                        type="text"
+                        label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                        description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+                <field
+                        name="cache"
+                        type="list"
+                        default="1"
+                        label="COM_MODULES_FIELD_CACHING_LABEL"
+                        description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option
+                            value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option
+                            value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+                <field
+                        name="cache_time"
+                        type="text"
+                        default="900"
+                        label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+                        description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+                <field
+                        name="cachemode"
+                        type="hidden"
+                        default="static">
+                    <option
+                            value="static"></option>
+                </field>
+            </fieldset>
+		</fields>
+	</config>
+</extension>

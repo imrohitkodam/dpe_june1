@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.5" type="plugin" group="emailalerts" method="upgrade">
+	<name>plg_jma_li_flexi_title</name>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>Copyright (c) 2009-2018 Techjoomla. All rights reserved.</copyright>
+	<creationDate>21st Sept 2018</creationDate>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>2.6.0</version>
+	<description>PLG_JMA_LI_FLEXI_DESC</description>
+	<files>
+		<filename plugin="jma_latestitems_flexi">jma_latestitems_flexi.php</filename>
+		<folder>jma_latestitems_flexi</folder>
+	</files>
+	<languages folder="language/en-GB">
+		<language tag="en-GB">en-GB.plg_emailalerts_jma_latestitems_flexi.ini</language>
+		<language tag="en-GB">en-GB.plg_emailalerts_jma_latestitems_flexi.sys.ini</language>
+	</languages>
+	<config name="params">
+		<fields name="params" addfieldpath="/plugins/emailalerts/jma_latestitems_flexi/jma_latestitems_flexi/element/joomla16">
+			<fieldset name="basic" label="Plugin Parameters">
+				<field name="plugintitle" type="text" default="PLG_JMA_LI_FLEXI_TRANSLATABLE_TITLE" label="LBL_PLUGIN_TITLE_LN_FLEXI" description="DESC_PLUGIN_TITLE_LN_FLEXI" />
+				<field name="category" type="sql" default="1" label="LBL_ALLOWED_CATEGORY_LN_FLEXI" query="SELECT id,title FROM `#__categories` WHERE published=1 AND  extension ='com_content'" element="jma_latestitems_flexi" multiple="multiple" description="DESC_ALLOWED_CATEGORY_LN_FLEXI" key_field='id' value_field='title' extension="com_content" />
+				<field name="show_front" type="radio" default="1" label="LBL_FRONT_ITEMS_LN_FLEXI" description="DESC_FRONT_ITEMS_LN_FLEXI" class="radio btn-group btn-group-yesno">
+					<option value="1">SHOW_LN_FLEXI</option>
+					<option value="0">HIDE_LN_FLEXI</option>
+				</field>
+				<field name="show_category" type="radio" default="1" label="LBL_SHOWCATEGORY_LN_FLEXI" description="DESC_SHOWCATEGORY_LN_FLEXI" class="radio btn-group btn-group-yesno">
+					<option value="1">SHOW_LN_FLEXI</option>
+					<option value="0">HIDE_LN_FLEXI</option>
+				</field>
+				<field name="show_author" type="radio" default="1" label="LBL_SHOWAUTHOR_LN_FLEXI" description="DESC_SHOWAUTHOR_LN_FLEXI" class="radio btn-group btn-group-yesno">
+					<option value="1">SHOW_LN_FLEXI</option>
+					<option value="0">HIDE_LN_FLEXI</option>
+				</field>
+				<field name="show_author_alias" type="radio" default="1" label="LBL_SHOWAUTHOR_ALIAS_LN_FLEXI" description="DESC_SHOWAUTHOR_ALIAS_LN_FLEXI" class="radio btn-group btn-group-yesno">
+					<option value="1">SHOW_LN_FLEXI</option>
+					<option value="0">HIDE_LN_FLEXI</option>
+				</field>
+				<field name="show_date" type="radio" default="1" label="LBL_SHOWDATE_LN_FLEXI" description="DESC_SHOWDATE_LN_FLEXI" class="radio btn-group btn-group-yesno">
+					<option value="1">SHOW_LN_FLEXI</option>
+					<option value="0">HIDE_LN_FLEXI</option>
+				</field>
+				<field name="show_introtext" type="radio" default="1" label="LBL_INTROTEXT_LN_FLEXI" description="DESC_INTROTEXT_LN_FLEXI" class="radio btn-group btn-group-yesno">
+					<option value="1">SHOW_LN_FLEXI</option>
+					<option value="0">HIDE_LN_FLEXI</option>
+				</field>
+				<field name="introtext_count" type="text" default="150" label="LBL_INTROTEXT_COUNT_LN_FLEXI" class="required validate-numeric inputbox" description="DESC_INTROTEXT_COUNT_LN_FLEXI" />
+				<field name="ordering" type="list" default="create_dsc" label="LBL_ORDER_LN_FLEXI" description="DESC_ORDER_LN_FLEXI">
+					<option value="c_dsc">RECENT_ADDED_LN_FLEXI</option>
+					<option value="m_dsc">RECENT_MODIFIED_LN_FLEXI</option>
+				</field>
+			</fieldset>
+			<fieldset name="legacy" label="PLG_JMA_FLEXI_LI_LEGACY" description="PLG_JMA_FLEXI_LI_LEGACY_DESC" addfieldpath="/plugins/emailalerts/jma_latestitems_flexi/jma_latestitems_flexi/element/joomla16">
+				<field name="catid" type="flexicategoriesusers" default="1" label="LBL_CATEGORY_LN_FLEXI" element="jma_latestitems_flexi" multiple="multiple" description="DESC_CATEGORY_LN_FLEXI" key_field='id' value_field='title' />
+				<field name="user_id" type="list" default="0" label="LBL_AUTHORS_LN_FLEXI" description="DESC_AUTHORS_LN_FLEXI">
+					<option value="0">AUTHOR_ANY_LN_FLEXI</option>
+					<option value="by_me">AUTHOR_ADD_MOD_ME_LN_FLEXI</option>
+					<option value="not_me">AUTHOR_ADD_MOD_NOT_ME_LN_FLEXI</option>
+				</field>
+				<field name="count" type="text" default="5" label="LBL_COUNT_LN_FLEXI" class="required validate-numeric inputbox" description="DESC_COUNT_LN_FLEXI" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

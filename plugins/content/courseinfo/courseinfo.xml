@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="content" method="upgrade">
+	<name>plg_content_courseinfo</name>
+	<author>Techjoomla</author>
+	<creationDate>23th July 2020</creationDate>
+	<copyright>Copyright (C) 2009 - 2020 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<version>1.0.0</version>
+	<description>PLG_CONTENT_COURSEINFO_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="courseinfo">courseinfo.php</filename>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_content_courseinfo.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_content_courseinfo.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="layout" class="btn-group" type="radio" default="shika" label="PLG_CONTENT_COURSEINFO_LAYOUT" description="PLG_CONTENT_COURSEINFO_LAYOUT_DESC">
+					<option value="shika">PLG_CONTENT_COURSEINFO_LAYOUT_SHIKA</option>
+					<option value="override">PLG_CONTENT_COURSEINFO_LAYOUT_OVERRIDE</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

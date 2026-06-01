@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset>
+
+        <field name="blockcookiecategory" id="blockcookiecategory" type="blockcookiecategory" label="PLG_SYSTEM_CPNB_BLOCK_COOKIE_CATEGORY_LBL" addfieldpath="/plugins/system/cookiespolicynotificationbar/elements" description="PLG_SYSTEM_CPNB_BLOCK_COOKIE_CATEGORY_DESC" />
+
+        <field name="block_cookie_name" type="text" label="PLG_SYSTEM_CPNB_BLOCK_COOKIE_NAME_LBL" description="PLG_SYSTEM_CPNB_BLOCK_COOKIE_NAME_DESC" />
+        
+        <field name="block_cookie_js_code" type="textarea" default="" label="PLG_SYSTEM_CPNB_BLOCK_COOKIE_JS_CODE_LBL" description="PLG_SYSTEM_CPNB_BLOCK_COOKIE_JS_CODE_DESC" rows="6" cols="100" filter="raw" class="block_cookie_js_code" />
+        
+        <field name="block_cookie_status" type="list" class="btn-group btn-group-yesno" default="1" label="PLG_SYSTEM_CPNB_STATUS_LBL" description="PLG_SYSTEM_CPNB_STATUS_DESC">
+            <option value="1">JENABLED</option>
+            <option value="0">JDISABLED</option>
+        </field>
+        
+    </fieldset>
+</form>

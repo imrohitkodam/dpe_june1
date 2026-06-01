@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="jma_latestusers">
+		<fieldset name="legacy">
+			<field name="no_of_users" type="text" default="5" class="required validate-numeric inputbox" label="PLG_JMA_LU_LBL_NO_OF_USERS" description="PLG_JMA_LU_DESC_NO_OF_USERS" />
+		</fieldset>
+	</fields>
+</form>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="plugin" version="2.5" group="content" method="upgrade">
+	<identifier>plg:content.doclink</identifier>
+	<name>plg_content_doclink</name>
+	<version>6.0.1</version>
+    <author>Joomlatools</author>
+    <creationDate>April 2025</creationDate>
+    <copyright>Copyright (C) 2011 Timble CVBA (http://www.timble.net)</copyright>
+    <license>GNU GPLv3 - http://www.gnu.org/licenses/gpl.html</license>
+    <authorEmail>support@joomlatools.com</authorEmail>
+    <authorUrl>www.joomlatools.com</authorUrl>
+	<description>PLG_CONTENT_DOCLINK_DESCRIPTION</description>
+	<files>
+		<filename plugin="doclink">doclink.php</filename>
+        <folder>language</folder>
+        <folder>view</folder>
+	</files>
+</extension>

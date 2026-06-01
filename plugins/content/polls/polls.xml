@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<extension group="content" method="upgrade" type="plugin" version="3.0.0">
+    <name>Content - Polls</name>
+	<creationDate>2018-Apr-01</creationDate>
+    <author>Maverick</author>
+    <authorEmail>support@corejoomla.com</authorEmail>
+    <authorUrl>http://www.corejoomla.com</authorUrl>
+	<copyright>All rights reserved by www.corejoomla.com 2009-12.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <version>4.6.5</version>
+    <description>Content plugin to embed polls in articles.</description>
+    <files>
+        <filename>polls.xml</filename>
+        <filename plugin="polls">polls.php</filename>
+        <filename>index.html</filename>
+    </files>
+</extension>

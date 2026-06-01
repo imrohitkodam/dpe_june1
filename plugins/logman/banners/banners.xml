@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="3.0" group="logman" method="upgrade" overwrite="true">
+    <identifier>plg:logman.banners</identifier>
+    <name>plg_logman_banners</name>
+    <author>Joomlatools</author>
+    <creationDate>March 2025</creationDate>
+    <copyright>Copyright (C) 2011 - 2017 Timble CVBA (http://www.timble.net)</copyright>
+    <license>GNU GPLv3 - http://www.gnu.org/licenses/gpl.html</license>
+    <authorEmail>support@joomlatools.com</authorEmail>
+    <authorUrl>www.joomlatools.com</authorUrl>
+    <version>6.0.0</version>
+    <description>PLG_LOGMAN_BANNERS_DESC</description>
+
+    <files>
+        <filename plugin="banners">banners.php</filename>
+        <folder>activity</folder>
+        <folder>language</folder>
+    </files>
+
+    <config>
+        <fields name="params" />
+    </config>
+
+    <resources>
+        <resource name="banner">
+            <actions>
+                <action>add</action>
+                <action>edit</action>
+                <action>delete</action>
+                <action>publish</action>
+                <action>unpublish</action>
+                <action>archive</action>
+                <action>trash</action>
+            </actions>
+        </resource>
+        <resource name="client">
+            <actions>
+                <action>add</action>
+                <action>edit</action>
+                <action>delete</action>
+                <action>publish</action>
+                <action>unpublish</action>
+                <action>archive</action>
+                <action>trash</action>
+            </actions>
+        </resource>
+    </resources>
+
+</extension>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<form>
+		<fieldset name="sla_licence_params" addfieldpath="plugins/system/dpe/fields">
+
+		<field name="sla_id"
+			required="true"
+			type="slaid"
+			class="inputbox"
+			filter="safehtml"
+			header="COM_MULTIAGENCY_FORM_HEADER_SLA"
+			label="COM_MULTIAGENCY_FORM_LBL_SLA"
+			description="COM_MULTIAGENCY_FORM_DESC_SLA"
+			onchange="sla.showActivities(this); slaTools.showTools(this);">
+			<option value="">COM_MULTIAGENCY_FORM_HEADER_SLA</option>
+		</field>
+		
+				<field name="tags"
+			addfieldpath="components/com_tjucm/models/fields"
+			type="DpeTags"
+			label="COM_DPE_FORM_ANNUALREPORT_LBL_TAG"
+			description="COM_DPE_FORM_ANNUALREPORT_LBL_TAG"
+			class="inputbox"
+			multiple="true"
+			required="true"
+		/> 
+				<field 
+			name="use_tags" 
+			type="radio" 
+			label="COM_MULTIAGENCY_ADD_SLA_USING_TAGS" 
+			class=""
+			default="1"
+        	layout="joomla.form.field.radio.switcher"
+		>
+			<option value="1">No</option>
+			<option value="0">Yes</option>
+		</field>
+		<field name="show_in_sla_list"
+			type="checkbox"
+			label="COM_MULTIAGENCY_FORM_LBL_USE_IN_SLA_LIST"
+			description="COM_MULTIAGENCY_FORM_LBL_USE_IN_SLA_LIST_DESC"
+			value=""
+			onclick="slaTools.showNewSlaTextbox(this)"
+		/>
+		
+		<field name="new_sla"
+			type="text"
+			label="COM_MULTIAGENCY_FORM_LBL_NEW_SLA_FIELD"
+			description="COM_MULTIAGENCY_FORM_LBL_NEW_SLA_FIELD_DESC"
+			value=""
+		/>
+
+		<field name="lead_consultant_id"
+			type="leadconsultants"
+			label="COM_MULTIAGENCY_FORM_LBL_LEAD_CONSULTANT"
+			description="COM_MULTIAGENCY_FORM_DESC_LEAD_CONSULTANT"
+			client="com_multiagency"
+			action="core.dpe.staff"
+		/>
+		<field name="notify_dpe_admin"
+			type="checkbox"
+			label="COM_MULTIAGENCY_FORM_NOTIFY_DPE_ADMIN"
+			description="COM_MULTIAGENCY_FORM_NOTIFY_DPE_ADMIN_DESC"
+			value="1"
+			checked="1"
+		/>
+		<field name="dpeadmins"
+			type="depeadmin"
+			label="COM_MULTIAGENCY_FORM_DPEADMINS"
+			description="COM_MULTIAGENCY_FORM_DPEADMINS_DESC"
+			client="com_multiagency"
+			action="core.dpe.staff"
+			multiple="true"
+		/>
+		<field name="multiyearlicence"
+			type="checkbox"
+			label="COM_MULTIAGENCY_FORM_ADD_MULTIYEAR_LICENCE"
+			description="COM_MULTIAGENCY_FORM_ADD_MULTIYEAR_LICENCE_DESC"
+		/>
+		<field name="multiple_count"
+			type="number"
+			label="COM_MULTIAGENCY_FORM_MULTIYEAR_COUNT"
+			description="COM_MULTIAGENCY_FORM_MULTIYEAR_COUNT_DESC"
+			min="3"
+			showon="multiyearlicence:1"
+			onchange="validateTimeMeasureCount(this)"
+		/>
+		<field name="time_measure"
+			type="list"
+			label="COM_MULTIAGENCY_FORM_TIME_MEASURE"
+			description="COM_MULTIAGENCY_FORM_TIME_MEASURE_DESC"
+			showon="multiyearlicence:1"
+			default="year">
+			<option value="day">COM_MULTIAGENCY_DAYS</option>
+			<option value="week">COM_MULTIAGENCY_WEEK</option>
+			<option value="month">COM_MULTIAGENCY_MONTH</option>
+			<option value="year">COM_MULTIAGENCY_YEAR</option>
+		</field>
+		<field name="duration"
+			type="number"
+			label="COM_MULTIAGENCY_FORM_DURATION"
+			description="COM_MULTIAGENCY_FORM_DURATION_DESC"
+			min="1"
+			showon="multiyearlicence:1"
+			onchange="validateDuration(this)"
+		/>
+	</fieldset>
+	</form>

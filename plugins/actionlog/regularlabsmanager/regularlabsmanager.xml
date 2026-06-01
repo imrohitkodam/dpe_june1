@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension version="4" type="plugin" group="actionlog" method="upgrade">
+  <name>PLG_ACTIONLOG_REGULARLABSMANAGER</name>
+  <description>PLG_ACTIONLOG_REGULARLABSMANAGER_DESC</description>
+  <version>9.2.5</version>
+  <creationDate>October 2025</creationDate>
+  <author>Regular Labs (Peter van Westen)</author>
+  <authorEmail>info@regularlabs.com</authorEmail>
+  <authorUrl>https://regularlabs.com</authorUrl>
+  <copyright>Copyright © 2025 Regular Labs - All Rights Reserved</copyright>
+  <license>GNU General Public License version 2 or later</license>
+  <files>
+    <file plugin="regularlabsmanager">regularlabsmanager.php</file>
+    <folder>language</folder>
+  </files>
+  <config>
+    <fields name="params" addfieldprefix="RegularLabs\Library\Form\Field">
+      <fieldset name="basic">
+        <field name="@load_language_regularlabs" type="LoadLanguage" extension="plg_system_regularlabs"/>
+        <field name="@load_language" type="LoadLanguage" extension="plg_actionlog_regularlabsmanager"/>
+        <field name="@license" type="License" extension="REGULARLABSEXTENSIONMANAGER"/>
+        <field name="@version" type="Version" extension="REGULARLABSEXTENSIONMANAGER"/>
+        <field name="@dependency" type="Dependency" label="RR_THE_COMPONENT" file="/administrator/components/com_regularlabsmanager/regularlabsmanager.xml"/>
+        <field name="@header" type="Header" label="REGULARLABSEXTENSIONMANAGER" description="REGULARLABSEXTENSIONMANAGER_DESC" url="https://regularlabs.com/extensionmanager"/>
+        <field name="@note__settings" type="Note" class="alert alert-info" description="RLEM_SETTINGS,&lt;a href=&quot;index.php?option=com_regularlabsmanager&quot; target=&quot;_blank&quot;&gt;,&lt;/a&gt;"/>
+      </fieldset>
+    </fields>
+  </config>
+</extension>

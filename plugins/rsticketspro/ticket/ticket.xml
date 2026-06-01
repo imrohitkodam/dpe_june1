@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="rsticketspro" method="upgrade">
+	<name>PLG_RSTICKETSPRO_TICKET</name>
+	<author>Techjoomla</author>
+	<creationDate>14th Feb 2019</creationDate>
+	<copyright>Copyright (C) 2019 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<version>1.1</version>
+	<description>PLG_RSTICKETSPRO_TICKET_DESC</description>
+
+	<files>
+		<filename plugin="ticket">ticket.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_rsticketspro_ticket.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_rsticketspro_ticket.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="select_department"
+					type="sql"
+					label="PLG_RSTICKETSPRO_DEPARTMENT_LIST"
+					description="PLG_RSTICKETSPRO_DEPARTMENT_LIST_DESC"
+					sql_select="d.*"
+					sql_from="#__rsticketspro_departments AS d"
+					sql_order="d.id ASC"
+					sql_where="d.published = 1"
+					key_field="id"
+					value_field="name">
+					<option value="">PLG_RSTICKETSPRO_DEPARTMENT_SELECT_DEPARTMENT</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

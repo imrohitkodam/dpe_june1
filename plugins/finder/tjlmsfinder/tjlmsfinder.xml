@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="finder" method="upgrade">
+	<name>Smart Search - Tjlms</name>
+	<author>Techjoomla</author>
+	<creationDate>13th Jul 2023</creationDate>
+	<copyright>Copyright (C) 2014 - 2023 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<version>4.0.5</version>
+	<description>PLG_FINDER_TJLMSFINDER_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="tjlmsfinder">tjlmsfinder.php</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_finder_tjlmsfinder.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_finder_tjlmsfinder.sys.ini</language>
+	</languages>
+</extension>

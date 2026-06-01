@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config addfieldprefix="RegularLabs\Library\Form\Field">
+  <fieldset name="text" addfieldprefix="RegularLabs\Library\Form\Field">
+    <field name="text" type="Text" class="input-xxlarge input-large-text" label="RL_TEXT" hint="MDL_LINK_TEXT_HINT"/>
+  </fieldset>
+  <fieldset name="main" addfieldprefix="RegularLabs\Library\Form\Field">
+    <field name="type" type="Radio" class="btn-group rl-btn-group btn-group-md" default="url" label="RL_TYPE">
+      <option value="url" class="btn btn-outline-info">%s %s,&lt;span class="icon-link"&gt;&lt;/span&gt;,RL_URL</option>
+      <option value="content" class="btn btn-outline-info">%s %s,&lt;span class="icon-paragraph-justify"&gt;&lt;/span&gt;,RL_CONTENT</option>
+      <option value="article" class="btn btn-outline-info">%s %s,&lt;span class="icon-file"&gt;&lt;/span&gt;,RL_ARTICLE</option>
+      <option value="image" class="btn btn-outline-info">%s %s,&lt;span class="icon-image"&gt;&lt;/span&gt;,RL_IMAGE</option>
+      <option value="gallery" class="btn btn-outline-info">%s %s,&lt;span class="icon-images"&gt;&lt;/span&gt;,RL_GALLERY</option>
+      <option value="video" class="btn btn-outline-info">%s %s,&lt;span class="icon-video"&gt;&lt;/span&gt;,RL_VIDEO</option>
+    </field>
+    <field name="@showon__type_url__a" type="ShowOn" value="type:url"/>
+    <field name="url" type="Text" hint="MDL_URL_HINT" label="RL_URL" description="MDL_URL_DESC"/>
+    <field name="@showon__type_url__b" type="ShowOn"/>
+    <field name="@showon__type_content__a" type="ShowOn" value="type:content"/>
+    <field name="@note_content" type="Note" text="MDL_CONTENT_DESC"/>
+    <field name="content" type="editor" label=""/>
+    <field name="@showon__type_content__b" type="ShowOn"/>
+    <field name="@showon__type_article__a" type="ShowOn" value="type:article"/>
+    <field name="article" type="ContentArticles" id_alias_name_as_value="true" showselect="true" label="RL_ARTICLE" description="MDL_ARTICLE_DESC"/>
+    <field name="article_type" type="Radio" class="btn-group rl-btn-group btn-group-md" default="2" label="MDL_ARTICLE_TYPE" description="MDL_ARTICLE_TYPE_DESC">
+      <option value="2" class="btn btn-outline-info">JGLOBAL_TITLE</option>
+      <option value="1" class="btn btn-outline-info">JALIAS</option>
+      <option value="0" class="btn btn-outline-info">JGLOBAL_FIELD_ID_LABEL</option>
+    </field>
+    <field name="@showon__type_article__b" type="ShowOn"/>
+    <field name="@showon__type_image__a" type="ShowOn" value="type:image"/>
+    <field name="image" type="Media" label="RL_IMAGE" description="MDL_IMAGE_DESC"/>
+    <field name="@showon__image_no_text__a" type="ShowOn" value="text:"/>
+    <field name="image_thumbnail_width" type="Number" class="font-monospace text-right rl-w-8em" size="10" default="" label="MDL_THUMBNAIL_WIDTH" description="%s&lt;br&gt;&lt;br&gt;%s,RL_RESIZE_IMAGES_WIDTH_DESC,RL_EMPTY_FOR_DEFAULT"/>
+    <field name="image_thumbnail_height" type="Number" class="font-monospace text-right rl-w-8em" size="10" default="" label="MDL_THUMBNAIL_HEIGHT" description="%s&lt;br&gt;&lt;br&gt;%s,RL_RESIZE_IMAGES_HEIGHT_DESC,RL_EMPTY_FOR_DEFAULT"/>
+    <field name="@showon__image_no_text__b" type="ShowOn"/>
+    <field name="@showon__type_image__b" type="ShowOn"/>
+    <field name="@showon__type_gallery__a" type="ShowOn" value="type:gallery"/>
+    <field name="gallery" type="Text" hint="MDL_GALLERY_HINT" label="RL_GALLERY" description="MDL_GALLERY_DESC"/>
+    <field name="gallery_first" type="list" default="" label="MDL_GALLERY_FIRST" description="MDL_GALLERY_FIRST_DESC">
+      <option value="">MDL_FIRST</option>
+      <option value="random">MDL_RANDOM</option>
+      <option value="specific">MDL_SPECIFIC</option>
+    </field>
+    <field name="gallery_first_image" type="Text" label="MDL_GALLERY_FIRST_SPECIFIC" description="MDL_GALLERY_FIRST_SPECIFIC_DESC" showon="gallery_first:specific"/>
+    <field name="slideshow" type="Radio" class="btn-group rl-btn-group btn-group-md" default="" label="MDL_GALLERY_SLIDESHOW" description="MDL_GALLERY_SLIDESHOW_DESC">
+      <option value="">JDEFAULT</option>
+      <option value="false" class="btn btn-outline-danger">JNO</option>
+      <option value="true" class="btn btn-outline-success">JYES</option>
+    </field>
+    <field name="@showon__gallery_no_text__a" type="ShowOn" value="text:"/>
+    <field name="gallery_thumbnails" type="List" class="w-auto" default="" label="MDL_THUMBNAILS" description="MDL_THUMBNAILS_DESC">
+      <option value="">MDL_FIRST</option>
+      <option value="random">MDL_RANDOM</option>
+      <option value="specific">MDL_SPECIFIC</option>
+      <option value="all">JALL</option>
+    </field>
+    <field name="@showon__thumbnail_image__a" type="ShowOn" value="gallery_thumbnails:specific"/>
+    <field name="gallery_thumbnail_image" type="Text" label="MDL_GALLERY_THUMBNAIL_SPECIFIC" description="MDL_GALLERY_THUMBNAIL_SPECIFIC_DESC"/>
+    <field name="@showon__thumbnail_image__b" type="ShowOn"/>
+    <field name="gallery_thumbnail_width" type="Number" class="font-monospace text-right rl-w-8em" size="10" default="" label="MDL_THUMBNAIL_WIDTH" description="%s&lt;br&gt;&lt;br&gt;%s,RL_RESIZE_IMAGES_WIDTH_DESC,RL_EMPTY_FOR_DEFAULT"/>
+    <field name="gallery_thumbnail_height" type="Number" class="font-monospace text-right rl-w-8em" size="10" default="" label="MDL_THUMBNAIL_HEIGHT" description="%s&lt;br&gt;&lt;br&gt;%s,RL_RESIZE_IMAGES_HEIGHT_DESC,RL_EMPTY_FOR_DEFAULT"/>
+    <field name="@showon__gallery_no_text__b" type="ShowOn"/>
+    <field name="@showon__type_gallery__b" type="ShowOn"/>
+    <field name="@showon__type_video__a" type="ShowOn" value="type:video"/>
+    <field name="youtube" type="Text" hint="MDL_YOUTUBE_HINT" label="MDL_YOUTUBE" description="MDL_YOUTUBE_DESC" showon="vimeo:[AND]video:"/>
+    <field name="vimeo" type="Text" hint="MDL_VIMEO_HINT" label="MDL_VIMEO" description="MDL_VIMEO_DESC" showon="youtube:[AND]video:"/>
+    <field name="video" type="Text" hint="MDL_OTHER_VIDEO_HINT" label="MDL_OTHER_VIDEO" description="MDL_OTHER_VIDEO_DESC" showon="youtube:[AND]vimeo:"/>
+    <field name="@showon__type_video__b" type="ShowOn"/>
+  </fieldset>
+  <fieldset name="styling">
+    <field name="theme" type="List" default="" class="w-auto" label="RL_THEME">
+      <option value="">JDEFAULT</option>
+      <option value="dark">MDL_THEME_DARK</option>
+      <option value="light">MDL_THEME_LIGHT</option>
+      <option value="dark-automatic">MDL_THEME_AUTOMATIC_DARK</option>
+      <option value="light-automatic">MDL_THEME_AUTOMATIC_LIGHT</option>
+      <option value="classic">MDL_THEME_CLASSIC</option>
+      <option value="custom">RL_CUSTOM</option>
+    </field>
+    <field name="class" type="Text" label="MDL_CSS_CLASS_LINK" description="MDL_CSS_CLASS_LINK_DESC"/>
+    <field name="classname" type="Text" label="MDL_CSS_CLASS_MODAL" description="MDL_CSS_CLASS_MODAL_DESC"/>
+    <field name="width" type="Number" class="font-monospace text-right rl-w-8em" size="10" default="" label="RL_WIDTH" description="%s&lt;br&gt;&lt;br&gt;%s,MDL_DIMENSION_DESC,RL_EMPTY_FOR_DEFAULT"/>
+    <field name="height" type="Number" class="font-monospace text-right rl-w-8em" size="10" default="" label="RL_HEIGHT" description="%s&lt;br&gt;&lt;br&gt;%s,MDL_DIMENSION_DESC,RL_EMPTY_FOR_DEFAULT"/>
+  </fieldset>
+  <fieldset name="settings">
+    <field name="title" type="Text" label="JGLOBAL_TITLE" description="MDL_TITLE_DESC"/>
+    <field name="description" type="Textarea" label="JGLOBAL_DESCRIPTION" description="MDL_DESCRIPTION_DESC"/>
+    <field name="open" type="Radio" default="" class="btn-group" label="MDL_OPEN_ON_PAGELOAD" description="MDL_OPEN_ON_PAGELOAD_DESC">
+      <option value="" class="btn btn-outline-danger">JNO</option>
+      <option value="true" class="btn btn-outline-success">JYES</option>
+      <option value="once" class="btn btn-outline-success">MDL_ONCE</option>
+    </field>
+    <field name="autoclose" type="Number" class="font-monospace text-right rl-w-8em" default="" label="MDL_AUTOCLOSE" description="MDL_AUTOCLOSE_DESC">
+        </field>
+  </fieldset>
+</config>

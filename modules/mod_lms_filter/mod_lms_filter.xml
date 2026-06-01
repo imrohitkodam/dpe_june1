@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="module" client ="site" method="upgrade">
+	<name>mod_lms_filter</name>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>Copyright (C) 2014 - 2023 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<creationDate>13th Jul 2023</creationDate>
+	<version>4.0.5</version>
+	<description>MOD_LMS_FILTER_DESC</description>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_lms_filter.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_lms_filter.sys.ini</language>
+	</languages>
+
+	<files>
+		<filename module="mod_lms_filter">mod_lms_filter.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+	</files>
+
+	<media folder="media" destination="mod_lms_filter">
+		<folder>css</folder>
+		<folder>js</folder>
+	</media>
+
+	<!-- Fields for Joomla 1.8.x and onwards -->
+	<config name="params">
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="moduleclass_sfx" type="text" default="" label="MOD_SUFIX" description="MOD_LMS_FILTER_MODULECLASS_SFX_DESC" />
+				<field name="course_type" type="radio"  default="1" description="MOD_LMS_FILTER_COURSE_TYPE_FILTER_DESC" label="MOD_LMS_FILTER_COURSE_TYPE_FILTER" class="btn-group btn-group-yesno radio" >
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="search" type="radio"  default="1" description="MOD_LMS_FILTER_SEARCH_FILTER_DESC" label="MOD_LMS_FILTER_SEARCH_FILTER" class="btn-group btn-group-yesno radio">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="category" type="radio"  default="0" description="MOD_LMS_FILTER_CATEGORY_FILTER_DESC" label="MOD_LMS_FILTER_CATEGORY_FILTER" class="btn-group btn-group-yesno radio">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="creator" type="radio"  default="0" description="MOD_LMS_FILTER_COURSE_CREATOR_FILTER_DESC" label="MOD_LMS_FILTER_COURSE_CREATOR_FILTER" class="btn-group btn-group-yesno radio">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="course_status" type="radio"  default="0" description="MOD_LMS_FILTER_COURSE_STATUS_FILTER_DESC" label="MOD_LMS_FILTER_COURSE_STATUS_FILTER" class="btn-group btn-group-yesno radio">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="filter_tag" type="radio"  default="0" description="MOD_LMS_FILTER_COURSE_TAG_FILTER_DESC" label="MOD_LMS_FILTER_COURSE_TAG_FILTER" class="btn-group btn-group-yesno radio">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+
+	<!--SETTING default param -->
+	<config>
+		<fields>
+			<fieldset>
+				<field name="moduleclass_sfx" default="" />
+				<field name="course_type" default="1" />
+				<field name="search" default="1" />
+				<field name="category" default="0" />
+				<field name="creator" default="0" />
+				<field name="course_status" default="0" />
+				<field name="filter_tag" default="0" />
+			</fieldset>
+		</fields>
+	</config>
+
+</extension>

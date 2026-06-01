@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="plugin" version="3.0" group="content" method="upgrade">
+  <name>Content - droptables</name>
+  <creationDate>2021-12-30 08:00:03</creationDate>
+  <author>JoomUnited</author>
+  <authorEmail>contact@joomunited.com</authorEmail>
+  <authorUrl>http://www.joomunited.com</authorUrl>
+  <copyright />
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <version>3.6.5</version>
+  <description>Content plugin for Droptables</description>
+  <files folder="site">
+    <filename plugin="droptables">droptables.php</filename>
+    <filename plugin="droptables">chartStyleSet.php</filename>
+    <filename plugin="droptables">index.html</filename>
+  </files>
+</extension>

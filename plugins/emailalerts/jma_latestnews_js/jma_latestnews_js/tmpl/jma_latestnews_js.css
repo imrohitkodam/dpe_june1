@@ -1,0 +1,14 @@
+/**
+ * @package     JMailAlerts
+ * @subpackage  jma_latestnews_js
+ *
+ * @author      Techjoomla <extensions@techjoomla.com>
+ * @copyright   Copyright (C) 2009 - 2021 Techjoomla. All rights reserved.
+ * @license     GNU General Public License version 2 or later
+ */
+
+.jma_justify{text-align:justify;}
+.jma_latestnewsjs{font-family: Helvetica; text-align:left; border-spacing: 7px; margin-top: 5px; width: 100%; min-height: 82px; font-size:12px; padding-bottom:0; padding-top:5px; vertical-align:top;}
+.jma_latestnewsjs_td_20{width:20%;font-style:italic;font-size:10px;}
+.jma_latestnewsjs_td_60{width:60%;}
+.jma_latestnewsjs_th{font-size:12px; font-weight:bold;}

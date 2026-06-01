@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>MOD_UCM_DATA</name>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>(C)Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<creationDate>14 April 2020</creationDate>
+	<version>1.0.0</version>
+	<description>MOD_UCM_DATA_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_ucm_data">mod_ucm_data.php</filename>
+		<folder>tmpl</folder>
+		<folder>assets</folder>
+		<filename>helper.php</filename>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_ucm_data.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_ucm_data.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/modules/mod_ucm_data/assets/fields">
+				<field
+					name="ucmtypename"
+					type="ucmtype"
+					label="MOD_UCM_DATA_UCM_TYPE"
+					description="MOD_UCM_DATA_UCM_TYPE_DESC"
+				/>
+				<field
+					name="ucmfieldname"
+					type="ucmfields"
+					label="MOD_UCM_DATA_UCM_FIELD"
+					description="MOD_UCM_DATA_UCM_FIELD_DESC"
+					multiple="true"
+				/>
+				<field
+					name="limit"
+					type="text"
+					default="5"
+					label="MOD_UCM_DATA_LIMIT"
+					description="MOD_UCM_DATA_LIMIT_DESC"
+				/>
+				<field
+					name="addRecord"
+					type="radio"
+					label="MOD_UCM_DATA_ADD_RECORD"
+					description="MOD_UCM_DATA_ADD_RECORD_DESC"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="showEditButton"
+					type="radio"
+					label="MOD_UCM_DATA_SHOW_EDIT_RECORD"
+					description="MOD_UCM_DATA_SHOW_EDIT_RECORD"
+					default="1"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC"
+				/>
+
+				<field
+					name="moduleclass_sfx"
+					type="textarea"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+					rows="3"
+				/>
+
+				<field
+					name="cache"
+					type="list"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC"
+					default="1"
+					filter="integer"
+					>
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="number"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC"
+					default="900"
+					filter="integer"
+				/>
+
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid"
+					>
+					<option value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,166 @@
+<?php 
+/**
+ * @package Module EB Ajax Search for Joomla!
+ * @version 1.52: mod_ebajaxsearch.php Dec 2023
+ * @author url: https://www/extnbakers.com
+ * @copyright Copyright (C) 2022 extnbakers.com. All rights reserved.
+ * @license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html 
+**/
+defined('_JEXEC') or die; 
+
+JHtml::stylesheet('modules/' . $module->module . '/assets/css/style.css');
+$document = JFactory::getDocument();
+$document->addScript("modules/".$module->module."/assets/js/eb_ajaxsearch.js");
+
+$label        = htmlspecialchars($params->get('label', ''));
+$width        = (int) $params->get('width', '100');
+$text         = htmlspecialchars($params->get('text', ''));
+$button       = $params->get('button', 0);
+$button_background_color = $params->get('button_background_color');
+$button_text_color = $params->get('button_text_color');
+$button_text  = htmlspecialchars($params->get('button_text', JText::_('MOD_SEARCHAJAX_SEARCHBUTTON_TEXT')));
+// $max_results  = (int) $params->get('max_results', 5);
+$text_color =  $params->get('text_color');
+$background_color =  $params->get('background_color');
+$style_effect =  $params->get('style_effect');
+//$box_shadow_color = $params->get('box_shadow_color', 'rgba(140, 131, 131, 0.54'); 
+$show_title = $params->get('show_title', 1);
+$image_width = $params->get('image_width', '25');
+$content_width = 100 - $image_width;
+$desc_width = $content_width - 1;
+$perpage_limit     = $params->get('perpage_limit' , 5);
+$by_ordering      = $params->get('by_ordering', 'newest');
+
+$button_size      = $params->get('button_size', 'auto');
+$button_manual_width   = $params->get('button_manual_width');
+$button_manual_height  = $params->get('button_manual_height', '36');
+$btn_lineheight = $button_manual_height - 14;
+
+$redirect_search_url = $params->get('redirect_search_url', 0);
+$search_page_link = $params->get('search_page_link', 'index.php?option=com_search&view=search');
+
+$module_id = $module->id;
+$labelclass = '';
+if($label!='' || $button!='0'){
+  $labelclass = "is_btn_search";
+}
+$btn_width = '';
+if($width){
+  $btn_width = $width;
+  // echo $btn_width;
+} 
+if($label!=''){
+  $btn_width +=  15;
+} 
+if($button!='0'){
+  $btn_width += 20;
+}
+$css_class = "";
+if($label!='' || $button!='0'){
+  // $css_class .= '.is_btn_search.ajaxsearch_'.$module_id.'{width:'.$btn_width.'%;}';
+  $css_class .= '.is_btn_search.ajaxsearch_'.$module_id.' .btn-toolbar input[type="text"]{width:'.$width.'%;}';
+  $css_class .= '.is_btn_search.ajaxsearch_'.$module_id.' .ajaxsearch_result .result-element, .is_btn_search.ajaxsearch_'.$module_id.' .search-results .ajaxsearch_result{width:'.$width.'%;}';
+} else {
+  $css_class .= '.ajaxsearch_'.$module_id.' .ajaxsearch_result .result-element, .ajaxsearch_'.$module_id.' .search-results .ajaxsearch_result{width:100%;}';
+  $css_class .= '.ajaxsearch_'.$module_id.'{width:'.$width.'%; }';
+}
+if($label!=''){
+  $css_class .= '.is_btn_search.ajaxsearch_'.$module_id.' .search-label{max-width: 15%;
+    vertical-align: middle;}';
+}
+if($button!='0'){
+  // $css_class .= '.is_btn_search.ajaxsearch_'.$module_id.' .btn-group{width:20%;}';
+}
+if($label != ''){
+  $css_class .= '#is_ajaxsearch_result{ margin-left:17%; }';
+}
+/*if($style_effect == 'shadow'){
+  $css_class .= '.ajaxsearch_'.$module_id.' .search-results .ajaxsearch_result .result_wrap{ box-shadow: 0 0 3px 0px '.$box_shadow_color.'; box-shadow: 0 0px 20px 5px '.$box_shadow_color.';}';
+}*/
+
+if($button_background_color != ''){
+  $css_class .= '.ajaxsearch_'.$module_id.' .search_class{ background : '.$button_background_color.';}';
+} else {
+  $css_class .= '.ajaxsearch_'.$module_id.' .ajaxsearch_result .search_class{ background: #f6f6f6;}';
+}
+
+if($button_text_color != ''){
+  $css_class .= '.ajaxsearch_'.$module_id.' .search_class{ color : '.$button_text_color.';}';
+} else {
+  $css_class .= '.ajaxsearch_'.$module_id.' .ajaxsearch_result .search_class{ color: #ffffff;}';
+}
+
+if($text_color != ''){
+  $css_class .= '.ajaxsearch_'.$module_id.' .ajaxsearch_result span{ color : '.$text_color.';}';
+} else {
+  $css_class .= '.ajaxsearch_'.$module_id.' .ajaxsearch_result span{ color: #4e6170;}';
+}
+if($background_color != ''){
+  $css_class .= '.ajaxsearch_'.$module_id.' .ajaxsearch_result .result_wrap{ background : '.$background_color.';}';
+} else {
+  $css_class .= '.ajaxsearch_'.$module_id.' .ajaxsearch_result .result_wrap{ background: #ffffff;}';
+}
+
+$css_class .= '.ajaxsearch_'.$module_id.' .is_ajaxsearch_result_'.$module_id.'#is_ajaxsearch_result .result-element.desc_fullwidth span.small-desc{ width: 100% !important; }';
+
+$css_class .= '.ajaxsearch_'.$module_id.' .is_ajaxsearch_result_'.$module_id.'#is_ajaxsearch_result .result_box .result_img { width: '.$image_width.'%; }';
+$css_class .= '.ajaxsearch_'.$module_id.' .is_ajaxsearch_result_'.$module_id.'#is_ajaxsearch_result .result_box .result-products .result_content { width: '.$content_width.'%; }';
+$css_class .= '.ajaxsearch_'.$module_id.' .is_ajaxsearch_result_'.$module_id.'#is_ajaxsearch_result .result_box .result-element span.small-desc { width: '.$desc_width.'%; }';
+$css_class .= '.ajaxsearch_'.$module_id.' .is_ajaxsearch_result_'.$module_id.'.ajaxsearch_'.$module_id.' .is_ajaxsearch_result_'.$module_id.'.right-side-desc#is_ajaxsearch_result .result-element span.small-desc { width: 100%; }';
+$css_class .= '.ajaxsearch_'.$module_id.' .is_ajaxsearch_result_'.$module_id.'.right-side-desc#is_ajaxsearch_result .result-element span.small-desc{ width: 100%; }';
+
+if($button_size == 'manual'){
+    $css_class .= '.ajaxsearch_'.$module_id.' .search_class { width: '.$button_manual_width.'px; height: '.$button_manual_height.'px; text-align: center; line-height: '.$btn_lineheight.'px; }';
+}
+
+$css_class .= "@media only screen and (min-width: 0px) and (max-width: 767px){";
+    $css_class .= '.ajaxsearch_'.$module_id.' .is_ajaxsearch_result_'.$module_id.'#is_ajaxsearch_result .result_box .result_img { width: 25%; }';
+    $css_class .= '.ajaxsearch_'.$module_id.' .is_ajaxsearch_result_'.$module_id.'#is_ajaxsearch_result .result_box .result-products .result_content { width: 75%; }';
+    $css_class .= '.ajaxsearch_'.$module_id.' .is_ajaxsearch_result_'.$module_id.'#is_ajaxsearch_result .result_box .result-element span.small-desc { width: 100%; }';
+$css_class .= "}";
+$css_class .= "@media only screen and (max-width: 479px){";
+$css_class .= '.is_btn_search.ajaxsearch_'.$module_id.' .btn-toolbar input[type="text"]{width: 100%;}';
+if($button_size == 'manual'){
+  $css_class .= '.ajaxsearch_'.$module_id.'.is_btn_search.is_ajaxsearch .btn-group .search_class { width: '.$button_manual_width.'px; height: '.$button_manual_height.'px; text-align: center; }';
+}
+$css_class .= "}";
+if($show_title == 0){
+  $css_class .= '#is_ajaxsearch_result .result-element span.small-desc { margin-top : 5px; }';
+}
+?>
+<style type="text/css">
+  <?php echo $css_class; ?>
+</style>
+<div class="ajaxsearch_<?php echo $module_id; ?> is_ajaxsearch <?php echo $labelclass; ?>" id="ajaxsearch_<?php echo $module_id; ?>">
+  <?php // print_r(modEbajaxsearchHelper::getAjax()); ?>
+  <form id="mod-ajaxsearch-form-<?php echo $module_id; ?>" <?php if($button == 1 || $redirect_search_url == 1){ echo 'action="'.JUri::base().$search_page_link.'"'; } else { ?> onSubmit="return false;" <?php } ?> method="POST" class="form-inline">
+    <div class="btn-toolbar">
+        <?php if($label){ ?><label for="mod-search-searchword" class="search-label"><?php echo $label; ?></label><?php } ?>
+        <input onkeyup="searchFilter_<?php echo $module_id; ?>()" type="text" name="searchword" id="mod-ajaxsearch-searchword_<?php echo $module_id; ?>" placeholder="<?php echo $label; ?>" class="inputbox clearable" value="<?php echo $text; ?>" autocomplete="off" onblur="if (this.value=='') this.value='<?php echo $text; ?>';" onfocus="if (this.value=='<?php echo $text; ?>') this.value='';" />
+
+        <?php if ($button) : ?>
+          <div class="btn-group">
+            <a class="search_class" target="_blank" data-url="<?php if($redirect_search_url == 1){ echo JUri::base().$search_page_link; } else { echo JUri::base().'index.php?option=com_search&view=search'; } ?>" href="<?php if($redirect_search_url == 1){ echo JUri::base().$search_page_link; } else { echo JUri::base().'index.php?option=com_search&view=search'; } ?>"><?php echo JHtml::tooltipText($button_text);?></a>
+          </div>
+        <?php endif; ?>
+        <div class="clearfix"></div>
+      </div>
+    </form>
+    <div class="search-results">
+      <div class="is_ajaxsearch_result_<?php echo $module_id; ?> ajaxsearch_result" id="is_ajaxsearch_result"></div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    var width = jQuery('.is_ajaxsearch_result_<?php echo $module_id; ?>').width();
+  // alert(width);
+  if(width <= 550){
+    jQuery('.is_ajaxsearch_result_<?php echo $module_id; ?>').addClass('right-side-desc');
+  }
+  var label_width = jQuery('.ajaxsearch_<?php echo $module_id; ?> .search-label').width();
+  // console.log(label_width);
+  if(label_width!=null){
+    label_width_total = label_width + 10;
+    jQuery('.is_ajaxsearch_result_<?php echo $module_id; ?>').css('margin-left', label_width_total+'px');
+  }
+</script>
+

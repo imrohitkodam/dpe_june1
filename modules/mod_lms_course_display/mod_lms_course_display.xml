@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="module" client ="site" method="upgrade">
+	<name>mod_lms_course_display</name>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>Copyright (C) 2014 - 2023 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<creationDate>13th Jul 2023</creationDate>
+	<version>4.0.5</version>
+	<description>MOD_LMS_COURSE_DISPLAY_DESC</description>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_lms_course_display.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_lms_course_display.sys.ini</language>
+	</languages>
+
+	<files>
+		<filename module="mod_lms_course_display">mod_lms_course_display.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+		<folder>assets</folder>
+	</files>
+
+	<config name="params">
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="limit" type="text" default="2"
+					label="MOD_COURSE_FETCH_LIMIT"
+					description="MOD_COURSE_FETCH_LIMIT_DESC" />
+				<field name="displayLimit" type="text" default="2"
+					label="MOD_COURSE_DISPLAY_LIMIT"
+					description="MOD_COURSE_DISPLAY_LIMIT_DESC" />
+				<field name="module_mode" type="list" default="0"
+					label="MOD_COURSE_DISPLAY_BEHAVIOUR_MODE"
+					description="MOD_COURSE_DISPLAY_BEHAVIOUR_MODE_DES">
+					<option value="">MOD_COURSE_DISPLAY_BEHAVIOUR_MODE</option>
+					<option value="lms_featured">MOD_COURSE_DISPLAY_BEHAVIOUR_FEATURED</option>
+					<option value="lms_recentlyAdded">MOD_COURSE_DISPLAY_RECENTLY_ADDED</option>
+					<option value="lms_enrolled">MOD_COURSE_DISPLAY_ENROLLED</option>
+					<option value="lms_notEnrolled">MOD_COURSE_DISPLAY_WITHOUT_ENROLLED</option>					
+					<option value="lms_upcoming">MOD_COURSE_DISPLAY_UPCOMING_COURSES</option>
+					<option value="lms_completed">MOD_COURSE_DISPLAY_COMPLETED_COURSES</option>
+					<option value="lms_recommended">MOD_COURSE_DISPLAY_RECOMMENDED_COURSES</option>
+					<option value="lms_suggestedCategory">MOD_COURSE_DISPLAY_SUGGESTED_COURSES</option>
+				</field>
+				<field name="include_enrolled_courses" type="radio"
+					class="btn-group"
+					label="MOD_COURSE_INCLUDE_ENROLLED_COURSES"
+					description="MOD_COURSE_INCLUDE_ENROLLED_COURSES_DESC"
+					default="0"
+					showon="module_mode:lms_featured">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="course_category" type="category" default="0"
+					label="MOD_COURSE_DISPLAY_ALLOWED_CATEGORY"
+					element="jma_latestnews_js" multiple="true" showon="module_mode!:lms_suggestedCategory"
+					description="MOD_COURSE_DISPLAY_ALLOWED_CATEGORY_DESC"
+					key_field='id' value_field='title' extension="com_tjlms"
+					/>
+				<field name="pin_width" type="text" default="180"
+					label="MOD_COURSE_DISPLAY_PIN_WIDTH"
+					description="MOD_COURSE_DISPLAY_PIN_WIDTH_DESC" />
+				<field name="pin_padding" type="text" default="3"
+					label="MOD_COURSE_DISPLAY_PIN_PADDING"
+					description="MOD_COURSE_DISPLAY_PIN_PADDING_DESC" />
+				<field name="title_height" type="text" default="40"
+					label="MOD_COURSE_DISPLAY_TITLEHEIGHT"
+					description="MOD_COURSE_DISPLAY_TITLEHEIGHTE_DES" />
+				<field name="course_images_size" type="list"
+					label="MOD_COURSE_DISPLAY_COURSE_IMAGES_SIZE_LABEL"
+					description="MOD_COURSE_DISPLAY_COURSE_IMAGES_SIZE_DESC"
+					class="btn-group" default="S_">
+					<option value="S_">MOD_COURSE_DISPLAY_COURSE_IMAGES_SIZE_SMALL
+					</option>
+					<option value="M_">MOD_COURSE_DISPLAY_COURSE_IMAGES_SIZE_MEDIUM
+					</option>
+					<option value="L_">MOD_COURSE_DISPLAY_COURSE_IMAGES_SIZE_LARGE
+					</option>
+				</field>
+				<field name="tags" type="tag" label="JTAG"
+					description="JTAG_DESC" class="inputbox span4" showon="module_mode!:lms_suggestedCategory" multiple="true" />
+				<field name="pin_view_config_set"  type="radio" label="MOD_COURSE_DISPLAY_PIN_VIEW_CONFIGS" description="MOD_COURSE_DISPLAY_PIN_VIEW_CONFIGS_DESC" class="btn-group" default="0">
+					<option value='1'>JYES</option>
+					<option value='0'>JNO</option>
+				</field>
+				<!-- <field name="pin_view_type" type="radio" showon="pin_view_config_set:1" label="MOD_COURSE_DISPLAY_COURSE_TYPE" description="MOD_COURSE_DISPLAY_COURSE_TYPE_DESC" class="btn-group" default="0">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field> -->
+				<field name="pin_view_likes" type="radio" showon="pin_view_config_set:1" label="MOD_COURSE_DISPLAY_PIN_VIEW_LIKES" description="MOD_COURSE_DISPLAY_PIN_VIEW_LIKES_DESC" class="btn-group" default="1">
+					<option value='1'>JYES</option>
+					<option value='0'>JNO</option>
+				</field>
+				<field name="pin_view_enrollments" type="radio" showon="pin_view_config_set:1" label="MOD_COURSE_DISPLAY_PIN_VIEW_ENROLLMENTS" description="MOD_COURSE_DISPLAY_PIN_VIEW_ENROLLMENTS_DESC" class="btn-group" default="1">
+					<option value='1'>JYES</option>
+					<option value='0'>JNO</option>
+				</field>
+				<!-- <field name="pin_view_comments" class="btn-group" type="radio" showon="pin_view_config_set:1" default="0" description="MOD_COURSE_DISPLAY_PIN_VIEW_COMMENTS_DESC" label="MOD_COURSE_DISPLAY_PIN_VIEW_COMMENTS">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field> -->
+				<field name="pin_view_category" type="radio" showon="pin_view_config_set:1" label="MOD_COURSE_DISPLAY_PIN_VIEW_CATEGORY" description="MOD_COURSE_DISPLAY_PIN_VIEW_CATEGORY_DESC" class="btn-group" default="1">
+					<option value='1'>JYES</option>
+					<option value='0'>JNO</option>
+				</field>
+				<field name="pin_view_tags" type="radio" showon="pin_view_config_set:1" label="MOD_COURSE_DISPLAY_PIN_VIEW_TAGS" description="MOD_COURSE_DISPLAY_PIN_VIEW_TAGS_DESC" class="btn-group" default="0">
+					<option value='1'>JYES</option>
+					<option value='0'>JNO</option>
+				</field>
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="layout" type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field name="moduleclass_sfx" type="text" default=""
+					label="MOD_COURSE_DISPLAY_MOD_SUFIX"
+					description="MOD_COURSE_DISPLAY_MOD_SUFIX_DES" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

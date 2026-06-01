@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" client="site" method="upgrade">
+    <name>mod_seaichat</name>
+    <author>SE Extensions</author>
+    <creationDate>2026-03-19</creationDate>
+    <copyright>(C) 2026 SE Extensions. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later</license>
+    <authorEmail>support@se-extensions.com</authorEmail>
+    <authorUrl>https://www.se-extensions.com</authorUrl>
+    <version>2.0.7</version>
+    <description>MOD_SEAICHAT_DESCRIPTION</description>
+    <files>
+        <filename>LICENSE.txt</filename>
+        <filename module="mod_seaichat">mod_seaichat.php</filename>
+        <folder>tmpl</folder>
+        <folder>language</folder>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                    name="display_mode"
+                    type="list"
+                    label="MOD_SEAICHAT_DISPLAY_MODE"
+                    description="MOD_SEAICHAT_DISPLAY_MODE_DESC"
+                    default="inline"
+                >
+                    <option value="inline">MOD_SEAICHAT_MODE_INLINE</option>
+                    <option value="bubble">MOD_SEAICHAT_MODE_BUBBLE</option>
+                </field>
+                <field
+                    name="chat_height"
+                    type="text"
+                    label="MOD_SEAICHAT_CHAT_HEIGHT"
+                    description="MOD_SEAICHAT_CHAT_HEIGHT_DESC"
+                    default="500px"
+                    hint="500px"
+                />
+            </fieldset>
+        </fields>
+    </config>
+</extension>

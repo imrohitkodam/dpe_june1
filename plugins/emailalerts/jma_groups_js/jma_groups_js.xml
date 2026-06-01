@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="emailalerts" method="upgrade">
+	<name>plg_jma_groups_js_name</name>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>Copyright (c) 2009-2018 Techjoomla. All rights reserved.</copyright>
+	<creationDate>21st Sept 2018</creationDate>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>2.6.0</version>
+	<description>PLG_JMA_GROUPS_JS_DESC</description>
+	<files>
+		<filename plugin="jma_groups_js">jma_groups_js.php</filename>
+		<folder>jma_groups_js</folder>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="language/en-GB">
+		<language tag="en-GB">en-GB.plg_emailalerts_jma_groups_js.sys.ini</language>
+		<language tag="en-GB">en-GB.plg_emailalerts_jma_groups_js.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" label="Plugin Parameters">
+				<field name="plugintitle" type="text" default="PLG_JMA_G_JS_TRANSLATABLE_TITLE" label="PLG_JMA_G_LBL_PLUGIN_TITLE" description="PLG_JMA_G_DESC_PLUGIN_TITLE" />
+			</fieldset>
+			<fieldset name="legacy" label="PLG_JMA_G_LEGACY" description="PLG_JMA_G_LEGACY_DESC">
+				<field name="catid" type="sql" default="1" label="PLG_JMA_G_LBL_CATEGORY" query="SELECT id , name FROM #__community_groups_category" key_field='id' value_field='name' multiple="multiple" description="PLG_JMA_G_DESC_CATEGORY" />
+				<field name="no_of_users" type="text" default="5" class="required validate-numeric inputbox" label="PLG_JMA_G_LBL_COUNT" description="PLG_JMA_G_DESC_COUNT" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

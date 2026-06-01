@@ -1,0 +1,205 @@
+@import "variables";
+
+& {
+    --main-margin: 10px;
+
+    @media (min-width: $screen-md) {
+        --main-margin: 20px;
+    }
+}
+
+[data-modals-element="overlay"] {
+    backdrop-filter: blur(10px);
+}
+
+[data-modals-element="spinner"] {
+}
+
+[data-modals-element="container"] {
+}
+
+[data-modals-element="main"] {
+    margin: var(--main-margin);
+}
+
+[data-modals-element="left"] {
+    margin:       calc(var(--main-margin) * -1);
+    margin-to-left: 0;
+}
+
+[data-modals-element="center"] {
+}
+
+[data-modals-element="right"] {
+    margin:      calc(var(--main-margin) * -1);
+    margin-to-right: 0;
+}
+
+[data-modals-element="slides"] {
+}
+
+[data-modals-element="slide"] {
+    padding:    var(--main-margin);
+    max-width:  100%;
+    max-height: 100%;
+}
+
+[data-modals-element="slide-container"] {
+}
+
+[data-modals-orientation="vertical"] {
+    [data-modals-element="slide-before"],
+    [data-modals-element="slide-after"] {
+        width:      100%;
+        max-height: 30vh;
+    }
+
+    [data-modals-element="slide-before"] {
+        margin-top:    -42px;
+        margin-bottom: .75rem;
+    }
+
+    [data-modals-element="slide-after"] {
+        margin-top: .75rem;
+    }
+}
+
+[data-modals-orientation="horizontal"] {
+    [data-modals-element="slide-before"],
+    [data-modals-element="slide-after"] {
+        max-width: 30vw;
+    }
+
+    [data-modals-element="slide-before"] {
+        margin-to-left: 1rem;
+    }
+
+    [data-modals-element="slide-after"] {
+        margin-to-right: 1rem;
+    }
+}
+
+[data-modals-element="slide-content"],
+[data-modals-element="slide-title"],
+[data-modals-element="slide-description"] {
+}
+
+[data-modals-element="slide-content"] {
+    background:    #ffffff;
+    margin:        0;
+    border-radius: 4px;
+    overflow:      hidden;
+}
+
+[data-modals-element="slide-title"],
+[data-modals-element="slide-description"] {
+    margin: 0;
+}
+
+[data-modals-element="slide-title"] {
+}
+
+[data-modals-element="slide-description"] {
+}
+
+[data-modals-orientation="vertical"] {
+    [data-modals-element="slide-title"],
+    [data-modals-element="slide-description"] {
+        margin:     0 1rem;
+        text-align: center;
+    }
+}
+
+[data-modals-element="previous"],
+[data-modals-element="next"],
+[data-modals-element="close"],
+[data-modals-element="pagination-button"] {
+    opacity: 0.7;
+    padding: 0;
+    margin:  0;
+
+    &.active,
+    &:hover,
+    &:focus {
+        opacity: 1;
+    }
+
+    &:focus-visible:not(.active) {
+        outline: 2px solid #0f3d81;
+    }
+}
+
+[data-modals-element="close"] {
+    background-size: 32px 32px;
+    width:           42px;
+    height:          42px;
+    margin:          var(--main-margin) var(--main-margin) 0 var(--main-margin);
+}
+
+[data-modals-element="previous"],
+[data-modals-element="next"] {
+    display:         none;
+    background-size: 22px 40px;
+    height:          100%;
+    min-height:      22px;
+    padding:         0;
+
+    @media (min-width: $screen-md) {
+        display: inherit;
+        width:   60px;
+    }
+
+    @media (min-width: $screen-lg) {
+        width: 100px;
+    }
+}
+
+@import "styling-pagination";
+
+/* CONTENT TYPES */
+
+[data-modals-type="image"],
+[data-modals-type="audio"],
+[data-modals-type="video"] {
+    [data-modals-element="slide-content"] {
+        background: transparent;
+    }
+}
+
+[data-modals-type="inline"] {
+    [data-modals-element="slide-content"] {
+        padding:  20px;
+        overflow: auto;
+    }
+}
+
+[data-modals-type="iframe"] {
+    [data-modals-element="slide-content"] {
+        iframe {
+            background: #ffffff;
+        }
+    }
+}
+
+[data-modals-element="countdown"] {
+    width:            100%;
+    height:           3px;
+    position:         absolute;
+    top:              0;
+    left:             0;
+    background-color: rgba(127, 127, 127, 100%);
+}
+
+&.just-the-modal {
+    [data-modals-element="overlay"],
+    [data-modals-element="left"],
+    [data-modals-element="right"],
+    [data-modals-element="pagination-bar"],
+    [data-modals-element="close-bar"] {
+        display: none;
+    }
+
+    [data-modals-element="slide-content"] {
+        filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+    }
+}

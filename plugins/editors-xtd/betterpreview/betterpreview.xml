@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.9" type="plugin" group="editors-xtd" method="upgrade">
+  <name>PLG_EDITORS-XTD_BETTERPREVIEW</name>
+  <description>PLG_EDITORS-XTD_BETTERPREVIEW_DESC</description>
+  <version>6.7.1PRO</version>
+  <creationDate>September 2022</creationDate>
+  <author>Regular Labs (Peter van Westen)</author>
+  <authorEmail>info@regularlabs.com</authorEmail>
+  <authorUrl>https://regularlabs.com</authorUrl>
+  <copyright>Copyright © 2022 Regular Labs - All Rights Reserved</copyright>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <files>
+    <file plugin="betterpreview">betterpreview.php</file>
+    <file>helper.php</file>
+    <folder>language</folder>
+  </files>
+  <config>
+    <fields name="params" addfieldpath="/libraries/regularlabs/fields">
+      <fieldset name="basic">
+        <field name="@load_language_regularlabs" type="rl_loadlanguage" extension="plg_system_regularlabs"/>
+        <field name="@load_language" type="rl_loadlanguage" extension="plg_editors-xtd_betterpreview"/>
+        <field name="@license" type="rl_license" extension="BETTERPREVIEW"/>
+        <field name="@version" type="rl_version" extension="BETTERPREVIEW"/>
+        <field name="@dependency" type="rl_dependency" label="BP_THE_SYSTEM_PLUGIN" file="/plugins/system/betterpreview/betterpreview.xml"/>
+        <field name="@header" type="rl_header" label="BETTERPREVIEW" description="BETTERPREVIEW_DESC" url="https://regularlabs.com/betterpreview"/>
+        <field name="@note__settings" type="note" class="alert alert-info" description="BP_SETTINGS,&lt;a href=&quot;index.php?option=com_plugins&amp;filter_folder=system&amp;filter_search=better preview&quot; target=&quot;_blank&quot;&gt;,&lt;/a&gt;"/>
+      </fieldset>
+    </fields>
+  </config>
+</extension>

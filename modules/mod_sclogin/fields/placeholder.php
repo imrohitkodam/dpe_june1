@@ -1,0 +1,27 @@
+<?php
+/**
+ * @package         SCLogin
+ * @copyright (c)   2009-2023 by SourceCoast - All Rights Reserved
+ * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ * @version         Release v9.0.244
+ * @build-date      2023/04/08
+ */
+
+defined('JPATH_PLATFORM') or die;
+
+use Joomla\CMS\Form\FormField;
+
+jimport('joomla.form.helper');
+
+class JFormFieldPlaceholder extends FormField
+{
+    public function getInput()
+    {
+        return "";
+    }
+
+    public function getLabel()
+    {
+        return "";
+    }
+}

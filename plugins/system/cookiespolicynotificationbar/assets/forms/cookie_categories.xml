@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset>
+
+        <field name="cookie_category_id" type="text" label="PLG_SYSTEM_CPNB_UNIQUE_CATEGORY_ID_LBL" description="PLG_SYSTEM_CPNB_UNIQUE_CATEGORY_ID_DESC" />
+
+        <field name="cookie_category_name" type="text" label="PLG_SYSTEM_CPNB_COOKIE_CAT_NAME_LBL" description="PLG_SYSTEM_CPNB_COOKIE_CAT_NAME_DESC" />
+       
+        <field name="cookie_category_description" type="textarea" default="" label="PLG_SYSTEM_CPNB_COOKIE_CAT_DESCRIPTION_LBL" description="PLG_SYSTEM_CPNB_COOKIE_CAT_DESCRIPTION_DESC" rows="6" cols="100" filter="raw" />
+
+        <field name="cookie_category_checked_by_default" type="list" class="btn-group btn-group-yesno" default="1" label="PLG_SYSTEM_CPNB_COOKIE_CATEGORY_CHECKED_BY_DEFAULT_LBL" description="PLG_SYSTEM_CPNB_COOKIE_CATEGORY_CHECKED_BY_DEFAULT_DESC">
+            <option value="2">PLG_SYSTEM_CPNB_COOKIE_CATEGORY_CHECKED_BY_DEFAULT_OPTION_2</option>
+            <option value="1">PLG_SYSTEM_CPNB_COOKIE_CATEGORY_CHECKED_BY_DEFAULT_OPTION_1</option>
+            <option value="0">PLG_SYSTEM_CPNB_COOKIE_CATEGORY_CHECKED_BY_DEFAULT_OPTION_0</option>
+        </field>
+
+        <field name="cookie_category_status" type="list" class="btn-group btn-group-yesno" default="1" label="PLG_SYSTEM_CPNB_STATUS_LBL" description="PLG_SYSTEM_CPNB_STATUS_DESC">
+            <option value="1">JENABLED</option>
+            <option value="0">JDISABLED</option>
+        </field>
+     
+    </fieldset>
+</form>

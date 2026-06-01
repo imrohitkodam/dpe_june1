@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="6.0" method="upgrade" group="content">
+<name>PLG_CONTENT_AI_SEO</name>
+<author>Techjoomla</author>
+<version>1.0.0</version>
+<description>PLG_CONTENT_AI_SEO_XML_DESCRIPTION</description>
+<files>
+<filename plugin="ai_seo">ai_seo.php</filename>
+    <filename>index.html</filename>
+</files>
+
+<languages folder="language">
+    <language tag="en-GB">en-GB/en-GB.plg_content_ai_seo.ini</language>
+    <language tag="en-GB">en-GB/en-GB.plg_content_ai_seo.sys.ini</language>
+</languages>
+
+<media destination="plg_content_ai_seo" folder="media">
+    <folder>css</folder>
+    <folder>js</folder>
+</media>
+
+
+<config>
+<fields name="params">
+<fieldset name="basic">
+<!-- AI Provider Selection -->
+<field 
+    name="ai_provider" 
+    type="list" 
+    label="PLG_CONTENT_AI_SEO_PROVIDER_LABEL" 
+    description="PLG_CONTENT_AI_SEO_PROVIDER_DESC"
+    default="groq"
+>
+    <option value="groq" label="PLG_CONTENT_AI_SEO_OPTION_GROQ" />
+    <option value="openai" label="PLG_CONTENT_AI_SEO_OPTION_OPENAI" />
+    <option value="claude" label="PLG_CONTENT_AI_SEO_OPTION_CLAUDE" />
+    <option value="gemini" label="PLG_CONTENT_AI_SEO_OPTION_GEMINI" />
+</field>
+
+<!-- Groq Settings -->
+<field 
+    name="groq_api_key" 
+    type="password" 
+    label="PLG_CONTENT_AI_SEO_GROQ_KEY_LABEL" 
+    description="PLG_CONTENT_AI_SEO_GROQ_KEY_DESC" 
+    showon="ai_provider:groq"
+/>
+<field 
+    name="groq_model" 
+    type="list" 
+    default="llama-3.3-70b-versatile" 
+    label="PLG_CONTENT_AI_SEO_GROQ_MODEL_LABEL" 
+    description="PLG_CONTENT_AI_SEO_GROQ_MODEL_DESC"
+    showon="ai_provider:groq"
+>
+    <option value="auto" label="PLG_CONTENT_AI_SEO_MODEL_AUTO" />
+    <option value="llama-3.3-70b-versatile" label="PLG_CONTENT_AI_SEO_MODEL_LLAMA_3_3_70B" />
+    <option value="llama-3.1-8b-instant" label="PLG_CONTENT_AI_SEO_MODEL_LLAMA_3_1_8B" />
+    <option value="llama3-70b-8192" label="PLG_CONTENT_AI_SEO_MODEL_LLAMA_3_70B" />
+    <option value="llama3-8b-8192" label="PLG_CONTENT_AI_SEO_MODEL_LLAMA_3_8B" />
+    <option value="mixtral-8x7b-32768" label="PLG_CONTENT_AI_SEO_MODEL_MIXTRAL_8X7B" />
+    <option value="gemma2-9b-it" label="PLG_CONTENT_AI_SEO_MODEL_GEMMA_2_9B" />
+    <option value="deepseek-r1-distill-llama-70b" label="PLG_CONTENT_AI_SEO_MODEL_DEEPSEEK_R1" />
+    <option value="qwen-qwq-32b" label="PLG_CONTENT_AI_SEO_MODEL_QWEN_QWQ" />
+</field>
+<field 
+    name="groq_max_tokens" 
+    type="number" 
+    default="3000" 
+    label="PLG_CONTENT_AI_SEO_GROQ_MAX_TOKENS_LABEL" 
+    description="PLG_CONTENT_AI_SEO_GROQ_MAX_TOKENS_DESC" 
+    showon="ai_provider:groq"
+/>
+
+<!-- OpenAI Settings -->
+<field 
+    name="openai_api_key" 
+    type="password" 
+    label="PLG_CONTENT_AI_SEO_OPENAI_KEY_LABEL" 
+    description="PLG_CONTENT_AI_SEO_OPENAI_KEY_DESC"
+    showon="ai_provider:openai"
+/>
+<field 
+    name="openai_model" 
+    type="list" 
+    label="PLG_CONTENT_AI_SEO_OPENAI_MODEL_LABEL" 
+    description="PLG_CONTENT_AI_SEO_OPENAI_MODEL_DESC"
+    default="gpt-4-turbo-preview"
+    showon="ai_provider:openai"
+>
+    <option value="auto" label="PLG_CONTENT_AI_SEO_MODEL_AUTO" />
+    <option value="gpt-4o" label="PLG_CONTENT_AI_SEO_MODEL_GPT_4O" />
+    <option value="gpt-4o-mini" label="PLG_CONTENT_AI_SEO_MODEL_GPT_4O_MINI" />
+    <option value="gpt-4-turbo-preview" label="PLG_CONTENT_AI_SEO_MODEL_GPT_4_TURBO" />
+    <option value="o1-preview" label="PLG_CONTENT_AI_SEO_MODEL_O1_PREVIEW" />
+    <option value="o1-mini" label="PLG_CONTENT_AI_SEO_MODEL_O1_MINI" />
+    <option value="gpt-3.5-turbo" label="PLG_CONTENT_AI_SEO_MODEL_GPT_3_5_TURBO" />
+</field>
+
+<!-- Claude Settings -->
+<field 
+    name="claude_api_key" 
+    type="password" 
+    label="PLG_CONTENT_AI_SEO_CLAUDE_KEY_LABEL" 
+    description="PLG_CONTENT_AI_SEO_CLAUDE_KEY_DESC"
+    showon="ai_provider:claude"
+/>
+<field 
+    name="claude_model" 
+    type="list" 
+    label="PLG_CONTENT_AI_SEO_CLAUDE_MODEL_LABEL" 
+    description="PLG_CONTENT_AI_SEO_CLAUDE_MODEL_DESC"
+    default="claude-3-5-sonnet-20241022"
+    showon="ai_provider:claude"
+>
+    <option value="auto" label="PLG_CONTENT_AI_SEO_MODEL_AUTO" />
+    <option value="claude-3-5-sonnet-latest" label="PLG_CONTENT_AI_SEO_MODEL_CLAUDE_3_5_SONNET" />
+    <option value="claude-3-5-haiku-latest" label="PLG_CONTENT_AI_SEO_MODEL_CLAUDE_3_5_HAIKU" />
+    <option value="claude-3-opus-latest" label="PLG_CONTENT_AI_SEO_MODEL_CLAUDE_3_OPUS" />
+    <option value="claude-3-sonnet-20240229" label="PLG_CONTENT_AI_SEO_MODEL_CLAUDE_3_SONNET" />
+    <option value="claude-3-haiku-20240307" label="PLG_CONTENT_AI_SEO_MODEL_CLAUDE_3_HAIKU" />
+</field>
+
+<!-- Gemini Settings -->
+<field 
+    name="gemini_api_key" 
+    type="password" 
+    label="PLG_CONTENT_AI_SEO_GEMINI_KEY_LABEL" 
+    description="PLG_CONTENT_AI_SEO_GEMINI_KEY_DESC"
+    showon="ai_provider:gemini"
+/>
+<field 
+    name="gemini_model" 
+    type="list" 
+    label="PLG_CONTENT_AI_SEO_GEMINI_MODEL_LABEL" 
+    description="PLG_CONTENT_AI_SEO_GEMINI_MODEL_DESC"
+    default="gemini-1.5-pro"
+    showon="ai_provider:gemini"
+>
+
+
+    <option value="auto" label="PLG_CONTENT_AI_SEO_MODEL_AUTO" />
+    <!-- <option value="gemini-3-pro" label="PLG_CONTENT_AI_SEO_MODEL_GEMINI_3_PRO" />   No Supported this model -->
+    <!-- <option value="gemini-3-flash" label="PLG_CONTENT_AI_SEO_MODEL_GEMINI_3_FLASH" />  No Supported this model -->
+    <option value="gemini-1.5-pro" label="PLG_CONTENT_AI_SEO_MODEL_GEMINI_1_5_PRO" />  
+    <option value="gemini-1.5-flash" label="PLG_CONTENT_AI_SEO_MODEL_GEMINI_1_5_FLASH" />
+    <option value="gemini-1.5-flash-8b" label="PLG_CONTENT_AI_SEO_MODEL_GEMINI_1_5_FLASH_8B" />
+    <option value="gemini-2.0-flash" label="PLG_CONTENT_AI_SEO_MODEL_GEMINI_2_0_FLASH" />
+    <!-- <option value="gemini-1.5-pro-latest" label="PLG_CONTENT_AI_SEO_MODEL_GEMINI_1_5_PRO_LATEST" /> No Supported this model -->
+    <!-- <option value="gemini-1.5-pro-002" label="PLG_CONTENT_AI_SEO_MODEL_GEMINI_1_5_PRO_002" /> No Supported this model -->
+    <!-- <option value="gemini-1.5-pro-001" label="PLG_CONTENT_AI_SEO_MODEL_GEMINI_1_5_PRO_001" /> No Supported this model -->
+    <!-- <option value="gemini-1.5-flash-latest" label="PLG_CONTENT_AI_SEO_MODEL_GEMINI_1_5_FLASH_LATEST" /> No Supported this model -->
+    <!-- <option value="gemini-1.5-flash-002" label="PLG_CONTENT_AI_SEO_MODEL_GEMINI_1_5_FLASH_002" /> No Supported this model-->
+    <!-- <option value="gemini-1.5-flash-001" label="PLG_CONTENT_AI_SEO_MODEL_GEMINI_1_5_FLASH_001" /> No Supported this model -->
+    <!-- <option value="gemini-2.0-flash-exp" label="PLG_CONTENT_AI_SEO_MODEL_GEMINI_2_0_FLASH" /> No Supported this model -->
+    <!-- <option value="gemini-1.0-pro" label="PLG_CONTENT_AI_SEO_MODEL_GEMINI_1_0_PRO" /> No Supported this model -->
+</field>
+
+<!-- Other Settings -->
+<field name="enabled_keywords" type="radio" default="1" label="PLG_CONTENT_AI_SEO_ENABLED_KEYWORDS_LABEL" description="PLG_CONTENT_AI_SEO_ENABLED_KEYWORDS_DESC">
+<option value="1">JYES</option>
+<option value="0">JNO</option>
+</field>
+<field name="enabled_meta_title" type="radio" default="0" label="PLG_CONTENT_AI_SEO_ENABLED_META_TITLE_LABEL" description="PLG_CONTENT_AI_SEO_ENABLED_META_TITLE_DESC">
+<option value="1">JYES</option><option value="0">JNO</option>
+</field>
+<field name="enabled_meta_description" type="radio" default="0" label="PLG_CONTENT_AI_SEO_ENABLED_META_DESC_LABEL" description="PLG_CONTENT_AI_SEO_ENABLED_META_DESC_DESC">
+<option value="1">JYES</option><option value="0">JNO</option>
+</field>
+<field name="enabled_summary_field" type="radio" default="0" label="PLG_CONTENT_AI_SEO_ENABLED_SUMMARY_LABEL" description="PLG_CONTENT_AI_SEO_ENABLED_SUMMARY_DESC">
+<option value="1">JYES</option><option value="0">JNO</option>
+</field>
+<field name="enabled_alt" type="radio" default="0" label="PLG_CONTENT_AI_SEO_ENABLED_ALT_LABEL" description="PLG_CONTENT_AI_SEO_ENABLED_ALT_DESC">
+<option value="1">JYES</option><option value="0">JNO</option>
+</field>
+<field name="enabled_content_analysis" type="radio" default="1" label="PLG_CONTENT_AI_SEO_ENABLED_ANALYSIS_LABEL" description="PLG_CONTENT_AI_SEO_ENABLED_ANALYSIS_DESC">
+<option value="1">JYES</option><option value="0">JNO</option>
+</field>
+<field name="enabled_content_rewrite" type="radio" default="1" label="PLG_CONTENT_AI_SEO_ENABLED_REWRITE_LABEL" description="PLG_CONTENT_AI_SEO_ENABLED_REWRITE_DESC">
+<option value="1">JYES</option><option value="0">JNO</option>
+</field>
+<field name="enabled_article_generation" type="radio" default="1" label="PLG_CONTENT_AI_SEO_ENABLED_ARTICLE_GEN_LABEL" description="PLG_CONTENT_AI_SEO_ENABLED_ARTICLE_GEN_DESC">
+<option value="1">JYES</option><option value="0">JNO</option>
+</field>
+<field name="enabled_schema" type="radio" default="1" label="PLG_CONTENT_AI_SEO_ENABLED_SCHEMA_LABEL" description="PLG_CONTENT_AI_SEO_ENABLED_SCHEMA_DESC">
+    <option value="1">JYES</option><option value="0">JNO</option>
+</field>
+
+<field 
+    name="writing_style" 
+    type="list" 
+    default="creative" 
+    label="PLG_CONTENT_AI_SEO_WRITING_STYLE_LABEL" 
+    description="PLG_CONTENT_AI_SEO_WRITING_STYLE_DESC"
+>
+    <option value="creative" label="PLG_CONTENT_AI_SEO_STYLE_CREATIVE" />
+    <option value="informative" label="PLG_CONTENT_AI_SEO_STYLE_INFORMATIVE" />
+    <option value="descriptive" label="PLG_CONTENT_AI_SEO_STYLE_DESCRIPTIVE" />
+    <option value="evaluative" label="PLG_CONTENT_AI_SEO_STYLE_EVALUATIVE" />
+    <option value="technical" label="PLG_CONTENT_AI_SEO_STYLE_TECHNICAL" />
+    <option value="analytical" label="PLG_CONTENT_AI_SEO_STYLE_ANALYTICAL" />
+    <option value="narrative" label="PLG_CONTENT_AI_SEO_STYLE_NARRATIVE" />
+</field>
+
+<field 
+    name="writing_tone" 
+    type="list" 
+    default="neutral" 
+    label="PLG_CONTENT_AI_SEO_WRITING_TONE_LABEL" 
+    description="PLG_CONTENT_AI_SEO_WRITING_TONE_DESC"
+>
+    <option value="neutral" label="PLG_CONTENT_AI_SEO_TONE_NEUTRAL" />
+    <option value="cheerful" label="PLG_CONTENT_AI_SEO_TONE_CHEERFUL" />
+    <option value="formal" label="PLG_CONTENT_AI_SEO_TONE_FORMAL" />
+    <option value="informal" label="PLG_CONTENT_AI_SEO_TONE_INFORMAL" />
+    <option value="inspirational" label="PLG_CONTENT_AI_SEO_TONE_INSPIRATIONAL" />
+    <option value="emotional" label="PLG_CONTENT_AI_SEO_TONE_EMOTIONAL" />
+    <option value="sarcastic" label="PLG_CONTENT_AI_SEO_TONE_SARCASTIC" />
+</field>
+
+<field 
+    name="target_language" 
+    type="list" 
+    default="English" 
+    label="PLG_CONTENT_AI_SEO_TARGET_LANG_LABEL" 
+    description="PLG_CONTENT_AI_SEO_TARGET_LANG_DESC"
+>
+    <option value="English" label="PLG_CONTENT_AI_SEO_LANG_ENGLISH" />
+    <option value="Spanish" label="PLG_CONTENT_AI_SEO_LANG_SPANISH" />
+    <option value="French" label="PLG_CONTENT_AI_SEO_LANG_FRENCH" />
+    <option value="German" label="PLG_CONTENT_AI_SEO_LANG_GERMAN" />
+    <option value="Italian" label="PLG_CONTENT_AI_SEO_LANG_ITALIAN" />
+    <option value="Portuguese" label="PLG_CONTENT_AI_SEO_LANG_PORTUGUESE" />
+    <option value="Dutch" label="PLG_CONTENT_AI_SEO_LANG_DUTCH" />
+    <option value="Russian" label="PLG_CONTENT_AI_SEO_LANG_RUSSIAN" />
+    <option value="Chinese" label="PLG_CONTENT_AI_SEO_LANG_CHINESE" />
+    <option value="Japanese" label="PLG_CONTENT_AI_SEO_LANG_JAPANESE" />
+</field>
+
+<field name="title_prompt" type="textarea" label="PLG_CONTENT_AI_SEO_TITLE_PROMPT_LABEL" description="PLG_CONTENT_AI_SEO_TITLE_PROMPT_DESC" rows="3" cols="50" />
+<field name="article_prompt" type="textarea" label="PLG_CONTENT_AI_SEO_ARTICLE_PROMPT_LABEL" description="PLG_CONTENT_AI_SEO_ARTICLE_PROMPT_DESC" rows="5" cols="50" />
+<field name="rewrite_prompt" type="textarea" label="PLG_CONTENT_AI_SEO_REWRITE_PROMPT_LABEL" description="PLG_CONTENT_AI_SEO_REWRITE_PROMPT_DESC" rows="5" cols="50" />
+<field name="meta_description_prompt" type="textarea" label="PLG_CONTENT_AI_SEO_META_DESC_PROMPT_LABEL" description="PLG_CONTENT_AI_SEO_META_DESC_PROMPT_DESC" rows="3" cols="50" />
+<field name="keywords_prompt" type="textarea" label="PLG_CONTENT_AI_SEO_KEYWORDS_PROMPT_LABEL" description="PLG_CONTENT_AI_SEO_KEYWORDS_PROMPT_DESC" rows="3" cols="50" />
+<field name="schema_prompt" type="textarea" label="PLG_CONTENT_AI_SEO_SCHEMA_PROMPT_LABEL" description="PLG_CONTENT_AI_SEO_SCHEMA_PROMPT_DESC" rows="5" cols="50" />
+
+<field name="article_length" type="text" default="1500-2500" label="PLG_CONTENT_AI_SEO_ARTICLE_LENGTH_LABEL" description="PLG_CONTENT_AI_SEO_ARTICLE_LENGTH_DESC" />
+
+<field name="dry_run" type="radio" default="1" label="PLG_CONTENT_AI_SEO_DRY_RUN_LABEL" description="PLG_CONTENT_AI_SEO_DRY_RUN_DESC">
+<option value="1">JYES</option><option value="0">JNO</option>
+</field>
+<field name="max_keywords" type="number" default="10" label="PLG_CONTENT_AI_SEO_MAX_KEYWORDS_LABEL" description="PLG_CONTENT_AI_SEO_MAX_KEYWORDS_DESC" />
+<field name="meta_desc_length" type="list" default="160" label="PLG_CONTENT_AI_SEO_META_DESC_LENGTH_LABEL" description="PLG_CONTENT_AI_SEO_META_DESC_LENGTH_DESC">
+<option value="160" label="PLG_CONTENT_AI_SEO_META_LENGTH_160" />
+<option value="200" label="PLG_CONTENT_AI_SEO_META_LENGTH_200" />
+<option value="250" label="PLG_CONTENT_AI_SEO_META_LENGTH_250" />
+<option value="300" label="PLG_CONTENT_AI_SEO_META_LENGTH_300" />
+</field>
+<field name="max_tokens_article" type="number" default="5000" label="PLG_CONTENT_AI_SEO_MAX_TOKENS_ARTICLE_LABEL" description="PLG_CONTENT_AI_SEO_MAX_TOKENS_ARTICLE_DESC" />
+<field name="max_tokens_rewrite" type="number" default="5000" label="PLG_CONTENT_AI_SEO_MAX_TOKENS_REWRITE_LABEL" description="PLG_CONTENT_AI_SEO_MAX_TOKENS_REWRITE_DESC" />
+<field name="max_tokens_meta" type="number" default="1000" label="PLG_CONTENT_AI_SEO_MAX_TOKENS_META_LABEL" description="PLG_CONTENT_AI_SEO_MAX_TOKENS_META_DESC" />
+<field name="context_length" type="number" default="5000" label="PLG_CONTENT_AI_SEO_CONTEXT_LENGTH_LABEL" description="PLG_CONTENT_AI_SEO_CONTEXT_LENGTH_DESC" />
+<field name="curl_timeout" type="number" default="100" label="PLG_CONTENT_AI_SEO_CURL_TIMEOUT_LABEL" description="PLG_CONTENT_AI_SEO_CURL_TIMEOUT_DESC" />
+
+<field name="log_changes" type="radio" default="1" label="PLG_CONTENT_AI_SEO_LOG_CHANGES_LABEL" description="PLG_CONTENT_AI_SEO_LOG_CHANGES_DESC">
+<option value="1">JYES</option><option value="0">JNO</option>
+</field>
+</fieldset>
+</fields>
+</config>
+</extension>

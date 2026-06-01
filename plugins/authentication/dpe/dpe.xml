@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="authentication" method="upgrade">
+	<name>plg_authentication_dpe</name>
+	<version>1.0.0</version>
+	<author>TechJoomla</author>
+	<authorEmail>TechJoomla</authorEmail>
+	<authorUrl>contact@techjoomla.com</authorUrl>
+	<description>PLG_DPE_SYSTEM_DESC</description>
+	<files>
+		<file plugin="dpe">dpe.php</file>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_authentication_dpe.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_authentication_dpe.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="dpe_usergroup" type="usergrouplist" label="PLG_DPE_AUTHENTICATION_ALLOW_GROUPS" description="PLG_DPE_AUTHENTICATION_ALLOW_GROUPS_DESC" multiple="true" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

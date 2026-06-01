@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="emailalerts" method="upgrade">
+	<name>plg_emailalerts_jma_latestusers</name>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>Copyright (c) 2009-2018 Techjoomla. All rights reserved.</copyright>
+	<creationDate>21st Sept 2018</creationDate>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>2.6.0</version>
+	<description>PLG_EMAILALERTS_JMA_LATESTUSERS_DESC</description>
+	<files>
+		<filename plugin="jma_latestusers">jma_latestusers.php</filename>
+		<folder>jma_latestusers</folder>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="language/en-GB">
+		<language tag="en-GB">en-GB.plg_emailalerts_jma_latestusers.ini</language>
+		<language tag="en-GB">en-GB.plg_emailalerts_jma_latestusers.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" label="Plugin Parameters">
+				<field name="plugintitle" type="text" default="PLG_JMA_LU_TRANSLATABLE_PLUGIN_TITLE" label="PLG_JMA_LU_PLUGIN_TITLE_LBL" description="PLG_JMA_LU_PLUGIN_TITLE_DESC" />
+				<field name="disp_name" type="radio" default="0" label="PLG_JMA_LU_LBL_DISP_NAME" description="PLG_JMA_LU_DESC_DISP_NAME" class="radio btn-group" >
+					<option value="0">PLG_JMA_LU_J</option>
+					<option value="1">PLG_JMA_LU_JS</option>
+					<option value="2">PLG_JMA_LU_CB</option>
+				</field>
+				<field name="show_name" type="radio" default="username" label="PLG_JMA_LU_LBL_SHOW_NAME" description="PLG_JMA_LU_DESC_SHOW_NAME" class="radio btn-group" >
+					<option value="name">PLG_JMA_LU_NAME</option>
+					<option value="username">PLG_JMA_LU_USERNAME</option>
+				</field>
+				<field name="show_users_with_avatar" type="radio" default="0" label="PLG_JMA_LU_LBL_SHOW_ONLY_USERS_WITH_AVATAR" description="PLG_JMA_LU_DESC_SHOW_ONLY_USERS_WITH_AVATAR" class="radio btn-group btn-group-yesno" >
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+			<fieldset name="legacy" label="PLG_JMA_LU_USER_PARAMS" description="PLG_JMA_LU_USER_PARAMS_DESC">
+				<field name="no_of_users" type="text" default="5" class="required validate-numeric inputbox" label="PLG_JMA_LU_LBL_NO_OF_USERS" description="PLG_JMA_LU_DESC_NO_OF_USERS" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

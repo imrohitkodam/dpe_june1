@@ -1,0 +1,104 @@
+.assignUsers .panel-body img,
+.courseTaughtBy .panel-body img,
+.recommendUsers .panel-body img,
+.enrolledUsers .panel-body img {
+	width: 64px;
+	height: 64px;
+}
+.assignUsers .panel-heading,
+.recommendUsers .panel-heading,
+.courseTaughtBy .panel-heading{
+	position: relative;
+}
+.progress-pie-chart {
+	width:110px;
+	height: 110px;
+	border-radius: 50%;
+	background-color: #E5E5E5;
+	position: relative;
+}
+
+.progress-pie-chart.gt-50 {
+	background-color: #778e0b;
+}
+
+.ppc-progress {
+	content: "";
+	position: absolute;
+	border-radius: 50%;
+	left: calc(50% - 55px);
+	top: calc(50% - 55px);
+	width: 110px;
+	height: 110px;
+	clip: rect(0, 110px, 110px, 55px);
+}
+.ppc-progress .ppc-progress-fill {
+	content: "";
+	position: absolute;
+	border-radius: 50%;
+	left: calc(50% - 55px);
+	top: calc(50% - 55px);
+	width: 110px;
+	height: 110px;
+	clip: rect(0, 55px, 110px, 0px);
+	background-color: #778e0b;
+	transform: rotate(60deg);
+}
+
+.courseProgress .progressDiv .gt-50 .ppc-progress-fill {
+background-color: #E5E5E5;
+}
+
+.gt-50 .ppc-progress {
+  clip: rect(0, 55px, 110px, 0);
+}
+.gt-50 .ppc-progress .ppc-progress-fill {
+	clip: rect(0, 110px, 110px, 55px);
+}
+
+.ppc-percents {
+	content: "";
+	position: absolute;
+	border-radius: 50%;
+/*	left: calc(50% - 100.91304px/2);
+	top: calc(50% - 100.91304px/2); */
+	margin-left: 5px;
+	margin-top: 4px;
+	width: 100.91304px;
+	height: 100.91304px;
+	background: #FFF;
+	text-align: center;
+	display: table;
+}
+
+.ppc-percents span {
+	display: block;
+	font-size: 1.6em;
+	font-weight: bold;
+	color: #778e0b;
+}
+
+.pcc-percents-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.progress-pie-chart {
+  margin: 10px auto 10px;
+}
+
+.enrolledUsers .span4:nth-child(3n+1), .restOfTheUser .span4:nth-child(3n+1),
+.assignUsers .span4:nth-child(3n+1)
+{
+	margin-left: 0px!important;
+}
+
+.panel-message{
+    padding: 0px 6px 0px 6px;
+}
+
+.panel-action
+{
+	 padding: 6px 0px;
+}
+

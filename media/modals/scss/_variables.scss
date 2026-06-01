@@ -1,0 +1,19 @@
+@import "../../regularlabs/scss/_colors";
+
+$screen-sm:        640px;
+$screen-md:        768px;
+$screen-lg:        1024px;
+$screen-xl:        1280px;
+
+$zindex-main:      1000;
+$zindex-overlay:   1001;
+$zindex-spinner:   1002;
+$zindex-container: 1003;
+
+@function saturate($value) {
+    @return #{ "saturate(" + $value + ")" };
+}
+
+@function drop-shadow($value) {
+    @return #{ "drop-shadow(" + $value + ")" };
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="plugin" group="ajax" method="upgrade">
+	<name>PLG_AJAX_WEB357FRAMEWORK</name>
+	<author>Web357 (Yiannis Christodoulou)</author>
+	<creationDate>01 Dec 2020</creationDate>
+	<copyright>Copyright (C) 2009-2020 Web357. All rights reserved.</copyright>
+	<license>GNU/GPLv3, http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<authorEmail>support@web357.com</authorEmail>
+	<authorUrl>https://www.web357.com/</authorUrl>
+	<version>1.8.1</version>
+	<description></description>
+
+	<files>
+		<folder>language</folder>
+		<filename plugin="web357framework">web357framework.php</filename>
+		<filename>index.html</filename>
+		<filename>script.install.helper.php</filename>
+	</files>
+
+	<scriptfile>script.install.php</scriptfile>
+
+	<updateservers><server type="extension" priority="1" name="Web357 Framework"><![CDATA[https://updates.web357.com/web357framework/web357framework.xml]]></server></updateservers>
+
+</extension>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addfieldprefix="RegularLabs\Library\Form\Field">
+  <fieldset addfieldprefix="Joomla\Component\Content\Administrator\Field">
+    <field name="@no_type__a" type="ShowOn" value="type:"/>
+    <field name="type" type="Radio" default="" class="btn-group rl-btn-group rl-btn-group-separate btn-group-md" label="" hiddenLabel="true">
+      <option value="" class="hidden">- %s -,JGLOBAL_SELECT_AN_OPTION</option>
+      <option value="article" class="btn btn-outline-info mt-1 filter-type type-article">RL_ARTICLE</option>
+      <option value="categories" class="btn btn-outline-info mt-1 filter-type type-categories">RL_CATEGORIES
+            </option>
+      <option value="authors" class="btn btn-outline-info mt-1 filter-type type-authors">RL_AUTHORS</option>
+      <option value="date" class="btn btn-outline-info mt-1">RL_DATE</option>
+      <option value="tags" class="btn btn-outline-info mt-1 filter-type type-tags">RL_TAGS</option>
+      <option value="field" class="btn btn-outline-info mt-1">RL_FIELD</option>
+    </field>
+    <field name="@no_type__b" type="ShowOn"/>
+    <!-- ARTICLE -->
+    <field name="@article__a" type="ShowOn" value="type:article"/>
+    <field name="@article_title" type="Note" title="RL_ARTICLE"/>
+    <field name="article_type" type="Radio" default="specify" class="btn-group rl-btn-group btn-group-md">
+      <option value="specify" class="btn btn-outline-info">RL_SPECIFY</option>
+      <option value="current" class="btn btn-outline-info">RL_CURRENT</option>
+    </field>
+    <field name="@article_specify__a" type="ShowOn" value="article_type:specify"/>
+    <field name="article" type="ContentArticles" multiple="false" showselect="true"/>
+    <field name="article_key" type="Radio" default="title" class="btn-group rl-btn-group btn-group-md" label="AA_INSERT_KEY">
+      <option value="id" class="btn btn-outline-info">JGLOBAL_FIELD_ID_LABEL</option>
+      <option value="title" class="btn btn-outline-info">JGLOBAL_TITLE</option>
+    </field>
+    <field name="@article_specify__b" type="ShowOn"/>
+    <field name="@article__b" type="ShowOn"/>
+    <!-- CATEGORIES -->
+    <field name="@categories__a" type="ShowOn" value="type:categories"/>
+    <field name="@categories_title" type="Note" title="RL_CATEGORIES"/>
+    <field name="categories_type" type="Radio" default="specify" class="btn-group rl-btn-group btn-group-md">
+      <option value="specify" class="btn btn-outline-info">RL_SPECIFY</option>
+      <option value="current" class="btn btn-outline-info">RL_CURRENT</option>
+    </field>
+    <field name="@categories_specify__a" type="ShowOn" value="categories_type:specify"/>
+    <field name="categories" type="Category" multiple="true" extension="com_content" layout="joomla.form.field.list-fancy-select" hint="JOPTION_SELECT_CATEGORY" published="0,1,2"/>
+    <field name="categories_key" type="Radio" default="title" class="btn-group rl-btn-group btn-group-md" label="AA_INSERT_KEY">
+      <option value="id" class="btn btn-outline-info">JGLOBAL_FIELD_ID_LABEL</option>
+      <option value="title" class="btn btn-outline-info">JGLOBAL_TITLE</option>
+    </field>
+    <field name="@categories_specify__b" type="ShowOn"/>
+    <field name="categories_include_children" type="Radio" default="" class="btn-group rl-btn-group btn-group-md btn-group-yesno" label="RL_INCLUDE_CHILD_CATEGORIES">
+      <option value="">JDEFAULT</option>
+      <option value="0">JNO</option>
+      <option value="1">JYES</option>
+    </field>
+    <field name="@categories__b" type="ShowOn"/>
+    <!-- AUTHORS -->
+    <field name="@authors__a" type="ShowOn" value="type:authors"/>
+    <field name="@authors_title" type="Note" title="RL_AUTHORS"/>
+    <field name="authors_type" type="Radio" default="specify" class="btn-group rl-btn-group btn-group-md">
+      <option value="specify" class="btn btn-outline-info">RL_SPECIFY</option>
+      <option value="current" class="btn btn-outline-info">RL_CURRENT</option>
+    </field>
+    <field name="@authors_specify__a" type="ShowOn" value="authors_type:specify"/>
+    <field name="authors" type="Author" multiple="true" layout="joomla.form.field.list-fancy-select" hint="JOPTION_SELECT_AUTHOR" published="0,1,2"/>
+    <field name="authors_key" type="Radio" default="name" class="btn-group rl-btn-group btn-group-md" label="AA_INSERT_KEY">
+      <option value="id" class="btn btn-outline-info">JGLOBAL_FIELD_ID_LABEL</option>
+      <option value="name" class="btn btn-outline-info">JFIELD_NAME_LABEL</option>
+    </field>
+    <field name="@authors_specify__b" type="ShowOn"/>
+    <field name="@authors__b" type="ShowOn"/>
+    <!-- DATE -->
+    <field name="@date__a" type="ShowOn" value="type:date"/>
+    <field name="@date_title" type="Note" title="RL_DATE"/>
+    <field name="date_key" type="List" default="created">
+      <option value="created">JGLOBAL_FIELD_CREATED_LABEL</option>
+      <option value="modified">JGLOBAL_FIELD_MODIFIED_LABEL</option>
+      <option value="publish-up">JGLOBAL_FIELD_PUBLISH_UP_LABEL</option>
+      <option value="publish-down">JGLOBAL_FIELD_PUBLISH_DOWN_LABEL</option>
+    </field>
+    <field name="date_comparison" type="List" default="fromto" label="">
+      <option value="fromto">RL_FROM_TO</option>
+      <option value="before">RL_BEFORE</option>
+      <option value="after">RL_AFTER</option>
+    </field>
+    <field name="@date_comparison__a" type="ShowOn" value="date_comparison:before[OR]date_comparison:after"/>
+    <field name="date_type" type="Radio" default="specify" class="btn-group rl-btn-group btn-group-md" label="">
+      <option value="specify" class="btn btn-outline-info">RL_SPECIFY</option>
+      <option value="now" class="btn btn-outline-info">NOW</option>
+    </field>
+    <field name="date" type="Calendar" showtime="false" filter="user_utc" format="%Y-%m-%d" default="" label="" showon="date_type:specify"/>
+    <field name="@date_comparison__b" type="ShowOn"/>
+    <field name="date_from" type="Calendar" showtime="false" filter="user_utc" format="%Y-%m-%d" default="" label="RL_DATE_FROM" showon="date_comparison:fromto"/>
+    <field name="date_to" type="Calendar" showtime="false" filter="user_utc" format="%Y-%m-%d" default="" label="RL_DATE_TO" showon="date_comparison:fromto"/>
+    <field name="@date__b" type="ShowOn"/>
+    <!-- TAGS -->
+    <field name="@tags__a" type="ShowOn" value="type:tags"/>
+    <field name="@tags_title" type="Note" title="RL_TAGS"/>
+    <field name="tags_type" type="Radio" default="specify" class="btn-group rl-btn-group btn-group-md">
+      <option value="specify" class="btn btn-outline-info">RL_SPECIFY</option>
+      <option value="current" class="btn btn-outline-info">RL_CURRENT</option>
+    </field>
+    <field name="@tags_specify__a" type="ShowOn" value="tags_type:specify"/>
+    <field name="tags" type="Tag" multiple="true" hint="JOPTION_SELECT_TAG"/>
+    <field name="tags_must_contain" type="Radio" default="any" class="btn-group rl-btn-group btn-group-md" label="RL_MUST_CONTAIN">
+      <option value="any" class="btn btn-outline-info">RL_ANY</option>
+      <option value="all" class="btn btn-outline-info">RL_ALL</option>
+    </field>
+    <field name="@tags_specify__b" type="ShowOn"/>
+    <field name="@tags__b" type="ShowOn"/>
+    <!-- FIELD -->
+    <field name="@field__a" type="ShowOn" value="type:field"/>
+    <field name="@field_title" type="Note" title="RL_FIELD"/>
+    <field name="field" type="Field" key="name" hint="JOPTION_SELECT_FIELD"/>
+    <field name="field_type" type="Radio" default="specify" class="btn-group rl-btn-group btn-group-md">
+      <option value="specify" class="btn btn-outline-info">RL_SPECIFY</option>
+      <option value="current" class="btn btn-outline-info">RL_CURRENT</option>
+    </field>
+    <field name="@field_specify__a" type="ShowOn" value="field_type:specify"/>
+    <!--        <field name="field_comparison" type="list" default="equals"-->
+    <!--               label="RL_COMPARISON"-->
+    <!--               description="RL_COMPARISON_DESC">-->
+    <!--            <option value="equals">RL_EQUALS</option>-->
+    <!--            <option value="not_equals">RL_NOT_EQUALS</option>-->
+    <!--            <option value="contains">RL_CONTAINS</option>-->
+    <!--            <option value="not_contains">RL_NOT_CONTAINS</option>-->
+    <!--            <option value="begins_with">RL_BEGINS_WITH</option>-->
+    <!--            <option value="ends_with">RL_ENDS_WITH</option>-->
+    <!--            <option value="less_than">RL_LESS_THAN</option>-->
+    <!--            <option value="greater_than">RL_GREATER_THAN</option>-->
+    <!--            <option value="regex">RL_REGEX</option>-->
+    <!--        </field>-->
+    <field name="field_value" type="Text" default="" label="RL_VALUE"/>
+    <field name="@field_specify__b" type="ShowOn"/>
+    <field name="@field__b" type="ShowOn"/>
+  </fieldset>
+</form>

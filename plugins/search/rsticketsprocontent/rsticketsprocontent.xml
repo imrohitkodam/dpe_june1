@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension method="upgrade" version="2.5" type="plugin" group="search">
+	<name>plg_search_rsticketsprocontent</name>
+	<author>RSJoomla!</author>
+	<creationDate>February 2014</creationDate>
+	<copyright>Copyright (C) 2010-2014 www.rsjoomla.com. All rights reserved.</copyright>
+	<license>GNU General Public License</license>
+	<authorEmail>support@rsjoomla.com</authorEmail>
+	<authorUrl>www.rsjoomla.com</authorUrl>
+	<version>1.0.0</version>
+	<description>RST_SEARCH_KB_DESC</description>
+
+	<updateservers>
+        <server type="extension" priority="1" name="Search - RSTickets! Pro Knowledgebase">https://www.rsjoomla.com/updates/com_rsticketspro/Other/plg_search.xml</server>
+    </updateservers>
+
+	<files>
+		<filename plugin="rsticketsprocontent">rsticketsprocontent.php</filename>
+		<filename>index.html</filename>
+	</files>
+	
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_search_rsticketsprocontent.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_search_rsticketsprocontent.sys.ini</language>
+	</languages>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="Itemid" type="text" size="5" default="" label="RST_SEARCH_ITEMID" description="RST_SEARCH_ITEMID_DESC"/>
+				<field name="search_limit" type="text" size="5" default="50" label="RST_SEARCH_LIMIT" description="RST_SEARCH_LIMIT_DESC"/>
+				<field name="@spacer" type="spacer" default="" label="" description="" />
+				<field name="search_uncategorised" type="radio" class="btn-group btn-group-yesno" default="1" label="RST_SEARCH_UNCATEGORISED" description="RST_SEARCH_UNCATEGORISED_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,85 @@
+/**
+ * SEO Glossary
+ *
+ * We developed this code with our hearts and passion.
+ * We hope you found it useful, easy to understand and change.
+ * Otherwise, please feel free to contact us at contact@joomunited.com
+ *
+ * @package 	SEO Glossary
+ * @copyright 	Copyright (C) 2013 JoomUnited (http://www.joomunited.com). All rights reserved.
+ * @license 	GNU General Public License version 2 or later; http://www.gnu.org/licenses/gpl-2.0.html
+ */
+
+table#glossarylist {
+    width: 100%;
+    border-collapse: collapse !important;
+    border: 0px !important;
+}
+/* Zebra striping */
+table#glossarylist * tr:nth-of-type(odd) {
+    background: #eee;
+}
+table#glossarylist * th {
+    background: #333;
+    color: white;
+    font-weight: bold;
+}
+table#glossarylist * tr, table#glossarylist * td {
+    border-collapse: collapse !important;
+    border: 0px !important;
+}
+table#glossarylist * td, table#glossarylist * th {
+    padding: 6px;
+    text-align: left;
+}
+
+table#glossarylist tbody tr td.seoglossary-term {
+    font-weight:bold;
+}
+
+table#glossarylist thead tr:hover th {
+    background-color: #85C1E9 !important;
+}
+
+/*
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+    /* Force table to not be like tables anymore */
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    table#glossarylist thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    table#glossarylist * tr { border: 1px solid #ccc; }
+
+    table#glossarylist * td {
+        /* Behave  like a "row" */
+        border: none;
+        /*border-bottom: 1px solid #eee;*/
+        position: relative;
+    }
+
+    table#glossarylist * td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+
+}

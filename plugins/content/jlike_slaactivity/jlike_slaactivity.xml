@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="content" method="upgrade">
+	<name>PLG_CONTENT_JLIKE_SLAACTIVITY</name>
+	<author>DPE</author>
+	<copyright>Techjoomla. All Rights Reserved.</copyright>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>http://www.techjoomla.com</authorUrl>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<creationDate>2nd August 2018</creationDate>
+	<version>1.0.0</version>
+	<description>PLG_CONTENT_JLIKE_SLAACTIVITY_DESC</description>
+	<files>
+		<filename plugin="jlike_slaactivity">jlike_slaactivity.php</filename>
+	</files>
+	<languages folder="language/en-GB">
+		<language tag="en-GB">en-GB.plg_content_jlike_slaactivity.sys.ini</language>
+		<language tag="en-GB">en-GB.plg_content_jlike_slaactivity.ini</language>
+	</languages>
+</extension>

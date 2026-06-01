@@ -1,0 +1,10 @@
+/**
+ * [Copyright Regular Labs]
+ */
+
+@import "variables";
+
+[data-modals-element="modal"][data-modals-theme="light"] {
+    @import "styling-main";
+    @import "styling-main-light";
+}

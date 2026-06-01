@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.9" type="plugin" group="system" method="upgrade">
+    <name>System - DpeHelix3 Framework</name>
+    <author>Tekdi Technologies</author>
+    <creationDate>Nov 2023</creationDate>
+    <version>3.0.3</version>
+    <description>Dpe Helix3 Framework - Dpe specific Plugin</description>
+
+    <languages>
+        <language tag="en-GB">language/en-GB.plg_system_helix3.ini</language>
+    </languages>
+
+    <files>
+        <filename plugin="dpehelix3">dpehelix3.php</filename>
+        <folder plugin="dpehelix3">core</folder>
+        <folder plugin="dpehelix3">html</folder>
+
+    </files>
+    <fieldset addfieldpath="/plugins/system/dpehelix3/fields"></fieldset>
+</extension>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<form>
+		<fieldset name="interactionParams" label="PLG_CONTENT_JLIKE_TJLMSINTERACTION_PARAMETER">
+			<!--Interaction Field Configuration-->
+			<field
+				name="read_interaction"
+				type="checkbox"
+				label="PLG_JLIKE_TJLMSLESSON_READ_INTERACTION"
+				description="PLG_JLIKE_TJLMSLESSON_READ_INTERACTION_DESC"
+				value="1"
+				checked="0"/>
+
+			<field
+				name="practice_interaction"
+				type="checkbox"
+				label="PLG_JLIKE_TJLMSLESSON_PRACTICE_INTERACTION"
+				description="PLG_JLIKE_TJLMSLESSON_PRACTICE_INTERACTION_DESC"
+				value="1"
+				checked="0" />
+
+			<field
+				name="publicly_interaction"
+				type="checkbox"
+				label="PLG_JLIKE_TJLMSLESSON_PUBLICLY_INTERACTION"
+				description="PLG_JLIKE_TJLMSLESSON_PUBLICLY_INTERACTION_DESC"
+				value="1"
+				checked="0" />
+
+			<field
+				name="consent_interaction"
+				type="checkbox"
+				label="PLG_JLIKE_TJLMSLESSON_CONSENT_INTERACTION"
+				description="PLG_JLIKE_TJLMSLESSON_CONSENT_INTERACTION_DESC"
+				value="1"
+				checked="0"/>
+		</fieldset>
+	</form>

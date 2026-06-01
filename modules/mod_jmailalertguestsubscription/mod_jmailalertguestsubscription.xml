@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" client="site" method="upgrade">
+	<name>mod_jmailalertguestsubscription</name>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>Copyright (C) 2014 - 2024 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<creationDate>26th Nov 2024</creationDate>
+	<version>1.0.0</version>
+	<description>MOD_JMAILALERT_GUEST_SUBSCRIPTION</description>
+	<customContent />
+
+	<files>
+		<filename module="mod_jmailalertguestsubscription">mod_jmailalertguestsubscription.php</filename>
+		<folder>tmpl</folder>
+		<folder>assets</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/mod_jmailalertguestsubscription.ini</language>
+		<language tag="en-GB">language/en-GB/mod_jmailalertguestsubscription.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="useModal"
+					type="radio"
+					layout="joomla.form.field.radio.switcher"
+					label="MOD_JMA_USE_IN_MODAL"
+					default="0"
+					filter="integer"
+					>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

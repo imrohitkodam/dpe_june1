@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0"  type="plugin" group="system" method="upgrade">
+	<name>PLG_SYSTEM_LMSACYMAILING</name>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>Copyright (C) 2014 - 2023 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<creationDate>13th Jul 2023</creationDate>
+	<version>4.0.5</version>
+	<description>PLG_SYSTEM_LMSACYMAILING_DESC</description>
+	<files>
+		<filename plugin="lmsacymailing">lmsacymailing.php</filename>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_system_lmsacymailing.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_system_lmsacymailing.sys.ini</language>
+	</languages>
+</extension>

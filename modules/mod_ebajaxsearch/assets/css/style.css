@@ -1,0 +1,372 @@
+/**
+ * @package Module EB Ajax Search for Joomla!
+ * @version 1.52: mod_ebajaxsearch.php Dec 2023
+ * @author url: https://www/extnbakers.com
+ * @copyright Copyright (C) 2022 extnbakers.com. All rights reserved.
+ * @license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html 
+**/
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#is_ajaxsearch_result.ajaxsearch_result .result_wrap mark { padding: 0 !important; }
+#is_ajaxsearch_result .small-title {
+	font-size: 14px !important;
+	font-weight : 600;
+}
+#is_ajaxsearch_result {
+	position: absolute;
+	text-decoration: none;
+	z-index:1000;
+	font-size:12px;
+	margin-left: 1%;
+}
+#is_ajaxsearch_result .plugin-title {
+	-webkit-box-shadow: inset 0px 0px 2px rgba(255, 255, 255, 0.4);
+	-moz-box-shadow: inset 0px 0px 2px rgba(255, 255, 255, 0.4);
+	box-shadow: inset 0px 0px 2px rgba(255, 255, 255, 0.4);
+	line-height: 26px;
+	font-size: 14px;
+	background-size: auto 100%;
+	background: -moz-linear-gradient(#E4EAEE, #E4EAEE); /* FF 3.6+ */
+	background: -ms-linear-gradient(#E4EAEE, #E4EAEE); /* IE10 */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #E4EAEE), color-stop(100%, #E4EAEE)); /* Safari 4+, Chrome 2+ */
+	background: -webkit-linear-gradient(#E4EAEE, #E4EAEE); /* Safari 5.1+, Chrome 10+ */
+	background: -o-linear-gradient(#E4EAEE, #E4EAEE); /* Opera 11.10 */
+	background: linear-gradient( top, #E4EAEE, #E4EAEE );
+	text-align: left;
+	border-top: 1px solid #e5e5e5;
+	border-bottom: 1px solid #c2d5e1;
+	font-weight: bold;
+	height: 100%;
+	margin:0;
+	padding:0;
+}
+#is_ajaxsearch_result .plugin-title.first {
+	-webkit-box-shadow: inset 0px 0px 2px rgba(255, 255, 255, 0.4);
+	-moz-box-shadow: inset 0px 0px 2px rgba(255, 255, 255, 0.4);
+	box-shadow: inset 0px 0px 2px rgba(255, 255, 255, 0.4);
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	margin-top: -1px;
+}
+#is_ajaxsearch_result .ie-fix-plugin-title {
+	border-top: 1px solid #B2BCC1;
+	border-bottom: 1px solid #000000;
+}
+#is_ajaxsearch_result .plugin-title-inner {
+	/* -moz-box-shadow:0 1px 2px #B2BCC1 inset;*/
+  -moz-user-select:none;
+	padding-left:10px;
+	padding-right:5px;
+	float: left;
+	cursor: default;
+	/*font chooser*/
+    color: #4E6170;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 11px;
+	text-shadow: #ffffff 1px 1px 0px;
+	text-decoration: none;
+	text-transform: 27px;
+	line-height: left;
+	text-align: center;/*font chooser*/
+  
+}
+#is_ajaxsearch_result .pagination_wrap {
+	margin: 8px 10px;
+	/*margin-left: 0px;*/
+	float: right;
+	float: right;
+	width: auto;
+	height: auto;
+	font-size: 14px;
+}
+
+#is_ajaxsearch_result a.eb_viewall {
+    color: rgba(0, 0, 0, 0.31);
+    padding: 0 10px 0 0;
+    text-decoration: none;
+}
+
+#is_ajaxsearch_result .pagination_link {
+    padding: 0 3px;
+    text-decoration: none;
+}
+
+#is_ajaxsearch_result .page-container {
+	position: relative;
+	overflow: hidden;
+	height: 198px; /* 66x num of elements */
+	width: 250px; /**/
+}
+#is_ajaxsearch_result .page-band {
+	position: absolute;
+	left: 0;
+	width: 10000px;
+}
+#is_ajaxsearch_result .page-element {
+	float: left;
+	left: 0;
+	cursor: hand;
+}
+#is_ajaxsearch_result .result-element {
+	display: block;
+	width: 100%; /**/
+	height: 75px; /*height*/
+	border-top: 1px solid #e5e5e5;
+	border-bottom: 1px solid #c2d5e1;
+	overflow: hidden;
+}
+#is_ajaxsearch_result .result-element img {
+	display: block;
+	float: left;
+	/*padding: 2px;*/
+  padding-right:10px;
+	border: 0;
+	margin: 5px;
+	width: 100%;
+	height: auto;
+}
+.ajax-clear {
+	clear: both;
+}
+#is_ajaxsearch_result .result-element span {
+	display: block;
+	float: left;
+	width: 100%;   /*  margin:5+12 */
+	margin-left:5px;
+	margin-right:12px;
+	line-height: 14px;
+	text-align: left;
+	cursor: pointer;
+	margin-top: 5px;
+	padding-right: 5px;
+	/*font chooser*/
+  font-size: 12px;
+	text-shadow: none;
+	text-decoration: none;
+	text-transform: none;
+	line-height: left;/*font chooser*/
+  
+}
+/*#is_ajaxsearch_result .result-element:hover span{
+  color: #158837;
+}*/
+
+#is_ajaxsearch_result .result-element span.small-desc {
+	margin-top : 2px;
+	line-height: 16px;
+	/*font chooser*/
+  font-size: 14px;
+	text-shadow: none;
+	text-decoration: none;
+	text-transform: none;
+	line-height: left;/*font chooser*/
+}
+#is_ajaxsearch_result .result_box:hover {
+	background-color: #f3eded9e
+}
+#is_ajaxsearch_result .result-products span {
+	/*  text-align: center;*/
+  width: 100%;   /* padding and pictures: 10+2+60, margin:5+12  */
+	margin-top: 5px;
+}
+#is_ajaxsearch_result .no-result {
+	display: block;
+	width: 250px; /**/
+	height: 30px; /*height*/
+	font-weight: bold;
+	border-top: 1px solid #e5e5e5;
+	border-bottom: 1px solid #c2d5e1;
+	overflow: hidden;
+	text-align: center;
+	padding-top:10px;
+}
+#is_ajaxsearch_result .no-result-suggest {
+	display: block;
+	font-weight: bold;
+	border-top: 1px solid #e5e5e5;
+	border-bottom: 1px solid #c2d5e1;
+	overflow: hidden;
+	text-align: center;
+	padding-top:10px;
+	padding-bottom: 6px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+#is_ajaxsearch_result .no-result-suggest a {
+	cursor: pointer;
+	font-weight: bold;
+	text-decoration: none;
+	padding-left: 4px;
+}
+#is_ajaxsearch_result .no-result-suggest, #is_ajaxsearch_result .no-result-suggest a {
+	/*font chooser*/
+    color: #4e6170;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 12px;
+	text-shadow: none;
+	text-decoration: none;
+	text-transform: none;
+	line-height: left;/*font chooser*/
+}
+#is_ajaxsearch_result .no-result-suggest a:hover {
+	text-decoration: underline;
+}
+#is_ajaxsearch_result .no-result span {
+	width: 233px;   /*  margin:5+12 */
+	line-height: 20px;
+	text-align: left;
+	cursor: default;
+	-moz-user-select:none;
+}
+/********** Header Search bar Css *************/
+/*.is_ajaxsearch .search-label{color:#fff;}*/
+.is_ajaxsearch .form-inline input {
+	padding: 8px 18px;
+	border: 1px solid #cecece;
+	border-radius: 4px;
+	margin-left: 10px;
+	color: #2a3467;
+	height: 36px;
+}
+/*.is_ajaxsearch .ajaxsearch_result .result-element, .is_ajaxsearch .search-results .ajaxsearch_result{width:100% !important;}*/
+.is_ajaxsearch .search-results {
+	position:relative;
+}
+.is_ajaxsearch .search-results .ajaxsearch_result .result-element {
+	padding: 10px;
+	height: auto !important;
+	border-bottom: 1px solid #f1ecec !important;
+	border-top: 0;
+}
+.is_ajaxsearch .search-results .ajaxsearch_result .result_wrap {
+	max-height:500px;
+	overflow:auto;
+	border-radius: 4px;
+	margin: 10px 0;
+	border: 1px solid #e5e5e5;
+	box-shadow: 0 0px 20px 5px;
+	color: rgba(0, 0, 0, 0.31);
+}
+.is_ajaxsearch .search-results .ajaxsearch_result .result-element .small-cat {
+	margin-bottom:10px;
+}
+.is_ajaxsearch .is_noresult {
+	padding: 10px;
+}
+.is_ajaxsearch .result_img {
+	width: 25%;
+	display: inline-block;
+	float:left;
+}
+.is_ajaxsearch .result-element .result_content {
+	width: 100%;
+	display: inline-block;
+}
+.is_ajaxsearch .result-products .result_content {
+	width: 75%;
+	display: inline-block;
+}
+.is_ajaxsearch .btn-toolbar {
+	width:100%;
+	display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+.is_ajaxsearch .btn-toolbar input {
+	width:100%;
+}
+.is_btn_search.is_ajaxsearch .btn-toolbar input[type="search"] {
+	width:60%;
+}
+.is_ajaxsearch .search_class {
+	padding: 6px 18px;
+	border: 1px solid #8AAAE5;
+	border-radius: 4px;
+	margin-left: 10px;
+	font-size: 15px;
+    line-height: 22px;
+    display: inline-block;
+    text-decoration: none;
+}
+.is_ajaxsearch a:hover {
+	text-decoration: none;
+}
+.is_ajaxsearch .btn-toolbar input.clearable.x {
+    background: #fff url(data:image/gif;base64,R0lGODlhBwAHAIAAAP///5KSkiH5BAAAAAAALAAAAAAHAAcAAAIMTICmsGrIXnLxuDMLADs=);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 99%;
+    cursor: pointer;
+	position: relative;
+}
+.clearable {
+	background: #fff url(data:image/gif;base64,R0lGODlhBwAHAIAAAP///5KSkiH5BAAAAAAALAAAAAAHAAcAAAIMTICmsGrIXnLxuDMLADs=) no-repeat right -10px center;
+	border: 1px solid #999;
+	padding: 3px 18px 3px 4px; /* Use the same right padding (18) in jQ! */
+	border-radius: 3px;
+	transition: background 0.4s;
+}
+.clearable.x {
+	background-position: right 10px center;
+}
+.clearable.onX {
+	cursor: pointer;
+}
+.clearable::-ms-clear {
+display: none;
+width:0;
+height:0;
+}
+#is_ajaxsearch_result .result-element span.small-desc {
+	float: left;
+	width: 74%;
+	vertical-align: bottom;
+	margin: 0;
+	margin-left: 5px;
+}
+
+.is_btn_search .btn-toolbar input.inputbox {
+    width: 70%;
+    /*-webkit-box-sizing: content-box;*/
+    /*-moz-box-sizing: content-box;*/
+    /*box-sizing: content-box;*/
+    /*-webkit-appearance: textfield;*/
+}
+
+.is_ajaxsearch .loading {
+	background: transparent url(../images/spinner.gif) no-repeat scroll 98% 50%;
+}
+
+
+@media(max-width:767px) {
+.is_btn_search.is_ajaxsearch {
+	width:100%;
+}
+.is_btn_search.is_ajaxsearch .search-label {
+	width: 100%;
+}
+.is_btn_search.is_ajaxsearch .btn-toolbar input[type="search"] {
+	width: 67% !important;
+	margin-left: 0;
+}
+.is_btn_search.is_ajaxsearch .btn-group {
+	width: 25%;
+}
+}
+@media (max-width: 479px) {
+
+	.is_btn_search.is_ajaxsearch .btn-toolbar input[type="search"] { width: 100% !important; }
+	.is_btn_search.is_ajaxsearch .btn-group { width: 100%; display: inline-block; margin: 8px 0 0; text-align: center; }
+	.is_btn_search.is_ajaxsearch .btn-group .search_class { width: 50%; margin: 0; }
+	#is_ajaxsearch_result a.eb_viewall { width: 100%; display: block; }
+}
+.eb_ajaxsearch_pagination{text-align:center; font-size:12px;}

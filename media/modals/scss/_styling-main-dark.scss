@@ -1,0 +1,52 @@
+@import "variables";
+
+[data-modals-element="overlay"] {
+    --color: 0, 0, 0;
+}
+
+[data-modals-element="spinner"] {
+    --color: #ffffff;
+}
+
+[data-modals-element="slide-content"] {
+    box-shadow: 0 0 1px rgba(255, 255, 255, 0.25);
+}
+
+[data-modals-element="slide-title"],
+[data-modals-element="slide-description"] {
+    color: #ffffff;
+}
+
+[data-modals-element="previous"],
+[data-modals-element="next"],
+[data-modals-element="close"] {
+    filter: drop-shadow(0 0 0 #000000) drop-shadow(0 0 2px #000000);
+}
+
+[data-modals-element="close"] {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 32 32' stroke='white'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M2 2L30 30M30 2L2 30' /%3E%3C/svg%3E");
+}
+
+[data-modals-element="previous"] {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 22 40' stroke='white'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M20 2L2 20L20 38' /%3E%3C/svg%3E");
+}
+
+[data-modals-element="next"] {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 22 40' stroke='white'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M2 2L20 20L2 38' /%3E%3C/svg%3E");
+}
+
+[data-modals-element="pagination-button"] {
+    background-color: #ffffff;
+
+    &.active {
+        background-color: #115dda;
+    }
+}
+
+[data-modals-element="pagination-image"] {
+    box-shadow: 0 0 1px rgba(255, 255, 255, 0.25);
+}
+
+[data-modals-element="pagination-text"] {
+    color: #ffffff;
+}

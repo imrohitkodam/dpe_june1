@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="plugin" group="privacy" method="upgrade">
+	<name>plg_privacy_tjlms</name>
+	<version>4.0.5</version>
+	<creationDate>13th Jul 2023</creationDate>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>Copyright (C) 2014 - 2023 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>PLG_PRIVACY_TJLMS_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="tjlms">tjlms.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_privacy_tjlms.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_privacy_tjlms.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" />
+		</fields>
+	</config>
+</extension>

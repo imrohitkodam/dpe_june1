@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="emailalerts" method="upgrade">
+	<name>plg_emailalerts_jma_latestnews_js</name>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>Copyright (c) 2009-2018 Techjoomla. All rights reserved.</copyright>
+	<creationDate>24th Sept 2019</creationDate>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>2.6.2</version>
+	<description>PLG_EMAILALERTS_JMA_LATESTNEWS_JS_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="jma_latestnews_js">jma_latestnews_js.php</filename>
+		<folder>jma_latestnews_js</folder>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="language/en-GB">
+		<language tag="en-GB">en-GB.plg_emailalerts_jma_latestnews_js.ini</language>
+		<language tag="en-GB">en-GB.plg_emailalerts_jma_latestnews_js.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params" addfieldpath="/plugins/emailalerts/jma_latestnews_js/jma_latestnews_js/fields">
+			<fieldset name="basic">
+				<field name="plugintitle" type="text" default="JMA_LATESTNEWS_TRANSLATABLE_PLUGIN_TITLE" label="JMA_LATESTNEWS_PLUGIN_TITLE" description="JMA_LATESTNEWS_DESC_PLUGIN_TITLE" />
+				<field name="allowed_categories_method" type="radio" default="all_selected_categories" class="radio btn-group" label="JMA_LATESTNEWS_ALLOWED_CATEGORIES_OPTIONS_LBL" description="JMA_LATESTNEWS_ALLOWED_CATEGORIES_OPTIONS_DESC">
+					<option value="all_selected_categories">JMA_LATESTNEWS_CATEGORIES_ALL_SELECTED</option>
+					<option value="as_per_acl_categories">JMA_LATESTNEWS_CATEGORIES_AS_PER_ACL</option>
+				</field>
+				<field name="category" type="category" default="1" label="JMA_LATESTNEWS_ALLOWED_CATEGORY" element="jma_latestnews_js" multiple="multiple" description="JMA_LATESTNEWS_DESC_ALLOWED_CATEGORY" key_field='id' value_field='title' extension="com_content" published="1" />
+				<!-- <field name="show_front" type="radio" default="1" class="radio btn-group btn-group-yesno" label="JMA_LATESTNEWS_FRONT_ITEMS" description="JMA_LATESTNEWS_DESC_FRONT_ITEMS">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field> -->
+				<field name="show_category" type="radio" default="1" class="radio btn-group btn-group-yesno" label="JMA_LATESTNEWS_SHOWCATEGORY" description="JMA_LATESTNEWS_DESC_SHOWCATEGORY">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="show_author" type="radio" default="1" class="radio btn-group btn-group-yesno" label="JMA_LATESTNEWS_SHOWAUTHOR" description="JMA_LATESTNEWS_DESC_SHOWAUTHOR">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<!-- <field name="show_author_alias" type="radio" class="radio btn-group btn-group-yesno" default="1" label="JMA_LATESTNEWS_SHOWAUTHOR_ALIAS" description="JMA_LATESTNEWS_DESC_SHOWAUTHOR_ALIAS">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field> -->
+				<field name="show_date" type="radio" default="1" class="radio btn-group btn-group-yesno" label="JMA_LATESTNEWS_SHOWDATE" description="JMA_LATESTNEWS_DESC_SHOWDATE">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="show_introtext" type="radio" default="1" class="radio btn-group btn-group-yesno" label="JMA_LATESTNEWS_INTROTEXT" description="JMA_LATESTNEWS_DESC_INTROTEXT">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="introtext_count" type="text" default="200" label="JMA_LATESTNEWS_INTROTEXT_COUNT" class="required validate-numeric input" description="JMA_LATESTNEWS_DESC_INTROTEXT_COUNT" />
+				<field name="ordering" type="list" default="p_dsc" label="JMA_LATESTNEWS_ORDER" description="JMA_LATESTNEWS_DESC_ORDER">
+					<!-- <option value="p_dsc">JMA_LATESTNEWS_RECENT_PUBLISHED</option> -->
+					<option value="c_dsc">JMA_LATESTNEWS_RECENT_ADDED</option>
+					<option value="m_dsc">JMA_LATESTNEWS_RECENT_MODIFIED</option>
+				</field>
+			</fieldset>
+			<fieldset name="legacy" label="JMA_LATESTNEWS_USER_PARAMS" description="JMA_LATESTNEWS_USER_PARAMS_DESC" addfieldpath="/plugins/emailalerts/jma_latestnews_js/jma_latestnews_js/fields">
+				<field name="user_categories_method" type="radio" default="only_selected_categories" class="radio" label="JMA_LATESTNEWS_CHOOSE_CATEGORIES_METHOD_USER_LBL" description="JMA_LATESTNEWS_CHOOSE_CATEGORIES_METHOD_USER_DESC">
+					<option value="all_categories">JMA_LATESTNEWS_CATEGORIES_USERS_ALL</option>
+					<option value="only_selected_categories">JMA_LATESTNEWS_CATEGORIES_USERS_ONLY_SELECTED</option>
+				</field>
+				<field name="catid" type="jmacategoriesusers" default="1" label="JMA_LATESTNEWS_LBL_CATEGORY" element="jma_latestnews_js" multiple="multiple" description="JMA_LATESTNEWS_DESC_CATEGORY" key_field='id' value_field='title' showon="user_categories_method:only_selected_categories"/>
+				<!-- <field name="author_id" type="list" default="0" label="JMA_LATESTNEWS_AUTHORS" description="JMA_LATESTNEWS_DESC_AUTHORS">
+					<option value="0">JMA_LATESTNEWS_AUTHOR_ANY</option>
+					<option value="by_me">JMA_LATESTNEWS_AUTHOR_ADD_MOD_ME</option>
+					<option value="not_me">JMA_LATESTNEWS_AUTHOR_ADD_MOD_NOT_ME</option>
+				</field> -->
+				<field name="count" type="text" default="5" label="JMA_LATESTNEWS_COUNT" class="required validate-numeric input" description="JMA_LATESTNEWS_DESC_COUNT" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

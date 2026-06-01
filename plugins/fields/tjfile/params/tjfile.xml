@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="fieldparams">
+		<fieldset name="fieldparams">
+			<field name="destination" type="textbox" default="images/pdf" required="true" label="PLG_FIELDS_TJFILE_DESTINATION_FOLDER_LABEL" description="PLG_FIELDS_TJFILE_DESTINATION_FOLDER_DESC" />
+
+			<field name="acceptedformats" type="textbox" default="pdf" required="true" label="PLG_FIELDS_TJFILE_ACCEPTED_FORMAT" description="PLG_FIELDS_TJFILE_ACCEPTED_FORMAT_DESC" />
+
+			<field name="filesize" type="number" default="500" label="PLG_FIELDS_TJFILE_MAX_SIZE" required="true" description="" min="0" max="100000" />
+		</fieldset>
+	</fields>
+</form>

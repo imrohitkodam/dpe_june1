@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<social type="apps" group="user">
+    <name>Course</name>
+    <element>course</element>
+    <author>Techjoomla</author>
+    <url>www.techjoomla.com</url>
+    <creationDate>13th Jul 2023</creationDate>
+    <version>4.0.5</version>
+    <copyright>Copyright (C) 2014 - 2023 Techjoomla. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <core>false</core>
+    <system>false</system>
+    <installable>true</installable>
+    <default>true</default>
+    <widget>false</widget>
+    <description><![CDATA[APP_COURSE_APP_DESCRIPTION]]></description>
+    <files>
+		<folder>config</folder>
+		<folder>hooks</folder>
+		<folder>themes</folder>
+		<file>course.php</file>
+		<file>course.xml</file>
+		<file>en-GB.plg_app_user_course.ini</file>
+	</files>
+	<languages>
+		<language type="en-GB">en-GB.plg_app_user_course.ini</language>
+	</languages>
+</social>

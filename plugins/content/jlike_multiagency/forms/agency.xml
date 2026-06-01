@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<form>
+		<fieldset name="agency" addfieldpath="administrator/components/com_tjfields/models/fields">
+			<field
+				name="clusters"
+				type="cluster"
+				filter="STRING"
+				label="PLG_CONTENT_JLIKE_MULTIAGENCY_FIELD_AGENCY"
+				description="PLG_CONTENT_JLIKE_MULTIAGENCY_FIELD_AGENCY_DESC"
+				required="true"
+				onchange="jlike.getAgencyUsers(this)"
+			/>
+			<field name="all_cluster_users" type="radio" default="0" label="PLG_CONTENT_JLIKE_MULTIAGENCY_FIELD_ALL_USERS" description="PLG_CONTENT_JLIKE_MULTIAGENCY_FIELD_ALL_USERS_DESC" class="pl-0">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="read_and_understood" required="False" type="list" label="PLG_CONTENT_JLIKE_MULTIAGENCY_FIELD_READ_AND_UNDERSTOOD" description="PLG_CONTENT_JLIKE_MULTIAGENCY_FIELD_ALL_USERS_DESC" hint="PLG_CONTENT_JLIKE_MULTIAGENCY_FIELD_ALL_USERS_DESC">
+ 				<option value=""></option>
+	            <option value="1">JYES</option>
+				<option value="2">JNO</option>
+		    </field>
+			 <field name="used_in_practice" required="False" type="list" label="PLG_CONTENT_JLIKE_MULTIAGENCY_FIELD_USED_IN_PRACTICE" description="PLG_CONTENT_JLIKE_MULTIAGENCY_FIELD_ALL_USERS_DESC" hint="PLG_CONTENT_JLIKE_MULTIAGENCY_FIELD_ALL_USERS_DESC">
+		      <option value=""></option>
+		      <option value="1">JYES</option>
+		      <option value="2">JNO</option>
+		    </field>
+			  <field name="course_status" required="false" type="list" label="PLG_CONTENT_JLIKE_MULTIAGENCY_FIELD_COURSE_STATUS" description="PLG_CONTENT_JLIKE_MULTIAGENCY_FIELD_COURSE_STATUS" hint="PLG_CONTENT_JLIKE_MULTIAGENCY_FIELD_COURSE_STATUS">
+		      <option value="">PLG_CONTENT_JLIKE_MULTIAGENCY_FIELD_SELECT_STATUS</option>
+		      <option value="I">PLG_CONTENT_JLIKE_MULTIAGENCY_FIELD_INCOMPLETE</option>
+		      <option value="C">PLG_CONTENT_JLIKE_MULTIAGENCY_FIELD_COMPLETE</option>
+		    </field>
+		</fieldset>
+	</form>

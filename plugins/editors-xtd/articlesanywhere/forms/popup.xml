@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config addfieldprefix="RegularLabs\Library\Form\Field">
+  <fieldset name="filters">
+    <field name="filters" type="Subform" formsource="plugins/editors-xtd/articlesanywhere/forms/filters.xml" multiple="true" buttons="add,remove" class="rl-subform rl-hide-main-buttons"/>
+  </fieldset>
+  <fieldset name="data_tags">
+    <field name="data_tags" type="Subform" formsource="plugins/editors-xtd/articlesanywhere/forms/data_tag.xml" multiple="true" buttons="move,add,remove" class="rl-subform rl-hide-main-buttons"/>
+  </fieldset>
+  <fieldset name="extra_attributes">
+    <field name="output_when_empty" type="Text" default="" hint="JDEFAULT" label="AA_OUTPUT_WHEN_EMPTY" description="AA_OUTPUT_WHEN_EMPTY_DESC"/>
+    <field name="@settings_multiple__a" type="Block" start="1" label="AA_MULTIPLE_ARTICLES"/>
+    <field name="ordering" type="List" default="" label="AA_ORDERING" description="AA_ORDERING_DESC">
+      <option value="">JDEFAULT</option>
+      <option value="title">JGLOBAL_TITLE</option>
+      <option value="ordering">JFIELD_ORDERING_LABEL</option>
+      <option value="created">JGLOBAL_FIELD_CREATED_LABEL</option>
+      <option value="modified">JGLOBAL_FIELD_MODIFIED_LABEL</option>
+      <option value="publish_up">JGLOBAL_FIELD_PUBLISH_UP_LABEL</option>
+      <option value="publish_down">JGLOBAL_FIELD_PUBLISH_DOWN_LABEL</option>
+      <option value="hits">JGLOBAL_HITS</option>
+      <option value="random">RL_RANDOM</option>
+    </field>
+    <field name="ordering_direction" type="Radio" default="ASC" class="btn-group rl-btn-group btn-group-md" label="AA_ORDERING_DIRECTION" description="AA_ORDERING_DIRECTION_DESC" showon="ordering!:[AND]ordering!:random">
+      <option value="ASC" class="btn btn-outline-info">JGLOBAL_ORDER_ASCENDING</option>
+      <option value="DESC" class="btn btn-outline-info">JGLOBAL_ORDER_DESCENDING</option>
+    </field>
+    <field name="use_limit" type="Radio" default="" class="btn-group rl-btn-group btn-group-md btn-group-yesno" label="AA_LIMIT" description="AA_LIMIT_DESC">
+      <option value="">JDEFAULT</option>
+      <option value="1">RL_SPECIFY</option>
+    </field>
+    <field name="limit" type="Range" default="100" size="5" min="1" max="1000" step="1" label="" showon="use_limit:1"/>
+    <field name="use_pagination" type="Radio" default="" class="btn-group rl-btn-group btn-group-md btn-group-yesno" label="AA_PAGINATION" description="AA_PAGINATION_DESC">
+      <option value="">JDEFAULT</option>
+      <option value="0">JNO</option>
+      <option value="1">JYES</option>
+    </field>
+    <field name="use_per_page" type="Radio" default="" class="btn-group rl-btn-group btn-group-md btn-group-yesno" label="AA_LIMIT_PER_PAGE" description="AA_LIMIT_PER_PAGE_DESC" showon="use_pagination:1">
+      <option value="">JDEFAULT</option>
+      <option value="1">RL_SPECIFY</option>
+    </field>
+    <field name="per_page" type="Range" default="10" size="5" min="1" max="100" step="1" showon="use_pagination:1[AND]use_per_page:1"/>
+    <field name="separator" type="Text" default="" label="AA_SEPARATOR" description="AA_SEPARATOR_DESC"/>
+    <field name="@settings_multiple__b" type="Block" end="1"/>
+  </fieldset>
+</config>

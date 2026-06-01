@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="assignments">
+		<fieldset name="single">
+			<fields name="jreviewssingle">
+				<field name="assignment_state" type="assignmentselection" 
+					label="PLG_GSD_JREVIEWS_LISTING"
+					description="PLG_GSD_JREVIEWS_ASSIGN_LISTING_DESC"
+				/>
+				<field name="selection" type="componentitems" 
+					label="NR_SELECTION" 
+					description="PLG_GSD_JREVIEWS_ASSIGN_LISTING_SELECTION_DESC"
+					multiple="true"
+					table="jreviews_content"
+					join="#__content as c ON c.id = i.contentid"
+					column_id="c.id"
+					column_title="c.title"
+					column_state="c.state"
+					where="c.state >= 0"
+				/>
+        	</fields>
+    	</fieldset>
+		<fieldset name="category">
+			<fields name="jreviewscategory">
+				<field name="assignment_state" type="assignmentselection"
+	                label="NR_CATEGORIES"
+	                description="PLG_GSD_JREVIEWS_ASSIGN_CATEGORY_DESC"
+	            />
+	            <field name="selection" type="nrjreviewscategories" 
+	                label="NR_SELECTION" 
+	                description="NR_CATEGORIES_DESC"
+	                group="categories" 
+	                multiple="true" 
+	            />
+	            <fields name="params">
+		            <field name="inc_children" type="list"
+		                label="NR_ALSO_ON_CHILD_ITEMS"
+		                description="NR_ALSO_ON_CHILD_ITEMS_DESC"
+		             	class="input-medium"
+		                default="0">
+		                <option value="0">JNO</option>
+		                <option value="1">JYES</option>
+		                <option value="2">NR_ONLY</option>
+		            </field>
+	        	</fields>
+        	</fields>
+    	</fieldset>
+	</fields>
+</form>

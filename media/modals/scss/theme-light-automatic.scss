@@ -1,0 +1,19 @@
+/**
+ * [Copyright Regular Labs]
+ */
+
+@import "variables";
+
+[data-modals-element="modal"][data-modals-theme="light-automatic"] {
+    @import "styling-main";
+    @import "styling-main-light";
+
+    @media screen and (prefers-color-scheme: dark) {
+        @import "styling-main-dark";
+    }
+
+    .dark-mode &,
+    [data-mode="dark"] & {
+        @import "styling-main-dark";
+    }
+}

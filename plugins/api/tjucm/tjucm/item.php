@@ -1,0 +1,116 @@
+<?php
+/**
+ * @package     TJ-UCM
+ * @subpackage  com_tjucm
+ *
+ * @author      Techjoomla <extensions@techjoomla.com>
+ * @copyright   Copyright (C) 2009 - 2019 Techjoomla. All rights reserved.
+ * @license     http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ */
+
+defined('_JEXEC') or die;
+use Joomla\CMS\Factory;
+use Joomla\CMS\MVC\Model\BaseDatabaseModel;
+use Joomla\CMS\Language\Text;
+jimport('joomla.plugin.plugin');
+
+/**
+ * Class for get TjUCM item
+ *
+ * @package     TjUcm
+ * @subpackage  Plg_Api_ucm
+ * @since       _DEPLOY_VERSION_
+ */
+class TjucmApiResourceItem extends ApiResource
+{
+	/**
+	 * Get UCM Item Data
+	 *
+	 * @return  void
+	 *
+	 * @since   _DEPLOY_VERSION_
+	 */
+	public function get()
+	{
+		$jInput = Factory::getApplication()->input;
+		$id = $jInput->get('id');
+		$tjUcmModelItem = BaseDatabaseModel::getInstance('Item', 'TjucmModel');
+
+		// Setting Client ID
+		$item = $tjUcmModelItem->getItem($id);
+
+		$this->plugin->setResponse($item);
+	}
+
+	/**
+	 * Post Item Data
+	 *
+	 * @return  void
+	 *
+	 * @since   _DEPLOY_VERSION_
+	 */
+	public function post()
+	{
+		$jInput = Factory::getApplication()->input;
+		$client = $jInput->get('client');
+
+		// Getting the request Body Data
+		$jinput = Factory::getApplication()->input->json;
+
+		// Setting Item details
+		$data = array();
+		$data["id"] = $jinput->get('id');
+		$data["client"] = $client;
+		$data["draft"] = $jinput->get('draft');
+		$data["categoryId"] = $jinput->get('category_id');
+		$data["state"] = $jinput->get('state');
+		$fields = $jinput->get('fields', array(), 'array');
+		$extra_jform_data = array();
+
+		// Addding Extra item field values
+		$tjFieldsModelFields = BaseDatabaseModel::getInstance('Fields', 'TjfieldsModel');
+		$tjFieldsModelFields->setState("filter.client", $client);
+
+		// Variable to store Fields of FieldGroup
+		$tjFields = $tjFieldsModelFields->getItems();
+
+		// Array to store field id=>name
+		$fieldsAssoc = array();
+
+		foreach ($tjFields as $k => $v)
+		{
+			$fieldsAssoc[$v->id] = $v->name;
+		}
+
+		unset($tjFields);
+
+		// Mapping field name with its value
+		foreach ($fields as $k => $field)
+		{
+			$extra_jform_data[$fieldsAssoc[(int) $field["id"]]] = $field["value"];
+		}
+
+		$tjUcmModelItemForm = BaseDatabaseModel::getInstance('ItemForm', 'TjucmModel');
+
+		// Setting Client ID
+		$tjUcmModelItemForm->setClient($client);
+		$itemId = $tjUcmModelItemForm->save($data, $extra_jform_data);
+
+		// Response Array
+		$return_arr = array();
+
+		if ($itemId)
+		{
+			$return_arr['success'] = true;
+			$return_arr['message'] = Text::_("COM_TJUCM_ITEM_ADDED");
+			$return_arr['id'] = $itemId;
+		}
+		else
+		{
+			$return_arr['success'] = false;
+			$return_arr['message'] = Text::_("COM_TJUCM_ITEM_NOT_ADDED");
+		}
+
+		$this->plugin->setResponse($return_arr);
+	}
+}

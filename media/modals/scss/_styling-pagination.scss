@@ -1,0 +1,94 @@
+@import "variables";
+
+[data-modals-element="pagination-bar"] {
+    --margin:        10px;
+    margin:          var(--margin);
+
+    @media (min-width: $screen-md) {
+        --margin: 20px;
+    }
+
+    overflow-x:      auto;
+    overflow-y:      hidden;
+
+    // make scrollbar look nice
+    scrollbar-width: thin;
+    scrollbar-color: #999999 transparent;
+
+    &::-webkit-scrollbar {
+        width:      8px;
+        height:     8px;
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background:    #999999;
+        border-radius: 4px;
+    }
+}
+
+[data-modals-element="pagination-button"] {
+    --size:           5vw;
+    box-sizing:       content-box;
+    background-clip:  content-box;
+    background-color: #ffffff;
+    border-radius:    50%;
+    width:            var(--size);
+    height:           var(--size);
+    margin:           calc(var(--size) / 4);
+    transition:       all 0.1s linear;
+    font-size:        0;
+
+    @media (min-width: $screen-sm) {
+        --size: 3vw;
+    }
+
+    @media (min-width: $screen-md) {
+        --size: 16px;
+    }
+
+    &.active,
+    &:hover:not(.active),
+    &:focus-visible:not(.active) {
+        background-color: #115dda;
+    }
+}
+
+[data-modals-element="pagination-image"] {
+    --size:        30px;
+    --saturate:    50%;
+
+    width:         auto;
+    height:        var(--size);
+    margin:        2px;
+    transition:    all 0.1s linear;
+    border-radius: 2px;
+    cursor:        pointer;
+    opacity:       .5;
+    filter:        saturate(var(--saturate));
+    box-shadow:    0 1px 2px rgba(0, 0, 0, 0.25);
+
+    @media (min-width: $screen-md) {
+        --size: 50px;
+    }
+
+    &.active,
+    &:hover:not(.active),
+    &:focus-visible:not(.active) {
+        opacity:    1;
+        --saturate: 100%;
+    }
+}
+
+[data-modals-element="pagination-text-number"] {
+    font-size: 1.2rem;
+}
+
+[data-modals-element="pagination-text-divider"],
+[data-modals-element="pagination-text-total"] {
+    opacity: .5;
+}
+
+[data-modals-element="pagination-text-divider"] {
+    padding: 0 0.3rem;
+}

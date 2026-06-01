@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.0.0" client="site" method="upgrade">
+	<identifier>mod://site/docman_search</identifier>
+	<name>mod_docman_search</name>
+	<creationDate>April 2025</creationDate>
+	<author>Joomlatools</author>
+	<copyright>Copyright (C) 2011 Timble CVBA (http://www.timble.net)</copyright>
+	<license>GNU GPLv3 - http://www.gnu.org/licenses/gpl.html</license>
+	<authorEmail>support@joomlatools.com</authorEmail>
+	<authorUrl>www.joomlatools.com</authorUrl>
+	<version>6.0.1</version>
+	<description>MOD_DOCMAN_SEARCH_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_docman_search">mod_docman_search.php</filename>
+		<filename>html.php</filename>
+		<folder>tmpl</folder>
+		<folder>language</folder>
+	</files>
+	<config>
+		<fields name="params" addfieldpath="/components/com_docman/forms/fields">
+			<fieldset name="basic">
+				<field name="layout" type="list" id="layout_id"
+						default="table"
+						label="MOD_DOCMAN_SEARCH_LAYOUT_LABEL"
+						description="MOD_DOCMAN_SEARCH_LAYOUT_DESC">
+					<option value="default">MOD_DOCMAN_SEARCH_LAYOUT_LIST</option>
+					<option value="table">MOD_DOCMAN_SEARCH_LAYOUT_TABLE</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

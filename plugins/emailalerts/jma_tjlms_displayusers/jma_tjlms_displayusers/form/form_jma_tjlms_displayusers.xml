@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="jma_coursedisplay">
+		<fieldset name="legacy" label="PLG_JMA_CD_USER_PARAMS">
+			<field
+			name="show_recent_completions_users"
+			type="radio"
+			default="1"
+			label="PLG_JMA_CD_SHOW_RECENT_COMPLETIONS_COURSES_LBL"
+			description="PLG_JMA_CD_SHOW_RECENT_COMPLETIONS_COURSES_DESC"
+			class="radio btn-group btn-group-yesno" >
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+			name="no_of_recent_completions_users"
+			type="text"
+			default="3"
+			class="required validate-numeric inputbox"
+			label="PLG_JMA_CD_RECENT_COMPLETIONS_NO_OF_COURSES_LBL"
+			description="PLG_JMA_CD_RECENT_COMPLETIONS_NO_OF_COURSES_DESC" />
+		</fieldset>
+	</fields>
+</form>

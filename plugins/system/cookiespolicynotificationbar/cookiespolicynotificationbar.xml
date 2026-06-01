@@ -1,0 +1,1173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+	<name>PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR</name>
+	<author>Web357 (Yiannis Christodoulou)</author>
+	<creationDate>26 Nov 2020</creationDate>
+	<copyright>Copyright (C) 2009-2020 Web357. All rights reserved.</copyright>
+	<license>GNU/GPLv3, http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<authorEmail>support@web357.com</authorEmail>
+	<authorUrl>https://www.web357.com/</authorUrl>
+	<version>4.0.0</version>
+	<description>A beautiful and functional EU Cookie Law Compliance Joomla! Plugin that provides a mechanism for informing your visitors about how you use cookies on your website in an elegant manner. It includes a variety of features and parameters (responsive, multilingual, block cookies, change style, etc.). This Joomla! plugin is ready for the GDPR Compliance which has been already implemented on ‎25 May 2018.</description>
+	
+	<files>
+		<folder>assets</folder>
+		<folder>elements</folder>
+		<folder>language</folder>
+		<folder>lib</folder>
+		<filename plugin="cookiespolicynotificationbar">cookiespolicynotificationbar.php</filename>
+		<filename>index.html</filename>
+		<filename>changelog.html</filename>
+		<filename>script.install.helper.php</filename>
+	</files>
+	
+	<media folder="media" destination="plg_system_cookiespolicynotificationbar">
+		<folder>icons</folder>
+	</media>
+
+	<scriptfile>script.install.php</scriptfile>
+
+	<config>
+		<fields name="params" addfieldpath="/plugins/system/web357framework/elements">
+			
+			<!-- ::: PLUGIN ::: -->
+			<fieldset name="basic">
+
+				<!-- BEGIN: Check if Web357 Framework plugin exists -->
+				<field name="w357frmrk" id="w357frmrk" type="w357frmrk" addfieldpath="/plugins/system/cookiespolicynotificationbar/elements" />
+				<!-- END: Check if Web357 Framework plugin exists -->
+
+				<!-- BEGIN: Version Check -->
+				<field type="header" class="w357_large_header" label="W357FRM_HEADER_VERSION_CHECK" />
+				<field name="info" id="info" type="info" extension_type="plugin" extension_name="cookiespolicynotificationbar" real_name="PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR" plugin_type="system" label="" addfieldpath="/plugins/system/web357framework/elements" />
+				<!-- END: Version Check -->
+
+				<!-- BEGIN: JED Review -->
+				<field type="header" class="w357_large_header" label="W357FRM_HEADER_JED_REVIEW_AND_RATING" />
+				<field name="jedreview" id="jedreview" type="jedreview" extension_type="module" extension_name="cookiespolicynotificationbar" real_name="PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR" plugin_type="system" addfieldpath="/plugins/system/web357framework/elements" label="jedreview" description="" jed_url="https://extensions.joomla.org/extensions/extension/site-management/cookie-control/cookies-policy-notification-bar" />
+				<!-- END: JED Review -->
+
+				<!-- BEGIN: Load the Modal Behavior for the Screenshots -->
+				<field name="loadmodalbehavior" type="loadmodalbehavior" />
+				<!-- END: Load the Modal Behavior for the Screenshots -->
+			</fieldset>
+			
+			<!-- ::: BASE SETTINGS ::: -->
+			<fieldset name="basic_settings" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_BASE_SETTINGS">
+				
+				<!-- BEGIN: Default Parameters -->
+				<field type="header" class="w357_large_header" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_BASE_SETTINGS" />
+				<field name="position" type="list" class="btn-group btn-group-yesno cpnb-position" default="bottom" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_POSITION_LBL" description="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_POSITION_DESC">
+					<option value="top">J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_TOP_LBL</option>
+					<option value="bottom">J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_BOTTOM_LBL</option>
+					<option value="center">PLG_SYSTEM_CPNB_CENTER_OPTION</option>
+					<option value="top-left">PLG_SYSTEM_CPNB_TOP_LEFT_OPTION</option>
+					<option value="top-right">PLG_SYSTEM_CPNB_TOP_RIGHT_OPTION</option>
+					<option value="bottom-left">PLG_SYSTEM_CPNB_BOTTOM_LEFT_OPTION</option>
+					<option value="bottom-right">PLG_SYSTEM_CPNB_BOTTOM_RIGHT_OPTION</option>
+				</field>
+
+				<!--
+				// BEGIN: The Ajax/jQuery functionality has been removed in v3.5.0 
+				<field name="ajax_jquery_functionality" type="radio" class="btn-group btn-group-yesno btn-group-reversed" default="0" label="PLG_SYSTEM_CPNB_JQUERY_AJAX_FUNCTIONALITY_LBL" description="PLG_SYSTEM_CPNB_JQUERY_AJAX_FUNCTIONALITY_DESC">
+					<option value="0">JDISABLED</option>
+					<option value="1">JENABLED</option>
+				</field>
+
+				<field name="loadjQuery" type="radio" class="btn-group btn-group-yesno" default="0" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_LOAD_JQUERY_LBL" description="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_LOAD_JQUERY_DESC" showon="ajax_jquery_functionality:1">
+					<option value="1">J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_YES_OPTION</option>
+					<option value="0">J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_NO_OPTION</option>
+					<option value="2">J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_CUSTOM_OPTION</option>
+				</field>
+				
+				<field name="enable_jquery_on_these_pages" type="menuitem" multiple="true" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_ENABLE_JQUERY_ON_THESE_PAGES_LBL" description="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_ENABLE_JQUERY_ON_THESE_PAGES_DESC" showon="ajax_jquery_functionality:1[AND]loadjQuery:2" />
+
+				<field name="disable_jquery_on_these_pages" type="menuitem" multiple="true" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_DISABLE_JQUERY_ON_THESE_PAGES_LBL" description="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_DISABLE_JQUERY_ON_THESE_PAGES_DESC" showon="ajax_jquery_functionality:1[AND]loadjQuery:2" />
+				// END: The Ajax/jQuery functionality has been removed in v3.5.0 
+				-->
+				<field name="hide_after_time" type="radio" class="btn-group" default="yes" label="PLG_SYSTEM_CPNB_HIDE_AFTER_TIME_LBL" description="PLG_SYSTEM_CPNB_HIDE_AFTER_TIME_DESC">
+					<option value="yes">PLG_SYSTEM_CPNB_HIDE_AFTER_TIME_OPTION_YES</option>
+					<option value="display_always">PLG_SYSTEM_CPNB_HIDE_AFTER_TIME_OPTION_DISPLAY_ALWAYS</option>
+				</field>
+
+				<field name="duration" type="text" default="60" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_DURATION_LBL" description="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_DURATION_DESC" showon="hide_after_time:yes" />
+
+				<field name="animate_duration" type="text" default="1000" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_ANIMATE_DURATION_LBL" description="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_ANIMATE_DURATION_DESC" />
+				
+				<field name="limit" type="list" default="0" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_LIMIT_LBL" description="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_LIMIT_DESC" showon="blockCookies:0">
+					<option value="0">J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_0_UNLIMITED</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</field>
+				
+				<field name="cookie_name" type="text" default="cookiesDirective" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_COOKIE_NAME_LBL" description="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_COOKIE_NAME_DESC" pattern="[A-Za-z0-9]+" />
+				
+				<field name="show_in_iframes" type="radio" class="btn-group btn-group-yesno" default="0" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_SHOW_IN_IFRAMES_LBL" description="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_SHOW_IN_IFRAMES_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field name="autoAcceptAfterScrolling" type="radio" class="btn-group btn-group-yesno cpnb-autoAcceptAfterScrolling" default="0" label="PLG_SYSTEM_CPNB_AUTO_ACCEPT_AFTER_SCROLLING_LBL" description="PLG_SYSTEM_CPNB_AUTO_ACCEPT_AFTER_SCROLLING_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field name="numOfScrolledPixelsBeforeAutoAccept" type="number" default="300" label="PLG_SYSTEM_CPNB_AUTO_ACCEPT_AFTER_SCROLLING_PAGE_Y_OFFSET_LBL" description="PLG_SYSTEM_CPNB_AUTO_ACCEPT_AFTER_SCROLLING_PAGE_Y_OFFSET_DESC" min="100" max="2500" step="10" showon="autoAcceptAfterScrolling:1" />
+
+				<field name="reloadPageAfterAccept" type="radio" class="btn-group btn-group-yesno cpnb-reloadPageAfterAccept" default="0" label="PLG_SYSTEM_CPNB_RELOAD_PAGE_AFTER_ACCEPT_LBL" description="PLG_SYSTEM_CPNB_RELOAD_PAGE_AFTER_ACCEPT_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field name="enableGeoIP2Webservice" type="radio" class="btn-group btn-group-yesno" default="0" label="PLG_SYSTEM_CPNB_ENABLE_GEOIP2WEBSERVICE_LBL" description="PLG_SYSTEM_CPNB_ENABLE_GEOIP2WEBSERVICE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<!-- Defaults -->
+				<field type="header" class="w357_small_header" label="PLG_SYSTEM_CPNB_CONFIRMATION_ALERTS_HEADER" />
+				<field name="enableConfirmationAlerts" type="radio" class="btn-group btn-group-yesno cpnb-enableConfirmationAlerts" default="0" label="PLG_SYSTEM_CPNB_ENABLE_CONFIRMATION_ALERTS_LBL" description="PLG_SYSTEM_CPNB_ENABLE_CONFIRMATION_ALERTS_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field name="enableConfirmationAlertsForAcceptBtn" type="radio" class="btn-group btn-group-yesno cpnb-enableConfirmationAlertsForAcceptBtn" default="0" label="PLG_SYSTEM_CPNB_ENABLE_CONFIRMATION_ALERTS_FOR_ACCEPT_BTN_LBL" description="PLG_SYSTEM_CPNB_ENABLE_CONFIRMATION_ALERTS_FOR_ACCEPT_BTN_DESC" showon="enableConfirmationAlerts:1">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field name="enableConfirmationAlertsForDeclineBtn" type="radio" class="btn-group btn-group-yesno cpnb-enableConfirmationAlertsForDeclineBtn" default="1" label="PLG_SYSTEM_CPNB_ENABLE_CONFIRMATION_ALERTS_FOR_DECLINE_BTN_LBL" description="PLG_SYSTEM_CPNB_ENABLE_CONFIRMATION_ALERTS_FOR_DECLINE_BTN_DESC" showon="enableConfirmationAlerts:1">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field name="enableConfirmationAlertsForDeleteBtn" type="radio" class="btn-group btn-group-yesno cpnb-enableConfirmationAlertsForDeleteBtn" default="1" label="PLG_SYSTEM_CPNB_ENABLE_CONFIRMATION_ALERTS_FOR_DELETE_BTN_LBL" description="PLG_SYSTEM_CPNB_ENABLE_CONFIRMATION_ALERTS_FOR_DELETE_BTN_DESC" showon="enableConfirmationAlerts:1">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<!-- END: Default Parameters -->
+
+				<!-- BEGIN: Enable/Disable Plugin in these Continents -->
+				<field type="header" class="w357_large_header" label="PLG_SYSTEM_CPNB_INCLUDE_EXLUDE_CONTINENTS_HEADER" showon="enableGeoIP2Webservice:1" />
+				<field name="include_continents" type="list" multiple="true" class="btn-group btn-group-yesno" default="" label="PLG_SYSTEM_CPNB_INCLUDE_CONTINENTS_LBL" description="PLG_SYSTEM_CPNB_INCLUDE_CONTINENTS_DESC" showon="enableGeoIP2Webservice:1">
+					<option value="AF">Africa</option>
+					<option value="NA">North America</option>
+					<option value="OC">Oceania</option>
+					<option value="AN">Antarctica</option>
+					<option value="AS">Asia</option>
+					<option value="EU">Europe</option>
+					<option value="SA">South America</option>
+				</field>
+				<field name="exclude_continents" type="list" multiple="true" class="btn-group btn-group-yesno" default="" label="PLG_SYSTEM_CPNB_EXCLUDE_CONTINENTS_LBL" description="PLG_SYSTEM_CPNB_EXCLUDE_CONTINENTS_DESC" showon="enableGeoIP2Webservice:1">
+					<option value="AF">Africa</option>
+					<option value="NA">North America</option>
+					<option value="OC">Oceania</option>
+					<option value="AN">Antarctica</option>
+					<option value="AS">Asia</option>
+					<option value="EU">Europe</option>
+					<option value="SA">South America</option>
+				</field>
+				<!-- END: Enable/Disable Plugin from these Continents -->
+
+				<!-- BEGIN: Enable/Disable Plugin in these Countries -->
+				<field type="header" class="w357_large_header" label="PLG_SYSTEM_CPNB_INCLUDE_EXLUDE_COUNTRIES_HEADER" showon="enableGeoIP2Webservice:1" />
+				<field name="include_countries" type="list" multiple="true" class="btn-group btn-group-yesno" default="" label="PLG_SYSTEM_CPNB_INCLUDE_COUNTRIES_LBL" description="PLG_SYSTEM_CPNB_INCLUDE_COUNTRIES_DESC" showon="enableGeoIP2Webservice:1">
+					<option value="AF">Afghanistan</option>
+					<option value="AL">Albania</option>
+					<option value="DZ">Algeria</option>
+					<option value="AS">American Samoa</option>
+					<option value="AD">Andorra</option>
+					<option value="AO">Angola</option>
+					<option value="AI">Anguilla</option>
+					<option value="AQ">Antarctica</option>
+					<option value="AG">Antigua and Barbuda</option>
+					<option value="AR">Argentina</option>
+					<option value="AM">Armenia</option>
+					<option value="AW">Aruba</option>
+					<option value="AU">Australia</option>
+					<option value="AT">Austria</option>
+					<option value="AZ">Azerbaijan</option>
+					<option value="BS">Bahamas</option>
+					<option value="BH">Bahrain</option>
+					<option value="BD">Bangladesh</option>
+					<option value="BB">Barbados</option>
+					<option value="BY">Belarus</option>
+					<option value="BE">Belgium</option>
+					<option value="BZ">Belize</option>
+					<option value="BJ">Benin</option>
+					<option value="BM">Bermuda</option>
+					<option value="BT">Bhutan</option>
+					<option value="BO">Bolivia</option>
+					<option value="BA">Bosnia and Herzegovina</option>
+					<option value="BW">Botswana</option>
+					<option value="BV">Bouvet Island</option>
+					<option value="BR">Brazil</option>
+					<option value="IO">British Indian Ocean Territory</option>
+					<option value="BN">Brunei Darussalam</option>
+					<option value="BG">Bulgaria</option>
+					<option value="BF">Burkina Faso</option>
+					<option value="BI">Burundi</option>
+					<option value="KH">Cambodia</option>
+					<option value="CM">Cameroon</option>
+					<option value="CA">Canada</option>
+					<option value="CV">Cape Verde</option>
+					<option value="KY">Cayman Islands</option>
+					<option value="CF">Central African Republic</option>
+					<option value="TD">Chad</option>
+					<option value="CL">Chile</option>
+					<option value="CN">China</option>
+					<option value="CX">Christmas Island</option>
+					<option value="CC">Cocos (Keeling) Islands</option>
+					<option value="CO">Colombia</option>
+					<option value="KM">Comoros</option>
+					<option value="CG">Congo</option>
+					<option value="CD">Congo, The Democratic Republic of The</option>
+					<option value="CK">Cook Islands</option>
+					<option value="CR">Costa Rica</option>
+					<option value="CI">Cote D'ivoire</option>
+					<option value="HR">Croatia</option>
+					<option value="CU">Cuba</option>
+					<option value="CY">Cyprus</option>
+					<option value="CZ">Czech Republic</option>
+					<option value="DK">Denmark</option>
+					<option value="DJ">Djibouti</option>
+					<option value="DM">Dominica</option>
+					<option value="DO">Dominican Republic</option>
+					<option value="EC">Ecuador</option>
+					<option value="EG">Egypt</option>
+					<option value="SV">El Salvador</option>
+					<option value="GQ">Equatorial Guinea</option>
+					<option value="ER">Eritrea</option>
+					<option value="EE">Estonia</option>
+					<option value="ET">Ethiopia</option>
+					<option value="FK">Falkland Islands (Malvinas)</option>
+					<option value="FO">Faroe Islands</option>
+					<option value="FJ">Fiji</option>
+					<option value="FI">Finland</option>
+					<option value="FR">France</option>
+					<option value="GF">French Guiana</option>
+					<option value="PF">French Polynesia</option>
+					<option value="TF">French Southern Territories</option>
+					<option value="GA">Gabon</option>
+					<option value="GM">Gambia</option>
+					<option value="GE">Georgia</option>
+					<option value="DE">Germany</option>
+					<option value="GH">Ghana</option>
+					<option value="GI">Gibraltar</option>
+					<option value="GR">Greece</option>
+					<option value="GL">Greenland</option>
+					<option value="GD">Grenada</option>
+					<option value="GP">Guadeloupe</option>
+					<option value="GU">Guam</option>
+					<option value="GT">Guatemala</option>
+					<option value="GG">Guernsey</option>
+					<option value="GN">Guinea</option>
+					<option value="GW">Guinea-bissau</option>
+					<option value="GY">Guyana</option>
+					<option value="HT">Haiti</option>
+					<option value="HM">Heard Island and Mcdonald Islands</option>
+					<option value="VA">Holy See (Vatican City State)</option>
+					<option value="HN">Honduras</option>
+					<option value="HK">Hong Kong</option>
+					<option value="HU">Hungary</option>
+					<option value="IS">Iceland</option>
+					<option value="IN">India</option>
+					<option value="ID">Indonesia</option>
+					<option value="IR">Iran, Islamic Republic of</option>
+					<option value="IQ">Iraq</option>
+					<option value="IE">Ireland</option>
+					<option value="IM">Isle of Man</option>
+					<option value="IL">Israel</option>
+					<option value="IT">Italy</option>
+					<option value="JM">Jamaica</option>
+					<option value="JP">Japan</option>
+					<option value="JE">Jersey</option>
+					<option value="JO">Jordan</option>
+					<option value="KZ">Kazakhstan</option>
+					<option value="KE">Kenya</option>
+					<option value="KI">Kiribati</option>
+					<option value="KP">Korea, Democratic People's Republic of</option>
+					<option value="KR">Korea, Republic of</option>
+					<option value="KW">Kuwait</option>
+					<option value="KG">Kyrgyzstan</option>
+					<option value="LA">Lao People's Democratic Republic</option>
+					<option value="LV">Latvia</option>
+					<option value="LB">Lebanon</option>
+					<option value="LS">Lesotho</option>
+					<option value="LR">Liberia</option>
+					<option value="LY">Libyan Arab Jamahiriya</option>
+					<option value="LI">Liechtenstein</option>
+					<option value="LT">Lithuania</option>
+					<option value="LU">Luxembourg</option>
+					<option value="MO">Macao</option>
+					<option value="MK">Macedonia, The Former Yugoslav Republic of</option>
+					<option value="MG">Madagascar</option>
+					<option value="MW">Malawi</option>
+					<option value="MY">Malaysia</option>
+					<option value="MV">Maldives</option>
+					<option value="ML">Mali</option>
+					<option value="MT">Malta</option>
+					<option value="MH">Marshall Islands</option>
+					<option value="MQ">Martinique</option>
+					<option value="MR">Mauritania</option>
+					<option value="MU">Mauritius</option>
+					<option value="YT">Mayotte</option>
+					<option value="MX">Mexico</option>
+					<option value="FM">Micronesia, Federated States of</option>
+					<option value="MD">Moldova, Republic of</option>
+					<option value="MC">Monaco</option>
+					<option value="MN">Mongolia</option>
+					<option value="ME">Montenegro</option>
+					<option value="MS">Montserrat</option>
+					<option value="MA">Morocco</option>
+					<option value="MZ">Mozambique</option>
+					<option value="MM">Myanmar</option>
+					<option value="NA">Namibia</option>
+					<option value="NR">Nauru</option>
+					<option value="NP">Nepal</option>
+					<option value="NL">Netherlands</option>
+					<option value="AN">Netherlands Antilles</option>
+					<option value="NC">New Caledonia</option>
+					<option value="NZ">New Zealand</option>
+					<option value="NI">Nicaragua</option>
+					<option value="NE">Niger</option>
+					<option value="NG">Nigeria</option>
+					<option value="NU">Niue</option>
+					<option value="NF">Norfolk Island</option>
+					<option value="MP">Northern Mariana Islands</option>
+					<option value="NO">Norway</option>
+					<option value="OM">Oman</option>
+					<option value="PK">Pakistan</option>
+					<option value="PW">Palau</option>
+					<option value="PS">Palestinian Territory, Occupied</option>
+					<option value="PA">Panama</option>
+					<option value="PG">Papua New Guinea</option>
+					<option value="PY">Paraguay</option>
+					<option value="PE">Peru</option>
+					<option value="PH">Philippines</option>
+					<option value="PN">Pitcairn</option>
+					<option value="PL">Poland</option>
+					<option value="PT">Portugal</option>
+					<option value="PR">Puerto Rico</option>
+					<option value="QA">Qatar</option>
+					<option value="RE">Reunion</option>
+					<option value="RO">Romania</option>
+					<option value="RU">Russian Federation</option>
+					<option value="RW">Rwanda</option>
+					<option value="SH">Saint Helena</option>
+					<option value="KN">Saint Kitts and Nevis</option>
+					<option value="LC">Saint Lucia</option>
+					<option value="PM">Saint Pierre and Miquelon</option>
+					<option value="VC">Saint Vincent and The Grenadines</option>
+					<option value="WS">Samoa</option>
+					<option value="SM">San Marino</option>
+					<option value="ST">Sao Tome and Principe</option>
+					<option value="SA">Saudi Arabia</option>
+					<option value="SN">Senegal</option>
+					<option value="RS">Serbia</option>
+					<option value="SC">Seychelles</option>
+					<option value="SL">Sierra Leone</option>
+					<option value="SG">Singapore</option>
+					<option value="SK">Slovakia</option>
+					<option value="SI">Slovenia</option>
+					<option value="SB">Solomon Islands</option>
+					<option value="SO">Somalia</option>
+					<option value="ZA">South Africa</option>
+					<option value="GS">South Georgia and The South Sandwich Islands</option>
+					<option value="ES">Spain</option>
+					<option value="LK">Sri Lanka</option>
+					<option value="SD">Sudan</option>
+					<option value="SR">Suriname</option>
+					<option value="SJ">Svalbard and Jan Mayen</option>
+					<option value="SZ">Swaziland</option>
+					<option value="SE">Sweden</option>
+					<option value="CH">Switzerland</option>
+					<option value="SY">Syrian Arab Republic</option>
+					<option value="TW">Taiwan, Province of China</option>
+					<option value="TJ">Tajikistan</option>
+					<option value="TZ">Tanzania, United Republic of</option>
+					<option value="TH">Thailand</option>
+					<option value="TL">Timor-leste</option>
+					<option value="TG">Togo</option>
+					<option value="TK">Tokelau</option>
+					<option value="TO">Tonga</option>
+					<option value="TT">Trinidad and Tobago</option>
+					<option value="TN">Tunisia</option>
+					<option value="TR">Turkey</option>
+					<option value="TM">Turkmenistan</option>
+					<option value="TC">Turks and Caicos Islands</option>
+					<option value="TV">Tuvalu</option>
+					<option value="UG">Uganda</option>
+					<option value="UA">Ukraine</option>
+					<option value="AE">United Arab Emirates</option>
+					<option value="GB">United Kingdom</option>
+					<option value="US">United States</option>
+					<option value="UM">United States Minor Outlying Islands</option>
+					<option value="UY">Uruguay</option>
+					<option value="UZ">Uzbekistan</option>
+					<option value="VU">Vanuatu</option>
+					<option value="VE">Venezuela</option>
+					<option value="VN">Viet Nam</option>
+					<option value="VG">Virgin Islands, British</option>
+					<option value="VI">Virgin Islands, U.S.</option>
+					<option value="WF">Wallis and Futuna</option>
+					<option value="EH">Western Sahara</option>
+					<option value="YE">Yemen</option>
+					<option value="ZM">Zambia</option>
+					<option value="ZW">Zimbabwe</option>
+					<option value="AX">Åland Islands</option>
+				</field>
+				<field name="exclude_countries" type="list" multiple="true" class="btn-group btn-group-yesno" default="" label="PLG_SYSTEM_CPNB_EXCLUDE_COUNTRIES_LBL" description="PLG_SYSTEM_CPNB_EXCLUDE_COUNTRIES_DESC" showon="enableGeoIP2Webservice:1">
+					<option value="AF">Afghanistan</option>
+					<option value="AL">Albania</option>
+					<option value="DZ">Algeria</option>
+					<option value="AS">American Samoa</option>
+					<option value="AD">Andorra</option>
+					<option value="AO">Angola</option>
+					<option value="AI">Anguilla</option>
+					<option value="AQ">Antarctica</option>
+					<option value="AG">Antigua and Barbuda</option>
+					<option value="AR">Argentina</option>
+					<option value="AM">Armenia</option>
+					<option value="AW">Aruba</option>
+					<option value="AU">Australia</option>
+					<option value="AT">Austria</option>
+					<option value="AZ">Azerbaijan</option>
+					<option value="BS">Bahamas</option>
+					<option value="BH">Bahrain</option>
+					<option value="BD">Bangladesh</option>
+					<option value="BB">Barbados</option>
+					<option value="BY">Belarus</option>
+					<option value="BE">Belgium</option>
+					<option value="BZ">Belize</option>
+					<option value="BJ">Benin</option>
+					<option value="BM">Bermuda</option>
+					<option value="BT">Bhutan</option>
+					<option value="BO">Bolivia</option>
+					<option value="BA">Bosnia and Herzegovina</option>
+					<option value="BW">Botswana</option>
+					<option value="BV">Bouvet Island</option>
+					<option value="BR">Brazil</option>
+					<option value="IO">British Indian Ocean Territory</option>
+					<option value="BN">Brunei Darussalam</option>
+					<option value="BG">Bulgaria</option>
+					<option value="BF">Burkina Faso</option>
+					<option value="BI">Burundi</option>
+					<option value="KH">Cambodia</option>
+					<option value="CM">Cameroon</option>
+					<option value="CA">Canada</option>
+					<option value="CV">Cape Verde</option>
+					<option value="KY">Cayman Islands</option>
+					<option value="CF">Central African Republic</option>
+					<option value="TD">Chad</option>
+					<option value="CL">Chile</option>
+					<option value="CN">China</option>
+					<option value="CX">Christmas Island</option>
+					<option value="CC">Cocos (Keeling) Islands</option>
+					<option value="CO">Colombia</option>
+					<option value="KM">Comoros</option>
+					<option value="CG">Congo</option>
+					<option value="CD">Congo, The Democratic Republic of The</option>
+					<option value="CK">Cook Islands</option>
+					<option value="CR">Costa Rica</option>
+					<option value="CI">Cote D'ivoire</option>
+					<option value="HR">Croatia</option>
+					<option value="CU">Cuba</option>
+					<option value="CY">Cyprus</option>
+					<option value="CZ">Czech Republic</option>
+					<option value="DK">Denmark</option>
+					<option value="DJ">Djibouti</option>
+					<option value="DM">Dominica</option>
+					<option value="DO">Dominican Republic</option>
+					<option value="EC">Ecuador</option>
+					<option value="EG">Egypt</option>
+					<option value="SV">El Salvador</option>
+					<option value="GQ">Equatorial Guinea</option>
+					<option value="ER">Eritrea</option>
+					<option value="EE">Estonia</option>
+					<option value="ET">Ethiopia</option>
+					<option value="FK">Falkland Islands (Malvinas)</option>
+					<option value="FO">Faroe Islands</option>
+					<option value="FJ">Fiji</option>
+					<option value="FI">Finland</option>
+					<option value="FR">France</option>
+					<option value="GF">French Guiana</option>
+					<option value="PF">French Polynesia</option>
+					<option value="TF">French Southern Territories</option>
+					<option value="GA">Gabon</option>
+					<option value="GM">Gambia</option>
+					<option value="GE">Georgia</option>
+					<option value="DE">Germany</option>
+					<option value="GH">Ghana</option>
+					<option value="GI">Gibraltar</option>
+					<option value="GR">Greece</option>
+					<option value="GL">Greenland</option>
+					<option value="GD">Grenada</option>
+					<option value="GP">Guadeloupe</option>
+					<option value="GU">Guam</option>
+					<option value="GT">Guatemala</option>
+					<option value="GG">Guernsey</option>
+					<option value="GN">Guinea</option>
+					<option value="GW">Guinea-bissau</option>
+					<option value="GY">Guyana</option>
+					<option value="HT">Haiti</option>
+					<option value="HM">Heard Island and Mcdonald Islands</option>
+					<option value="VA">Holy See (Vatican City State)</option>
+					<option value="HN">Honduras</option>
+					<option value="HK">Hong Kong</option>
+					<option value="HU">Hungary</option>
+					<option value="IS">Iceland</option>
+					<option value="IN">India</option>
+					<option value="ID">Indonesia</option>
+					<option value="IR">Iran, Islamic Republic of</option>
+					<option value="IQ">Iraq</option>
+					<option value="IE">Ireland</option>
+					<option value="IM">Isle of Man</option>
+					<option value="IL">Israel</option>
+					<option value="IT">Italy</option>
+					<option value="JM">Jamaica</option>
+					<option value="JP">Japan</option>
+					<option value="JE">Jersey</option>
+					<option value="JO">Jordan</option>
+					<option value="KZ">Kazakhstan</option>
+					<option value="KE">Kenya</option>
+					<option value="KI">Kiribati</option>
+					<option value="KP">Korea, Democratic People's Republic of</option>
+					<option value="KR">Korea, Republic of</option>
+					<option value="KW">Kuwait</option>
+					<option value="KG">Kyrgyzstan</option>
+					<option value="LA">Lao People's Democratic Republic</option>
+					<option value="LV">Latvia</option>
+					<option value="LB">Lebanon</option>
+					<option value="LS">Lesotho</option>
+					<option value="LR">Liberia</option>
+					<option value="LY">Libyan Arab Jamahiriya</option>
+					<option value="LI">Liechtenstein</option>
+					<option value="LT">Lithuania</option>
+					<option value="LU">Luxembourg</option>
+					<option value="MO">Macao</option>
+					<option value="MK">Macedonia, The Former Yugoslav Republic of</option>
+					<option value="MG">Madagascar</option>
+					<option value="MW">Malawi</option>
+					<option value="MY">Malaysia</option>
+					<option value="MV">Maldives</option>
+					<option value="ML">Mali</option>
+					<option value="MT">Malta</option>
+					<option value="MH">Marshall Islands</option>
+					<option value="MQ">Martinique</option>
+					<option value="MR">Mauritania</option>
+					<option value="MU">Mauritius</option>
+					<option value="YT">Mayotte</option>
+					<option value="MX">Mexico</option>
+					<option value="FM">Micronesia, Federated States of</option>
+					<option value="MD">Moldova, Republic of</option>
+					<option value="MC">Monaco</option>
+					<option value="MN">Mongolia</option>
+					<option value="ME">Montenegro</option>
+					<option value="MS">Montserrat</option>
+					<option value="MA">Morocco</option>
+					<option value="MZ">Mozambique</option>
+					<option value="MM">Myanmar</option>
+					<option value="NA">Namibia</option>
+					<option value="NR">Nauru</option>
+					<option value="NP">Nepal</option>
+					<option value="NL">Netherlands</option>
+					<option value="AN">Netherlands Antilles</option>
+					<option value="NC">New Caledonia</option>
+					<option value="NZ">New Zealand</option>
+					<option value="NI">Nicaragua</option>
+					<option value="NE">Niger</option>
+					<option value="NG">Nigeria</option>
+					<option value="NU">Niue</option>
+					<option value="NF">Norfolk Island</option>
+					<option value="MP">Northern Mariana Islands</option>
+					<option value="NO">Norway</option>
+					<option value="OM">Oman</option>
+					<option value="PK">Pakistan</option>
+					<option value="PW">Palau</option>
+					<option value="PS">Palestinian Territory, Occupied</option>
+					<option value="PA">Panama</option>
+					<option value="PG">Papua New Guinea</option>
+					<option value="PY">Paraguay</option>
+					<option value="PE">Peru</option>
+					<option value="PH">Philippines</option>
+					<option value="PN">Pitcairn</option>
+					<option value="PL">Poland</option>
+					<option value="PT">Portugal</option>
+					<option value="PR">Puerto Rico</option>
+					<option value="QA">Qatar</option>
+					<option value="RE">Reunion</option>
+					<option value="RO">Romania</option>
+					<option value="RU">Russian Federation</option>
+					<option value="RW">Rwanda</option>
+					<option value="SH">Saint Helena</option>
+					<option value="KN">Saint Kitts and Nevis</option>
+					<option value="LC">Saint Lucia</option>
+					<option value="PM">Saint Pierre and Miquelon</option>
+					<option value="VC">Saint Vincent and The Grenadines</option>
+					<option value="WS">Samoa</option>
+					<option value="SM">San Marino</option>
+					<option value="ST">Sao Tome and Principe</option>
+					<option value="SA">Saudi Arabia</option>
+					<option value="SN">Senegal</option>
+					<option value="RS">Serbia</option>
+					<option value="SC">Seychelles</option>
+					<option value="SL">Sierra Leone</option>
+					<option value="SG">Singapore</option>
+					<option value="SK">Slovakia</option>
+					<option value="SI">Slovenia</option>
+					<option value="SB">Solomon Islands</option>
+					<option value="SO">Somalia</option>
+					<option value="ZA">South Africa</option>
+					<option value="GS">South Georgia and The South Sandwich Islands</option>
+					<option value="ES">Spain</option>
+					<option value="LK">Sri Lanka</option>
+					<option value="SD">Sudan</option>
+					<option value="SR">Suriname</option>
+					<option value="SJ">Svalbard and Jan Mayen</option>
+					<option value="SZ">Swaziland</option>
+					<option value="SE">Sweden</option>
+					<option value="CH">Switzerland</option>
+					<option value="SY">Syrian Arab Republic</option>
+					<option value="TW">Taiwan, Province of China</option>
+					<option value="TJ">Tajikistan</option>
+					<option value="TZ">Tanzania, United Republic of</option>
+					<option value="TH">Thailand</option>
+					<option value="TL">Timor-leste</option>
+					<option value="TG">Togo</option>
+					<option value="TK">Tokelau</option>
+					<option value="TO">Tonga</option>
+					<option value="TT">Trinidad and Tobago</option>
+					<option value="TN">Tunisia</option>
+					<option value="TR">Turkey</option>
+					<option value="TM">Turkmenistan</option>
+					<option value="TC">Turks and Caicos Islands</option>
+					<option value="TV">Tuvalu</option>
+					<option value="UG">Uganda</option>
+					<option value="UA">Ukraine</option>
+					<option value="AE">United Arab Emirates</option>
+					<option value="GB">United Kingdom</option>
+					<option value="US">United States</option>
+					<option value="UM">United States Minor Outlying Islands</option>
+					<option value="UY">Uruguay</option>
+					<option value="UZ">Uzbekistan</option>
+					<option value="VU">Vanuatu</option>
+					<option value="VE">Venezuela</option>
+					<option value="VN">Viet Nam</option>
+					<option value="VG">Virgin Islands, British</option>
+					<option value="VI">Virgin Islands, U.S.</option>
+					<option value="WF">Wallis and Futuna</option>
+					<option value="EH">Western Sahara</option>
+					<option value="YE">Yemen</option>
+					<option value="ZM">Zambia</option>
+					<option value="ZW">Zimbabwe</option>
+					<option value="AX">Åland Islands</option>
+				</field>
+				<!-- END: Enable/Disable Plugin from these Countries -->
+				
+			</fieldset>
+				
+			<!-- ::: STYLING ::: -->
+			<fieldset name="styling" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_STYLING">
+			
+				<!-- BEGIN: Styling -->
+				<field type="header" class="w357_large_header" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_STYLING" />
+
+				<!-- Defaults -->
+				<field type="header" class="w357_small_header" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_DEFAULTS" />
+
+				<field name="center_alignment" type="radio" class="btn-group btn-group-yesno" default="0" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_CEMTER_ALIGNMENT_LBL" description="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_CEMTER_ALIGNMENT_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field name="backgroundColor" type="color" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_BGCOLOR_LBL" description="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_BGCOLOR_DESC" format="rgba" default="rgba(50, 58, 69, 1)" />
+
+				<field name="borderColor" type="color" format="rgba" default="rgba(32, 34, 38, 1)" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_BORDER_COLOR_LBL" description="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_BORDER_COLOR_DESC" />
+
+				<field name="borderWidth" type="list" default="1" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_BORDER_WIDTH_LBL" description="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_BORDER_WIDTH_DESC">
+					<option value="0">0px</option>
+					<option value="1">PLG_SYSTEM_CPNB_1PX_RECOMMENDED</option>
+					<option value="2">2px</option>
+					<option value="3">3px</option>
+					<option value="4">4px</option>
+					<option value="5">5px</option>
+					<option value="6">6px</option>
+					<option value="7">7px</option>
+					<option value="8">8px</option>
+					<option value="9">9px</option>
+					<option value="10">10px</option>
+				</field>
+
+				<field name="height" type="text" default="auto" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_HEIGHT_LBL" description="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_HEIGHT_DESC" />
+
+				<field name="body_cover" type="radio" class="btn-group btn-group-yesno" default="1" label="PLG_SYSTEM_CPNB_BODY_COVER_LBL" description="PLG_SYSTEM_CPNB_BODY_COVER_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field name="overlay_state" type="radio" class="btn-group btn-group-yesno" default="0" label="PLG_SYSTEM_OVERLAY_LBL" description="PLG_SYSTEM_OVERLAY_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="overlay_color" type="color" format="rgba" default="rgba(10, 10, 10, 0.3)" label="PLG_SYSTEM_OVERLAY_COLOR_LBL" description="PLG_SYSTEM_OVERLAY_COLOR_DESC" showon="overlay_state:1" />
+
+				<field name="custom_css" type="textarea" default="" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_CUSTOM_CSS_LBL" description="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_CUSTOM_CSS_DESC" rows="6" cols="50" filter="raw" />
+
+				<!-- Cookies Manager Styling (Modal Window) -->
+				<field type="header" class="w357_small_header" label="PLG_SYSTEM_CPNB_COOKIES_MANAGER_STYLING_HEADER" />
+				<field name="modalMenuItemSelectedBgColor" type="color" format="rgba" default="rgba(200, 200, 200, 1)" label="PLG_SYSTEM_CPNB_MENU_ITEM_SELECTED_BG_COLOR_LBL" description="PLG_SYSTEM_CPNB_MENU_ITEM_SELECTED_BG_COLOR_DESC" />
+				<field name="modalSaveChangesButtonColorAfterChange" type="color" format="rgba" default="rgba(13, 92, 45, 1)" label="PLG_SYSTEM_CPNB_SAVE_CHANGES_BUTTON_COLOR_AFTER_CHANGE_LBL" description="PLG_SYSTEM_CPNB_SAVE_CHANGES_BUTTON_COLOR_AFTER_CHANGE_DESC" />
+				<field name="modalFloatButtonIconSrc" type="media" default="media/plg_system_cookiespolicynotificationbar/icons/cpnb-cookies-manager-icon-1-64x64.png" label="PLG_SYSTEM_CPNB_COOKIES_MANAGER_ICON_SRC_LABEL" description="PLG_SYSTEM_CPNB_COOKIES_MANAGER_ICON_SRC_DESC" directory="" preview_width="64" preview_height="64" />
+
+				<!-- Message -->		
+				<field type="header" class="w357_small_header" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_MESSAGE" />
+
+				<field name="fontColor" type="color" default="#F1F1F3" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_FONT_COLOR_LBL" description="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_FONT_COLOR_DESC" />
+				
+				<field name="linkColor" type="color" default="#FFF" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_LINK_COLOR_LBL" description="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_LINK_COLOR_DESC" />
+				
+				<field name="fontSize" type="list" default="12px" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_FONT_SIZE_LBL" description="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_FONT_SIZE_DESC">
+					<option value="10px">10px</option>
+					<option value="11px">11px</option>
+					<option value="12px">PLG_SYSTEM_CPNB_12PX_RECOMMENDED</option>
+					<option value="13px">13px</option>
+					<option value="14px">14px</option>
+					<option value="15px">15px</option>
+					<option value="16px">16px</option>
+					<option value="17px">17px</option>
+					<option value="18px">18px</option>
+					<option value="19px">19px</option>
+					<option value="20px">20px</option>
+					<option value="21px">21px</option>
+					<option value="22px">22px</option>
+					<option value="23px">23px</option>
+					<option value="24px">24px</option>
+				</field>
+				
+				<!-- Buttons -->
+				<field type="header" class="w357_small_header" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_BUTTONS" />
+
+				<field name="btn_font_size" type="list" default="12px" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_FONT_SIZE_LBL" description="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_FONT_SIZE_DESC">
+					<option value="10px">10px</option>
+					<option value="11px">11px</option>
+					<option value="12px">PLG_SYSTEM_CPNB_12PX_RECOMMENDED</option>
+					<option value="13px">13px</option>
+					<option value="14px">14px</option>
+					<option value="15px">15px</option>
+					<option value="16px">16px</option>
+					<option value="17px">17px</option>
+					<option value="18px">18px</option>
+					<option value="19px">19px</option>
+					<option value="20px">20px</option>
+					<option value="21px">21px</option>
+					<option value="22px">22px</option>
+					<option value="23px">23px</option>
+					<option value="24px">24px</option>
+				</field>
+				
+				<field name="btn_border_radius" type="list" default="4px" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_BTN_BORDER_RADIUS_LBL" description="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_BTN_BORDER_RADIUS_DESC">
+					<option value="0px">0px</option>
+					<option value="1px">1px</option>
+					<option value="2px">2px</option>
+					<option value="3px">3px</option>
+					<option value="4px">PLG_SYSTEM_CPNB_4PX_RECOMMENDED</option>
+					<option value="5px">5px</option>
+					<option value="6px">6px</option>
+					<option value="7px">7px</option>
+					<option value="8px">8px</option>
+					<option value="9px">9px</option>
+					<option value="10px">10px</option>
+					<option value="11px">11px</option>
+					<option value="12px">12px</option>
+					<option value="13px">13px</option>
+					<option value="14px">14px</option>
+					<option value="15px">15px</option>
+					<option value="16px">16px</option>
+					<option value="17px">17px</option>
+					<option value="18px">18px</option>
+					<option value="19px">19px</option>
+					<option value="20px">20px</option>
+					<option value="21px">21px</option>
+					<option value="22px">22px</option>
+					<option value="23px">23px</option>
+					<option value="24px">24px</option>
+				</field>
+				
+				<!-- "Ok, I've understood" Button -->
+				<field type="header" class="w357_small_header" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_OK_BUTTON" />
+				
+				<field name="ok_btn_normal_font_color" type="color" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_NORMAL_FONT_COLOR_LBL" default="#fff" />
+
+				<field name="ok_btn_hover_font_color" type="color" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_HOVER_FONT_COLOR_LBL" default="#fff" />
+
+				<field name="ok_btn_normal_bg_color" type="color" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_NORMAL_BG_COLOR_LBL" format="rgba" default="rgba(59, 137, 199, 1)" />
+
+				<field name="ok_btn_hover_bg_color" type="color" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_HOVER_BG_COLOR_LBL" format="rgba" default="rgba(49, 118, 175, 1)" />
+
+				<!-- "Decline" Button -->
+				<field type="header" class="w357_small_header" label="PLG_SYSTEM_CPNB_DECLINE_BTN_LBL" />				
+				
+				<field name="decline_btn_normal_font_color" type="color" default="#fff" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_NORMAL_FONT_COLOR_LBL" />
+				
+				<field name="decline_btn_hover_font_color" type="color" default="#fff" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_HOVER_FONT_COLOR_LBL" />
+
+				<field name="decline_btn_normal_bg_color" type="color" format="rgba" default="rgba(119, 31, 31, 1)" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_NORMAL_BG_COLOR_LBL" />
+				
+				<field name="decline_btn_hover_bg_color" type="color" format="rgba" default="rgba(175, 38, 20, 1)" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_HOVER_BG_COLOR_LBL" />
+
+				<!-- "Cancel" Button -->
+				<field type="header" class="w357_small_header" label="PLG_SYSTEM_CPNB_CANCEL_BTN_LBL" />				
+				
+				<field name="cancel_btn_normal_font_color" type="color" default="#fff" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_NORMAL_FONT_COLOR_LBL" />
+				
+				<field name="cancel_btn_hover_font_color" type="color" default="#fff" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_HOVER_FONT_COLOR_LBL" />
+
+				<field name="cancel_btn_normal_bg_color" type="color" format="rgba" default="rgba(90, 90, 90, 1)" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_NORMAL_BG_COLOR_LBL" />
+				
+				<field name="cancel_btn_hover_bg_color" type="color" format="rgba" default="rgba(54, 54, 54, 1)" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_HOVER_BG_COLOR_LBL" />
+
+				<!-- "Settings" Button -->
+				<field type="header" class="w357_small_header" label="PLG_SYSTEM_CPNB_SETTINGS_BTN_LBL" />				
+				
+				<field name="settings_btn_normal_font_color" type="color" default="#fff" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_NORMAL_FONT_COLOR_LBL" />
+				
+				<field name="settings_btn_hover_font_color" type="color" default="#fff" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_HOVER_FONT_COLOR_LBL" />
+
+				<field name="settings_btn_normal_bg_color" type="color" format="rgba" default="rgba(90, 90, 90, 1)" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_NORMAL_BG_COLOR_LBL" />
+				
+				<field name="settings_btn_hover_bg_color" type="color" format="rgba" default="rgba(54, 54, 54, 1)" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_HOVER_BG_COLOR_LBL" />
+
+				<!-- "More Info" Button -->
+				<field type="header" class="w357_small_header" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_MORE_INFO_BUTTON" />				
+				
+				<field name="more_btn_normal_font_color" type="color" default="#fff" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_NORMAL_FONT_COLOR_LBL" />
+				
+				<field name="more_btn_hover_font_color" type="color" default="#fff" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_HOVER_FONT_COLOR_LBL" />
+				
+				<field name="more_btn_normal_bg_color" type="color" format="rgba" default="rgba(123, 138, 139, 1)" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_NORMAL_BG_COLOR_LBL" />
+				
+				<field name="more_btn_hover_bg_color" type="color" format="rgba" default="rgba(105, 118, 119, 1)" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_HOVER_BG_COLOR_LBL" />
+
+				<!-- "Save Settings" Button -->
+				<field type="header" class="w357_small_header" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_SAVE_SETTINGS_BUTTON" showon="blockCookies:1[AND]modalState:1" />				
+				
+				<field name="save_settings_btn_normal_font_color" type="color" default="#fff" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_NORMAL_FONT_COLOR_LBL" showon="blockCookies:1[AND]modalState:1" />
+				
+				<field name="save_settings_btn_hover_font_color" type="color" default="#fff" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_HOVER_FONT_COLOR_LBL" showon="blockCookies:1[AND]modalState:1" />
+
+				<field name="save_settings_btn_normal_bg_color" type="color" format="rgba" default="rgba(133, 199, 136, 1)" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_NORMAL_BG_COLOR_LBL" showon="blockCookies:1[AND]modalState:1" />
+				
+				<field name="save_settings_btn_hover_bg_color" type="color" format="rgba" default="rgba(96, 153, 100, 1)" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_HOVER_BG_COLOR_LBL" showon="blockCookies:1[AND]modalState:1" />
+				
+				<!-- Custom Class attributes for each button -->
+				<field type="header" class="w357_small_header" label="PLG_SYSTEM_CPNB_CUSTOM_CLASSES_HEADER" />	
+
+				<field name="accept_button_class_notification_bar" type="text" default="cpnb-accept-btn" label="PLG_SYSTEM_CPNB_ACCEPT_BTN_CLASS_LBL" description="PLG_SYSTEM_CPNB_ACCEPT_BTN_CLASS_DESC" />
+
+				<field name="decline_button_class_notification_bar" type="text" default="cpnb-decline-btn" label="PLG_SYSTEM_CPNB_DECLINE_BTN_CLASS_LBL" description="PLG_SYSTEM_CPNB_DECLINE_BTN_CLASS_DESC" />
+
+				<field name="cancel_button_class_notification_bar" type="text" default="cpnb-cancel-btn" label="PLG_SYSTEM_CPNB_CANCEL_BTN_CLASS_LBL" description="PLG_SYSTEM_CPNB_CANCEL_BTN_CLASS_DESC" />
+
+				<field name="settings_button_class_notification_bar" type="text" default="cpnb-settings-btn" label="PLG_SYSTEM_CPNB_SETTINGS_BTN_CLASS_LBL" description="PLG_SYSTEM_CPNB_SETTINGS_BTN_CLASS_DESC" />
+
+				<field name="moreinfo_button_class_notification_bar" type="text" default="cpnb-moreinfo-btn" label="PLG_SYSTEM_CPNB_MOREINFO_BTN_CLASS_LBL" description="PLG_SYSTEM_CPNB_MOREINFO_BTN_CLASS_DESC" />
+
+				<field name="accept_button_class_notification_bar_modal_window" type="text" default="cpnb-accept-btn-m" label="PLG_SYSTEM_CPNB_ACCEPT_BTN_CLASS_COOKIES_MANAGER_LBL" description="PLG_SYSTEM_CPNB_ACCEPT_BTN_CLASS_COOKIES_MANAGER_DESC" />
+
+				<field name="decline_button_class_notification_bar_modal_window" type="text" default="cpnb-decline-btn-m" label="PLG_SYSTEM_CPNB_DECLINE_BTN_CLASS_COOKIES_MANAGER_LBL" description="PLG_SYSTEM_CPNB_DECLINE_BTN_CLASS_COOKIES_MANAGER_DESC" />
+
+				<field name="save_button_class_notification_bar_modal_window" type="text" default="cpnb-save-btn-m" label="PLG_SYSTEM_CPNB_SAVE_BTN_CLASS_COOKIES_MANAGER_LBL" description="PLG_SYSTEM_CPNB_SAVE_BTN_CLASS_COOKIES_MANAGER_DESC" />
+
+				<field name="accept_button_class_notification_bar_cookies_info_table" type="text" default="cpnb-accept-btn-cit" label="PLG_SYSTEM_CPNB_ACCEPT_BTN_CLASS_COOKIES_INFO_TABLE_LBL" description="PLG_SYSTEM_CPNB_ACCEPT_BTN_CLASS_COOKIES_INFO_TABLE_DESC" />
+
+				<field name="delete_button_class_notification_bar_cookies_info_table" type="text" default="cpnb-delete-btn-cit" label="PLG_SYSTEM_CPNB_DELETE_BTN_CLASS_COOKIES_INFO_TABLE_LBL" description="PLG_SYSTEM_CPNB_DELETE_BTN_CLASS_COOKIES_INFO_TABLE_DESC" />
+
+				<field name="reload_button_class_notification_bar_cookies_info_table" type="text" default="cpnb-reload-btn-cit" label="PLG_SYSTEM_CPNB_RELOAD_BTN_CLASS_COOKIES_INFO_TABLE_LBL" description="PLG_SYSTEM_CPNB_RELOAD_BTN_CLASS_COOKIES_INFO_TABLE_DESC" />
+
+				<!-- END: Styling -->
+				
+			</fieldset>
+			
+			<!-- ::: ADVANCED SETTINGS ::: -->
+			<fieldset name="advanced" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_ADVANCED_SETTINGS">
+
+				<!-- BEGIN: COOKIE EXPIRATION TIME -->
+				<field type="header" class="w357_large_header" label="PLG_SYSTEM_CPNB_COOKIE_EXPIRATION_TIME_LBL" />
+				<field name="expiration_cookieSettings" type="text" default="365" label="PLG_SYSTEM_CPNB_EXPIRATION_COOKIE_SETTINGS_LBL" description="PLG_SYSTEM_CPNB_EXPIRATION_COOKIE_SETTINGS_DESC" maxlength="5" pattern="^([1-9])[\d]{0,3}$" />
+				<field name="expiration_cookieAccept" type="text" default="365" label="PLG_SYSTEM_CPNB_EXPIRATION_COOKIE_ACCEPT_LBL" description="PLG_SYSTEM_CPNB_EXPIRATION_COOKIE_ACCEPT_DESC" maxlength="5" pattern="^([1-9])[\d]{0,3}$" />
+				<field name="expiration_cookieDecline" type="text" default="180" label="PLG_SYSTEM_CPNB_EXPIRATION_COOKIE_DECLINE_LBL" description="PLG_SYSTEM_CPNB_EXPIRATION_COOKIE_DECLINE_DESC" maxlength="5" pattern="^([1-9])[\d]{0,3}$" />
+				<field name="expiration_cookieCancel" type="text" default="3" label="PLG_SYSTEM_CPNB_EXPIRATION_COOKIE_CANCEL_LBL" description="PLG_SYSTEM_CPNB_EXPIRATION_COOKIE_CANCEL_DESC" maxlength="5" pattern="^([1-9])[\d]{0,3}$" />
+				<!-- END: COOKIE EXPIRATION TIME -->
+
+				<!-- BEGIN: BLOCK COOKIES -->
+				<field type="header" class="w357_large_header" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_BLOCK_COOKIES_HEADER" />
+				<field name="noteBlockCookies" type="note" description="PLG_SYSTEM_CPNB_NOTE_BLOCK_COOKIES" />
+				<field name="blockCookies" type="radio" class="btn-group btn-group-yesno" default="1" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_BLOCK_COOKIES_LBL" description="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_BLOCK_COOKIES_DESC">
+					<option value="1">JENABLED</option>
+					<option value="0">JDISABLED</option>
+				</field>
+				<field name="allowSessionCookies" type="radio" class="btn-group btn-group-yesno" default="1" label="PLG_SYSTEM_CPNB_ALLOW_SESSION_COOKIES_LBL" description="PLG_SYSTEM_CPNB_ALLOW_SESSION_COOKIES_DESC" showon="blockCookies:1">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<!-- END: BLOCK COOKIES -->
+
+				<!-- BEGIN: COOKIES MANAGER (Modal Window) -->
+				<field type="header" class="w357_large_header" label="PLG_SYSTEM_CPNB_COOKIES_MANAGER_HEADER" showon="blockCookies:1" />
+				<field name="modalState" type="radio" class="btn-group btn-group-yesno cpnb-modalState" default="0" label="PLG_SYSTEM_CPNB_COOKIES_MANAGER_LBL" description="PLG_SYSTEM_CPNB_COOKIES_MANAGER_DESC" showon="blockCookies:1">
+					<option value="1">JENABLED</option>
+					<option value="0">JDISABLED</option>
+				</field>
+				<field name="modal_include_menu_items" type="menuitem" multiple="true" default="" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_MODAL_INCLUDE_PAGES_LBL" description="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_MODAL_INCLUDE_PAGES_DESC" showon="blockCookies:1[AND]modalState:1" />
+				<field name="modal_exclude_menu_items" type="menuitem" multiple="true" default="" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_MODAL_EXCLUDE_PAGES_LBL" description="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_MODAL_EXCLUDE_PAGES_DESC" showon="blockCookies:1[AND]modalState:1" />
+				<field name="modalFloatButtonState" type="radio" class="btn-group btn-group-yesno cpnb-modalFloatButtonState" default="1" label="PLG_SYSTEM_CPNB_SHOW_COOKIES_MANAGER_ICON_LBL" description="PLG_SYSTEM_CPNB_SHOW_COOKIES_MANAGER_ICON_DESC" showon="blockCookies:1[AND]modalState:1">
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+				<field name="modalFloatButtonPosition" type="radio" class="btn-group btn-group-yesno" default="bottom_left" label="PLG_SYSTEM_CPNB_COOKIES_MANAGER_ICON_POSITION_LBL" description="PLG_SYSTEM_CPNB_COOKIES_MANAGER_ICON_POSITION_DESC" showon="blockCookies:1[AND]modalState:1[AND]modalFloatButtonState:1">
+					<option value="bottom_left">PLG_SYSTEM_CPNB_COOKIES_MANAGER_ICON_POSITION_BOTTOM_LEFT_OPTION</option>
+					<option value="bottom_right">PLG_SYSTEM_CPNB_COOKIES_MANAGER_ICON_POSITION_BOTTOM_RIGHT_OPTION</option>
+				</field>
+				<field name="modalIsVisibleForLoggedInUsers" type="radio" class="btn-group btn-group-yesno" default="1" label="PLG_SYSTEM_CPNB_COOKIES_MANAGER_VISIBLE_FOR_LOGGED_IN_USERS_LBL" description="PLG_SYSTEM_CPNB_COOKIES_MANAGER_VISIBLE_FOR_LOGGED_IN_USERS_DESC" showon="blockCookies:1[AND]modalState:1[AND]modalFloatButtonState:1">
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+				<field name="modalHashLink" type="text" default="cookies" class="cpnb-modalHashLink w357-display-inline-block" label="PLG_SYSTEM_CPNB_COOKIES_MANAGER_HASHLINK_LBL" description="PLG_SYSTEM_CPNB_COOKIES_MANAGER_HASHLINK_DESC" showon="blockCookies:1[AND]modalState:1" />
+				<field name="noteHashLink" type="note" description="PLG_SYSTEM_CPNB_COOKIES_MANAGER_HASHLINK_NOTE" showon="blockCookies:1[AND]modalState:1" />
+				<!-- END: COOKIES MANAGER (Modal Window) -->
+
+				<!-- BEGIN: COOKIE CATEGORIES -->
+				<field type="header" class="w357_large_header" label="PLG_SYSTEM_CPNB_COOKIE_CATEGORIES_HEADER" showon="blockCookies:1" />
+				<field name="cookie_categories_group"
+				label="PLG_SYSTEM_CPNB_COOKIE_CATEGORIES_GROUP_LBL"
+				description="PLG_SYSTEM_CPNB_COOKIE_CATEGORIES_GROUP_DESC"
+				type="subform"
+				showon="blockCookies:1"
+				min="1"
+				max="100"
+				required="false"            
+				formsource="plugins/system/cookiespolicynotificationbar/assets/forms/cookie_categories.xml"
+				multiple="true"
+				buttons="add,remove,move" 
+				layout="joomla.form.field.subform.repeatable-table"
+				groupByFieldset="false"
+				default='{
+				"cookie_categories_group0": {
+					"cookie_category_id": "required-cookies",
+					"cookie_category_checked_by_default": "2",
+					"cookie_category_name": "Required Cookies",
+					"cookie_category_description": "The Required or Functional cookies relate to the functionality of our websites and allow us to improve the service we offer to you through our websites, for example by allowing you to carry information across pages of our website to avoid you having to re-enter information, or by recognizing your preferences when you return to our website.",
+					"cookie_category_status": "1"
+				},
+				"cookie_categories_group1": {
+					"cookie_category_id": "analytical-cookies",
+					"cookie_category_checked_by_default": "1",
+					"cookie_category_name": "Analytical Cookies",
+					"cookie_category_description": "Analytical cookies allow us to recognize and to count the number of visitors to our website, to see how visitors move around the website when they are using it and to record which content viewers view and are interested in. This helps us to determine how frequently particular pages and advertisements are visited and to determine the most popular areas of our website. This helps us to improve the service which we offer to you by helping us make sure our users are finding the information they are looking for, by providing anonymized demographic data to third parties in order to target advertising more appropriately to you, and by tracking the success of advertising campaigns on our website.",
+					"cookie_category_status": "1"
+				},
+				"cookie_categories_group2": {
+					"cookie_category_id": "social-media-cookies",
+					"cookie_category_checked_by_default": "1",
+					"cookie_category_name": "Social Media",
+					"cookie_category_description": "These cookies allow you to share Website content with social media platforms (e.g., Facebook, Twitter, Instagram). We have no control over these cookies as they are set by the social media platforms themselves.",
+					"cookie_category_status": "1"
+				},
+				"cookie_categories_group3": {
+					"cookie_category_id": "targeted-advertising-cookies",
+					"cookie_category_checked_by_default": "1",
+					"cookie_category_name": "Targeted Advertising Cookies",
+					"cookie_category_description": "Advertising and targeting cookies are used to deliver advertisements more relevant to you, but can also limit the number of times you see an advertisement and be used to chart the effectiveness of an ad campaign by tracking users’ clicks. They can also provide security in transactions. They are usually placed by third-party advertising networks with a website operator’s permission but can be placed by the operator themselves. They can remember that you have visited a website, and this information can be shared with other organizations, including other advertisers. They cannot determine who you are though, as the data collected is never linked to your profile. ",
+					"cookie_category_status": "1"
+				}
+				}' />
+				<!-- END: COOKIE CATEGORIES -->
+
+				<!-- BEGIN: BLOCK COOKIES GROUP -->
+				<field type="header" class="w357_large_header" label="PLG_SYSTEM_CPNB_BLOCK_COOKIES_GROUP_HEADER" showon="blockCookies:1" />
+				<field name="block_cookies_group"
+				label="PLG_SYSTEM_CPNB_BLOCK_COOKIES_GROUP_LBL"
+				description="PLG_SYSTEM_CPNB_BLOCK_COOKIES_GROUP_DESC"
+				type="subform"
+				showon="blockCookies:1"
+				min="0"
+				max="100"
+				required="false"            
+				formsource="plugins/system/cookiespolicynotificationbar/assets/forms/block_cookies.xml"
+				multiple="true"
+				buttons="add,remove,move" 
+				layout="joomla.form.field.subform.repeatable-table"
+				groupByFieldset="false"
+				default='{
+				"block_cookies_group0": {
+					"blockcookiecategory": "analytical-cookies",
+					"block_cookie_status": "1",
+					"block_cookie_name": "Google Analytics",
+					"block_cookie_js_code": "&lt;script&gt;console.log(\"Google analytics javascript code goes here...\")&lt;/script&gt;"
+				},
+				"block_cookies_group1": {
+					"blockcookiecategory": "social-media-cookies",
+					"block_cookie_status": "1",
+					"block_cookie_name": "Facebook",
+					"block_cookie_js_code": "&lt;script&gt;console.log(\"Facebook javascript code goes here...\")&lt;/script&gt;"
+				}
+				}' />
+				<!-- END: BLOCK COOKIES GROUP -->
+
+				<!-- BEGIN: FORCE ALLOW COOKIES -->
+				<field type="header" class="w357_large_header" label="PLG_SYSTEM_CPNB_FORCE_ALLOW_COOKIES_HEADER" showon="blockCookies:1" />
+				<field name="noteForceAllowCookies" type="note" description="PLG_SYSTEM_CPNB_FORCE_ALLOW_COOKIES_NOTES" showon="blockCookies:1" />
+				<field name="force_allow_cookies" type="textarea" default="" label="PLG_SYSTEM_CPNB_FORCE_ALLOW_COOKIES_LBL" description="PLG_SYSTEM_CPNB_FORCE_ALLOW_COOKIES_DESC" rows="6" cols="50" filter="raw" showon="blockCookies:1" />
+				<!-- END: FORCE ALLOW COOKIES -->
+
+				<!-- BEGIN: SHORTCODE FUNCTIONALITY -->
+				<field type="header" class="w357_large_header" label="PLG_SYSTEM_CPNB_SHOW_COOKIES_INFO_HEADER" />
+				<field name="noteAcceptanceInfo" type="note" description="PLG_SYSTEM_CPNB_ACCEPTANCE_INFO" />
+				<field name="enable_shortcode_functionality" type="radio" class="btn-group btn-group-yesno" default="0" label="PLG_SYSTEM_CPNB_ENABLED_SHORTCODE_FUNCTIONALITY_LBL" description="PLG_SYSTEM_CPNB_ENABLED_SHORTCODE_FUNCTIONALITY_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="shortcode_tag" type="text" default="cookiesinfo" label="PLG_SYSTEM_CPNB_SHORTCODE_TAG_LBL" description="PLG_SYSTEM_CPNB_SHORTCODE_TAG_DESC" showon="enable_shortcode_functionality:1"  />
+				<field name="hide_cookies_from_table" type="textarea" default="" label="PLG_SYSTEM_CPNB_HIDE_THESE_COOKIES_FROM_THE_TABLE_LBL" description="PLG_SYSTEM_CPNB_HIDE_THESE_COOKIES_FROM_THE_TABLE_DESC" rows="6" cols="50" filter="raw" showon="enable_shortcode_functionality:1" />
+
+				<field type="header" class="w357_small_header" label="PLG_SYSTEM_CPNB_COOKIE_DESCRIPTIONS" showon="enable_shortcode_functionality:1" />
+				<field name="noteDescriptionOfCookies" type="note" description="PLG_SYSTEM_CPNB_COOKIE_DESCRIPTIONS_HOW_TO" showon="enable_shortcode_functionality:1" />
+
+				<field name="cookie_descriptions_group"
+				label="PLG_SYSTEM_CPNB_COOKIE_DESCRIPTIONS"
+				description="PLG_SYSTEM_CPNB_COOKIE_DESCRIPTIONS_HOW_TO"
+				type="subform"
+				showon="enable_shortcode_functionality:1"
+				min="1"
+				max="100"
+				required="false"            
+				formsource="plugins/system/cookiespolicynotificationbar/assets/forms/cookie_descriptions.xml"
+				multiple="true"
+				buttons="add,remove,move" 
+				layout="joomla.form.field.subform.repeatable-table"
+				groupByFieldset="false"
+				default='{
+				"cookie_descriptions_group0": {
+					"cookie_status": "1",
+					"cookie_name": "__utma",
+					"cookie_expiration_time_value": "30",
+					"cookie_expiration_time_txt": "day",
+					"cookie_description": "These \"Google Analytics\" cookies are used to collect information about how visitors use our site. We use the information to compile reports and to help us improve the site. The cookies collect information in an anonymous form, including the number of visitors to the site, where vistors have come to the site from and the pages they visited."
+				},
+				"cookie_descriptions_group1": {
+					"cookie_status": "1",
+					"cookie_name": "_ga",
+					"cookie_expiration_time_value": "2",
+					"cookie_expiration_time_txt": "year",
+					"cookie_description": "Cookies used to distinguish users."
+				},
+				"cookie_descriptions_group2": {
+					"cookie_status": "1",
+					"cookie_name": "_gid",
+					"cookie_expiration_time_value": "24",
+					"cookie_expiration_time_txt": "hour",
+					"cookie_description": "Cookies used to distinguish users."
+				},
+				"cookie_descriptions_group3": {
+					"cookie_status": "1",
+					"cookie_name": "_gat",
+					"cookie_expiration_time_value": "1",
+					"cookie_expiration_time_txt": "minute",
+					"cookie_description": "Cookies used to throttle request rate."
+				},
+				"cookie_descriptions_group4": {
+					"cookie_status": "1",
+					"cookie_name": "IDE",
+					"cookie_expiration_time_value": "30",
+					"cookie_expiration_time_txt": "day",
+					"cookie_description": "Used by Google DoubleClick to register and report the website user`s actions after viewing or clicking one of the advertiser`s ads with the purpose of measuring the efficacy of an ad and to present targeted ads to the user."
+				},
+				"cookie_descriptions_group5": {
+					"cookie_status": "1",
+					"cookie_name": "_js_reg_fb_ref",
+					"cookie_expiration_time_value": "30",
+					"cookie_expiration_time_txt": "day",
+					"cookie_description": "Allow you to control the \"Follow us on Facebook\" and \"Like\" buttons"
+				},
+				"cookie_descriptions_group6": {
+					"cookie_status": "1",
+					"cookie_name": "_js_sb",
+					"cookie_expiration_time_value": "30",
+					"cookie_expiration_time_txt": "day",
+					"cookie_description": "Allow you to control the \"Follow us on Facebook\" and \"Like\" buttons, collect the language settings and allow you to share the page"
+				}
+				}' />
+				<!-- END: SHORTCODE FUNCTIONALITY -->
+
+				<!-- BEGIN: Include or Exlude menu items -->
+				<field type="header" class="w357_large_header" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_PAGES_TO_DISPLAY_HEADER" />
+
+				<field type="header" class="w357_small_header" label="PLG_SYSTEM_CPNB_NOTIFICATION_BAR" />
+				<field name="include_menu_items_show_notification_bar" type="menuitem" multiple="true" default="" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_INCLUDE_PAGES_NOTIFICATION_BAR_LBL" description="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_INCLUDE_PAGES_NOTIFICATION_BAR_DESC" />
+				<field name="exclude_menu_items_show_notification_bar" type="menuitem" multiple="true" default="" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_EXCLUDE_PAGES_NOTIFICATION_BAR_LBL" description="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_EXCLUDE_PAGES_NOTIFICATION_BAR_DESC" />
+
+				<field type="header" class="w357_small_header" label="PLG_SYSTEM_CPNB_PLUGIN_FUNCTIONALITY" />
+				<field name="include_menu_items" type="menuitem" multiple="true" default="" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_INCLUDE_PAGES_LBL" description="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_INCLUDE_PAGES_DESC" />
+				<field name="exclude_menu_items" type="menuitem" multiple="true" default="" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_EXCLUDE_PAGES_LBL" description="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_EXCLUDE_PAGES_DESC" />
+				<!-- END: Include or Exlude menu items -->
+			
+				<!-- BEGIN: Store Acceptance/Declined Logs (in the database) -->
+				<field type="header" class="w357_large_header" label="PLG_SYSTEM_CPNB_STORE_ACCEPTANCE_HEADER" />
+				<field name="store_acceptance_logs_into_db" type="radio" class="btn-group btn-group-yesno" default="1" label="PLG_SYSTEM_CPNB_STORE_ACCEPTANCE_LBL" description="PLG_SYSTEM_CPNB_STORE_ACCEPTANCE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="viewacceptancelogs" id="viewacceptancelogs" type="viewacceptancelogs" label="" addfieldpath="/plugins/system/cookiespolicynotificationbar/elements" showon="store_acceptance_logs_into_db:1" />
+				<!-- END: Store Acceptance/Declined Logs (in the database) -->
+
+				<!-- BEGIN: Custom Javascript -->
+				<field type="header" class="w357_large_header" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_CUSTOM_JS_HEADER" />
+				<field name="custom_js" type="textarea" default="" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_CUSTOM_JS_LBL" description="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_CUSTOM_JS_DESC" rows="6" cols="50" filter="raw" />
+				<!-- END: Custom Javascript -->
+				
+				<!-- BEGIN: Debugging -->
+				<field type="header" class="w357_large_header" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_DEBUG_HEADER" />
+				<field name="always_display" type="radio" class="btn-group btn-group-yesno btn-group-reversed" default="0" label="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_ALWAYS_DISPLAY_LBL" description="J357_PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR_ALWAYS_DISPLAY_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="restoretodefaults" id="restoretodefaults" type="restoretodefaults" addfieldpath="/plugins/system/cookiespolicynotificationbar/elements" label="PLG_SYSTEM_CPNB_RESTORE_TO_DEFAULTS_LBL" description="PLG_SYSTEM_CPNB_RESTORE_TO_DEFAULTS_DESC" />
+				<!-- END: Debugging -->
+
+			</fieldset>
+
+			<!-- ::: DESCRIPTION ::: -->
+			<fieldset name="description" label="W357FRM_HEADER_DESCRIPTION">
+
+				<!-- BEGIN: Description -->
+				<field type="header" class="w357_large_header" label="W357FRM_HEADER_DESCRIPTION" />
+				<field name="description" id="description" type="description" extension_type="plugin" extension_name="cookiespolicynotificationbar" real_name="PLG_SYSTEM_COOKIESPOLICYNOTIFICATIONBAR" plugin_type="system" label="" addfieldpath="/plugins/system/web357framework/elements" />
+				<!-- END: Description -->
+			
+			</fieldset>
+			
+			<!-- ::: ABOUT ::: -->
+			<fieldset name="about" label="W357FRM_HEADER_ABOUT_WEB357">
+				
+				<!-- BEGIN: About Web357 -->
+				<field type="header" class="w357_large_header" label="W357FRM_HEADER_ABOUT_WEB357" />
+				<field name="about" id="about" type="about" label="" addfieldpath="/plugins/system/web357framework/elements" />
+				<!-- END: About Web357 -->
+				
+			</fieldset>
+			
+		</fields>
+	</config>
+
+	<updateservers><server type="extension" priority="1" name="Cookies Policy Notification Bar (pro version)"><![CDATA[https://updates.web357.com/cookiespolicynotificationbar/cookiespolicynotificationbar_pro.xml]]></server></updateservers>
+
+</extension>

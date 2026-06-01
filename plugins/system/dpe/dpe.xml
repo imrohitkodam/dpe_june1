@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0"  type="plugin" group="system" method="upgrade">
+	<name>System - DPE</name>
+	<author>TechJoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>www.techjoomla.com</authorUrl>
+	<copyright>Copyright(C)2012-19 TechJoomla</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<creationDate>1st April 2019</creationDate>
+	<version>1.0.0</version>
+	<description>All DPE related system triggers</description>
+
+	<files>
+		<filename plugin="dpe">dpe.php</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB/en-GB.plg_system_dpe.ini</language>
+	</languages>
+ 	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="subuserrole" type="sql" label="PLG_SYSTEM_DPE_USER_ROLE" query="SELECT id, name FROM #__tjsu_roles" key_field="id" value_field="name" description="PLG_SYSTEM_DPE_USER_ROLE_DESC" />
+				<field name="joomlausergroups" type="sql" label="PLG_SYSTEM_DPE_JOOMLA_GROUPS" query="SELECT id, title FROM #__usergroups" key_field="id" value_field="title" description="PLG_SYSTEM_DPE_JOOMLA_GROUPS_DESC" multiple="true"/>
+			</fieldset>
+			<fieldset name="docman_config" label="PLG_SYSTEM_MARKETING_TAGS">
+				<field name="marketing_tags" type="sql" label="PLG_SYSTEM_MARKETING_TAGS_DESC" query="SELECT title FROM #__docman_tags" key_field="title" header="PLG_SYSTEM_DPE_SELECT_TAG" header_value="" default="" value_field="title" description="PLG_SYSTEM_MARKETING_TAGS_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

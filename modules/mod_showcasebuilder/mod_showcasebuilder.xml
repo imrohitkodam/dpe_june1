@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+	<name>Showcase Builder</name>
+	<author>JoomlaForce</author>
+	<creationDate>April 2014</creationDate>
+	<copyright>JoomlaForce Team</copyright>
+	<license>GNU/GPL 3 http://www.gnu.org/licenses/gpl.html</license>
+	<authorEmail>support@joomlaforce.com</authorEmail>
+	<authorUrl>www.joomlaforce.com</authorUrl>
+	<version>1.1</version>
+	<description>MOD_SHOWCASEBUILDER_XML_DESCRIPTION</description>
+	<scriptfile>installer.php</scriptfile>
+	<files>
+		<filename module="mod_showcasebuilder">mod_showcasebuilder.php</filename>
+		<folder>tmpl</folder>
+		<folder>assets</folder>
+		<folder>language</folder>
+		<folder>elements</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>style.css.php</filename>
+		<filename>mod_showcasebuilder.xml</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_showcasebuilder.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_showcasebuilder.sys.ini</language>		
+	</languages>
+	<config>
+		<fields name="params" addfieldpath="/libraries/jforce/elements">
+		<fieldset name="basic" label="MOD_SHOWCASEBUILDER_GENERAL" addfieldpath="/modules/mod_showcasebuilder/elements">
+		<field type="jforceheader"/>
+		<field type="library" style="info" />
+			
+		<field name="@block_general_a" type="nn_block" start="1" label="MOD_SHOWCASEBUILDER_GENERAL" />
+		
+			
+		<field name="max_shown_items" type="text" default="3"
+					label="MOD_SHOWCASEBUILDER_MAX_SHOW_ITEMS_LABEL" description="MOD_SHOWCASEBUILDER_MAX_SHOW_ITEMS_DESC" />
+		
+		<field name="hide_content" type="radio" default="0" class="btn-group" 
+					label="MOD_SHOWCASEBUILDER_HIDE_CONTENT_LABEL" 
+					description="MOD_SHOWCASEBUILDER_HIDE_CONTENT_DESC">
+					<option value="1">JYES</option>
+                    <option value="0">JNO</option>
+        		</field>
+		
+		
+		<field name="main_circle_position" type="radio" default="0" class="btn-group" 
+					label="MOD_SHOWCASEBUILDER_MAIN_CIRCLE_POSITION_LABEL" 
+					description="MOD_SHOWCASEBUILDER_MAIN_CIRCLE_POSITION_DESC">
+                    <option value="1">MOD_SHOWCASEBUILDER_LEFT</option>
+					<option value="0">MOD_SHOWCASEBUILDER_CENTER</option>
+					<option value="2">MOD_SHOWCASEBUILDER_RIGHT</option>
+        		</field>
+				
+		<field name="@block_general_b" type="nn_block" end="1" />
+		
+		<field name="@block_jquery_a" type="nn_block" start="1" label="MOD_SHOWCASEBUILDER_JQUERYSETTINGS" />
+		<field type="message" text="JFORCE_JQUERY_INFO_JQUERYVERSIONREQUIRED" style="info" />
+				<field name="load_jquery" type="radio" default="0" class="btn-group" 
+					label="JFORCE_JQUERY_FIELD_LOADJQUERY_LABEL" 
+					description="JFORCE_JQUERY_FIELD_LOADJQUERY_DESC">
+                    <option value="2">JFORCE_JQUERY_VALUE_LOCAL</option>
+                    <option value="1">JFORCE_JQUERY_VALUE_GOOGLECDN</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="jquery_version" type="radio" default="1.7.2" class="btn-group" 
+					label="JFORCE_JQUERY_FIELD_JQUERYVERSION_LABEL" 
+					description="JFORCE_JQUERY_FIELD_JQUERYVERSION_DESC">
+                    <option value="1.5.2">1.5</option>
+                    <option value="1.6.4">1.6</option>
+                    <option value="1.7.2">1.7</option>
+                    <option value="1.8.3">1.8</option>
+                </field>
+				<field type="jqueasy"/>
+		
+			<field name="@block_jquery_b" type="nn_block" end="1" />
+				
+		</fieldset>
+		
+		
+		<!--DATA SOURCE JOOMLA ARTICLE-->
+		<fieldset name="jarticle" label="MOD_SHOWCASEBUILDER_SLIDERDATASOURCEJARTICLE">
+		<!-- FILTRI PER QUERY ARTICOLI -->
+		<field name="catid" type="category" extension="com_content" default="" multiple="true" label="MOD_SHOWCASEBUILDER_CATEGORY_LABEL" description="MOD_SHOWCASEBUILDER_CATEGORY_DESC" />
+		<field name="limit" type="text" default="0" label="MOD_SHOWCASEBUILDER_COUNT_LABEL" description="MOD_SHOWCASEBUILDER_COUNT_DESC" />
+		<field name="orderby" type="list" default="a.created" label="MOD_SHOWCASEBUILDER_ORDER_LABEL" description="MOD_SHOWCASEBUILDER_ORDER_DESC">
+					<option value="a.ordering">MOD_SHOWCASEBUILDER_JOOMLA_ORDERING</option>
+					<option value="a.publish_up">MOD_SHOWCASEBUILDER_PUBLISHED_UP</option>
+					<option value="a.hits">MOD_SHOWCASEBUILDER_HITS_TEXT</option>
+					<option value="a.title">MOD_SHOWCASEBUILDER_TITLE</option>
+					<option value="a.id">MOD_SHOWCASEBUILDER_ID</option>
+					<option value="a.alias">MOD_SHOWCASEBUILDER_ALIAS</option>
+					<option value="a.created">MOD_SHOWCASEBUILDER_CREATED</option>
+					<option value="a.modified">MOD_SHOWCASEBUILDER_MODIFIED</option>
+				</field>
+				<field name="ordering" type="list" default="DESC" label="MOD_SHOWCASEBUILDER_ORDERING_FILTER_LABEL" description="MOD_SHOWCASEBUILDER_ORDERING_FILTER_DESC">
+					<option value="DESC">MOD_SHOWCASEBUILDER_FILTER_DESC</option>
+					<option value="ASC">MOD_SHOWCASEBUILDER_FILTER_ASC</option>
+				</field>
+				<field name="show_featured" type="list" default="" label="MOD_SHOWCASEBUILDER_FEATURED_LABEL" description="MOD_SHOWCASEBUILDER_FEATURED_DESC">
+					<option value="">JSHOW</option>
+					<option value="0">JHIDE</option>
+					<option value="1">MOD_SHOWCASEBUILDER_ONLY_SHOW_FEATURED</option>
+				</field>
+				
+			<field name="author" type="user" required="false" default="" label="JGLOBAL_FIELD_CREATED_BY_LABEL" />
+			
+			<field name="excluded_articles" type="textarea" label="MOD_SHOWCASEBUILDER_EXCLUDED_IDARTICLES_LABEL" required="false" default="" description="MOD_SHOWCASEBUILDER_EXCLUDED_IDARTICLES_DESC" />
+			
+			<field name="date_filtering" type="jseradio" default="0" class="btn-group" 
+					label="MOD_SHOWCASEBUILDER_DATE_FILTERING_LABEL" 
+					description="MOD_SHOWCASEBUILDER_DATE_FILTERING_DESC">
+                   	<option value="1" sub_fields="date_filtering_option,date_field,start_date_range,end_date_range,relative_date">JYES</option>
+                    <option value="0">JNO</option>
+        		</field>
+				
+				<field name="date_filtering_option" type="list" default="relative"
+					label="MOD_SHOWCASEBUILDER_FIELD_DATEFILTERING_LABEL"
+					description="MOD_SHOWCASEBUILDER_FIELD_DATEFILTERING_DESC">
+					<option value="range">MOD_SHOWCASEBUILDER_OPTION_DATERANGE_VALUE</option>
+					<option value="relative">MOD_SHOWCASEBUILDER_OPTION_RELATIVEDAY_VALUE</option>
+				</field>
+
+				<field name="date_field" type="list" default="a.created"
+					label="MOD_SHOWCASEBUILDER_FIELD_DATEFIELD_LABEL"
+					description="MOD_SHOWCASEBUILDER_FIELD_DATEFIELD_DESC">
+					<option value="a.created">MOD_SHOWCASEBUILDER_OPTION_CREATED_VALUE
+					</option>
+					<option value="a.modified">MOD_SHOWCASEBUILDER_OPTION_MODIFIED_VALUE
+					</option>
+					<option value="a.publish_up">MOD_SHOWCASEBUILDER_OPTION_STARTPUBLISHING_VALUE
+					</option>
+				</field>
+
+				<field name="start_date_range" type="calendar"
+					format="%Y-%m-%d %H:%M:%S"
+					label="MOD_SHOWCASEBUILDER_FIELD_STARTDATE_LABEL"
+					description="MOD_SHOWCASEBUILDER_FIELD_STARTDATE_DESC"
+					size="22"
+					filter="user_utc" />
+
+				<field name="end_date_range" type="calendar"
+					format="%Y-%m-%d %H:%M:%S"
+					label="MOD_SHOWCASEBUILDER_FIELD_ENDDATE_LABEL"
+					description="MOD_SHOWCASEBUILDER_FIELD_ENDDATE_DESC"
+					size="22"
+					filter="user_utc" />
+
+				<field name="relative_date" type="text" default="30"
+					label="MOD_SHOWCASEBUILDER_FIELD_RELATIVEDATE_LABEL"
+					description="MOD_SHOWCASEBUILDER_FIELD_RELATIVEDATE_DESC" />
+ 
+
+			<!-- CONTROLLO VISUALIZZAZIONE ITEM -->
+			
+			<field name="enable_titlearticle" type="radio" default="1" class="btn-group" 
+					label="MOD_SHOWCASEBUILDER_ENABLE_SHOWITEW_TITLE_LABEL" 
+					description="MOD_SHOWCASEBUILDER_ENABLE_SHOWITEW_DESC">
+                   	<option value="1">MOD_SHOWCASEBUILDER_BOTH</option>
+                    <option value="0">JNO</option>
+					<option value="2">MOD_SHOWCASEBUILDER_INSIDE_POPUP</option>
+					<option value="3">MOD_SHOWCASEBUILDER_UNDER_BIG_CIRCLE</option>
+        		</field>
+			
+			<field name="enable_authorarticle" type="radio" default="1" class="btn-group" 
+					label="MOD_SHOWCASEBUILDER_ENABLE_SHOWITEW_AUTHOR_LABEL" 
+					description="MOD_SHOWCASEBUILDER_ENABLE_SHOWITEW_DESC">
+                   	<option value="1">MOD_SHOWCASEBUILDER_BOTH</option>
+                    <option value="0">JNO</option>
+					<option value="2">MOD_SHOWCASEBUILDER_INSIDE_POPUP</option>
+					<option value="3">MOD_SHOWCASEBUILDER_UNDER_BIG_CIRCLE</option>
+        		</field>
+			
+			<field name="enable_categoryarticle" type="radio" default="1" class="btn-group" 
+					label="MOD_SHOWCASEBUILDER_ENABLE_SHOWITEW_CATEGORY_LABEL" 
+					description="MOD_SHOWCASEBUILDER_ENABLE_SHOWITEW_DESC">
+                   	<option value="1">MOD_SHOWCASEBUILDER_BOTH</option>
+                    <option value="0">JNO</option>
+					<option value="2">MOD_SHOWCASEBUILDER_INSIDE_POPUP</option>
+					<option value="3">MOD_SHOWCASEBUILDER_UNDER_BIG_CIRCLE</option>
+        		</field>
+				
+			<field name="enable_hitsarticle" type="radio" default="1" class="btn-group" 
+					label="MOD_SHOWCASEBUILDER_ENABLE_SHOWITEW_HITS_LABEL" 
+					description="MOD_SHOWCASEBUILDER_ENABLE_SHOWITEW_DESC">
+                   	<option value="1">MOD_SHOWCASEBUILDER_BOTH</option>
+                    <option value="0">JNO</option>
+					<option value="2">MOD_SHOWCASEBUILDER_INSIDE_POPUP</option>
+					<option value="3">MOD_SHOWCASEBUILDER_UNDER_BIG_CIRCLE</option>
+        		</field>
+				
+			<field name="enable_descriptionarticle" type="radio" default="3" class="btn-group" 
+					label="MOD_SHOWCASEBUILDER_ENABLE_SHOWITEW_DESC_LABEL" 
+					description="MOD_SHOWCASEBUILDER_ENABLE_SHOWITEW_DESC">
+                   	<option value="1">MOD_SHOWCASEBUILDER_BOTH</option>
+                    <option value="0">JNO</option>
+					<option value="2">MOD_SHOWCASEBUILDER_INSIDE_POPUP</option>
+					<option value="3">MOD_SHOWCASEBUILDER_UNDER_BIG_CIRCLE</option>
+        		</field>
+				
+			<field name="enable_articlebtnmorearticle" type="radio" default="3" class="btn-group" 
+					label="MOD_SHOWCASEBUILDER_ENABLE_BTNMOREINFO_DESC_LABEL" 
+					description="MOD_SHOWCASEBUILDER_ENABLE_SHOWITEW_DESC">
+                   	<option value="1">MOD_SHOWCASEBUILDER_BOTH</option>
+                    <option value="0">JNO</option>
+					<option value="2">MOD_SHOWCASEBUILDER_INSIDE_POPUP</option>
+					<option value="3">MOD_SHOWCASEBUILDER_UNDER_BIG_CIRCLE</option>
+        		</field>	
+		<!-- CONTROLLO VISUALIZZAZIONE ITEM -->	
+		</fieldset>
+		<!--DATA SOURCE JOOMLA ARTICLE-->
+		
+		<!--SLIDER APPEARANCE-->
+		<fieldset name="appearance" label="MOD_SHOWCASEBUILDER_SLIDERAPPEARANCE">
+		
+		<field name="small_border" type="text" default="4"
+					label="MOD_SHOWCASEBUILDER_SMALL_BORDER_LABEL" description="MOD_SHOWCASEBUILDER_SMALL_BORDER_DESC" />	
+		<field name="big_border" type="text" default="8"
+					label="MOD_SHOWCASEBUILDER_BIG_BORDER_LABEL" description="MOD_SHOWCASEBUILDER_BIG_BORDER_DESC" />
+		<field name="border_radius" type="text" default="-1"
+					label="MOD_SHOWCASEBUILDER_BORDER_RADIUS_LABEL" description="MOD_SHOWCASEBUILDER_BORDER_RADIUS_DESC" />
+		<field name="radius_proportion" type="radio" default="1" class="btn-group" 
+					label="MOD_SHOWCASEBUILDER_RADIUS_PROPORTION_LABEL" 
+					description="MOD_SHOWCASEBUILDER_RADIUS_PROPORTION_DESC">
+					<option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+		<field name="mode_picture" type="radio" default="2" class="btn-group" 
+					label="MOD_SHOWCASEBUILDER_MODE_PICTURE_LABEL" 
+					description="MOD_SHOWCASEBUILDER_MODE_PICTURE_DESC">
+					<option value="2">JYES</option>
+                    <option value="1">JNO</option>
+                </field>
+		<field name="border_on_off" type="radio" default="1" class="btn-group" 
+					label="MOD_SHOWCASEBUILDER_BORDER_ON_OFF_LABEL" 
+					description="MOD_SHOWCASEBUILDER_BORDER_ON_OFF_DESC">
+					<option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+		<field name="allow_shadow" type="radio" default="1" class="btn-group" 
+					label="MOD_SHOWCASEBUILDER_ALLOW_SHADOW_LABEL" 
+					description="MOD_SHOWCASEBUILDER_ALLOW_SHADOW_DESC">
+					<option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+		<field name="small_resolution_max_height" type="text" default="0"
+					label="MOD_SHOWCASEBUILDER_SMALL_RESOLUTION_MAX_HEIGHT_LABEL" description="MOD_SHOWCASEBUILDER_SMALL_RESOLUTION_MAX_HEIGHT_DESC" />		
+		
+		<field name="small_pic_width" type="text" default="84"
+					label="MOD_SHOWCASEBUILDER_SMALL_PIC_WIDTH_LABEL" description="MOD_SHOWCASEBUILDER_SMALL_PIC_WIDTH_DESC" />	
+		<field name="small_pic_height" type="text" default="84"
+					label="MOD_SHOWCASEBUILDER_SMALL_PIC_HEIGHT_LABEL" description="MOD_SHOWCASEBUILDER_SMALL_PIC_HEIGHT_DESC" />
+		<field name="child_div_width" type="text" default="104"
+					label="MOD_SHOWCASEBUILDER_CHILD_DIV_WIDTH_LABEL" description="MOD_SHOWCASEBUILDER_CHILD_DIV_WIDTH_DESC" />
+		<field name="child_div_height" type="text" default="104"
+					label="MOD_SHOWCASEBUILDER_CHILD_DIV_HEIGHT_LABEL" description="MOD_SHOWCASEBUILDER_CHILD_DIV_HEIGHT_DESC" />
+		<field name="big_pic_width" type="text" default="231"
+					label="MOD_SHOWCASEBUILDER_BIG_PIC_WIDTH_LABEL" description="MOD_SHOWCASEBUILDER_BIG_PIC_WIDTH_DESC" />
+		<field name="big_pic_height" type="text" default="231"
+					label="MOD_SHOWCASEBUILDER_BIG_PIC_HEIGHT_LABEL" description="MOD_SHOWCASEBUILDER_BIG_PIC_HEIGHT_DESC" />
+		
+		
+		<field name="prettyPhoto_width" type="text" default="21"
+					label="MOD_SHOWCASEBUILDER_PRETTYPHOTO_WIDTH_LABEL" description="MOD_SHOWCASEBUILDER_PRETTYPHOTO_WIDTH_DESC" />
+		
+		
+		<field name="prettyPhoto_start" type="text" default="0.93"
+					label="MOD_SHOWCASEBUILDER_PRETTYPHOTO_START_LABEL" description="MOD_SHOWCASEBUILDER_PRETTYPHOTO_START_DESC" />
+		
+		<field name="prettyPhoto_movement" type="text" default="45"
+					label="MOD_SHOWCASEBUILDER_PRETTYPHOTO_MOVEMENT_LABEL" description="MOD_SHOWCASEBUILDER_PRETTYPHOTO_MOVEMENT_DESC" />
+		
+		<field name="prettyPhoto_color" type="color" default="#1AB99B"
+					label="MOD_SHOWCASEBUILDER_PRETTYPHOTO_COLOR_LABEL" description="MOD_SHOWCASEBUILDER_PRETTYPHOTO_COLOR_DESC" />
+		
+		<field name="prettyPhoto_img" type="media" default=""
+					label="MOD_SHOWCASEBUILDER_PRETTYPHOTO_IMG_LABEL" description="MOD_SHOWCASEBUILDER_PRETTYPHOTO_IMG_DESC" />		
+		
+		<field name="activate_border_div" type="radio" default="1" class="btn-group" 
+					label="MOD_SHOWCASEBUILDER_ACTIVATE_BORDERDIV_LABEL" 
+					description="MOD_SHOWCASEBUILDER_ACTIVATE_BORDERDIV_DESC">
+					<option value="1">JYES</option>
+                    <option value="0">JNO</option>
+        		</field>
+				
+		<field name="border_color" type="color" default="#f5f5f5"
+					label="MOD_SHOWCASEBUILDER_BORDER_COLOR_LABEL" description="MOD_SHOWCASEBUILDER_BORDER_COLOR_DESC" />		
+		<field name="arrow_color" type="color" default="#8b8b8b"
+					label="MOD_SHOWCASEBUILDER_ARROW_COLOR_LABEL" description="MOD_SHOWCASEBUILDER_ARROW_COLOR_DESC" />
+					
+		<field name="arrow_width" type="text" default="28"
+					label="MOD_SHOWCASEBUILDER_ARROW_WIDTH_LABEL" description="MOD_SHOWCASEBUILDER_ARROW_WIDTH_DESC" />
+		<field name="arrow_height" type="text" default="57"
+					label="MOD_SHOWCASEBUILDER_ARROW_HEIGHT_LABEL" description="MOD_SHOWCASEBUILDER_ARROW_HEIGHT_DESC" />
+		<field name="small_arrow_width" type="text" default="20"
+					label="MOD_SHOWCASEBUILDER_SMALL_ARROW_WIDTH_LABEL" description="MOD_SHOWCASEBUILDER_SMALL_ARROW_WIDTH_DESC" />
+		<field name="small_arrow_height" type="text" default="20"
+					label="MOD_SHOWCASEBUILDER_SMALL_ARROW_HEIGHT_LABEL" description="MOD_SHOWCASEBUILDER_SMALL_ARROW_HEIGHT_DESC" />			
+				
+		<field name="use_thin_arrows" type="radio" default="0" class="btn-group" 
+					label="MOD_SHOWCASEBUILDER_USE_THINARROWS_LABEL" 
+					description="MOD_SHOWCASEBUILDER_USE_THINARROWS_DESC">
+					<option value="1">JYES</option>
+                    <option value="0">JNO</option>
+        		</field>
+		
+		<field name="top_offset" type="text" default="0"
+					label="MOD_SHOWCASEBUILDER_TOP_OFFSET_LABEL" description="MOD_SHOWCASEBUILDER_TOP_OFFSET_DESC" />		
+		
+		<field name="left_offset" type="text" default="0"
+					label="MOD_SHOWCASEBUILDER_LEFT_OFFSET_LABEL" description="MOD_SHOWCASEBUILDER_LEFT_OFFSET_DESC" />
+		
+		
+		<field name="responsive_by_available_space" type="radio" default="1" class="btn-group" 
+					label="MOD_SHOWCASEBUILDER_RESPONSIVE_AVAILABLESPACE_LABEL" 
+					description="MOD_SHOWCASEBUILDER_RESPONSIVE_AVAILABLESPACE_DESC">
+					<option value="1">JYES</option>
+                    <option value="0">JNO</option>
+        		</field>
+		
+		<field name="keep_on_top_middle_circle" type="radio" default="0" class="btn-group" 
+					label="MOD_SHOWCASEBUILDER_KEEPONTOP_MIDDLECIRCLE_LABEL" 
+					description="MOD_SHOWCASEBUILDER_KEEPONTOP_MIDDLECIRCLE_DESC">
+					<option value="1">JYES</option>
+                    <option value="0">JNO</option>
+        		</field>
+		
+		<field name="hide_arrows" type="radio" default="0" class="btn-group" 
+					label="MOD_SHOWCASEBUILDER_HIDE_ARROWS_LABEL" 
+					description="MOD_SHOWCASEBUILDER_HIDE_ARROWS_DESC">
+					<option value="1">JYES</option>
+                    <option value="0">JNO</option>
+        		</field>
+		<field name="hide_prettyPhoto" type="radio" default="0" class="btn-group" 
+					label="MOD_SHOWCASEBUILDER_HIDE_PRETTYPHOTO_LABEL" 
+					description="MOD_SHOWCASEBUILDER_HIDE_PRETTYPHOTO_DESC">
+					<option value="1">JYES</option>
+                    <option value="0">JNO</option>
+        		</field>
+		
+		<field name="content_margin_left" type="text" default="0"
+					label="MOD_SHOWCASEBUILDER_CONTENT_MARGIN_LEFT_LABEL" description="MOD_SHOWCASEBUILDER_CONTENT_MARGIN_LEFT_DESC" />
+		
+		<field name="circle_left_offset" type="text" default="0"
+					label="MOD_SHOWCASEBUILDER_CIRCLE_LEFT_OFFSET_LABEL" description="MOD_SHOWCASEBUILDER_CIRCLE_LEFT_OFFSET_DESC" />
+		
+		<field name="minus_width" type="text" default="0"
+					label="MOD_SHOWCASEBUILDER_MINUS_WIDTH_LABEL" description="MOD_SHOWCASEBUILDER_MINUS_WIDTH_DESC" />
+		</fieldset>
+		<field name="enable_scrool_with_touchmove_on_horizontal_version" type="radio" default="1" class="btn-group" 
+					label="MOD_SHOWCASEBUILDER_ENABLE_TOUCHMOVE_HORIZ_LABEL" 
+					description="MOD_SHOWCASEBUILDER_ENABLE_TOUCHMOVE_HORIZ_DESC">
+                   	<option value="1">JYES</option>
+                    <option value="0">JNO</option>
+        		</field>
+		
+		<field name="enable_scrool_with_touchmove_on_vertical_version" type="radio" default="0" class="btn-group" 
+					label="MOD_SHOWCASEBUILDER_ENABLE_TOUCHMOVE_VERTICAL_LABEL" 
+					description="MOD_SHOWCASEBUILDER_ENABLE_TOUCHMOVE_VERTICAL_DESC">
+                   	<option value="1">JYES</option>
+                    <option value="0">JNO</option>
+        		</field>
+		
+		<field name="movement_coefficient" type="text" default="1"
+					label="MOD_SHOWCASEBUILDER_MOVEMENT_COEFFICIENT_LABEL" description="MOD_SHOWCASEBUILDER_MOVEMENT_COEFFICIENT_DESC" />	
+		<!--SLIDER APPEARANCE-->
+		
+		<!--SLIDER SETTING-->
+		<fieldset name="setting" label="MOD_SHOWCASEBUILDER_SLIDERSETTING">
+		<field name="hv_switch" type="radio" default="0" class="btn-group" 
+					label="MOD_SHOWCASEBUILDER_HV_SWITCH_LABEL" 
+					description="MOD_SHOWCASEBUILDER_HV_SWITCH_DESC">
+                    <option value="0">MOD_SHOWCASEBUILDER_HORIZONTAL</option>
+                    <option value="1">MOD_SHOWCASEBUILDER_VERTICAL</option>
+                </field>
+		<field name="active_item" type="text" default="0"
+					label="MOD_SHOWCASEBUILDER_ACTIVE_ITEM_LABEL" description="MOD_SHOWCASEBUILDER_ACTIVE_ITEM_DESC" />	
+		<field name="wrapper_text_max_height" type="text" default="810"
+					label="MOD_SHOWCASEBUILDER_WRAPPER_TEXT_MAX_HEIGHT_LABEL" description="MOD_SHOWCASEBUILDER_WRAPPER_TEXT_MAX_HEIGHT_DESC" />		
+		<field name="automatic_height_resize" type="radio" default="1" class="btn-group" 
+					label="MOD_SHOWCASEBUILDER_AUTOMATIC_HEIGHT_RESIZE_LABEL" 
+					description="MOD_SHOWCASEBUILDER_AUTOMATIC_HEIGHT_RESIZE_DESC">
+					<option value="1">MOD_SHOWCASEBUILDER_AUTOMATIC_HEIGHT_RESIZE_AUTOMATIC</option>
+                    <option value="0">MOD_SHOWCASEBUILDER_AUTOMATIC_HEIGHT_RESIZE_FIXED</option>
+                </field>
+		<field name="middle_click" type="radio" default="1" class="btn-group" 
+					label="MOD_SHOWCASEBUILDER_MIDDLE_CLICK_LABEL" 
+					description="MOD_SHOWCASEBUILDER_MIDDLE_CLICK_DESC">
+                    <option value="1">MOD_SHOWCASEBUILDER_MIDDLE_CLICK_PREVIOUS_CIRCLE</option>
+                    <option value="2">MOD_SHOWCASEBUILDER_MIDDLE_CLICK_NEXT_CIRCLE</option>
+					<option value="0">MOD_SHOWCASEBUILDER_MIDDLE_CLICK_NORESPONSE</option>
+                </field>
+		<field name="bind_arrow_keys" type="radio" default="1" class="btn-group" 
+					label="MOD_SHOWCASEBUILDER_BIND_ARROW_KEYS_LABEL" 
+					description="MOD_SHOWCASEBUILDER_BIND_ARROW_KEYS_DESC">
+					<option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+		<field name="moving_speed" type="text" default="70"
+					label="MOD_SHOWCASEBUILDER_MOVING_SPEED_LABEL" description="MOD_SHOWCASEBUILDER_MOVING_SPEED_DESC" />
+		<field name="moving_speed_offset" type="text" default="100"
+					label="MOD_SHOWCASEBUILDER_MOVING_SPEED_OFFSET_LABEL" description="MOD_SHOWCASEBUILDER_MOVING_SPEED_OFFSET_DESC" />			
+		<field name="moving_easing" type="list" default="linear"
+					label="MOD_SHOWCASEBUILDER_MOVING_EASING_LABEL" description="MOD_SHOWCASEBUILDER_MOVING_EASING_DESC">
+					<option value="linear">MOD_SHOWCASEBUILDER_ANIMATIONTYPE_LINEAR</option>
+		</field>
+		<field name="arrow_speed" type="list" default="300"
+					label="MOD_SHOWCASEBUILDER_ARROW_SPEED_LABEL" description="MOD_SHOWCASEBUILDER_ARROW_SPEED_DESC">
+					<option value="100">100</option>
+					<option value="200">200</option>
+					<option value="300">300</option>
+					<option value="400">400</option>
+					<option value="500">500</option>
+					<option value="600">600</option>
+					<option value="700">700</option>
+					<option value="800">800</option>
+		</field>
+		<field name="arrow_easing" type="list" default="linear"
+					label="MOD_SHOWCASEBUILDER_ARROW_EASING_LABEL" description="MOD_SHOWCASEBUILDER_ARROW_EASING_DESC">
+					<option value="linear">MOD_SHOWCASEBUILDER_ANIMATIONTYPE_LINEAR</option>
+		</field>
+		
+		<field name="hover_movement" type="text" default="6"
+					label="MOD_SHOWCASEBUILDER_HOVER_MOVEMENT_LABEL" description="MOD_SHOWCASEBUILDER_HOVER_MOVEMENT_DESC" />
+		
+		<field name="hover_speed" type="list" default="100"
+					label="MOD_SHOWCASEBUILDER_HOVER_SPEED_LABEL" description="MOD_SHOWCASEBUILDER_HOVER_SPEED_DESC">
+					<option value="100">100</option>
+					<option value="200">200</option>
+					<option value="300">300</option>
+					<option value="400">400</option>
+					<option value="500">500</option>
+					<option value="600">600</option>
+					<option value="700">700</option>
+					<option value="800">800</option>
+		</field>	
+		<field name="hover_easing" type="list" default="linear"
+					label="MOD_SHOWCASEBUILDER_HOVER_EASING_LABEL" description="MOD_SHOWCASEBUILDER_HOVER_EASING_DESC">
+					<option value="linear">MOD_SHOWCASEBUILDER_ANIMATIONTYPE_LINEAR</option>
+		</field>
+		
+		<field name="prettyPhoto_speed" type="list" default="200"
+					label="MOD_SHOWCASEBUILDER_PRETTYPHOTO_SPEED_LABEL" description="MOD_SHOWCASEBUILDER_PRETTYPHOTO_SPEED_DESC">
+					<option value="100">100</option>
+					<option value="200">200</option>
+					<option value="300">300</option>
+					<option value="400">400</option>
+					<option value="500">500</option>
+					<option value="600">600</option>
+					<option value="700">700</option>
+					<option value="800">800</option>
+		</field>
+		
+		<field name="prettyPhoto_easing" type="list" default="linear"
+					label="MOD_SHOWCASEBUILDER_PRETTYPHOTO_EASING_LABEL" description="MOD_SHOWCASEBUILDER_PRETTYPHOTO_EASING_DESC">
+					<option value="linear">MOD_SHOWCASEBUILDER_ANIMATIONTYPE_LINEAR</option>
+		</field>
+		
+		<field name="auto_play" type="radio" default="0" class="btn-group" 
+					label="MOD_SHOWCASEBUILDER_AUTOPLAY_LABEL" 
+					description="MOD_SHOWCASEBUILDER_AUTOPLAY_DESC">
+					<option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+		
+		<field name="auto_play_direction" type="radio" default="1" class="btn-group" 
+					label="MOD_SHOWCASEBUILDER_AUTOPLAY_DIRECTION_LABEL" 
+					description="MOD_SHOWCASEBUILDER_AUTOPLAY_DIRECTION_DESC">
+					<option value="2">MOD_SHOWCASEBUILDER_LEFT</option>
+                    <option value="1">MOD_SHOWCASEBUILDER_RIGHT</option>
+                </field>
+		
+		<field name="auto_play_pause_time" type="text" default="3000"
+					label="MOD_SHOWCASEBUILDER_AUTOPLAY_PAUSETIME_LABEL" description="MOD_SHOWCASEBUILDER_AUTOPLAY_PAUSETIME_DESC" />
+		
+		<field name="preload_all_images" type="radio" default="0" class="btn-group" 
+					label="MOD_SHOWCASEBUILDER_PRELOAD_ALLIMAGES_LABEL" 
+					description="MOD_SHOWCASEBUILDER_PRELOAD_ALLIMAGES_DESC">
+					<option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+		<field name="enable_mousewheel" type="radio" default="1" class="btn-group" 
+					label="MOD_SHOWCASEBUILDER_ENABLE_MOUSEWHEEL_LABEL" 
+					description="MOD_SHOWCASEBUILDER_ENABLE_MOUSEWHEEL_DESC">
+					<option value="1">JYES</option>
+                    <option value="0">JNO</option>
+        		</field>
+		</fieldset>
+		<!--SLIDER SETTING-->
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension version="3.9" type="plugin" group="actionlog" method="upgrade">
+	<name>plg_actionlog_jmailalerts</name>
+	<author>Techjoomla</author>
+	<creationDate>24th Mar 2022</creationDate>
+	<copyright>Copyright (C) 2009 - 2022 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<version>3.0.0</version>
+	<description>PLG_ACTIONLOG_JMAILALERTS_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="jmailalerts">jmailalerts.php</filename>
+		<file>index.html</file>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_actionlog_jmailalerts.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_actionlog_jmailalerts.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="logActionForFrequencySave" type="radio" label="PLG_ACTIONLOG_JMAILALERTS_LOG_ACTION_FREQUENCY_SAVE" description="PLG_ACTIONLOG_JMAILALERTS_LOG_ACTION_COMMON_DESC" default="1" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="logActionForFrequencyDelete" type="radio" label="PLG_ACTIONLOG_JMAILALERTS_LOG_ACTION_FREQUENCY_DELETE" description="PLG_ACTIONLOG_JMAILALERTS_LOG_ACTION_COMMON_DESC" default="1" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field name="logActionForAlertSave" type="radio" label="PLG_ACTIONLOG_JMAILALERTS_LOG_ACTION_ALERT_SAVE" description="PLG_ACTIONLOG_JMAILALERTS_LOG_ACTION_COMMON_DESC" default="1" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="logActionForAlertDelete" type="radio" label="PLG_ACTIONLOG_JMAILALERTS_LOG_ACTION_ALERT_DELETE" description="PLG_ACTIONLOG_JMAILALERTS_LOG_ACTION_COMMON_DESC" default="1" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field name="logActionForSubscriptionSave" type="radio" label="PLG_ACTIONLOG_JMAILALERTS_LOG_ACTION_SUBSCRIPTION_SAVE" description="PLG_ACTIONLOG_JMAILALERTS_LOG_ACTION_COMMON_DESC" default="1" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="logActionForUnsubscribed" type="radio" label="PLG_ACTIONLOG_JMAILALERTS_LOG_ACTION_SUBSCRIPTION_DELETE" description="PLG_ACTIONLOG_JMAILALERTS_LOG_ACTION_COMMON_DESC" default="1" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

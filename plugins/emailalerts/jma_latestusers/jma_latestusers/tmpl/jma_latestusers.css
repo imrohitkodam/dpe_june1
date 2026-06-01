@@ -1,0 +1,13 @@
+/**
+ * @package     JMailAlerts
+ * @subpackage  jma_latestusers
+ *
+ * @author      Techjoomla <extensions@techjoomla.com>
+ * @copyright   Copyright (C) 2009 - 2021 Techjoomla. All rights reserved.
+ * @license     GNU General Public License version 2 or later
+ */
+
+/*TABLE*/
+.jma_latestuser{font-family: Helvetica; text-align:left; font-size:12px; border-spacing: 7px;margin-top: 5px; width: 100%; min-height: 82px; font-size:12px; padding-bottom:0; padding-top:5px;vertical-align:top;}
+.jma_latestuser_img{width:60px; height:60px; border:0;}
+.jma_latestuser_td{width:95px; padding-bottom:0;}

@@ -1,0 +1,36 @@
+.tjlms-wrapper .bg-eee {
+	background-color: #eeeeee;
+}
+@media only screen and (max-width: 767px){
+	.tjlms-wrapper .tjlms-filters {
+		display: none;
+	}
+	
+	.tjlms-wrapper .tjlms-filters input,
+	.tjlms-wrapper .tjlms-filters .input-group button,
+	.tjlms-wrapper .tjlms-filters select,
+	.tjlms-wrapper .chzn-container .chzn-single {
+		border: 0;
+		background: #fff;
+
+	}
+	
+	.tjlms-wrapper .tjlms-filters .input-group,
+	.tjlms-wrapper .tjlms-filters select,
+	.tjlms-wrapper .chzn-container .chzn-single {	
+		border-bottom: 1px solid #dddddd;
+	} 
+	
+	.tjlms-wrapper .chzn-container,
+	.tjlms-wrapper .input-group,
+	.tjlms-wrapper select {
+		width: 100% !important;
+	} 
+	
+	.tjlms-wrapper .tjlms-filters input,
+	.tjlms-wrapper .chzn-container .chzn-results, 
+	.tjlms-wrapper .chzn-container-single .chzn-drop {
+		border-radius: 0;
+		margin-top: 1px;
+	}
+}

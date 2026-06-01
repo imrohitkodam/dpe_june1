@@ -1,0 +1,127 @@
+[
+    {
+        "name": "codealfa/minify",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/codealfa/minify.git",
+            "reference": "119a260ea7c882498fed68ca1f157198513f3486"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/codealfa/minify/zipball/119a260ea7c882498fed68ca1f157198513f3486",
+            "reference": "119a260ea7c882498fed68ca1f157198513f3486",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=7.0"
+        },
+        "time": "2020-12-07T15:04:31+00:00",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "CodeAlfa\\Minify\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-3.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Samuel Marshall",
+                "email": "sdmarshall73@gmail.com"
+            }
+        ],
+        "description": "An extremely fast PHP based minification library for Javascript, CSS, Html and Json scripts using Regex Parsing"
+    },
+    {
+        "name": "codealfa/regextokenizer",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/codealfa/regextokenizer.git",
+            "reference": "babaf37b23040051bec10ba4c828946bafc15b07"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/codealfa/regextokenizer/zipball/babaf37b23040051bec10ba4c828946bafc15b07",
+            "reference": "babaf37b23040051bec10ba4c828946bafc15b07",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=7.0"
+        },
+        "time": "2020-11-30T16:15:07+00:00",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "CodeAlfa\\RegexTokenizer\\": "src/"
+            }
+        },
+        "license": [
+            "GPL-3.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Samuel Marshall",
+                "email": "sdmarshall73@gmail.com"
+            }
+        ],
+        "description": "description",
+        "support": {
+            "source": "https://github.com/codealfa/regextokenizer/tree/master",
+            "issues": "https://github.com/codealfa/regextokenizer/issues"
+        }
+    },
+    {
+        "name": "jchoptimize/core",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "git@github.com:jchoptimize/core.git",
+            "reference": "37b896ce1e2361306e48cfd8adedf9950f2fcae2"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/jchoptimize/core/zipball/37b896ce1e2361306e48cfd8adedf9950f2fcae2",
+            "reference": "37b896ce1e2361306e48cfd8adedf9950f2fcae2",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=7.2"
+        },
+        "time": "2020-12-11T14:09:45+00:00",
+        "type": "jchoptimize-core",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "JchOptimize\\Core\\": "src/"
+            }
+        },
+        "autoload-dev": {
+            "psr-4": {
+                "JchOptimize\\Tests\\": "tests/"
+            }
+        },
+        "license": [
+            "GPL-3.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Samuel Marshall",
+                "email": "samuel@jch-optimize.net"
+            }
+        ],
+        "description": "JCH Optimize Pro framework",
+        "support": {
+            "source": "https://github.com/jchoptimize/core/tree/master",
+            "issues": "https://github.com/jchoptimize/core/issues"
+        }
+    }
+]

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="3.0" group="logman" method="upgrade" overwrite="true">
+    <identifier>plg:logman.config</identifier>
+    <name>plg_logman_config</name>
+    <author>Joomlatools</author>
+    <creationDate>March 2025</creationDate>
+    <copyright>Copyright (C) 2011 Timble CVBA (http://www.timble.net)</copyright>
+    <license>GNU GPLv3 - http://www.gnu.org/licenses/gpl.html</license>
+    <authorEmail>support@joomlatools.com</authorEmail>
+    <authorUrl>www.joomlatools.com</authorUrl>
+    <version>6.0.0</version>
+    <description>PLG_LOGMAN_CONFIG_DESC</description>
+
+    <files>
+        <filename plugin="config">config.php</filename>
+        <folder>activity</folder>
+        <folder>language</folder>
+    </files>
+
+    <media folder="media">
+        <folder>plg_logman_config</folder>
+    </media>
+
+    <config>
+        <fields name="params" />
+    </config>
+
+    <resources>
+        <resource name="component">
+            <actions>
+                <action>edit</action>
+            </actions>
+        </resource>
+    </resources>
+</extension>

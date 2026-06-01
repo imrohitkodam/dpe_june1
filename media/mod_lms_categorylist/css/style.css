@@ -1,0 +1,32 @@
+.tjlms-wrapper .list-group-item{
+	display:none;
+}
+
+.tjlms-wrapper .list-group-item:not(:first-child) {
+	border-top: 1px solid #DDD !important;
+}
+
+.tjlms-wrapper .list-group-item.has-children{
+	position:relative;
+}
+
+.tjlms-wrapper ul.list-group.children .list-group-item{
+	border-bottom: 0 !important;
+	border-top: 1px solid #DDD !important;
+}
+
+.tjlms-wrapper .list-group-item.has-children i.fa{
+	position:absolute;
+	top:15px;
+	right:15px;
+	cursor: pointer;
+}
+
+.tjlms-wrapper .list-group-item.open > ul > li.list-group-item{
+ display:block;
+}
+
+.tjlms-wrapper .list-group-item.open > i.fa:before{
+	content: "\f078";
+}
+

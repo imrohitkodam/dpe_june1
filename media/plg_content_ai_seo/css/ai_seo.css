@@ -1,0 +1,262 @@
+/**
+ * AI SEO Buttons - Modern Glassmorphic UI
+ */
+
+/* Main container - Glassmorphism */
+.ai-seo-buttons-container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 16px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.02);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.ai-seo-main-container {
+    margin: 20px 0;
+}
+
+/* Header */
+.ai-seo-buttons-container h4 {
+    margin: 0 0 16px 0;
+    color: #1a1f2c;
+    /* Darker, cleaner text */
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    letter-spacing: -0.01em;
+}
+
+/* Button group */
+.ai-seo-button-group {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+}
+
+/* Base button styles - Pill shaped & Gradient */
+.ai-seo-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    padding: 10px 20px;
+    /* Larger touch target */
+    border-radius: 50px;
+    /* Pill shape */
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    color: white;
+    letter-spacing: 0.01em;
+}
+
+.ai-seo-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.ai-seo-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.ai-seo-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    filter: grayscale(0.5);
+}
+
+.ai-seo-btn .ai-icon {
+    font-size: 16px;
+    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.1));
+}
+
+/* Button variants - Premium Gradients */
+.ai-seo-btn-primary {
+    /* Blue-Purple Gradient */
+    background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+}
+
+.ai-seo-btn-primary:hover {
+    background: linear-gradient(135deg, #4338CA 0%, #6D28D9 100%);
+}
+
+.ai-seo-btn-secondary {
+    /* Cyan-Blue Gradient */
+    background: linear-gradient(135deg, #0EA5E9 0%, #2563EB 100%);
+}
+
+.ai-seo-btn-secondary:hover {
+    background: linear-gradient(135deg, #0284C7 0%, #1D4ED8 100%);
+}
+
+.ai-seo-btn-success {
+    /* Emerald-Teal Gradient */
+    background: linear-gradient(135deg, #10B981 0%, #0D9488 100%);
+}
+
+.ai-seo-btn-success:hover {
+    background: linear-gradient(135deg, #059669 0%, #0F766E 100%);
+}
+
+.ai-seo-btn-info {
+    /* Violet-Fuchsia Gradient */
+    background: linear-gradient(135deg, #8B5CF6 0%, #D946EF 100%);
+}
+
+.ai-seo-btn-info:hover {
+    background: linear-gradient(135deg, #7C3AED 0%, #C026D3 100%);
+}
+
+.ai-seo-btn-outline {
+    background: white;
+    color: #4b5563;
+    border: 1px solid #e5e7eb;
+    text-shadow: none;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.ai-seo-btn-outline:hover {
+    background: #f9fafb;
+    border-color: #d1d5db;
+    color: #1f2937;
+    transform: translateY(-1px);
+}
+
+/* Sleek Inputs */
+.ai-seo-buttons-container textarea.form-control,
+.ai-seo-buttons-container input.form-control {
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 12px 16px;
+    background: #f8fafc;
+    transition: all 0.2s ease;
+    font-size: 14px;
+    width: 100%;
+    margin-bottom: 10px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.03);
+    color: #1e293b;
+    /* Ensure text is dark */
+}
+
+.ai-seo-buttons-container textarea::placeholder,
+.ai-seo-buttons-container input::placeholder {
+    color: #64748b;
+    /* Darker grey for better visibility */
+    opacity: 1;
+}
+
+.ai-seo-buttons-container textarea.form-control:focus,
+.ai-seo-buttons-container input.form-control:focus {
+    background: white;
+    border-color: #8B5CF6;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+    outline: none;
+}
+
+/* Results Area */
+.ai-seo-results {
+    margin-top: 16px;
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ai-seo-result {
+    background: white;
+    border: 1px solid #f1f5f9;
+    border-radius: 12px;
+    padding: 20px;
+    font-size: 14px;
+    line-height: 1.6;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Status variants with subtle colored backgrounds */
+.ai-seo-result.success {
+    background: linear-gradient(to right, #ffffff, #f0fdf4);
+    border-left: 4px solid #10b981;
+}
+
+.ai-seo-result.error {
+    background: linear-gradient(to right, #ffffff, #fef2f2);
+    border-left: 4px solid #ef4444;
+}
+
+.ai-seo-result.info {
+    background: linear-gradient(to right, #ffffff, #eff6ff);
+    border-left: 4px solid #3b82f6;
+}
+
+.ai-seo-result-label {
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 10px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ai-seo-result-content {
+    color: #334155;
+}
+
+/* Loading Spinner */
+.ai-seo-btn.loading {
+    color: transparent;
+    text-shadow: none;
+}
+
+.ai-seo-btn.loading::after {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 50%;
+    left: 50%;
+    margin: -9px 0 0 -9px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: ai-seo-spin 0.8s linear infinite;
+}
+
+@keyframes ai-seo-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Toast */
+.ai-seo-toast {
+    background: rgba(30, 41, 59, 0.95);
+    backdrop-filter: blur(8px);
+    border-radius: 50px;
+    padding: 12px 24px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    font-weight: 500;
+}

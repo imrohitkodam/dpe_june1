@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="module" client ="site" method="upgrade">
+	<name>mod_lms_categorylist</name>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>Copyright (C) 2014 - 2023 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<creationDate>13th Jul 2023</creationDate>
+	<version>4.0.5</version>
+	<description>MOD_LMS_CATEGORYLIST_DESC</description>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_lms_categorylist.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_lms_categorylist.sys.ini</language>
+	</languages>
+
+	<files>
+		<filename module="mod_lms_categorylist">mod_lms_categorylist.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+	</files>
+
+	<media folder="media" destination="mod_lms_categorylist">
+		<folder>css</folder>
+		<folder>js</folder>
+	</media>
+
+	<!-- Fields for Joomla 1.8.x and onwards -->
+	<config name="params">
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="moduleclass_sfx" type="text" default="" label="MOD_SUFIX" description="MOD_LMS_CATEGORYLIST_MODULECLASS_SFX_DESC" />
+				<field name="scroll_height" type="text"  default="250" label="MOD_LMS_CATEGORYLIST_SCROLL_HEIGHT_LIMIT" description="MOD_LMS_CATEGORYLIST_SCROLL_HEIGHT_LIMIT_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+
+	<!--SETTING default param -->
+	<config>
+		<fields>
+			<fieldset>
+				<field name="moduleclass_sfx" default="" />
+				<field name="scroll_height" default="250" />
+			</fieldset>
+		</fields>
+	</config>
+
+</extension>

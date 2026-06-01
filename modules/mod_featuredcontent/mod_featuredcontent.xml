@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" client="site" method="upgrade">
+	<name>Featured Content Carousel</name>
+	<author>Joomla! Project</author>
+	<creationDate>2024</creationDate>
+	<copyright>(C) 2005 Open Source Matters, Inc.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>admin@joomla.org</authorEmail>
+	<authorUrl>www.joomla.org</authorUrl>
+	<version>4.0.0</version>
+	<description></description>
+
+
+	<files>
+		<filename module="mod_featuredcontent">mod_featuredcontent.php</filename>
+		<folder>tmpl</folder>
+		<folder>css</folder>
+		<folder>js</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/mod_featuredcontent.ini</language>
+		<language tag="en-GB">language/en-GB/mod_featuredcontent.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic" label="COM_MODULES_BASIC_FIELDSET_LABEL">
+				<field
+					name="articleType"
+					type="list"
+					label="MOD_FEATUREDCONTENT_SLIDER_FEATURED_CHOOSE_ARTICLE_TYPE"
+					default="show"
+					validate="options"
+					>
+					<option value="featured">MOD_FEATUREDCONTENT_SLIDER_FEATURED_ARTICLE</option>
+					<option value="tag">MOD_FEATUREDCONTENT_SLIDER_TAGGED_ARTICLE</option>
+				</field>
+				<field
+						name="tags"
+						type="tag"
+						label="JTAG"
+						multiple="true"
+						showon="articleType:tag"
+					/>
+				<field
+					name="catid"
+					type="category"
+					label="JCATEGORY"
+					extension="com_content"
+					multiple="true"
+					layout="joomla.form.field.list-fancy-select"
+					filter="intarray"
+					class="multipleCategories"
+				/>
+				<field name="ordering" type="list" default="p_dsc" label="MOD_FEATUREDCONTENT_SLIDER_ORDER_ARTICLE" description="MOD_FEATUREDCONTENT_SLIDER_ORDER_ARTICLE">
+					<option value="asc">MOD_FEATUREDCONTENT_SLIDER_ORDER_ARTICLE_ASC</option>
+					<option value="desc">MOD_FEATUREDCONTENT_SLIDER_ORDER_ARTICLE_DESC</option>
+				</field>
+				<!-- <field name="heightofslider" class="" type="number" default="" label="MOD_FEATUREDCONTENT_SLIDER_HEIGHT" required="" filter="raw" />
+				<field name="widthofslider" class="" type="number" default="" label="MOD_FEATUREDCONTENT_SLIDER_WIDTH" required="" filter="raw" /> -->
+				<field name="sliderTimer" class="" type="number" default="" label="MOD_FEATUREDCONTENT_SLIDER_TIMER" required="" filter="raw" />
+				<!-- <field name="backgroundcolor" type="color" default="#eee" format="rgba"
+				label="MOD_FEATUREDCONTENT_SLIDER_BACKGROUND_COLOR"
+				description="MOD_FEATUREDCONTENT_SLIDER_BACKGROUND_COLOR" /> -->
+
+			</fieldset>
+			
+		</fields>
+	</config>
+</extension>

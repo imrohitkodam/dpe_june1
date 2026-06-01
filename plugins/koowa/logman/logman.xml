@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="3.0" group="koowa" method="upgrade" overwrite="true">
+    <identifier>plg:koowa.logman</identifier>
+    <name>plg_koowa_logman</name>
+    <author>Joomlatools</author>
+    <creationDate>March 2025</creationDate>
+    <copyright>Copyright (C) 2011 Timble CVBA (http://www.timble.net)</copyright>
+    <license>GNU GPLv3 - http://www.gnu.org/licenses/gpl.html</license>
+    <authorEmail>support@joomlatools.com</authorEmail>
+    <authorUrl>www.joomlatools.com</authorUrl>
+    <version>6.0.0</version>
+    <description>PLG_KOOWA_LOGMAN_DESC</description>
+
+    <files>
+        <filename plugin="logman">logman.php</filename>
+        <folder>language</folder>
+    </files>
+
+    <params />
+
+    <config>
+        <fields name="params" />
+    </config>
+</extension>

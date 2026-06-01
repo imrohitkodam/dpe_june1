@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="jma_coursedisplay">
+		<fieldset name="legacy" label="PLG_JMA_CD_USER_PARAMS">
+			<field type="spacer" name="in_progress" label="PLG_JMA_CD_IN_PROGRESS_PARAMS" description="" />
+			<field
+			name="show_in_progress_courses"
+			type="radio"
+			default="1"
+			label="PLG_JMA_CD_SHOW_IN_PROGESS_COURSES_LBL"
+			description="PLG_JMA_CD_SHOW_IN_PROGESS_COURSES_DESC"
+			class="radio btn-group btn-group-yesno" >
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+			name="no_of_in_progress_courses"
+			type="text"
+			default="3"
+			class="required validate-numeric inputbox"
+			label="PLG_JMA_CD_IN_PROGRESS_NO_OF_COURSES_LBL"
+			description="PLG_JMA_CD_IN_PROGRESS_NO_OF_COURSES_DESC" />
+
+			<field type="spacer" name="recommended" label="PLG_JMA_CD_RECOMMENDED_PARAMS" description="" />
+
+			<field
+			name="show_recommended_courses"
+			type="radio"
+			default="1"
+			label="PLG_JMA_CD_SHOW_RECOMMENDED_COURSES_LBL"
+			description="PLG_JMA_CD_SHOW_RECOMMENDED_COURSES_DESC"
+			class="radio btn-group btn-group-yesno" >
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+			name="no_of_recommended_courses"
+			type="text"
+			default="3"
+			class="required validate-numeric inputbox"
+			label="PLG_JMA_CD_RECOMMENDED_NO_OF_COURSES_LBL"
+			description="PLG_JMA_CD_RECOMMENDED_NO_OF_COURSES_DESC" />
+
+			<field type="spacer" name="recently_added" label="PLG_JMA_CD_RECENTLY_ADDED_PARAMS" description="" />
+			<field
+			name="show_recently_added_courses"
+			type="radio"
+			default="1"
+			label="PLG_JMA_CD_SHOW_RECENTLY_ADDED_COURSES_LBL"
+			description="PLG_JMA_CD_SHOW_RECENTLY_ADDED_COURSES_DESC"
+			class="radio btn-group btn-group-yesno" >
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+			name="no_of_recently_added_courses"
+			type="text"
+			default="3"
+			class="required validate-numeric inputbox"
+			label="PLG_JMA_CD_RECENTLY_ADDED_NO_OF_COURSES_LBL"
+			description="PLG_JMA_CD_RECENTLY_ADDED_NO_OF_COURSES_DESC" />
+
+			<field
+			name="days_count_course_added"
+			type="text"
+			default="10"
+			class="required validate-numeric inputbox"
+			label="PLG_JMA_CD_RECENTLY_ADDED_DAYS_BEFORE_COURSE_ADDED_LBL"
+			description="PLG_JMA_CD_RECENTLY_ADDED_DAYS_BEFORE_COURSE_ADDED_DESC" />
+
+			<field type="spacer" name="most_popular" label="PLG_JMA_CD_MOST_POPULAR_PARAMS" description="" />
+			<field
+			name="show_most_popular_courses"
+			type="radio"
+			default="1"
+			label="PLG_JMA_CD_SHOW_MOST_POPULAR_COURSES_LBL"
+			description="PLG_JMA_CD_SHOW_MOST_POPULAR_COURSES_DESC"
+			class="radio btn-group btn-group-yesno" >
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+			name="no_of_most_popular_courses"
+			type="text"
+			default="3"
+			class="required validate-numeric inputbox"
+			label="PLG_JMA_CD_MOST_POPULAR_NO_OF_COURSES_LBL"
+			description="PLG_JMA_CD_MOST_POPULAR_NO_OF_COURSES_DESC" />
+		</fieldset>
+	</fields>
+</form>

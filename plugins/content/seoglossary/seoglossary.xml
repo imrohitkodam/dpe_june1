@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="content" method="upgrade">
+	<name>Content - SEOGlossary</name>
+	<author>JoomUnited</author>
+	<authorEmail>contact@joomunited.com</authorEmail>
+	<authorUrl>http://www.joomunited.com</authorUrl>
+	<creationDate>2023-07-31 09:17:38</creationDate>
+	<copyright>(c) 2012 JoomUnited (http://www.joomunited.com). All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; http://www.gnu.org/licenses/gpl-2.0.html</license>
+	<version>3.2.5</version>
+	<description>Plugin used to replace glossary with component</description>
+ 	<scriptfile>seoglossary.scriptfile.php</scriptfile>
+	<files>
+		<filename plugin="seoglossary">seoglossary.php</filename>
+		<filename>index.html</filename>
+	</files>
+</extension>

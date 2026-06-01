@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="4.0" method="upgrade" group="system">
+<name>plg_system_ai_seo_buttons</name>
+<author>Tekdi</author>
+<version>0.1.0</version>
+<description>AI SEO Buttons - Adds on-demand AI generation buttons to article editor</description>
+<files>
+<filename plugin="ai_seo_buttons">ai_seo_buttons.php</filename>
+<folder>css</folder>
+<folder>js</folder>
+<filename>index.html</filename>
+</files>
+</extension>

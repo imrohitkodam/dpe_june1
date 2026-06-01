@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="lmstax" method="upgrade">
+	<name>PLG_LMSTAX_LMS_TAX_DEFAULT</name>
+	<author>Techjoomla</author>
+	<creationDate>13th Jul 2023</creationDate>
+	<copyright>Copyright (C) 2014 - 2023 Techjoomla. All rights reserved.</copyright>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>4.0.5</version>
+	<description>PLG_TJLMSTAX_DESC</description>
+	<files>
+		<filename plugin="lms_tax_default">lms_tax_default.php</filename>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_lmstax_lms_tax_default.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_lmstax_lms_tax_default.sys.ini</language>
+ 	</languages>
+	<!-- parameters for Joomla 1.5.x -->
+	<params>
+		<param name="tax_per" type="text" default="12.5" label="PLG_TAX" description="PLG_TAX_DESC" />
+	</params>
+
+	<!-- Fields for Joomla 1.8.x and onwards -->
+	<config name="params">
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="tax_per" type="text" default="12.5" label="PLG_TAX" description="PLG_TAX_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

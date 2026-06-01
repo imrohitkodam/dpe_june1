@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="4" type="plugin" group="editors-xtd" method="upgrade">
+  <name>PLG_EDITORS-XTD_MODALS</name>
+  <description>PLG_EDITORS-XTD_MODALS_DESC</description>
+  <version>12.3.5PRO</version>
+  <creationDate>May 2023</creationDate>
+  <author>Regular Labs (Peter van Westen)</author>
+  <authorEmail>info@regularlabs.com</authorEmail>
+  <authorUrl>https://regularlabs.com</authorUrl>
+  <copyright>Copyright © 2023 Regular Labs - All Rights Reserved</copyright>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <namespace path="src">RegularLabs\Plugin\EditorButton\Modals</namespace>
+  <scriptfile>script.install.php</scriptfile>
+  <files>
+    <file plugin="modals">modals.php</file>
+    <folder>forms</folder>
+    <folder>language</folder>
+    <folder>src</folder>
+    <folder>tmpl</folder>
+  </files>
+  <config>
+    <fields name="params" addfieldprefix="RegularLabs\Library\Form\Field">
+      <fieldset name="basic">
+        <field name="@load_language_regularlabs" type="LoadLanguage" extension="plg_system_regularlabs"/>
+        <field name="@license" type="License" extension="MODALS"/>
+        <field name="@version" type="Version" extension="MODALS"/>
+        <field name="@dependency" type="Dependency" label="MDL_THE_SYSTEM_PLUGIN" file="/plugins/system/modals/modals.xml"/>
+        <field name="@download_key" type="DownloadKey" extension="MODALS" label="RL_DOWNLOAD_KEY" description="RL_DOWNLOAD_KEY_DESC"/>
+        <field name="@header" type="Header" label="MODALS" description="MODALS_DESC" url="https://regularlabs.com/modals"/>
+        <field name="@note__settings" type="Note" class="rl-alert alert alert-info rl-alert-light" text="MDL_SETTINGS,&lt;a href=&quot;index.php?option=com_plugins&amp;filter[folder]=system&amp;filter[search]=modals&quot; target=&quot;_blank&quot;&gt;,&lt;/a&gt;"/>
+      </fieldset>
+    </fields>
+  </config>
+</extension>

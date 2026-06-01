@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="koowa" method="upgrade">
+	<identifier>plg:koowa.connect</identifier>
+    <name>plg_koowa_connect</name>
+    <author>Joomlatools</author>
+    <creationDate>September 2016</creationDate>
+    <copyright>Copyright (C) 2016 Timble CVBA</copyright>
+    <license>GNU GPLv3 - http://www.gnu.org/licenses/gpl.html</license>
+    <authorEmail>info@joomlatools.com</authorEmail>
+    <authorUrl>www.joomlatools.com</authorUrl>
+	<version>4.0.1</version>
+	<description>PLG_KOOWA_CONNECT_DESCRIPTION</description>
+
+	<scriptfile>script.php</scriptfile>
+
+	<updateservers>
+		<server type="extension" priority="1" name="Connect">https://api.joomlatools.com/extension/connect.xml</server>
+	</updateservers>
+
+	<files>
+		<filename plugin="connect">connect.php</filename>
+		<folder>language</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="api_key" label="JOOMLATOOLS_CONNECT_API_KEY" description="JOOMLATOOLS_CONNECT_KEY_DESC" type="text"
+					   size="50" class="col-lg-6" />
+				<field name="secret_key" label="JOOMLATOOLS_CONNECT_SECRET_KEY" description="JOOMLATOOLS_CONNECT_KEY_DESC" type="text" />
+				<field type="radio" default="0"
+					   class="btn-group btn-group-yesno"
+					   name="activities" label="JOOMLATOOLS_CONNECT_ACTIVITIES" description="JOOMLATOOLS_CONNECT_ACTIVITIES_DESC"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.9" type="plugin" group="privacy" method="upgrade">
+	<name>plg_privacy_jmailalerts</name>
+	<version>3.0.0</version>
+	<creationDate>24th Mar 2022</creationDate>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>Copyright (C) 2009 - 2022 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>PLG_PRIVACY_JMAILALERTS_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="jmailalerts">jmailalerts.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_privacy_jmailalerts.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_privacy_jmailalerts.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" />
+		</fields>
+	</config>
+</extension>

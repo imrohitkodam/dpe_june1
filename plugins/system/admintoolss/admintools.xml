@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ @package   admintools
+  ~ @copyright Copyright (c)2010-2021 Nicholas K. Dionysopoulos / Akeeba Ltd
+  ~ @license   GNU General Public License version 3, or later
+  -->
+
+<extension version="3.9.0" type="plugin" group="system" method="upgrade">
+    <name>PLG_SYSTEM_ADMINTOOLS</name>
+    <author>Nicholas K. Dionysopoulos</author>
+    <authorEmail>nicholas@akeeba.com</authorEmail>
+    <authorUrl>https://www.akeeba.com</authorUrl>
+    <copyright>Copyright (c)2010-2019 Nicholas K. Dionysopoulos</copyright>
+    <license>GNU General Public License version 3, or later</license>
+    <creationDate>2021-08-12</creationDate>
+    <version>6.1.1</version>
+    <description>PLG_SYSTEM_ADMINTOOLS_XML_DESCRIPTION</description>
+    <files>
+        <filename plugin="admintools">admintools.php</filename>
+        <filename>autoloader.php</filename>
+        <filename>.htaccess</filename>
+        <filename>web.config</filename>
+        <folder>admintools</folder>
+        <folder>feature</folder>
+        <folder>util</folder>
+    </files>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.plg_system_admintools.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_system_admintools.sys.ini</language>
+    </languages>
+    <config addfieldpath="/administrator/components/com_admintools/fields">
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="language_override"
+                       type="language"
+                       default=""
+                       label="ADMINTOOLS_LANGUAGE_OVERRIDE_LBL"
+                       description="ADMINTOOLS_LANGUAGE_OVERRIDE_DESC"
+                       multiple="0"
+                       useglobal="1"
+                />
+
+                <field name="autoimport_url"
+                       type="url"
+                       default=""
+                       label="ADMINTOOLS_AUTOIMPORTURL"
+                       description="ADMINTOOLS_AUTOIMPORTURL_DESC"
+                />
+
+                <field name="autoimport_freq"
+                       type="number"
+                       default="24"
+                       label="ADMINTOOLS_AUTOIMPORTFREQ"
+                       description="ADMINTOOLS_AUTOIMPORTFREQ_DESC"
+                       min="1"
+                       max="8760"
+                />
+
+                <field name="rescueurl"
+                       type="fancyradio"
+                       default="1"
+                       label="ADMINTOOLS_RESCUEURL"
+                       description="ADMINTOOLS_RESCUEURL_DESC"
+                       class="btn-group btn-group-yesno"
+                >
+                    <option value="0">JNo</option>
+                    <option value="1">JYes</option>
+                </field>
+
+                <field name="rescueduration"
+                       type="number"
+                       default="15"
+                       label="ADMINTOOLS_RESCUEDURATION"
+                       description="ADMINTOOLS_RESCUEDURATION_DESC"
+                       min="1"
+                       max="3600"
+                       showon="rescueurl:1"
+                />
+
+                <field name="sesoptimizer"
+                       type="fancyradio"
+                       default="0"
+                       label="ADMINTOOLS_SESOPT_LBL"
+                       description="ADMINTOOLS_SESOPT_DESC"
+                       class="btn-group btn-group-yesno"
+                >
+                    <option value="0">JNo</option>
+                    <option value="1">JYes</option>
+                </field>
+
+                <field name="sesopt_freq"
+                       type="number"
+                       default="60"
+                       label="ADMINTOOLS_SESOPT_FREQ_LBL"
+                       description="ADMINTOOLS_SESOPT_FREQ_DESC"
+                       min="1"
+                       max="15552000"
+                       showon="sesoptimizer:1"
+                />
+
+                <field name="sescleaner"
+                       type="fancyradio"
+                       default="0"
+                       label="ADMINTOOLS_SESCLEANER_LBL"
+                       description="ADMINTOOLS_SESCLEANER_DESC"
+                       class="btn-group btn-group-yesno"
+                >
+                    <option value="0">JNo</option>
+                    <option value="1">JYes</option>
+                </field>
+
+                <field name="ses_freq"
+                       type="number"
+                       default="60"
+                       label="ADMINTOOLS_SES_FREQ_LBL"
+                       description="ADMINTOOLS_SES_FREQ_DESC"
+                       min="1"
+                       max="15552000"
+                       showon="sescleaner:1"
+                />
+
+                <field name="cachecleaner"
+                       type="fancyradio"
+                       default="0"
+                       label="ADMINTOOLS_CACHECLEANER_LBL"
+                       description="ADMINTOOLS_CACHECLEANER_DESC"
+                       class="btn-group btn-group-yesno"
+                >
+                    <option value="0">JNo</option>
+                    <option value="1">JYes</option>
+                </field>
+
+                <field name="cache_freq"
+                       type="number"
+                       default="1440"
+                       label="ADMINTOOLS_CACHE_FREQ_LBL"
+                       description="ADMINTOOLS_CACHE_FREQ_DESC"
+                       min="1"
+                       max="15552000"
+                       showon="cachecleaner:1"
+                />
+
+                <field name="cacheexpire"
+                       type="fancyradio"
+                       default="0"
+                       label="ADMINTOOLS_CACHECEXPIRE_LBL"
+                       description="ADMINTOOLS_CACHECEXPIRE_DESC"
+                       class="btn-group btn-group-yesno"
+                >
+                    <option value="0">JNo</option>
+                    <option value="1">JYes</option>
+                </field>
+
+                <field name="cacheexp_freq"
+                       type="text"
+                       default="60"
+                       label="ADMINTOOLS_CACHEEXP_FREQ_LBL"
+                       description="ADMINTOOLS_CACHEEXP_FREQ_DESC"
+                       min="1"
+                       max="15552000"
+                       showon="cacheexpire:1"
+                />
+
+                <field name="cleantemp"
+                       type="fancyradio"
+                       default="0"
+                       label="ADMINTOOLS_CLEANTEMP_LBL"
+                       description="ADMINTOOLS_CLEANTEMP_DESC"
+                       class="btn-group btn-group-yesno"
+                >
+                    <option value="0">JNo</option>
+                    <option value="1">JYes</option>
+                </field>
+
+                <field name="cleantemp_freq"
+                       type="text"
+                       default="60"
+                       label="ADMINTOOLS_CLEANTEMP_FREQ_LBL"
+                       description="ADMINTOOLS_CLEANTEMP_FREQ_DESC"
+                       min="1"
+                       max="15552000"
+                       showon="cleantemp:1"
+                />
+
+                <field name="deleteinactive"
+                       type="list"
+                       default="0"
+                       label="ADMINTOOLS_DELETEINACTIVE_LBL"
+                       description="ADMINTOOLS_DELETEINACTIVE_DESC"
+                >
+                    <option value="0">ADMINTOOLS_DELETEINACTIVE_NONE</option>
+                    <option value="1">ADMINTOOLS_DELETEINACTIVE_NOTACTIVATED</option>
+                    <option value="2">ADMINTOOLS_DELETEINACTIVE_BLOCKED</option>
+                    <option value="3">ADMINTOOLS_DELETEINACTIVE_BOTH</option>
+                </field>
+
+                <field name="deleteinactive_days"
+                       type="number"
+                       default="7"
+                       label="ADMINTOOLS_DELETEINACTIVE_DAYS_LBL"
+                       description="ADMINTOOLS_DELETEINACTIVE_DAYS_DESC"
+                       min="1"
+                       max="730"
+                       showon="deleteinactive!:0"
+                />
+
+                <field name="maxlogentries"
+                       type="number"
+                       default="0"
+                       label="ADMINTOOLS_MAXLOGENTRIES_LBL"
+                       description="ADMINTOOLS_MAXLOGENTRIES_DESC"
+                       min="0"
+                       max="1000000"
+                />
+            </fieldset>
+        </fields>
+    </config>
+
+    <scriptfile>script.php</scriptfile>
+</extension>

@@ -1,0 +1,11 @@
+/**
+ * @package     JMailAlerts
+ * @subpackage  jma_groups_js
+ *
+ * @author      Techjoomla <extensions@techjoomla.com>
+ * @copyright   Copyright (C) 2009 - 2021 Techjoomla. All rights reserved.
+ * @license     GNU General Public License version 2 or later
+ */
+
+.jma_groupjs{font-family: Helvetica; text-align:left; font-size:12px; border-spacing:15px; margin-top: 5px; width: 100%; min-height: 82px; font-size:12px; padding-bottom:0; padding-top:5px; vertical-align:top;}
+.jma_groupjs_th{text-align:left; color: #333333;}

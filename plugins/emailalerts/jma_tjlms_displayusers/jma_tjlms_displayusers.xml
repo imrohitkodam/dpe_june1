@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="emailalerts" method="upgrade">
+	<name>plg_emailalerts_jma_tjlms_displayusers</name>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>Copyright (c) 2009-2020 Techjoomla. All rights reserved.</copyright>
+	<creationDate>26th March 2020</creationDate>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>1.0.0</version>
+	<description>PLG_EMAILALERTS_JMA_TJLMS_DISPLAYUSERS_DESC</description>
+	<files>
+		<filename plugin="jma_tjlms_displayusers">jma_tjlms_displayusers.php</filename>
+		<folder>jma_tjlms_displayusers</folder>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="language/en-GB">
+		<language tag="en-GB">en-GB.plg_emailalerts_jma_tjlms_displayusers.ini</language>
+		<language tag="en-GB">en-GB.plg_emailalerts_jma_tjlms_displayusers.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field 
+					name="plugintitle" 
+					type="text" 
+					default="PLG_EMAILALERTS_JMA_TJLMS_DISPLAYUSERS_TRANSLATABLE_PLUGIN_TITLE" 
+					label="PLG_EMAILALERTS_JMA_TJLMS_DISPLAYUSERS_PLUGIN_TITLE_LBL" 
+					description="PLG_EMAILALERTS_JMA_TJLMS_DISPLAYUSERS_PLUGIN_TITLE_DESC" />
+				<field
+					name="show_recent_completions_users"
+					type="radio"
+					default="1"
+					label="PLG_JMA_CD_SHOW_RECENT_COMPLETIONS_COURSES_LBL"
+					description="PLG_JMA_CD_SHOW_RECENT_COMPLETIONS_COURSES_DESC"
+					class="radio btn-group btn-group-yesno" >
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="no_of_recent_completions_users"
+					type="text"
+					default="3"
+					class="required validate-numeric inputbox"
+					label="PLG_JMA_CD_RECENT_COMPLETIONS_NO_OF_COURSES_LBL"
+					description="PLG_JMA_CD_RECENT_COMPLETIONS_NO_OF_COURSES_DESC" />
+			</fieldset>
+			<fieldset name="legacy" label="PLG_JMA_CD_USER_PARAMS">
+				<field
+					name="show_recent_completions_users"
+					type="radio"
+					default="1"
+					label="PLG_JMA_CD_SHOW_RECENT_COMPLETIONS_COURSES_LBL"
+					description="PLG_JMA_CD_SHOW_RECENT_COMPLETIONS_COURSES_DESC"
+					class="radio btn-group btn-group-yesno" >
+						<option value="1">JYES</option>
+						<option value="0">JNO</option>
+					</field>
+					<field
+					name="no_of_recent_completions_users"
+					type="text"
+					default="3"
+					class="required validate-numeric inputbox"
+					label="PLG_JMA_CD_RECENT_COMPLETIONS_NO_OF_COURSES_LBL"
+					description="PLG_JMA_CD_RECENT_COMPLETIONS_NO_OF_COURSES_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

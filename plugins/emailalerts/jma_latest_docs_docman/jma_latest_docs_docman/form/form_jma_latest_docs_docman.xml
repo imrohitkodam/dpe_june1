@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="jma_latest_docs_docman">
+		<fieldset name="legacy" addfieldpath="/plugins/emailalerts/jma_latest_docs_docman/jma_latest_docs_docman/element/joomla16">
+			<field name="catid" type="jmadocscategories" label="PLG_LATEST_DOCS_DOCMAN_LBL_CATEGORY" element="jma_latest_doc_docman" multiple="multiple" description="PLG_LATEST_DOCS_DOCMAN_DESC_CATEGORY" key_field='id' value_field='title' />
+			<field name="no_of_docs" type="text" default="5" class="required validate-numeric" label="PLG_LATEST_DOCS_DOCMAN_LBL_COUNT" description="PLG_LATEST_DOCS_DOCMAN_DESC_COUNT" />
+		</fieldset>
+	</fields>
+</form>

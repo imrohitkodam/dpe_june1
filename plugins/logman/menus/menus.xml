@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="3.0" group="logman" method="upgrade" overwrite="true">
+    <identifier>plg:logman.menus</identifier>
+    <name>plg_logman_menus</name>
+    <author>Joomlatools</author>
+    <creationDate>March 2025</creationDate>
+    <copyright>Copyright (C) 2011 Timble CVBA (http://www.timble.net)</copyright>
+    <license>GNU GPLv3 - http://www.gnu.org/licenses/gpl.html</license>
+    <authorEmail>support@joomlatools.com</authorEmail>
+    <authorUrl>www.joomlatools.com</authorUrl>
+    <version>6.0.0</version>
+    <description>PLG_LOGMAN_MENUS_DESC</description>
+
+    <files>
+        <filename plugin="menus">menus.php</filename>
+        <folder>activity</folder>
+        <folder>language</folder>
+    </files>
+
+    <config>
+        <fields name="params" />
+    </config>
+
+    <resources>
+        <resource name="item">
+            <actions>
+                <action>add</action>
+                <action>edit</action>
+                <action>delete</action>
+            </actions>
+        </resource>
+        <resource name="menu">
+            <actions>
+                <action>add</action>
+                <action>edit</action>
+                <action>delete</action>
+            </actions>
+        </resource>
+    </resources>
+</extension>

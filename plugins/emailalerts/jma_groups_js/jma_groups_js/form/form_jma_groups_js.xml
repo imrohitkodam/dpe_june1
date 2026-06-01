@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="jma_groups_js">
+		<fieldset name="legacy">
+			<field name="catid" type="sql" default="1" label="PLG_JMA_G_LBL_CATEGORY" query="SELECT id , name FROM #__community_groups_category" key_field='id' value_field='name' multiple="multiple" description="PLG_JMA_G_DESC_CATEGORY" />
+			<field name="no_of_users" type="text" default="5" class="required validate-numeric inputbox" label="PLG_JMA_G_LBL_COUNT" description="PLG_JMA_G_DESC_COUNT" />
+		</fieldset>
+	</fields>
+</form>

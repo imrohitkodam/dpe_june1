@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+	<name>MOD_LMS_TAG_LESSONS</name>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>Copyright (C) 2014 - 2023 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<creationDate>13th Feb 2020</creationDate>
+	<version>1.0.0</version>
+	<description>MOD_LMS_TAG_LESSONS_DESC</description>
+
+	<files>
+		<filename module="mod_lms_taglessons">mod_lms_taglessons.php</filename>
+		<filename>mod_lms_taglessons.xml</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl</folder>
+		<folder>js</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_lms_taglessons.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_lms_taglessons.sys.ini</language>
+	</languages>
+
+	<config name="params">
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="limit"
+					type="text" default="0"
+					label="MOD_LMS_TAG_LESSONS_LIMIT"
+					description="MOD_LMS_TAG_LESSONS_FETCH_LIMIT_DESC"
+				/>
+
+				<field
+					name="displayLimit"
+					type="text"
+					default="4"
+					label="MOD_LMS_TAG_LESSONS_DISPLAY_LIMIT"
+					description="MOD_LMS_TAG_LESSONS_DISPLAY_LIMIT_DESC"
+				/>
+
+
+				<field
+					name="lesson_category"
+					type="category"
+					default="0"
+					label="MOD_LMS_TAG_LESSONS_CATEGORY"
+					multiple="true"
+					description="MOD_LMS_TAG_LESSONS_CATEGORY_DESC"
+					key_field='id'
+					value_field='title'
+					extension="com_tjlms.lessons"
+				/>
+				<field
+					name="tags"
+					type="tag"
+					label="JTAG"
+					description="JTAG_DESC"
+					class="inputbox span4"
+					multiple="true"
+				/>
+			</fieldset>
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

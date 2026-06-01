@@ -1,0 +1,77 @@
+/* Content Slider */
+.tj-contentslider {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	position: relative;
+}
+
+#tj-contentsliderwrap div.moduletable {
+	margin: 0;
+	padding: 0 ;
+}
+
+/* Content Slider Center */
+.tj-contentslider-center {
+	margin: 0 auto !important;
+	padding: 0;
+	position:relative;
+	max-width:100%;
+}
+
+.tj-contentslider-center div.tjlmspin {
+    box-sizing: border-box;
+}
+
+.tj-contentslider-center div.tj-image-holder {
+	background: #f5f5f5;
+	border: 1px solid #ddd;
+	margin: 0;
+	padding: 3px;
+}
+
+.tj-contentslider-left,
+.tj-contentslider-right {
+	position: absolute;
+	height: 35px;
+	width: 16px;
+	top: 50%;
+	z-index:2;
+	transform: translate(-50%,-50%);
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 36px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    moz-osx-font-smoothing: grayscale;
+    text-align:center;
+    vertical-align:middle;
+}
+.tj-contentslider-left{
+	left:13px;
+}
+.tj-contentslider-left:before{
+	content: "\f104";
+}
+.tj-contentslider-right{
+	right:-5px;
+}
+.tj-contentslider-right:before{
+	content: "\f105";
+}
+
+.tj-contentslider-right:hover,
+.tj-contentslider-left:hover {
+	cursor: pointer;
+	color:#999;
+}
+.coursesModule{
+	position:relative;
+	display: block;
+}
+.tj-contentslider-center-wrap{
+	margin: 0px auto;
+	width: calc(100% - 54px);
+}
+.jsslide .tjlmspin__price {
+	right: 10px;
+}

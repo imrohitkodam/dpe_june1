@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="3.0" group="logman" method="upgrade" overwrite="true">
+    <identifier>plg:logman.notifier</identifier>
+    <name>plg_logman_notifier</name>
+    <author>Joomlatools</author>
+    <creationDate>March 2025</creationDate>
+    <copyright>Copyright (C) 2011 Timble CVBA (http://www.timble.net)</copyright>
+    <license>GNU GPLv3 - http://www.gnu.org/licenses/gpl.html</license>
+    <authorEmail>support@joomlatools.com</authorEmail>
+    <authorUrl>www.joomlatools.com</authorUrl>
+    <version>6.0.0</version>
+    <description>PLG_LOGMAN_NOTIFIER_DESC</description>
+
+    <files>
+        <filename plugin="notifier">notifier.php</filename>
+        <filename>email.php</filename>
+        <folder>language</folder>
+        <folder>html</folder>
+    </files>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic" addfieldpath="administrator/components/com_logman/forms/fields">
+                <field name="recipients" type="logmanrecipients" label="RECIPIENTS" description="RECIPIENTS_DESC"/>
+                <field name="usergroups" type="logmanusergroups" label="NOTIFY_USERGROUPS" description="NOTIFY_USERGROUPS_DESC" multiple="true" deselect="true" />
+                <field name="notify_userlog_actions" type="radio" class="btn-group" label="NOTIFY_USERLOG_ACTIONS" default="1" description="NOTIFY_USERLOG_ACTIONS_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="notify_page_views" type="radio" class="btn-group" label="NOTIFY_PAGE_VIEWS" default="0" description="NOTIFY_PAGE_VIEWS_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="html" type="radio" class="btn-group" default="1" label="HTML" description="HTML_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="packages_actions" type="logmanpackagesactions" label="NOTIFY_PACKAGES_ACTIONS" description="NOTIFY_PACKAGES_ACTIONS_DESC" />
+            </fieldset>
+        </fields>
+    </config>
+
+    <plugin type="notifier"/>
+</extension>

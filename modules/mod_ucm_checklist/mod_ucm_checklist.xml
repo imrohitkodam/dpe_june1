@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>mod_ucm_checklist</name>
+	<author>Techjoomla</author>
+	<creationDate>September 2019</creationDate>
+	<copyright>Copyright (C) 2009 - 2019 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>contact@techjoomla.com</authorEmail>
+	<authorUrl>techjoomla.com</authorUrl>
+	<version>1.0.0</version>
+	<description>MOD_UCM_CHECKLIST_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_ucm_checklist">mod_ucm_checklist.php</filename>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_ucm_checklist.ini</language>
+		<language tag="en-GB">en-GB.mod_ucm_checklist.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+		<fieldset name="basic">
+				<field name="ucm_type" 
+			type="sql" 
+			default="10" 
+			label="MOD_UCM_CHECKLIST_SELECT_UCM_TYPE" 
+			required="true" 
+			query="SELECT unique_identifier as id, title FROM #__tj_ucm_types WHERE state=1 order by title asc" 
+			key_field="id" 
+			value_field="title">
+			<option value="">MOD_UCM_CHECKLIST_SELECT_TYPE_OPTION</option>
+			</field>
+		</fieldset>
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC"
+				/>
+				<field
+					name="moduleclass_sfx"
+					type="textarea"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+					rows="3"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+
+</extension>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="emailalerts" method="upgrade">
+	<name>plg_emailalerts_jma_latest_docs_docman</name>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>Copyright (c) 2009-2018 Techjoomla. All rights reserved.</copyright>
+	<creationDate>21st Sept 2018</creationDate>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>2.6.0</version>
+	<description>PLG_EMAILALERTS_JMA_LATEST_DOCS_DOCMAN_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="jma_latest_docs_docman">jma_latest_docs_docman.php</filename>
+		<folder>jma_latest_docs_docman</folder>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="language/en-GB">
+		<language tag="en-GB">en-GB.plg_emailalerts_jma_latest_docs_docman.ini</language>
+		<language tag="en-GB">en-GB.plg_emailalerts_jma_latest_docs_docman.sys.ini</language>
+	</languages>
+	<config name="params">
+		<fields name="params">
+			<fieldset name="basic" label="Plugin Parameters">
+				<field name="plugintitle" type="text" default="PLG_EMAILALERTS_JMA_LATEST_DOCS_DOCMAN_TRANSLATABLE_PLUGIN_TITLE" label="PLG_LATEST_DOCS_DOCMAN_LBL_PLUGIN_TITLE" description="PLG_LATEST_DOCS_DOCMAN_DESC_PLUGIN_TITLE" />
+				<field name="show_table_headings" type="radio" default="1" label="PLG_LATEST_DOCS_DOCMAN_LBL_SHOW_TH" description="PLG_LATEST_DOCS_DOCMAN_DESC_SHOW_TH" class="radio btn-group btn-group-yesno">
+					<option value="1">PLG_LATEST_DOCS_DOCMAN_YES</option>
+					<option value="0">PLG_LATEST_DOCS_DOCMAN_NO</option>
+				</field>
+				<field name="show_category" type="radio" default="1" label="PLG_LATEST_DOCS_DOCMAN_LBL_SHOW_CATEGORY" description="PLG_LATEST_DOCS_DOCMAN_DESC_SHOW_CATEGORY" class="radio btn-group btn-group-yesno">
+					<option value="1">PLG_LATEST_DOCS_DOCMAN_YES</option>
+					<option value="0">PLG_LATEST_DOCS_DOCMAN_NO</option>
+				</field>
+				<!--
+				<field name="show_parent_category" type="radio" default="1" label="PLG_LATEST_DOCS_DOCMAN_LBL_SHOW_PARENT_CATEGORY" description="PLG_LATEST_DOCS_DOCMAN_DESC_SHOW_PARENT_CATEGORY" class="radio btn-group btn-group-yesno">
+					<option value="1">PLG_LATEST_DOCS_DOCMAN_YES</option>
+					<option value="0">PLG_LATEST_DOCS_DOCMAN_NO</option>
+				</field>
+				-->
+				<field name="show_date" type="radio" default="1" label="PLG_LATEST_DOCS_DOCMAN_LBL_SHOW_DATE" description="PLG_LATEST_DOCS_DOCMAN_DESC_SHOW_DATE" class="radio btn-group btn-group-yesno">
+					<option value="1">PLG_LATEST_DOCS_DOCMAN_YES</option>
+					<option value="0">PLG_LATEST_DOCS_DOCMAN_NO</option>
+				</field>
+				<field name="category" type="sql" default="1" label="PLG_LATEST_DOCS_DOCMAN_ALLOWED_CATEGORY_LBL" query="SELECT docman_category_id AS id, title FROM #__docman_categories WHERE enabled=1" key_field='id' value_field='title' multiple="multiple" description="PLG_LATEST_DOCS_DOCMAN_ALLOWED_CATEGORY_DESC" />
+			</fieldset>
+			<fieldset name="legacy" label="PLG_JMA_LATEST_DOCS_DOCMAN_USER_PARAMS" addfieldpath="/plugins/emailalerts/jma_latest_docs_docman/jma_latest_docs_docman/element/joomla16">
+				<field name="catid" type="jmadocscategories" label="PLG_LATEST_DOCS_DOCMAN_LBL_CATEGORY" element="jma_latest_doc_docman" multiple="multiple" description="PLG_LATEST_DOCS_DOCMAN_DESC_CATEGORY" key_field='id' value_field='title' />
+				<field name="no_of_docs" type="text" default="5" class="required validate-numeric" label="PLG_LATEST_DOCS_DOCMAN_LBL_COUNT" description="PLG_LATEST_DOCS_DOCMAN_DESC_COUNT" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

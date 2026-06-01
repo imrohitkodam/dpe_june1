@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0"  type="plugin" group="system" method="upgrade">
+	<name>PLG_SYSTEM_ADDTODO</name>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>Copyright (C) 2014 - 2022 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<creationDate>15th Oct 2022</creationDate>
+	<version>1.0.0</version>
+
+	<description>PLG_SYSTEM_ADDTODO_DESCRIPTION</description>
+
+	<files>
+		<filename plugin="dpeaddtodo">dpeaddtodo.php</filename>
+		<filename>addtodo.js</filename>
+	</files>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_system_addtodo.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_system_addtodo.sys.ini</language>
+	</languages>
+</extension>

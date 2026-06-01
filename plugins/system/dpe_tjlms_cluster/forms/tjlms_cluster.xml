@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<form>
+		<fieldset name="cluster_params" >
+		<field name="cluster_id" type="cluster"
+			addfieldpath="/administrator/components/com_tjfields/models/fields"
+			required="true"
+			multiple='true'
+			filter="int"
+			label="COM_TJLMS_LESSON_FORM_LBL_CLUSTER,COM_MULTIAGENCY_ORGANISATION"
+			description="COM_TJLMS_LESSON_FORM_LBL_CLUSTER_DESC,COM_MULTIAGENCY_ORGANISATION"
+			class="w-100"
+		/>
+		</fieldset>
+	</form>

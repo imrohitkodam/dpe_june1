@@ -1,0 +1,119 @@
+.progress-pie-chart {
+	width:110px;
+	height: 110px;
+	border-radius: 50%;
+	background-color: #E5E5E5;
+	position: relative;
+}
+
+.ppc-progress {
+	content: "";
+	position: absolute;
+	border-radius: 50%;
+	left: calc(50% - 55px);
+	top: calc(50% - 55px);
+	width: 110px;
+	height: 110px;
+	clip: rect(0, 110px, 110px, 55px);
+}
+.ppc-progress .ppc-progress-fill {
+	content: "";
+	position: absolute;
+	border-radius: 50%;
+	left: calc(50% - 55px);
+	top: calc(50% - 55px);
+	width: 110px;
+	height: 110px;
+	clip: rect(0, 55px, 110px, 0px);
+	transform: rotate(60deg);
+	transition-duration: 2s;
+}
+
+.progressDiv .gt-50 .ppc-progress-fill {
+	background-color: #E5E5E5;
+}
+
+.gt-50 .ppc-progress {
+	clip: rect(0, 55px, 110px, 0);
+}
+.gt-50 .ppc-progress .ppc-progress-fill {
+	clip: rect(0, 110px, 110px, 55px);
+}
+
+.ppc-percents {
+	content: "";
+	position: absolute;
+	border-radius: 50%;
+	margin-left: 5px;
+	margin-top: 4px;
+	width: 100.91304px;
+	height: 100.91304px;
+	background: #FFF;
+	text-align: center;
+	display: table;
+}
+
+.ppc-percents span {
+	display: block;
+	font-size: 1.6em;
+	font-weight: bold;
+}
+
+.pcc-percents-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.progress-pie-chart {
+  margin: 10px auto 10px;
+}
+
+.gt-50 .ppc-progress-fill {
+	background-color: #E5E5E5;
+	}
+
+.chart-label {
+    text-align:center;
+    font-size: large;
+    font-weight: bolder;
+}
+
+.chart-sent-percent {
+    color: rgb(26, 188, 156);
+}
+
+.chart-opened-percent {
+    color: rgb(249, 191, 59);
+}
+
+.chart-clicked-percent {
+    color: rgb(243, 156, 18);
+}
+
+.chart-submitted-percent {
+    color: rgb(240, 91, 79);
+}
+
+.chart-reported-percent {
+    color: rgb(69, 214, 239);
+}
+
+.progress-pie-chart-sent.gt-50, .ppc-progress-fill-sent{
+	background-color: rgb(26, 188, 156);
+}
+
+.progress-pie-chart-opened.gt-50, .ppc-progress-fill-opened {
+	background-color: rgb(249, 191, 59);
+}
+
+.progress-pie-chart-clicked.gt-50, .ppc-progress-fill-clicked {
+	background-color: rgb(243, 156, 18);
+}
+
+.progress-pie-chart-submitted.gt-50, .ppc-progress-fill-submitted {
+	background-color: rgb(240, 91, 79);
+}
+
+.progress-pie-chart-reported.gt-50, .ppc-progress-fill-reported {
+	background-color: rgb(69, 214, 239);
+}

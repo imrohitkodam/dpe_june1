@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="ajax" method="upgrade">
+	<name>PLG_AJAX_COOKIESPOLICYNOTIFICATIONBAR</name>
+	<author>Web357 (Yiannis Christodoulou)</author>
+	<creationDate>26 Nov 2020</creationDate>
+	<copyright>Copyright (C) 2009-2020 Web357. All rights reserved.</copyright>
+	<license>GNU/GPLv3, http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<authorEmail>support@web357.com</authorEmail>
+	<authorUrl>https://www.web357.com/</authorUrl>
+	<version>4.0.0</version>
+	<description>A beautiful and functional EU Cookie Law Compliance Joomla! Plugin that provides a mechanism for informing your visitors about how you use cookies on your website in an elegant manner. It includes a variety of features and parameters (responsive, multilingual, block cookies, change style, etc.). This Joomla! plugin is ready for the GDPR Compliance which has been already implemented on ‎25 May 2018.</description>
+
+	<files>
+		<folder>language</folder>
+		<filename plugin="cookiespolicynotificationbar">cookiespolicynotificationbar.php</filename>
+		<filename>index.html</filename>
+		<filename>script.install.helper.php</filename>
+	</files>
+
+	<scriptfile>script.install.php</scriptfile>
+
+	<updateservers><server type="extension" priority="1" name="Cookies Policy Notification Bar (pro version)"><![CDATA[https://updates.web357.com/cookiespolicynotificationbar/cookiespolicynotificationbar_pro.xml]]></server></updateservers>
+
+</extension>

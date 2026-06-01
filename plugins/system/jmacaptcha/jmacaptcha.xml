@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="system" method="upgrade">
+	<name>System - JmaCaptcha</name>
+	<author>Antigravity</author>
+	<creationDate>April 2026</creationDate>
+	<copyright>(C) 2026</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>antigravity@example.com</authorEmail>
+	<authorUrl>example.com</authorUrl>
+	<version>1.0.0</version>
+	<description>Adds reCAPTCHA to JMailAlerts guest subscription form.</description>
+	<files>
+		<filename plugin="jmacaptcha">jmacaptcha.php</filename>
+		<folder>services</folder>
+		<folder>en-GB</folder>
+	</files>
+	<languages folder="en-GB">
+		<language tag="en-GB">en-GB.plg_system_jmacaptcha.ini</language>
+		<language tag="en-GB">en-GB.plg_system_jmacaptcha.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="hcaptcha_site_key"
+					type="text"
+					label="PLG_SYSTEM_JMACAPTCHA_HCAPTCHA_SITE_KEY_LABEL"
+					description="PLG_SYSTEM_JMACAPTCHA_HCAPTCHA_SITE_KEY_DESC"
+					required="true"
+				/>
+				<field
+					name="hcaptcha_secret_key"
+					type="text"
+					label="PLG_SYSTEM_JMACAPTCHA_HCAPTCHA_SECRET_KEY_LABEL"
+					description="PLG_SYSTEM_JMACAPTCHA_HCAPTCHA_SECRET_KEY_DESC"
+					required="true"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

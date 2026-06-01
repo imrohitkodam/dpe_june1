@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset>
+        <field name="cookie_status" type="list" class="btn-group btn-group-yesno" default="1" label="JSTATUS">
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+        </field>
+        <field name="cookie_name" type="text" label="PLG_SYSTEM_CPNB_COOKIE_NAME" />
+
+        <field name="cookie_expiration_time_value" type="integer" default="30" label="PLG_SYSTEM_CPNB_COOKIE_EXPIRATION_TIME_VALUE" description="" first="1" last="365" step="1" />
+
+        <field name="cookie_expiration_time_txt" type="list" default="day" label="PLG_SYSTEM_CPNB_COOKIE_EXPIRATION_TIME_TXT">
+            <option value="minute">PLG_SYSTEM_CPNB_MINUTES_DEFAULT_TEXT</option>
+            <option value="hour">PLG_SYSTEM_CPNB_HOURS_DEFAULT_TEXT</option>
+            <option value="day">PLG_SYSTEM_CPNB_DAYS_DEFAULT_TEXT</option>
+            <option value="month">PLG_SYSTEM_CPNB_MONTHS_DEFAULT_TEXT</option>
+            <option value="year">PLG_SYSTEM_CPNB_YEARS_DEFAULT_TEXT</option>
+        </field>
+
+        <field name="cookie_description" type="textarea" default="" label="PLG_SYSTEM_CPNB_COOKIE_DESCRIPTION" rows="6" cols="50" width="100%" filter="raw" />
+    </fieldset>
+</form>

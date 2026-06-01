@@ -1,0 +1,561 @@
+<!DOCTYPE HTML><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Cookies Policy Notification Bar v4.0.0 - Changelog</title></head><body><div class="uk-modal-header"><h2 id="cookiespolicynotificationbar">Cookies Policy Notification Bar v4.0.0 - Changelog</h2></div><span style="display:none">4.0.0</span><pre>+ Added   ! Removed   ^ Changed   # Fixed
+
+26-Nov-2020 : v4.0.0
++ [J4 ready] Fully compatible with Joomla! 4.x. Almost, all the parameters in the backend works properly.
++ [New Feature] Compatible with the Web357 Licenses Key Manager (https://bit.ly/web357-license-key-manager)
++ [Improvement] Compatible with the latest version 1.8.0 of Web357 Framework.
+^ [Improvement] By running Google Lighthouse test, we found a problem: the cpnb_outter, cpnb_inner and cpnb-modal-close ids are used twice in the rendered page while id attributes should be unique on a page. [Many thanks to Giussepe Covino]
+^ [Improvement] When a user entering the site on DE language, declines all cookies, change to UK. The next time the user entered the site they get send back to the DE site. The required-session cookies from core Language Filter system plugin are now ignored. [Many thanks to Esben Laursen]
+^ [Improvement] The "cpnb-cookies-manager-icon-1-64x64.png" icon is in the plugins folder, but since typically that this folder is forbidden by robots.txt, crawlers cannot download that icon, so the icon has been moved into the media folder. [Thank you, Giuse Covino]
+^ [Improvement] Add validation patterns for expiration time of cookies in the plugin parameters at Joomla! backend. (e.g. ^([1-9])[\d]{0,3}$) You can enter only digits from 1 day up to 999 days.
+^ [Improvement] In the language files all the "_QQ_" strings, have been replaced with a single quote.
+^ [Improvement] The JFactory::getLanguage()->getKnownLanguages(); has been replaced with LanguageHelper::getKnownLanguages(JPATH_SITE);
+^ [Style Improvement] Fix "lock overlay" z-index to avoid clicking on menu items. [Thank you, Matthias Rost]
+# [Bug Fixed] Some issues with templates that has a sticky menu and place the notification bar at the top, are now resolved. [Thank you, Schöffel Tobias]
+# [Bug Fixed] Installation issues after installing the plugin on a clean Joomla! 4.0.0-alpha-12 installation.
+# Minor fixes, code cleanup and improvements.
+
+12-May-2020 : v3.9.1
+# [Bug Fixed] When you click the "Accept" button on Internet Explorer 11, nothing happens. [Thank you, Joachim Kroener]
+# [Bug fixed] PHP Notice: Undefined index: cpnb_cookiesSettings in /cookiespolicynotificationbar.php on line 1009.
+^ [Improvement] If the user has not accepted the cookies policy, block the NID google's cookie which is loaded by the Joomla! core plugin "plg_captcha_recaptcha_invisible" [Thank you, Alexander]
+# [Bug Fixed] An issue in the templates section on the Yootheme PRO builder has been resolved. [Thank you, Gauliard Cathy]
+
+06-Mar-2020 : v3.9.0
++ [New Feature] Admins are able to see which categories are accepted by the users via the acceptance logs in the plugin settings.
++ [New Feature] Confirmation alerts for each button separately. In "Base Settings" you can see a new section of parameters "Confirmation Alerts", for the "Accept", for the "Decline", and for the "Delete" button.
++ [New Feature] Restore the plugin settings to the defaults. All the settings will be replaced by the default plugin settings.
++ [New Feature] The cookie expiration has been splitted in two variables, the datetime and the text. Now, if you are using the shortcode functionality to display the cookies info table, you can choose the Cookie expiration (count), and the cookie Expiration (text) (for example, 30 days, or 1 year, or 2 years, etc.)
++ [New Parameter fields] You can now translate the expiration text values in the shortcode info table. You can do this from the "Texts for Languages" tab, for each language separately. There is a new field for each of these strings (minute, minutes, hour, hours, day, days, month, months, year, years).
++ [New Feature] Add a class attribute for each button separately (accept, decline, cancel, more info, settings, save, reload), where these are displayed on the cookies notification bar, on the cookies manager (modal window) and in the cookies info table (shortcode). There are 11 buttons in total.
+# [New Feature] Because of some European countries, for example, Italy, a new parameter field has been created to set the days of the expiration date of the cookie "cpnb_cookiesSettings".
+# [New Feature] Trigger events are now available for each function separately. You can do something after clicking on the accept, on the decline, or on the cancel button. https://docs.web357.com/article/52-trigger-events
++ [New Feature] The "Include or Exclude from Pages" functionality, in Advanced Settings, has been separated in two parameter sections. The "Show Notification Bar" and the "Plugin's Functionality". With the first parameter you can show/hide the notification bar from specific pages, and with the second you can enable/disable the whole plugin's functionality (notification bar, cookies manager modal window and cookies info table - shortcode functionality), from specific pages. [Thank you, Giuseppe Covino]
+^ [SEO Improvement] Some links are indexed automatically by search engine robots (e.g. Google, Bing, Baidu, Yandex, etc.). To avoid this situation we have add the attribute rel="nofollow" to all the button links. [Thank you, Piero Pavan]
+^ [Style improvement] The checkbox style has been replaced by the classic checkbox style.
+^ [Language updated] The French language files have been updated. Many thanks to Sandra Decoux (sandra@idimweb.com) for her contribution.
+# [Bug Fixed] Detect the total of enabled cookie categories and if there are more than one, then create the "cpnb_cookiesSettings" cookie. If there is only one category (e.g. the "required-cookies"), do not create the "cpnb_cookiesSettings" cookie, to help you passing the Cookiebot validation service.
+# [Bug Fixed] after accept check all checkboxes asynchronously. Not reload needed as before.
+# [Bug Fixed] In the "Block Cookies by blocking their Javascript Code" parameters section it is not possible to have no one item.
+# Minor improvements and code cleanup.
+
+13-Jan-2020 : v3.8.3
++ [New parameter] Show or Hide the Cookies Manager (Modal Window) to the Logged in Users.
+# [Improvement] Do not load the cookie name "cpnb_cookiesSettings" by default, but set enable only the required cookie category if the setting cookie is not initially loaded. This improvement has been added to pass the cookiebot service. Learn more here: http://bit.ly/pass-cookiebot-validation-in-joomla
+# [Bug Fixed] Do not delete the allowed forced cookies if you click on the "Decline" button, inside the Cookies Manager (modal window) [Many thanks to Alexis Kourkoulos]
+# Minor fixes and improvements.
+
+06-Sep-2019 : v3.8.2
++ [New feature] Force allow cookies. Sometimes we need to ensure that all the required cookies will be loaded successfully even if the user has declined the cookies policy. For this reason and only we are now able to force allow some cookies by adding the cookie names in the new parameter field. More info: http://bit.ly/cpnb-force-alow-cookies
+# [Bug Fixed] Do not display the cookie manager icon in iframes.
+# [Bug Fixed] Display the cookie expiration in the cookies info table if a cookie name is a regex.
+^ [SEO Improvement] Missing ALT attribute to the image of the Cookies Manager (the one displayed on bottom-left corner).
+# Minor bug fixes and code improvements.
+
+13-May-2019 : v3.8.1
+# [Bug Fixed] Errors after upgrading to Yootheme PRO builder v1.19.x. Session cookies should not be blocked during editing Yootheme PRO Builder articles/pages. [Thank you, Hervé Palmier]
+
+10-Apr-2019 : v3.8.0
+# [Bug Fixed] If the cookie category has been selected by admin as "checked by default" for loading the cookies in the first time visit, the javascript code should not be blocked if the user does not accept. This issue only affects when you are using the <cpnb> tags in your template files.
+# [Bug Fixed] If you are using the <cpnb> tags for specific categories, (for example: <cpnb data-cpnb-cookie-category-id="analytical-cookies">...</cpnb>), in your template (.php) files, there is an error with the closing tag </cpnb>. [Many thanks to Alvaro]
+# [Bug Fixed] Sessions should not be blocked during editing an article/page through the Yootheme PRO page Builder. [Thank you, Stefanie Krause]
+^ [Language Files] All the language files have been updated with all the new strings of latest parameters. (da-DK, de-DE, el-GR, en-GB, fr-FR, it-IT, nl-NL, ru-RU).
+
+14-Mar-2019 : v3.7.9
+# [Bug Fixed] If the parameter "Include/Exclude from Pages" is enabled, kill the plugin from any excluded page.
+
+28-Feb-2019 : v3.7.8
++ [New Parameter] Show/Hide the Cookies Manager (Modal Window) only in specific pages. [Many thanks to Alvaro]
+^ [Improvement] The parameter "Categories of Cookies" is now available for modifications even if the Cookies Manager (Modal Window) is disabled.
+# [Bug Fixed] An issue with com_mijoshop cart has been resolved.
+^ [Improvement] The cache of mojishop will now be deleted after deleting/disabling cookies. [Thank you, Toni, from Idilicstudio S.L]
+! [Deleted files] A few unnecessary files from GeoIP2 Web Service directory have been removed.
+
+14-Feb-2019 : v3.7.7
+# [Bug Fixed] The "Import Parameters" button is working again.
+# [Bug Fixed] PHP Notice: Undefined property: plgSystemCookiesPolicyNotificationBar::$current_url in cookiespolicynotificationbar.php on line 1883 [Thank you, Alexander Schuch]
+
+07-Feb-2019 : v3.7.6
+# [Bug Fixed] Parse error: syntax error, unexpected in script.helper.php on line 59. [Joomla! 2.5.x].
+^ [Styling Improvement] Fix checkbox label height in the Cookies Manager (modal window).
+
+15-Jan-2019 : v3.7.5
+# [Bug Fixed] The "Accept" button is not working if the "Cookies Manager (Modal Window) functionality" is disabled. [Thank you, Laurent GARIN]
+
+15-Jan-2019 : v3.7.4
++ [New Parameter] Hide the notification bar after X seconds. The notification bar will disappear after X seconds. If you choose the 'Always Display' option, the notification bar will be displayed until the visitor clicks on an action button (Accept, Decline or Cancel). [Thank you, Vivi]
+# [Bug Fixed] Do not renew the user session on each page load, after clicking on the "Cancel" button. This fix is for admins who use the Google Analytics service. [Thank you, Jean-Pierre DP]
+# [Bug Fixed] The "lib" folder was missing. The GeoIP2 Webservice works properly now. [Thank you, Douglas Gordon]
+# [Improvement] The cookie "cpnb_cookiessettings", will not be loaded anymore in the first-page load. It will be loaded only after a user action (after clicks on the action button, accept/decline/cancel). After this improvement, your website will be marked as compliant with the Cookiebot service.
+
+24-Dec-2018 : v3.7.3
+# [Bug Fixed] If you are in a subpage and reload the page after accept (base settings) it redirects to the homepage.
+
+17-Dec-2018 : v3.7.2
++ [New Feature] After Y pixels (e.g. 300)  of the scrolling from the top of the window, the plugin automatically accepts the cookies policy without any click needed. The notification bar is hidden automatically after reach the maximum height of scrolled pixels.
+^ [Improvement] To avoid conflicts with 3rd party plugins, load the modal behavior {JHtml::_('behavior.modal');} as a hidden field, instead globally in the web357 framework.
+# [Bug Fixed] When the notification bar is on the center of the page, and the parameters "Locked Overlay" and "Reload the page after accepting" are enabled, the body of the page stay locked after accept [Thank you, Marcin Nader]
+
+10-Dec-2018 : v3.7.1
+# [Bug Fixed] Acceptance logs not stored if the user clicks on the accept button, while is on an inner page.
+^ [Style Improvements] CSS fixes with "Center" position in small screens (smartphones).
+
+06-Dec-2018 : v3.7.0
++ [New Feature] The click method on the "Accept" button, is now working asynchronously, with the AJAX method. There a new parameter in Base Settings (tab): "Reload the page after accept". Choose if you want to reload the page after the User clicks on the accept button. This parameter is useful if you would like to load the blocked javascript code (e.g. Google Analytics) after the user accepts the cookies policy. This feature affects only the 'Accept' button, at the notification bar. It does not affect any other buttons in the notification bar (e.g. Declined or Cancel button), or other areas like the cookies info table (shortcode), or the cookies settings modal window. [Thank you, Dennis Lai]
++ [New Feature] The cookie "cpnb_cookiessettings" is now included in the cookies info table. This cookie is stored to check which categories of cookies are accepted or declined (e.g. Analytical Cookies, Targeted Advertising Cookies, etc.). Of course, you can change the description of this text in the plugin settings under the parameter (Cookies Settings description) in the "Texts for Languages" tab. [Many thanks to Fabrizio Magnoni]
++ [New Feature] The Google Tag Manager scripts are now supported by specifying the cookies category ID to the <cpnb /> attributes.  Example: &lt;cpnb data-cpnb-cookie-category-id="analytical-cookies"&gt;// script code goes here&lt;/cpnb&gt;
++ [New Parameter] Show the notification bar only in the selected Continents/countries. The notification bar will not be displayed in other continents/countries. Supported by the GeoIP2 Webservice.
++ [New Parameter] Hide the notification bar from the selected Continents/Countries. The notification bar and its javascript files will not be loaded at the front-end. Supported by the GeoIP2 Webservice.
+^ [Improvement] The "Enable confirmation alerts" parameter in Base Settings is now disabled by default.
+# Several improvements and minor bug fixes.
+
+11-Oct-2018 : v3.6.2
+# [Bug Fixed] The double quotes should be escaped in confirmation alert messages [Many thanks to Nikolay Armianov]
+
+28-Sep-2018 : v3.6.1
+^ [Improvement] The Regular Expressions are now allowed in "Cookie Names" of the section "Cookie Descriptions". Example: _ga[a-zA-Z0-9]*  Screenshot: https://goo.gl/M8wnhT [Many thanks to Kenneth C. Koppervik]
+# [Bug Fixed] Issues with special characters in confirmation alerts in the shortcode functionality have been resolved. [Many thanks to Cathy Gauliard]
+# [Bug Fixed] Do not display the Cookies Manager Icon if the Block Cookies functionality is disabled. [Thank you, Nico Dorfer]
+# [Bug Fixed] For those who use language overrides for the texts in the Cookies Manager (modal window), are not translated on each language, but only in the main language. [Many thanks to Idilicstudio S.L]
+# [Bug Fixed] The word "Categories" in the toggle menu of the Cookies Manager (modal window), for small devices, is now able to be translated in the language (.ini) files. [Thank you, Rob Bekke]
+^ [Improvement] The GDPR icon "cpnb-cookies-manager-icon-1-64x64.png" has been optimized via ImageRecycle. From 1.94 kilobytes to 777 bytes. [Thank you, Guillaume]
+^ [Improvement] The helpful screenshots in the plugin parameters have been optimized via ImageRecycle service.
+# [Bug Fixed] The "cpnb_method" variable will not be displayed anymore in the URL [Thank you, Yair Velasco]
+
+09-Aug-2018 : v3.6.0
++ Fully compatible with Joomla! 4.x
+^ [Improvement] Better display in responsive design for the Cookies Manager (modal window).
++ Compatible with the latest version of Web357 Framework v1.7.x
+^ Code Cleanup.
+# Minor bug fixes and many improvements.
+
+23-Jul-2018 : v3.5.5
+# [Bug Fixed] The break-lines are now stripped in confirmation alert messages because there were some JS errors in the console after clicking on buttons. [Thank you, Guillaume]
+# [Bug Fixed] Cannot read property 'addEventListener' of null.
+# [Bug Fixed] Error 500 The file: http://cdn.web357.com/web357-releases.json does not exist. All HTTP:// URLs have been replaced with HTPS://. {502 Bad Gateway nginx}. [Thank you, Ea]
+
+21-Jul-2018 : v3.5.4
++ [New Feature] A new parameter has been added to show or hide the "Ok, I've understood" button from the cookies notification bar. [Many thanks to Antonio Guerrero] 
++ [New Feature] If you would like to open the Cookies Manager (modal window) by another area now you can do it by clicking on a custom link, on a button or an image, using the ID attribute "cookies", or your custom hash link text from the plugin parameters.
+# [Bug Fixed] If the confirmation alert messages have single quotes, the action buttons (Ok, Decline, Cancel) are not working. [Thank you, Sebastien]
+# [Bug Fixed] Regardless the cookies declined after the initial consent or the user has not given his/her initial consent, the message remains the same "You have allowed website's cookies to be placed on your browser". [Many thanks to Websun Ltd]
+^ [Language Updated] The language files for the Dutch (Netherlands) (nl-NL) language has been updated. [Thank you, Jeroen van der Horst]
+^ [Improvement] The "Cookie Categories Group" should not be displayed in the plugin settings if the "the Cookies Manager (Modal Window) functionality" is disabled. [Many thanks to Idilicstudio S.L.]
+
+14-Jul-2018 : v3.5.3
++ [Improvement] Multilingual support for the Cookie Category Names and Descriptions in the Cookies Manager (modal window). [Thank you, Dorine Post] (Read this useful guide for more information and screenshots: https://www.web357.com/faq/cookies-policy-notification-bar/how-to-translate-the-cookie-categories-in-the-cookies-manager)
+# [Bug Fixed] If there is at least one unpublished Cookie Category there were some javascript errors in the console after clicking on the save settings button in the cookies manager modal window.
+
+14-Jul-2018 : v3.5.2
+# [Bug Fixed] Could not save the plugin settings. Error: 500 String could not be parsed as XML (in French language). [Thank you, Anne Cloutier]
+^ [Language Updated] The language files for the Dutch (Netherlands) (nl-NL) language has been updated. [Thank you, Jeroen van der Horst]
+# [Bug Fixed] If the shortcode {cookiesinfo} was in a K2 content item, there were some caching issues.
+# [Improvement] Four default cookie categories have been added by default, even if the Admin did not save yet the plugin parameters.
+# [CSS Styling] Take care of dark backgrounds. The text color in the modal window should be dark because of the light (white) background.
+# [CSS Bug Fixed] Fix the text-wrapping in cookies info table [Thank you, Andreas Farr]
+# [CSS Improvements] Fix some CSS issues to support a few "old-school" templates.
+^ [Improvement] After a lot of requests from our subscribers, the "Cookies Manager" functionality will be disabled until the Admin enables it from the plugin settings at the backend.
+# [Bug Fixed] If the User clicks on the Save button, at the Cookies Manager (modal window), should delete all cookies first and then reload them again.
+^ [Styling Improvements] The buttons of the Shortcode functionality, under the {cookiesinfo} table, have now the same styling as the buttons in the notification bar and the buttons in the modal windows.
+^ [Improvement] If the user has logged in, the user ID is now stored in the Acceptance/Declined Logs.
+! [Styling Improvements] The UIkit classes have been removed from the action buttons.
+
+13-Jul-2018 : v3.5.1
+# [Bug Fixed] Could not save the plugin settings. Error: 500 String could not be parsed as XML (Italian and German language). [Thank you, Alberto Paracchini]
+
+13-Jul-2018 : v3.5.0
++ [New Feature] The Cookies Manager functionality allow users to accept or decline specific categories of cookies. They have the full control of cookies now, and they can change their cookies preferences anytime.
++ [New Feature] Custom Cookies Categories (e.g. Strictly necessary, Analytical Cookies, Social Media, Targeted Advertising Cookies e.t.c.) for each Javascript Code you've added.
++ [New Feature] New button "Settings" in the notification bar. This button opens the Cookie Manager (Modal Window). From the plugin parameters, you will be able to change also the name and the colors of this button.
++ [New Feature] There is a new parameter field to upload your own custom cookies manager icon at the bottom left or bottom right of your website.
++ [New Feature] New styling position. The notification bar can now be displayed also in the center of your page.
++ [New Feature] There are two new parameters. 1) the "Locked Overlay" and the "Overlay Color". The body of the page is locked until the user Accepts or Declines.
+^ [Improvement] window.onload has been replaced with window.addEventListener('load'). [Thank you, Monique Clevis]
+^ [Improvement] There are new screenshots in the plugin parameters to help admins understood what each parameter does.
+# [Bug Fixed] Fix CSS padding issue with top-left position.
+# [Bug Fixed] Blank page with Fatal error: Call to undefined method JSite::isSSLConnection(). (only in Joomla! 2.5.x websites) [Thank you, Martin Freeman]
+^ [Language Files] The language files (da-DK, de-DE, el-GR, en-GB, fr-FR, it-IT, nl-NL, ru-RU) have been updated.
+! [Removed] The Ajax/jQuery functionality has been removed permanently.
+
+28-Jun-2018 : v3.4.5
++ [Backward Compatibility] The Cookies Notification Bar it works perfectly on Joomla! 2.5. A few lines of code have been added to continue supporting the Joomla! 2.5 because many of our Subscribers asked for.
+# [Bug Fixed] The parameter "enable Confirmation Alerts" is only displayed when Block Cookies is set to It should also be available when Block Cookies is set to No. The parameter should not be at the Block Cookies section. It has been moved to the Base Settings. [Thank you, Paul Hayward]
+^ [Improvement] The date format inside the XML has been changed. Now is displayed like this "DD MMM YYYY", instead of this "YYYY-MM-DD".
+
+27-Jun-2018 : v3.4.4
++ [New Styling Feature] A new parameter has been added (The notification bar covers the body of the page, in the Styling options). Choose if you want to allow the notification bar cover or not the body of the page.
++ [Improvement] Display the cookies info table (by the shortcode) even if there is only one cookie.
+# [Bug Fixed] Some caching issues have been resolved.
+# [Bug Fixed] The submenu items of some templates are not displayed properly.
+# [Bug Fixed] Could not save the plugin settings. Error: 500 String could not be parsed as XML.
+
+25-Jun-2018 : v3.4.3
++ [New Feature] A new parameter has been added to disable the jQuery/Ajax functionality. (You can disable this functionality if you've detected any conflicts with other jQuery libraries, or issues with Joomla! cache or any issues with speed optimized plugins like the JCH Optimize.)
++ [New Feature] Set Cookies expiration time for each cookie (Accept, Decline, Cancel).
++ [New Feature] A new parameter has been added to help admins easily Import/Export the plugin parameters.
++ [New Feature] New styling positions have been added (Top Left, Top Right, Bottom Left, Bottom Right).
+^ [Improvement] In the group of parameter "Cookie Descriptions", you can now set also the Expiration Time for each cookie separately.
++ [Improvement] The JS and CSS files are loaded as minified now.
+# [Bug Fixed] Some issues at the backend while editing a template via a template builder (like the Yootheme PRO builder) have been resolved now.
+# [Bug Fixed] If the User clicks on the Decline button inside the modal, the window should be closed.  
+# [Bug Fixed] Several issues with JCH Optimize plugin have been resolved successfully.
+^ [Updated] The language files have been updated.
+! [Removed] The line-height option has been removed from the plugin settings.
+! [Removed] The "Google fonts" parameter has been removed from the plugin settings.
+! [Removed] The "Language Migration Tool" is not needed anymore and has been removed.
+! [Removed] The "Clean cookies from Browser!" parameter has been removed because is not necessary anymore. We have to keep things more simple. You can use your browser to delete the cookies. 
+
+28-May-2018 : v3.4.2
+# [Bug Fixed] Could not save the plugin settings. Error: 500 String could not be parsed as XML. (Only with Italian Translation)
+
+28-May-2018 : v3.4.1
+# [Bug Fixed] 500 - Unknown column 'Array' in 'where clause'. [Thank you, Chuck Smith]
+^ [Improvement] Block all Joomla sessions by choosing "No" to the Allow Sessions parameter.
++ [Bug Fixed] Display the cookies info table asynchronously after the cookies deleted.
+^ [Improvement] Block all Joomla sessions by choosing "No" to the Allow Sessions parameter.
+# [Improvement] Get latest fonts from Google with all weights/variants [Many thanks to Gilles Migliori]
++ [Improvement] A JS helper for read/delete cookies has been added (jquery.cookie.js)
+! [Removed] The version jquery-1.8.3.min.js has been removed and replaced with Joomla's jQuery version JHtml::_('jquery.framework', false);
+^ [Updated] The Italian (it-IT) translation has been updated. New strings have been added [Thank you, Alberto Paracchini]
+
+21-May-2018 : v3.4.0
++ [New Feature] You can now control shortcode's content in any language without editing the .ini files. You have three text areas which you can change 1) The text BEFORE Accept/Decline, 2) The text AFTER Accept, 3) The text AFTER Decline.
++ [New Feature] You can use two new shortcodes in your custom texts. 1) The {cpnb_cookies_info_table} (Display a table of website's served cookies), and 2) {cpnb_buttons} (Display the Allow/Delete/Reload buttons)
++ [New Feature] More input texts in the plugin settings to take control of some strings in any language without editing the .ini files.
++ [New Feature] Block Cookies by blocking their Javascript Code (Advanced Settings tab). You can block the javascript code that uses cookies. Add the full javascript code in each textarea form field. The javascript code (with its cookies) will not be displayed in the page source if the user does not click on the accept button.
++ [New Feature] You can give descriptions for specific cookies. (For example, for the cookie "_ga" you can write this: "Used to collect Google Analytics data.").
++ [New Feature] Cancel Button has been added to the cookies notification bar. The 'Cancel' button just hides the notification bar and display the bar again on the next page after refresh. [Thank you, Michael Maass]
++ [New Feature] Instead of the "OK, I've understood" button in the modal popup window, now also displayed the "Decline" and the "Cancel" button. [Thanks, Michael Maass]
++ [New Feature] The "Always Display" functionality is back. The cookies notification bar will be displayed even if the user accepts or decline. This feature mostly used by admins in the first steps of setup and customizations.
+^ [Improvement] Always store acceptance/declined logs (in the database), not only if the "Block Cookies" parameter is enabled.
+^ [Improvement] If special characters are used in the text of notification bar and the "mbstring" and "iconv" PHP functions are missing, do not return any PHP errors. [Thank you, Antti Saarikoski]
+^ [Improvement] Do not load anything in the dom (HTML code, CSS inline code, JS code or files, etc.), if the plugin has selected to be hidden on the chosen page(s) from the plugin settings.
+^ [Improvement] The "cookiesDeclined" cookie is now displayed in the cookies info table. [Thank you, Sena Emilio]
+^ [Improvement] The "Delete Cookies" functionality in the schortcode, can now delete also the "cookiesDeclined" cookie. [Thank you, Sena Emilio]
+^ [Improvement] Display the notification bar again asynchronously, after the user clicks on the "Delete Cookies" button at the shortcode area.
+^ [Improvement] The shortcode parameters have been moved outside of the advanced settings (tab), and now have their own tab in the plugin settings.
+! [Removed] The "Display Accepted Cookies Table" parameter has been removed. Instead you can use the shortcode {cpnb_cookies_info_table}.
+# [Typo Error] Should be "Texts for Languages", not "Texts for Lanugages", in the blue box header at the plugin settings. [Thank you, Laurent Marcelin] 
+# [Bug Fixed] Warning: count(): Parameter must be an array or an object that implements Countable (only in PHP v7.2.x).
+# [Bug Fixed] The scrolling in modal is not displayed properly if we have a big list of logs (acceptance/declined) in the plugin settings.
+# [Bug Fixed] Some small issues that detected in the Joomla Debug Console have been resolved.
+^ [Updated] The German (de-DE) translation has been updated. [Many thanks to Michael Maass]
+^ [Updated] The Danish (da-DK) translation has been updated. New strings have been added [Thank you, Thomas Thrane]
+^ [Updated] The Italian (it-IT) translation has been updated. New strings have been added [Thank you, Alberto Paracchini]
+
+18-May-2018 : v3.3.8
++ NEW BUTTON: The "Decline" button has been added to the notification bar. And of course is multilingual like other buttons.
++ NEW PARAMETER: Hide cookies from the cookies table (comma separated). With this new parameter, you can hide some preferred cookies from the table. This option will not block the cookies from the browser, it just hiding them."
++ The German (de-DE) translation has been added [Many thanks to Michael Maass]
+# CSS BUG FIXED: The modal window should be displayed in front of other elements, even the notification bar.
+# BUG FIXED: Do not return a blank 500 error page, but instead display a warning message if the required extensions 'mbstring' and 'iconv' are disabled from the server.
+# BUG FIXED: Javascript TypeError: Cannot read property 'w357_show_in_iframes' of undefined.
+# JS Issue: Check if the cpnb_config variable is defined without any JS errors, and then use it.
+# BUG Fixed: Add the base URL in front of Ajax URLs to avoid 404 error pages in subpages. [Many thanks to Claudia and Tim Austin]
+# BUG FIXED: Some caching issues, after the user accepts the cookies policy, have been resolved.
+# BUG FIXED: You can change the input texts for languages even if the plugin is not published yet, without lose any translations you've entered before.
+# Bug Fixes for Joomla! 2.5 and backward compatibility. Some lines of code have been added to continue to support Joomla! 2.5. and to avoid blank pages in the plugin settings. [Thank you, Andreas Ebert]
+# Minor bug fixes and code improvements.
+
+12-May-2018 : v3.3.7
+# CSS BUG FIXED: Opacity setting affects the "Bar" as a whole. We now use RGBA instead of HEX colors. The background color of the notification bar, and the background color of the buttons, are now based on RGBA functionality. [Thank you, Michael Maass]
+# BUG FIXED: The 'cpnb_confi'g javascript variable was empty because there are issues with uf8 characters in the language files. [Thank you, Guido Pier]
+# BUG FIXED: There was a conflict with the plugin "System - TM Wrapper", and causes errors with notification bar (has not be displayed). We've added some options for the 'json_encode' function and the problem has been resolved. [Thank you, Kees de Goeijer]
+! The background opacity parameter field has been deleted. Instead, you can use the Background color and choose the opacity with the RGBA function. [Thank you, Michael Maass]
+# The utf8 encoding with some special characters, mostly in German language, has been resolved.
+# BUG FIXED: Some issues with the Joomla cache have been resolved.
+# Minor fixes.
+
+09-May-2018 : v3.3.6
++ NEW PARAMETER: Allow Session Cookies. Delete only the Persistent cookies and avoid Session Cookies (This option avoid admins to logged out of Joomla Administrator).
++ The View/Delete Acceptance Logs has been improved and you can now see the logs asynchronously without refreshing the entire browser tab.
+# BUG Fixed: There were some javascript issues (auto redirection every second) with Android devices and older versions of iPhone [Thank you, Gianluca Pantaleo]
+# BUG Fixed: Logs are not stored in websites with older versions of PHP.
+# Minor bug fixes and code improvements.
+! A method has been added to delete some unneeded old files which are not needed anymore. 1) \plugins\system\cookiespolicynotificationbar\assets\js\custom-xx-XX.js and 2) \plugins\system\cookiespolicynotificationbar\assets\css\custom.css
+^ The Danish (da-DK) translation has been updated. New strings have been added [Thank you, Thomas]
+^ The Italian (it-IT) translation has been updated. New strings have been added [Thank you, Alberto]
+
+08-May-2018 : v3.3.5
+# BUG FIXED: When an admin tried to change the settings of the plugin, he got a "500 String could not be parsed as XML" error message. The issue has been detected by admins who have as the default language for the backend the Danish and Italian.
++ The Danish (da-DK) translation has been updated. [Thank you, Thomas]
++ The Italian (it-IT) translation has been updated. [Thank you, Alberto]
+
+07-May-2018 : v3.3.4
++ NEW PARAMETER: There is a new parameter to control if you want to enable the confirmation messages after clicking on the buttons. The Block Cookies functionality has to be enabled to enable the new parameter «Enable Confirmation Alerts».
++ NEW PARAMETER: There is a new parameter to set the border-width and the border-color of the notification bar.
++ The Danish (da-DK) translation has been added. Translated by: Thomas Thrane (Thrane.nu) [Many thanks to Thomas for his contribution]
++ The Italian (it-IT) translation has been added. Translated by: Alberto Paracchini [Many thanks to Alberto for his contribution]
++ The «Shortcode functionality {cookiesinfo}» is working also without the need to enable the «Block Cookies» functionality. [Thank you, Chris Elliott]
+^ HTML/CSS FIXES: The entire CSS code has been rewritten. Many of the selectors in HTML/CSS have been changed because of CSS validation rules.
+# BUG FIXED: Even there are some javascript errors by your template, the jquery ajax functionality will still work without any problems.
+^ HTML/CSS FIXED: The HTML table which displays the served cookies by the website is now responsive. [Thank you, Peter Mochnaľ]
+^ The «Clean cookies!» functionality at the back-end (for Debuggers), has been improved. (File: \elements\rmvcookies.php)
+# BUG FIXED: When an admin tried to change the settings of the plugin, he got a "500 String could not be parsed as XML" error message. There was a small issue in all other language files, except English file.
+^ The «limit» parameter, in the Base Settings, is displayed only if the «Block Cookies» parameter is disabled.
+^ Do not load the /jquery.cookiesdirective.js and style.css if the user already accepted the cookies policy, except if needed for the shortcode functionality.
+# BUG Fixed: Load the custom CSS styling only at the front-end.
+# CSS Issue: We don't use anymore the @import method to load the google fonts. We include the google fonts as external URLs now.
+^ The CSS styling has been now validated by the W3C CSS Validation Service.
+# JS Issue: The animated effect is working again. There was an error with the wrong type of "w357_animate_duration" variable.
+# Caching issues have been resolved [Thank you, Arte Ferro srl]
+# Minor bug fixes and code improvements.
+
+03-May-2018 : v3.3.3
+# BUG FIXED: The -ms-filter properly has been removed because of XML errors after saving the plugin parameters "500 String could not be parsed as XML".
+
+03-May-2018 : v3.3.2
+# BUG FIXED: The shortcode functionality {cookiesinfo} works properly now inside the modal window with your custom text. [Many thanks to Peter Mochnaľ]
+# BUG FIXED: After saving the plugin settings, the message will be displayed in white color (#FFF), even though the configuration is set to another color (e.g. #000) [Many thanks to Martin Krüber]
+# BUG FIXED: There are 2 options to close the modal window. Click on the X icon at top right, and click outside of the modal window. When the window is closed by clicking on the icon then work correctly. If I close the window by clicking outside of the window, the window disappears but scrolling of page is not working anymore. [Many thanks to Peter Mochnaľ]
+# BUG FIXED: The custom link for the More Info is not working (it worked in the version without GDPR) [Many thanks to Peter Mochnaľ]
+# BUG FIXED: Have set 'Store acceptance logs into the Database' to yes, to test I've cleared cookies and accepted a couple of times - but nothing get's stored in the DB table #_plg_system_cookiespolicynotificationbar_logs [Many thanks to Quintin]
+^ The language files (en-GB, fr-FR, nl-NL, ru-RU) have been updated.
+
+30-Apr-2018 : v3.3.1
+# BUG Fixed: Confirmation dialog appears twice if you are using the shortcode functionality and after clicking on the "Ok, I've understood" button of the notification bar.
+# Use the confirmation javascript dialog only if the "Block Cookies" functionality is enabled from the plugin parameters. Otherwise, use the Ajax asynchronous technology.
+# CSS BUG FIXED: Wrong encoding for the left quote of -ms-filter CSS property.
+! The blockCookies & Shortcode functionality is not working on the offline websites because of user (admin) state cookie.
+# Minor bug fixes.
+
+28-Apr-2018 : v3.3.0
++ NEW FEATURE: GDPR Ready! Let the user to decide if accept or decline the cookies on the browser.
++ NEW FEATURE: GDPR Compliance (25 May 2018) - Allow the user to reconsider (after acceptance), and give him the choice to delete the website cookies from his browser.
++ NEW FEATURE: GDPR Rule - Functionality to record and store visitor consent (this record is not considered a personal data). We storing only the user IP Address and date/time of acceptance.
++ NEW FEATURE: «Shortcode Functionality». You will be able to display a table with the accepted website cookies and give the opportunity to the user reconsider or delete the cookies from his browser. Example of shortcode: {cookiesinfo}.
++ NEW PLUGIN: Ajax Technology. The user accepts and declines the cookie policy asynchronously using the Ajax technique.
+# BUG Fixed: After accepting cookies policy there is an HTML error in the debug console. Extra "body>" tag found. Only one "body>" tag should exist per document.
+# HTML code improvement: The tags " and " have be removed from the source code, after user accepting the cookies policy.
+# The JRequest::getVar('example') has been replaced with JFactory::getApplication()->input->get('example'), because it has been deprecated in the earlier release of Joomla 3.x.
+# Code improvements because of coding standards.
+# Minor bug fixes.
+^ The jQuery will not be loaded by default anymore, because of conflicts, mostly with other jQuery versions of the active Joomla template.
+^ New header for the heading "Custom Javascript code", in the plugin settings.
+! The «Debug Mode» parameter has been removed. You can use the «Shortcode» functionality instead.
+! The «Always Display» parameter has been removed. You can use the «Block Cookies» parameter instead.
+! The «Display a message to the user if there are blocked cookies» parameter has been removed. You can use the «Shortcode» functionality instead.
+
+29-Mar-2018 : v3.2.8
++ NEW Parameter field: Custom Javascript code. You can now add your custom Javascript code, included or not, by tags to block the Javascript code before the visitor accepting the cookies policy.
+# BUG Fixed: Enable jQuery on all pages except those selected. If the admin chooses one or more pages to exclude jQuery library, all the other pages should load the jQuery.
+# BUG Fixed: We don't support anymore the PHP 5.3.x, but there was a small issue with some subscribers who still use this old version of PHP.
+
+28-Mar-2018 : v3.2.7
++ NEW FEATURE: There are new options for the load jQuery parameter field. A) load jQuery on all pages, B) Do not load jQuery on any page, C) load jQuery on specific pages. Sometimes you will need to enable the jQuery library only on some pages because of some conflicts, from other components, with different versions of jQuery. This option will help you to do that. [Many thanks to Marek Sobczak]
+# Minor fixes.
+# Cleanup some lines of code.
+
+16-Mar-2018 : v3.2.6
+^ The Demo and the JED link have been updated in the description tab, at Joomla! backend.
+! The Web357 Download ID parameter field has been deleted from each extension settings and has been replaced by a unique API key parameter field at the Web357 Framework plugin settings.
++ A new button (Settings) has been added to the description tab at Joomla! backend.
+^ Compatible with the latest version (1.6.0) of Web357 framework plugin.
+
+26-Feb-2018 : v3.2.5
+Bug Fixed: The element "textsforlanguages" should be hidden in the plugin parameters. [Thank you, Ronald]
+
+10-Jan-2018 : v3.2.4
+# BUG FIXED: The modal window doesn't have a scrollbar if there is much content. [Many thanks to Carlos Santos]
+# Fix responsive issues with the modal window in the most popular devices like Galaxy S5, Nexus 5X, Nexus 6P, iPhone 7, iPhone 7 Plus, iPhone 8, iPhone 8 Plus, iPhone X, iPad, iPad Pro.
+# Minor bug fixes.
+
+07-Nov-2017 : v3.2.3
+# Bug Fixed: Call to undefined method plgSystemCookiesPolicyNotificationBar::getLanguageNameByTag(). [Thank you, Mauro]
+
+06-Nov-2017 : v3.2.2
+# Bug Fixed: Missing parameters (Input texts fields for languages) if the plugin is unpublished. [Many thanks to Nina and Abbey]
+# Cleanup the code.
+# Minor bug fixes.
+# Not compatible anymore with older versions of Joomla! (e.g. J! 2.5.x).
+# Typo errors in the elements.
+^ Upgraded to the latest version v1.4.6 of Web357 Framework Joomla! System Plugin.
+
+27-Oct-2017 : v3.2.1
++ New Feature in Advanced Settings. Language Migration Tool. In case you missed the old strings after an upgrade.
+# Minor bug fixes.
+# Code cleanup.
+
+26-Oct-2017 : v3.2.0
++ NEW FEATURE: You will be able to choose the action of the 'More Info' button. Options are, 1) Custom link, 2) Link to a menu item, 3) Modal with your Custom Text. 
+^ Now you can choose the same or different action button for each language separately. Example: The 'modal' method for the German language, and the 'assign to a menu item' method for the English language.
+^ The link target parameter has been moved in Texts for Languages fieldset.
+^ Database migrations. Some parameter fields have been renamed but you will not lose any values for your cookies message, or button texts, that you've already entered in previous versions. 
+! Unnecessary comments have been removed from the code.
+# General Bug Fixes.
+# Styling improvements on the responsive design.
+
+05-Jul-2017 : v3.1.7
+# Bug fixed after upgrade to J! 3.7.3. The admins can't enter text in the form fields from the plugin parameters.
+# Web357 framework has been updated to the version 1.4.5.
+
+23-Jun-2017 : v3.1.6
+# BUG FIXED: Some issues with language text strings (e.g. J357_PLG_SYSTEM_COOKIES....) have been detected after the first installation before the admin save the plugin parameters. [Thank you, Yannick Wendling]
+^ The language files (en-GB, fr-FR, nl-NL, ru-RU) have been updated.
+
+13-May-2017 : v3.1.5
++ Compatibility for auto-updates via Watchful.li external service. [Many thanks to Valentin Barbu, Rafael Gaus, and Frank].
++ Compatible with the latest version of Web357 Framework v1.4.3.
+^ If the JED link does not exist yet, do not display the 'leave a review' text inside the plugin parameters.
+
+12-May-2017 : v3.1.4
+# Bug Fixed in J! 2.5: Many of our subscribers still uses (badly) the version 2.5.x of Joomla!. We all know how dangerous it is. But, for now, we've added a small fix to still support the cookies policy notification bar also in not-up-to-date Joomla! websites [Thank you, Rafael]
+
+07-May-2017 : v3.1.3
+# Bug Fixed: In PHP Version 7.0.14 there are some errors in plugin parameters at Joomla! backend, on detecting correctly the active languages of the website. [Many thanks to Arkin Oksuzoglu]
+# Minor bug fixes.
+
+05-May-2017 : v3.1.2
+# BUG Fixed: After upgrading to the version 3.1.1 the text strings and other parameters data are not displayed properly, unless if the admin save again the plugin parameters. [Thank you, Thanos]
+
+04-May-2017 : v3.1.1
+# BUG Fixed: If the block cookies parameter was enabled, there were some issues with login authentication at the Joomla! backend.
+# BUG Fixed: The text strings for single language websites, do not change.
+# Bug Fixed: If the 'Block Cookies' parameter enabled, after clicking on the confirm button to accept the cookies policy the page is reloaded but the javascript code (e.g. google ads) is not displayed. [Thank you, Frank]
+# The 'remove cookies' parameter for debuggers, has been improved to allow clearing browser cookies for the specific cookie names.
+# Minor bug fixes.
+
+03-May-2017 : v3.1.0
+^ The Block Cookies functionality has been improved and many issues have been resolved.
++ A very useful helper guide to help you understand how to block cookies, has been added inside the plugin parameters, under the Block Cookies parameter.
++ A new parameter has been added to display a message to the user if there are blocked cookies. By enabling this option a notification message will be displayed at the frontend, on each position of the blocked script. * You can change the text of the notification message from the language overrides in Joomla! backend.
+! Some parameter fields about blocking cookies have been removed because this functionality has been changed.
+# General Bug fixes.
+# Minor CSS issues have been resolved.
+
+22-Mar-2017 : v3.0.8
+# CSS Bug Fixed: On smartphones and tablets, if you choose to display on the top, an extra gap appears at the bottom of the screen. [Many thanks to David Smith]
+
+12-Jan-2017 : v3.0.7
+# After the upgrade to the latest update 3.0.6, a fatal error has been displayed for a function that does not exist in Joomla! 2.5. The function is the "addScriptVersion", that has been replaced with "addScript". [Many thanks to Konzepttreu GmbH]
+
+23-Dec-2016 : v3.0.6
+^ JS code in the head has been replaced with a custom_xx_XX.js file in the assets folder. Each JS language file will be created automatically after each save in the plugin parameters. Many thanks to Laurent Garin.
+^ French language files have been updated. Many thanks to Sandra Thevenet and Marc Antoine Thevenet.
++ Dutch (nl-NL) language has been added. Many thanks to Henk Gordebeke.
+# Minor bug fixes and speed improvements.
+
+22-Nov-2016 : v3.0.5
+^ Absolute URLs have been replaced with relative URLs.
+^ CSS in the head has been replaced with a custom.css file in the assets folder. The file will be created automatically after the first save of your parameters. [Thank you, Laurent]
+# Minor bug fixes.
+
+05-Jun-2016 : v3.0.4
++ New Parameter: "Show in iFrames" has been added. You can choose if you want to show the plugin in iFrames (e.g. modal popups) [Thank you, Dan Tucker].
+^ Variable name for popup windows has been simplified from "cpnb_popup_window" to "cpnb".
+# Minor bug fixes.
+
+27-May-2016 : v3.0.3
++ New Parameter added: Disable the google fonts from messages, buttons, or both of them. [Thank you, Frank Delventhal]
+! The $datetime variable has been removed from comments.
+
+02-May-2016 : v3.0.2
+# Bug Fixed: If the opacity has been set to 100, the opacity value was 0.1 instead of 1. [Thank you, Alexander Ioannidis]
++ New Parameter: Choose if you want to open the 'More Info' link in a new or in a popup window with custom width and height. [Thank you, Tim Austin]
+# Minor bug fixes.
+
+20-Apr-2016 : v3.0.1
+# Bug Fixed: Some jQuery conflicts with JoomGallery component have been resolved, and both extensions are working properly on the same page now. [Thanks, Josef Brandner]
+
+13-Apr-2016 : v3.0.0
++ New Parameter: You can select a Google Font Family for the message and buttons.
++ New Parameter: You can choose if you want to show or hide the "More Info" button.
++ New Parameter: You can select a Google Font Family for the message and buttons.
++ New Parameter: Now you can enter a custom name for Cookie.
++ New Parameter: By default, the message is displayed on the left side and the button on the right side. But, if you would like, you can choose the center alignment for the message and button(s).
++ New Parameters have been added to improve the styling of buttons. You can set the border radius of button, the default background color, and the background color when the mouse is hover the button.
++ A smaller header has been added to improve the plugin settings at the back-end.
++ The Parameters in the backend is not on one page anymore. We improved the UX and the parameters are in different tabs for a quick edit.
++ French language has been added. A big thanks to Marc-Antoine Thevenet (MATsxm).
++ Russian language has been added.
+^ The way that we'd get the plugin parameters has been changed, because we couldn't get the params if the plugin was unpublished.
+^ The default text value for the button has been corrected, from "Ok, I understand" to "Ok, I've understood!" [Thanks, Alex Walker]
+! The error messages about the download ID, during the update of other Web357 extensions, have been resolved and have been removed.
+! For security reasons, the word Joomla! has been removed from the HTML comments. Example: /* Cookies Policy Notification Bar - J! system plugin (Powered by: Web357.com) */ [Thanks, Robin Köhler]
+! Unnecessary comments have been removed.
+# CSS Bug fixed: After W3C CSS Validator results, the max-width: 1024x has been corrected and replaced with max-width: 1024px.
+# The plugin has been passed from the W3C Markup Validation Service. 
+# Many CSS Improvements to be compatible with most popular devices.
+# Minor bug fixes in the code for a speed optimization.
+
+27-Jan-2016 : v2.2.8
+# Bug Fixed: In some browsers, there was a border one-pixel, at the bottom of the page, after the message disappears.
+^ CSS Improvements.
+
+27-Dec-2015 : v2.2.7
+# Bug Fixed: Some CSS and Javascript issues with scrolling on tablets (Lenovo, Samsung, etc.), have been resolved.
+
+08-Dec-2015 : v2.2.6
+# Some issues (missing language tabs, missing language files etc.) after the upgrade from v2.2.5, have been resolved.
+
+07-Dec-2015 : v2.2.5
+^ Updated description.
+^ Updated translations.
+
+23-Nov-2015 : v2.2.4
++ Added compatibility to support extensions with jQuery Control, like "System - jQuery Easy" plugin and "System - DJ-jQueryMonster" plugin.
+# Bug Fixed: Some flags are not displayed correctly if the default language is not English.
+# Bug Fixed: Scrolling on tablets with android os has been resolved.
+# Minor bug fixes.
+
+13-Nov-2015 : v2.2.3
++ NEW Parameter Field: Download ID. You need to specify your Download ID before you can receive updates for the PRO versions. For more information please follow our instructions here: https://www.web357.com/apikey
+# Minor bug fixes.
+
+28-Aug-2015 : v2.2.2
+# Bug Fixed: Error 404 page does not operate with a Gantry template if the plugin is enabled.
+# Bug Fixed: Fatal error: Class 'JLanguageHelper' not found in. This bug has been fixed for the websites that still use Joomla! 1.7.
+# Bug Fixed: Flag image path has set to absolute URL, instead of relative.
+
+24-Aug-2015 : v2.2.1
+# Bug Fixed: Some issues and jQuery conflicts with JoomGallery component, have been resolved.
+
+10-Aug-2015 : v2.2.0
++ BACKEND: Language flags are displayed left of each language label.
++ NEW FEATURE: Debug mode has been added. You can see the list of all cookies and delete all cookies from the frontend.
++ NEW PARAMETER ADDED: Block Cookies (If User does not accept the cookies policy by press the "Ok I've understood" button, all cookie(s) will be blocked.)
++ NEW PARAMETER ADDED: Javascript Code (Some scripts like 'Google Analytics', 'Olark live chat', 'Zopim live chat' and many other javascript applications, use cookies in their javascript code. So, if we want to block the cookies of these apps before the User accepts our Cookies Policy, you have to enter the javascript code of those scripts in this field and not in the index.php of your current template.)
+# Minor bug fixes.
+
+25-May-2015 : v2.1.1
+# Bug Fixes: Lot of bug fixes have been resolved if a joomla website has the cache enabled.
+# jQuery conflict with Revolution Slider has been resolved.
+# Minor CSS fixes for responsive design.
+
+29-Apr-2015 : v2.1.0
+^ Improved CSS Style.
++ New multi-language parameter fields: a) 'More info button text' and b) Link for the 'More info' button.
++ New Feature: Clean cookies for Debug mode (If you can't see the 'Cookies Policy notification bar', click the button from parameters and then refresh your Homepage).
++ New Feature: "Always Display" the notification bar. The notification bar will be displayed even if the User accept the Cookies Policy. This feature must be enabled only for debugging.
++ New Feature: The bar is not appeared if the website is Offline.
++ New Feature: Set the height and the line height of the notification bar.
++ New Feature: INCULDE PAGES: Display the cookies policy notification bar only in the selected pages.
++ New Feature: EXCLUDE PAGES: Do not display the cookies policy notification bar in these pages.
++ New Feature: You can add your custom css.
++ New Feature: Duration (ms) for animation.
+# General minor bug fixes in the code.
+
+23-Apr-2015 : v2.0.0
++ Compatible with "Web357Framework" (joomla! system plugin).
+^ Improvement design for parameter fields (better radio buttons and color pickers).
++ ADMIN: New Element: Description of extension (buttons: view demo, more details, changelog, support).
++ ADMIN: New Element: Version Check.
++ ADMIN: New Element: About Web357 (logo, description, find us on social media).
+# General minor fixes.
+# Clean and code improvement.
+
+29-Mar-2014 : v1.1.0
+# CSS Fixed: Adding !important; css rule for the link color in dark backgrounds.
+# Multilangual support.
+^ Parameter fields have been redesigned and be more useful.
++ PHP functions have been added: getLangForm() and getLanguageNameByTag().
+^ Language folders are now inside plugin folder.
+# BUG Fixed: Line breaks in message don't display correctly the notification bar.
++ Parameter Added: Option to load or not, the jQuery.
++ BUG Fixed: jQuery conflict issues with 3rd party extensions (e.g. Virtuemart, JS Jobs etc.).
+
+13-Dec-2014 : v1.0.1
+# Fixed the css styling about z-index. Now the bar appears in front of any other element, e.g. logo, header banners etc.
+
+07-Oct-2014 : v1.0.0
++ First beta release</pre></body></html>

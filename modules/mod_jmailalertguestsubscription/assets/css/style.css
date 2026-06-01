@@ -1,0 +1,360 @@
+
+div.modal {
+		position: fixed;
+		top: 15% !important;
+		left: 83% !important;
+		z-index: 9999 !important;
+		height: 200% !important;
+		width: 137% !important;
+		margin-left: -83% !important;
+		padding: 6% 6% 25% 32% !important;
+		background-color: #0400008c !important;
+		border: 1px solid rgba(0, 0, 0, .3) !important;
+		-webkit-border-radius: 6px;
+		-moz-border-radius: 6px;
+		border-radius: 6px;
+		-webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, .3);
+		-moz-box-shadow: 0 3px 7px rgba(0, 0, 0, .3);
+		box-shadow: 0 3px 7px rgba(0, 0, 0, .3);
+		-webkit-background-clip: padding-box;
+		-moz-background-clip: padding-box;
+		background-clip: padding-box;
+		outline: 0;
+}.guestsubscribe
+{
+	width: 58%;
+	margin-left: 20%;
+}
+.userunsub
+{
+	margin-top: 20px;
+	width: 14%;
+	margin-left: 37%;
+}
+.unsubscribejmail
+{
+	padding: 20px 3px 20px 5px;
+	/*background: #F7F7F7;*/
+	color: #0C0B0B;
+}
+.unsubhead{
+	padding: 17px 9px;
+	margin-top: -19px;
+	width: 101% !important;
+	margin-left: -5px;
+}
+.emailbox
+{
+	width: 64% !important;
+	margin-left: 14px
+}
+@media (max-width: 768px){.userunsub{ margin-top: 20px; width: 59%;margin-left: 7px;}
+	.guestsubscribe
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+}
+.subscription-box {
+	background-color: #0096C7; /* Blue background */
+	padding: 30px;
+	border: 1px solid #333;
+	font-family: Arial, sans-serif;
+	color: white;
+	position: relative;
+}
+.subscription-box h2 {
+	margin-top: 0;
+	font-size: 30px;
+	font-weight: 900;
+}
+.subscription-box p {
+	font-weight: 500;
+	margin-bottom: 58px;
+	font-size: 29px;
+	margin-top: -16px;
+	word-spacing: 3px;
+}
+.subscription-box form label {
+	display: block;
+	margin: 10px 0 5px;
+	color: white;
+}
+.subscription-box form input[type="text"],
+.subscription-box form input[type="email"] {
+	width: 100%;
+	padding: 8px;
+	border: none;
+	border-radius: 4px;
+}
+.subscription-box form button {
+	margin-top: 20px;
+	width: 100%;
+	padding: 12px;
+	background-color: #FF8500; /* Orange button */
+	color: white;
+	font-size: 16px;
+	font-weight: bold;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+}
+.subscription-box form button:hover {
+	background-color: #E87500;
+}
+.subscription-box .privacy {
+	font-size: 12px;
+	color: white;
+	text-decoration: underline;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
+.cards {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	word-wrap: break-word;
+	background-clip: border-box;
+	border:1px solid rgb(0 0 0 / 53%);
+	border-radius: .25rem;    width: 62%;
+}
+.backcolor
+{
+	background-color: #0096C7;
+	margin-top: -30px;
+}
+.divposition
+{
+/*	    margin-left: -24px;*/
+}
+.modal-header {
+	display: flex;
+	flex-shrink: 0;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem 1rem;
+	border-bottom: 0px solid #DEE2E6;
+	/* border-top-left-radius: calc(.3rem - 1px); */
+	/* border-top-right-radius: calc(.3rem - 1px); */
+}
+.modal-body {
+	position: relative;
+	flex: 1 1 auto;
+	padding: 1rem;
+	margin-top: -74px;
+}
+.modallabel
+{
+	color: white;
+}
+/* Small Devices (Mobile) */
+@media (max-width: 767.98px) {
+	.subscription-box {
+		padding: 30px 1px;
+	}
+	.subbutton{
+		margin-top: 3px !important;
+		padding: 5px !important;
+		font-size: 18px !important;
+	}
+	.subscription-box p {
+		font-weight: 500;
+		margin-bottom: 40px;
+		font-size: 20px;
+		line-height: 28px;
+		margin-top: -12px;
+		word-spacing: 1px;
+	}
+	.labels-jmail{
+		padding-left: 0px !important;
+	}
+	div.modal {
+	position: fixed;
+	top: 15% !important;
+	left: 22% !important;
+	z-index: 9999 !important;
+	height: 200% !important;
+	width: 160% !important;
+	margin-left: -83% !important;
+	padding: 14% 6% 25% 65% !important;
+	background-color: #0400008c !important;
+	border: 1px solid rgba(0, 0, 0, .3) !important;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	-webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, .3);
+	-moz-box-shadow: 0 3px 7px rgba(0, 0, 0, .3);
+	box-shadow: 0 3px 7px rgba(0, 0, 0, .3);
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding-box;
+	background-clip: padding-box;
+	outline: 0;
+}
+
+	.unsubscribejmail label {
+		margin-left: 0 !important;
+		display: block;
+		text-align: left;
+		margin-bottom: 5px;
+		line-height: normal;
+	}
+	.btnalign {
+		margin-left: 0% !important;
+	}
+}
+/* Medium Devices (tablet) */
+@media (max-width: 991.98px) {
+	.subscription-box {
+		padding: 30px 1px;
+	}
+	.subbutton{
+		margin-top: 3px !important;
+		padding: 5px !important;
+		font-size: 18px !important;
+	}
+	.subscription-box p {
+		font-weight: 500;
+		margin-bottom: 40px;
+		font-size: 20px;
+		line-height: 28px;
+		margin-top: -12px;
+		word-spacing: 1px;
+	}
+	div.modal {
+		position: fixed;
+		top: 20% !important;
+        left: 23% !important;
+		z-index: 9999 !important;
+		width: 135% !important;
+		margin-left: -52% !important;
+		padding: 37% 6% 25% 32% !important;
+		background-color: #0400008c !important;
+		border: 1px solid rgba(0, 0, 0, .3) !important;
+		-webkit-border-radius: 6px;
+		-moz-border-radius: 6px;
+		border-radius: 6px;
+		-webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, .3);
+		-moz-box-shadow: 0 3px 7px rgba(0, 0, 0, .3);
+		box-shadow: 0 3px 7px rgba(0, 0, 0, .3);
+		-webkit-background-clip: padding-box;
+		-moz-background-clip: padding-box;
+		background-clip: padding-box;
+		outline: 0;
+	}
+}
+.modal-backdrop {
+	z-index: 1049;
+}
+.btnalign
+{
+	margin-left: 13%;
+}
+.unsubscribejmail{
+	margin-left: -6px !important;
+	line-height: .5 !important;
+	width: 100% !important;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+		.unsubscribejmail label {
+			line-height: normal;
+	}
+	.card-header {
+       width: 100% !important;
+}
+	.unsubscribejmail {
+    margin-left: 2px !important;
+    line-height: .5 !important;
+    width: 115% !important;
+}
+	.jmail-form .card{
+		margin-left: 0px !important;
+	}
+	.subscription-box {
+		padding: 30px 1px;
+	}
+	.subbutton {
+		margin-top: 3px !important;
+		padding: 5px !important;
+		font-size: 18px !important;
+	}
+	.subscription-box p {
+		font-weight: 500;
+		margin-bottom: 40px;
+		font-size: 20px;
+		line-height: 28px;
+		margin-top: -12px;
+		word-spacing: 1px;
+	}
+	.inputs-jmail{
+		width: 100%;
+		margin-left: 48px;
+	}
+	.backcolor{
+		width: 100%;
+		margin-left: 0px;
+	}
+	.privacymargin{
+		margin-left: 0px !important;
+		text-align: center;
+	}
+	div.modal {
+		position: fixed;
+		top: 20% !important;
+        left: 23% !important;
+		z-index: 9999 !important;
+		width: 135% !important;
+		margin-left: -52% !important;
+		padding: 37% 6% 25% 32% !important;
+		background-color: #0400008c !important;
+		border: 1px solid rgba(0, 0, 0, .3) !important;
+		-webkit-border-radius: 6px;
+		-moz-border-radius: 6px;
+		border-radius: 6px;
+		-webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, .3);
+		-moz-box-shadow: 0 3px 7px rgba(0, 0, 0, .3);
+		box-shadow: 0 3px 7px rgba(0, 0, 0, .3);
+		-webkit-background-clip: padding-box;
+		-moz-background-clip: padding-box;
+		background-clip: padding-box;
+		outline: 0;
+	}
+
+	.unsubscribejmail {
+    margin-left: 2px !important;
+    line-height: .5 !important;
+    width: 115% !important;
+}
+	.jmail-form .card{
+		margin-left: 0px !important;
+	}
+	.subscription-box {
+		padding: 30px 1px;
+	}
+	.subbutton {
+		margin-top: 3px !important;
+		padding: 5px !important;
+		font-size: 18px !important;
+	}
+	.subscription-box p {
+		font-weight: 500;
+		margin-bottom: 40px;
+		font-size: 20px;
+		line-height: 28px;
+		margin-top: -12px;
+		word-spacing: 1px;
+	}
+	.inputs-jmail{
+		width: 100%;
+		margin-left: 48px;
+	}
+	.backcolor{
+		width: 100%;
+		margin-left: 0px;
+	}
+	.privacymargin{
+		margin-left: 0px !important;
+		text-align: center;
+	}
+}

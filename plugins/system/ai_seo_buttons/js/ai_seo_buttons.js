@@ -1,0 +1,1016 @@
+/**
+ * AI SEO Buttons - Tab-Aware SEO Assistant
+ * Shows context-specific buttons based on the active editor tab
+ */
+document.addEventListener('DOMContentLoaded', function () {
+    const options = Joomla.getOptions('ai_seo_buttons');
+    if (!options || !options.ajaxUrl) return;
+
+    const ajaxUrl = options.ajaxUrl;
+
+    // Tab selectors for Joomla article editor
+    const TAB_SELECTORS = {
+        content: '#content, [data-content], a[href="#attrib-content"]',
+        images: '#images, [data-images], a[href="#attrib-images"]',
+        publishing: '#publishing, [data-publishing], a[href="#attrib-publishing"]',
+        schema: '#schema, [data-schema], a[href="#attrib-schema"]'
+    };
+
+    // Create button containers for each tab section
+    const contentButtons = createButtonContainer('content');
+    const imagesButtons = createButtonContainer('images');
+    const publishingButtons = createButtonContainer('publishing');
+    const schemaButtons = createButtonContainer('schema');
+
+    // Initialize buttons
+    initializeButtons();
+
+    function createButtonContainer(tabType) {
+        const container = document.createElement('div');
+        container.className = 'ai-seo-buttons-container';
+        container.id = `ai-seo-${tabType}`;
+        container.style.display = 'none';
+
+        let buttonHtml = '<h4>🤖 AI SEO Assistant</h4><div class="ai-seo-button-group">';
+
+        switch (tabType) {
+            case 'content':
+                buttonHtml += `
+                    <button type="button" class="ai-seo-btn ai-seo-btn-primary" id="ai-suggest-content" title="Analyze content for SEO improvements">
+                        <span class="ai-icon">📝</span> Analyze Content for SEO
+                    </button>
+                    <button type="button" class="ai-seo-btn ai-seo-btn-success" id="ai-optimize-content" title="Rewrite content to improve SEO scores">
+                        <span class="ai-icon">✨</span> Optimize Content
+                    </button>
+                    <button type="button" class="ai-seo-btn ai-seo-btn-info" id="ai-generate-article" title="Generate full article content from title">
+                        <span class="ai-icon">🤖</span> Generate Article
+                    </button>
+                `;
+                break;
+            case 'images':
+                buttonHtml += `
+                    <button type="button" class="ai-seo-btn ai-seo-btn-secondary" id="ai-generate-alt" title="Generate alt text for images">
+                        <span class="ai-icon">🖼️</span> Generate Image Alt Text
+                    </button>
+                    <button type="button" class="ai-seo-btn ai-seo-btn-outline" id="ai-scan-images" title="Scan content for images without alt text">
+                        <span class="ai-icon">🔍</span> Scan Images in Content
+                    </button>
+                `;
+                break;
+            case 'publishing':
+                buttonHtml += `
+                    <button type="button" class="ai-seo-btn ai-seo-btn-success" id="ai-generate-meta" title="Generate meta description and keywords">
+                        <span class="ai-icon">🏷️</span> Generate Meta Data
+                    </button>
+                `;
+                break;
+            case 'schema':
+                buttonHtml += `
+                    <button type="button" class="ai-seo-btn ai-seo-btn-primary" id="ai-autofill-schema" title="Auto-fill BlogPosting schema fields">
+                        <span class="ai-icon">📋</span> Auto-Fill BlogPosting Data
+                    </button>
+                `;
+                break;
+        }
+
+        buttonHtml += '</div><div class="ai-seo-results" id="ai-seo-results-' + tabType + '"></div>';
+        container.innerHTML = buttonHtml;
+
+        return container;
+    }
+
+    function initializeButtons() {
+        // Try to inject into tab panels
+        injectIntoTabPanel('content', contentButtons);
+        injectIntoTabPanel('images', imagesButtons);
+        injectIntoTabPanel('publishing', publishingButtons);
+        injectIntoTabPanel('schema', schemaButtons);
+
+        // Setup event listeners
+        setupContentButton();
+        setupOptimizeButton();
+        setupGenerateArticleButton();
+        setupImagesButtons();
+        setupPublishingButton();
+        setupSchemaButton();
+
+        // Setup tab change detection
+        setupTabChangeDetection();
+    }
+
+    function injectIntoTabPanel(tabType, buttonContainer) {
+        // Joomla 4 uses joomla-tab with panels
+        let targetPanel = null;
+
+        // Try joomla-tab-element first (Joomla 4)
+        const joomlaTab = document.querySelector('joomla-tab');
+        if (joomlaTab) {
+            const panels = joomlaTab.querySelectorAll('joomla-tab-element');
+            panels.forEach(panel => {
+                const panelId = panel.getAttribute('id') || '';
+                const panelName = panel.getAttribute('name') || '';
+                if (panelId.toLowerCase().includes(tabType) || panelName.toLowerCase().includes(tabType)) {
+                    targetPanel = panel;
+                }
+            });
+        }
+
+        // Try standard tab-content for Joomla 3
+        if (!targetPanel) {
+            const tabContent = document.querySelector('.tab-content');
+            if (tabContent) {
+                const panes = tabContent.querySelectorAll('.tab-pane');
+                panes.forEach(pane => {
+                    const paneId = pane.getAttribute('id') || '';
+                    if (paneId.toLowerCase().includes(tabType)) {
+                        targetPanel = pane;
+                    }
+                });
+            }
+        }
+
+        // Try finding by fieldset legend
+        if (!targetPanel) {
+            const fieldsets = document.querySelectorAll('fieldset');
+            fieldsets.forEach(fs => {
+                const legend = fs.querySelector('legend');
+                if (legend && legend.textContent.toLowerCase().includes(tabType)) {
+                    targetPanel = fs;
+                }
+            });
+        }
+
+        if (targetPanel) {
+            targetPanel.insertBefore(buttonContainer, targetPanel.firstChild);
+            buttonContainer.style.display = 'block';
+        } else {
+            // Fallback: create floating button container
+            createFloatingContainer(tabType, buttonContainer);
+        }
+    }
+
+    function createFloatingContainer(tabType, buttonContainer) {
+        // If we can't find specific panels, create a single container with all buttons
+        // and use tab detection to show/hide them
+        let mainContainer = document.getElementById('ai-seo-main-container');
+        if (!mainContainer) {
+            mainContainer = document.createElement('div');
+            mainContainer.id = 'ai-seo-main-container';
+            mainContainer.className = 'ai-seo-main-container';
+
+            // Find the form and insert after title
+            const titleField = document.querySelector('[name="title"]');
+            if (titleField && titleField.closest('.control-group')) {
+                titleField.closest('.control-group').parentNode.insertBefore(
+                    mainContainer,
+                    titleField.closest('.control-group').nextSibling
+                );
+            } else {
+                const form = document.querySelector('form');
+                if (form) form.insertBefore(mainContainer, form.firstChild);
+            }
+        }
+
+        buttonContainer.classList.add('ai-seo-tab-buttons');
+        buttonContainer.dataset.tabType = tabType;
+        mainContainer.appendChild(buttonContainer);
+    }
+
+    function setupTabChangeDetection() {
+        // Observe tab clicks
+        const tabLinks = document.querySelectorAll('[data-bs-toggle="tab"], [data-toggle="tab"], .nav-tabs a, joomla-tab-element');
+        tabLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                setTimeout(updateVisibleButtons, 100);
+            });
+        });
+
+        // Also observe joomla-tab changes
+        const joomlaTab = document.querySelector('joomla-tab');
+        if (joomlaTab) {
+            const observer = new MutationObserver(updateVisibleButtons);
+            observer.observe(joomlaTab, { attributes: true, subtree: true });
+        }
+
+        // Initial visibility update
+        updateVisibleButtons();
+    }
+
+    function updateVisibleButtons() {
+        const floatingButtons = document.querySelectorAll('.ai-seo-tab-buttons');
+        if (floatingButtons.length === 0) return;
+
+        const activeTab = getCurrentActiveTab();
+
+        floatingButtons.forEach(btn => {
+            const tabType = btn.dataset.tabType;
+            if (activeTab === tabType || activeTab === 'all') {
+                btn.style.display = 'block';
+            } else {
+                btn.style.display = 'none';
+            }
+        });
+    }
+
+    function getCurrentActiveTab() {
+        // Check for active joomla-tab-element
+        const activeJoomlaTab = document.querySelector('joomla-tab-element[active]');
+        if (activeJoomlaTab) {
+            const id = activeJoomlaTab.getAttribute('id') || '';
+            const name = activeJoomlaTab.getAttribute('name') || '';
+            if (id.includes('content') || name.toLowerCase().includes('content')) return 'content';
+            if (id.includes('images') || name.toLowerCase().includes('images')) return 'images';
+            if (id.includes('publishing') || name.toLowerCase().includes('publishing')) return 'publishing';
+        }
+
+        // Check for active bootstrap tab pane
+        const activePane = document.querySelector('.tab-pane.active');
+        if (activePane) {
+            const id = activePane.getAttribute('id') || '';
+            if (id.includes('content')) return 'content';
+            if (id.includes('images')) return 'images';
+            if (id.includes('publishing')) return 'publishing';
+        }
+
+        return 'content'; // default to content
+    }
+
+    function setupContentButton() {
+        const btn = document.getElementById('ai-suggest-content');
+        if (!btn) return;
+
+        btn.addEventListener('click', function () {
+            const title = document.querySelector('[name="title"]')?.value || '';
+            const body = getEditorContent();
+            const resultsDiv = document.getElementById('ai-seo-results-content');
+
+            if (!title && !body) {
+                showResult(resultsDiv, 'Please enter a title or content first', 'error');
+                return;
+            }
+
+            setLoading(btn, true);
+
+            fetch(ajaxUrl + '&ai_seo_task=suggestContent', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams({ title, body })
+            })
+                .then(r => r.json())
+                .then(data => {
+                    if (data.error) {
+                        showResult(resultsDiv, 'Error: ' + data.error, 'error');
+                    } else {
+                        showSeoAnalysis(resultsDiv, data.suggestions);
+                    }
+                })
+                .catch(err => showResult(resultsDiv, 'Request failed: ' + err, 'error'))
+                .finally(() => setLoading(btn, false));
+        });
+    }
+
+    function setupOptimizeButton() {
+        const btn = document.getElementById('ai-optimize-content');
+        if (!btn) return;
+
+        btn.addEventListener('click', function () {
+            const title = document.querySelector('[name="title"]')?.value || '';
+            const body = getEditorContent();
+            const resultsDiv = document.getElementById('ai-seo-results-content');
+
+            if (!body) {
+                showResult(resultsDiv, 'Please enter some content first', 'error');
+                return;
+            }
+
+            if (!confirm('⚠️ This will rewrite your article content using AI. \n\nWe recommend expecting the result before saving. \n\nContinue?')) {
+                return;
+            }
+
+            setLoading(btn, true);
+            showResult(resultsDiv, '🔄 Rewriting content for better SEO... This may take up to 30 seconds.', 'info');
+
+            fetch(ajaxUrl + '&ai_seo_task=rewriteContent', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams({ title, body })
+            })
+                .then(r => r.json())
+                .then(data => {
+                    if (data.error) {
+                        showResult(resultsDiv, 'Error: ' + data.error, 'error');
+                    } else if (data.success) {
+                        showRewriteResult(resultsDiv, data.new_content);
+                    }
+                })
+                .catch(err => showResult(resultsDiv, 'Request failed: ' + err, 'error'))
+                .finally(() => setLoading(btn, false));
+        });
+    }
+
+    function setupGenerateArticleButton() {
+        const btn = document.getElementById('ai-generate-article');
+        if (!btn) return;
+
+        btn.addEventListener('click', function () {
+            const title = document.querySelector('[name="jform[title]"]')?.value ||
+                document.querySelector('#jform_title')?.value ||
+                document.querySelector('[name="title"]')?.value || '';
+            const resultsDiv = document.getElementById('ai-seo-results-content');
+
+            if (!title || title.trim() === '') {
+                showResult(resultsDiv, 'Please enter an article title first', 'error');
+                return;
+            }
+
+            const currentBody = getEditorContent();
+            if (currentBody && currentBody.trim() !== '') {
+                if (!confirm('⚠️ This will replace your current content with AI-generated content. \n\nContinue?')) {
+                    return;
+                }
+            }
+
+            setLoading(btn, true);
+            showResult(resultsDiv, '🤖 Generating article content... This may take up to 30 seconds.', 'info');
+
+            fetch(ajaxUrl + '&ai_seo_task=generateArticle', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams({ title })
+            })
+                .then(r => r.json())
+                .then(data => {
+                    if (data.error) {
+                        showResult(resultsDiv, 'Error: ' + data.error, 'error');
+                    } else if (data.success) {
+                        showRewriteResult(resultsDiv, data.content);
+                    }
+                })
+                .catch(err => showResult(resultsDiv, 'Request failed: ' + err, 'error'))
+                .finally(() => setLoading(btn, false));
+        });
+    }
+
+    function setupImagesButtons() {
+        // Main button: Auto-scan and generate alt for images
+        const altBtn = document.getElementById('ai-generate-alt');
+        if (altBtn) {
+            altBtn.addEventListener('click', async function () {
+                const resultsDiv = document.getElementById('ai-seo-results-images');
+
+                // Collect all images from different sources
+                const allImages = collectAllImages();
+
+                if (allImages.length === 0) {
+                    showResult(resultsDiv, 'No images found in article.', 'info');
+                    return;
+                }
+
+                // Find images without alt text
+                const imagesWithoutAlt = allImages.filter(img => !img.alt || img.alt.trim() === '');
+
+                if (imagesWithoutAlt.length === 0) {
+                    showResult(resultsDiv, '✅ All images already have alt text!', 'success');
+                    return;
+                }
+
+                setLoading(altBtn, true);
+                showResult(resultsDiv, `🔄 Generating alt text for ${imagesWithoutAlt.length} image(s)...`, 'info');
+
+                // Get article context for better alt text
+                const articleTitle = document.querySelector('[name="title"]')?.value || '';
+                const articleBody = getEditorContent();
+
+                let results = [];
+                for (let i = 0; i < imagesWithoutAlt.length; i++) {
+                    const imgInfo = imagesWithoutAlt[i];
+
+                    try {
+                        const response = await fetch(ajaxUrl + '&ai_seo_task=generateAlt', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                            body: new URLSearchParams({
+                                image_url: imgInfo.src,
+                                title: articleTitle,
+                                body: articleBody
+                            })
+                        });
+                        const data = await response.json();
+
+                        if (data.success && data.alt_text) {
+                            // Update the appropriate field based on image type
+                            updateImageAlt(imgInfo.type, imgInfo.index, data.alt_text);
+                            results.push({ src: imgInfo.src, alt: data.alt_text, type: imgInfo.type, success: true });
+                        } else {
+                            results.push({ src: imgInfo.src, error: data.error || 'Failed', type: imgInfo.type, success: false });
+                        }
+                    } catch (err) {
+                        results.push({ src: imgInfo.src, error: err.message, type: imgInfo.type, success: false });
+                    }
+                }
+
+                // Show results
+                let resultHtml = '<div class="ai-seo-image-list">';
+                resultHtml += `<h5>✅ Generated alt text for ${results.filter(r => r.success).length}/${imagesWithoutAlt.length} images:</h5><ul>`;
+                results.forEach((r, i) => {
+                    const typeLabel = r.type === 'intro' ? '(Intro Image)' : r.type === 'full' ? '(Full Article)' : '(Content)';
+                    if (r.success) {
+                        resultHtml += `<li class="has-alt"><strong>${typeLabel}</strong> ${r.src.substring(0, 35)}...<br><span class="alt-status">✅ Alt: "${r.alt}"</span></li>`;
+                    } else {
+                        resultHtml += `<li class="no-alt"><strong>${typeLabel}</strong> ${r.src.substring(0, 35)}...<br><span class="alt-status">❌ Error: ${r.error}</span></li>`;
+                    }
+                });
+                resultHtml += '</ul></div>';
+
+                showResult(resultsDiv, resultHtml, 'success', 'Alt Text Generated & Applied');
+                showToast(`✓ Generated alt text for ${results.filter(r => r.success).length} images!`);
+
+                setLoading(altBtn, false);
+            });
+        }
+
+        // Scan button: Just show current image status
+        const scanBtn = document.getElementById('ai-scan-images');
+        if (scanBtn) {
+            scanBtn.addEventListener('click', function () {
+                const resultsDiv = document.getElementById('ai-seo-results-images');
+                const allImages = collectAllImages();
+
+                if (allImages.length === 0) {
+                    showResult(resultsDiv, 'No images found in article.', 'info');
+                    return;
+                }
+
+                const withAlt = allImages.filter(img => img.alt?.trim());
+                const withoutAlt = allImages.length - withAlt.length;
+
+                let imageList = `<div class="ai-seo-image-list"><h5>Found ${allImages.length} image(s) (${withoutAlt} missing alt text):</h5><ul>`;
+                allImages.forEach((img, i) => {
+                    const typeLabel = img.type === 'intro' ? '🖼️ Intro Image' : img.type === 'full' ? '📄 Full Article Image' : '📝 Content Image';
+                    const hasAlt = img.alt?.trim();
+                    const statusClass = hasAlt ? 'has-alt' : 'no-alt';
+                    const altDisplay = hasAlt ? img.alt.substring(0, 50) + (img.alt.length > 50 ? '...' : '') : '<em>No alt text</em>';
+                    imageList += `
+                        <li class="${statusClass}">
+                            <strong>${typeLabel}:</strong> ${img.src.substring(0, 40)}${img.src.length > 40 ? '...' : ''}<br>
+                            <span class="alt-status">${hasAlt ? '✅ ' : '⚠️ '}Alt: ${altDisplay}</span>
+                        </li>
+                    `;
+                });
+                imageList += '</ul></div>';
+
+                if (withoutAlt > 0) {
+                    imageList += `<p style="margin-top:10px"><strong>Click "Generate Image Alt Text" to auto-generate alt text for ${withoutAlt} image(s).</strong></p>`;
+                }
+
+                showResult(resultsDiv, imageList, 'info', 'Image Scan Results');
+            });
+        }
+    }
+
+    // Collect all images from Joomla article (intro image, full image, content images)
+    function collectAllImages() {
+        const images = [];
+
+        // 1. Check Intro Image field
+        const introImageField = document.querySelector('#jform_images_image_intro, [name="jform[images][image_intro]"]');
+        const introAltField = document.querySelector('#jform_images_image_intro_alt, [name="jform[images][image_intro_alt]"]');
+        if (introImageField && introImageField.value && introImageField.value.trim()) {
+            images.push({
+                type: 'intro',
+                src: introImageField.value,
+                alt: introAltField ? introAltField.value : '',
+                index: 0
+            });
+        }
+
+        // 2. Check Full Article Image field
+        const fullImageField = document.querySelector('#jform_images_image_fulltext, [name="jform[images][image_fulltext]"]');
+        const fullAltField = document.querySelector('#jform_images_image_fulltext_alt, [name="jform[images][image_fulltext_alt]"]');
+        if (fullImageField && fullImageField.value && fullImageField.value.trim()) {
+            images.push({
+                type: 'full',
+                src: fullImageField.value,
+                alt: fullAltField ? fullAltField.value : '',
+                index: 0
+            });
+        }
+
+        // 3. Check article content for inline images
+        const body = getEditorContent();
+        if (body) {
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = body;
+            const contentImages = tempDiv.querySelectorAll('img');
+            contentImages.forEach((img, i) => {
+                images.push({
+                    type: 'content',
+                    src: img.getAttribute('src') || '',
+                    alt: img.getAttribute('alt') || '',
+                    index: i,
+                    element: img
+                });
+            });
+        }
+
+        return images;
+    }
+
+    // Update alt text for the appropriate image type
+    function updateImageAlt(type, index, altText) {
+        switch (type) {
+            case 'intro':
+                const introAltField = document.querySelector('#jform_images_image_intro_alt, [name="jform[images][image_intro_alt]"]');
+                if (introAltField) {
+                    introAltField.value = altText;
+                    introAltField.dispatchEvent(new Event('change', { bubbles: true }));
+                }
+                break;
+            case 'full':
+                const fullAltField = document.querySelector('#jform_images_image_fulltext_alt, [name="jform[images][image_fulltext_alt]"]');
+                if (fullAltField) {
+                    fullAltField.value = altText;
+                    fullAltField.dispatchEvent(new Event('change', { bubbles: true }));
+                }
+                break;
+            case 'content':
+                // For content images, we need to update the editor
+                const body = getEditorContent();
+                if (body) {
+                    const tempDiv = document.createElement('div');
+                    tempDiv.innerHTML = body;
+                    const contentImages = tempDiv.querySelectorAll('img');
+                    if (contentImages[index]) {
+                        contentImages[index].setAttribute('alt', altText);
+                        updateEditorContent(tempDiv.innerHTML);
+                    }
+                }
+                break;
+        }
+    }
+
+    // Helper function to update editor content
+    function updateEditorContent(newContent) {
+        // Try TinyMCE first
+        if (typeof tinymce !== 'undefined') {
+            const editor = tinymce.get('jform_articletext') || tinymce.activeEditor;
+            if (editor) {
+                editor.setContent(newContent);
+                return;
+            }
+        }
+
+        // Fallback to textarea
+        const textarea = document.querySelector('[name="jform[articletext]"]') ||
+            document.querySelector('#jform_articletext');
+        if (textarea) {
+            textarea.value = newContent;
+            textarea.dispatchEvent(new Event('change', { bubbles: true }));
+        }
+    }
+
+    function setupPublishingButton() {
+        const btn = document.getElementById('ai-generate-meta');
+        if (!btn) return;
+
+        btn.addEventListener('click', function () {
+            const title = document.querySelector('[name="title"]')?.value || '';
+            const body = getEditorContent();
+            const resultsDiv = document.getElementById('ai-seo-results-publishing');
+
+            if (!title && !body) {
+                showResult(resultsDiv, 'Please enter a title or content first', 'error');
+                return;
+            }
+
+            setLoading(btn, true);
+
+            fetch(ajaxUrl + '&ai_seo_task=generateMeta', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams({ title, body })
+            })
+                .then(r => {
+                    if (!r.ok) throw new Error('HTTP ' + r.status);
+                    return r.text();
+                })
+                .then(text => {
+                    if (!text) throw new Error('Empty response');
+                    return JSON.parse(text);
+                })
+                .then(data => {
+                    if (data.error) {
+                        showResult(resultsDiv, 'Error: ' + data.error, 'error');
+                    } else if (data.success) {
+                        showMetaResult(resultsDiv, data);
+                    }
+                })
+                .catch(err => showResult(resultsDiv, 'Request failed: ' + err.message, 'error'))
+                .finally(() => setLoading(btn, false));
+        });
+    }
+
+    function setupSchemaButton() {
+        const btn = document.getElementById('ai-autofill-schema');
+        if (!btn) return;
+
+        btn.addEventListener('click', function () {
+            const title = document.querySelector('[name="jform[title]"]')?.value ||
+                document.querySelector('#jform_title')?.value ||
+                document.querySelector('[name="title"]')?.value || '';
+            const body = getEditorContent();
+            const resultsDiv = document.getElementById('ai-seo-results-schema');
+
+            console.log('AI SEO: Title found:', title);
+            console.log('AI SEO: Body length:', body?.length || 0);
+
+            // Check schema type - MUST be BlogPosting
+            const schemaTypeField = document.querySelector('[name="jform[attribs][schemaType]"]') ||
+                document.querySelector('#jform_attribs_schemaType') ||
+                document.querySelector('select[id*="schemaType"]');
+
+            let schemaType = schemaTypeField?.value || '';
+            console.log('AI SEO: Current schema type:', schemaType);
+
+            // If no schema type or "None", show error
+            if (!schemaType || schemaType === '' || schemaType === 'None') {
+                showResult(resultsDiv, 'Please select "BlogPosting" as Schema Type first, then click this button again.', 'error');
+                return;
+            }
+
+            // Validate it's BlogPosting
+            if (schemaType !== 'BlogPosting') {
+                showResult(resultsDiv, `This button only works with BlogPosting schema. Current type: ${schemaType}. Please select BlogPosting first.`, 'error');
+                return;
+            }
+
+            if (!title && !body) {
+                showResult(resultsDiv, 'Please enter an article title or content first', 'error');
+                return;
+            }
+
+            setLoading(btn, true);
+            showResult(resultsDiv, '🤖 Generating BlogPosting schema data...', 'info');
+
+            fetch(ajaxUrl + '&ai_seo_task=generateSchemaData', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams({ title: title || 'Untitled', body: body || '' })
+            })
+                .then(r => r.json())
+                .then(data => {
+                    if (data.error) {
+                        showResult(resultsDiv, 'Error: ' + data.error, 'error');
+                    } else if (data.success && data.schema) {
+                        // Enhanced field detection - BlogPosting specific
+                        const headlineSelectors = [
+                            'input[name="jform[attribs][schema][BlogPosting][headline]"]',
+                            'textarea[name="jform[attribs][schema][BlogPosting][headline]"]',
+                            'input#jform_attribs_schema_BlogPosting_headline',
+                            'textarea#jform_attribs_schema_BlogPosting_headline',
+                            'input[id*="BlogPosting"][id*="headline"]',
+                            'textarea[id*="BlogPosting"][id*="headline"]',
+                            'input[id*="headline"]',
+                            'textarea[id*="headline"]',
+                            'input.headline',
+                            'textarea.headline'
+                        ];
+
+                        const descSelectors = [
+                            'textarea[name="jform[attribs][schema][BlogPosting][description]"]',
+                            'input[name="jform[attribs][schema][BlogPosting][description]"]',
+                            'textarea#jform_attribs_schema_BlogPosting_description',
+                            'input#jform_attribs_schema_BlogPosting_description',
+                            'textarea[id*="BlogPosting"][id*="description"]',
+                            'input[id*="BlogPosting"][id*="description"]',
+                            'textarea[id*="description"]',
+                            'input[id*="description"]',
+                            'textarea.description',
+                            'input.description'
+                        ];
+
+                        let headlineField = null;
+                        let descField = null;
+
+                        // Find headline field
+                        for (const selector of headlineSelectors) {
+                            headlineField = document.querySelector(selector);
+                            if (headlineField) {
+                                console.log('✅ AI SEO: Found headline field with selector:', selector);
+                                console.log('Field ID:', headlineField.id, 'Name:', headlineField.name);
+                                break;
+                            }
+                        }
+
+                        // Find description field
+                        for (const selector of descSelectors) {
+                            descField = document.querySelector(selector);
+                            if (descField) {
+                                console.log('✅ AI SEO: Found description field with selector:', selector);
+                                console.log('Field ID:', descField.id, 'Name:', descField.name);
+                                break;
+                            }
+                        }
+
+                        // Populate fields
+                        if (headlineField) {
+                            headlineField.value = data.schema.headline;
+                            headlineField.focus();
+                            headlineField.dispatchEvent(new Event('input', { bubbles: true }));
+                            headlineField.dispatchEvent(new Event('change', { bubbles: true }));
+                            headlineField.blur();
+                        } else {
+                            console.error('❌ AI SEO: Headline field not found. Tried:', headlineSelectors);
+                        }
+
+                        if (descField) {
+                            descField.value = data.schema.description;
+                            descField.focus();
+                            descField.dispatchEvent(new Event('input', { bubbles: true }));
+                            descField.dispatchEvent(new Event('change', { bubbles: true }));
+                            descField.blur();
+                        } else {
+                            console.error('❌ AI SEO: Description field not found. Tried:', descSelectors);
+                        }
+
+                        showResult(resultsDiv, `
+                            <div class="ai-seo-result success">
+                                <div class="ai-seo-result-label">✅ BlogPosting Schema Generated:</div>
+                                <div class="ai-seo-result-content">
+                                    <p><strong>Headline:</strong> ${data.schema.headline}</p>
+                                    <p><strong>Description:</strong> ${data.schema.description}</p>
+                                    <p class="ai-seo-auto-status">${headlineField && descField ? '✅ Fields have been auto-filled! Check above.' : '⚠️ Could not auto-fill. Please copy values manually to the fields above.'}</p>
+                                    ${!headlineField || !descField ? '<p style="color:#f39c12"><small>💡 Tip: Check browser console (F12) for field detection details</small></p>' : ''}
+                                </div>
+                            </div>
+                        `, 'success');
+                        showToast(headlineField && descField ? '✅ Schema data filled!' : '⚠️ Please copy manually');
+                    }
+                })
+                .catch(err => showResult(resultsDiv, 'Request failed: ' + err, 'error'))
+                .finally(() => setLoading(btn, false));
+        });
+    }
+
+    function getEditorContent() {
+        let content = '';
+
+        // Try TinyMCE (most common in Joomla)
+        if (typeof tinymce !== 'undefined') {
+            const editor = tinymce.get('jform_articletext') || tinymce.activeEditor;
+            if (editor) content = editor.getContent();
+        }
+
+        // Fallback to textarea
+        if (!content) {
+            const textarea = document.querySelector('[name="jform[articletext]"]') ||
+                document.querySelector('#jform_articletext');
+            if (textarea) content = textarea.value;
+        }
+
+        return content;
+    }
+
+    function setLoading(btn, isLoading) {
+        btn.disabled = isLoading;
+        btn.classList.toggle('loading', isLoading);
+    }
+
+    function showResult(container, content, type = 'success', label = '') {
+        if (!container) return;
+        container.innerHTML = `
+            <div class="ai-seo-result ${type}">
+                ${label ? `<div class="ai-seo-result-label">${label}</div>` : ''}
+                <div class="ai-seo-result-content">${content}</div>
+            </div>
+        `;
+    }
+
+    function showMetaResult(container, data) {
+        if (!container) return;
+        const keywords = data.keywords || '';
+        const description = data.description || '';
+
+        // Auto-fill the fields
+        const keywordsField = document.getElementById('jform_metakey');
+        const descField = document.getElementById('jform_metadesc');
+
+        let autoFilledKeywords = false;
+        let autoFilledDesc = false;
+
+        if (keywordsField) {
+            keywordsField.value = keywords;
+            keywordsField.dispatchEvent(new Event('change', { bubbles: true }));
+            autoFilledKeywords = true;
+        }
+
+        if (descField) {
+            descField.value = description;
+            descField.dispatchEvent(new Event('change', { bubbles: true }));
+            autoFilledDesc = true;
+        }
+
+        // Show success message
+        const autoFillStatus = (autoFilledKeywords && autoFilledDesc)
+            ? '✅ <strong>Auto-filled both fields!</strong>'
+            : (autoFilledKeywords ? '✅ Keywords auto-filled' : '') + (autoFilledDesc ? '✅ Description auto-filled' : '');
+
+        container.innerHTML = `
+            <div class="ai-seo-result success">
+                <div class="ai-seo-auto-status">${autoFillStatus}</div>
+                <div class="ai-seo-meta-section">
+                    <div class="ai-seo-result-label">🏷️ Meta Keywords:</div>
+                    <div class="ai-seo-result-content">
+                        <div class="ai-seo-meta-value">${keywords}</div>
+                    </div>
+                </div>
+                <div class="ai-seo-meta-section">
+                    <div class="ai-seo-result-label">📝 Meta Description:</div>
+                    <div class="ai-seo-result-content">
+                        <div class="ai-seo-meta-value">${description}</div>
+                        <span class="ai-seo-char-count">${description.length}/160 characters</span>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        showToast('✓ Meta data auto-filled into fields!');
+    }
+
+    function showSeoAnalysis(container, suggestions) {
+        if (!container) return;
+        container.innerHTML = `
+            <div class="ai-seo-result success">
+                <div class="ai-seo-result-label">📊 SEO Analysis & Suggestions:</div>
+                <div class="ai-seo-result-content ai-seo-suggestions">
+                    ${formatSuggestions(suggestions)}
+                </div>
+            </div>
+        `;
+    }
+
+    function showRewriteResult(container, newContent) {
+        if (!container) return;
+
+        // Store content temporarily in a global object to avoid escaping hell
+        window.aiSeoTempContent = newContent;
+
+        container.innerHTML = `
+            <div class="ai-seo-result success">
+                <div class="ai-seo-result-label">✨ SEO Optimized Content Ready:</div>
+                <div class="ai-seo-result-content">
+                    <p>The AI has rewritten your article to improve SEO, readability, and structure.</p>
+                    <div class="ai-seo-actions" style="margin-top:15px">
+                        <button class="ai-seo-btn ai-seo-btn-success" onclick="applyRewrittenContent()">
+                            ✅ Apply New Content to Editor
+                        </button>
+                        <button class="ai-seo-btn ai-seo-btn-outline" onclick="this.closest('.ai-seo-result').remove()">
+                            ❌ Cancel
+                        </button>
+                    </div>
+                    <details style="margin-top:10px; cursor:pointer">
+                        <summary>View raw HTML preview</summary>
+                        <textarea readonly style="width:100%; height:150px; margin-top:5px; font-family:monospace; font-size:11px;">${escapeHtml(newContent)}</textarea>
+                    </details>
+                </div>
+            </div>
+        `;
+
+        showToast('✨ Content rewritten! Click Apply to save.');
+    }
+
+    function showAltTextResult(container, altText, imageUrl) {
+        if (!container) return;
+        const escapedAlt = escapeHtml(altText || '');
+        container.innerHTML = `
+            <div class="ai-seo-result success">
+                <div class="ai-seo-result-label">🖼️ Generated Alt Text:</div>
+                <div class="ai-seo-result-content">
+                    <div class="ai-seo-meta-value">"${altText}"</div>
+                    <small class="ai-seo-image-url">For: ${imageUrl.substring(0, 60)}${imageUrl.length > 60 ? '...' : ''}</small>
+                    <button class="ai-seo-copy-btn" onclick="copyToClipboard('${escapedAlt}')">
+                        📋 Copy to Clipboard
+                    </button>
+                </div>
+            </div>
+        `;
+    }
+
+    function formatSuggestions(text) {
+        if (!text) return '<em>No suggestions available</em>';
+        // Convert numbered list to HTML
+        return text
+            .replace(/(\d+)\.\s+/g, '<li>')
+            .replace(/\n/g, '</li>')
+            .replace(/<li>/, '<ol><li>')
+            .replace(/$/, '</li></ol>')
+            .replace(/<\/li><\/li>/g, '</li>');
+    }
+
+    function escapeHtml(text) {
+        if (!text) return '';
+        const map = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' };
+        return text.replace(/[&<>"']/g, m => map[m]);
+    }
+});
+
+// Global functions for copy buttons
+function copyToField(fieldId, text) {
+    const field = document.getElementById(fieldId);
+    if (field) {
+        field.value = text.replace(/&quot;/g, '"').replace(/&#039;/g, "'").replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>');
+        field.focus();
+        field.dispatchEvent(new Event('change', { bubbles: true }));
+        showToast('✓ Copied to field!');
+    } else {
+        showToast('Field not found. Please copy manually.', 'error');
+    }
+}
+
+function copyToClipboard(text) {
+    const decodedText = text.replace(/&quot;/g, '"').replace(/&#039;/g, "'").replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>');
+    navigator.clipboard.writeText(decodedText).then(() => {
+        showToast('✓ Copied to clipboard!');
+    }).catch(() => {
+        showToast('Failed to copy. Please copy manually.', 'error');
+    });
+}
+
+function generateAltForImage(encodedSrc, index) {
+    const src = decodeURIComponent(encodedSrc);
+    const options = Joomla.getOptions('ai_seo_buttons');
+    if (!options || !options.ajaxUrl) return;
+
+    const btn = event.target;
+    btn.disabled = true;
+    btn.textContent = 'Generating...';
+
+    fetch(options.ajaxUrl + '&ai_seo_task=generateAlt', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({ image_url: src })
+    })
+        .then(r => r.json())
+        .then(data => {
+            if (data.error) {
+                showToast('Error: ' + data.error, 'error');
+            } else {
+                showToast('Alt text: ' + data.alt_text);
+                copyToClipboard(data.alt_text);
+            }
+        })
+        .catch(err => showToast('Request failed', 'error'))
+        .finally(() => {
+            btn.disabled = false;
+            btn.textContent = 'Generate Alt';
+        });
+}
+
+function showToast(message, type = 'success') {
+    const existing = document.querySelector('.ai-seo-toast');
+    if (existing) existing.remove();
+
+    const toast = document.createElement('div');
+    toast.className = 'ai-seo-toast ' + type;
+    toast.textContent = message;
+    document.body.appendChild(toast);
+
+    setTimeout(() => toast.classList.add('show'), 10);
+    setTimeout(() => {
+        toast.classList.remove('show');
+        setTimeout(() => toast.remove(), 300);
+    }, 3000);
+}
+
+function applyRewrittenContent() {
+    if (!window.aiSeoTempContent) return;
+
+    const newContent = window.aiSeoTempContent;
+
+    // Try TinyMCE first
+    if (typeof tinymce !== 'undefined') {
+        const editor = tinymce.get('jform_articletext') || tinymce.activeEditor;
+        if (editor) {
+            editor.setContent(newContent);
+            showToast('✅ Content updated successfully!');
+            // Remove the result box
+            const resultBox = document.querySelector('#ai-seo-results-content .ai-seo-result');
+            if (resultBox) resultBox.remove();
+            return;
+        }
+    }
+
+    // Fallback to textarea
+    const textarea = document.querySelector('[name="jform[articletext]"]') ||
+        document.querySelector('#jform_articletext');
+    if (textarea) {
+        textarea.value = newContent;
+        textarea.dispatchEvent(new Event('change', { bubbles: true }));
+        showToast('✅ Content updated successfully!');
+        // Remove the result box
+        const resultBox = document.querySelector('#ai-seo-results-content .ai-seo-result');
+        if (resultBox) resultBox.remove();
+    } else {
+        alert('Could not find editor to update. Please copy manually.');
+    }
+}

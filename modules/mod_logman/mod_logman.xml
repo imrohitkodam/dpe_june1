@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+    <identifier>mod://site/logman</identifier>
+    <name>MOD_LOGMAN</name>
+    <author>Joomlatools</author>
+    <creationDate>March 2025</creationDate>
+    <copyright>Copyright (C) 2011 Timble CVBA (http://www.timble.net)</copyright>
+    <license>GNU GPLv3 - http://www.gnu.org/licenses/gpl.html</license>
+    <authorEmail>support@joomlatools.com</authorEmail>
+    <authorUrl>www.joomlatools.com</authorUrl>
+    <version>6.0.0</version>
+    <description>MOD_LOGMAN_DESCRIPTION</description>
+
+    <files>
+        <filename module="mod_logman">mod_logman.php</filename>
+        <filename>html.php</filename>
+        <filename>mod_logman.xml</filename>
+        <folder>language</folder>
+        <folder>tmpl</folder>
+    </files>
+
+    <config>
+        <fields name="params" addfieldpath="/administrator/components/com_logman/forms/fields">
+            <fieldset name="basic">
+                <field name="limit" type="text" default="10" label="LIST_COUNT" description="LIST_COUNT_DESCRIPTION" />
+                <field name="user_filter" type="radio" default="0" class="btn-group" label="SHOW_OWN_ACTIVITIES" description="SHOW_OWN_ACTIVITIES_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="package" type="logmanpackagesactions" label="SHOW_FROM_PACKAGE" multiple="true" deselect="true" description="SHOW_FROM_PACKAGE_DESC"/>
+                <field name="show_date" type="radio" default="0" class="btn-group" label="SHOW_DATE" description="SHOW_DATE_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="show_time" type="radio" default="0" class="btn-group" label="SHOW_TIME" description="SHOW_TIME_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="show_icons" type="radio" default="1" class="btn-group" label="SHOW_ICONS" description="SHOW_ICONS_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="impression_filter" type="list" default="all" label="IMPRESSION_FILTERING" description="IMPRESSION_FILTERING_DESCRIPTION">
+                    <option value="all">IMPRESSION_FILTERING_ALL</option>
+                    <option value="ignore_impressions">IMPRESSION_FILTERING_NONE_IMPRESSIONS</option>
+                    <option value="impressions">IMPRESSION_FILTERING_IMPRESSIONS_ONLY</option>
+                </field>
+            </fieldset>
+            <fieldset name="advanced">
+                <field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+            </fieldset>
+        </fields>
+    </config>
+</extension>

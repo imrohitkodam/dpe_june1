@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="jma_latestitems_flexi" addfieldpath="/plugins/emailalerts/jma_latestitems_flexi/jma_latestitems_flexi/element/joomla16">
+		<fieldset name="legacy">
+			<field name="catid" type="flexicategoriesusers" default="1" label="LBL_CATEGORY_LN_FLEXI" element="jma_latestitems_flexi" multiple="multiple" description="DESC_CATEGORY_LN_flexi" key_field='id' value_field='title' />
+			<field name="user_id" type="list" default="0" label="LBL_AUTHORS_LN_FLEXI" description="DESC_AUTHORS_LN_FLEXI">
+				<option value="0">AUTHOR_ANY_LN_FLEXI</option>
+				<option value="by_me">AUTHOR_ADD_MOD_ME_LN_FLEXI</option>
+				<option value="not_me">AUTHOR_ADD_MOD_NOT_ME_LN_FLEXI</option>
+			</field>
+			<field name="count" type="text" default="5" label="LBL_COUNT_LN_FLEXI" class="required validate-numeric inputbox" description="DESC_COUNT_LN_FLEXI" />
+		</fieldset>
+	</fields>
+</form>

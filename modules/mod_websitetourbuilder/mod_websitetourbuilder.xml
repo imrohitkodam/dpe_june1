@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+	<name>Web Site Tour Builder</name>
+	<author>JoomlaForce</author>
+	<creationDate>January 2014</creationDate>
+	<copyright>JoomlaForce Team</copyright>
+	<license>GNU/GPL 3 http://www.gnu.org/licenses/gpl.html</license>
+	<authorEmail>support@joomlaforce.com</authorEmail>
+	<authorUrl>www.joomlaforce.com</authorUrl>
+	<version>1.5</version>
+	<description>MOD_WEBSITETOUR_XML_DESCRIPTION</description>
+	<scriptfile>installer.php</scriptfile>
+	<files>
+		<filename module="mod_websitetourbuilder">mod_websitetourbuilder.php</filename>
+		<folder>tmpl</folder>
+		<folder>assets</folder>
+		<folder>language</folder>
+		<folder>elements</folder>
+        <folder>theme</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>style.css.php</filename>
+		<filename>mod_websitetourbuilder.xml</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_websitetourbuilder.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_websitetourbuilder.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params" addfieldpath="/libraries/jforce/elements">
+		<fieldset name="basic" label="MOD_WEBSITETOUR_GENERAL" addfieldpath="/modules/mod_websitetourbuilder/elements">
+		<field type="jforceheader"/>
+		<field type="library" style="info" />
+			
+		<field name="@block_general_a" type="nn_block" start="1" label="MOD_WEBSITETOUR_GENERAL" />
+			<field name="displayas" type="list" default="" label="MOD_WEBSITETOUR_DISPLAYAS" description="MOD_WEBSITETOUR_DISPLAYASDESC">
+				<option value="0">Link</option>
+				<option value="1">Button</option>
+				<option value="2">AutoStart on Load</option>
+				<option value="3">LightBox On Load</option>
+				<option value="4">No Display</option>
+			</field>	
+			<field name="spacer" type="spacer" label="MOD_WEBSITETOUR_DISPLAYASDESC" description="" class="span12 small" />
+			
+			  <field name="enable_cookies" type="radio" default="0" class="btn-group" 
+				label="MOD_WEBSITETOUR_ENABLE_COOKIES_LABEL" 
+				description="MOD_WEBSITETOUR_ENABLE_COOKIES_DESC">                
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+			<field name="expire_cookies" type="text" size="30" default="7" label="MOD_WEBSITETOUR_EXPIRE_COOKIES" description="MOD_WEBSITETOUR_EXPIRE_COOKIES_DESC" />
+			
+			<field name="enable_keyboard" type="radio" default="0" class="btn-group" 
+				label="MOD_WEBSITETOUR_ENABLE_KEYBOARD_LABEL" 
+				description="MOD_WEBSITETOUR_ENABLE_KEYBOARD_DESC">                
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+            <field name="show_timer_controls" type="radio" default="0" class="btn-group" 
+				label="MOD_WEBSITETOUR_SHOW_TIMER_CONTROLS_LABEL" 
+				description="MOD_WEBSITETOUR_SHOW_TIMER_CONTROLS_DESC">                
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+    			
+            <field name="popupTheme" type="popuptheme" default="default" label="MOD_WEBSITETOUR_POPUP_THEME_LABEL" description="MOD_WEBSITETOUR_POPUP_THEME_DESC"  addfieldpath="/modules/mod_websitetourbuilder/elements"/>				
+		<field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"/>
+		
+		<field name="@block_general_b" type="nn_block" end="1" />
+		
+		<field name="@block_lightbox_a" type="nn_block" start="1" label="MOD_WEBSITETOUR_LIGHTBOXSETTINGS" />
+			
+			
+			<field name="lightboxtitle" type="text" size="30" default="Tour Guide" label="MOD_WEBSITETOUR_LIGHTBOXTITLE" description="MOD_WEBSITETOUR_LIGHTBOXTITLE_ADV" filter="safehtml" />
+			<field name="lightboxdesc" type="textarea" default="Launch Guide Tour" label="MOD_WEBSITETOUR_LIGHTBOXDESC" description="MOD_WEBSITETOUR_LIGHTBOXDESC_ADV" filter="safehtml" />
+			     <field name="lightboxTheme" type="lightboxtheme" default="default" label="MOD_WEBSITETOUR_LIGHTBOX_THEME_LABEL" description="MOD_WEBSITETOUR_LIGHTBOX_THEME_DESC"  addfieldpath="/modules/mod_websitetourbuilder/elements"/>
+			
+				<field name="ltoverlaycolor" type="color" default="#fff" label="MOD_WEBSITETOUR_LIGHTBOXOVERLAYCOLOR" description="MOD_WEBSITETOUR_LIGHTBOXOVERLAYCOLOR_DESC" />
+			<field name="ltoverlayopacity" type="text" default="0.9" label="MOD_WEBSITETOUR_LIGHTBOXOVERLAYOPACITY" description="MOD_WEBSITETOUR_LIGHTBOXOVERLAYOPACITY_DESC" />
+		<field name="@block_lightbox_b" type="nn_block" end="1" />
+		
+		
+		<field name="@block_jquery_a" type="nn_block" start="1" label="MOD_WEBSITETOUR_JQUERYSETTINGS" />
+		<field type="message" text="JFORCE_JQUERY_INFO_JQUERYVERSIONREQUIRED" style="info" />
+				<field name="load_jquery" type="radio" default="2" class="btn-group" 
+					label="JFORCE_JQUERY_FIELD_LOADJQUERY_LABEL" 
+					description="JFORCE_JQUERY_FIELD_LOADJQUERY_DESC">
+                    <option value="2">JFORCE_JQUERY_VALUE_LOCAL</option>
+                    <option value="1">JFORCE_JQUERY_VALUE_GOOGLECDN</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="jquery_version" type="radio" default="1.7.2" class="btn-group" 
+					label="JFORCE_JQUERY_FIELD_JQUERYVERSION_LABEL" 
+					description="JFORCE_JQUERY_FIELD_JQUERYVERSION_DESC">
+                    <option value="1.5.2">1.5</option>
+                    <option value="1.6.4">1.6</option>
+                    <option value="1.7.2">1.7</option>
+                    <option value="1.8.3">1.8</option>
+                </field>
+				<field type="jqueasy"/>
+		
+			<field name="@block_jquery_b" type="nn_block" end="1" />
+				
+		</fieldset>
+		<fieldset name="slides" label="MOD_WEBSITETOUR_STEPS" addfieldpath="/modules/mod_websitetourbuilder/elements">
+				<field
+					name="slides"
+					type="websitetourmanager"
+					label=""
+					description=""
+					default=""
+					filter="raw"
+				/>		
+			</fieldset>
+		</fields>
+	</config>
+</extension>

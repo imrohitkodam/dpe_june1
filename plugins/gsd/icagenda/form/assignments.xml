@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="assignments">
+		<!-- Article -->
+		<fieldset name="single">
+			<fields name="icagendasingle">
+				<field name="assignment_state" type="assignmentselection" 
+					label="Event"
+					description="PLG_GSD_ICAGENDA_ASSIGN_EVENT_DESC"
+				/>
+				<field name="selection" type="componentitems" 
+					label="NR_SELECTION" 
+					description="PLG_GSD_ICAGENDA_ASSIGN_EVENT_SELECTION_DESC"
+					multiple="true"
+					table="icagenda_events"
+					column_state="state"
+				/>
+        	</fields>
+    	</fieldset>
+		<!-- Category -->
+		<fieldset name="category">
+			<fields name="icagendacategory">
+				<field name="assignment_state" type="assignmentselection"
+	                label="NR_CATEGORIES"
+	                description="PLG_GSD_ICAGENDA_ASSIGN_CATEGORY_DESC"
+	            />
+	            <field name="selection" type="nricagendacategories" 
+	                label="NR_SELECTION" 
+	                description="NR_CATEGORIES_DESC"
+	                multiple="true" 
+	            />
+        	</fields>
+    	</fieldset>
+	</fields>
+</form>

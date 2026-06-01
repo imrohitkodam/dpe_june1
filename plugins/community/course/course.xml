@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0"  type="plugin" group="community" method="upgrade">
+	<name>PLG_COMMUNITY_COURSE</name>
+	<author>Techjoomla</author>
+	<creationDate>13th Jul 2023</creationDate>
+	<copyright>Copyright (C) 2014 - 2023 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<version>4.0.5</version>
+	<isapplication>true</isapplication>
+	<description>PLG_COMMUNITY_COURSE_TITLE_DESC</description>
+   <languages folder="language/en-GB">
+		<language tag="en-GB">en-GB.plg_community_course.ini</language>
+		<language tag="en-GB">en-GB.plg_community_course.sys.ini</language>
+	</languages>
+	<files>
+		<filename plugin="course">course.php</filename>
+		<folder>assets</folder>
+	</files>
+</extension>

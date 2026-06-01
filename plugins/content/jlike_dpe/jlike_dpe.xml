@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="content" method="upgrade">
+    <name>plg_content_jlike_dpe</name>
+	<author>Techjoomla</author>
+        <copyright>Copyright © 2013-2018 TechJoomla. All rights reserved.</copyright>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>http://www.techjoomla.com</authorUrl>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    	<creationDate>27th Oct 2015</creationDate>
+	<version>1.2.1</version>
+        <description>PLG_CONTENT_DPE_DPE_XML_DESCRIPTION</description>
+        <files>
+		<filename plugin="jlike_dpe">jlike_dpe.php</filename>
+    	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="jlike_comments" type="radio" class="btn-group" label="PLG_DPE_ALLOW_COMMENT" default="1" description="PLG_DPE_ALLOW_COMMENT_DESC">
+					<option value="1">PLG_DPE_YES</option>
+					<option value="0">PLG_DPE_NO</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
