@@ -278,6 +278,19 @@
 			<option value="0">JNo</option>
 			<option value="1">JYes</option>
 		</field>
+		<field name="enable_ai" type="radio" default="0"
+			   label="Enable AI Insights"
+			   description="Enable Google Gemini AI Insights for UCM Forms"
+			   class="btn-group btn-group-yesno">
+			<option value="0">JNo</option>
+			<option value="1">JYes</option>
+		</field>
+		<field name="gemini_api_key" type="text"
+			   label="Gemini API Key"
+			   description="Enter Google Gemini API Key"
+			   showon="enable_ai:1"
+			   required="true"
+		/>
 		<field name="coursefilter" type="sql" style="width: 100%;" label="COM_TJLMS_FILTER_SELECT_COURSE_CHOOSE"  description="COM_TJLMS_FILTER_SELECT_COURSE_CHOOSE" query="SELECT id, title FROM #__tjlms_courses  where state = 1 ORDER BY title ASC" key_field="id" value_field="title" required="true" >
 			<option value="">COM_TJLMS_FILTER_SELECT_COURSE</option>
 		</field>

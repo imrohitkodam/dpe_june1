@@ -53,6 +53,43 @@
 			<field name="layout" type="componentlayout" label="COM_TJUCM_FORM_LBL_TYPE_LAYOUT" description="COM_TJUCM_FORM_DESC_TYPE_LAYOUT" useglobal="true" extension="com_tjucm" view="itemform" />
 			<field name="details_layout" type="componentlayout" label="COM_TJUCM_DETAILS_LBL_TYPE_LAYOUT" description="COM_TJUCM_DETAILS_DESC_TYPE_LAYOUT" useglobal="true" extension="com_tjucm" view="item" />
 			<field name="list_layout" type="componentlayout" label="COM_TJUCM_LIST_LBL_TYPE_LAYOUT" description="COM_TJUCM_LIST_DESC_TYPE_LAYOUT" useglobal="true" extension="com_tjucm" view="items" />
+			<field name="ai_enable_insights" type="radio" class="btn-group" default="0" label="Enable AI Insights" description="Enable AI Insights integration for this UCM Type">
+				<option value="0">JNo</option>
+				<option value="1">JYes</option>
+			</field>
+			<field name="ai_prompt_template" type="textarea" cols="5" rows="5" default="Analyze the following UCM assessment data.
+
+Generate:
+1. Executive Summary
+2. Key Findings
+3. Risks Identified
+4. Recommendations
+5. Improvement Actions
+
+Only use the provided information. Do not make assumptions." label="AI Prompt Template" description="Default prompt template used for AI generation" showon="ai_enable_insights:1" />
+			<field name="ai_system_instruction" type="textarea" cols="5" rows="5" default="You are an assistant for this assessment form. You are strictly restricted to answering questions and providing analysis, summaries, or insights based *only* on the provided form data. If the user's query is not about this specific form or its contents, or asks you to perform unrelated tasks (e.g. general knowledge, writing code, translations of unrelated text, math problems, etc.), you must politely decline to answer, stating that you can only help with questions related to this specific assessment form. Do not make assumptions or use external knowledge." label="AI System Instruction" description="System instruction to guide AI behavior and restrict answers to form data only." showon="ai_enable_insights:1" />
+			<field name="ai_allow_custom_prompt" type="radio" class="btn-group" default="0" label="Allow Custom Prompt" description="Allow users to modify prompts on the frontend" showon="ai_enable_insights:1">
+				<option value="0">JNo</option>
+				<option value="1">JYes</option>
+			</field>
+			<field name="ai_provider" type="list" default="gemini" label="AI Provider" description="Select the AI service provider" showon="ai_enable_insights:1">
+				<option value="gemini">Google Gemini</option>
+			</field>
+			<field name="ai_show_button" type="radio" class="btn-group" default="1" label="Show AI Button" description="Display AI button on the frontend form view" showon="ai_enable_insights:1">
+				<option value="0">JNo</option>
+				<option value="1">JYes</option>
+			</field>
+			<field name="ai_enable_graph" type="radio" class="btn-group" default="0" label="Enable Graph Generation" description="Allow AI to generate charts and graphs" showon="ai_enable_insights:1">
+				<option value="0">JNo</option>
+				<option value="1">JYes</option>
+			</field>
+			<field name="ai_data_redaction" type="radio" class="btn-group" default="1" label="Data Redaction Enabled" description="Remove sensitive data (PII) before AI processing" showon="ai_enable_insights:1">
+				<option value="0">JNo</option>
+				<option value="1">JYes</option>
+			</field>
+			<field name="ai_pii_fields" type="piifields" multiple="true" label="Select PII Fields to Redact" description="Choose which fields contain sensitive PII data to be redacted/replaced before sending to AI" showon="ai_enable_insights:1[AND]ai_data_redaction:1" addfieldpath="administrator/components/com_tjucm/models/fields" />
+			<field name="ai_disclaimer" type="textarea" cols="3" rows="3" default="Beta feature. AI-generated content is advisory and not authoritative." label="AI Disclaimer Text" description="Disclaimer text shown on the AI generation screen" showon="ai_enable_insights:1" />
+			<field name="ai_max_tokens" type="number" default="2048" label="Max Tokens" description="Maximum token size for the AI model prompt" showon="ai_enable_insights:1" />
 			<!-- DPE - hack - start -->
 				<field name="type_options" type="textarea" cols="5" rows="5" label="COM_TJUCM_FORM_LBL_TYPE_PARAMS" description="COM_TJUCM_FORM_DESC_TYPE_PARAMS" hint="COM_TJUCM_FORM_DESC_TYPE_PARAMS" />
 			<!-- DPE - hack - end -->
@@ -63,3 +100,4 @@
 		<field name="rules" type="rules" label="JFIELD_RULES_LABEL" translate_label="false" filter="rules" validate="rules" class="inputbox" component="com_tjucm" section="type" />
 	</fieldset>
 </form>
+administrator/components/com_tjucm/models/forms/type.xml

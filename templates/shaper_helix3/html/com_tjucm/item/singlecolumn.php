@@ -17,17 +17,15 @@ use Joomla\CMS\Session\Session;
 
 
 $input = Factory::getApplication()->input;
-$visualization   = $input->get('layout', '', 'STRING');
+$visualization = $input->get('layout', '', 'STRING');
 
 $user = Factory::getUser();
 
-if ($this->form_extra)
-{
+if ($this->form_extra) {
 	$count = 0;
 	$xmlFieldSets = array();
 
-	foreach ($this->formXml as $k => $xmlFieldSet)
-	{
+	foreach ($this->formXml as $k => $xmlFieldSet) {
 		$xmlFieldSets[$count] = $xmlFieldSet;
 		$count++;
 	}
@@ -35,60 +33,52 @@ if ($this->form_extra)
 	// $layout = new FileLayout('detail.fields', JPATH_ROOT . '/components/com_tjucm');
 	$layout = new FileLayout('detail.singlecolumnFields', JPATH_ROOT . '/components/com_tjucm');
 
-	if ($visualization == 'visualization')
-	{
+	if ($visualization == 'visualization') {
 		// Call the JLayout to render the fields in the details view
 		$layout = new FileLayout('detail.visualization', JPATH_ROOT . '/components/com_tjucm');
 	}
 
-	if ($visualization == 'ropdataflowdragdrop')
-	{
+	if ($visualization == 'ropdataflowdragdrop') {
 		// Call the JLayout to render the fields in the details view
 		$layout = new FileLayout('detail.ropdataflowdragdrop', JPATH_ROOT . '/components/com_tjucm');
 	}
 
 	echo $layout->render(array('xmlFormObject' => $xmlFieldSets, 'formObject' => $this->form_extra, 'itemData' => $this->item));
-}
-else
-{
+} else {
 	?>
 	<div class="alert alert-info">
-		<?php echo Text::_('COM_TJUCM_NO_DATA_FOUND');?>
+		<?php echo Text::_('COM_TJUCM_NO_DATA_FOUND'); ?>
 	</div>
 	<?php
 }
-
 ?>
 <div>&nbsp;</div>
 <?php if (!in_array($visualization, array('visualization', 'ropdataflowdragdrop'))): ?>
-<div>
-	<div class="form-group">
-		<?php
-		if (($user->authorise('core.type.edititem', 'com_tjucm.type.' . $this->ucmTypeId)) || ($user->authorise('core.type.editownitem', 'com_tjucm.type.' . $this->ucmTypeId) && Factory::getUser()->id == $this->item->created_by))
-		{
-			$redirectURL = Route::_('index.php?option=com_tjucm&task=item.edit&id=' . $this->item->id . '&client=' . $this->client, false);
-			?>
-				<!-- <a class="btn btn-primary px-25 ml-10" href="<?php //echo $redirectURL; ?>"><?php //echo JText::_("COM_TJUCM_EDIT_ITEM"); ?></a> -->
+	<div>
+		<div class="form-group">
 			<?php
-		}
+			if (($user->authorise('core.type.edititem', 'com_tjucm.type.' . $this->ucmTypeId)) || ($user->authorise('core.type.editownitem', 'com_tjucm.type.' . $this->ucmTypeId) && Factory::getUser()->id == $this->item->created_by)) {
+				$redirectURL = Route::_('index.php?option=com_tjucm&task=item.edit&id=' . $this->item->id . '&client=' . $this->client, false);
+				?>
+				<!-- <a class="btn btn-primary px-25 ml-10" href="<?php //echo $redirectURL; ?>"><?php //echo JText::_("COM_TJUCM_EDIT_ITEM"); ?></a> -->
+				<?php
+			}
 
-		$deleteOwn = false;
+			$deleteOwn = false;
 
-		if ($user->authorise('core.type.deleteownitem', 'com_tjucm.type.' . $this->ucmTypeId))
-		{
-			$deleteOwn = (Factory::getUser()->id == $this->item->created_by ? true : false);
-		}
+			if ($user->authorise('core.type.deleteownitem', 'com_tjucm.type.' . $this->ucmTypeId)) {
+				$deleteOwn = (Factory::getUser()->id == $this->item->created_by ? true : false);
+			}
 
-		if ($user->authorise('core.type.deleteitem', 'com_tjucm.type.' . $this->ucmTypeId) || $deleteOwn)
-		{
-			$redirectURL = Route::_('index.php?option=com_tjucm&task=itemform.remove&id=' . $this->item->id . '&client=' . $this->client . "&" . Session::getFormToken() . '=1', false);
-			?>
-<!--
+			if ($user->authorise('core.type.deleteitem', 'com_tjucm.type.' . $this->ucmTypeId) || $deleteOwn) {
+				$redirectURL = Route::_('index.php?option=com_tjucm&task=itemform.remove&id=' . $this->item->id . '&client=' . $this->client . "&" . Session::getFormToken() . '=1', false);
+				?>
+				<!--
 			<a class="btn btn-default" href="<?php echo $redirectURL; ?>"><?php echo Text::_("COM_TJUCM_DELETE_ITEM"); ?></a>
 -->
-			<?php
-		}
-		?>
+				<?php
+			}
+			?>
+		</div>
 	</div>
-</div>
 <?php endif; ?>

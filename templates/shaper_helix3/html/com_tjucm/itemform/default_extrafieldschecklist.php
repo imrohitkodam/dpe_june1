@@ -530,6 +530,27 @@ if ($this->form_extra)
 						}
 					}
 
+					// Check if AI is enabled globally and for this type
+					$dpeParams = \Joomla\CMS\Component\ComponentHelper::getParams('com_dpe');
+					$enableAi = $dpeParams->get('enable_ai', 0);
+					
+					// Load type params
+					$db = Factory::getDbo();
+					$query = $db->getQuery(true)
+						->select('params')
+						->from('#__tj_ucm_types')
+						->where('unique_identifier = ' . $db->quote($this->client));
+					$db->setQuery($query);
+					$typeParamsJson = $db->loadResult();
+					$typeParams = json_decode($typeParamsJson);
+
+					$aiEnabledForType = isset($typeParams->ai_enable_insights) && $typeParams->ai_enable_insights == 1;
+
+					if ($enableAi && $aiEnabledForType && count($fieldSets) > 1)
+					{
+						include __DIR__ . '/ask_kb.php';
+					}
+
 					if (count($fieldSets) > 1)
 					{
 						echo HTMLHelper::_('bootstrap.endTabSet');

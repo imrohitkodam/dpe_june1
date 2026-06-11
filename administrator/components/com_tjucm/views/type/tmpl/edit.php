@@ -56,6 +56,7 @@ HTMLHelper::_('behavior.keepalive');
 							<?php echo $this->form->renderField('type_description'); ?>
 
 							<?php foreach ($this->form->getGroup('params') as $field) : ?>
+								<?php if (strpos($field->name, '[ai_') !== false) continue; ?>
 								<?php echo $field->renderField(); ?>
 							<?php endforeach; ?>
 
@@ -69,6 +70,25 @@ HTMLHelper::_('behavior.keepalive');
 					</div>
 				</div>
 			<?php echo HTMLHelper::_('bootstrap.endTab'); ?>
+
+			<?php 
+			$dpeParams = \Joomla\CMS\Component\ComponentHelper::getParams('com_dpe');
+			$enableAi = $dpeParams->get('enable_ai', 0);
+			if ($enableAi) : ?>
+				<?php echo HTMLHelper::_('bootstrap.addTab', 'myTab', 'ai_settings', 'AI Settings'); ?>
+				<div class="row-fluid">
+					<div class="span10 form-horizontal">
+						<fieldset class="adminform">
+							<?php foreach ($this->form->getGroup('params') as $field) : ?>
+								<?php if (strpos($field->name, '[ai_') !== false) : ?>
+									<?php echo $field->renderField(); ?>
+								<?php endif; ?>
+							<?php endforeach; ?>
+						</fieldset>
+					</div>
+				</div>
+				<?php echo HTMLHelper::_('bootstrap.endTab'); ?>
+			<?php endif; ?>
 
 			<?php if (Factory::getUser()->authorise('core.admin', 'tjucm')) : ?>
 				<?php echo HTMLHelper::_('bootstrap.addTab', 'myTab', 'permissions', Text::_('JGLOBAL_ACTION_PERMISSIONS_LABEL', true)); ?>

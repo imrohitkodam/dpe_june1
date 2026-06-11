@@ -57,8 +57,8 @@ else
 	</div>
 	<?php
 }
-
 ?>
+
 <div>&nbsp;</div>
 <?php if (!in_array($visualization, array('visualization', 'ropdataflowdragdrop'))): ?>
 <div>
@@ -92,3 +92,4 @@ else
 	</div>
 </div>
 <?php endif; ?>
+

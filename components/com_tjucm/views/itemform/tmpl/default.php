@@ -23,38 +23,36 @@ HTMLHelper::_('formbehavior.chosen', 'select');
 HTMLHelper::_('jquery.token');
 
 /*
-* Script to show alert box if form changes are made and user is closing/refreshing/navigating the tab
-* without saving the content
-*/
+ * Script to show alert box if form changes are made and user is closing/refreshing/navigating the tab
+ * without saving the content
+ */
 HTMLHelper::script('media/com_tjucm/js/vendor/jquery/jquery.are-you-sure.js');
 
 /*
-* Script to show alert box if form changes are made and user is closing/refreshing/navigating the tab
-* without saving the content on iphone|ipad|ipod|opera
-*/
+ * Script to show alert box if form changes are made and user is closing/refreshing/navigating the tab
+ * without saving the content on iphone|ipad|ipod|opera
+ */
 HTMLHelper::script('media/com_tjucm/js/vendor/shim/ays-beforeunload-shim.js');
 
 HTMLHelper::script('administrator/components/com_tjfields/assets/js/tjfields.js');
+HTMLHelper::script('media/com_dpe/js/tjucmitemform.js');
 
 // Load admin language file
 $lang = Factory::getLanguage();
 $lang->load('com_tjucm', JPATH_SITE);
 
-$jinput                    = Factory::getApplication();
-$editRecordId              = $jinput->input->get("id", '', 'INT');
-$baseUrl                   = $jinput->input->server->get('REQUEST_URI', '', 'STRING');
-$calledFrom                = (strpos($baseUrl, 'administrator')) ? 'backend' : 'frontend';
-$layout                    = ($calledFrom == 'frontend') ? 'default' : 'edit';
-$dynamicLayout             = $this->setLayout($this->layout);
+$jinput = Factory::getApplication();
+$editRecordId = $jinput->input->get("id", '', 'INT');
+$baseUrl = $jinput->input->server->get('REQUEST_URI', '', 'STRING');
+$calledFrom = (strpos($baseUrl, 'administrator')) ? 'backend' : 'frontend';
+$layout = ($calledFrom == 'frontend') ? 'default' : 'edit';
+$dynamicLayout = $this->setLayout($this->layout);
 $fieldsets_counter_deafult = 0;
-$setnavigation             = false;
+$setnavigation = false;
 
-if ($this->item->id)
-{
+if ($this->item->id) {
 	$itemState = ($this->item->draft && ($this->allow_auto_save || $this->allow_draft_save)) ? 1 : 0;
-}
-else
-{
+} else {
 	$itemState = ($this->allow_auto_save || $this->allow_draft_save) ? 1 : 0;
 }
 
@@ -88,31 +86,31 @@ Factory::getDocument()->addScriptDeclaration('
 	};
 ');
 ?>
-<form action="<?php echo Route::_('index.php');?>" method="post" enctype="multipart/form-data" name="adminForm" id="item-form" class="form-validate">
+<form action="<?php echo Route::_('index.php'); ?>" method="post" enctype="multipart/form-data" name="adminForm"
+	id="item-form" class="form-validate">
 	<?php
-	if ($this->allow_auto_save == '1')
-	{
-	?>
-	<div class="alert alert-info" style="display:none;" id="tjucm-auto-save-disabled-msg">
-		<a class="close" data-dismiss="alert">×</a>
-		<div class="msg">
-			<div>
-			<?php echo Text::_("COM_TJUCM_MSG_FOR_AUTOSAVE_FEATURE_DISABLED"); ?>
+	if ($this->allow_auto_save == '1') {
+		?>
+		<div class="alert alert-info" style="display:none;" id="tjucm-auto-save-disabled-msg">
+			<a class="close" data-dismiss="alert">×</a>
+			<div class="msg">
+				<div>
+					<?php echo Text::_("COM_TJUCM_MSG_FOR_AUTOSAVE_FEATURE_DISABLED"); ?>
+				</div>
 			</div>
 		</div>
-	</div>
-	<?php
+		<?php
 	}
 	?>
 	<div>
 		<fieldset>
 			<input type="hidden" name="jform[id]" id="recordId" value="<?php echo $editRecordId; ?>" />
 			<input type="hidden" name="jform[ordering]" value="<?php echo $this->item->ordering; ?>" />
-			<input type="hidden" name="jform[state]" value="<?php echo $this->item->state;?>" />
-			<input type="hidden" name="jform[client]" value="<?php echo $this->client;?>" />
+			<input type="hidden" name="jform[state]" value="<?php echo $this->item->state; ?>" />
+			<input type="hidden" name="jform[client]" value="<?php echo $this->client; ?>" />
 			<input type="hidden" name="jform[checked_out]" value="<?php echo $this->item->checked_out; ?>" />
 			<input type="hidden" name="jform[checked_out_time]" value="<?php echo $this->item->checked_out_time; ?>" />
-			<input type="hidden" name="itemState" id="itemState" value="<?php echo $itemState; ?>"/>
+			<input type="hidden" name="itemState" id="itemState" value="<?php echo $itemState; ?>" />
 			<?php echo $this->form->renderField('created_by'); ?>
 			<?php echo $this->form->renderField('created_date'); ?>
 			<?php echo $this->form->renderField('modified_by'); ?>
@@ -120,55 +118,47 @@ Factory::getDocument()->addScriptDeclaration('
 		</fieldset>
 	</div>
 	<?php
-		if ($this->form_extra)
-		{
-			if ($this->id != '0')
-			{
-				?>
-				<div class="page-header">
-					<h1 class="page-title">
+	if ($this->form_extra) {
+		if ($this->id != '0') {
+			?>
+			<div class="page-header">
+				<h1 class="page-title">
 					<?php echo Text::_("COM_TJUCM_EDIT_FORM") . ": " . strtoupper($this->title); ?>
 					<h1>
-				</div>
-				<?php
-			}
-			else
-			{
+			</div>
+			<?php
+		} else {
 			?>
 			<div class="page-header">
 				<h1 class="page-title">
 					<?php echo strtoupper($this->title); ?>
-				<h1>
-				</div><?php
-			}?>
-			<div class="form-horizontal">
+					<h1>
+			</div><?php
+		} ?>
+		<div class="form-horizontal">
 			<?php
 			// Code to display the form
-			if ($dynamicLayout == "default")
-			{
+			if ($dynamicLayout == "default") {
 				echo $this->loadTemplate('extrafields');
-			}
-			else
-			{
+			} else {
 				echo $this->loadTemplate('grid');
 			}
 			?>
-			</div>
-			<?php
-		}
+		</div>
+		<?php
+	}
 
-	if ($editRecordId)
-	{
-	?>
-	<div class="alert alert-success" style="display: block;">
-		<a class="close" data-dismiss="alert">×</a>
-		<div class="msg">
-			<div>
-			<?php echo Text::_("COM_TJUCM_NOTE_ON_FORM"); ?>
+	if ($editRecordId) {
+		?>
+		<div class="alert alert-success" style="display: block;">
+			<a class="close" data-dismiss="alert">×</a>
+			<div class="msg">
+				<div>
+					<?php echo Text::_("COM_TJUCM_NOTE_ON_FORM"); ?>
+				</div>
 			</div>
 		</div>
-	</div>
-	<?php
+		<?php
 	}
 	?>
 	<div id="draft_msg" class="alert alert-success" style="display: none;">
@@ -181,58 +171,55 @@ Factory::getDocument()->addScriptDeclaration('
 		// Show next previous buttons only when there are mulitple tabs/groups present under that field type
 		$fieldArray = $this->form_extra;
 
-		foreach ($fieldArray->getFieldsets() as $fieldName => $fieldset)
-		{
-			if (count($fieldArray->getFieldsets()) > 1)
-			{
+		foreach ($fieldArray->getFieldsets() as $fieldName => $fieldset) {
+			if (count($fieldArray->getFieldsets()) > 1) {
 				$setnavigation = true;
 			}
 		}
 
-		if (isset($setnavigation) && $setnavigation == true)
-		{
+		if (isset($setnavigation) && $setnavigation == true) {
 			?>
-			<button type="button" class="btn btn-primary" id="previous_button" >
+			<button type="button" class="btn btn-primary" id="previous_button">
 				<i class="icon-arrow-left-2"></i>
 				<?php echo Text::_('COM_TJUCM_PREVIOUS_BUTTON'); ?>
 			</button>
-			<button type="button" class="btn btn-primary" id="next_button" >
+			<button type="button" class="btn btn-primary" id="next_button">
 				<?php echo Text::_('COM_TJUCM_NEXT_BUTTON'); ?>
 				<i class="icon-arrow-right-2"></i>
 			</button>
 			<?php
 		}
 
-		if ($calledFrom == 'frontend')
-		{
+		if ($calledFrom == 'frontend') {
 			?>
 			<span class="pull-right">
-			<?php
-			if (($this->allow_auto_save || $this->allow_draft_save) && $itemState)
-			{
-				?>
-				<input type="button" class="btn btn-width150 br-0 btn-default font-normal" id="tjUcmSectionDraftSave"
-				value="<?php echo Text::_("COM_TJUCM_SAVE_AS_DRAFT_ITEM"); ?>"
-				onclick="tjUcmItemForm.saveUcmFormData();" />
 				<?php
-			}
-			?>
-			<input type="button" class="btn btn-success" value="<?php echo Text::_("COM_TJUCM_SAVE_ITEM"); ?>"
-			id="tjUcmSectionFinalSave" onclick="tjUcmItemForm.saveUcmFormData();" />
-			<input type="button" class="btn btn-warning" value="<?php echo Text::_("COM_TJUCM_CANCEL_BUTTON"); ?>" onclick="Joomla.submitbutton('itemform.cancel');" />
+				if (($this->allow_auto_save || $this->allow_draft_save) && $itemState) {
+					?>
+					<input type="button" class="btn btn-width150 br-0 btn-default font-normal" id="tjUcmSectionDraftSave"
+						value="<?php echo Text::_("COM_TJUCM_SAVE_AS_DRAFT_ITEM"); ?>"
+						onclick="tjUcmItemForm.saveUcmFormData();" />
+					<?php
+				}
+				?>
+				<input type="button" class="btn btn-success" value="<?php echo Text::_("COM_TJUCM_SAVE_ITEM"); ?>"
+					id="tjUcmSectionFinalSave" onclick="tjUcmItemForm.saveUcmFormData();" />
+				<input type="button" class="btn btn-warning" value="<?php echo Text::_("COM_TJUCM_CANCEL_BUTTON"); ?>"
+					onclick="Joomla.submitbutton('itemform.cancel');" />
 			</span>
 			<?php
 		}
 		?>
 	</div>
 	<div id="tjucm_loader">
-		<img src='<?php echo Uri::root();?>media/com_tjucm/gif/loading.gif'>
+		<img src='<?php echo Uri::root(); ?>media/com_tjucm/gif/loading.gif'>
 	</div>
-	<input type="hidden" name="layout" value="<?php echo $layout ?>"/>
-	<input type="hidden" name="task" value="itemform.save"/>
-	<input type="hidden" name="form_status" id="form_status" value=""/>
-	<input type="hidden" name="tjucm-autosave" id="tjucm-autosave" value="<?php echo $this->allow_auto_save;?>"/>
-	<input type="hidden" name="tjucm-bitrate" id="tjucm-bitrate" value="<?php echo $this->allow_bit_rate;?>"/>
-	<input type="hidden" name="tjucm-bitrate_seconds" id="tjucm-bitrate_seconds" value="<?php echo $this->allow_bit_rate_seconds;?>"/>	
+	<input type="hidden" name="layout" value="<?php echo $layout ?>" />
+	<input type="hidden" name="task" value="itemform.save" />
+	<input type="hidden" name="form_status" id="form_status" value="" />
+	<input type="hidden" name="tjucm-autosave" id="tjucm-autosave" value="<?php echo $this->allow_auto_save; ?>" />
+	<input type="hidden" name="tjucm-bitrate" id="tjucm-bitrate" value="<?php echo $this->allow_bit_rate; ?>" />
+	<input type="hidden" name="tjucm-bitrate_seconds" id="tjucm-bitrate_seconds"
+		value="<?php echo $this->allow_bit_rate_seconds; ?>" />
 	<?php echo HTMLHelper::_('form.token'); ?>
 </form>

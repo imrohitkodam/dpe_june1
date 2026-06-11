@@ -36,31 +36,27 @@ class TjucmControllerItemForm extends FormController
 	public function __construct()
 	{
 		$app = Factory::getApplication();
-		$this->client  = $app->input->get('client');
-		$this->created_by  = $app->input->get('created_by');
+		$this->client = $app->input->get('client');
+		$this->created_by = $app->input->get('created_by');
 
 		// If client is empty then get client from jform data
-		if (empty($this->client))
-		{
+		if (empty($this->client)) {
 			$data = $app->input->get('jform', array(), 'array');
-			$this->client  = $data['client'];
+			$this->client = $data['client'];
 		}
 
 		// If client is empty then get client from menu params
-		if (empty($this->client))
-		{
+		if (empty($this->client)) {
 			// Get the active item
-			$menuitem   = $app->getMenu()->getActive();
+			$menuitem = $app->getMenu()->getActive();
 
 			// Get the params
 			$this->menuparams = $menuitem->getparams();
 
-			if (!empty($this->menuparams))
-			{
-				$this->ucm_type   = $this->menuparams->get('ucm_type');
+			if (!empty($this->menuparams)) {
+				$this->ucm_type = $this->menuparams->get('ucm_type');
 
-				if (!empty($this->ucm_type))
-				{
+				if (!empty($this->ucm_type)) {
 					JLoader::import('components.com_tjfields.tables.type', JPATH_ADMINISTRATOR);
 					$ucmTypeTable = Table::getInstance('Type', 'TjucmTable', array('dbo', Factory::getDbo()));
 					$ucmTypeTable->load(array('alias' => $this->ucm_type));
@@ -76,17 +72,17 @@ class TjucmControllerItemForm extends FormController
 
 		$this->appendUrl = "";
 
-		if (!empty($this->created_by))
-		{
+		if (!empty($this->created_by)) {
 			$this->appendUrl .= "&created_by=" . $this->created_by;
 		}
 
-		if (!empty($this->client))
-		{
+		if (!empty($this->client)) {
 			$this->appendUrl .= "&client=" . $this->client;
 		}
 
 		$this->isajax = ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') ? true : false;
+
+		$this->view_list = 'itemform';
 
 		parent::__construct();
 	}
@@ -107,7 +103,7 @@ class TjucmControllerItemForm extends FormController
 
 		// Get the previous edit id (if any) and the current edit id.
 		$previousId = (int) $app->getUserState('com_tjucm.edit.item.id');
-		$editId     = $app->input->getInt('id', 0);
+		$editId = $app->input->getInt('id', 0);
 
 		// Set the user id for the user to edit in the session.
 		$app->setUserState('com_tjucm.edit.item.id', $editId);
@@ -118,27 +114,24 @@ class TjucmControllerItemForm extends FormController
 
 		$recordId = '';
 
-		
+
 		// Check out the item
-		if ($editId)
-		{
+		if ($editId) {
 			$recordId = '&id=' . $editId;
 			$model->checkout($editId);
 		}
 
 		// Check in the previous user.
-		if ($previousId)
-		{
+		if ($previousId) {
 			$model->checkin($previousId);
 		}
 
 		// DPE Hack
 		$clusterId = $app->input->getInt('cluster_id', 0);
-		$cluster   = '';
+		$cluster = '';
 
 		// Check cluster exist
-		if ($clusterId)
-		{
+		if ($clusterId) {
 			$cluster = '&cluster_id=' . $clusterId;
 		}
 
@@ -175,22 +168,19 @@ class TjucmControllerItemForm extends FormController
 		$context = "com_tjucm.edit.itemform.data";
 		$tjUcmFrontendHelper = new TjucmHelpersTjucm;
 
-		if (empty($key))
-		{
+		if (empty($key)) {
 			$key = $table->getKeyName();
 		}
 
 		$recordId = $this->input->getInt($key);
 
 		// Attempt to check-in the current record.
-		if ($recordId)
-		{
-			if (property_exists($table, 'checked_out'))
-			{
+		if ($recordId) {
+			if (property_exists($table, 'checked_out')) {
 				// if (!$model->checkin($recordId) === false)
 				// {
 				// 	// Check-in failed, go back to the record and display a notice.
-					
+
 				// 	// Factory::getApplication()->enqueueMessage(Text::sprintf('JLIB_APPLICATION_ERROR_CHECKIN_FAILED', $model->getError()), 'error');
 				// 	$link = 'index.php?option=com_tjucm&view=itemform&client=' . $this->client;
 				// 	$itemId = $tjUcmFrontendHelper->getItemId($link);
@@ -226,19 +216,18 @@ class TjucmControllerItemForm extends FormController
 		// Check for request forgeries.
 		(Session::checkToken('get') or Session::checkToken()) or jexit(Text::_('JINVALID_TOKEN'));
 
-		$app   = Factory::getApplication();
+		$app = Factory::getApplication();
 		$model = $this->getModel('ItemForm', 'TjucmModel');
-		$pk    = $app->input->getInt('id');
+		$pk = $app->input->getInt('id');
 
 		// Get content_id to be deleted.
 		$contentId = $app->input->getInt('id');
 		$tjUcmFrontendHelper = new TjucmHelpersTjucm;
 
 		$canDeleteOwn = TjucmAccess::canDeleteOwn($this->ucmTypeId, $contentId);
-		$canDelete    = TjucmAccess::canDelete($this->ucmTypeId, $contentId);
+		$canDelete = TjucmAccess::canDelete($this->ucmTypeId, $contentId);
 
-		if (!$canDelete && !$canDeleteOwn)
-		{
+		if (!$canDelete && !$canDeleteOwn) {
 			$app->enqueueMessage(Text::_('JERROR_ALERTNOAUTHOR'), 'error');
 			$app->setHeader('status', 403, true);
 
@@ -246,8 +235,7 @@ class TjucmControllerItemForm extends FormController
 		}
 
 		// Attempt to save the data
-		try
-		{
+		try {
 			$model->setState('ucmType.id', $this->ucmTypeId);
 			$return = $model->delete($contentId);
 
@@ -261,7 +249,7 @@ class TjucmControllerItemForm extends FormController
 			$item = $menu->getActive();
 
 			// DPE hack as the current itemlink is always homepage.
-			
+
 			$url = 'index.php?option=com_tjucm&view=items';
 
 			// Redirect to the list screen
@@ -273,9 +261,7 @@ class TjucmControllerItemForm extends FormController
 
 			// Flush the data from the session.
 			$app->setUserState('com_tjucm.edit.item.data', null);
-		}
-		catch (Exception $e)
-		{
+		} catch (Exception $e) {
 			$errorType = ($e->getCode() == '404' || '403') ? 'error' : 'warning';
 			$this->setMessage($e->getMessage(), $errorType);
 
@@ -318,7 +304,7 @@ class TjucmControllerItemForm extends FormController
 		$app = Factory::getApplication();
 
 		// Get the previous edit id (if any) and the current edit id.
-		$editId    = $app->input->getInt('id', 0);
+		$editId = $app->input->getInt('id', 0);
 		$clusterId = $app->input->getInt('cluster_id', 0);
 
 		// Set the user id for the user to edit in the session.
@@ -328,8 +314,7 @@ class TjucmControllerItemForm extends FormController
 		$cluster = '';
 
 		// Check cluster exist
-		if ($clusterId)
-		{
+		if ($clusterId) {
 			$cluster = '&cluster_id=' . $clusterId;
 		}
 
@@ -341,43 +326,43 @@ class TjucmControllerItemForm extends FormController
 		$this->setRedirect(Route::_($link . '&Itemid=' . $itemId . $cluster . $this->getRedirectToItemAppend(), false));
 	}
 	/**
-     * Method override to check-in a record or an array of record
-     *
-     * @param   mixed  $pks  The ID of the primary key or an array of IDs
-     *
-     * @return  integer|boolean  Boolean false if there is an error, otherwise the count of records checked in.
-     *
-     * @since   1.6
-     */
-    public function checkin($pks = [])
-    {
-        $pks   = (array) $pks;
-        $table = $this->getTable();
-        $count = 0;
+	 * Method override to check-in a record or an array of record
+	 *
+	 * @param   mixed  $pks  The ID of the primary key or an array of IDs
+	 *
+	 * @return  integer|boolean  Boolean false if there is an error, otherwise the count of records checked in.
+	 *
+	 * @since   1.6
+	 */
+	public function checkin($pks = [])
+	{
+		$pks = (array) $pks;
+		$table = $this->getTable();
+		$count = 0;
 
-        if (empty($pks)) {
-            $pks = [(int) $this->getState($this->getName() . '.id')];
-        }
+		if (empty($pks)) {
+			$pks = [(int) $this->getState($this->getName() . '.id')];
+		}
 
-        $checkedOutField = $table->getColumnAlias('checked_out');
+		$checkedOutField = $table->getColumnAlias('checked_out');
 
-        // Check in all items.
-        foreach ($pks as $pk) {
-            if ($table->load($pk)) {
-                if ($table->{$checkedOutField} > 0) {
-                    if (!parent::checkin($pk)) {
-                        return false;
-                    }
+		// Check in all items.
+		foreach ($pks as $pk) {
+			if ($table->load($pk)) {
+				if ($table->{$checkedOutField} > 0) {
+					if (!parent::checkin($pk)) {
+						return false;
+					}
 
-                    $count++;
-                }
-            } else {
-                $this->setError($table->getError());
+					$count++;
+				}
+			} else {
+				$this->setError($table->getError());
 
-                return false;
-            }
-        }
+				return false;
+			}
+		}
 
-        return $count;
-    }
+		return $count;
+	}
 }

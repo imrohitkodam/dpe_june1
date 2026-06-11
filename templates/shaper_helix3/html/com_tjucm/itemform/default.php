@@ -43,6 +43,9 @@ HTMLHelper::script('media/com_dpe/js/logsticket.js');
 // Call to utilize the tab structure in URL
 HTMLHelper::script('media/com_dpe/js/dpe_ucm_tab.js');
 
+// Define tjUcmItemForm global object (required by all Save buttons)
+HTMLHelper::script('media/com_dpe/js/tjucmitemform.js');
+
 $document = Factory::getDocument();
 $document->addScript(Uri::root() . 'media/com_dpe/js/tjucmroplist.js');
 $document->addScript(Uri::root() . 'media/system/js/showon-es5.js');
